@@ -255,8 +255,8 @@ const structures = {
     <p class="note-pose">${POSE}</p>
   </div>
 </section>
-${compBois.replace('class="bloc"', 'class="bloc bloc-alt"')}
-${compCarrelage}
+${compBois}
+${compCarrelage.replace('class="bloc"', 'class="bloc bloc-alt"')}
 ${cta("Quelle structure pour votre terrain ?")}`,
 };
 

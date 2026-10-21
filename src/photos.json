@@ -41,20 +41,6 @@
   "ratio": 1.3333
  },
  {
-  "cle": "terrasse-accoya-naturel-piscine",
-  "dossier": "bois",
-  "categorie": "terrasse-bois",
-  "essence": "Accoya naturel",
-  "alt": "Plage de piscine en accoya naturel, bois clair, avec bains de soleil",
-  "largeurs": [
-   400,
-   600,
-   1000,
-   1600
-  ],
-  "ratio": 1.5003
- },
- {
   "cle": "terrasse-accoya-naturel-piscine-vue-haut",
   "dossier": "bois",
   "categorie": "terrasse-bois",

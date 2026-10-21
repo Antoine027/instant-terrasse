@@ -77,7 +77,7 @@ const terrasseBois = {
     </div>
     <div class="grille">
       <div class="carte"><h3>Sur structure aluminium</h3><p>Plots réglables, rails aluminium et fixations invisibles. Rien ne pourrit sous les lames, l'air circule, la terrasse reste plane. C'est la structure de nos bois modifiés et de nos bambous.</p></div>
-      <div class="carte"><h3>Sur structure traditionnelle</h3><p>Lambourdes en bois, la technique classique et éprouvée, adaptée aux bois massifs et exotiques.</p></div>
+      <div class="carte"><h3>Sur structure traditionnelle</h3><p>Des lambourdes en bois sur plots réglables : la technique classique et éprouvée, adaptée aux bois massifs et exotiques.</p></div>
     </div>
   </div>
 </section>
@@ -160,7 +160,7 @@ const compBois = tableau(
     ["Ossature", "Lambourdes en bois", "Rails en aluminium sur plots réglables"],
     ["Face à l'humidité", "Les lambourdes restent sensibles à l'eau stagnante avec les années", "Imputrescible : rien ne pourrit sous les lames"],
     ["Stabilité", "Le bois de l'ossature peut travailler, se vriller", "Rails rectilignes qui ne se déforment pas"],
-    ["Mise à niveau", "Calage des lambourdes", "Plots réglables en hauteur, terrasse bien plane"],
+    ["Mise à niveau", "Plots réglables sous les lambourdes, en bois qui peut travailler avec le temps", "Plots réglables sous des rails aluminium rectilignes : la planéité tient dans le temps"],
     ["Fixation des lames", "Vissées : chaque vis perce la lame, l'eau peut s'y infiltrer et la vis finir par s'arracher", "Clips invisibles, testés à 1,5 à 2,5 fois la résistance demandée par la norme"],
     ["Écoulement de l'eau", "L'eau peut stagner sur les lambourdes, sous les lames", "Lames sans contact direct avec l'ossature, espacement constant entre les lames"],
     ["Ventilation", "Selon la hauteur disponible", "Circulation d'air prévue entre ossature et lames"],
@@ -262,13 +262,13 @@ ${cta("Quelle structure pour votre terrain ?")}`,
 
 // ---------- Bardage bois ----------
 const bardageEssences = [
-  ["Accoya gris", "Bois acétylé très stable, teinté gris dès la pose : la façade a tout de suite son aspect patiné."],
-  ["Accoya naturel", "La même stabilité dans une teinte claire, qui grisera naturellement avec le temps."],
-  ["Kebony", "Bois modifié d'origine végétale, brun à la pose, qui évolue vers un gris argenté homogène."],
-  ["Bambou X-treme", "Bambou densifié brun foncé, au rendu contemporain et très régulier."],
-  ["Thermofrêne", "Frêne traité thermiquement, brun chaud au veinage marqué."],
-  ["Thermopin clear", "Pin traité thermiquement, sélectionné sans nœuds pour un aspect net et uniforme."],
-  ["Thermo épicéa", "Épicéa traité thermiquement, du brun profond au noir, qui se patine en gris argenté : un rendu nordique et contemporain."],
+  ["Accoya naturel", "Bois acétylé à cœur : il ne prend presque plus l'eau, d'où une stabilité remarquable. Teinte claire, sans nœuds, qui grise avec le temps.", "Jusqu'à 50 ans"],
+  ["Accoya gris", "Le même bois, teinté gris dans la masse : la façade a son aspect patiné dès la pose et garde sa teinte grise en vieillissant.", "Jusqu'à 50 ans"],
+  ["Kebony", "Pin modifié par un procédé d'origine végétale, plus dense et très résistant aux intempéries. Brun proche des bois exotiques, puis patine gris cendre.", "Jusqu'à 30 ans"],
+  ["Bambou X-treme", "Lamelles de bambou chauffées puis compressées : un parement très dur, sans nœuds, brun foncé. Une alternative aux bois tropicaux.", "Jusqu'à 25 ans"],
+  ["Thermofrêne", "Frêne chauffé à haute température, sans produit chimique : brun foncé, veinage très marqué, patine gris argenté.", "Jusqu'à 20 ans"],
+  ["Thermopin clear", "Pin sélectionné quasiment sans nœuds puis traité à la chaleur : teinte miel proche des bois exotiques, longueurs jusqu'à 4,80 m.", "Jusqu'à 15 ans"],
+  ["Thermo épicéa", "Épicéa traité à la chaleur, sans produit chimique : teinte miel avec quelques nœuds, au caractère plus rustique. Finitions grise ou châtaigne sur commande.", "Jusqu'à 15 ans"],
 ];
 
 const bardageBois = {
@@ -296,7 +296,7 @@ const bardageBois = {
     <h2>Nos essences de bardage</h2>
     <p class="chapo">Des bois modifiés et traités, choisis pour leur stabilité : un bardage doit rester droit et beau malgré le soleil et la pluie.</p>
     <div class="grille grille-3">
-      ${bardageEssences.map(([n, t]) => `<div class="carte"><h3>${n}</h3><p>${t}</p></div>`).join("")}
+      ${bardageEssences.map(([n, t, g]) => `<div class="carte"><h3>${n}</h3><p>${t}</p><p class="garantie">Garantie fabricant : ${g.toLowerCase()}, selon conditions</p></div>`).join("")}
     </div>
   </div>
 </section>
@@ -310,6 +310,17 @@ const bardageBois = {
 <section class="bloc">
   <div class="conteneur deux-colonnes">
     <div>
+      <h2>Posé sur rails aluminium, sans une vis apparente</h2>
+      <p>Comme nos terrasses, nos bardages se clipsent sur des rails en aluminium fixés au mur. Rien ne traverse la lame : la façade reste nette, et le bois n'est pas fragilisé.</p>
+      <ul class="puces">
+        <li><strong>Bardage ventilé</strong> : un système conforme au DTU 41-2, la règle de l'art des bardages bois.</li>
+        <li><strong>Pose verticale ou horizontale</strong>, jointive ou à claire-voie, avec des espacements réguliers.</li>
+        <li><strong>Sur tous les murs</strong> : béton, ossature bois ou structure métallique.</li>
+        <li><strong>Démontable</strong> : une lame abîmée se remplace sans toucher aux autres.</li>
+        <li><strong>Structure garantie 20 ans</strong>, en aluminium majoritairement recyclé.</li>
+      </ul>
+    </div>
+    <div>
       <h2>Pourquoi un bardage bois ?</h2>
       <ul class="puces">
         <li><strong>Esthétique</strong> : il réchauffe une façade et s'accorde avec le jardin.</li>
@@ -317,8 +328,6 @@ const bardageBois = {
         <li><strong>Cohérence</strong> : la même essence que votre <a href="/terrasse-bois-lyon/">terrasse</a> pour un extérieur harmonieux.</li>
         <li><strong>Évolution naturelle</strong> : le bois grise avec le temps, ou d'emblée avec l'accoya gris.</li>
       </ul>
-    </div>
-    <div>
       <h2>Votre projet</h2>
       <p>${POSE}</p>
       <p>Vous préférez une façade sans aucun entretien ? Découvrez le <a href="/bardage-aluminium-lyon/">bardage aluminium</a>.</p>
@@ -589,7 +598,52 @@ const terrasseCarrelage = {
 ${cta("Un projet de terrasse en carrelage ?", "Devis gratuit et sans engagement. Nous venons voir votre support, avec les échantillons, et nous vous conseillons la pose la plus adaptée.")}`,
 };
 
+// ---------- Bardage aluminium ----------
+const bardageAluminium = {
+  title: "Bardage aluminium Lyon : façade sans entretien | Instant Terrasse",
+  description: "Bardage aluminium sur mesure à Lyon : lames thermolaquées dans de nombreuses teintes RAL, fixation invisible, sans entretien. Façades, murs, plafonds extérieurs. Devis gratuit.",
+  corps: `
+<section class="hero hero-page">
+  <div class="conteneur">
+    <p class="fil"><a href="/">Accueil</a> › Bardage</p>
+    <h1>Bardage aluminium sur mesure à Lyon</h1>
+    <p class="chapo">Des lames en aluminium thermolaqué, clipsées sur une ossature aluminium : une façade contemporaine qui ne se repeint pas, ne se traite pas et garde sa couleur.</p>
+    <p class="actions"><a class="bouton" href="/contact/">Demander un devis gratuit</a> <a class="bouton bouton-clair" href="/bardage-bois-lyon/">Voir le bardage bois</a></p>
+  </div>
+</section>
+
+<section class="bloc bloc-alt">
+  <div class="conteneur">
+    <h2>Les points forts</h2>
+    <div class="grille grille-3">
+      <div class="carte"><h3>Aucun entretien</h3><p>Pas de lasure, pas de saturateur : un nettoyage à l'eau de temps en temps suffit.</p></div>
+      <div class="carte"><h3>La couleur de votre choix</h3><p>Thermolaquage dans de nombreuses teintes RAL, pour s'accorder à vos menuiseries ou trancher avec elles.</p></div>
+      <div class="carte"><h3>Léger et robuste</h3><p>Un ensemble léger, très stable, qui résiste aux environnements difficiles.</p></div>
+      <div class="carte"><h3>Fixation invisible</h3><p>Les lames se clipsent sur les rails : aucune vis en façade, des lignes parfaitement régulières.</p></div>
+      <div class="carte"><h3>Design libre</h3><p>Pose verticale ou horizontale, jointive ou à claire-voie, avec des largeurs et des espacements à composer.</p></div>
+      <div class="carte"><h3>Aussi en plafond</h3><p>Les mêmes profils habillent les sous-faces d'avancée de toit, de pergola ou de préau.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="bloc">
+  <div class="conteneur deux-colonnes">
+    <div>
+      <h2>Aluminium ou bois ?</h2>
+      <p>Le bardage aluminium vise le zéro entretien et une couleur qui ne bouge pas. Le <a href="/bardage-bois-lyon/">bardage bois</a> apporte la chaleur d'un matériau naturel qui évolue avec le temps. Les deux se posent sur la même ossature et peuvent se combiner sur une façade.</p>
+    </div>
+    <div>
+      <h2>Votre projet</h2>
+      <p>${POSE}</p>
+      <p>Nous venons chez vous avec des échantillons de teintes, et vous recevez un plan 3D offert de votre façade.</p>
+    </div>
+  </div>
+</section>
+${cta("Un projet de bardage aluminium ?", "Devis gratuit et sans engagement. Nous venons voir votre façade avec les échantillons de teintes.")}`,
+};
+
 export const CONTENUS = {
+  "/bardage-aluminium-lyon/": bardageAluminium,
   "/terrasse-carrelage-lyon/": terrasseCarrelage,
   "/terrasse-aluminium-lyon/": terrasseAluminium,
   "/garde-corps-aluminium-lyon/": gardeCorps,

@@ -527,5 +527,96 @@
    1600
   ],
   "ratio": 1.4988
+ },
+ {
+  "cle": "terrasse-thermofrene-piscine-mer",
+  "dossier": "bois",
+  "categorie": "terrasse-bois",
+  "essence": "Thermofrêne",
+  "alt": "Plage de piscine en thermofrêne patiné, vue sur la mer et les oliviers",
+  "largeurs": [
+   600,
+   1000,
+   1600
+  ],
+  "ratio": 1.2715
+ },
+ {
+  "cle": "terrasse-thermofrene-bord-de-loire",
+  "dossier": "bois",
+  "categorie": "terrasse-bois",
+  "essence": "Thermofrêne",
+  "alt": "Grande terrasse en thermofrêne au bord d'une rivière, deux bains de soleil",
+  "largeurs": [
+   600,
+   1000,
+   1600
+  ],
+  "ratio": 1.3333
+ },
+ {
+  "cle": "terrasse-thermofrene-marches",
+  "dossier": "bois",
+  "categorie": "terrasse-bois",
+  "essence": "Thermofrêne",
+  "alt": "Terrasse sur plusieurs niveaux en thermofrêne, marches et jardinière en acier corten",
+  "largeurs": [
+   600,
+   1000,
+   1600
+  ],
+  "ratio": 1.3281
+ },
+ {
+  "cle": "terrasse-thermofrene-pool-house",
+  "dossier": "bois",
+  "categorie": "terrasse-bois",
+  "essence": "Thermofrêne",
+  "alt": "Plage de piscine en thermofrêne grisé devant un pool house contemporain",
+  "largeurs": [
+   600,
+   1000,
+   1335
+  ],
+  "ratio": 1.5017
+ },
+ {
+  "cle": "terrasse-thermofrene-patio-encaisse",
+  "dossier": "bois",
+  "categorie": "terrasse-bois",
+  "essence": "Thermofrêne",
+  "alt": "Patio encaissé avec plancher en thermofrêne et marches en pierre claire",
+  "largeurs": [
+   600,
+   1000,
+   1177
+  ],
+  "ratio": 1.5013
+ },
+ {
+  "cle": "terrasse-thermofrene-piscine-naturelle",
+  "dossier": "bois",
+  "categorie": "terrasse-bois",
+  "essence": "Thermofrêne",
+  "alt": "Terrasse en thermofrêne au bord d'une piscine naturelle, en Provence",
+  "largeurs": [
+   600,
+   1000,
+   1600
+  ],
+  "ratio": 1.5003
+ },
+ {
+  "cle": "terrasse-thermofrene-balcon",
+  "dossier": "bois",
+  "categorie": "terrasse-bois",
+  "essence": "Thermofrêne",
+  "alt": "Terrasse et balcon en thermofrêne brun, garde-corps en verre, vus d'en haut",
+  "largeurs": [
+   600,
+   1000,
+   1542
+  ],
+  "ratio": 0.5986
  }
 ]

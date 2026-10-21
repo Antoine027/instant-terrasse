@@ -73,7 +73,8 @@ details[open]>summary.menu-lien::after{transform:translateY(2px) rotate(225deg)}
 .carte p{margin:0;color:var(--doux)}
 .carte-lien{text-decoration:none;display:block;transition:transform .15s,box-shadow .15s}
 .carte-lien:hover{transform:translateY(-3px);box-shadow:var(--ombre)}
-.carte-lien .fleche{display:block;margin-top:14px;color:var(--accent-texte);font-weight:700}
+.carte-lien .fleche{display:inline-flex;align-items:center;justify-content:center;width:42px;height:42px;border-radius:50%;background:var(--bouton);color:#fff;margin-top:16px;transition:transform .2s,background .2s}
+.carte-lien:hover .fleche{background:var(--bouton-survol);transform:translateX(4px)}
 .carte-univers{background:#fff;border-top:4px solid var(--accent)}
 .carte-univers h3{font-size:1.2rem}
 
@@ -302,4 +303,5 @@ details[open]>summary.menu-lien::after{transform:translateY(2px) rotate(225deg)}
 .carte-photo:hover .vignette img{transform:scale(1.04)}
 .vignette-vide{display:flex;align-items:center;justify-content:center;color:var(--accent);background:linear-gradient(135deg,#F8F3EB 0%,#EFE3CF 100%)}
 .carte-corps{padding:18px 22px 18px;display:flex;flex-direction:column;flex:1}
-.carte-corps .fleche{margin-top:auto;padding-top:12px}
+.carte-corps .fleche{margin-top:auto}
+.carte-corps p{margin-bottom:16px}

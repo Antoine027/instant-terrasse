@@ -165,7 +165,8 @@ for (const p of PAGES) {
 for (const p of PAGES) {
   const dossier = join(DIST, p.chemin);
   mkdirSync(dossier, { recursive: true });
-  writeFileSync(join(dossier, "index.html"), gabarit(p));
+  const FLECHE = `<span class="fleche" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></span>`;
+  writeFileSync(join(dossier, "index.html"), gabarit(p).replaceAll('<span class="fleche" aria-hidden="true">→</span>', FLECHE));
 }
 
 writeFileSync(join(DIST, "robots.txt"), EN_LIGNE

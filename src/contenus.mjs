@@ -161,7 +161,8 @@ const compBois = tableau(
     ["Face à l'humidité", "Les lambourdes restent sensibles à l'eau stagnante avec les années", "Imputrescible : rien ne pourrit sous les lames"],
     ["Stabilité", "Le bois de l'ossature peut travailler, se vriller", "Rails rectilignes qui ne se déforment pas"],
     ["Mise à niveau", "Calage des lambourdes", "Plots réglables en hauteur, terrasse bien plane"],
-    ["Fixation des lames", "Le plus souvent vissées", "Clips, sans vis apparente"],
+    ["Fixation des lames", "Vissées : chaque vis perce la lame, l'eau peut s'y infiltrer et la vis finir par s'arracher", "Clips invisibles, testés à 1,5 à 2,5 fois la résistance demandée par la norme"],
+    ["Écoulement de l'eau", "L'eau peut stagner sur les lambourdes, sous les lames", "Lames sans contact direct avec l'ossature, espacement constant entre les lames"],
     ["Ventilation", "Selon la hauteur disponible", "Circulation d'air prévue entre ossature et lames"],
     ["Revêtements possibles", "Bois massifs et exotiques", "Bois modifiés, bambou, composite, carrelage, lames aluminium"],
     ["Budget", "Généralement plus économique à l'achat", "Investissement plus élevé, pensé pour durer"],
@@ -216,6 +217,7 @@ const structures = {
       <ul class="puces">
         <li><strong>Garantie 20 ans</strong> : nos structures aluminium sont garanties 20 ans.</li>
         <li><strong>Fixation invisible</strong> : pas de vis en surface, donc pas de trou où l'eau s'infiltre, et des lignes de lames parfaitement droites.</li>
+        <li><strong>Des clips qui tiennent</strong> : ils suivent la dilatation du bois sans casser, et leur résistance à l'arrachement dépasse de 1,5 à 2,5 fois l'exigence de la norme.</li>
         <li><strong>Démontable</strong> : une lame se déclipse et se remet en place sans rien abîmer, pour accéder dessous ou remplacer une lame.</li>
         <li><strong>Imputrescible</strong> : l'aluminium ne pourrit pas, ne gonfle pas et résiste à la corrosion, y compris autour des piscines.</li>
         <li><strong>Plane</strong> : les plots rattrapent les défauts de niveau du terrain ou de la dalle.</li>
@@ -229,6 +231,20 @@ const structures = {
 </section>
 
 <section class="bloc">
+  <div class="conteneur">
+    <h2>Une structure adaptée à chaque terrain</h2>
+    <p class="chapo">Le système aluminium s'adapte au sol qui recevra la terrasse. C'est ce que nous vérifions en premier lors de la visite.</p>
+    <div class="grille grille-3">
+      <div class="carte"><h3>Sol dur</h3><p>Dalle béton, ancienne terrasse : les rails se posent directement ou sur cales, pour une terrasse de faible épaisseur.</p></div>
+      <div class="carte"><h3>Sol stabilisé</h3><p>Gravier compacté : les plots réglables reprennent les écarts de niveau, sans couler de béton.</p></div>
+      <div class="carte"><h3>Toit-terrasse et sol étanche</h3><p>La structure repose sur l'étanchéité sans la percer. Voir notre page <a href="/toit-terrasse-lyon/">toit-terrasse</a>.</p></div>
+      <div class="carte"><h3>Terrasse surélevée</h3><p>Avec des réhausses, les plots montent jusqu'à environ 40 cm. Au-delà, la terrasse repose sur des poutres et des poteaux.</p></div>
+      <div class="carte"><h3>Terrain en pente ou instable</h3><p>La terrasse est portée par des fondations sur poteaux : c'est la <a href="/terrasse-sur-pilotis-lyon/">terrasse sur pilotis</a>.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="bloc bloc-alt">
   <div class="conteneur">
     <h2>Les autres solutions</h2>
     <div class="grille grille-3">

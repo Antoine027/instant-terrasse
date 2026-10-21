@@ -1,10 +1,24 @@
 // Contenus rédigés des pages. Une page présente ici remplace sa version « en préparation ».
 // Règles : pas de chiffre, garantie, certification ou chantier inventé ; pas de nom de fournisseur.
-import { SITE, POSE } from "./pages.mjs";
+import { SITE, POSE, TRIO } from "./pages.mjs";
 import { galerie, imgPhoto } from "./galerie.mjs";
 
 const img = (nom, alt, ratio) =>
   `<img src="/assets/img/bois/${nom}-400.webp" srcset="/assets/img/bois/${nom}-400.webp 400w, /assets/img/bois/${nom}-800.webp 800w" sizes="(max-width:700px) 90vw, 360px" alt="${alt}" width="400" height="${ratio}" loading="lazy" decoding="async">`;
+
+// Bandeau photo plein écran (même style que l'accueil)
+const heroPlein = ({ fil, h1, kicker, chapo, photo, position = "65% 50%", actions }) => `
+<section class="hero-plein hero-produit">
+  ${imgPhoto(photo, { sizes: "(max-width:700px) calc(100vw - 32px), 100vw", prioritaire: true, classe: "h-img" }).replace("<img ", `<img style="object-position:${position}" `)}
+  <div class="conteneur h-txt">
+    <p class="fil"><a href="/">Accueil</a> › ${fil}</p>
+    <p class="kicker">${kicker}</p>
+    <h1><span class="fin">${h1[0]}</span> <span class="fort">${h1[1]}</span></h1>
+    <p class="chapo">${chapo}</p>
+    <p class="actions">${actions ?? `<a class="bouton" href="/contact/">Demander une visite gratuite</a> <a class="bouton bouton-blanc" href="#galerie">Voir les photos</a>`}</p>
+    ${TRIO}
+  </div>
+</section>`;
 
 const cta = (titre = "Un projet de terrasse en bois ?", texte = "Devis gratuit et sans engagement. Nous venons voir votre terrain et nous vous orientons vers l'essence et la structure les plus adaptées.") => `
 <section class="bloc bloc-cta">
@@ -59,14 +73,9 @@ const terrasseBois = {
   title: "Terrasse bois Lyon : thermopin, kebony, accoya, ipé | Instant Terrasse",
   description: "Terrasse bois sur mesure à Lyon : thermopin, thermofrêne, kebony, accoya, bambou sur structure aluminium, ou ipé, cumaru, mélèze, douglas sur structure traditionnelle.",
   corps: `
-<section class="hero hero-page">
-  <div class="conteneur">
-    <p class="fil"><a href="/">Accueil</a> › Terrasses</p>
-    <h1>Terrasse bois sur mesure à Lyon</h1>
-    <p class="chapo">Bois modifiés et bambou sur structure aluminium, ou bois massifs et exotiques sur structure traditionnelle : nous vous aidons à choisir l'essence qui correspond à votre maison, à votre budget et au temps que vous voulez consacrer à l'entretien.</p>
-    <p class="actions"><a class="bouton" href="/contact/">Demander un devis gratuit</a> <a class="bouton bouton-clair" href="#essences-aluminium">Voir les essences</a> <a class="bouton bouton-clair" href="#galerie">Voir les photos</a></p>
-  </div>
-</section>
+${heroPlein({ fil: "Terrasses", h1: ["Terrasse bois", "sur mesure"], kicker: "Terrasses bois à Lyon et dans sa région", photo: "terrasse-kebony-piscine-debordement", position: "60% 55%",
+  chapo: "Bois modifiés et bambou sur structure aluminium, ou bois massifs et exotiques sur structure traditionnelle : nous vous aidons à choisir l'essence qui correspond à votre maison, à votre budget et au temps que vous voulez consacrer à l'entretien.",
+  actions: `<a class="bouton" href="/contact/">Demander une visite gratuite</a> <a class="bouton bouton-blanc" href="#essences-aluminium">Voir les essences</a>` })}
 
 <section class="bloc bloc-alt">
   <div class="conteneur deux-colonnes">
@@ -275,21 +284,9 @@ const bardageBois = {
   title: "Bardage bois Lyon : accoya, kebony, thermofrêne | Instant Terrasse",
   description: "Bardage bois sur mesure à Lyon : accoya gris ou naturel, kebony, bambou X-treme, thermofrêne, thermopin clear, thermo épicéa. Un bardage assorti à votre terrasse. Devis gratuit.",
   corps: `
-<section class="hero hero-page">
-  <div class="conteneur">
-    <p class="fil"><a href="/">Accueil</a> › Bardage</p>
-    <h1>Bardage bois sur mesure à Lyon</h1>
-    <p class="chapo">Habiller une façade, une extension, un mur de clôture ou un abri avec des bois sélectionnés pour durer en extérieur, et assortis à votre terrasse si vous le souhaitez.</p>
-    <p class="actions"><a class="bouton" href="/contact/">Demander un devis gratuit</a> <a class="bouton bouton-clair" href="#essences-bardage">Voir les essences</a></p>
-  </div>
-</section>
-
-<section class="bandeau-photo">
-  <figure class="conteneur">
-    ${imgPhoto("bardage-accoya-gris-maison", { sizes: "(max-width:1180px) 100vw, 1150px", prioritaire: true })}
-    <figcaption>Illustration : bardage vertical en accoya gris.</figcaption>
-  </figure>
-</section>
+${heroPlein({ fil: "Bardage", h1: ["Bardage bois", "sur mesure"], kicker: "Façades, murs et abris à Lyon et dans sa région", photo: "bardage-bambou-xtreme-maison", position: "62% 50%",
+  chapo: "Habiller une façade, une extension, un mur de clôture ou un abri avec des bois sélectionnés pour durer en extérieur, et assortis à votre terrasse si vous le souhaitez.",
+  actions: `<a class="bouton" href="/contact/">Demander une visite gratuite</a> <a class="bouton bouton-blanc" href="#essences-bardage">Voir les essences</a>` })}
 
 <section id="essences-bardage" class="bloc">
   <div class="conteneur">
@@ -338,18 +335,8 @@ ${cta("Un projet de bardage ?")}`,
 };
 
 // ---------- Gabarit de page produit (pergolas, etc.) ----------
-const pageProduit = ({ introGalerie = "", fil, h1, chapo, photo, atouts, galerieCat, titreGalerie, details, voisins, ctaTitre, complement = "Une pergola se pense avec la terrasse qu'elle couvre : hauteurs, fixations, écoulement des eaux. Nous pouvons étudier les deux ensemble.", titreVoisins = "Les autres solutions" }) => `
-<section class="hero hero-page">
-  <div class="conteneur hero-grille">
-    <div>
-      <p class="fil"><a href="/">Accueil</a> › ${fil}</p>
-      <h1>${h1}</h1>
-      <p class="chapo">${chapo}</p>
-      <p class="actions"><a class="bouton" href="/contact/">Demander un devis gratuit</a> <a class="bouton bouton-clair" href="#galerie">Voir les photos</a></p>
-    </div>
-    <figure class="hero-photo">${imgPhoto(photo, { sizes: "(max-width:1060px) 100vw, 560px", prioritaire: true })}</figure>
-  </div>
-</section>
+const pageProduit = ({ introGalerie = "", fil, h1, kicker, position, chapo, photo, atouts, galerieCat, titreGalerie, details, voisins, ctaTitre, complement = "Une pergola se pense avec la terrasse qu'elle couvre : hauteurs, fixations, écoulement des eaux. Nous pouvons étudier les deux ensemble.", titreVoisins = "Les autres solutions" }) => `
+${heroPlein({ fil, h1, kicker, chapo, photo, position })}
 
 <section class="bloc bloc-alt">
   <div class="conteneur">
@@ -397,7 +384,7 @@ const pergolaBioclimatique = {
   description: "Pergola bioclimatique aluminium sur mesure à Lyon : lames orientables motorisées, adossée ou autoportée, stores latéraux et éclairage en option. Devis gratuit.",
   corps: pageProduit({
     fil: "Pergolas & carports",
-    h1: "Pergola bioclimatique sur mesure à Lyon",
+    h1: ["Pergola bioclimatique", "sur mesure"], kicker: "Pergolas aluminium sur mesure à Lyon et dans sa région",
     chapo: "Une structure en aluminium coiffée de lames orientables : ouvertes pour laisser passer le soleil et l'air, inclinées pour faire de l'ombre, fermées pour vous abriter de la pluie. Votre terrasse devient une vraie pièce à vivre.",
     photo: "pergola-bioclimatique-salon-piscine",
     atouts: [
@@ -423,7 +410,7 @@ const pergolaToileRetractable = {
   description: "Pergola aluminium à toile rétractable sur mesure à Lyon : de l'ombre quand vous voulez, le ciel ouvert le reste du temps. Motorisation et stores latéraux. Devis gratuit.",
   corps: pageProduit({
     fil: "Pergolas & carports",
-    h1: "Pergola à toile rétractable à Lyon",
+    h1: ["Pergola à toile", "rétractable"], kicker: "Pergolas aluminium sur mesure à Lyon et dans sa région",
     chapo: "Une structure aluminium et une toile qui se déploie ou se replie à la demande : de l'ombre aux heures chaudes, le ciel dégagé le reste du temps. Une solution souple et élégante pour profiter de votre terrasse.",
     photo: "pergola-toile-retractable-facade",
     atouts: [
@@ -449,7 +436,7 @@ const pergolaToitFixe = {
   description: "Pergola aluminium à toit fixe sur mesure à Lyon : un abri permanent contre la pluie et le soleil, adossé ou autoporté. Devis gratuit.",
   corps: pageProduit({
     fil: "Pergolas & carports",
-    h1: "Pergola à toit fixe à Lyon",
+    h1: ["Pergola", "à toit fixe"], kicker: "Pergolas aluminium sur mesure à Lyon et dans sa région",
     chapo: "Une structure aluminium aux lignes épurées et une toiture pleine : un abri permanent pour votre terrasse, qui vous protège de la pluie comme du soleil, toute l'année.",
     photo: "pergola-toit-fixe-piscine",
     atouts: [
@@ -476,9 +463,9 @@ const gardeCorps = {
   description: "Garde-corps aluminium sur mesure à Lyon pour terrasses, balcons, escaliers et bâtiments professionnels : vitré, barreaudage, lames. Devis gratuit.",
   corps: pageProduit({
     fil: "Garde-corps",
-    h1: "Garde-corps aluminium sur mesure à Lyon",
+    h1: ["Garde-corps aluminium", "sur mesure"], kicker: "Maisons, logements et bâtiments professionnels, à Lyon", position: "60% 45%",
     chapo: "Sécuriser une terrasse surélevée, un balcon, un escalier ou un toit-terrasse sans fermer la vue. Nos garde-corps aluminium sont fabriqués sur mesure, pour les maisons comme pour les bâtiments professionnels.",
-    photo: "garde-corps-pro-logements",
+    photo: "gc-maison-lisses-noires",
     atouts: [
       ["Vitré", "Des panneaux de verre pour garder toute la vue et la lumière."],
       ["Barreaudage", "Des barreaux verticaux ou des lisses horizontales, pour un style classique ou contemporain."],
@@ -511,9 +498,9 @@ const terrasseAluminium = {
   description: "Terrasse en lames aluminium sur mesure à Lyon : imputrescible, stable, sans entretien, en coloris unis ou aspect bois. Piscines, balcons, restaurants. Devis gratuit.",
   corps: pageProduit({
     fil: "Terrasses",
-    h1: "Terrasse en lames aluminium à Lyon",
+    h1: ["Terrasse en lames", "aluminium"], kicker: "Terrasses sur mesure à Lyon et dans sa région",
     chapo: "L'aspect d'une terrasse bois, sans ses contraintes : des lames en aluminium qui ne pourrissent pas, ne se déforment pas et ne demandent ni saturateur ni ponçage. En coloris unis ou en décor bois.",
-    photo: "alu-piscine-aspect-teck",
+    photo: "alu-piscine-jardin-tropical",
     atouts: [
       ["Imputrescible", "L'aluminium ne craint ni l'eau, ni les champignons, ni les insectes."],
       ["Stable dans le temps", "Pas de fente, pas de vrillage, pas d'écharde : les lames restent droites."],

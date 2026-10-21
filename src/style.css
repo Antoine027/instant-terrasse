@@ -288,3 +288,11 @@ details[open]>summary.menu-lien::after{transform:translateY(2px) rotate(225deg)}
   .trio li{padding:9px 12px}
 }
 @media (max-width:560px){.entete .entete-cta{display:none}.entete .logo img{height:44px}.kicker{border-radius:16px}}
+
+/* Bandeau plein écran des pages produits */
+.hero-produit{min-height:min(88svh,760px)}
+.hero-produit h1{font-size:clamp(2.3rem,1.2rem + 3.4vw,4.2rem)}
+.hero-produit .fil{margin:0 0 14px;font-size:.88rem;color:var(--texte)}
+.hero-produit .fil a{text-decoration:underline;text-underline-offset:2px}
+.hero-produit .h-txt{padding-top:120px;padding-bottom:56px}
+@media (max-width:700px){.hero-produit{min-height:0}.hero-produit .h-txt{padding-top:20px}}

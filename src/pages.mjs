@@ -1,4 +1,5 @@
 import { imgPhoto } from "./galerie.mjs";
+import { carteProduit } from "./vignettes.mjs";
 // Plan du site et contenu des pages. Une entrée = une page (chemin avec / final).
 // statut "preparation" : page affichée avec un contenu provisoire, à rédiger.
 export const SITE = {
@@ -139,7 +140,7 @@ export const FAQ = [
 ];
 
 const carteLien = ([chemin, titre, texte]) =>
-  `<a class="carte carte-lien" href="${chemin}"><h3>${titre}</h3><p>${texte}</p><span class="fleche" aria-hidden="true">→</span></a>`;
+  carteProduit(chemin, titre, texte);
 
 const etapes = [
   ["Échange", "Nous parlons de votre projet, de vos envies et de l'usage de votre extérieur."],
@@ -172,7 +173,7 @@ const accueil = `
       ${UNIVERS.map((u) => {
         const premiere = u.groupes[0].pages[0][0];
         const lien = u.groupes.length === 1 && u.groupes[0].pages.length === 1 ? premiere : `#${u.cle}`;
-        return `<a class="carte carte-univers carte-lien" href="${lien}"><h3>${u.nom}</h3><p>${u.accroche}</p><span class="fleche" aria-hidden="true">→</span></a>`;
+        return carteProduit(lien, u.nom, u.accroche);
       }).join("")}
     </div>
   </div>

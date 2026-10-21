@@ -2,6 +2,7 @@
 // Règles : pas de chiffre, garantie, certification ou chantier inventé ; pas de nom de fournisseur.
 import { SITE, POSE, TRIO } from "./pages.mjs";
 import { galerie, imgPhoto } from "./galerie.mjs";
+import { carteProduit } from "./vignettes.mjs";
 
 const img = (nom, alt, ratio) =>
   `<img src="/assets/img/bois/${nom}-400.webp" srcset="/assets/img/bois/${nom}-400.webp 400w, /assets/img/bois/${nom}-800.webp 800w" sizes="(max-width:700px) 90vw, 360px" alt="${alt}" width="400" height="${ratio}" loading="lazy" decoding="async">`;
@@ -365,7 +366,7 @@ ${heroPlein({ fil, h1, kicker, chapo, photo, position })}
 <section class="bloc">
   <div class="conteneur">
     <h2>${titreVoisins}</h2>
-    <div class="grille grille-3">${voisins.map(([c, t, x]) => `<a class="carte carte-lien" href="${c}"><h3>${t}</h3><p>${x}</p><span class="fleche" aria-hidden="true">→</span></a>`).join("")}</div>
+    <div class="grille grille-3">${voisins.map(([c, t, x]) => carteProduit(c, t, x)).join("")}</div>
   </div>
 </section>
 ${cta(ctaTitre, "Devis gratuit et sans engagement. Nous venons sur place pour prendre les mesures et vous conseiller la solution la plus adaptée.")}`;

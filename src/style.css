@@ -294,3 +294,12 @@ details[open]>summary.menu-lien::after{transform:translateY(2px) rotate(225deg)}
 .hero-produit .fil a{text-decoration:underline;text-underline-offset:2px}
 .hero-produit .h-txt{padding-top:120px;padding-bottom:56px}
 @media (max-width:700px){.hero-produit{min-height:0}.hero-produit .h-txt{padding-top:20px}}
+
+/* Cartes avec vignette photo */
+.carte-photo{padding:0;overflow:hidden;display:flex;flex-direction:column}
+.vignette{aspect-ratio:3/2;overflow:hidden;background:var(--fond2)}
+.vignette img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .4s ease}
+.carte-photo:hover .vignette img{transform:scale(1.04)}
+.vignette-vide{display:flex;align-items:center;justify-content:center;color:var(--accent);background:linear-gradient(135deg,#F8F3EB 0%,#EFE3CF 100%)}
+.carte-corps{padding:18px 22px 18px;display:flex;flex-direction:column;flex:1}
+.carte-corps .fleche{margin-top:auto;padding-top:12px}

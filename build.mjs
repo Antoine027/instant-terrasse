@@ -4,6 +4,7 @@ import { mkdirSync, writeFileSync, readFileSync, cpSync, rmSync, existsSync } fr
 import { join } from "node:path";
 import { SITE, POSE, UNIVERS, AUTRES, PAGES } from "./src/pages.mjs";
 import { CONTENUS } from "./src/contenus.mjs";
+import { carteProduit } from "./src/vignettes.mjs";
 import { SCRIPT_GALERIE } from "./src/galerie.mjs";
 
 // Les pages rédigées remplacent leur version « en préparation ».
@@ -106,7 +107,7 @@ const corpsPreparation = (p) => {
     ${u ? `<p class="note-pose">${POSE}</p>` : ""}
   </div>
 </section>
-${voisines.length ? `<section class="bloc bloc-alt"><div class="conteneur"><h2>À voir aussi</h2><div class="grille grille-3">${voisines.map(([c, t, x]) => `<a class="carte carte-lien" href="${c}"><h3>${t}</h3><p>${x}</p><span class="fleche" aria-hidden="true">→</span></a>`).join("")}</div></div></section>` : ""}`;
+${voisines.length ? `<section class="bloc bloc-alt"><div class="conteneur"><h2>À voir aussi</h2><div class="grille grille-3">${voisines.map(([c, t, x]) => carteProduit(c, t, x)).join("")}</div></div></section>` : ""}`;
 };
 
 // Précharge l'image prioritaire de la page (LCP) dès le <head>.

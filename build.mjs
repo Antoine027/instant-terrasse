@@ -47,7 +47,7 @@ const menuUnivers = (u, actuel) => {
 const entete = (actuel) => `
 <header class="entete">
   <div class="conteneur entete-in">
-    <a class="logo" href="/">Instant <span>Terrasse</span></a>
+    <a class="logo" href="/" aria-label="Instant Terrasse, accueil"><img src="/assets/img/logo-instant-terrasse.webp" alt="Instant Terrasse" width="178" height="62"></a>
     <details class="burger">
       <summary aria-label="Ouvrir le menu"><span></span><span></span><span></span></summary>
     </details>
@@ -66,7 +66,7 @@ const pied = () => `
 <footer class="pied">
   <div class="conteneur pied-grille">
     <div>
-      <p class="logo">Instant <span>Terrasse</span></p>
+      <p class="logo"><img src="/assets/img/logo-instant-terrasse-clair.webp" alt="Instant Terrasse" width="184" height="64"></p>
       <p>Terrasses, pergolas et aménagements extérieurs sur mesure — Lyon &amp; sa région.</p>
       <p><a href="tel:${SITE.telLien}">${SITE.tel}</a><br>${SITE.adresse}</p>
     </div>
@@ -116,6 +116,9 @@ ${EN_LIGNE ? `<link rel="canonical" href="${SITE.url}${p.chemin}">` : `<meta nam
 <meta property="og:description" content="${esc(p.description)}">
 <meta property="og:locale" content="fr_FR">
 <meta name="theme-color" content="#F8F3EB">
+<link rel="icon" type="image/png" sizes="48x48" href="/assets/img/favicon-48.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/assets/img/icone-192.png">
+<link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
 <style>${css}</style>
 </head>
 <body>

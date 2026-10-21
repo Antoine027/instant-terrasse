@@ -186,17 +186,6 @@ const accueil = `
   </div>
 </section>
 
-<section class="bloc">
-  <div class="conteneur mot">
-    <div class="mot-texte">
-      <p class="sous-titre">Le mot d'Antoine</p>
-      <h2>Pourquoi j'ai créé Instant Terrasse</h2>
-      ${MOT_ANTOINE}
-      <p><a href="/quisommesnous/">En savoir plus sur Instant Terrasse →</a></p>
-    </div>
-  </div>
-</section>
-
 <section class="bloc bloc-alt">
   <div class="conteneur deux-colonnes">
     <div>

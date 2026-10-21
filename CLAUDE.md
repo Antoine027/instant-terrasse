@@ -40,6 +40,7 @@ Remplaçant du site WordPress/Elementor instantterrasse.com. Générateur Node s
 - Pas de showroom : rendez-vous à domicile avec les échantillons.
 - Structures aluminium garanties 20 ans.
 - Pas encore fournis : photos de vrais chantiers, avis Google, fourchettes de prix, photo d'Antoine.
+- Parcours d'Antoine (MOT_ANTOINE) : uniquement sur la page À propos. Quand une photo d'Antoine sera fournie, l'ajouter sur l'accueil avec une seule phrase (« Antoine, votre interlocuteur du premier rendez-vous à la fin du chantier ») et un lien vers À propos.
 - Zone : Lyon et sa région. Téléphone 04 82 53 18 74.
 
 ## Charte et règles de rédaction

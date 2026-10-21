@@ -33,7 +33,7 @@ Remplaçant du site WordPress/Elementor instantterrasse.com. Générateur Node s
 - Autorisé : « pose réalisée par des professionnels qualifiés », « nous coordonnons la pose », « nous suivons le chantier ».
 
 ## Faits validés par Antoine (21/10/2026) — base des textes personnalisés
-- Antoine Escolle travaille dans la terrasse depuis début 2022 : 4 ans commercial dans une entreprise de terrasses (ne pas la nommer), puis création d'Instant Terrasse (ESCOM HABITAT, 2026). Écrire « depuis début 2022 », pas un nombre d'années qui vieillit.
+- Antoine Escolle travaille depuis 2017 dans les pergolas, stores bannes et garde-corps, et dans la terrasse depuis début 2022 : 4 ans commercial dans une entreprise de terrasses (ne pas la nommer), puis création d'Instant Terrasse (ESCOM HABITAT, 2026). Écrire « depuis 2017 » / « depuis début 2022 », pas un nombre d'années qui vieillit.
 - Positionnement : le meilleur produit au meilleur tarif, transparence (devis détaillé).
 - Installateur partenaire assuré en garantie décennale.
 - Plan 3D offert.

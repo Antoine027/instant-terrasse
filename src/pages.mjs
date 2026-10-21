@@ -122,7 +122,7 @@ export const ENGAGEMENTS = [
 ];
 
 export const MOT_ANTOINE = `
-      <p>Je travaille dans la terrasse depuis début 2022. Pendant quatre ans, j'ai été commercial pour une entreprise de terrasses : j'ai appris les matériaux, les structures, et surtout ce que les clients attendent vraiment.</p>
+      <p>Je travaille depuis 2017 dans les pergolas, les stores bannes et les garde-corps. Début 2022, j'ai ajouté la terrasse : pendant quatre ans, j'ai été commercial pour une entreprise de terrasses, où j'ai appris les matériaux, les structures, et surtout ce que les clients attendent vraiment.</p>
       <p>J'ai créé Instant Terrasse avec une idée simple : proposer le meilleur produit au meilleur tarif, en toute transparence. Je viens chez vous avec les échantillons, je vous montre votre projet en 3D, et je vous explique chaque ligne du devis.</p>
       <p class="signature">Antoine Escolle, fondateur d'Instant Terrasse</p>`;
 
@@ -395,7 +395,7 @@ export const PAGES = [
       makesOffer: ["Terrasses bois, composite, carrelage et aluminium", "Pergolas et carports", "Garde-corps aluminium", "Stores bannes", "Bardage bois et aluminium"].map((n) => ({ "@type": "Offer", itemOffered: { "@type": "Service", name: n } })),
     },
   },
-  ...pagesPlan.map((p) => p.chemin === "/quisommesnous/" ? { ...p, title: "À propos : Antoine Escolle et Instant Terrasse, Lyon", description: "Instant Terrasse, créée par Antoine Escolle, dans la terrasse depuis début 2022 : le meilleur produit au meilleur tarif, échantillons à domicile et plan 3D offert.", corps: aPropos, statut: "redigee" } : p).map((p) => p.chemin === "/partenaires/" ? { ...p, title: "Partenaires : Horizon Fenêtre et ESCOM HABITAT | Instant Terrasse", description: "Horizon Fenêtre, menuiseries sur mesure à Lyon, et ESCOM HABITAT, la société qui réunit Instant Terrasse et Horizon Fenêtre.", corps: partenaires, statut: "redigee" } : p).map((p) => p.chemin === "/contact/" ? { ...p, title: "Devis gratuit terrasse et pergola Lyon | Instant Terrasse", description: "Demandez votre devis gratuit pour une terrasse, une pergola, un garde-corps, un store banne ou un bardage à Lyon et dans sa région.", corps: contact, statut: "redigee" } : p),
+  ...pagesPlan.map((p) => p.chemin === "/quisommesnous/" ? { ...p, title: "À propos : Antoine Escolle et Instant Terrasse, Lyon", description: "Instant Terrasse, créée par Antoine Escolle : pergolas, stores et garde-corps depuis 2017, terrasses depuis 2022. Le meilleur produit au meilleur tarif, échantillons à domicile, plan 3D offert.", corps: aPropos, statut: "redigee" } : p).map((p) => p.chemin === "/partenaires/" ? { ...p, title: "Partenaires : Horizon Fenêtre et ESCOM HABITAT | Instant Terrasse", description: "Horizon Fenêtre, menuiseries sur mesure à Lyon, et ESCOM HABITAT, la société qui réunit Instant Terrasse et Horizon Fenêtre.", corps: partenaires, statut: "redigee" } : p).map((p) => p.chemin === "/contact/" ? { ...p, title: "Devis gratuit terrasse et pergola Lyon | Instant Terrasse", description: "Demandez votre devis gratuit pour une terrasse, une pergola, un garde-corps, un store banne ou un bardage à Lyon et dans sa région.", corps: contact, statut: "redigee" } : p),
   { chemin: "/merci/", title: "Merci | Instant Terrasse", description: "Votre demande a bien été envoyée.", corps: merci, horsPlan: true },
   { chemin: "/erreur-envoi/", title: "Envoi impossible | Instant Terrasse", description: "Votre demande n'a pas pu être envoyée.", corps: erreur, horsPlan: true },
 ];

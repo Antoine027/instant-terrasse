@@ -245,11 +245,12 @@ const bardageEssences = [
   ["Bambou X-treme", "Bambou densifié brun foncé, au rendu contemporain et très régulier."],
   ["Thermofrêne", "Frêne traité thermiquement, brun chaud au veinage marqué."],
   ["Thermopin clear", "Pin traité thermiquement, sélectionné sans nœuds pour un aspect net et uniforme."],
+  ["Thermo épicéa", "Épicéa traité thermiquement, du brun profond au noir, qui se patine en gris argenté : un rendu nordique et contemporain."],
 ];
 
 const bardageBois = {
   title: "Bardage bois Lyon : accoya, kebony, thermofrêne | Instant Terrasse",
-  description: "Bardage bois sur mesure à Lyon : accoya gris ou naturel, kebony, bambou X-treme, thermofrêne, thermopin clear. Un bardage assorti à votre terrasse. Devis gratuit.",
+  description: "Bardage bois sur mesure à Lyon : accoya gris ou naturel, kebony, bambou X-treme, thermofrêne, thermopin clear, thermo épicéa. Un bardage assorti à votre terrasse. Devis gratuit.",
   corps: `
 <section class="hero hero-page">
   <div class="conteneur">

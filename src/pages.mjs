@@ -93,7 +93,7 @@ export const UNIVERS = [
       {
         nom: "Bardage",
         pages: [
-          ["/bardage-bois-lyon/", "Bardage bois", "Accoya, kebony, bambou, thermofrêne ou thermopin sans nœuds : un bardage assorti à votre terrasse."],
+          ["/bardage-bois-lyon/", "Bardage bois", "Accoya, kebony, bambou, thermofrêne, thermopin ou thermo épicéa : un bardage assorti à votre terrasse."],
           ["/bardage-aluminium-lyon/", "Bardage aluminium", "Une façade moderne, sans entretien."],
         ],
       },

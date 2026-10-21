@@ -475,5 +475,57 @@
    690
   ],
   "ratio": 0.6389
+ },
+ {
+  "cle": "bardage-thermo-epicea-foret",
+  "dossier": "bardage",
+  "categorie": "bardage-bois",
+  "essence": "Thermo épicéa",
+  "alt": "Façade en bardage vertical thermo épicéa brun foncé, en lisière de forêt",
+  "largeurs": [
+   600,
+   1000,
+   1600
+  ],
+  "ratio": 1.5
+ },
+ {
+  "cle": "bardage-thermo-epicea-pilotis",
+  "dossier": "bardage",
+  "categorie": "bardage-bois",
+  "essence": "Thermo épicéa",
+  "alt": "Maison contemporaine sur pilotis habillée de bardage thermo épicéa noir",
+  "largeurs": [
+   600,
+   1000,
+   1600
+  ],
+  "ratio": 1.4988
+ },
+ {
+  "cle": "bardage-thermo-epicea-maison",
+  "dossier": "bardage",
+  "categorie": "bardage-bois",
+  "essence": "Thermo épicéa",
+  "alt": "Maison à pignon habillée de bardage vertical thermo épicéa patiné gris",
+  "largeurs": [
+   600,
+   1000,
+   1600
+  ],
+  "ratio": 1.4978
+ },
+ {
+  "cle": "bardage-thermo-epicea-pignon",
+  "dossier": "bardage",
+  "categorie": "bardage-bois",
+  "essence": "Thermo épicéa",
+  "alt": "Pignon en bardage thermo épicéa gris argenté sous un ciel bleu",
+  "largeurs": [
+   600,
+   1000,
+   1600
+  ],
+  "ratio": 1.4988
  }
 ]

@@ -161,7 +161,7 @@ const accueil = `
     </p>
   </div>
   <figure class="hero-photo">
-    ${imgPhoto("terrasse-accoya-naturel-piscine", { sizes: "(max-width:1060px) 100vw, 560px", prioritaire: true })}
+    ${imgPhoto("alu-piscine-blanche-vue", { sizes: "(max-width:1060px) 100vw, 560px", prioritaire: true })}
   </figure>
   </div>
 </section>

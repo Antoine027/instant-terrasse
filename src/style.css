@@ -78,6 +78,36 @@ details[open]>summary.menu-lien::after{transform:translateY(2px) rotate(225deg)}
 .carte-univers{background:#fff;border-top:4px solid var(--accent)}
 .carte-univers h3{font-size:1.2rem}
 
+/* ---------- Essences et photos produit ---------- */
+.grille-essences{grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:22px;margin-top:28px}
+.essence{background:var(--fond2);border-radius:var(--rayon);overflow:hidden;display:flex;flex-direction:column}
+.essence-photo{background:linear-gradient(160deg,#fff 0%,var(--fond2) 100%);padding:22px 28px 6px;display:flex;justify-content:center;align-items:center;height:290px}
+.essence-photo img{max-height:100%;width:auto!important;object-fit:contain}
+.essence-photo img,.photo-produit img{display:block;width:100%;max-width:340px;height:auto}
+.essence-texte{padding:6px 26px 26px}
+.essence-texte p{color:var(--doux);margin:0 0 12px}
+.puces{margin:0;padding:0;list-style:none}
+.puces li{position:relative;padding-left:22px;margin:6px 0}
+.puces li::before{content:"";position:absolute;left:2px;top:.6em;width:9px;height:9px;border-radius:50%;background:var(--accent)}
+.photo-produit{background:#fff;border-radius:var(--rayon);padding:28px;display:flex;justify-content:center}
+.photo-produit img{max-width:460px}
+.deux-colonnes-image{align-items:center}
+.sous-titre:first-child{margin-top:0}
+
+/* ---------- Tableaux comparatifs ---------- */
+.tableau-defile{overflow-x:auto;margin-top:24px;border-radius:var(--rayon);background:#fff;box-shadow:0 1px 0 rgba(0,0,0,.04)}
+.comparatif{width:100%;min-width:620px;border-collapse:collapse;font-size:.98rem}
+.comparatif th,.comparatif td{padding:14px 18px;text-align:left;vertical-align:top;border-bottom:1px solid var(--fond)}
+.comparatif thead th{font-family:Montserrat,sans-serif;font-size:1rem;background:var(--fond2)}
+.comparatif thead th.col-accent{background:var(--accent);color:#fff}
+.comparatif tbody th{font-weight:700;width:22%;color:var(--texte)}
+.comparatif td{color:var(--doux);width:39%}
+.comparatif td.col-accent{background:#fdf8ef;color:var(--texte)}
+.comparatif tbody tr:last-child th,.comparatif tbody tr:last-child td{border-bottom:0}
+.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.verdicts{grid-template-columns:repeat(auto-fit,minmax(280px,1fr));margin-top:20px}
+.bloc-alt .tableau-defile{background:#fff}
+
 /* ---------- Étapes ---------- */
 .etapes{list-style:none;padding:0;margin:0;display:grid;gap:14px;counter-reset:e}
 .etapes li{counter-increment:e;background:var(--fond);border-radius:var(--rayon);padding:20px 22px 20px 74px;position:relative}

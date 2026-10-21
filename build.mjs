@@ -3,6 +3,11 @@
 import { mkdirSync, writeFileSync, readFileSync, cpSync, rmSync, existsSync } from "node:fs";
 import { join } from "node:path";
 import { SITE, POSE, UNIVERS, AUTRES, PAGES } from "./src/pages.mjs";
+import { CONTENUS } from "./src/contenus.mjs";
+
+// Les pages rédigées remplacent leur version « en préparation ».
+for (const p of PAGES) if (CONTENUS[p.chemin]) Object.assign(p, CONTENUS[p.chemin], { statut: "redigee" });
+for (const c of Object.keys(CONTENUS)) if (!PAGES.some((p) => p.chemin === c)) throw new Error(`Contenu sans page dans le plan : ${c}`);
 
 // Tant que le site est en test, il reste invisible pour les moteurs de recherche.
 // À passer à true seulement le jour de la bascule du domaine instantterrasse.com.

@@ -1,0 +1,236 @@
+// Contenus rédigés des pages. Une page présente ici remplace sa version « en préparation ».
+// Règles : pas de chiffre, garantie, certification ou chantier inventé ; pas de nom de fournisseur.
+import { SITE, POSE } from "./pages.mjs";
+
+const img = (nom, alt, ratio) =>
+  `<img src="/assets/img/bois/${nom}-400.webp" srcset="/assets/img/bois/${nom}-400.webp 400w, /assets/img/bois/${nom}-800.webp 800w" sizes="(max-width:700px) 90vw, 360px" alt="${alt}" width="400" height="${ratio}" loading="lazy" decoding="async">`;
+
+const cta = (titre = "Un projet de terrasse en bois ?") => `
+<section class="bloc bloc-cta">
+  <div class="conteneur">
+    <h2>${titre}</h2>
+    <p class="chapo">Devis gratuit et sans engagement. Nous venons voir votre terrain et nous vous orientons vers l'essence et la structure les plus adaptées.</p>
+    <p class="actions"><a class="bouton" href="/contact/">Demander un devis</a> <a class="bouton bouton-clair" href="tel:${SITE.telLien}">${SITE.tel}</a></p>
+  </div>
+</section>`;
+
+// ---------- Terrasse bois ----------
+const essencesAlu = [
+  {
+    nom: "Thermopin", photo: ["thermopin", "Lame de terrasse en thermopin, teinte miel avec nœuds apparents", 378],
+    texte: "Un pin chauffé à haute température, sans produit chimique, pour le rendre plus stable et plus résistant. Teinte miel à la pose, nœuds apparents : le bois au naturel, à un prix accessible.",
+    points: ["Aspect bois naturel", "Excellent rapport qualité-prix"],
+  },
+  {
+    nom: "Thermofrêne", photo: ["thermofrene", "Lame de terrasse en thermofrêne, teinte brun chaud au veinage marqué", 358],
+    texte: "Le frêne, bois dur européen, traité thermiquement à cœur. Il prend une belle teinte brun chaud et garde un veinage très marqué, proche des bois exotiques.",
+    points: ["Bois dur européen", "Veinage prononcé"],
+  },
+  {
+    nom: "Kebony", photo: ["kebony", "Lame de terrasse en Kebony, teinte brune", 402],
+    texte: "Un bois résineux modifié par un procédé d'origine végétale qui renforce durablement ses fibres. Brun profond à la pose, il évolue vers un gris argenté homogène.",
+    points: ["Bois modifié très durable", "Patine gris argenté"],
+  },
+  {
+    nom: "Accoya naturel et gris", photo: ["accoya", "Lames de terrasse Accoya en version naturelle claire et en version grise", 395],
+    texte: "Un bois acétylé réputé pour sa stabilité : il bouge très peu avec l'humidité, ce qui limite les déformations. En teinte naturelle claire, ou grise dès la pose pour un aspect patiné immédiat.",
+    points: ["Très grande stabilité", "Deux teintes au choix"],
+  },
+  {
+    nom: "Bambou X-treme et N-Durance", photo: ["bambou-moso", "Lames de terrasse en bambou densifié, version brun foncé et version brun-rouge", 379],
+    texte: "Des fibres de bambou densifiées et traitées pour en faire des lames très dures. Le X-treme est brun foncé, le N-Durance brun-rouge, à l'allure d'un bois exotique. Le bambou repousse en quelques années.",
+    points: ["Très dur et dense", "Ressource à pousse rapide"],
+  },
+];
+
+const essencesTrad = [
+  ["Pin", "Résineux traité, économique, pour les projets simples."],
+  ["Douglas", "Résineux à la teinte rosée, naturellement plus durable que le pin."],
+  ["Mélèze", "Résineux dense et chaleureux, apprécié pour sa tenue en extérieur."],
+  ["Ipé", "Bois exotique très dense, brun foncé, d'une grande longévité."],
+  ["Cumaru", "Bois exotique dur, brun doré, alternative à l'ipé."],
+  ["Garapa", "Bois exotique clair, jaune doré, pour une terrasse lumineuse."],
+  ["Itauba", "Bois exotique naturellement huileux, brun-vert, très stable."],
+  ["Jatoba", "Bois exotique dur aux reflets brun-rouge."],
+];
+
+const terrasseBois = {
+  title: "Terrasse bois Lyon : thermopin, kebony, accoya, ipé | Instant Terrasse",
+  description: "Terrasse bois sur mesure à Lyon : thermopin, thermofrêne, kebony, accoya, bambou sur structure aluminium, ou ipé, cumaru, mélèze, douglas sur structure traditionnelle.",
+  corps: `
+<section class="hero hero-page">
+  <div class="conteneur">
+    <p class="fil"><a href="/">Accueil</a> › Terrasses</p>
+    <h1>Terrasse bois sur mesure à Lyon</h1>
+    <p class="chapo">Bois modifiés et bambou sur structure aluminium, ou bois massifs et exotiques sur structure traditionnelle : nous vous aidons à choisir l'essence qui correspond à votre maison, à votre budget et au temps que vous voulez consacrer à l'entretien.</p>
+    <p class="actions"><a class="bouton" href="/contact/">Demander un devis gratuit</a> <a class="bouton bouton-clair" href="#essences-aluminium">Voir les essences</a></p>
+  </div>
+</section>
+
+<section class="bloc bloc-alt">
+  <div class="conteneur deux-colonnes">
+    <div>
+      <h2>Deux façons de construire une terrasse bois</h2>
+      <p>La structure, c'est ce qu'on ne voit pas et ce qui décide de la durée de vie de la terrasse. Nous proposons deux approches, selon l'essence choisie et votre terrain.</p>
+      <p><a href="/structure-terrasse-lyon/#comparatif-bois">Comparer les deux structures en détail →</a></p>
+    </div>
+    <div class="grille">
+      <div class="carte"><h3>Sur structure aluminium</h3><p>Plots réglables, rails aluminium et fixations invisibles. Rien ne pourrit sous les lames, l'air circule, la terrasse reste plane. C'est la structure de nos bois modifiés et de nos bambous.</p></div>
+      <div class="carte"><h3>Sur structure traditionnelle</h3><p>Lambourdes en bois, la technique classique et éprouvée, adaptée aux bois massifs et exotiques.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="essences-aluminium" class="bloc">
+  <div class="conteneur">
+    <p class="sous-titre">Sur structure aluminium</p>
+    <h2>Bois modifiés et bambou</h2>
+    <p class="chapo">Des bois traités pour gagner en stabilité et en durabilité, posés sur une ossature qui ne pourrit pas.</p>
+    <div class="grille grille-essences">
+      ${essencesAlu.map((e) => `
+      <article class="essence">
+        <div class="essence-photo">${img(...e.photo)}</div>
+        <div class="essence-texte">
+          <h3>${e.nom}</h3>
+          <p>${e.texte}</p>
+          <ul class="puces">${e.points.map((p) => `<li>${p}</li>`).join("")}</ul>
+        </div>
+      </article>`).join("")}
+    </div>
+  </div>
+</section>
+
+<section id="essences-traditionnelles" class="bloc bloc-alt">
+  <div class="conteneur">
+    <p class="sous-titre">Sur structure traditionnelle</p>
+    <h2>Bois massifs et exotiques</h2>
+    <p class="chapo">Les grands classiques de la terrasse en bois, posés sur lambourdes. Selon disponibilité : nous vous confirmons les essences et les sections en stock au moment du devis.</p>
+    <div class="grille grille-3">
+      ${essencesTrad.map(([n, t]) => `<div class="carte"><h3>${n}</h3><p>${t}</p></div>`).join("")}
+    </div>
+  </div>
+</section>
+
+<section class="bloc">
+  <div class="conteneur deux-colonnes">
+    <div>
+      <h2>Bien choisir son bois</h2>
+      <p>Tous les bois grisent au soleil : c'est une patine naturelle, pas un défaut. Si vous voulez garder la teinte d'origine, un saturateur une à deux fois par an suffit. Si vous préférez le gris argenté, un simple nettoyage annuel.</p>
+      <p>Pour hésiter moins longtemps, posez-vous trois questions : quel aspect vous plaît (clair, miel, brun, exotique) ? Quel budget ? Combien de temps voulez-vous consacrer à l'entretien ? Nous faisons le reste lors de la visite.</p>
+    </div>
+    <div>
+      <h2>Comment se passe votre projet</h2>
+      <p>${POSE}</p>
+      <p>Vous hésitez encore entre le bois et un autre matériau ? Consultez notre <a href="/nos-terrasses/">comparatif des matériaux</a> ou découvrez la <a href="/terrasse-composite-lyon/">terrasse composite</a>.</p>
+    </div>
+  </div>
+</section>
+${cta()}`,
+};
+
+// ---------- Tableaux comparatifs ----------
+const tableau = (id, titre, intro, colonnes, lignes, verdicts) => `
+<section id="${id}" class="bloc">
+  <div class="conteneur">
+    <h2>${titre}</h2>
+    <p class="chapo">${intro}</p>
+    <div class="tableau-defile">
+      <table class="comparatif">
+        <thead><tr><th scope="col"><span class="vh">Critère</span></th>${colonnes.map((c, i) => `<th scope="col"${i === 1 ? ' class="col-accent"' : ""}>${c}</th>`).join("")}</tr></thead>
+        <tbody>${lignes.map(([crit, a, b]) => `<tr><th scope="row">${crit}</th><td>${a}</td><td class="col-accent">${b}</td></tr>`).join("")}</tbody>
+      </table>
+    </div>
+    <div class="grille verdicts">${verdicts.map(([t, x]) => `<div class="carte"><h3>${t}</h3><p>${x}</p></div>`).join("")}</div>
+  </div>
+</section>`;
+
+const compBois = tableau(
+  "comparatif-bois",
+  "Terrasse bois : structure traditionnelle ou aluminium ?",
+  "Les deux techniques ont leur place. Voici ce qui les distingue, pour choisir en connaissance de cause.",
+  ["Structure traditionnelle", "Structure aluminium"],
+  [
+    ["Ossature", "Lambourdes en bois", "Rails en aluminium sur plots réglables"],
+    ["Face à l'humidité", "Les lambourdes restent sensibles à l'eau stagnante avec les années", "Imputrescible : rien ne pourrit sous les lames"],
+    ["Stabilité", "Le bois de l'ossature peut travailler, se vriller", "Rails rectilignes qui ne se déforment pas"],
+    ["Mise à niveau", "Calage des lambourdes", "Plots réglables en hauteur, terrasse bien plane"],
+    ["Fixation des lames", "Le plus souvent vissées", "Clips, sans vis apparente"],
+    ["Ventilation", "Selon la hauteur disponible", "Circulation d'air prévue entre ossature et lames"],
+    ["Revêtements possibles", "Bois massifs et exotiques", "Bois modifiés, bambou, composite, carrelage, lames aluminium"],
+    ["Budget", "Généralement plus économique à l'achat", "Investissement plus élevé, pensé pour durer"],
+  ],
+  [
+    ["La traditionnelle, si…", "vous voulez un bois massif ou exotique (ipé, cumaru, mélèze…) avec un budget maîtrisé."],
+    ["L'aluminium, si…", "vous cherchez la durabilité et la planéité dans le temps, ou un bois modifié, du bambou ou du composite."],
+  ]
+);
+
+const compCarrelage = tableau(
+  "comparatif-carrelage",
+  "Terrasse carrelage : plots simples ou structure aluminium ?",
+  "Le carrelage extérieur se pose sans colle, en dalles épaisses sur des plots. La question est ce qu'il y a dessous.",
+  ["Sur plots simples", "Sur structure aluminium"],
+  [
+    ["Principe", "Chaque dalle repose directement sur des plots placés à ses angles", "Les dalles reposent sur des rails aluminium, eux-mêmes posés sur plots"],
+    ["Support idéal", "Support existant stable : dalle béton, toit-terrasse, ancienne terrasse", "Supports plus irréguliers ou plus fragiles, grandes hauteurs"],
+    ["Rigidité", "Bonne, à condition que le support soit sain", "Ossature continue, très rigide, qui répartit les charges"],
+    ["Planéité", "Réglage plot par plot", "Rails réglés une fois, toute la surface suit"],
+    ["Rapidité et budget", "Pose rapide, solution la plus économique", "Plus de matériel, budget plus élevé"],
+  ],
+  [
+    ["Les plots simples, si…", "vous avez déjà une dalle béton ou un toit-terrasse en bon état et une hauteur raisonnable à rattraper."],
+    ["La structure aluminium, si…", "le support est irrégulier, la hauteur importante, ou si vous voulez la terrasse la plus stable possible."],
+  ]
+);
+
+// ---------- Nos structures ----------
+const structures = {
+  title: "Structure de terrasse aluminium ou traditionnelle à Lyon | Instant Terrasse",
+  description: "Structure aluminium sur plots réglables, structure traditionnelle sur lambourdes ou dalles sur plots : la base qui fait durer votre terrasse. Lyon et sa région.",
+  corps: `
+<section class="hero hero-page">
+  <div class="conteneur">
+    <p class="fil"><a href="/">Accueil</a> › Terrasses</p>
+    <h1>Nos structures de terrasse</h1>
+    <p class="chapo">Une terrasse se juge sur la durée, et sa durée de vie se joue sous les lames. Nous adaptons la structure à votre terrain, à votre revêtement et à votre budget.</p>
+    <p class="actions"><a class="bouton bouton-clair" href="#comparatif-bois">Comparer pour le bois</a> <a class="bouton bouton-clair" href="#comparatif-carrelage">Comparer pour le carrelage</a></p>
+  </div>
+</section>
+
+<section class="bloc bloc-alt">
+  <div class="conteneur deux-colonnes deux-colonnes-image">
+    <div class="photo-produit">${img("structure-aluminium", "Système de structure aluminium : plot réglable, rail aluminium, clip et pattes de fixation sous une lame de terrasse", 404)}</div>
+    <div>
+      <p class="sous-titre">Notre solution phare</p>
+      <h2>La structure aluminium</h2>
+      <p>Des plots réglables en hauteur posés sur le support, des rails en aluminium, et des lames fixées par clips, sans vis apparente.</p>
+      <ul class="puces">
+        <li><strong>Imputrescible</strong> : l'aluminium ne pourrit pas et ne gonfle pas avec l'humidité.</li>
+        <li><strong>Plane</strong> : les plots rattrapent les défauts de niveau du terrain ou de la dalle.</li>
+        <li><strong>Ventilée</strong> : l'air circule entre la structure et les lames, qui sèchent plus vite.</li>
+        <li><strong>Polyvalente</strong> : elle accueille le bois, le <a href="/terrasse-composite-lyon/">composite</a>, le <a href="/terrasse-carrelage-lyon/">carrelage</a> et les <a href="/terrasse-aluminium-lyon/">lames aluminium</a>.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="bloc">
+  <div class="conteneur">
+    <h2>Les autres solutions</h2>
+    <div class="grille grille-3">
+      <a class="carte carte-lien" href="/terrasse-bois-lyon/#essences-traditionnelles"><h3>Structure traditionnelle</h3><p>Des lambourdes en bois, la technique classique, pour les terrasses en bois massifs et exotiques.</p><span class="fleche" aria-hidden="true">→</span></a>
+      <a class="carte carte-lien" href="#comparatif-carrelage"><h3>Dalles sur plots</h3><p>Pour le carrelage sur un support existant (dalle béton, toit-terrasse) : posé sans colle ni fondation.</p><span class="fleche" aria-hidden="true">→</span></a>
+      <a class="carte carte-lien" href="/terrasse-sur-pilotis-lyon/"><h3>Terrasse sur pilotis</h3><p>Pour les terrains en pente ou les terrasses surélevées.</p><span class="fleche" aria-hidden="true">→</span></a>
+    </div>
+    <p class="note-pose">${POSE}</p>
+  </div>
+</section>
+${compBois.replace('class="bloc"', 'class="bloc bloc-alt"')}
+${compCarrelage}
+${cta("Quelle structure pour votre terrain ?")}`,
+};
+
+export const CONTENUS = {
+  "/terrasse-bois-lyon/": terrasseBois,
+  "/structure-terrasse-lyon/": structures,
+};

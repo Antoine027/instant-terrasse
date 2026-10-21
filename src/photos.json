@@ -1,0 +1,479 @@
+[
+ {
+  "cle": "terrasse-accoya-gris-piscine",
+  "dossier": "bois",
+  "categorie": "terrasse-bois",
+  "essence": "Accoya gris",
+  "alt": "Terrasse en accoya gris autour d'une piscine, jardin minéral et mur en pierre",
+  "largeurs": [
+   600,
+   1000,
+   1600
+  ],
+  "ratio": 1.7778
+ },
+ {
+  "cle": "terrasse-accoya-gris-maison",
+  "dossier": "bois",
+  "categorie": "terrasse-bois",
+  "essence": "Accoya gris",
+  "alt": "Grande terrasse en accoya gris le long d'une maison, avec marche",
+  "largeurs": [
+   600,
+   1000,
+   1108
+  ],
+  "ratio": 0.7497
+ },
+ {
+  "cle": "terrasse-accoya-gris-marches",
+  "dossier": "bois",
+  "categorie": "terrasse-bois",
+  "essence": "Accoya gris",
+  "alt": "Marches et banc intégré en accoya gris",
+  "largeurs": [
+   600,
+   720
+  ],
+  "ratio": 1.3333
+ },
+ {
+  "cle": "terrasse-accoya-naturel-piscine",
+  "dossier": "bois",
+  "categorie": "terrasse-bois",
+  "essence": "Accoya naturel",
+  "alt": "Plage de piscine en accoya naturel, bois clair, avec bains de soleil",
+  "largeurs": [
+   600,
+   1000,
+   1600
+  ],
+  "ratio": 1.5003
+ },
+ {
+  "cle": "terrasse-accoya-naturel-piscine-vue-haut",
+  "dossier": "bois",
+  "categorie": "terrasse-bois",
+  "essence": "Accoya naturel",
+  "alt": "Vue aérienne d'une terrasse en accoya naturel autour d'une piscine rectangulaire",
+  "largeurs": [
+   600,
+   1000,
+   1368
+  ],
+  "ratio": 1.5
+ },
+ {
+  "cle": "terrasse-accoya-naturel-balcon",
+  "dossier": "bois",
+  "categorie": "terrasse-bois",
+  "essence": "Accoya naturel",
+  "alt": "Terrasse surélevée en accoya naturel avec garde-corps",
+  "largeurs": [
+   600,
+   1000,
+   1600
+  ],
+  "ratio": 1.3333
+ },
+ {
+  "cle": "terrasse-accoya-naturel-salle-a-manger",
+  "dossier": "bois",
+  "categorie": "terrasse-bois",
+  "essence": "Accoya naturel",
+  "alt": "Terrasse en accoya naturel avec table et chaises en bois",
+  "largeurs": [
+   600,
+   1000,
+   1600
+  ],
+  "ratio": 1.3333
+ },
+ {
+  "cle": "terrasse-accoya-naturel-marches",
+  "dossier": "bois",
+  "categorie": "terrasse-bois",
+  "essence": "Accoya naturel",
+  "alt": "Détail de marches intégrées dans une terrasse en accoya naturel",
+  "largeurs": [
+   600,
+   1000,
+   1600
+  ],
+  "ratio": 1.5003
+ },
+ {
+  "cle": "terrasse-accoya-naturel-bord-piscine",
+  "dossier": "bois",
+  "categorie": "terrasse-bois",
+  "essence": "Accoya naturel",
+  "alt": "Lames d'accoya naturel en bordure de piscine",
+  "largeurs": [
+   600,
+   1000,
+   1600
+  ],
+  "ratio": 1.5003
+ },
+ {
+  "cle": "bardage-accoya-gris-maison",
+  "dossier": "bardage",
+  "categorie": "bardage-bois",
+  "essence": "Accoya gris",
+  "alt": "Façade de maison habillée d'un bardage bois vertical gris",
+  "largeurs": [
+   600,
+   1000,
+   1600
+  ],
+  "ratio": 1.0
+ },
+ {
+  "cle": "bardage-accoya-naturel-jardin",
+  "dossier": "bardage",
+  "categorie": "bardage-bois",
+  "essence": "Accoya naturel",
+  "alt": "Clôture et abri de jardin en bardage accoya naturel à claire-voie",
+  "largeurs": [
+   600,
+   831
+  ],
+  "ratio": 0.9563
+ },
+ {
+  "cle": "bardage-accoya-naturel-claire-voie",
+  "dossier": "bardage",
+  "categorie": "bardage-bois",
+  "essence": "Accoya naturel",
+  "alt": "Bardage vertical à claire-voie en accoya naturel derrière deux fauteuils",
+  "largeurs": [
+   600,
+   1000,
+   1284
+  ],
+  "ratio": 0.75
+ },
+ {
+  "cle": "bardage-kebony-facade",
+  "dossier": "bardage",
+  "categorie": "bardage-bois",
+  "essence": "Kebony",
+  "alt": "Façade de bâtiment habillée d'un bardage vertical en Kebony brun",
+  "largeurs": [
+   600,
+   1000,
+   1440
+  ],
+  "ratio": 0.75
+ },
+ {
+  "cle": "bardage-kebony-angle",
+  "dossier": "bardage",
+  "categorie": "bardage-bois",
+  "essence": "Kebony",
+  "alt": "Angle d'un bâtiment en bardage Kebony vertical, en fin de chantier",
+  "largeurs": [
+   600,
+   1000,
+   1440
+  ],
+  "ratio": 0.75
+ },
+ {
+  "cle": "terrasse-kebony-port",
+  "dossier": "bois",
+  "categorie": "terrasse-bois",
+  "essence": "Kebony",
+  "alt": "Grande terrasse en Kebony face à un port de plaisance au coucher du soleil",
+  "largeurs": [
+   600,
+   1000,
+   1600
+  ],
+  "ratio": 1.5003
+ },
+ {
+  "cle": "terrasse-kebony-port-mer",
+  "dossier": "bois",
+  "categorie": "terrasse-bois",
+  "essence": "Kebony",
+  "alt": "Terrasse en Kebony avec garde-corps, vue sur la mer et les voiliers",
+  "largeurs": [
+   600,
+   1000,
+   1600
+  ],
+  "ratio": 1.5003
+ },
+ {
+  "cle": "terrasse-kebony-piscine-pool-house",
+  "dossier": "bois",
+  "categorie": "terrasse-bois",
+  "essence": "Kebony",
+  "alt": "Plage de piscine en Kebony patiné gris, pool house en bois au fond",
+  "largeurs": [
+   600,
+   1000,
+   1600
+  ],
+  "ratio": 1.5
+ },
+ {
+  "cle": "terrasse-kebony-facade-brique",
+  "dossier": "bois",
+  "categorie": "terrasse-bois",
+  "essence": "Kebony",
+  "alt": "Terrasse en Kebony gris argenté devant une façade en brique",
+  "largeurs": [
+   600,
+   1000,
+   1600
+  ],
+  "ratio": 0.6665
+ },
+ {
+  "cle": "terrasse-kebony-surelevee",
+  "dossier": "bois",
+  "categorie": "terrasse-bois",
+  "essence": "Kebony",
+  "alt": "Terrasse surélevée en Kebony avec garde-corps métallique",
+  "largeurs": [
+   600,
+   1000,
+   1600
+  ],
+  "ratio": 1.5003
+ },
+ {
+  "cle": "terrasse-kebony-vue-jardin",
+  "dossier": "bois",
+  "categorie": "terrasse-bois",
+  "essence": "Kebony",
+  "alt": "Terrasse en Kebony vue depuis l'intérieur, table et chaises face au jardin",
+  "largeurs": [
+   600,
+   1000,
+   1600
+  ],
+  "ratio": 1.5003
+ },
+ {
+  "cle": "terrasse-kebony-maison",
+  "dossier": "bois",
+  "categorie": "terrasse-bois",
+  "essence": "Kebony",
+  "alt": "Terrasse en Kebony grisé autour d'une maison, salon de jardin",
+  "largeurs": [
+   600,
+   1000,
+   1600
+  ],
+  "ratio": 1.5003
+ },
+ {
+  "cle": "terrasse-kebony-jardin",
+  "dossier": "bois",
+  "categorie": "terrasse-bois",
+  "essence": "Kebony",
+  "alt": "Petite terrasse en Kebony gris dans un jardin, fauteuils et table bistrot",
+  "largeurs": [
+   600,
+   1000,
+   1600
+  ],
+  "ratio": 0.6665
+ },
+ {
+  "cle": "terrasse-kebony-piscine-debordement",
+  "dossier": "bois",
+  "categorie": "terrasse-bois",
+  "essence": "Kebony",
+  "alt": "Terrasse en Kebony autour d'une piscine à débordement avec vue sur les collines",
+  "largeurs": [
+   600,
+   1000,
+   1600
+  ],
+  "ratio": 1.5003
+ },
+ {
+  "cle": "terrasse-kebony-piscine-jardin",
+  "dossier": "bois",
+  "categorie": "terrasse-bois",
+  "essence": "Kebony",
+  "alt": "Plage de piscine en Kebony brun, haie et pelouse",
+  "largeurs": [
+   600,
+   1000,
+   1600
+  ],
+  "ratio": 1.3333
+ },
+ {
+  "cle": "terrasse-kebony-restaurant",
+  "dossier": "bois",
+  "categorie": "terrasse-bois",
+  "essence": "Kebony",
+  "alt": "Terrasse de restaurant couverte avec plancher en Kebony",
+  "largeurs": [
+   600,
+   1000,
+   1600
+  ],
+  "ratio": 1.5565
+ },
+ {
+  "cle": "terrasse-bambou-xtreme-toit",
+  "dossier": "bois",
+  "categorie": "terrasse-bois",
+  "essence": "Bambou X-treme",
+  "alt": "Toit-terrasse en bambou X-treme brun foncé, entouré de prairie fleurie",
+  "largeurs": [
+   600,
+   1000,
+   1600
+  ],
+  "ratio": 1.5003
+ },
+ {
+  "cle": "terrasse-bambou-xtreme-spa",
+  "dossier": "bois",
+  "categorie": "terrasse-bois",
+  "essence": "Bambou X-treme",
+  "alt": "Terrasse et marches en bambou X-treme autour d'un spa",
+  "largeurs": [
+   600,
+   1000,
+   1600
+  ],
+  "ratio": 1.5003
+ },
+ {
+  "cle": "terrasse-bambou-ndurance-piscine-tropicale",
+  "dossier": "bois",
+  "categorie": "terrasse-bois",
+  "essence": "Bambou N-Durance",
+  "alt": "Plage de piscine en bambou N-Durance, végétation tropicale",
+  "largeurs": [
+   600,
+   1000,
+   1280
+  ],
+  "ratio": 1.4988
+ },
+ {
+  "cle": "terrasse-bambou-ndurance-piscine-pierre",
+  "dossier": "bois",
+  "categorie": "terrasse-bois",
+  "essence": "Bambou N-Durance",
+  "alt": "Terrasse en bambou N-Durance autour d'une piscine, murets en pierre",
+  "largeurs": [
+   600,
+   1000,
+   1600
+  ],
+  "ratio": 1.5003
+ },
+ {
+  "cle": "terrasse-bambou-ndurance-pergola",
+  "dossier": "bois",
+  "categorie": "terrasse-bois",
+  "essence": "Bambou N-Durance",
+  "alt": "Terrasse en bambou N-Durance sous une pergola bioclimatique blanche",
+  "largeurs": [
+   600,
+   1000,
+   1600
+  ],
+  "ratio": 1.5003
+ },
+ {
+  "cle": "bardage-bambou-xtreme-maison",
+  "dossier": "bardage",
+  "categorie": "bardage-bois",
+  "essence": "Bambou X-treme",
+  "alt": "Maison contemporaine entièrement habillée de bardage vertical en bambou X-treme, à la tombée du jour",
+  "largeurs": [
+   600,
+   1000,
+   1600
+  ],
+  "ratio": 1.3333
+ },
+ {
+  "cle": "bardage-bambou-xtreme-patio",
+  "dossier": "bardage",
+  "categorie": "bardage-bois",
+  "essence": "Bambou X-treme",
+  "alt": "Patio éclairé le soir, mur en bardage bambou X-treme et banc intégré",
+  "largeurs": [
+   600,
+   1000,
+   1600
+  ],
+  "ratio": 1.4977
+ },
+ {
+  "cle": "bardage-bambou-xtreme-mur",
+  "dossier": "bardage",
+  "categorie": "bardage-bois",
+  "essence": "Bambou X-treme",
+  "alt": "Mur de jardin habillé de lames verticales en bambou X-treme",
+  "largeurs": [
+   600,
+   960
+  ],
+  "ratio": 0.7202
+ },
+ {
+  "cle": "bardage-bambou-xtreme-angle",
+  "dossier": "bardage",
+  "categorie": "bardage-bois",
+  "essence": "Bambou X-treme",
+  "alt": "Détail d'angle d'un bardage en bambou X-treme à lames espacées",
+  "largeurs": [
+   600,
+   1000,
+   1512
+  ],
+  "ratio": 0.75
+ },
+ {
+  "cle": "bardage-bambou-xtreme-fixation",
+  "dossier": "bardage",
+  "categorie": "bardage-bois",
+  "essence": "Bambou X-treme",
+  "alt": "Bardage bambou X-treme en cours de pose : lames clipsées sur rails, fixations invisibles",
+  "largeurs": [
+   600,
+   1000,
+   1600
+  ],
+  "ratio": 1.3333
+ },
+ {
+  "cle": "bardage-thermopin-clear-salon",
+  "dossier": "bardage",
+  "categorie": "bardage-bois",
+  "essence": "Thermopin clear",
+  "alt": "Mur habillé de tasseaux verticaux en thermopin clear, teinte brun chaud, derrière un canapé",
+  "largeurs": [
+   600,
+   1000,
+   1080
+  ],
+  "ratio": 1.0
+ },
+ {
+  "cle": "bardage-thermopin-clear-horizontal",
+  "dossier": "bardage",
+  "categorie": "bardage-bois",
+  "essence": "Thermopin clear",
+  "alt": "Bardage horizontal en thermopin clear sans nœuds",
+  "largeurs": [
+   600,
+   690
+  ],
+  "ratio": 0.6389
+ }
+]

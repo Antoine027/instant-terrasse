@@ -1,6 +1,7 @@
 // Contenus rédigés des pages. Une page présente ici remplace sa version « en préparation ».
 // Règles : pas de chiffre, garantie, certification ou chantier inventé ; pas de nom de fournisseur.
 import { SITE, POSE } from "./pages.mjs";
+import { galerie, imgPhoto } from "./galerie.mjs";
 
 const img = (nom, alt, ratio) =>
   `<img src="/assets/img/bois/${nom}-400.webp" srcset="/assets/img/bois/${nom}-400.webp 400w, /assets/img/bois/${nom}-800.webp 800w" sizes="(max-width:700px) 90vw, 360px" alt="${alt}" width="400" height="${ratio}" loading="lazy" decoding="async">`;
@@ -63,7 +64,7 @@ const terrasseBois = {
     <p class="fil"><a href="/">Accueil</a> › Terrasses</p>
     <h1>Terrasse bois sur mesure à Lyon</h1>
     <p class="chapo">Bois modifiés et bambou sur structure aluminium, ou bois massifs et exotiques sur structure traditionnelle : nous vous aidons à choisir l'essence qui correspond à votre maison, à votre budget et au temps que vous voulez consacrer à l'entretien.</p>
-    <p class="actions"><a class="bouton" href="/contact/">Demander un devis gratuit</a> <a class="bouton bouton-clair" href="#essences-aluminium">Voir les essences</a></p>
+    <p class="actions"><a class="bouton" href="/contact/">Demander un devis gratuit</a> <a class="bouton bouton-clair" href="#essences-aluminium">Voir les essences</a> <a class="bouton bouton-clair" href="#galerie">Voir les photos</a></p>
   </div>
 </section>
 
@@ -100,7 +101,13 @@ const terrasseBois = {
   </div>
 </section>
 
-<section id="essences-traditionnelles" class="bloc bloc-alt">
+<section id="galerie" class="bloc bloc-alt">
+  <div class="conteneur">
+    ${galerie("terrasse-bois", { titre: "Nos bois en situation", intro: "Choisissez une essence pour voir son rendu en terrasse.", legende: "Illustrations de terrasses dans nos essences" })}
+  </div>
+</section>
+
+<section id="essences-traditionnelles" class="bloc">
   <div class="conteneur">
     <p class="sous-titre">Sur structure traditionnelle</p>
     <h2>Bois massifs et exotiques</h2>
@@ -230,7 +237,75 @@ ${compCarrelage}
 ${cta("Quelle structure pour votre terrain ?")}`,
 };
 
+// ---------- Bardage bois ----------
+const bardageEssences = [
+  ["Accoya gris", "Bois acétylé très stable, teinté gris dès la pose : la façade a tout de suite son aspect patiné."],
+  ["Accoya naturel", "La même stabilité dans une teinte claire, qui grisera naturellement avec le temps."],
+  ["Kebony", "Bois modifié d'origine végétale, brun à la pose, qui évolue vers un gris argenté homogène."],
+  ["Bambou X-treme", "Bambou densifié brun foncé, au rendu contemporain et très régulier."],
+  ["Thermofrêne", "Frêne traité thermiquement, brun chaud au veinage marqué."],
+  ["Thermopin clear", "Pin traité thermiquement, sélectionné sans nœuds pour un aspect net et uniforme."],
+];
+
+const bardageBois = {
+  title: "Bardage bois Lyon : accoya, kebony, thermofrêne | Instant Terrasse",
+  description: "Bardage bois sur mesure à Lyon : accoya gris ou naturel, kebony, bambou X-treme, thermofrêne, thermopin clear. Un bardage assorti à votre terrasse. Devis gratuit.",
+  corps: `
+<section class="hero hero-page">
+  <div class="conteneur">
+    <p class="fil"><a href="/">Accueil</a> › Bardage</p>
+    <h1>Bardage bois sur mesure à Lyon</h1>
+    <p class="chapo">Habiller une façade, une extension, un mur de clôture ou un abri avec des bois sélectionnés pour durer en extérieur, et assortis à votre terrasse si vous le souhaitez.</p>
+    <p class="actions"><a class="bouton" href="/contact/">Demander un devis gratuit</a> <a class="bouton bouton-clair" href="#essences-bardage">Voir les essences</a></p>
+  </div>
+</section>
+
+<section class="bandeau-photo">
+  <figure class="conteneur">
+    ${imgPhoto("bardage-accoya-gris-maison", { sizes: "(max-width:1180px) 100vw, 1150px", prioritaire: true })}
+    <figcaption>Illustration : bardage vertical en accoya gris.</figcaption>
+  </figure>
+</section>
+
+<section id="essences-bardage" class="bloc">
+  <div class="conteneur">
+    <h2>Nos essences de bardage</h2>
+    <p class="chapo">Des bois modifiés et traités, choisis pour leur stabilité : un bardage doit rester droit et beau malgré le soleil et la pluie.</p>
+    <div class="grille grille-3">
+      ${bardageEssences.map(([n, t]) => `<div class="carte"><h3>${n}</h3><p>${t}</p></div>`).join("")}
+    </div>
+  </div>
+</section>
+
+<section class="bloc bloc-alt">
+  <div class="conteneur">
+    ${galerie("bardage-bois", { titre: "Nos bardages en situation", legende: "Illustrations de bardages dans nos essences" })}
+  </div>
+</section>
+
+<section class="bloc">
+  <div class="conteneur deux-colonnes">
+    <div>
+      <h2>Pourquoi un bardage bois ?</h2>
+      <ul class="puces">
+        <li><strong>Esthétique</strong> : il réchauffe une façade et s'accorde avec le jardin.</li>
+        <li><strong>Protection</strong> : il habille et protège le mur des intempéries.</li>
+        <li><strong>Cohérence</strong> : la même essence que votre <a href="/terrasse-bois-lyon/">terrasse</a> pour un extérieur harmonieux.</li>
+        <li><strong>Évolution naturelle</strong> : le bois grise avec le temps, ou d'emblée avec l'accoya gris.</li>
+      </ul>
+    </div>
+    <div>
+      <h2>Votre projet</h2>
+      <p>${POSE}</p>
+      <p>Vous préférez une façade sans aucun entretien ? Découvrez le <a href="/bardage-aluminium-lyon/">bardage aluminium</a>.</p>
+    </div>
+  </div>
+</section>
+${cta("Un projet de bardage ?")}`,
+};
+
 export const CONTENUS = {
+  "/bardage-bois-lyon/": bardageBois,
   "/terrasse-bois-lyon/": terrasseBois,
   "/structure-terrasse-lyon/": structures,
 };

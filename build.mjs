@@ -4,6 +4,7 @@ import { mkdirSync, writeFileSync, readFileSync, cpSync, rmSync, existsSync } fr
 import { join } from "node:path";
 import { SITE, POSE, UNIVERS, AUTRES, PAGES } from "./src/pages.mjs";
 import { CONTENUS } from "./src/contenus.mjs";
+import { SCRIPT_GALERIE } from "./src/galerie.mjs";
 
 // Les pages rédigées remplacent leur version « en préparation ».
 for (const p of PAGES) if (CONTENUS[p.chemin]) Object.assign(p, CONTENUS[p.chemin], { statut: "redigee" });
@@ -140,6 +141,7 @@ const d=[...document.querySelectorAll('.menu-deroulant')];
 d.forEach(x=>x.addEventListener('toggle',()=>{if(x.open)d.forEach(y=>y!==x&&(y.open=false))}));
 document.addEventListener('click',e=>{if(!e.target.closest('.menu-deroulant'))d.forEach(y=>y.open=false)});
 document.addEventListener('keydown',e=>{if(e.key==='Escape')d.forEach(y=>y.open=false)});
+${SCRIPT_GALERIE}
 const b=document.querySelector('.burger');b&&b.addEventListener('toggle',()=>document.body.classList.toggle('menu-ouvert',b.open));
 </script>
 </body>

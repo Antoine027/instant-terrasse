@@ -1,3 +1,4 @@
+import { imgPhoto } from "./galerie.mjs";
 // Plan du site et contenu des pages. Une entrée = une page (chemin avec / final).
 // statut "preparation" : page affichée avec un contenu provisoire, à rédiger.
 export const SITE = {
@@ -122,8 +123,9 @@ const etapes = [
 ];
 
 const accueil = `
-<section class="hero">
-  <div class="conteneur hero-in">
+<section class="hero hero-accueil">
+  <div class="conteneur hero-grille">
+  <div>
     <p class="surtitre">Version de test — site en construction</p>
     <h1>Terrasses, pergolas et aménagements extérieurs sur mesure à Lyon</h1>
     <p class="chapo">Terrasse bois, composite, carrelage ou aluminium, pergola, carport, garde-corps, store banne, bardage : un seul interlocuteur pour tout votre extérieur.</p>
@@ -131,6 +133,10 @@ const accueil = `
       <a class="bouton" href="/contact/">Demander un devis gratuit</a>
       <a class="bouton bouton-clair" href="tel:${SITE.telLien}">${SITE.tel}</a>
     </p>
+  </div>
+  <figure class="hero-photo">
+    ${imgPhoto("terrasse-accoya-naturel-piscine", { sizes: "(max-width:1060px) 100vw, 560px", prioritaire: true })}
+  </figure>
   </div>
 </section>
 

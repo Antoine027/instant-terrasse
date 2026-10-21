@@ -18,7 +18,14 @@ Remplaçant du site WordPress/Elementor instantterrasse.com. Générateur Node s
   2. Pergolas (fournisseur MSB) : bioclimatique, toile rétractable, toile tendue, toit fixe ; carports.
   3. Garde-corps aluminium (fournisseur Kordo).
   4. Stores bannes (fournisseur MSB).
-- Ne pas citer les fournisseurs sur le site sans accord d'Antoine.
+  5. Bardage bois et bardage aluminium.
+- Marques fournisseurs : rester discret, ne pas les citer. Leurs photos sont autorisées sur le site, mais comme illustrations produit : ne jamais les présenter comme des chantiers Instant Terrasse (pas dans « Réalisations », pas de légende de type « notre chantier à … »).
+
+## Pose : partenaire, discret mais sans mentir
+- La pose est réalisée par un installateur partenaire, jamais nommé.
+- Formulation de référence : Instant Terrasse conçoit, fournit et coordonne la pose ; un seul interlocuteur du premier rendez-vous à la réception du chantier.
+- Interdit : « nous posons », « nos poseurs », « nos équipes », ou toute phrase laissant croire à des salariés poseurs.
+- Autorisé : « pose réalisée par des professionnels qualifiés », « nous coordonnons la pose », « nous suivons le chantier ».
 - Zone : Lyon et sa région. Téléphone 04 82 53 18 74.
 - Charte : fond #F0E8DA, fond secondaire #F8F3EB, texte #2F3437, accent #D79A3A (survol #E3A94A), rayon 15px, Montserrat (titres), Lato (texte), polices hébergées dans public/assets/fonts.
 - Ne jamais inventer de chantier, avis client, certification, garantie ou chiffre.

@@ -115,10 +115,11 @@ details[open]>summary.menu-lien::after{transform:translateY(2px) rotate(225deg)}
 .filtre{font:600 .9rem Montserrat,sans-serif;border:0;border-radius:999px;padding:9px 16px;background:#fff;color:var(--texte);cursor:pointer;box-shadow:inset 0 0 0 1px rgba(47,52,55,.15)}
 .filtre:hover{box-shadow:inset 0 0 0 2px var(--accent)}
 .filtre[aria-pressed="true"]{background:var(--texte);color:#fff;box-shadow:none}
-.mosaique{columns:3 300px;column-gap:16px}
-.mosaique figure{margin:0 0 16px;break-inside:avoid;position:relative}
+.mosaique{display:flex;flex-wrap:wrap;gap:12px}
+.mosaique::after{content:"";flex-grow:999}
+.mosaique figure{margin:0;position:relative;flex:var(--r) 1 calc(var(--r) * 230px)}
 .mosaique figure[hidden]{display:none}
-.mosaique img{display:block;width:100%;height:auto;border-radius:var(--rayon)}
+.mosaique img{display:block;width:100%;height:auto;aspect-ratio:var(--r);object-fit:cover;border-radius:var(--rayon)}
 .mosaique figcaption{position:absolute;left:10px;bottom:10px;background:rgba(47,52,55,.78);color:#fff;font-size:.8rem;font-weight:700;padding:4px 10px;border-radius:999px}
 
 /* ---------- Bandeau photo ---------- */
@@ -175,4 +176,4 @@ details[open]>summary.menu-lien::after{transform:translateY(2px) rotate(225deg)}
   .galerie{grid-template-columns:1fr}
   .g-large,.g-petite,.g-portrait{grid-column:1;grid-row:auto}
 }
-@media (max-width:560px){.entete .logo img{height:46px}.pied-grille{grid-template-columns:1fr}.bloc{padding:56px 0}}
+@media (max-width:560px){.mosaique figure{flex-basis:calc(var(--r) * 150px)}.entete .logo img{height:46px}.pied-grille{grid-template-columns:1fr}.bloc{padding:56px 0}}

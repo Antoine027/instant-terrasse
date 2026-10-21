@@ -6,11 +6,11 @@ import { galerie, imgPhoto } from "./galerie.mjs";
 const img = (nom, alt, ratio) =>
   `<img src="/assets/img/bois/${nom}-400.webp" srcset="/assets/img/bois/${nom}-400.webp 400w, /assets/img/bois/${nom}-800.webp 800w" sizes="(max-width:700px) 90vw, 360px" alt="${alt}" width="400" height="${ratio}" loading="lazy" decoding="async">`;
 
-const cta = (titre = "Un projet de terrasse en bois ?") => `
+const cta = (titre = "Un projet de terrasse en bois ?", texte = "Devis gratuit et sans engagement. Nous venons voir votre terrain et nous vous orientons vers l'essence et la structure les plus adaptées.") => `
 <section class="bloc bloc-cta">
   <div class="conteneur">
     <h2>${titre}</h2>
-    <p class="chapo">Devis gratuit et sans engagement. Nous venons voir votre terrain et nous vous orientons vers l'essence et la structure les plus adaptées.</p>
+    <p class="chapo">${texte}</p>
     <p class="actions"><a class="bouton" href="/contact/">Demander un devis</a> <a class="bouton bouton-clair" href="tel:${SITE.telLien}">${SITE.tel}</a></p>
   </div>
 </section>`;
@@ -305,7 +305,179 @@ const bardageBois = {
 ${cta("Un projet de bardage ?")}`,
 };
 
+// ---------- Gabarit de page produit (pergolas, etc.) ----------
+const pageProduit = ({ introGalerie = "", fil, h1, chapo, photo, atouts, galerieCat, titreGalerie, details, voisins, ctaTitre, complement = "Une pergola se pense avec la terrasse qu'elle couvre : hauteurs, fixations, écoulement des eaux. Nous pouvons étudier les deux ensemble.", titreVoisins = "Les autres solutions" }) => `
+<section class="hero hero-page">
+  <div class="conteneur hero-grille">
+    <div>
+      <p class="fil"><a href="/">Accueil</a> › ${fil}</p>
+      <h1>${h1}</h1>
+      <p class="chapo">${chapo}</p>
+      <p class="actions"><a class="bouton" href="/contact/">Demander un devis gratuit</a> <a class="bouton bouton-clair" href="#galerie">Voir les photos</a></p>
+    </div>
+    <figure class="hero-photo">${imgPhoto(photo, { sizes: "(max-width:1060px) 100vw, 560px", prioritaire: true })}</figure>
+  </div>
+</section>
+
+<section class="bloc bloc-alt">
+  <div class="conteneur">
+    <h2>Les points forts</h2>
+    <div class="grille grille-3">${atouts.map(([t, x]) => `<div class="carte"><h3>${t}</h3><p>${x}</p></div>`).join("")}</div>
+  </div>
+</section>
+
+<section id="galerie" class="bloc">
+  <div class="conteneur">
+    ${galerie(galerieCat, { titre: titreGalerie, intro: introGalerie, legende: "Illustrations" })}
+  </div>
+</section>
+
+<section class="bloc bloc-alt">
+  <div class="conteneur deux-colonnes">
+    <div>${details}</div>
+    <div>
+      <h2>Votre projet</h2>
+      <p>${POSE}</p>
+      <p>${complement}</p>
+    </div>
+  </div>
+</section>
+
+<section class="bloc">
+  <div class="conteneur">
+    <h2>${titreVoisins}</h2>
+    <div class="grille grille-3">${voisins.map(([c, t, x]) => `<a class="carte carte-lien" href="${c}"><h3>${t}</h3><p>${x}</p><span class="fleche" aria-hidden="true">→</span></a>`).join("")}</div>
+  </div>
+</section>
+${cta(ctaTitre, "Devis gratuit et sans engagement. Nous venons sur place pour prendre les mesures et vous conseiller la solution la plus adaptée.")}`;
+
+const PERGOLAS = [
+  ["/pergola-bioclimatique-lyon/", "Pergola bioclimatique", "Lames orientables : soleil, ombre ou pluie, vous choisissez."],
+  ["/pergola-toile-retractable-lyon/", "Pergola à toile rétractable", "Une toile qui se déploie et se replie à la demande."],
+  ["/pergola-toile-tendue-lyon/", "Pergola à toile tendue", "Une ombre légère et un style contemporain."],
+  ["/pergola-toit-fixe-lyon/", "Pergola à toit fixe", "Un abri permanent, à l'épreuve de la pluie."],
+  ["/carport-lyon/", "Carport", "Un abri voiture élégant, sans construire de garage."],
+];
+const autresPergolas = (moi) => PERGOLAS.filter(([c]) => c !== moi);
+
+const pergolaBioclimatique = {
+  title: "Pergola bioclimatique Lyon : lames orientables | Instant Terrasse",
+  description: "Pergola bioclimatique aluminium sur mesure à Lyon : lames orientables motorisées, adossée ou autoportée, stores latéraux et éclairage en option. Devis gratuit.",
+  corps: pageProduit({
+    fil: "Pergolas & carports",
+    h1: "Pergola bioclimatique sur mesure à Lyon",
+    chapo: "Une structure en aluminium coiffée de lames orientables : ouvertes pour laisser passer le soleil et l'air, inclinées pour faire de l'ombre, fermées pour vous abriter de la pluie. Votre terrasse devient une vraie pièce à vivre.",
+    photo: "pergola-bioclimatique-salon-piscine",
+    atouts: [
+      ["Lames orientables", "Vous réglez la lumière et la ventilation selon l'heure et la saison, d'un geste sur la télécommande."],
+      ["Abri contre la pluie", "Lames fermées, la toiture devient étanche et l'eau est évacuée par les poteaux."],
+      ["Adossée ou autoportée", "Fixée contre la façade ou indépendante au milieu du jardin, au bord de la piscine."],
+      ["Fermetures latérales", "Stores verticaux intégrés pour se protéger du vent, du soleil rasant ou des regards."],
+      ["Aluminium sans entretien", "Une structure qui ne rouille pas et ne se repeint pas, dans le coloris de votre choix."],
+      ["Options de confort", "Éclairage intégré, capteurs pluie et vent, pilotage connecté : à définir lors du devis."],
+    ],
+    galerieCat: "pergola-bioclimatique",
+    titreGalerie: "Pergolas bioclimatiques en situation",
+    details: `<h2>Bien choisir sa pergola bioclimatique</h2>
+      <p>Les dimensions, l'orientation de la terrasse et l'usage décident de tout : coin repas, salon, cuisine d'été ou abri de piscine. Nous venons sur place pour définir la taille, le sens des lames, la position des poteaux et les options utiles.</p>
+      <p>Avant toute installation, une pergola peut nécessiter une déclaration préalable en mairie selon sa surface et votre commune. Nous vous indiquons la démarche lors de la visite.</p>`,
+    voisins: autresPergolas("/pergola-bioclimatique-lyon/"),
+    ctaTitre: "Un projet de pergola bioclimatique ?",
+  }),
+};
+
+const pergolaToileRetractable = {
+  title: "Pergola à toile rétractable Lyon | Instant Terrasse",
+  description: "Pergola aluminium à toile rétractable sur mesure à Lyon : de l'ombre quand vous voulez, le ciel ouvert le reste du temps. Motorisation et stores latéraux. Devis gratuit.",
+  corps: pageProduit({
+    fil: "Pergolas & carports",
+    h1: "Pergola à toile rétractable à Lyon",
+    chapo: "Une structure aluminium et une toile qui se déploie ou se replie à la demande : de l'ombre aux heures chaudes, le ciel dégagé le reste du temps. Une solution souple et élégante pour profiter de votre terrasse.",
+    photo: "pergola-toile-retractable-facade",
+    atouts: [
+      ["Ombre à la demande", "La toile se déploie et se replie entièrement, en quelques secondes."],
+      ["Luminosité préservée", "Toile repliée, la terrasse et l'intérieur de la maison gardent toute leur lumière."],
+      ["Grandes dimensions", "Une bonne solution pour couvrir une large terrasse adossée à la façade."],
+      ["Motorisation", "Commande par télécommande, avec automatismes vent et soleil en option."],
+      ["Stores latéraux", "Des stores verticaux peuvent fermer les côtés exposés."],
+      ["Choix des coloris", "Structure et toile assorties à votre façade et à vos menuiseries."],
+    ],
+    galerieCat: "pergola-toile-retractable",
+    titreGalerie: "Pergolas à toile rétractable en situation",
+    details: `<h2>Toile rétractable ou bioclimatique ?</h2>
+      <p>La toile rétractable est idéale si vous cherchez surtout de l'ombre en été et la lumière le reste de l'année. La <a href="/pergola-bioclimatique-lyon/">pergola bioclimatique</a> va plus loin : ses lames orientables règlent finement la lumière et vous abritent de la pluie.</p>
+      <p>Nous vous aidons à trancher selon l'orientation de votre terrasse et l'usage que vous en faites.</p>`,
+    voisins: autresPergolas("/pergola-toile-retractable-lyon/"),
+    ctaTitre: "Un projet de pergola à toile ?",
+  }),
+};
+
+const pergolaToitFixe = {
+  title: "Pergola à toit fixe aluminium Lyon | Instant Terrasse",
+  description: "Pergola aluminium à toit fixe sur mesure à Lyon : un abri permanent contre la pluie et le soleil, adossé ou autoporté. Devis gratuit.",
+  corps: pageProduit({
+    fil: "Pergolas & carports",
+    h1: "Pergola à toit fixe à Lyon",
+    chapo: "Une structure aluminium aux lignes épurées et une toiture pleine : un abri permanent pour votre terrasse, qui vous protège de la pluie comme du soleil, toute l'année.",
+    photo: "pergola-toit-fixe-piscine",
+    atouts: [
+      ["Abri permanent", "Une toiture pleine qui protège la terrasse en toute saison."],
+      ["Lignes épurées", "Un profil plat et contemporain, sans pièce mobile apparente."],
+      ["Simplicité", "Pas de mécanisme : une solution robuste et sans réglage."],
+      ["Adossée ou autoportée", "Contre la façade ou indépendante dans le jardin."],
+      ["Fermetures latérales", "Stores verticaux en option pour fermer les côtés."],
+      ["Aussi en carport", "La même structure peut abriter un véhicule : voir notre <a href=\"/carport-lyon/\">carport</a>."],
+    ],
+    galerieCat: "pergola-toit-fixe",
+    titreGalerie: "Pergolas à toit fixe en situation",
+    details: `<h2>Pour qui ?</h2>
+      <p>Le toit fixe convient si vous voulez avant tout un espace abrité, utilisable même par temps de pluie, sans vous soucier d'ouvrir ou de fermer quoi que ce soit.</p>
+      <p>Si vous voulez aussi pouvoir faire entrer le soleil, regardez la <a href="/pergola-bioclimatique-lyon/">pergola bioclimatique</a> et ses lames orientables.</p>`,
+    voisins: autresPergolas("/pergola-toit-fixe-lyon/"),
+    ctaTitre: "Un projet de pergola à toit fixe ?",
+  }),
+};
+
+// ---------- Garde-corps aluminium ----------
+const gardeCorps = {
+  title: "Garde-corps aluminium Lyon : verre, barreaudage | Instant Terrasse",
+  description: "Garde-corps aluminium sur mesure à Lyon pour terrasses, balcons, escaliers et bâtiments professionnels : vitré, barreaudage, lames. Devis gratuit.",
+  corps: pageProduit({
+    fil: "Garde-corps",
+    h1: "Garde-corps aluminium sur mesure à Lyon",
+    chapo: "Sécuriser une terrasse surélevée, un balcon, un escalier ou un toit-terrasse sans fermer la vue. Nos garde-corps aluminium sont fabriqués sur mesure, pour les maisons comme pour les bâtiments professionnels.",
+    photo: "garde-corps-pro-logements",
+    atouts: [
+      ["Vitré", "Des panneaux de verre pour garder toute la vue et la lumière."],
+      ["Barreaudage", "Des barreaux verticaux ou des lisses horizontales, pour un style classique ou contemporain."],
+      ["Remplissage bois ou lames", "Des lames pour préserver l'intimité, assorties à votre terrasse ou à votre bardage."],
+      ["Aluminium sans entretien", "Pas de rouille, pas de peinture à refaire, dans le coloris de votre choix."],
+      ["Toutes les configurations", "Terrasses, balcons, escaliers, rampants, toits-terrasses, coursives."],
+      ["Particuliers et professionnels", "Maisons, immeubles de logements, bureaux, commerces et établissements recevant du public."],
+    ],
+    galerieCat: "garde-corps",
+    titreGalerie: "Garde-corps en situation",
+    introGalerie: "Choisissez votre type de projet.",
+    details: `<h2>Un garde-corps, c'est d'abord de la sécurité</h2>
+      <p>Hauteur, espacement des barreaux, résistance du support : un garde-corps doit respecter des règles précises, plus exigeantes encore dans les bâtiments recevant du public. Nous définissons le modèle et les fixations adaptés à votre support lors de la visite.</p>
+      <p>Pour une terrasse neuve, le plus simple est de prévoir le garde-corps dès la conception : les fixations s'intègrent proprement à la structure.</p>`,
+    complement: "Vous construisez une terrasse surélevée, sur pilotis ou un toit-terrasse ? Nous pouvons étudier la terrasse et son garde-corps ensemble.",
+    titreVoisins: "Pour aller avec votre garde-corps",
+    voisins: [
+      ["/terrasse-sur-pilotis-lyon/", "Terrasse sur pilotis", "La solution pour les terrains en pente."],
+      ["/toit-terrasse-lyon/", "Toit-terrasse", "Créer un espace de vie sur une toiture plate."],
+      ["/terrasse-balcon-lyon/", "Balcon", "Rénover le sol d'un balcon, sans travaux lourds."],
+      ["/terrasse-restaurant-chr-lyon/", "Professionnels", "Terrasses de restaurants, cafés et hôtels."],
+    ],
+    ctaTitre: "Un projet de garde-corps ?",
+  }),
+};
+
 export const CONTENUS = {
+  "/garde-corps-aluminium-lyon/": gardeCorps,
+  "/pergola-bioclimatique-lyon/": pergolaBioclimatique,
+  "/pergola-toile-retractable-lyon/": pergolaToileRetractable,
+  "/pergola-toit-fixe-lyon/": pergolaToitFixe,
   "/bardage-bois-lyon/": bardageBois,
   "/terrasse-bois-lyon/": terrasseBois,
   "/structure-terrasse-lyon/": structures,

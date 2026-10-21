@@ -28,12 +28,12 @@ export const galerie = (categorie, { titre, intro, legende = "Illustrations" } =
   return `
 <div class="galerie-bloc" data-galerie>
   ${titre ? `<h2>${titre}</h2>` : ""}${intro ? `<p class="chapo">${intro}</p>` : ""}
-  ${essences.length > 1 ? `<div class="filtres" role="group" aria-label="Filtrer par essence">
-    <button type="button" class="filtre" aria-pressed="true" data-filtre="tout">Toutes</button>
+  ${essences.length > 1 ? `<div class="filtres" role="group" aria-label="Filtrer les photos">
+    <button type="button" class="filtre" aria-pressed="true" data-filtre="tout">Tout voir</button>
     ${essences.map((e) => `<button type="button" class="filtre" aria-pressed="false" data-filtre="${slug(e)}">${e}</button>`).join("")}
   </div>` : ""}
   <div class="mosaique">
-    ${liste.map((p) => `<figure data-essence="${slug(p.essence || "")}">${imgPhoto(p.cle, { sizes: "(max-width:560px) 100vw, (max-width:1060px) 50vw, 380px" })}${p.essence ? `<figcaption>${p.essence}</figcaption>` : ""}</figure>`).join("")}
+    ${liste.map((p) => `<figure data-essence="${slug(p.essence || "")}" style="--r:${p.ratio}">${imgPhoto(p.cle, { sizes: "(max-width:560px) 100vw, (max-width:1060px) 50vw, 380px" })}${p.essence ? `<figcaption>${p.essence}</figcaption>` : ""}</figure>`).join("")}
   </div>
   <p class="legende">${legende}.</p>
 </div>`;

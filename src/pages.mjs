@@ -21,7 +21,7 @@ export const UNIVERS = [
       {
         nom: "Par matériau",
         pages: [
-          ["/terrasse-bois-lyon/", "Terrasse bois", "Thermopin, thermofrêne, kebony, accoya, bambou : sur structure traditionnelle ou aluminium."],
+          ["/terrasse-bois-lyon/", "Terrasse bois", "Bois modifiés et bambou sur structure aluminium, ou bois massifs et exotiques sur structure traditionnelle."],
           ["/terrasse-composite-lyon/", "Terrasse composite", "Sans entretien, posée sur structure aluminium."],
           ["/terrasse-carrelage-lyon/", "Terrasse carrelage", "Grès cérame sur plots ou sur structure aluminium."],
           ["/terrasse-aluminium-lyon/", "Terrasse en lames aluminium", "Imputrescible, stable, en coloris unis ou aspect bois."],

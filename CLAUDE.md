@@ -19,6 +19,9 @@ Remplaçant du site WordPress/Elementor instantterrasse.com. Générateur Node s
   3. Garde-corps aluminium (fournisseur Kordo).
   4. Stores bannes (fournisseur MSB).
   5. Bardage bois et bardage aluminium.
+- Essences de bois (liste d'Antoine, 21/10/2026) :
+  - Sur structure aluminium : thermopin, bambou moso X-treme, bambou moso N-Durance, thermofrêne, accoya naturel, accoya gris, kebony.
+  - Sur structure traditionnelle, selon disponibilité : pin, mélèze, garapa, ipé, cumaru, itauba, jatoba, douglas.
 - Marques fournisseurs : rester discret, ne pas les citer. Leurs photos sont autorisées sur le site, mais comme illustrations produit : ne jamais les présenter comme des chantiers Instant Terrasse (pas dans « Réalisations », pas de légende de type « notre chantier à … »).
 
 ## Pose : partenaire, discret mais sans mentir

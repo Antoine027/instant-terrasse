@@ -116,6 +116,8 @@ ${EN_LIGNE ? `<link rel="canonical" href="${SITE.url}${p.chemin}">` : `<meta nam
 <meta property="og:description" content="${esc(p.description)}">
 <meta property="og:locale" content="fr_FR">
 <meta name="theme-color" content="#F8F3EB">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32.png">
 <link rel="icon" type="image/png" sizes="48x48" href="/assets/img/favicon-48.png">
 <link rel="icon" type="image/png" sizes="192x192" href="/assets/img/icone-192.png">
 <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">

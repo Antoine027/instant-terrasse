@@ -148,6 +148,10 @@ const b=document.querySelector('.burger');b&&b.addEventListener('toggle',()=>doc
 </html>`;
 
 for (const p of PAGES) {
+  if (p.statut === "preparation") p.corps = corpsPreparation(p);
+  if (p.h1 && p.corps && p.chemin !== "/contact/") p.corps = p.corps.replaceAll('href="/contact/"', `href="/contact/?projet=${encodeURIComponent(p.nomProjet ?? p.h1)}"`);
+}
+for (const p of PAGES) {
   const dossier = join(DIST, p.chemin);
   mkdirSync(dossier, { recursive: true });
   writeFileSync(join(dossier, "index.html"), gabarit(p));
@@ -158,7 +162,7 @@ writeFileSync(join(DIST, "robots.txt"), EN_LIGNE
   : `User-agent: *\nDisallow: /\n`);
 
 if (EN_LIGNE) {
-  const urls = PAGES.map((p) => `<url><loc>${SITE.url}${p.chemin}</loc></url>`).join("");
+  const urls = PAGES.filter((p) => !p.horsPlan).map((p) => `<url><loc>${SITE.url}${p.chemin}</loc></url>`).join("");
   writeFileSync(join(DIST, "sitemap.xml"), `<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${urls}</urlset>`);
 }
 

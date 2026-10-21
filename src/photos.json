@@ -1540,5 +1540,186 @@
    1600
   ],
   "ratio": 1.3333
+ },
+ {
+  "cle": "alu-piscine-aspect-teck",
+  "dossier": "aluminium",
+  "categorie": "terrasse-aluminium",
+  "essence": "Aspect bois",
+  "alt": "Plage de piscine en lames aluminium aspect bois, bains de soleil et vue sur les montagnes",
+  "largeurs": [
+   600,
+   1000
+  ],
+  "ratio": 1.5009
+ },
+ {
+  "cle": "alu-piscine-jardin-tropical",
+  "dossier": "aluminium",
+  "categorie": "terrasse-aluminium",
+  "essence": "Aspect bois",
+  "alt": "Terrasse en lames aluminium aspect bois autour d'une piscine, jardin tropical",
+  "largeurs": [
+   600,
+   1000,
+   1600
+  ],
+  "ratio": 1.3333
+ },
+ {
+  "cle": "alu-piscine-haricot",
+  "dossier": "aluminium",
+  "categorie": "terrasse-aluminium",
+  "essence": "Aspect bois",
+  "alt": "Lames aluminium aspect bois autour d'une piscine en forme de haricot",
+  "largeurs": [
+   600,
+   1000,
+   1600
+  ],
+  "ratio": 1.3335
+ },
+ {
+  "cle": "alu-terrasse-couverte",
+  "dossier": "aluminium",
+  "categorie": "terrasse-aluminium",
+  "essence": "Aspect bois",
+  "alt": "Terrasse couverte en lames aluminium teinte bois rouge, garde-corps à câbles",
+  "largeurs": [
+   600,
+   1000,
+   1280
+  ],
+  "ratio": 1.0
+ },
+ {
+  "cle": "alu-marches-aspect-teck",
+  "dossier": "aluminium",
+  "categorie": "terrasse-aluminium",
+  "essence": "Aspect bois",
+  "alt": "Terrasse et marches en lames aluminium aspect teck, mur en pierre",
+  "largeurs": [
+   600,
+   1000,
+   1600
+  ],
+  "ratio": 1.3333
+ },
+ {
+  "cle": "alu-piscine-blanche-vue",
+  "dossier": "aluminium",
+  "categorie": "terrasse-aluminium",
+  "essence": "Gris et clair",
+  "alt": "Plage de piscine à débordement en lames aluminium claires, vue sur la baie",
+  "largeurs": [
+   600,
+   1000,
+   1600
+  ],
+  "ratio": 1.7778
+ },
+ {
+  "cle": "alu-piscine-grise",
+  "dossier": "aluminium",
+  "categorie": "terrasse-aluminium",
+  "essence": "Gris et clair",
+  "alt": "Plage de piscine en lames aluminium gris clair",
+  "largeurs": [
+   600,
+   1000,
+   1600
+  ],
+  "ratio": 1.3333
+ },
+ {
+  "cle": "alu-restaurant-vue-mer",
+  "dossier": "aluminium",
+  "categorie": "terrasse-aluminium",
+  "essence": "Gris et clair",
+  "alt": "Terrasse de restaurant en lames aluminium beige face à la mer",
+  "largeurs": [
+   600,
+   1000,
+   1600
+  ],
+  "ratio": 1.3332
+ },
+ {
+  "cle": "alu-restaurant-salle",
+  "dossier": "aluminium",
+  "categorie": "terrasse-aluminium",
+  "essence": "Gris et clair",
+  "alt": "Salle de restaurant en terrasse, plancher en lames aluminium gris",
+  "largeurs": [
+   600,
+   1000,
+   1600
+  ],
+  "ratio": 1.7778
+ },
+ {
+  "cle": "alu-spa-jardin",
+  "dossier": "aluminium",
+  "categorie": "terrasse-aluminium",
+  "essence": "Gris et clair",
+  "alt": "Terrasse en lames aluminium gris autour d'un spa encastré",
+  "largeurs": [
+   600,
+   1000,
+   1512
+  ],
+  "ratio": 0.75
+ },
+ {
+  "cle": "alu-salon-garde-corps",
+  "dossier": "aluminium",
+  "categorie": "terrasse-aluminium",
+  "essence": "Gris et clair",
+  "alt": "Terrasse en lames aluminium gris clair avec salon de jardin et garde-corps",
+  "largeurs": [
+   600,
+   1000,
+   1600
+  ],
+  "ratio": 1.3333
+ },
+ {
+  "cle": "alu-escalier",
+  "dossier": "aluminium",
+  "categorie": "terrasse-aluminium",
+  "essence": "Gris et clair",
+  "alt": "Escalier habillé de lames aluminium, garde-corps en verre",
+  "largeurs": [
+   600,
+   1000,
+   1600
+  ],
+  "ratio": 1.3333
+ },
+ {
+  "cle": "alu-detail-rocher",
+  "dossier": "aluminium",
+  "categorie": "terrasse-aluminium",
+  "essence": "Gris et clair",
+  "alt": "Lames aluminium découpées au contact d'un rocher naturel",
+  "largeurs": [
+   600,
+   1000,
+   1600
+  ],
+  "ratio": 1.3333
+ },
+ {
+  "cle": "alu-trappe-visite",
+  "dossier": "aluminium",
+  "categorie": "terrasse-aluminium",
+  "essence": "Gris et clair",
+  "alt": "Trappe de visite intégrée dans une terrasse en lames aluminium",
+  "largeurs": [
+   600,
+   1000,
+   1600
+  ],
+  "ratio": 0.75
  }
 ]

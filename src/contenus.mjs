@@ -473,7 +473,43 @@ const gardeCorps = {
   }),
 };
 
+// ---------- Terrasse en lames aluminium ----------
+const terrasseAluminium = {
+  title: "Terrasse aluminium Lyon : lames alu aspect bois | Instant Terrasse",
+  description: "Terrasse en lames aluminium sur mesure à Lyon : imputrescible, stable, sans entretien, en coloris unis ou aspect bois. Piscines, balcons, restaurants. Devis gratuit.",
+  corps: pageProduit({
+    fil: "Terrasses",
+    h1: "Terrasse en lames aluminium à Lyon",
+    chapo: "L'aspect d'une terrasse bois, sans ses contraintes : des lames en aluminium qui ne pourrissent pas, ne se déforment pas et ne demandent ni saturateur ni ponçage. En coloris unis ou en décor bois.",
+    photo: "alu-piscine-aspect-teck",
+    atouts: [
+      ["Imputrescible", "L'aluminium ne craint ni l'eau, ni les champignons, ni les insectes."],
+      ["Stable dans le temps", "Pas de fente, pas de vrillage, pas d'écharde : les lames restent droites."],
+      ["Sans entretien", "Un nettoyage à l'eau suffit, aucun traitement à refaire."],
+      ["Aspect bois ou uni", "Des décors bois réalistes ou des teintes unies, du clair au foncé."],
+      ["Idéal autour des piscines", "Une surface saine au contact de l'eau, sans risque d'écharde pieds nus."],
+      ["Sur structure aluminium", "Posées sur notre <a href=\"/structure-terrasse-lyon/\">ossature aluminium</a> et plots réglables, pour une terrasse parfaitement plane."],
+    ],
+    galerieCat: "terrasse-aluminium",
+    titreGalerie: "Terrasses en lames aluminium en situation",
+    introGalerie: "Filtrez par famille de teintes.",
+    details: `<h2>Pour quels projets ?</h2>
+      <p>Plages de piscine, balcons, toits-terrasses, escaliers extérieurs, terrasses de restaurants : la lame aluminium convient partout où l'on veut une terrasse durable et facile à vivre. Des trappes de visite peuvent être intégrées pour garder l'accès à un regard ou à un local technique.</p>
+      <p>Vous hésitez avec le bois ou le composite ? Consultez notre <a href="/nos-terrasses/">comparatif des matériaux</a>.</p>`,
+    complement: "Nous étudions avec vous la structure, les finitions (nez de marche, bordures, découpes) et les éventuels équipements : garde-corps, pergola, éclairage.",
+    titreVoisins: "Pour compléter votre terrasse",
+    voisins: [
+      ["/structure-terrasse-lyon/", "Nos structures", "La base qui fait durer une terrasse."],
+      ["/terrasse-piscine-lyon/", "Terrasse de piscine", "Une plage confortable et sûre autour du bassin."],
+      ["/garde-corps-aluminium-lyon/", "Garde-corps aluminium", "Sécuriser une terrasse surélevée sans fermer la vue."],
+      ["/pergola-bioclimatique-lyon/", "Pergola bioclimatique", "Soleil, ombre ou pluie, vous choisissez."],
+    ],
+    ctaTitre: "Un projet de terrasse aluminium ?",
+  }),
+};
+
 export const CONTENUS = {
+  "/terrasse-aluminium-lyon/": terrasseAluminium,
   "/garde-corps-aluminium-lyon/": gardeCorps,
   "/pergola-bioclimatique-lyon/": pergolaBioclimatique,
   "/pergola-toile-retractable-lyon/": pergolaToileRetractable,

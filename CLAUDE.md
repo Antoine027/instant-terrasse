@@ -22,6 +22,8 @@ Remplaçant du site WordPress/Elementor instantterrasse.com. Générateur Node s
 - Essences de bois (liste d'Antoine, 21/10/2026) :
   - Sur structure aluminium : thermopin, bambou moso X-treme, bambou moso N-Durance, thermofrêne, accoya naturel, accoya gris, kebony.
   - Sur structure traditionnelle, selon disponibilité : pin, mélèze, garapa, ipé, cumaru, itauba, jatoba, douglas.
+- Bardage bois (21/10/2026) : accoya gris, accoya naturel, kebony, bambou moso X-treme, thermofrêne, thermopin clear (sans nœuds).
+- Les photos des essences en lames de terrasse ne doivent pas illustrer le bardage (produits différents) : attendre les photos de bardage.
 - Marques fournisseurs : rester discret, ne pas les citer. Leurs photos sont autorisées sur le site, mais comme illustrations produit : ne jamais les présenter comme des chantiers Instant Terrasse (pas dans « Réalisations », pas de légende de type « notre chantier à … »).
 
 ## Pose : partenaire, discret mais sans mentir

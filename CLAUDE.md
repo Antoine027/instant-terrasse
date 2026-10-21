@@ -28,7 +28,7 @@ Remplaçant du site WordPress/Elementor instantterrasse.com. Générateur Node s
 
 ## Pose : partenaire, discret mais sans mentir
 - La pose est réalisée par un installateur partenaire, jamais nommé.
-- Formulation de référence : Instant Terrasse conçoit, fournit et coordonne la pose ; un seul interlocuteur du premier rendez-vous à la réception du chantier.
+- Formulation de référence (constante POSE dans src/pages.mjs) : « Instant Terrasse conçoit votre projet et fournit les matériaux. La pose est confiée à notre installateur partenaire, et nous restons votre interlocuteur du premier rendez-vous à la fin du chantier. » Ne pas écrire « agréé » sauf agrément réel.
 - Interdit : « nous posons », « nos poseurs », « nos équipes », ou toute phrase laissant croire à des salariés poseurs.
 - Autorisé : « pose réalisée par des professionnels qualifiés », « nous coordonnons la pose », « nous suivons le chantier ».
 - Zone : Lyon et sa région. Téléphone 04 82 53 18 74.

@@ -210,6 +210,7 @@ details[open]>summary.menu-lien::after{transform:translateY(2px) rotate(225deg)}
 .marque-lien{text-decoration:none;display:flex;flex-direction:column;flex:1}
 .marque-logo{background:var(--teinte);border-bottom:1px solid rgba(47,52,55,.08);display:flex;align-items:center;justify-content:center;height:160px;padding:22px}
 .marque-logo img{max-height:118px;max-width:78%;width:auto;height:auto}
+.marque.escom .marque-logo img{max-width:58%;max-height:78px}
 .marque-corps{padding:26px 28px;display:flex;flex-direction:column;gap:14px;flex:1}
 .marque-corps h2{font-size:1.45rem;margin:0}
 .marque-corps p{margin:0;color:var(--doux)}

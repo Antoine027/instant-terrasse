@@ -127,6 +127,7 @@ ${EN_LIGNE ? `<link rel="canonical" href="${SITE.url}${p.chemin}">` : `<meta nam
 <link rel="icon" type="image/png" sizes="48x48" href="/assets/img/favicon-48.png">
 <link rel="icon" type="image/png" sizes="192x192" href="/assets/img/icone-192.png">
 <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+${p.jsonld ? `<script type="application/ld+json">${JSON.stringify(p.jsonld)}</script>` : ""}
 <style>${css}</style>
 </head>
 <body>

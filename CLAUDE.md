@@ -28,9 +28,22 @@ Remplaçant du site WordPress/Elementor instantterrasse.com. Générateur Node s
 
 ## Pose : partenaire, discret mais sans mentir
 - La pose est réalisée par un installateur partenaire, jamais nommé.
-- Formulation de référence (constante POSE dans src/pages.mjs) : « Instant Terrasse conçoit votre projet et fournit les matériaux. La pose est confiée à notre installateur partenaire, et nous restons votre interlocuteur du premier rendez-vous à la fin du chantier. » Ne pas écrire « agréé » sauf agrément réel.
+- Formulation de référence (constante POSE dans src/pages.mjs) : « Instant Terrasse conçoit votre projet et fournit les matériaux. La pose est confiée à notre installateur partenaire, assuré en garantie décennale, et nous restons votre interlocuteur du premier rendez-vous à la fin du chantier. » Ne pas écrire « agréé » sauf agrément réel.
 - Interdit : « nous posons », « nos poseurs », « nos équipes », ou toute phrase laissant croire à des salariés poseurs.
 - Autorisé : « pose réalisée par des professionnels qualifiés », « nous coordonnons la pose », « nous suivons le chantier ».
+
+## Faits validés par Antoine (21/10/2026) — base des textes personnalisés
+- Antoine Escolle travaille dans la terrasse depuis début 2022 : 4 ans commercial dans une entreprise de terrasses (ne pas la nommer), puis création d'Instant Terrasse (ESCOM HABITAT, 2026). Écrire « depuis début 2022 », pas un nombre d'années qui vieillit.
+- Positionnement : le meilleur produit au meilleur tarif, transparence (devis détaillé).
+- Installateur partenaire assuré en garantie décennale.
+- Plan 3D offert.
+- Pas de showroom : rendez-vous à domicile avec les échantillons.
+- Structures aluminium garanties 20 ans.
+- Pas encore fournis : photos de vrais chantiers, avis Google, fourchettes de prix, photo d'Antoine.
 - Zone : Lyon et sa région. Téléphone 04 82 53 18 74.
+
+## Charte et règles de rédaction
 - Charte : fond #F0E8DA, fond secondaire #F8F3EB, texte #2F3437, accent #D79A3A (survol #E3A94A), rayon 15px, Montserrat (titres), Lato (texte), polices hébergées dans public/assets/fonts.
 - Ne jamais inventer de chantier, avis client, certification, garantie ou chiffre.
+- Textes personnalisés, pas génériques : partir des faits ci-dessus, phrases concrètes, pas de superlatifs creux.
+- Objectif PageSpeed 100 sur chaque page (mesurer avec Lighthouse) ; images en WebP avec variantes 400/600/1000/1600 via outils/photos.py.

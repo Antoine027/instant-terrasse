@@ -10,7 +10,7 @@ export const SITE = {
 };
 
 export const POSE =
-  "Instant Terrasse conçoit votre projet et fournit les matériaux. La pose est confiée à notre installateur partenaire, et nous restons votre interlocuteur du premier rendez-vous à la fin du chantier.";
+  "Instant Terrasse conçoit votre projet et fournit les matériaux. La pose est confiée à notre installateur partenaire, assuré en garantie décennale, et nous restons votre interlocuteur du premier rendez-vous à la fin du chantier.";
 
 // Les univers structurent le menu, l'accueil et le maillage interne.
 export const UNIVERS = [
@@ -113,10 +113,26 @@ export const AUTRES = [
   ["/terrasse-caluire-et-cuire/", "Terrasse à Caluire-et-Cuire", "Nos projets à Caluire-et-Cuire."],
 ];
 
+export const ENGAGEMENTS = [
+  ["Des prix transparents", "Le meilleur produit au meilleur tarif, et un devis détaillé : vous savez ce que vous payez, et pourquoi."],
+  ["Les échantillons chez vous", "Pas de showroom : nous venons avec les échantillons, pour les voir à la lumière de votre jardin et à côté de votre façade."],
+  ["Plan 3D offert", "Avant de signer, vous voyez votre projet en 3D : implantation, hauteurs, matériau."],
+  ["Structure aluminium garantie 20 ans", "Nos structures de terrasse en aluminium sont garanties 20 ans."],
+  ["Pose assurée en décennale", "La pose est confiée à notre installateur partenaire, assuré en garantie décennale."],
+];
+
+export const MOT_ANTOINE = `
+      <p>Je travaille dans la terrasse depuis début 2022. Pendant quatre ans, j'ai été commercial pour une entreprise de terrasses : j'ai appris les matériaux, les structures, et surtout ce que les clients attendent vraiment.</p>
+      <p>J'ai créé Instant Terrasse avec une idée simple : proposer le meilleur produit au meilleur tarif, en toute transparence. Je viens chez vous avec les échantillons, je vous montre votre projet en 3D, et je vous explique chaque ligne du devis.</p>
+      <p class="signature">Antoine Escolle, fondateur d'Instant Terrasse</p>`;
+
 export const FAQ = [
   ["Quel matériau choisir pour ma terrasse ?", "Tout dépend de l'aspect recherché, du budget et du temps que vous voulez consacrer à l'entretien. Le bois apporte la chaleur d'un matériau naturel, le composite et l'aluminium limitent l'entretien, le carrelage offre un rendu minéral. Notre <a href=\"/nos-terrasses/\">comparatif des matériaux</a> vous aide à y voir clair, et nous affinons le choix lors de la visite."],
   ["Qui réalise la pose ?", `${POSE}`],
-  ["Combien coûte une terrasse ou une pergola ?", "Le prix dépend du matériau, de la surface, de la structure nécessaire, de la hauteur et de l'accès au chantier. C'est pourquoi nous venons voir les lieux avant de chiffrer : vous recevez un devis détaillé, gratuit et sans engagement."],
+  ["Combien coûte une terrasse ou une pergola ?", "Le prix dépend du matériau, de la surface, de la structure nécessaire, de la hauteur et de l'accès au chantier. C'est pourquoi nous venons voir les lieux avant de chiffrer. Notre objectif : le meilleur produit au meilleur tarif, avec un devis détaillé, gratuit et sans engagement."],
+  ["Quelles sont les garanties ?", "Nos structures de terrasse en aluminium sont garanties 20 ans, et la pose est réalisée par notre installateur partenaire, assuré en garantie décennale."],
+  ["Avez-vous un showroom ?", "Non, et c'est volontaire : c'est nous qui venons chez vous avec les échantillons. Un matériau se choisit mieux à la lumière de votre jardin et à côté de votre façade que sous les néons d'un magasin."],
+  ["Proposez-vous un plan 3D ?", "Oui, le plan 3D de votre projet est offert. Vous voyez votre future terrasse, sa hauteur et son matériau avant de vous engager."],
   ["Faut-il une autorisation pour une terrasse ou une pergola ?", "Selon la surface, la hauteur et votre commune, une déclaration préalable de travaux peut être nécessaire, notamment pour une pergola ou une terrasse surélevée. Nous vous indiquons la démarche à suivre lors de la visite."],
   ["Pouvez-vous réaliser la terrasse, la pergola et le garde-corps en même temps ?", "Oui, et c'est même recommandé : hauteurs, fixations et écoulement des eaux se pensent ensemble. Vous n'avez qu'un seul interlocuteur pour tout le projet."],
   ["Dans quelle zone intervenez-vous ?", "À Lyon et dans sa région. Indiquez votre code postal dans la demande de devis, nous vous répondons rapidement."],
@@ -127,9 +143,9 @@ const carteLien = ([chemin, titre, texte]) =>
 
 const etapes = [
   ["Échange", "Nous parlons de votre projet, de vos envies et de l'usage de votre extérieur."],
-  ["Visite et étude", "Nous venons sur place : dimensions, accès, support, contraintes techniques."],
-  ["Conception et devis", "Matériau, structure, finitions : nous vous proposons la solution la plus juste."],
-  ["Réalisation", "La pose est confiée à notre installateur partenaire, nous restons votre interlocuteur."],
+  ["Visite avec échantillons", "Nous venons chez vous avec les échantillons : vous comparez les matériaux à côté de votre façade, et nous relevons dimensions, accès et support."],
+  ["Plan 3D et devis", "Vous recevez un plan 3D offert de votre projet et un devis détaillé : vous savez exactement ce que vous achetez."],
+  ["Réalisation", "La pose est confiée à notre installateur partenaire, assuré en décennale. Nous restons votre interlocuteur jusqu'à la fin du chantier."],
 ];
 
 const accueil = `
@@ -138,7 +154,7 @@ const accueil = `
   <div>
     <p class="surtitre">Version de test — site en construction</p>
     <h1>Terrasses, pergolas et aménagements extérieurs sur mesure à Lyon</h1>
-    <p class="chapo">Terrasse bois, composite, carrelage ou aluminium, pergola, carport, garde-corps, store banne, bardage : un seul interlocuteur pour tout votre extérieur.</p>
+    <p class="chapo">Le meilleur produit au meilleur tarif, et des devis transparents. Nous venons chez vous avec les échantillons, nous vous offrons le plan 3D de votre projet, et nous restons votre seul interlocuteur jusqu'à la fin du chantier.</p>
     <p class="actions">
       <a class="bouton" href="/contact/">Demander un devis gratuit</a>
       <a class="bouton bouton-clair" href="tel:${SITE.telLien}">${SITE.tel}</a>
@@ -159,6 +175,24 @@ const accueil = `
         const lien = u.groupes.length === 1 && u.groupes[0].pages.length === 1 ? premiere : `#${u.cle}`;
         return `<a class="carte carte-univers carte-lien" href="${lien}"><h3>${u.nom}</h3><p>${u.accroche}</p><span class="fleche" aria-hidden="true">→</span></a>`;
       }).join("")}
+    </div>
+  </div>
+</section>
+
+<section class="bloc bloc-alt">
+  <div class="conteneur">
+    <h2>Nos engagements</h2>
+    <div class="grille engagements">${ENGAGEMENTS.map(([t, x]) => `<div class="carte"><h3>${t}</h3><p>${x}</p></div>`).join("")}</div>
+  </div>
+</section>
+
+<section class="bloc">
+  <div class="conteneur mot">
+    <div class="mot-texte">
+      <p class="sous-titre">Le mot d'Antoine</p>
+      <h2>Pourquoi j'ai créé Instant Terrasse</h2>
+      ${MOT_ANTOINE}
+      <p><a href="/quisommesnous/">En savoir plus sur Instant Terrasse →</a></p>
     </div>
   </div>
 </section>
@@ -211,8 +245,8 @@ const contact = `
       <h1>Parlez-nous de votre projet</h1>
       <p class="chapo">Devis gratuit et sans engagement. Décrivez-nous votre projet, nous vous recontactons rapidement pour en parler et organiser une visite.</p>
       <ul class="puces">
-        <li>Visite et prise de mesures sur place</li>
-        <li>Conseil sur le matériau et la structure</li>
+        <li>Visite chez vous, avec les échantillons</li>
+        <li>Plan 3D de votre projet offert</li>
         <li>Devis détaillé, gratuit et sans engagement</li>
       </ul>
       <p class="contact-direct">Vous préférez parler directement ?<br><a class="bouton bouton-clair" href="tel:${SITE.telLien}">${SITE.tel}</a> <a class="bouton bouton-clair" href="${SITE.whatsapp}">WhatsApp</a></p>
@@ -295,6 +329,51 @@ const partenaires = `
   </div>
 </section>`;
 
+const aPropos = `
+<section class="hero hero-page">
+  <div class="conteneur conteneur-etroit">
+    <p class="fil"><a href="/">Accueil</a> › À propos</p>
+    <h1>Instant Terrasse, c'est d'abord une façon de travailler</h1>
+    <p class="chapo">Une entreprise de Rillieux-la-Pape qui conçoit et fournit des terrasses, pergolas, garde-corps, stores bannes et bardages sur mesure, à Lyon et dans sa région.</p>
+  </div>
+</section>
+<section class="bloc bloc-alt">
+  <div class="conteneur conteneur-etroit mot-texte">
+    <h2>Mon parcours</h2>
+    ${MOT_ANTOINE}
+  </div>
+</section>
+<section class="bloc">
+  <div class="conteneur">
+    <h2>Ce que vous pouvez attendre de nous</h2>
+    <div class="grille engagements">${ENGAGEMENTS.map(([t, x]) => `<div class="carte"><h3>${t}</h3><p>${x}</p></div>`).join("")}</div>
+  </div>
+</section>
+<section class="bloc bloc-alt">
+  <div class="conteneur deux-colonnes">
+    <div>
+      <h2>Comment se déroule un projet</h2>
+      <p>${POSE}</p>
+      <p>Vous n'avez donc qu'un numéro à retenir : le nôtre. C'est nous qui préparons la commande, organisons la livraison et coordonnons la pose.</p>
+    </div>
+    <ol class="etapes etapes-verticales">${etapes.map(([t, x]) => `<li><h3>${t}</h3><p>${x}</p></li>`).join("")}</ol>
+  </div>
+</section>
+<section class="bloc">
+  <div class="conteneur deux-colonnes">
+    <div>
+      <h2>Une marque d'ESCOM HABITAT</h2>
+      <p>Instant Terrasse fait partie d'ESCOM HABITAT, à Rillieux-la-Pape, comme <a href="https://www.horizonfenetre.com/">Horizon Fenêtre</a> pour les menuiseries sur mesure. Si votre projet de terrasse touche aussi une baie vitrée ou des volets, nous pouvons tout étudier ensemble.</p>
+      <p><a href="/partenaires/">Voir nos partenaires →</a></p>
+    </div>
+    <div class="carte">
+      <h3>On en parle chez vous ?</h3>
+      <p>Visite avec les échantillons, plan 3D offert, devis détaillé et sans engagement.</p>
+      <p class="actions"><a class="bouton" href="/contact/">Demander un devis</a> <a class="bouton bouton-clair" href="tel:${SITE.telLien}">${SITE.tel}</a></p>
+    </div>
+  </div>
+</section>`;
+
 const merci = `<section class="hero hero-page"><div class="conteneur conteneur-etroit"><h1>Merci, votre demande est bien partie</h1><p class="chapo">Nous vous recontactons rapidement. Si vous avez des photos de votre extérieur, envoyez-les-nous sur WhatsApp : elles nous aident à préparer la visite.</p><p class="actions"><a class="bouton" href="${SITE.whatsapp}">Envoyer des photos sur WhatsApp</a> <a class="bouton bouton-clair" href="/">Retour à l'accueil</a></p></div></section>`;
 const erreur = `<section class="hero hero-page"><div class="conteneur conteneur-etroit"><h1>Votre demande n'a pas pu être envoyée</h1><p class="chapo">Vérifiez que le nom, le téléphone et l'e-mail sont bien remplis, ou contactez-nous directement.</p><p class="actions"><a class="bouton" href="tel:${SITE.telLien}">${SITE.tel}</a> <a class="bouton bouton-clair" href="/contact/">Réessayer</a></p></div></section>`;
 
@@ -318,8 +397,16 @@ export const PAGES = [
     title: "Terrasse sur mesure Lyon | Instant Terrasse",
     description: "Terrasses bois, composite, carrelage et aluminium, pergolas, carports, garde-corps, stores bannes et bardage sur mesure à Lyon. Devis gratuit.",
     corps: accueil,
+    jsonld: {
+      "@context": "https://schema.org", "@type": "HomeAndConstructionBusiness", name: "Instant Terrasse", url: SITE.url,
+      telephone: "+33482531874", logo: `${SITE.url}/assets/img/logo-instant-terrasse-360.webp`,
+      address: { "@type": "PostalAddress", streetAddress: "8 avenue Général Leclerc", postalCode: "69140", addressLocality: "Rillieux-la-Pape", addressCountry: "FR" },
+      areaServed: "Lyon et sa région", founder: { "@type": "Person", name: "Antoine Escolle" },
+      parentOrganization: { "@type": "Organization", name: "ESCOM HABITAT" },
+      makesOffer: ["Terrasses bois, composite, carrelage et aluminium", "Pergolas et carports", "Garde-corps aluminium", "Stores bannes", "Bardage bois et aluminium"].map((n) => ({ "@type": "Offer", itemOffered: { "@type": "Service", name: n } })),
+    },
   },
-  ...pagesPlan.map((p) => p.chemin === "/partenaires/" ? { ...p, title: "Partenaires : Horizon Fenêtre et ESCOM HABITAT | Instant Terrasse", description: "Horizon Fenêtre, menuiseries sur mesure à Lyon, et ESCOM HABITAT, la société qui réunit Instant Terrasse et Horizon Fenêtre.", corps: partenaires, statut: "redigee" } : p).map((p) => p.chemin === "/contact/" ? { ...p, title: "Devis gratuit terrasse et pergola Lyon | Instant Terrasse", description: "Demandez votre devis gratuit pour une terrasse, une pergola, un garde-corps, un store banne ou un bardage à Lyon et dans sa région.", corps: contact, statut: "redigee" } : p),
+  ...pagesPlan.map((p) => p.chemin === "/quisommesnous/" ? { ...p, title: "À propos : Antoine Escolle et Instant Terrasse, Lyon", description: "Instant Terrasse, créée par Antoine Escolle, dans la terrasse depuis début 2022 : le meilleur produit au meilleur tarif, échantillons à domicile et plan 3D offert.", corps: aPropos, statut: "redigee" } : p).map((p) => p.chemin === "/partenaires/" ? { ...p, title: "Partenaires : Horizon Fenêtre et ESCOM HABITAT | Instant Terrasse", description: "Horizon Fenêtre, menuiseries sur mesure à Lyon, et ESCOM HABITAT, la société qui réunit Instant Terrasse et Horizon Fenêtre.", corps: partenaires, statut: "redigee" } : p).map((p) => p.chemin === "/contact/" ? { ...p, title: "Devis gratuit terrasse et pergola Lyon | Instant Terrasse", description: "Demandez votre devis gratuit pour une terrasse, une pergola, un garde-corps, un store banne ou un bardage à Lyon et dans sa région.", corps: contact, statut: "redigee" } : p),
   { chemin: "/merci/", title: "Merci | Instant Terrasse", description: "Votre demande a bien été envoyée.", corps: merci, horsPlan: true },
   { chemin: "/erreur-envoi/", title: "Envoi impossible | Instant Terrasse", description: "Votre demande n'a pas pu être envoyée.", corps: erreur, horsPlan: true },
 ];

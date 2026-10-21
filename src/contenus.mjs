@@ -212,6 +212,7 @@ const structures = {
       <h2>La structure aluminium</h2>
       <p>Des plots réglables en hauteur posés sur le support, des rails en aluminium, et des lames fixées par clips, sans vis apparente.</p>
       <ul class="puces">
+        <li><strong>Garantie 20 ans</strong> : nos structures aluminium sont garanties 20 ans.</li>
         <li><strong>Imputrescible</strong> : l'aluminium ne pourrit pas et ne gonfle pas avec l'humidité.</li>
         <li><strong>Plane</strong> : les plots rattrapent les défauts de niveau du terrain ou de la dalle.</li>
         <li><strong>Ventilée</strong> : l'air circule entre la structure et les lames, qui sèchent plus vite.</li>

@@ -618,5 +618,148 @@
    1542
   ],
   "ratio": 0.5986
+ },
+ {
+  "cle": "bardage-thermofrene-horizontal",
+  "dossier": "bardage",
+  "categorie": "bardage-bois",
+  "essence": "Thermofrêne",
+  "alt": "Façade en bardage horizontal thermofrêne associé à de la brique grise",
+  "largeurs": [
+   600,
+   1000,
+   1600
+  ],
+  "ratio": 1.3342
+ },
+ {
+  "cle": "bardage-thermofrene-cabane",
+  "dossier": "bardage",
+  "categorie": "bardage-bois",
+  "essence": "Thermofrêne",
+  "alt": "Cabane sur pilotis habillée de bardage thermofrêne, au milieu des bouleaux",
+  "largeurs": [
+   600,
+   1000,
+   1600
+  ],
+  "ratio": 1.4994
+ },
+ {
+  "cle": "bardage-thermofrene-pool-house-bar",
+  "dossier": "bardage",
+  "categorie": "bardage-bois",
+  "essence": "Thermofrêne",
+  "alt": "Pool house habillé de bardage thermofrêne patiné, avec bar",
+  "largeurs": [
+   600,
+   1000,
+   1400
+  ],
+  "ratio": 1.5021
+ },
+ {
+  "cle": "bardage-thermofrene-pool-house",
+  "dossier": "bardage",
+  "categorie": "bardage-bois",
+  "essence": "Thermofrêne",
+  "alt": "Bardage vertical en thermofrêne sur un pool house contemporain",
+  "largeurs": [
+   600,
+   1000,
+   1551
+  ],
+  "ratio": 1.5044
+ },
+ {
+  "cle": "bardage-thermofrene-maison",
+  "dossier": "bardage",
+  "categorie": "bardage-bois",
+  "essence": "Thermofrêne",
+  "alt": "Étage de maison contemporaine en bardage thermofrêne brun foncé",
+  "largeurs": [
+   600,
+   1000,
+   1600
+  ],
+  "ratio": 1.5003
+ },
+ {
+  "cle": "terrasse-thermopin-jardin-pins",
+  "dossier": "bois",
+  "categorie": "terrasse-bois",
+  "essence": "Thermopin",
+  "alt": "Grande terrasse en thermopin autour des pins, banc sur muret en pierre",
+  "largeurs": [
+   600,
+   1000,
+   1600
+  ],
+  "ratio": 1.5003
+ },
+ {
+  "cle": "terrasse-thermopin-salon-jardin",
+  "dossier": "bois",
+  "categorie": "terrasse-bois",
+  "essence": "Thermopin",
+  "alt": "Terrasse en thermopin le long d'une maison, table et chaises en bois",
+  "largeurs": [
+   600,
+   1000,
+   1600
+  ],
+  "ratio": 1.5003
+ },
+ {
+  "cle": "terrasse-thermopin-vue",
+  "dossier": "bois",
+  "categorie": "terrasse-bois",
+  "essence": "Thermopin",
+  "alt": "Terrasse couverte en thermopin avec garde-corps, vue sur la vallée",
+  "largeurs": [
+   600,
+   1000,
+   1600
+  ],
+  "ratio": 1.1583
+ },
+ {
+  "cle": "terrasse-thermopin-estrade",
+  "dossier": "bois",
+  "categorie": "terrasse-bois",
+  "essence": "Thermopin",
+  "alt": "Estrade et marches en thermopin dans un jardin, bain de soleil",
+  "largeurs": [
+   600,
+   1000,
+   1600
+  ],
+  "ratio": 1.5004
+ },
+ {
+  "cle": "terrasse-thermopin-table",
+  "dossier": "bois",
+  "categorie": "terrasse-bois",
+  "essence": "Thermopin",
+  "alt": "Vue d'en haut d'une table dressée sur une terrasse en thermopin",
+  "largeurs": [
+   600,
+   1000,
+   1600
+  ],
+  "ratio": 1.5004
+ },
+ {
+  "cle": "terrasse-thermopin-restaurant",
+  "dossier": "bois",
+  "categorie": "terrasse-bois",
+  "essence": "Thermopin",
+  "alt": "Terrasse de restaurant en thermopin avec parasols et chaises en bambou",
+  "largeurs": [
+   600,
+   1000,
+   1600
+  ],
+  "ratio": 1.5004
  }
 ]

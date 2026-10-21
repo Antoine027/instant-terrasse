@@ -1841,5 +1841,17 @@
    1600
   ],
   "ratio": 0.75
+ },
+ {
+  "cle": "structure-aluminium-carrelage",
+  "dossier": "structures",
+  "categorie": "schema",
+  "alt": "Vue éclatée de la structure aluminium pour carrelage : plots réglables, rails aluminium, supports de dalle et cales amortissantes sous une dalle de grès cérame",
+  "largeurs": [
+   600,
+   1000,
+   1536
+  ],
+  "ratio": 1.5
  }
 ]

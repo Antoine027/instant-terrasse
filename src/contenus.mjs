@@ -573,6 +573,15 @@ const terrasseCarrelage = {
       <p><strong>Sur structure aluminium</strong> : les dalles reposent sur un cadre de rails réglé une seule fois. La surface est parfaitement plane, les dalles ne bougent pas et ne claquent pas sous le pied grâce aux cales amortissantes, et il n'est pas nécessaire de couler une dalle béton sur un sol stabilisé.</p>
       <p><a href="/structure-terrasse-lyon/#comparatif-carrelage">Voir le comparatif détaillé →</a></p>
     </div>
+    <figure class="photo-produit schema">
+      ${imgPhoto("structure-aluminium-carrelage", { sizes: "(max-width:1060px) 90vw, 460px" })}
+      <figcaption>La structure aluminium : plots réglables, rails, supports de dalle et cales amortissantes.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="bloc bloc-alt">
+  <div class="conteneur conteneur-etroit">
     <div>
       <h2>Des formats pour chaque projet</h2>
       <p>Sur structure aluminium, la pose accepte le 60 × 60 comme les grands formats : 30 × 120, 45 × 90, 90 × 90, 120 × 120. On peut aussi décaler les joints ou mélanger deux formats sur une même surface pour un rendu plus vivant.</p>
@@ -581,7 +590,7 @@ const terrasseCarrelage = {
   </div>
 </section>
 
-<section class="bloc bloc-alt">
+<section class="bloc">
   <div class="conteneur deux-colonnes">
     <div>
       <h2>Bois et carrelage sur la même terrasse</h2>

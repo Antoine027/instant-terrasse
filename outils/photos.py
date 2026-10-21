@@ -9,7 +9,10 @@ RACINE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 MANIFESTE = os.path.join(RACINE, "src", "photos.json")
 photos = json.load(open(MANIFESTE)) if os.path.exists(MANIFESTE) else []
 for p in json.load(open(sys.argv[1])):
-    im = ImageOps.exif_transpose(Image.open(p["src"])).convert("RGB")
+    im = ImageOps.exif_transpose(Image.open(p["src"]))
+    if im.mode in ("RGBA", "LA", "P"):  # transparence -> fond blanc (sinon noir en RGB)
+        im = im.convert("RGBA"); fond = Image.new("RGBA", im.size, (255, 255, 255, 255)); fond.alpha_composite(im); im = fond
+    im = im.convert("RGB")
     if p.get("recadre"): im = im.crop(tuple(p["recadre"]))
     dest = os.path.join(RACINE, "public", "assets", "img", p["dossier"]); os.makedirs(dest, exist_ok=True)
     largeurs = [w for w in (600, 1000, 1600) if w < im.width] + ([im.width] if im.width < 1600 else [])

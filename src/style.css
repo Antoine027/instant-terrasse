@@ -1,3 +1,4 @@
+@font-face{font-family:Montserrat;font-weight:300;font-display:swap;src:url(/assets/fonts/montserrat-latin-300-normal.woff2) format("woff2")}
 @font-face{font-family:Montserrat;font-weight:600;font-display:swap;src:url(/assets/fonts/montserrat-latin-600-normal.woff2) format("woff2")}
 @font-face{font-family:Montserrat;font-weight:700;font-display:swap;src:url(/assets/fonts/montserrat-latin-700-normal.woff2) format("woff2")}
 @font-face{font-family:Lato;font-weight:400;font-display:swap;src:url(/assets/fonts/lato-latin-400-normal.woff2) format("woff2")}
@@ -163,13 +164,14 @@ details[open]>summary.menu-lien::after{transform:translateY(2px) rotate(225deg)}
 .mentions{opacity:.6;font-size:.85rem;margin-top:40px}
 
 /* ---------- Mobile ---------- */
-@media (max-width:1060px){
+@media (max-width:1240px){
   .burger{display:block}
-  .entete-cta{display:none}
-  .menu{display:none;position:absolute;top:78px;left:0;right:0;background:var(--fond2);padding:8px 16px 20px;max-height:calc(100vh - 78px);overflow:auto;box-shadow:var(--ombre)}
+  .menu{display:none;position:absolute;top:78px;left:0;right:0;background:var(--fond2);padding:8px 16px 20px;max-height:calc(100vh - 100px);overflow:auto;box-shadow:var(--ombre)}
   .menu-ouvert .menu{display:block}
   .menu-liste{flex-direction:column}
   .sous-menu,.sous-menu-large{position:static;box-shadow:none;background:transparent;padding:4px 12px 10px;flex-direction:column;gap:12px;min-width:0}
+}
+@media (max-width:1060px){
   .pied-grille{grid-template-columns:1fr 1fr}
   .deux-colonnes{grid-template-columns:1fr;gap:32px}
   .hero-grille{grid-template-columns:1fr;gap:32px}
@@ -233,3 +235,56 @@ details[open]>summary.menu-lien::after{transform:translateY(2px) rotate(225deg)}
 .garantie{margin-top:12px!important;font:600 .85rem Montserrat,sans-serif;color:var(--accent-texte)!important}
 .schema{margin:0;flex-direction:column;align-items:center;gap:10px}
 .schema figcaption{font-size:.85rem;color:var(--doux);text-align:center}
+
+/* ================= Style « Horizon » : en-tête flottant, boutons pilules, accueil plein écran ================= */
+.entete{background:transparent;box-shadow:none;padding:12px 16px 0;pointer-events:none}
+.entete-in{pointer-events:auto;max-width:1180px;background:rgba(255,255,255,.93);-webkit-backdrop-filter:saturate(1.4) blur(10px);backdrop-filter:saturate(1.4) blur(10px);border-radius:999px;box-shadow:0 10px 30px -12px rgba(47,52,55,.35);padding:6px 8px 6px 22px;min-height:68px}
+.entete .logo img{height:50px}
+.menu-lien{border-radius:999px}
+.menu-lien:hover,details[open]>.menu-lien{background:var(--fond2)}
+.sous-menu{border-radius:20px;top:calc(100% + 14px)}
+.bouton{border-radius:999px;display:inline-flex;align-items:center;justify-content:center;gap:9px;min-height:50px;padding:13px 24px}
+.bouton svg{flex:none}
+.bouton-petit{min-height:50px;padding:12px 22px}
+.bouton-blanc{background:#fff;color:var(--texte);box-shadow:inset 0 0 0 1.5px rgba(47,52,55,.14)}
+.bouton-blanc:hover{background:#fff;box-shadow:inset 0 0 0 1.5px var(--accent)}
+.hero-page{padding-top:40px}
+
+.hero-plein{position:relative;margin-top:-80px;min-height:min(100svh,880px);display:flex;align-items:center;overflow:hidden;background:var(--fond)}
+.hero-plein .h-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:62% 50%}
+.hero-plein::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(240,232,218,.97) 0%,rgba(240,232,218,.93) 34%,rgba(240,232,218,.72) 47%,rgba(240,232,218,0) 66%)}
+.h-txt{position:relative;z-index:2;width:100%;padding-top:130px;padding-bottom:64px}
+.h-txt>*{max-width:36rem}
+.kicker{display:inline-block;background:#fff;border-radius:999px;padding:8px 16px;font:600 .9rem Montserrat,sans-serif;color:var(--texte);margin:0 0 22px;box-shadow:0 4px 14px -8px rgba(47,52,55,.3)}
+.hero-plein h1{font-size:clamp(2.6rem,1.3rem + 4.2vw,4.9rem);letter-spacing:-.04em;line-height:.98;margin:0 0 24px}
+.hero-plein h1 span{display:block}
+.hero-plein h1 .fin{font-weight:300}
+.hero-plein h1 .fort{font-weight:700;color:var(--bouton)}
+.hero-plein .chapo{font-size:1.12rem;color:var(--texte);margin:0 0 28px;max-width:32rem}
+.hero-plein .actions{margin-top:0}
+.trio{list-style:none;padding:0;margin:34px 0 0;display:grid;grid-template-columns:repeat(3,1fr);gap:10px;max-width:40rem}
+.trio li{background:rgba(255,255,255,.85);border-radius:14px;padding:12px 14px;font:600 .86rem/1.35 Montserrat,sans-serif;color:var(--texte);display:flex;gap:9px;align-items:flex-start}
+.trio svg{width:20px;height:20px;flex:none;color:var(--bouton)}
+@media (max-width:1100px) and (min-width:701px){
+  .hero-plein .h-img{object-position:70% 50%}
+  .hero-plein::before{background:linear-gradient(90deg,rgba(240,232,218,.97) 0%,rgba(240,232,218,.92) 44%,rgba(240,232,218,.45) 64%,rgba(240,232,218,0) 80%)}
+  .h-txt>*{max-width:30rem}
+  .trio{grid-template-columns:1fr;max-width:22rem}
+}
+@media (max-width:1240px){
+  .entete-in{padding:6px 8px 6px 18px}
+  .menu{top:calc(100% + 10px);left:16px;right:16px;border-radius:24px;background:#fff;padding:12px 18px 18px}
+  .burger summary{background:var(--fond2);border-radius:999px;width:48px;height:48px;padding:0 14px}
+}
+@media (max-width:700px){
+  .hero-plein{flex-direction:column;align-items:stretch;min-height:0;margin-top:-80px}
+  .hero-plein .h-img{position:relative;display:block;margin:92px 16px 0;width:calc(100% - 32px);height:36svh;min-height:220px;border-radius:22px;object-position:72% 55%}
+  .hero-plein::before{display:none}
+  .h-txt{padding-top:22px;padding-bottom:28px}
+  .kicker{font-size:.8rem;margin-bottom:14px}
+  .hero-plein h1{margin-bottom:14px}
+  .hero-plein .chapo{font-size:1rem;margin-bottom:18px}
+  .trio{grid-template-columns:1fr;gap:6px;margin-top:20px}
+  .trio li{padding:9px 12px}
+}
+@media (max-width:560px){.entete .entete-cta{display:none}.entete .logo img{height:44px}.kicker{border-radius:16px}}

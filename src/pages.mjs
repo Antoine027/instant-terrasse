@@ -149,20 +149,17 @@ const etapes = [
 ];
 
 const accueil = `
-<section class="hero hero-accueil">
-  <div class="conteneur hero-grille">
-  <div>
-    <p class="surtitre">Version de test — site en construction</p>
-    <h1>Terrasses, pergolas et aménagements extérieurs sur mesure à Lyon</h1>
-    <p class="chapo">Le meilleur produit au meilleur tarif, et des devis transparents. Nous venons chez vous avec les échantillons, nous vous offrons le plan 3D de votre projet, et nous restons votre seul interlocuteur jusqu'à la fin du chantier.</p>
+<section class="hero-plein">
+  <img class="h-img" src="/assets/img/hero/terrasse-piscine-vue-1600.webp" srcset="/assets/img/hero/terrasse-piscine-vue-600.webp 600w, /assets/img/hero/terrasse-piscine-vue-800.webp 800w, /assets/img/hero/terrasse-piscine-vue-1200.webp 1200w, /assets/img/hero/terrasse-piscine-vue-1600.webp 1600w, /assets/img/hero/terrasse-piscine-vue-1920.webp 1920w, /assets/img/hero/terrasse-piscine-vue-2560.webp 2560w" sizes="(max-width:700px) calc(100vw - 32px), 100vw" width="2560" height="1440" alt="Plage de piscine en lames claires avec salon de jardin, vue sur la baie" fetchpriority="high" decoding="async">
+  <div class="conteneur h-txt">
+    <p class="kicker">Terrasses, pergolas et garde-corps à Lyon et dans sa région</p>
+    <h1><span class="fin">Votre terrasse</span> <span class="fort">sur mesure</span></h1>
+    <p class="chapo">Le meilleur produit au meilleur tarif, avec un devis transparent. Nous venons chez vous avec les échantillons et nous restons votre seul interlocuteur jusqu'à la fin du chantier.</p>
     <p class="actions">
-      <a class="bouton" href="/contact/">Demander un devis gratuit</a>
-      <a class="bouton bouton-clair" href="tel:${SITE.telLien}">${SITE.tel}</a>
+      <a class="bouton" href="/contact/">Demander une visite gratuite</a>
+      <a class="bouton bouton-blanc" href="tel:${SITE.telLien}"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>${SITE.tel}</a>
     </p>
-  </div>
-  <figure class="hero-photo">
-    ${imgPhoto("alu-piscine-blanche-vue", { sizes: "(max-width:1060px) 100vw, 560px", prioritaire: true })}
-  </figure>
+    <ul class="trio"><li><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V8l7-5 7 5v13"/><path d="M9 21v-6h6v6"/></svg><span>Visite chez vous, avec les échantillons</span></li><li><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 3 7l9 5 9-5-9-5z"/><path d="m3 17 9 5 9-5"/><path d="m3 12 9 5 9-5"/></svg><span>Plan 3D de votre projet offert</span></li><li><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg><span>Pose assurée en garantie décennale</span></li></ul>
   </div>
 </section>
 
@@ -386,6 +383,7 @@ export const PAGES = [
     title: "Terrasse sur mesure Lyon | Instant Terrasse",
     description: "Terrasses bois, composite, carrelage et aluminium, pergolas, carports, garde-corps, stores bannes et bardage sur mesure à Lyon. Devis gratuit.",
     corps: accueil,
+    head: `<link rel="preload" as="image" imagesrcset="/assets/img/hero/terrasse-piscine-vue-600.webp 600w, /assets/img/hero/terrasse-piscine-vue-800.webp 800w, /assets/img/hero/terrasse-piscine-vue-1200.webp 1200w, /assets/img/hero/terrasse-piscine-vue-1600.webp 1600w, /assets/img/hero/terrasse-piscine-vue-1920.webp 1920w, /assets/img/hero/terrasse-piscine-vue-2560.webp 2560w" imagesizes="(max-width:700px) calc(100vw - 32px), 100vw" fetchpriority="high">`,
     jsonld: {
       "@context": "https://schema.org", "@type": "HomeAndConstructionBusiness", name: "Instant Terrasse", url: SITE.url,
       telephone: "+33482531874", logo: `${SITE.url}/assets/img/logo-instant-terrasse-360.webp`,

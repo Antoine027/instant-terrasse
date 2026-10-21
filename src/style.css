@@ -68,8 +68,8 @@ details[open]>summary.menu-lien::after{transform:translateY(2px) rotate(225deg)}
 .grille{display:grid;gap:18px}
 .grille-3{grid-template-columns:repeat(auto-fill,minmax(270px,1fr))}
 .grille-univers{grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
-.carte{background:var(--fond2);border-radius:var(--rayon);padding:26px 26px 22px;position:relative}
-.bloc-alt .carte{background:var(--fond)}
+.carte{background:#fff;border:1px solid rgba(47,52,55,.09);box-shadow:0 6px 18px -12px rgba(47,52,55,.35);border-radius:var(--rayon);padding:26px 26px 22px;position:relative}
+.bloc-alt .carte{background:#fff}
 .carte p{margin:0;color:var(--doux)}
 .carte-lien{text-decoration:none;display:block;transition:transform .15s,box-shadow .15s}
 .carte-lien:hover{transform:translateY(-3px);box-shadow:var(--ombre)}
@@ -79,7 +79,7 @@ details[open]>summary.menu-lien::after{transform:translateY(2px) rotate(225deg)}
 
 /* ---------- Essences et photos produit ---------- */
 .grille-essences{grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:22px;margin-top:28px}
-.essence{background:var(--fond2);border-radius:var(--rayon);overflow:hidden;display:flex;flex-direction:column}
+.essence{background:#fff;border:1px solid rgba(47,52,55,.09);box-shadow:0 6px 18px -12px rgba(47,52,55,.35);border-radius:var(--rayon);overflow:hidden;display:flex;flex-direction:column}
 .essence-photo{background:linear-gradient(160deg,#fff 0%,var(--fond2) 100%);padding:22px 28px 6px;display:flex;justify-content:center;align-items:center;height:290px}
 .essence-photo img{max-height:100%;width:auto!important;object-fit:contain}
 .essence-photo img,.photo-produit img{display:block;width:100%;max-width:340px;height:auto}
@@ -142,7 +142,7 @@ details[open]>summary.menu-lien::after{transform:translateY(2px) rotate(225deg)}
 
 /* ---------- Étapes ---------- */
 .etapes{list-style:none;padding:0;margin:0;display:grid;gap:14px;counter-reset:e}
-.etapes li{counter-increment:e;background:var(--fond);border-radius:var(--rayon);padding:20px 22px 20px 74px;position:relative}
+.etapes li{counter-increment:e;background:#fff;border:1px solid rgba(47,52,55,.09);border-radius:var(--rayon);padding:20px 22px 20px 74px;position:relative}
 .etapes li::before{content:"0" counter(e);position:absolute;left:22px;top:18px;font:700 1.4rem Montserrat,sans-serif;color:var(--accent)}
 .etapes p{margin:0;color:var(--doux)}
 
@@ -180,7 +180,7 @@ details[open]>summary.menu-lien::after{transform:translateY(2px) rotate(225deg)}
 
 /* ---------- FAQ ---------- */
 .conteneur-etroit{max-width:820px}
-.faq{background:var(--fond);border-radius:var(--rayon);margin:0 0 10px}
+.faq{background:#fff;border:1px solid rgba(47,52,55,.09);border-radius:var(--rayon);margin:0 0 10px}
 .bloc-alt .faq{background:#fff}
 .faq summary{cursor:pointer;list-style:none;padding:18px 52px 18px 22px;font:700 1.02rem/1.35 Montserrat,sans-serif;position:relative}
 .faq summary::-webkit-details-marker{display:none}

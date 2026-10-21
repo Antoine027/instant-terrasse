@@ -1,6 +1,4 @@
-@font-face{font-family:Montserrat;font-weight:300;font-display:swap;src:url(/assets/fonts/montserrat-latin-300-normal.woff2) format("woff2")}
-@font-face{font-family:Montserrat;font-weight:600;font-display:swap;src:url(/assets/fonts/montserrat-latin-600-normal.woff2) format("woff2")}
-@font-face{font-family:Montserrat;font-weight:700;font-display:swap;src:url(/assets/fonts/montserrat-latin-700-normal.woff2) format("woff2")}
+@font-face{font-family:Montserrat;font-weight:300 700;font-display:swap;src:url(/assets/fonts/montserrat-latin-wght-normal.woff2) format("woff2")}
 @font-face{font-family:Lato;font-weight:400;font-display:swap;src:url(/assets/fonts/lato-latin-400-normal.woff2) format("woff2")}
 @font-face{font-family:Lato;font-weight:700;font-display:swap;src:url(/assets/fonts/lato-latin-700-normal.woff2) format("woff2")}
 :root{--fond:#F0E8DA;--fond2:#F8F3EB;--texte:#2F3437;--doux:#5b6164;--accent:#D79A3A;--accent-survol:#E3A94A;--accent-texte:#8f5418;--bouton:#9A5A1F;--bouton-survol:#7f4a17;--rayon:15px;--ombre:0 10px 30px rgba(47,52,55,.10)}

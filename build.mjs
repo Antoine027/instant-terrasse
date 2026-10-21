@@ -109,6 +109,14 @@ const corpsPreparation = (p) => {
 ${voisines.length ? `<section class="bloc bloc-alt"><div class="conteneur"><h2>À voir aussi</h2><div class="grille grille-3">${voisines.map(([c, t, x]) => `<a class="carte carte-lien" href="${c}"><h3>${t}</h3><p>${x}</p><span class="fleche" aria-hidden="true">→</span></a>`).join("")}</div></div></section>` : ""}`;
 };
 
+// Précharge l'image prioritaire de la page (LCP) dès le <head>.
+const preloadLcp = (corps = "") => {
+  const m = corps.match(/<img[^>]*fetchpriority="high"[^>]*>/);
+  if (!m) return "";
+  const srcset = m[0].match(/srcset="([^"]+)"/)?.[1], sizes = m[0].match(/sizes="([^"]+)"/)?.[1];
+  return srcset ? `<link rel="preload" as="image" imagesrcset="${srcset}" imagesizes="${sizes ?? "100vw"}" fetchpriority="high">` : "";
+};
+
 // ---------- Gabarit ----------
 const gabarit = (p) => `<!doctype html>
 <html lang="fr">
@@ -127,7 +135,7 @@ ${EN_LIGNE ? `<link rel="canonical" href="${SITE.url}${p.chemin}">` : `<meta nam
 <link rel="icon" type="image/png" sizes="48x48" href="/assets/img/favicon-48.png">
 <link rel="icon" type="image/png" sizes="192x192" href="/assets/img/icone-192.png">
 <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
-${p.head ?? ""}
+${p.head ?? preloadLcp(p.corps)}
 ${p.jsonld ? `<script type="application/ld+json">${JSON.stringify(p.jsonld)}</script>` : ""}
 <style>${css}</style>
 </head>

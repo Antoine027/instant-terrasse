@@ -53,7 +53,7 @@ const menuUnivers = (u, actuel) => {
 const entete = (actuel) => `
 <header class="entete">
   <div class="conteneur entete-in">
-    <a class="logo" href="/" aria-label="Instant Terrasse, accueil"><img src="/assets/img/logo-instant-terrasse.webp" alt="Instant Terrasse" width="178" height="62"></a>
+    <a class="logo" href="/" aria-label="Instant Terrasse, accueil"><img src="/assets/img/logo-instant-terrasse-180.webp" srcset="/assets/img/logo-instant-terrasse-180.webp 1x, /assets/img/logo-instant-terrasse-360.webp 2x" alt="Instant Terrasse" width="178" height="62"></a>
     <details class="burger">
       <summary aria-label="Ouvrir le menu"><span></span><span></span><span></span></summary>
     </details>
@@ -72,7 +72,7 @@ const pied = () => `
 <footer class="pied">
   <div class="conteneur pied-grille">
     <div>
-      <p class="logo"><img src="/assets/img/logo-instant-terrasse-clair.webp" alt="Instant Terrasse" width="184" height="64"></p>
+      <p class="logo"><img src="/assets/img/logo-instant-terrasse-clair-184.webp" srcset="/assets/img/logo-instant-terrasse-clair-184.webp 1x, /assets/img/logo-instant-terrasse-clair-368.webp 2x" alt="Instant Terrasse" width="184" height="64" loading="lazy" decoding="async"></p>
       <p>Terrasses, pergolas et aménagements extérieurs sur mesure — Lyon &amp; sa région.</p>
       <p><a href="tel:${SITE.telLien}">${SITE.tel}</a><br>${SITE.adresse}</p>
     </div>

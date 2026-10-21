@@ -6,6 +6,7 @@
   "essence": "Accoya gris",
   "alt": "Terrasse en accoya gris autour d'une piscine, jardin minéral et mur en pierre",
   "largeurs": [
+   400,
    600,
    1000,
    1600
@@ -19,6 +20,7 @@
   "essence": "Accoya gris",
   "alt": "Grande terrasse en accoya gris le long d'une maison, avec marche",
   "largeurs": [
+   400,
    600,
    1000,
    1108
@@ -32,6 +34,7 @@
   "essence": "Accoya gris",
   "alt": "Marches et banc intégré en accoya gris",
   "largeurs": [
+   400,
    600,
    720
   ],
@@ -44,6 +47,7 @@
   "essence": "Accoya naturel",
   "alt": "Plage de piscine en accoya naturel, bois clair, avec bains de soleil",
   "largeurs": [
+   400,
    600,
    1000,
    1600
@@ -57,6 +61,7 @@
   "essence": "Accoya naturel",
   "alt": "Vue aérienne d'une terrasse en accoya naturel autour d'une piscine rectangulaire",
   "largeurs": [
+   400,
    600,
    1000,
    1368
@@ -70,6 +75,7 @@
   "essence": "Accoya naturel",
   "alt": "Terrasse surélevée en accoya naturel avec garde-corps",
   "largeurs": [
+   400,
    600,
    1000,
    1600
@@ -83,6 +89,7 @@
   "essence": "Accoya naturel",
   "alt": "Terrasse en accoya naturel avec table et chaises en bois",
   "largeurs": [
+   400,
    600,
    1000,
    1600
@@ -96,6 +103,7 @@
   "essence": "Accoya naturel",
   "alt": "Détail de marches intégrées dans une terrasse en accoya naturel",
   "largeurs": [
+   400,
    600,
    1000,
    1600
@@ -109,6 +117,7 @@
   "essence": "Accoya naturel",
   "alt": "Lames d'accoya naturel en bordure de piscine",
   "largeurs": [
+   400,
    600,
    1000,
    1600
@@ -122,6 +131,7 @@
   "essence": "Accoya gris",
   "alt": "Façade de maison habillée d'un bardage bois vertical gris",
   "largeurs": [
+   400,
    600,
    1000,
    1600
@@ -135,6 +145,7 @@
   "essence": "Accoya naturel",
   "alt": "Clôture et abri de jardin en bardage accoya naturel à claire-voie",
   "largeurs": [
+   400,
    600,
    831
   ],
@@ -147,6 +158,7 @@
   "essence": "Accoya naturel",
   "alt": "Bardage vertical à claire-voie en accoya naturel derrière deux fauteuils",
   "largeurs": [
+   400,
    600,
    1000,
    1284
@@ -160,6 +172,7 @@
   "essence": "Kebony",
   "alt": "Façade de bâtiment habillée d'un bardage vertical en Kebony brun",
   "largeurs": [
+   400,
    600,
    1000,
    1440
@@ -173,6 +186,7 @@
   "essence": "Kebony",
   "alt": "Angle d'un bâtiment en bardage Kebony vertical, en fin de chantier",
   "largeurs": [
+   400,
    600,
    1000,
    1440
@@ -186,6 +200,7 @@
   "essence": "Kebony",
   "alt": "Grande terrasse en Kebony face à un port de plaisance au coucher du soleil",
   "largeurs": [
+   400,
    600,
    1000,
    1600
@@ -199,6 +214,7 @@
   "essence": "Kebony",
   "alt": "Terrasse en Kebony avec garde-corps, vue sur la mer et les voiliers",
   "largeurs": [
+   400,
    600,
    1000,
    1600
@@ -212,6 +228,7 @@
   "essence": "Kebony",
   "alt": "Plage de piscine en Kebony patiné gris, pool house en bois au fond",
   "largeurs": [
+   400,
    600,
    1000,
    1600
@@ -225,6 +242,7 @@
   "essence": "Kebony",
   "alt": "Terrasse en Kebony gris argenté devant une façade en brique",
   "largeurs": [
+   400,
    600,
    1000,
    1600
@@ -238,6 +256,7 @@
   "essence": "Kebony",
   "alt": "Terrasse surélevée en Kebony avec garde-corps métallique",
   "largeurs": [
+   400,
    600,
    1000,
    1600
@@ -251,6 +270,7 @@
   "essence": "Kebony",
   "alt": "Terrasse en Kebony vue depuis l'intérieur, table et chaises face au jardin",
   "largeurs": [
+   400,
    600,
    1000,
    1600
@@ -264,6 +284,7 @@
   "essence": "Kebony",
   "alt": "Terrasse en Kebony grisé autour d'une maison, salon de jardin",
   "largeurs": [
+   400,
    600,
    1000,
    1600
@@ -277,6 +298,7 @@
   "essence": "Kebony",
   "alt": "Petite terrasse en Kebony gris dans un jardin, fauteuils et table bistrot",
   "largeurs": [
+   400,
    600,
    1000,
    1600
@@ -290,6 +312,7 @@
   "essence": "Kebony",
   "alt": "Terrasse en Kebony autour d'une piscine à débordement avec vue sur les collines",
   "largeurs": [
+   400,
    600,
    1000,
    1600
@@ -303,6 +326,7 @@
   "essence": "Kebony",
   "alt": "Plage de piscine en Kebony brun, haie et pelouse",
   "largeurs": [
+   400,
    600,
    1000,
    1600
@@ -316,6 +340,7 @@
   "essence": "Kebony",
   "alt": "Terrasse de restaurant couverte avec plancher en Kebony",
   "largeurs": [
+   400,
    600,
    1000,
    1600
@@ -329,6 +354,7 @@
   "essence": "Bambou X-treme",
   "alt": "Toit-terrasse en bambou X-treme brun foncé, entouré de prairie fleurie",
   "largeurs": [
+   400,
    600,
    1000,
    1600
@@ -342,6 +368,7 @@
   "essence": "Bambou X-treme",
   "alt": "Terrasse et marches en bambou X-treme autour d'un spa",
   "largeurs": [
+   400,
    600,
    1000,
    1600
@@ -355,6 +382,7 @@
   "essence": "Bambou N-Durance",
   "alt": "Plage de piscine en bambou N-Durance, végétation tropicale",
   "largeurs": [
+   400,
    600,
    1000,
    1280
@@ -368,6 +396,7 @@
   "essence": "Bambou N-Durance",
   "alt": "Terrasse en bambou N-Durance autour d'une piscine, murets en pierre",
   "largeurs": [
+   400,
    600,
    1000,
    1600
@@ -381,6 +410,7 @@
   "essence": "Bambou N-Durance",
   "alt": "Terrasse en bambou N-Durance sous une pergola bioclimatique blanche",
   "largeurs": [
+   400,
    600,
    1000,
    1600
@@ -394,6 +424,7 @@
   "essence": "Bambou X-treme",
   "alt": "Maison contemporaine entièrement habillée de bardage vertical en bambou X-treme, à la tombée du jour",
   "largeurs": [
+   400,
    600,
    1000,
    1600
@@ -407,6 +438,7 @@
   "essence": "Bambou X-treme",
   "alt": "Patio éclairé le soir, mur en bardage bambou X-treme et banc intégré",
   "largeurs": [
+   400,
    600,
    1000,
    1600
@@ -420,6 +452,7 @@
   "essence": "Bambou X-treme",
   "alt": "Mur de jardin habillé de lames verticales en bambou X-treme",
   "largeurs": [
+   400,
    600,
    960
   ],
@@ -432,6 +465,7 @@
   "essence": "Bambou X-treme",
   "alt": "Détail d'angle d'un bardage en bambou X-treme à lames espacées",
   "largeurs": [
+   400,
    600,
    1000,
    1512
@@ -445,6 +479,7 @@
   "essence": "Bambou X-treme",
   "alt": "Bardage bambou X-treme en cours de pose : lames clipsées sur rails, fixations invisibles",
   "largeurs": [
+   400,
    600,
    1000,
    1600
@@ -458,6 +493,7 @@
   "essence": "Thermopin clear",
   "alt": "Mur habillé de tasseaux verticaux en thermopin clear, teinte brun chaud, derrière un canapé",
   "largeurs": [
+   400,
    600,
    1000,
    1080
@@ -471,6 +507,7 @@
   "essence": "Thermopin clear",
   "alt": "Bardage horizontal en thermopin clear sans nœuds",
   "largeurs": [
+   400,
    600,
    690
   ],
@@ -483,6 +520,7 @@
   "essence": "Thermo épicéa",
   "alt": "Façade en bardage vertical thermo épicéa brun foncé, en lisière de forêt",
   "largeurs": [
+   400,
    600,
    1000,
    1600
@@ -496,6 +534,7 @@
   "essence": "Thermo épicéa",
   "alt": "Maison contemporaine sur pilotis habillée de bardage thermo épicéa noir",
   "largeurs": [
+   400,
    600,
    1000,
    1600
@@ -509,6 +548,7 @@
   "essence": "Thermo épicéa",
   "alt": "Maison à pignon habillée de bardage vertical thermo épicéa patiné gris",
   "largeurs": [
+   400,
    600,
    1000,
    1600
@@ -522,6 +562,7 @@
   "essence": "Thermo épicéa",
   "alt": "Pignon en bardage thermo épicéa gris argenté sous un ciel bleu",
   "largeurs": [
+   400,
    600,
    1000,
    1600
@@ -535,6 +576,7 @@
   "essence": "Thermofrêne",
   "alt": "Plage de piscine en thermofrêne patiné, vue sur la mer et les oliviers",
   "largeurs": [
+   400,
    600,
    1000,
    1600
@@ -548,6 +590,7 @@
   "essence": "Thermofrêne",
   "alt": "Grande terrasse en thermofrêne au bord d'une rivière, deux bains de soleil",
   "largeurs": [
+   400,
    600,
    1000,
    1600
@@ -561,6 +604,7 @@
   "essence": "Thermofrêne",
   "alt": "Terrasse sur plusieurs niveaux en thermofrêne, marches et jardinière en acier corten",
   "largeurs": [
+   400,
    600,
    1000,
    1600
@@ -574,6 +618,7 @@
   "essence": "Thermofrêne",
   "alt": "Plage de piscine en thermofrêne grisé devant un pool house contemporain",
   "largeurs": [
+   400,
    600,
    1000,
    1335
@@ -587,6 +632,7 @@
   "essence": "Thermofrêne",
   "alt": "Patio encaissé avec plancher en thermofrêne et marches en pierre claire",
   "largeurs": [
+   400,
    600,
    1000,
    1177
@@ -600,6 +646,7 @@
   "essence": "Thermofrêne",
   "alt": "Terrasse en thermofrêne au bord d'une piscine naturelle, en Provence",
   "largeurs": [
+   400,
    600,
    1000,
    1600
@@ -613,6 +660,7 @@
   "essence": "Thermofrêne",
   "alt": "Terrasse et balcon en thermofrêne brun, garde-corps en verre, vus d'en haut",
   "largeurs": [
+   400,
    600,
    1000,
    1542
@@ -626,6 +674,7 @@
   "essence": "Thermofrêne",
   "alt": "Façade en bardage horizontal thermofrêne associé à de la brique grise",
   "largeurs": [
+   400,
    600,
    1000,
    1600
@@ -639,6 +688,7 @@
   "essence": "Thermofrêne",
   "alt": "Cabane sur pilotis habillée de bardage thermofrêne, au milieu des bouleaux",
   "largeurs": [
+   400,
    600,
    1000,
    1600
@@ -652,6 +702,7 @@
   "essence": "Thermofrêne",
   "alt": "Pool house habillé de bardage thermofrêne patiné, avec bar",
   "largeurs": [
+   400,
    600,
    1000,
    1400
@@ -665,6 +716,7 @@
   "essence": "Thermofrêne",
   "alt": "Bardage vertical en thermofrêne sur un pool house contemporain",
   "largeurs": [
+   400,
    600,
    1000,
    1551
@@ -678,6 +730,7 @@
   "essence": "Thermofrêne",
   "alt": "Étage de maison contemporaine en bardage thermofrêne brun foncé",
   "largeurs": [
+   400,
    600,
    1000,
    1600
@@ -691,6 +744,7 @@
   "essence": "Thermopin",
   "alt": "Grande terrasse en thermopin autour des pins, banc sur muret en pierre",
   "largeurs": [
+   400,
    600,
    1000,
    1600
@@ -704,6 +758,7 @@
   "essence": "Thermopin",
   "alt": "Terrasse en thermopin le long d'une maison, table et chaises en bois",
   "largeurs": [
+   400,
    600,
    1000,
    1600
@@ -717,6 +772,7 @@
   "essence": "Thermopin",
   "alt": "Terrasse couverte en thermopin avec garde-corps, vue sur la vallée",
   "largeurs": [
+   400,
    600,
    1000,
    1600
@@ -730,6 +786,7 @@
   "essence": "Thermopin",
   "alt": "Estrade et marches en thermopin dans un jardin, bain de soleil",
   "largeurs": [
+   400,
    600,
    1000,
    1600
@@ -743,6 +800,7 @@
   "essence": "Thermopin",
   "alt": "Vue d'en haut d'une table dressée sur une terrasse en thermopin",
   "largeurs": [
+   400,
    600,
    1000,
    1600
@@ -756,6 +814,7 @@
   "essence": "Thermopin",
   "alt": "Terrasse de restaurant en thermopin avec parasols et chaises en bambou",
   "largeurs": [
+   400,
    600,
    1000,
    1600
@@ -768,6 +827,7 @@
   "categorie": "pergola-bioclimatique",
   "alt": "Pergola bioclimatique anthracite à lames blanches, store vertical baissé, salon de jardin et piscine",
   "largeurs": [
+   400,
    600,
    1000,
    1600
@@ -780,6 +840,7 @@
   "categorie": "pergola-bioclimatique",
   "alt": "Pergola bioclimatique autoportée grise avec store latéral, au bord d'une piscine",
   "largeurs": [
+   400,
    600,
    1000,
    1600
@@ -792,6 +853,7 @@
   "categorie": "pergola-bioclimatique",
   "alt": "Pergola bioclimatique grise vue depuis la piscine, salon sous les lames",
   "largeurs": [
+   400,
    600,
    1000,
    1600
@@ -804,6 +866,7 @@
   "categorie": "pergola-bioclimatique",
   "alt": "Pergola bioclimatique noire lames ouvertes au-dessus d'une cuisine d'été sur terrasse bois",
   "largeurs": [
+   400,
    600,
    1000,
    1600
@@ -816,6 +879,7 @@
   "categorie": "pergola-bioclimatique",
   "alt": "Dessous d'une pergola bioclimatique adossée, lames blanches fermées",
   "largeurs": [
+   400,
    600,
    1000,
    1600
@@ -828,6 +892,7 @@
   "categorie": "pergola-bioclimatique",
   "alt": "Grande pergola bioclimatique sur terrasse bois, vue sur la mer",
   "largeurs": [
+   400,
    600,
    1000,
    1600
@@ -840,6 +905,7 @@
   "categorie": "pergola-bioclimatique",
   "alt": "Vue 3D d'une pergola bioclimatique adossée à une maison, store vertical intégré",
   "largeurs": [
+   400,
    600,
    1000,
    1600
@@ -852,6 +918,7 @@
   "categorie": "pergola-toile-retractable",
   "alt": "Pergola à toile rétractable anthracite adossée à une maison, bains de soleil et fauteuil suspendu",
   "largeurs": [
+   400,
    600,
    1000,
    1600
@@ -864,6 +931,7 @@
   "categorie": "pergola-toile-retractable",
   "alt": "Sous une pergola à toile rétractable, table de jardin et store vertical",
   "largeurs": [
+   400,
    600,
    1000,
    1600
@@ -876,6 +944,7 @@
   "categorie": "pergola-toit-fixe",
   "alt": "Pergola à toit fixe anthracite autoportée près d'une piscine, salon de jardin",
   "largeurs": [
+   400,
    600,
    1000,
    1600
@@ -888,6 +957,7 @@
   "categorie": "pergola-toit-fixe",
   "alt": "Pergola à toit fixe gris anthracite sur une terrasse carrelée",
   "largeurs": [
+   400,
    600,
    1000,
    1600
@@ -900,6 +970,7 @@
   "categorie": "pergola-toit-fixe",
   "alt": "Pergola à toit fixe adossée à côté d'une porte de garage",
   "largeurs": [
+   400,
    600,
    1000,
    1600
@@ -913,6 +984,7 @@
   "essence": "Bâtiments professionnels",
   "alt": "Garde-corps aluminium et verre sur les coursives d'un bâtiment d'activité",
   "largeurs": [
+   400,
    600,
    1000,
    1600
@@ -926,6 +998,7 @@
   "essence": "Bâtiments professionnels",
   "alt": "Garde-corps vitré anthracite sur la terrasse d'un immeuble de bureaux",
   "largeurs": [
+   400,
    600,
    1000,
    1600
@@ -939,6 +1012,7 @@
   "essence": "Bâtiments professionnels",
   "alt": "Garde-corps à lames bois et rampe d'escalier aluminium devant un café",
   "largeurs": [
+   400,
    600,
    1000,
    1600
@@ -952,6 +1026,7 @@
   "essence": "Bâtiments professionnels",
   "alt": "Garde-corps aluminium et verre sur les terrasses et toit-terrasse d'un immeuble de logements",
   "largeurs": [
+   400,
    600,
    1000,
    1535
@@ -965,6 +1040,7 @@
   "essence": "Logements collectifs",
   "alt": "Balcons d'immeuble avec garde-corps aluminium et verre dépoli, façade orange et beige",
   "largeurs": [
+   400,
    600,
    1000,
    1200
@@ -978,6 +1054,7 @@
   "essence": "Logements collectifs",
   "alt": "Garde-corps à barreaudage vertical beige sur les terrasses d'une résidence neuve",
   "largeurs": [
+   400,
    600,
    1000,
    1600
@@ -991,6 +1068,7 @@
   "essence": "Logements collectifs",
   "alt": "Façade d'immeuble avec balcons à barreaudage aluminium sous une arche",
   "largeurs": [
+   400,
    600,
    1000,
    1600
@@ -1004,6 +1082,7 @@
   "essence": "Logements collectifs",
   "alt": "Garde-corps aluminium anthracite associant verre dépoli et lisses horizontales",
   "largeurs": [
+   400,
    600,
    1000,
    1600
@@ -1017,6 +1096,7 @@
   "essence": "Logements collectifs",
   "alt": "Tour de logements aux balcons habillés de tôle perforée dorée",
   "largeurs": [
+   400,
    600,
    1000,
    1600
@@ -1030,6 +1110,7 @@
   "essence": "Logements collectifs",
   "alt": "Balcons superposés avec garde-corps à barreaudage crème",
   "largeurs": [
+   400,
    600,
    1000,
    1200
@@ -1043,6 +1124,7 @@
   "essence": "Logements collectifs",
   "alt": "Résidence aux loggias équipées de garde-corps à lisses horizontales anthracite",
   "largeurs": [
+   400,
    600,
    1000,
    1200
@@ -1056,6 +1138,7 @@
   "essence": "Logements collectifs",
   "alt": "Rénovation de façade : garde-corps verre dépoli et barreaudage sur tous les balcons",
   "largeurs": [
+   400,
    600,
    1000,
    1600
@@ -1069,6 +1152,7 @@
   "essence": "Maisons individuelles",
   "alt": "Garde-corps à lisses anthracite autour d'une terrasse surélevée en bois",
   "largeurs": [
+   400,
    600,
    1000,
    1200
@@ -1082,6 +1166,7 @@
   "essence": "Logements collectifs",
   "alt": "Garde-corps aluminium noir à lisses et verre sur un muret de terrasse",
   "largeurs": [
+   400,
    600,
    1000,
    1200
@@ -1095,6 +1180,7 @@
   "essence": "Logements collectifs",
   "alt": "Détail d'un garde-corps en tôle perforée à motifs ronds",
   "largeurs": [
+   400,
    600,
    1000,
    1600
@@ -1108,6 +1194,7 @@
   "essence": "Logements collectifs",
   "alt": "Balcons d'immeuble avec garde-corps à barreaudage couleur bronze",
   "largeurs": [
+   400,
    600,
    1000,
    1200
@@ -1121,6 +1208,7 @@
   "essence": "Logements collectifs",
   "alt": "Balcons blancs avec garde-corps aluminium et verre dépoli",
   "largeurs": [
+   400,
    600,
    1000,
    1200
@@ -1134,6 +1222,7 @@
   "essence": "Logements collectifs",
   "alt": "Logements à bardage bois avec coursives et escaliers à garde-corps à lisses noires",
   "largeurs": [
+   400,
    600,
    1000,
    1200
@@ -1147,6 +1236,7 @@
   "essence": "Logements collectifs",
   "alt": "Barre de logements rénovée avec garde-corps à barreaudage anthracite",
   "largeurs": [
+   400,
    600,
    1000,
    1600
@@ -1160,6 +1250,7 @@
   "essence": "Logements collectifs",
   "alt": "Résidence avec balcons en tôle perforée et pare-vue en verre dépoli",
   "largeurs": [
+   400,
    600,
    1000,
    1600
@@ -1173,6 +1264,7 @@
   "essence": "Logements collectifs",
   "alt": "Balcons aux garde-corps en tôle découpée à motif végétal",
   "largeurs": [
+   400,
    600,
    1000,
    1500
@@ -1186,6 +1278,7 @@
   "essence": "Logements collectifs",
   "alt": "Balcons à garde-corps anthracite et barreaux jaunes",
   "largeurs": [
+   400,
    600,
    1000,
    1600
@@ -1199,6 +1292,7 @@
   "essence": "Logements collectifs",
   "alt": "Façade rénovée avec balcons en tôle grise à frise découpée",
   "largeurs": [
+   400,
    600,
    1000,
    1200
@@ -1212,6 +1306,7 @@
   "essence": "Logements collectifs",
   "alt": "Garde-corps en tôle perforée couleur bronze sur des balcons d'angle",
   "largeurs": [
+   400,
    600,
    1000,
    1200
@@ -1225,6 +1320,7 @@
   "essence": "Logements collectifs",
   "alt": "Balcon filant à barreaudage noir sous un pignon en bardage bois",
   "largeurs": [
+   400,
    600,
    1000,
    1200
@@ -1238,6 +1334,7 @@
   "essence": "Logements collectifs",
   "alt": "Immeuble aux garde-corps de fenêtre en aluminium crème",
   "largeurs": [
+   400,
    600,
    1000,
    1200
@@ -1251,6 +1348,7 @@
   "essence": "Logements collectifs",
   "alt": "Balcons d'angle avec garde-corps aluminium et verre dépoli",
   "largeurs": [
+   400,
    600,
    1000,
    1200
@@ -1264,6 +1362,7 @@
   "essence": "Logements collectifs",
   "alt": "Balcons à garde-corps gris : lisses horizontales et soubassement perforé",
   "largeurs": [
+   400,
    600,
    1000,
    1200
@@ -1277,6 +1376,7 @@
   "essence": "Maisons individuelles",
   "alt": "Maison aux deux balcons équipés de garde-corps à lisses horizontales noires",
   "largeurs": [
+   400,
    600,
    1000,
    1600
@@ -1290,6 +1390,7 @@
   "essence": "Maisons individuelles",
   "alt": "Garde-corps à lisses aluminium sur une grande terrasse bois avec vue dégagée",
   "largeurs": [
+   400,
    600,
    1000,
    1600
@@ -1303,6 +1404,7 @@
   "essence": "Maisons individuelles",
   "alt": "Garde-corps aluminium avec panneaux bois en angle de terrasse",
   "largeurs": [
+   400,
    600,
    1000,
    1024
@@ -1316,6 +1418,7 @@
   "essence": "Maisons individuelles",
   "alt": "Garde-corps mêlant panneau découpé à motif floral et lisses horizontales",
   "largeurs": [
+   400,
    600,
    1000,
    1600
@@ -1329,6 +1432,7 @@
   "essence": "Maisons individuelles",
   "alt": "Balcon de maison avec garde-corps à lisses anthracite et sol composite",
   "largeurs": [
+   400,
    600,
    1000,
    1131
@@ -1342,6 +1446,7 @@
   "essence": "Maisons individuelles",
   "alt": "Garde-corps vitré sur une terrasse face à la mer au coucher du soleil",
   "largeurs": [
+   400,
    600,
    1000,
    1200
@@ -1355,6 +1460,7 @@
   "essence": "Maisons individuelles",
   "alt": "Terrasse bois surélevée avec garde-corps à lisses noires contre une maison en brique",
   "largeurs": [
+   400,
    600,
    1000,
    1200
@@ -1368,6 +1474,7 @@
   "essence": "Maisons individuelles",
   "alt": "Garde-corps à barreaudage noir sur une terrasse en surplomb d'un rocher",
   "largeurs": [
+   400,
    600,
    1000,
    1200
@@ -1381,6 +1488,7 @@
   "essence": "Maisons individuelles",
   "alt": "Balcon avec garde-corps aluminium anthracite et verre dépoli",
   "largeurs": [
+   400,
    600,
    1000,
    1200
@@ -1394,6 +1502,7 @@
   "essence": "Maisons individuelles",
   "alt": "Terrasse sur poteaux avec escalier et garde-corps à lisses anthracite",
   "largeurs": [
+   400,
    600,
    799
   ],
@@ -1406,6 +1515,7 @@
   "essence": "Maisons individuelles",
   "alt": "Garde-corps aluminium et verre clair sur une maison contemporaine",
   "largeurs": [
+   400,
    600,
    1000,
    1536
@@ -1419,6 +1529,7 @@
   "essence": "Maisons individuelles",
   "alt": "Balcons de maison à colombages avec garde-corps à lisses brunes",
   "largeurs": [
+   400,
    600,
    1000,
    1600
@@ -1432,6 +1543,7 @@
   "essence": "Maisons individuelles",
   "alt": "Garde-corps rouge à panneaux découpés motif feuillage sur une terrasse bois, façade en brique",
   "largeurs": [
+   400,
    600,
    1000,
    1600
@@ -1445,6 +1557,7 @@
   "essence": "Maisons individuelles",
   "alt": "Garde-corps aluminium gris clair et verre dépoli autour d'une terrasse carrelée",
   "largeurs": [
+   400,
    600,
    1000,
    1600
@@ -1458,6 +1571,7 @@
   "essence": "Maisons individuelles",
   "alt": "Garde-corps et rampe d'escalier à lisses anthracite sur une terrasse surélevée",
   "largeurs": [
+   400,
    600,
    1000,
    1600
@@ -1471,6 +1585,7 @@
   "essence": "Maisons individuelles",
   "alt": "Terrasse bois surélevée et escalier, garde-corps à lisses noires et main courante bois",
   "largeurs": [
+   400,
    600,
    1000,
    1500
@@ -1484,6 +1599,7 @@
   "essence": "Maisons individuelles",
   "alt": "Terrasse sur pilotis avec garde-corps à lisses et remplissage en lames bois",
   "largeurs": [
+   400,
    600,
    1000
   ],
@@ -1496,6 +1612,7 @@
   "essence": "Maisons individuelles",
   "alt": "Balcons de maison avec garde-corps blancs et verre, store banne au rez-de-chaussée",
   "largeurs": [
+   400,
    600,
    1000,
    1600
@@ -1509,6 +1626,7 @@
   "essence": "Maisons individuelles",
   "alt": "Terrasse surélevée avec garde-corps à lisses grises sous une pergola bioclimatique",
   "largeurs": [
+   400,
    600,
    1000,
    1600
@@ -1522,6 +1640,7 @@
   "essence": "Maisons individuelles",
   "alt": "Garde-corps à panneaux découpés motif feuillage et main courante bois sur une terrasse",
   "largeurs": [
+   400,
    600,
    1000,
    1600
@@ -1535,6 +1654,7 @@
   "essence": "Maisons individuelles",
   "alt": "Grande terrasse bois sur pilotis avec garde-corps à lisses aluminium gris clair",
   "largeurs": [
+   400,
    600,
    1000,
    1600
@@ -1548,6 +1668,7 @@
   "essence": "Aspect bois",
   "alt": "Plage de piscine en lames aluminium aspect bois, bains de soleil et vue sur les montagnes",
   "largeurs": [
+   400,
    600,
    1000
   ],
@@ -1560,6 +1681,7 @@
   "essence": "Aspect bois",
   "alt": "Terrasse en lames aluminium aspect bois autour d'une piscine, jardin tropical",
   "largeurs": [
+   400,
    600,
    1000,
    1600
@@ -1573,6 +1695,7 @@
   "essence": "Aspect bois",
   "alt": "Lames aluminium aspect bois autour d'une piscine en forme de haricot",
   "largeurs": [
+   400,
    600,
    1000,
    1600
@@ -1586,6 +1709,7 @@
   "essence": "Aspect bois",
   "alt": "Terrasse couverte en lames aluminium teinte bois rouge, garde-corps à câbles",
   "largeurs": [
+   400,
    600,
    1000,
    1280
@@ -1599,6 +1723,7 @@
   "essence": "Aspect bois",
   "alt": "Terrasse et marches en lames aluminium aspect teck, mur en pierre",
   "largeurs": [
+   400,
    600,
    1000,
    1600
@@ -1612,6 +1737,7 @@
   "essence": "Gris et clair",
   "alt": "Plage de piscine à débordement en lames aluminium claires, vue sur la baie",
   "largeurs": [
+   400,
    600,
    1000,
    1600
@@ -1625,6 +1751,7 @@
   "essence": "Gris et clair",
   "alt": "Plage de piscine en lames aluminium gris clair",
   "largeurs": [
+   400,
    600,
    1000,
    1600
@@ -1638,6 +1765,7 @@
   "essence": "Gris et clair",
   "alt": "Terrasse de restaurant en lames aluminium beige face à la mer",
   "largeurs": [
+   400,
    600,
    1000,
    1600
@@ -1651,6 +1779,7 @@
   "essence": "Gris et clair",
   "alt": "Salle de restaurant en terrasse, plancher en lames aluminium gris",
   "largeurs": [
+   400,
    600,
    1000,
    1600
@@ -1664,6 +1793,7 @@
   "essence": "Gris et clair",
   "alt": "Terrasse en lames aluminium gris autour d'un spa encastré",
   "largeurs": [
+   400,
    600,
    1000,
    1512
@@ -1677,6 +1807,7 @@
   "essence": "Gris et clair",
   "alt": "Terrasse en lames aluminium gris clair avec salon de jardin et garde-corps",
   "largeurs": [
+   400,
    600,
    1000,
    1600
@@ -1690,6 +1821,7 @@
   "essence": "Gris et clair",
   "alt": "Escalier habillé de lames aluminium, garde-corps en verre",
   "largeurs": [
+   400,
    600,
    1000,
    1600
@@ -1703,6 +1835,7 @@
   "essence": "Gris et clair",
   "alt": "Lames aluminium découpées au contact d'un rocher naturel",
   "largeurs": [
+   400,
    600,
    1000,
    1600
@@ -1716,6 +1849,7 @@
   "essence": "Gris et clair",
   "alt": "Trappe de visite intégrée dans une terrasse en lames aluminium",
   "largeurs": [
+   400,
    600,
    1000,
    1600

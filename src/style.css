@@ -2,7 +2,7 @@
 @font-face{font-family:Montserrat;font-weight:700;font-display:swap;src:url(/assets/fonts/montserrat-latin-700-normal.woff2) format("woff2")}
 @font-face{font-family:Lato;font-weight:400;font-display:swap;src:url(/assets/fonts/lato-latin-400-normal.woff2) format("woff2")}
 @font-face{font-family:Lato;font-weight:700;font-display:swap;src:url(/assets/fonts/lato-latin-700-normal.woff2) format("woff2")}
-:root{--fond:#F0E8DA;--fond2:#F8F3EB;--texte:#2F3437;--doux:#5b6164;--accent:#D79A3A;--accent-survol:#E3A94A;--accent-texte:#9a6418;--rayon:15px;--ombre:0 10px 30px rgba(47,52,55,.10)}
+:root{--fond:#F0E8DA;--fond2:#F8F3EB;--texte:#2F3437;--doux:#5b6164;--accent:#D79A3A;--accent-survol:#E3A94A;--accent-texte:#8f5418;--bouton:#9A5A1F;--bouton-survol:#7f4a17;--rayon:15px;--ombre:0 10px 30px rgba(47,52,55,.10)}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{margin:0;background:var(--fond);color:var(--texte);font:400 17px/1.65 Lato,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
@@ -42,8 +42,8 @@ details[open]>summary.menu-lien::after{transform:translateY(2px) rotate(225deg)}
 .burger summary span{display:block;height:2px;background:var(--texte);border-radius:2px}
 
 /* ---------- Boutons ---------- */
-.bouton{display:inline-block;background:var(--accent);color:#fff;text-decoration:none;font-weight:700;font-size:.95rem;padding:14px 24px;border-radius:var(--rayon);transition:background .15s}
-.bouton:hover{background:var(--accent-survol)}
+.bouton{display:inline-block;background:var(--bouton);color:#fff;text-decoration:none;font-weight:700;font-size:.95rem;padding:14px 24px;border-radius:var(--rayon);transition:background .15s}
+.bouton:hover{background:var(--bouton-survol)}
 .bouton-clair{background:transparent;color:var(--texte);box-shadow:inset 0 0 0 2px var(--texte)}
 .bouton-clair:hover{background:var(--texte);color:#fff}
 .bouton-petit{padding:10px 16px;white-space:nowrap}
@@ -203,18 +203,21 @@ details[open]>summary.menu-lien::after{transform:translateY(2px) rotate(225deg)}
 @media (max-width:560px){.deux-champs{grid-template-columns:1fr}.formulaire{padding:20px}}
 
 /* ---------- Partenaires ---------- */
-.marques{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:22px}
-.marque{background:#fff;border-radius:var(--rayon);overflow:hidden;display:flex;flex-direction:column;box-shadow:0 1px 0 rgba(0,0,0,.04)}
+.marques{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:22px;align-items:stretch}
+.marque{--teinte:#F8F3EB;--tag-texte:#7a4514;--btn:var(--bouton);background:#fff;border:1px solid rgba(47,52,55,.12);border-radius:12px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 2px 10px rgba(47,52,55,.05)}
+.marque.horizon{--teinte:#E9F6FB;--tag-texte:#33454d;--btn:#33454d}
+.marque.escom{--teinte:#F2F3F5;--tag-texte:#2F3437;--btn:#1f2326}
 .marque-lien{text-decoration:none;display:flex;flex-direction:column;flex:1}
-.marque-logo{background:#fff;border-bottom:1px solid var(--fond);display:flex;align-items:center;justify-content:center;height:170px;padding:24px}
-.marque-logo img{max-height:122px;max-width:80%;width:auto;height:auto}
-.marque-corps{padding:24px 26px;display:flex;flex-direction:column;gap:12px;flex:1}
-.marque-corps h2{font-size:1.3rem;margin:0}
+.marque-logo{background:var(--teinte);border-bottom:1px solid rgba(47,52,55,.08);display:flex;align-items:center;justify-content:center;height:160px;padding:22px}
+.marque-logo img{max-height:118px;max-width:78%;width:auto;height:auto}
+.marque-corps{padding:26px 28px;display:flex;flex-direction:column;gap:14px;flex:1}
+.marque-corps h2{font-size:1.45rem;margin:0}
 .marque-corps p{margin:0;color:var(--doux)}
-.tags{list-style:none;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:6px}
-.tags li{background:var(--fond2);border-radius:999px;padding:4px 12px;font-size:.85rem}
-.marque-btn{margin-top:auto;font:700 .95rem Montserrat,sans-serif;color:var(--accent-texte);display:inline-flex;align-items:center;gap:6px}
-.marque-lien:hover .marque-btn{gap:10px}
-.marque-appel{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:16px 26px;background:var(--texte);color:var(--fond2);text-decoration:none}
-.marque-appel strong{font-family:Montserrat,sans-serif}
-.marque-appel:hover{background:#000}
+.tags{list-style:none;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:8px}
+.tags li{background:var(--teinte);color:var(--tag-texte);border-radius:999px;padding:6px 12px;font:600 .85rem Montserrat,sans-serif}
+.marque-btn{margin-top:auto;align-self:flex-start;background:var(--btn);color:#fff;border-radius:6px;padding:13px 20px;font:700 .95rem Montserrat,sans-serif;display:inline-flex;align-items:center;gap:8px;transition:gap .15s}
+.marque-lien:hover .marque-btn{gap:12px}
+.marque-appel{display:flex;align-items:center;gap:10px;padding:18px 28px;background:var(--teinte);border-top:1px solid rgba(47,52,55,.08);color:var(--doux);text-decoration:none}
+.marque-appel svg{flex:none}
+.marque-appel strong{margin-left:auto;font:700 1.25rem Montserrat,sans-serif;color:var(--texte)}
+.marque-appel:hover strong{color:var(--accent-texte)}

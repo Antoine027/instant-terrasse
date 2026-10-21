@@ -179,9 +179,11 @@ const compCarrelage = tableau(
   ["Sur plots simples", "Sur structure aluminium"],
   [
     ["Principe", "Chaque dalle repose directement sur des plots placés à ses angles", "Les dalles reposent sur des rails aluminium, eux-mêmes posés sur plots"],
-    ["Support idéal", "Support existant stable : dalle béton, toit-terrasse, ancienne terrasse", "Supports plus irréguliers ou plus fragiles, grandes hauteurs"],
+    ["Support idéal", "Support existant stable : dalle béton, toit-terrasse, ancienne terrasse", "Sols durs ou stabilisés, supports irréguliers, grandes hauteurs, sans couler de dalle béton"],
     ["Rigidité", "Bonne, à condition que le support soit sain", "Ossature continue, très rigide, qui répartit les charges"],
     ["Planéité", "Réglage plot par plot", "Rails réglés une fois, toute la surface suit"],
+    ["Sous le pied", "Une dalle peut bouger ou « pianoter » si un plot travaille", "Cadre continu et cales amortissantes : pas de dalle qui bouge ni qui claque"],
+    ["Formats et calepinage", "Formats courants, pose à joints alignés", "Grands formats, joints décalés, mélange de formats ou de bois et carrelage"],
     ["Rapidité et budget", "Pose rapide, solution la plus économique", "Plus de matériel, budget plus élevé"],
   ],
   [
@@ -210,12 +212,16 @@ const structures = {
     <div>
       <p class="sous-titre">Notre solution phare</p>
       <h2>La structure aluminium</h2>
-      <p>Des plots réglables en hauteur posés sur le support, des rails en aluminium, et des lames fixées par clips, sans vis apparente.</p>
+      <p>Des plots réglables en hauteur posés sur le support, des rails en aluminium livrés avec leurs clips, et des lames qui viennent s'y clipser : aucune vis ne traverse la lame.</p>
       <ul class="puces">
         <li><strong>Garantie 20 ans</strong> : nos structures aluminium sont garanties 20 ans.</li>
-        <li><strong>Imputrescible</strong> : l'aluminium ne pourrit pas et ne gonfle pas avec l'humidité.</li>
+        <li><strong>Fixation invisible</strong> : pas de vis en surface, donc pas de trou où l'eau s'infiltre, et des lignes de lames parfaitement droites.</li>
+        <li><strong>Démontable</strong> : une lame se déclipse et se remet en place sans rien abîmer, pour accéder dessous ou remplacer une lame.</li>
+        <li><strong>Imputrescible</strong> : l'aluminium ne pourrit pas, ne gonfle pas et résiste à la corrosion, y compris autour des piscines.</li>
         <li><strong>Plane</strong> : les plots rattrapent les défauts de niveau du terrain ou de la dalle.</li>
-        <li><strong>Ventilée</strong> : l'air circule entre la structure et les lames, qui sèchent plus vite.</li>
+        <li><strong>Ventilée</strong> : les lames ne touchent pas directement l'ossature, l'air circule et le bois sèche plus vite.</li>
+        <li><strong>Conforme et testée</strong> : un système testé par le FCBA (l'institut technologique de la filière bois) et conforme au DTU 51-4, la norme des terrasses en bois.</li>
+        <li><strong>Fabriquée en France</strong>, en aluminium majoritairement recyclé et entièrement recyclable.</li>
         <li><strong>Polyvalente</strong> : elle accueille le bois, le <a href="/terrasse-composite-lyon/">composite</a>, le <a href="/terrasse-carrelage-lyon/">carrelage</a> et les <a href="/terrasse-aluminium-lyon/">lames aluminium</a>.</li>
       </ul>
     </div>
@@ -509,7 +515,66 @@ const terrasseAluminium = {
   }),
 };
 
+// ---------- Terrasse carrelage ----------
+const terrasseCarrelage = {
+  title: "Terrasse carrelage Lyon : grès cérame sur plots | Instant Terrasse",
+  description: "Terrasse en carrelage grès cérame sur mesure à Lyon : pose sans colle sur plots ou sur structure aluminium, grands formats, mélange bois et carrelage. Devis gratuit.",
+  corps: `
+<section class="hero hero-page">
+  <div class="conteneur">
+    <p class="fil"><a href="/">Accueil</a> › Terrasses</p>
+    <h1>Terrasse en carrelage grès cérame à Lyon</h1>
+    <p class="chapo">Des dalles de grès cérame épaisses, posées à sec sur plots ou sur une structure aluminium : ni colle, ni joint, ni dalle béton à couler. Une terrasse minérale, facile à vivre et démontable dalle par dalle.</p>
+    <p class="actions"><a class="bouton" href="/contact/">Demander un devis gratuit</a> <a class="bouton bouton-clair" href="/structure-terrasse-lyon/#comparatif-carrelage">Plots ou structure aluminium ?</a></p>
+  </div>
+</section>
+
+<section class="bloc bloc-alt">
+  <div class="conteneur">
+    <h2>Pourquoi le grès cérame en extérieur</h2>
+    <div class="grille grille-3">
+      <div class="carte"><h3>Rien ne l'atteint</h3><p>Il résiste aux taches, à l'humidité et aux écarts de température. Un repas renversé ou un barbecue ne laissent pas de trace.</p></div>
+      <div class="carte"><h3>Entretien minimal</h3><p>Un coup de balai et de l'eau. Pas de saturateur, pas de ponçage, pas de traitement.</p></div>
+      <div class="carte"><h3>Tous les styles</h3><p>Aspect pierre, béton ou bois, du très clair au très foncé, pour suivre votre intérieur jusque dans le jardin.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="bloc">
+  <div class="conteneur deux-colonnes">
+    <div>
+      <h2>Deux façons de le poser</h2>
+      <p><strong>Sur plots simples</strong> : chaque dalle repose sur des plots réglables placés à ses angles. C'est la solution la plus rapide et la plus économique quand vous avez déjà une dalle béton ou un toit-terrasse en bon état.</p>
+      <p><strong>Sur structure aluminium</strong> : les dalles reposent sur un cadre de rails réglé une seule fois. La surface est parfaitement plane, les dalles ne bougent pas et ne claquent pas sous le pied grâce aux cales amortissantes, et il n'est pas nécessaire de couler une dalle béton sur un sol stabilisé.</p>
+      <p><a href="/structure-terrasse-lyon/#comparatif-carrelage">Voir le comparatif détaillé →</a></p>
+    </div>
+    <div>
+      <h2>Des formats pour chaque projet</h2>
+      <p>Sur structure aluminium, la pose accepte le 60 × 60 comme les grands formats : 30 × 120, 45 × 90, 90 × 90, 120 × 120. On peut aussi décaler les joints ou mélanger deux formats sur une même surface pour un rendu plus vivant.</p>
+      <p>Les bords se finissent proprement avec des bandeaux en grès ou en aluminium, et les découpes autour d'un arbre ou d'une piscine se traitent sans bricolage.</p>
+    </div>
+  </div>
+</section>
+
+<section class="bloc bloc-alt">
+  <div class="conteneur deux-colonnes">
+    <div>
+      <h2>Bois et carrelage sur la même terrasse</h2>
+      <p>Le carrelage pour la zone repas et les passages, le bois pour le coin salon ou la plage de piscine : sur structure aluminium, les deux revêtements se raccordent au même niveau, sans marche ni décalage. C'est aussi une façon de maîtriser le budget en mettant chaque matériau là où il est le plus utile.</p>
+      <p>Découvrez nos <a href="/terrasse-bois-lyon/">essences de bois</a>.</p>
+    </div>
+    <div>
+      <h2>Votre projet</h2>
+      <p>${POSE}</p>
+      <p>Lors de la visite, nous venons avec des échantillons de dalles pour les voir chez vous, et nous vous remettons un plan 3D offert du projet.</p>
+    </div>
+  </div>
+</section>
+${cta("Un projet de terrasse en carrelage ?", "Devis gratuit et sans engagement. Nous venons voir votre support, avec les échantillons, et nous vous conseillons la pose la plus adaptée.")}`,
+};
+
 export const CONTENUS = {
+  "/terrasse-carrelage-lyon/": terrasseCarrelage,
   "/terrasse-aluminium-lyon/": terrasseAluminium,
   "/garde-corps-aluminium-lyon/": gardeCorps,
   "/pergola-bioclimatique-lyon/": pergolaBioclimatique,

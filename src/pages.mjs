@@ -127,6 +127,22 @@ export const MOT_ANTOINE = `
       <p>J'ai créé Instant Terrasse avec une idée simple : proposer le meilleur produit au meilleur tarif, en toute transparence. Je viens chez vous avec les échantillons, je vous montre votre projet en 3D, et je vous explique chaque ligne du devis.</p>
       <p class="signature">Antoine Escolle, fondateur d'Instant Terrasse</p>`;
 
+// Avis Google (fiche « Instant Terrasse - Lyon », relevés le 22/10/2026). Textes recopiés tels quels, extraits arrêtés en fin de phrase.
+export const AVIS = {
+  note: "5,0", total: 4,
+  lien: "https://www.google.com/maps/place/?q=place_id:ChIJ0Y8c_yRNUikR9AmnO1el7BE",
+  ecrire: "https://search.google.com/local/writereview?placeid=ChIJ0Y8c_yRNUikR9AmnO1el7BE",
+  liste: [
+    ["Axel V.", "Nous sommes ravis du résultat ! La terrasse est magnifique, le travail est soigné et réalisé avec beaucoup de professionnalisme. L’équipe a été à l’écoute, ponctuelle et de très bon conseil tout au long du projet."],
+    ["Clement V.", "Un travail remarquable ! J'ai fait appel à cette entreprise pour la réalisation de ma terrasse en bois avec une ossature alu, et le résultat dépasse mes attentes."],
+    ["Coraline G.", "Un travail vraiment remarquable, réalisé avec beaucoup de sérieux, de passion et de professionnalisme. Chaque détail semble avoir été pensé avec soin, ce qui donne un résultat de grande qualité."],
+    ["Marine C.", "Personne très compétente et professionnelle. Ses conseils pour la réalisation ont été précieux et parfaitement adapté . Je recommande sans hésitation !"],
+  ],
+};
+const ETOILE = `<svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M12 2.5l2.9 6.1 6.6.8-4.9 4.5 1.3 6.6L12 17.3l-5.9 3.2 1.3-6.6-4.9-4.5 6.6-.8z"/></svg>`;
+const ETOILES = `<span class="etoiles" role="img" aria-label="5 étoiles sur 5">${ETOILE.repeat(5)}</span>`;
+export const BADGE_AVIS = `<a class="badge-avis" href="${AVIS.lien}" target="_blank" rel="noopener">${ETOILES}<strong>${AVIS.note}/5</strong> sur Google · ${AVIS.total} avis</a>`;
+
 export const FAQ = [
   ["Quel matériau choisir pour ma terrasse ?", "Tout dépend de l'aspect recherché, du budget et du temps que vous voulez consacrer à l'entretien. Le bois apporte la chaleur d'un matériau naturel, le composite et l'aluminium limitent l'entretien, le carrelage offre un rendu minéral. Notre <a href=\"/nos-terrasses/\">comparatif des matériaux</a> vous aide à y voir clair, et nous affinons le choix lors de la visite."],
   ["Qui réalise la pose ?", `${POSE}`],
@@ -186,6 +202,17 @@ const accueil = `
   </div>
 </section>
 
+<section id="avis" class="bloc">
+  <div class="conteneur">
+    <div class="avis-entete">
+      <h2>Ce que disent nos clients</h2>
+      ${BADGE_AVIS}
+    </div>
+    <div class="grille grille-avis">${AVIS.liste.map(([n, t]) => `<figure class="carte avis">${ETOILES}<blockquote>« ${t} »</blockquote><figcaption>${n} · avis Google</figcaption></figure>`).join("")}</div>
+    <p class="actions"><a class="bouton bouton-clair" href="${AVIS.lien}" target="_blank" rel="noopener">Voir tous les avis sur Google</a></p>
+  </div>
+</section>
+
 <section class="bloc bloc-alt">
   <div class="conteneur deux-colonnes">
     <div>
@@ -238,6 +265,7 @@ const contact = `
         <li>Plan 3D de votre projet offert</li>
         <li>Devis détaillé, gratuit et sans engagement</li>
       </ul>
+      <p>${BADGE_AVIS}</p>
       <p class="contact-direct">Vous préférez parler directement ?<br><a class="bouton bouton-clair" href="tel:${SITE.telLien}">${SITE.tel}</a> <a class="bouton bouton-clair" href="${SITE.whatsapp}">WhatsApp</a></p>
       <p class="note-pose">Des photos de votre extérieur nous aident beaucoup : envoyez-les sur WhatsApp après votre demande.</p>
     </div>

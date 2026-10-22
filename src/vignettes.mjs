@@ -24,7 +24,7 @@ export const VIGNETTES = {
   "/garde-corps-aluminium-lyon/": "gc-maison-terrasse-vue",
   "/store-banne-lyon/": null,
   "/bardage-bois-lyon/": "bardage-thermo-epicea-pilotis",
-  "/bardage-aluminium-lyon/": null,
+  "/bardage-aluminium-lyon/": "bardage-alu-horizontal-gris",
   // cartes « univers » de l'accueil
   "#terrasses": "terrasse-thermofrene-bord-de-loire",
   "#pergolas": "pergola-bioclimatique-salon-piscine",

@@ -1991,5 +1991,74 @@
    1536
   ],
   "ratio": 1.5
+ },
+ {
+  "cle": "bardage-alu-horizontal-gris",
+  "dossier": "bardage",
+  "categorie": "bardage-aluminium",
+  "essence": "Aspect bois",
+  "alt": "Façade d'immeuble en bardage aluminium horizontal aspect bois grisé, soubassement en brique",
+  "largeurs": [
+   400,
+   600,
+   800,
+   1000,
+   1600
+  ],
+  "ratio": 1.3333
+ },
+ {
+  "cle": "bardage-alu-vertical-brun-escalier",
+  "dossier": "bardage",
+  "categorie": "bardage-aluminium",
+  "essence": "Aspect bois",
+  "alt": "Bardage aluminium vertical aspect bois brun sur une résidence, escalier métallique noir",
+  "largeurs": [
+   400,
+   600,
+   800,
+   1000
+  ],
+  "ratio": 1.3333
+ },
+ {
+  "cle": "bardage-alu-vertical-brun-residence",
+  "dossier": "bardage",
+  "categorie": "bardage-aluminium",
+  "essence": "Aspect bois",
+  "alt": "Résidence habillée de bardage aluminium vertical aspect bois brun et de tôle noire",
+  "largeurs": [
+   400,
+   600,
+   800,
+   1000,
+   1290
+  ],
+  "ratio": 1.075
+ },
+ {
+  "cle": "bardage-alu-deux-teintes",
+  "dossier": "bardage",
+  "categorie": "bardage-aluminium",
+  "essence": "Aspect bois",
+  "alt": "Façade associant deux teintes de bardage aluminium aspect bois, clair et brun",
+  "largeurs": [
+   400,
+   600,
+   640
+  ],
+  "ratio": 1.3333
+ },
+ {
+  "cle": "bardage-alu-detail-teintes",
+  "dossier": "bardage",
+  "categorie": "bardage-aluminium",
+  "essence": "Aspect bois",
+  "alt": "Détail d'angle : bardage aluminium aspect bois gris et brun autour de fenêtres",
+  "largeurs": [
+   400,
+   480
+  ],
+  "ratio": 0.75
  }
 ]

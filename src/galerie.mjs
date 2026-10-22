@@ -33,7 +33,7 @@ export const galerie = (categorie, { titre, intro, legende = "Illustrations" } =
     ${essences.map((e) => `<button type="button" class="filtre" aria-pressed="false" data-filtre="${slug(e)}">${e}</button>`).join("")}
   </div>` : ""}
   <div class="mosaique">
-    ${liste.map((p) => `<figure data-essence="${slug(p.essence || "")}" style="--r:${p.ratio}">${imgPhoto(p.cle, { sizes: "(max-width:560px) 100vw, (max-width:1060px) 50vw, 380px" })}${p.essence ? `<figcaption>${p.essence}</figcaption>` : ""}</figure>`).join("")}
+    ${liste.map((p) => `<figure data-essence="${slug(p.essence || "")}" style="--r:${p.ratio}">${imgPhoto(p.cle, { sizes: "(max-width:560px) 100vw, (max-width:1060px) 50vw, 380px" })}${p.essence && essences.length > 1 ? `<figcaption>${p.essence}</figcaption>` : ""}</figure>`).join("")}
   </div>
   <p class="legende">${legende}.</p>
 </div>`;

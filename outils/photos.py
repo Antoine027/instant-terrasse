@@ -15,7 +15,7 @@ for p in json.load(open(sys.argv[1])):
     im = im.convert("RGB")
     if p.get("recadre"): im = im.crop(tuple(p["recadre"]))
     dest = os.path.join(RACINE, "public", "assets", "img", p["dossier"]); os.makedirs(dest, exist_ok=True)
-    largeurs = [w for w in (600, 1000, 1600) if w < im.width] + ([im.width] if im.width < 1600 else [])
+    largeurs = [w for w in (400, 600, 800, 1000, 1600) if w < im.width] + ([im.width] if im.width < 1600 else [])
     largeurs = sorted(set(largeurs))
     for w in largeurs:
         im.resize((w, round(im.height * w / im.width)), Image.LANCZOS).save(os.path.join(dest, f'{p["cle"]}-{w}.webp'), "WEBP", quality=80, method=6)

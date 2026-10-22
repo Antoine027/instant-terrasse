@@ -600,21 +600,15 @@ const bardageAluminium = {
   title: "Bardage aluminium Lyon : façade sans entretien | Instant Terrasse",
   description: "Bardage aluminium sur mesure à Lyon : lames thermolaquées dans de nombreuses teintes RAL, fixation invisible, sans entretien. Façades, murs, plafonds extérieurs. Devis gratuit.",
   corps: `
-<section class="hero hero-page">
-  <div class="conteneur">
-    <p class="fil"><a href="/">Accueil</a> › Bardage</p>
-    <h1>Bardage aluminium sur mesure à Lyon</h1>
-    <p class="chapo">Des lames en aluminium thermolaqué, clipsées sur une ossature aluminium : une façade contemporaine qui ne se repeint pas, ne se traite pas et garde sa couleur.</p>
-    <p class="actions"><a class="bouton" href="/contact/">Demander un devis gratuit</a> <a class="bouton bouton-clair" href="/bardage-bois-lyon/">Voir le bardage bois</a></p>
-  </div>
-</section>
+${heroPlein({ fil: "Bardage", h1: ["Bardage aluminium", "sur mesure"], kicker: "Façades sans entretien à Lyon et dans sa région", photo: "bardage-alu-vertical-brun-escalier", position: "60% 50%",
+  chapo: "Des lames en aluminium thermolaqué, en teinte unie ou en décor bois très réaliste, clipsées sur une ossature aluminium : une façade qui ne se repeint pas, ne se traite pas et garde sa couleur." })}
 
 <section class="bloc bloc-alt">
   <div class="conteneur">
     <h2>Les points forts</h2>
     <div class="grille grille-3">
       <div class="carte"><h3>Aucun entretien</h3><p>Pas de lasure, pas de saturateur : un nettoyage à l'eau de temps en temps suffit.</p></div>
-      <div class="carte"><h3>La couleur de votre choix</h3><p>Thermolaquage dans de nombreuses teintes RAL, pour s'accorder à vos menuiseries ou trancher avec elles.</p></div>
+      <div class="carte"><h3>Unie ou aspect bois</h3><p>Des teintes RAL unies, ou des décors bois du gris clair au brun chaud, que l'on peut associer sur une même façade.</p></div>
       <div class="carte"><h3>Léger et robuste</h3><p>Un ensemble léger, très stable, qui résiste aux environnements difficiles.</p></div>
       <div class="carte"><h3>Fixation invisible</h3><p>Les lames se clipsent sur les rails : aucune vis en façade, des lignes parfaitement régulières.</p></div>
       <div class="carte"><h3>Design libre</h3><p>Pose verticale ou horizontale, jointive ou à claire-voie, avec des largeurs et des espacements à composer.</p></div>
@@ -623,7 +617,13 @@ const bardageAluminium = {
   </div>
 </section>
 
-<section class="bloc">
+<section id="galerie" class="bloc">
+  <div class="conteneur">
+    ${galerie("bardage-aluminium", { titre: "Bardages aluminium en situation", legende: "Illustrations" })}
+  </div>
+</section>
+
+<section class="bloc bloc-alt">
   <div class="conteneur deux-colonnes">
     <div>
       <h2>Aluminium ou bois ?</h2>

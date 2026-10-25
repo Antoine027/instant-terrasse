@@ -22,7 +22,7 @@ export const UNIVERS = [
     accroche: "Bois, composite, carrelage ou aluminium au sol, bois ou aluminium en façade.",
     groupes: [
       {
-        nom: "Par matériau",
+        nom: "Par matériau", photo: "terrasse-kebony-piscine-debordement",
         pages: [
           ["/terrasse-bois-lyon/", "Terrasse bois", "Bois modifiés et bambou sur structure aluminium, ou bois massifs et exotiques sur structure traditionnelle."],
           ["/terrasse-composite-lyon/", "Terrasse composite", "Sans entretien, posée sur structure aluminium."],
@@ -33,14 +33,14 @@ export const UNIVERS = [
         ],
       },
 {
-        nom: "Bardage",
+        nom: "Bardage", photo: "bardage-thermofrene-maison",
         pages: [
           ["/bardage-bois-lyon/", "Bardage bois", "Accoya, kebony, bambou, thermofrêne, thermopin ou thermo épicéa : un bardage assorti à votre terrasse."],
           ["/bardage-aluminium-lyon/", "Bardage aluminium", "Une façade moderne, sans entretien."],
         ],
       },
       {
-        nom: "Par projet",
+        nom: "Par projet", photo: "ambiance-plage-piscine",
         pages: [
           ["/terrasse-piscine-lyon/", "Terrasse de piscine", "Une plage confortable et sûre autour du bassin."],
           ["/terrasse-balcon-lyon/", "Balcon", "Rénover le sol d'un balcon, sans travaux lourds."],
@@ -50,7 +50,7 @@ export const UNIVERS = [
         ],
       },
       {
-        nom: "Professionnels",
+        nom: "Professionnels", photo: "terrasse-kebony-restaurant",
         pages: [
           ["/terrasse-restaurant-chr-lyon/", "Restaurants, cafés, hôtels", "Des terrasses robustes pour l'accueil du public."],
           ["/terrasse-camping-hpa/", "Campings et hébergements", "Terrasses de mobil-homes, decks et pontons."],

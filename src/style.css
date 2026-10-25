@@ -405,22 +405,28 @@ details[open]>summary.menu-lien::after{transform:translateY(2px) rotate(225deg)}
 .texte-legal p{line-height:1.7}
 .mentions a{color:inherit}
 
-/* ---------- Menu en cascade (Terrasses & bardages) ---------- */
-.sous-menu-cascade{display:block;padding:10px;min-width:250px}
-.cascade{list-style:none;margin:0;padding:0}
-.cascade-item{position:relative}
-.cascade-titre{all:unset;box-sizing:border-box;display:flex;justify-content:space-between;align-items:center;gap:24px;width:100%;padding:12px 16px;border-radius:12px;font:600 .95rem Montserrat,sans-serif;color:var(--texte);cursor:pointer}
-.cascade-titre::after{content:"";width:7px;height:7px;border-top:2px solid currentColor;border-right:2px solid currentColor;transform:rotate(45deg);opacity:.6}
-.cascade-liste{display:none;position:absolute;left:100%;top:-10px;background:#fff;border-radius:20px;box-shadow:var(--ombre);padding:14px 24px;min-width:270px;list-style:none;margin:0 0 0 6px}
-.cascade-liste::before{content:"";position:absolute;left:-16px;top:0;bottom:0;width:16px}
+/* ---------- Menu en cascade (Terrasses & bardages) : un seul panneau ---------- */
+.sous-menu-cascade{display:block;padding:14px;width:740px;min-height:340px}
+.cascade{list-style:none;margin:0;padding:0 14px 0 0;width:220px;border-right:1px solid var(--fond)}
+.cascade-titre{all:unset;box-sizing:border-box;display:flex;justify-content:space-between;align-items:center;width:100%;padding:13px 16px;border-radius:12px;font:600 .95rem Montserrat,sans-serif;color:var(--texte);cursor:pointer;transition:background .15s,color .15s}
+.cascade-titre::after{content:"";width:6px;height:6px;border-top:1.5px solid currentColor;border-right:1.5px solid currentColor;transform:rotate(45deg);opacity:0;transition:opacity .15s}
+.cascade-panneau{display:none;position:absolute;left:262px;top:24px;right:24px;bottom:24px;grid-template-columns:1fr 200px;gap:24px}
+.cascade-panneau .sous-menu-titre{margin-bottom:10px}
+.cascade-liste{list-style:none;margin:0;padding:0}
+.cascade-liste a{display:block;padding:7px 0;text-decoration:none;white-space:nowrap}
+.cascade-liste a:hover,.cascade-liste a[aria-current]{color:var(--accent-texte)}
+.cascade-photo{display:block;border-radius:14px;overflow:hidden;height:100%}
+.cascade-photo img{width:100%;height:100%;object-fit:cover;display:block}
 .cascade-item:hover>.cascade-titre,.cascade-item:focus-within>.cascade-titre{background:var(--fond2);color:var(--accent-texte)}
-.cascade-item:hover>.cascade-liste,.cascade-item:focus-within>.cascade-liste{display:block}
+.cascade-item:hover>.cascade-titre::after,.cascade-item:focus-within>.cascade-titre::after{opacity:.8}
+.cascade-item:hover>.cascade-panneau,.cascade-item:focus-within>.cascade-panneau{display:grid}
 .cascade:not(:hover):not(:focus-within) .cascade-item:first-child>.cascade-titre{background:var(--fond2);color:var(--accent-texte)}
-.cascade:not(:hover):not(:focus-within) .cascade-item:first-child>.cascade-liste{display:block}
+.cascade:not(:hover):not(:focus-within) .cascade-item:first-child>.cascade-titre::after{opacity:.8}
+.cascade:not(:hover):not(:focus-within) .cascade-item:first-child>.cascade-panneau{display:grid}
 @media (max-width:1240px){
-  .sous-menu-cascade{padding:4px 12px 10px}
-  .cascade-titre{padding:8px 0 4px;font-size:.75rem;text-transform:uppercase;letter-spacing:.08em;color:var(--doux);cursor:default;background:none!important;color:var(--doux)!important}
-  .cascade-titre::after{display:none}
-  .cascade-liste,.cascade-item:hover>.cascade-liste{display:block;position:static;box-shadow:none;background:transparent;padding:0 0 6px;margin:0;min-width:0}
-  .cascade-liste::before{display:none}
+  .sous-menu-cascade{width:auto;min-height:0;padding:4px 12px 10px}
+  .cascade{width:auto;border:0;padding:0}
+  .cascade-titre{display:none}
+  .cascade-panneau,.cascade-item:hover>.cascade-panneau{display:block!important;position:static;padding:4px 0 8px}
+  .cascade-photo{display:none}
 }

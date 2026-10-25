@@ -5,7 +5,7 @@ import { join } from "node:path";
 import { SITE, POSE, UNIVERS, AUTRES, PAGES } from "./src/pages.mjs";
 import { CONTENUS } from "./src/contenus.mjs";
 import { carteProduit } from "./src/vignettes.mjs";
-import { SCRIPT_GALERIE } from "./src/galerie.mjs";
+import { SCRIPT_GALERIE, imgPhoto } from "./src/galerie.mjs";
 
 // Les pages rédigées remplacent leur version « en préparation ».
 for (const p of PAGES) if (CONTENUS[p.chemin]) Object.assign(p, CONTENUS[p.chemin], { statut: "redigee" });
@@ -45,7 +45,7 @@ const menuUnivers = (u, actuel) => {
     <details class="menu-deroulant">
       <summary class="menu-lien${dansUnivers ? " actif" : ""}">${u.nom}</summary>
       ${u.cascade ? `<div class="sous-menu sous-menu-cascade">
-        <ul class="cascade">${u.groupes.map((g) => `<li class="cascade-item${g.pages.some(([c]) => c === actuel) ? " cascade-actif" : ""}"><button type="button" class="cascade-titre">${g.nom}</button><ul class="cascade-liste">${g.pages.map((p) => lienMenu(p, actuel)).join("")}</ul></li>`).join("")}</ul>
+        <ul class="cascade">${u.groupes.map((g) => `<li class="cascade-item${g.pages.some(([c]) => c === actuel) ? " cascade-actif" : ""}"><button type="button" class="cascade-titre">${g.nom}</button><div class="cascade-panneau"><div><p class="sous-menu-titre">${g.nom}</p><ul class="cascade-liste">${g.pages.map((p) => lienMenu(p, actuel)).join("")}</ul></div>${g.photo ? `<a class="cascade-photo" href="${g.pages[0][0]}" tabindex="-1" aria-hidden="true">${imgPhoto(g.photo, { sizes: "220px" })}</a>` : ""}</div></li>`).join("")}</ul>
       </div>` : `<div class="sous-menu${u.groupes.length > 2 ? " sous-menu-large" : ""}">
         ${u.groupes.map((g) => `<div><p class="sous-menu-titre">${g.nom}</p><ul>${g.pages.map((p) => lienMenu(p, actuel)).join("")}</ul></div>`).join("")}
       </div>`}

@@ -51,14 +51,6 @@ const menuUnivers = (u, actuel) => {
   </li>`;
 };
 
-// Sous-menu « Galerie » : chaque lien ouvre la galerie sur la bonne catégorie (#filtre).
-const g = (t) => [`/realisations/#${t.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(/[^a-z0-9]+/g, "-")}`, t];
-const MENU_GALERIE = { nom: "Galerie", groupes: [
-  { nom: "Terrasses", pages: [g("Terrasses bois"), g("Terrasses aluminium"), g("Terrasses composite"), g("Terrasses carrelage"), g("Terrasses sur pilotis"), g("Structures")] },
-  { nom: "Abris et façades", pages: [g("Pergolas"), g("Carports"), g("Stores bannes"), g("Bardage bois"), g("Bardage aluminium"), g("Garde-corps")] },
-  { nom: "Tout voir", pied: true, pages: [["/realisations/", "Toutes les photos"]] },
-] };
-
 const entete = (actuel) => `
 <header class="entete">
   <div class="conteneur entete-in">
@@ -69,7 +61,7 @@ const entete = (actuel) => `
     <nav class="menu" aria-label="Navigation principale">
       <ul class="menu-liste">
         ${UNIVERS.map((u) => menuUnivers(u, actuel)).join("")}
-        ${menuUnivers(MENU_GALERIE, actuel).replace('class="menu-lien"', `class="menu-lien${actuel === "/realisations/" ? " actif" : ""}"`)}
+        <li class="menu-item"><a class="menu-lien${actuel === "/realisations/" ? " actif" : ""}" href="/realisations/">Galerie</a></li>
         <li class="menu-item"><a class="menu-lien" href="/#methode">Notre méthode</a></li>
       </ul>
     </nav>

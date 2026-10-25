@@ -62,6 +62,7 @@ const entete = (actuel) => `
       <ul class="menu-liste">
         ${UNIVERS.map((u) => menuUnivers(u, actuel)).join("")}
         <li class="menu-item"><a class="menu-lien${actuel === "/realisations/" ? " actif" : ""}" href="/realisations/">Réalisations</a></li>
+        <li class="menu-item"><a class="menu-lien" href="/#methode">Notre méthode</a></li>
       </ul>
     </nav>
     <a class="bouton bouton-petit entete-cta" href="/contact/">Devis gratuit</a>

@@ -17,8 +17,8 @@ export const POSE =
 export const UNIVERS = [
   {
     cle: "terrasses",
-    nom: "Terrasses",
-    accroche: "Bois, composite, carrelage ou aluminium, sur la structure adaptée à votre terrain.",
+    nom: "Terrasses & bardages",
+    accroche: "Bois, composite, carrelage ou aluminium au sol, bois ou aluminium en façade.",
     groupes: [
       {
         nom: "Par matériau",
@@ -29,6 +29,13 @@ export const UNIVERS = [
           ["/terrasse-aluminium-lyon/", "Terrasse en lames aluminium", "Imputrescible, stable, en coloris unis ou aspect bois."],
           ["/structure-terrasse-lyon/", "Nos structures", "Traditionnelle, aluminium ou sur plots : la base qui fait durer une terrasse."],
           ["/nos-terrasses/", "Comparatif des matériaux", "Bois, composite, carrelage ou aluminium : lequel choisir ?"],
+        ],
+      },
+{
+        nom: "Bardage",
+        pages: [
+          ["/bardage-bois-lyon/", "Bardage bois", "Accoya, kebony, bambou, thermofrêne, thermopin ou thermo épicéa : un bardage assorti à votre terrasse."],
+          ["/bardage-aluminium-lyon/", "Bardage aluminium", "Une façade moderne, sans entretien."],
         ],
       },
       {
@@ -47,13 +54,13 @@ export const UNIVERS = [
           ["/terrasse-restaurant-chr-lyon/", "Restaurants, cafés, hôtels", "Des terrasses robustes pour l'accueil du public."],
           ["/terrasse-camping-hpa/", "Campings et hébergements", "Terrasses de mobil-homes, decks et pontons."],
         ],
-      },
+      }
     ],
   },
   {
     cle: "pergolas",
-    nom: "Pergolas & carports",
-    accroche: "Pergolas aluminium et carports sur mesure pour profiter de l'extérieur en toute saison.",
+    nom: "Pergolas & stores",
+    accroche: "Pergolas, stores bannes et carports pour profiter de l'extérieur en toute saison.",
     groupes: [
       {
         nom: "Pergolas",
@@ -68,6 +75,7 @@ export const UNIVERS = [
         nom: "Carports",
         pages: [["/carport-lyon/", "Carport", "Un abri voiture élégant, sans construire de garage."]],
       },
+      { nom: "Stores bannes", pages: [["/store-banne-lyon/", "Store banne", "Coffre intégral, motorisation, capteurs vent et soleil."]] }
     ],
   },
   {
@@ -75,29 +83,7 @@ export const UNIVERS = [
     nom: "Garde-corps",
     accroche: "Garde-corps aluminium pour terrasses, balcons et escaliers, sur mesure.",
     groupes: [
-      { nom: "Garde-corps", pages: [["/garde-corps-aluminium-lyon/", "Garde-corps aluminium", "Barreaudage, verre ou tôle : sécurité et style, sans entretien."]] },
-    ],
-  },
-  {
-    cle: "stores",
-    nom: "Stores bannes",
-    accroche: "De l'ombre à la demande au-dessus de votre terrasse.",
-    groupes: [
-      { nom: "Stores bannes", pages: [["/store-banne-lyon/", "Store banne", "Coffre intégral, motorisation, capteurs vent et soleil."]] },
-    ],
-  },
-  {
-    cle: "bardage",
-    nom: "Bardage",
-    accroche: "Habiller une façade, un mur ou un abri en bois ou en aluminium.",
-    groupes: [
-      {
-        nom: "Bardage",
-        pages: [
-          ["/bardage-bois-lyon/", "Bardage bois", "Accoya, kebony, bambou, thermofrêne, thermopin ou thermo épicéa : un bardage assorti à votre terrasse."],
-          ["/bardage-aluminium-lyon/", "Bardage aluminium", "Une façade moderne, sans entretien."],
-        ],
-      },
+      { nom: "Garde-corps", pages: [["/garde-corps-aluminium-lyon/", "Garde-corps aluminium", "Barreaudage, verre ou tôle : sécurité et style, sans entretien."]] }
     ],
   },
 ];
@@ -167,38 +153,58 @@ const etapes = [
 
 export const TRIO = `<ul class="trio"><li><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V8l7-5 7 5v13"/><path d="M9 21v-6h6v6"/></svg><span>Visite chez vous, avec les échantillons</span></li><li><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 3 7l9 5 9-5-9-5z"/><path d="m3 17 9 5 9-5"/><path d="m3 12 9 5 9-5"/></svg><span>Plan 3D de votre projet offert</span></li><li><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg><span>Pose assurée en garantie décennale</span></li></ul>`;
 
+const PIECES = [
+  { etiquette: "Le sol", titre: "Une terrasse qui dure", texte: "Bois, composite, carrelage ou aluminium, posés sur une structure aluminium garantie 20 ans.", photo: "terrasse-thermofrene-bord-de-loire",
+    liens: [["/terrasse-bois-lyon/", "Terrasse bois"], ["/terrasse-composite-lyon/", "Composite"], ["/terrasse-carrelage-lyon/", "Carrelage"], ["/terrasse-aluminium-lyon/", "Lames aluminium"]] },
+  { etiquette: "Le plafond", titre: "De l'ombre et un abri", texte: "Une pergola, un store banne ou un carport pour vivre dehors du printemps à l'automne.", photo: "pergola-toile-retractable-facade",
+    liens: [["/pergola-bioclimatique-lyon/", "Pergola bioclimatique"], ["/pergola-toile-retractable-lyon/", "Toile rétractable"], ["/store-banne-lyon/", "Store banne"], ["/carport-lyon/", "Carport"]] },
+  { etiquette: "Les murs", titre: "Sécuriser et habiller", texte: "Un garde-corps qui garde la vue, un bardage qui donne du caractère à la façade.", photo: "bardage-thermo-epicea-pilotis",
+    liens: [["/garde-corps-aluminium-lyon/", "Garde-corps"], ["/bardage-bois-lyon/", "Bardage bois"], ["/bardage-aluminium-lyon/", "Bardage aluminium"]] },
+];
+
 const accueil = `
-<section class="hero-plein">
-  <img class="h-img" src="/assets/img/hero/terrasse-piscine-vue-1600.webp" srcset="/assets/img/hero/terrasse-piscine-vue-600.webp 600w, /assets/img/hero/terrasse-piscine-vue-800.webp 800w, /assets/img/hero/terrasse-piscine-vue-1200.webp 1200w, /assets/img/hero/terrasse-piscine-vue-1600.webp 1600w, /assets/img/hero/terrasse-piscine-vue-1920.webp 1920w, /assets/img/hero/terrasse-piscine-vue-2560.webp 2560w" sizes="(max-width:700px) calc(100vw - 32px), 100vw" width="2560" height="1440" alt="Plage de piscine en lames claires avec salon de jardin, vue sur la baie" fetchpriority="high" decoding="async">
+<section class="hero-plein hero-slogan">
+  ${imgPhoto("pergola-bioclimatique-salon-piscine", { sizes: "(max-width:700px) calc(100vw - 32px), 100vw", prioritaire: true, classe: "h-img" })}
   <div class="conteneur h-txt">
-    <p class="kicker">Terrasses, pergolas et garde-corps à Lyon et dans sa région</p>
-    <h1><span class="fin">Votre terrasse</span> <span class="fort">sur mesure</span></h1>
-    <p class="chapo">Le meilleur produit au meilleur tarif, avec un devis transparent. Nous venons chez vous avec les échantillons et nous restons votre seul interlocuteur jusqu'à la fin du chantier.</p>
+    <p class="kicker">Terrasses et pergolas sur mesure à Lyon</p>
+    <h1><span class="fin">Créez la 5<sup>e</sup> pièce</span> <span class="fort">de votre maison</span></h1>
+    <p class="chapo">Un sol, un plafond, des murs : nous concevons votre terrasse comme une vraie pièce à vivre, ouverte sur le jardin.</p>
     <p class="actions">
       <a class="bouton" href="/contact/">Demander une visite gratuite</a>
-      <a class="bouton bouton-blanc" href="tel:${SITE.telLien}"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>${SITE.tel}</a>
+      <a class="bouton bouton-blanc" href="#piece">Découvrir</a>
     </p>
     ${TRIO}
   </div>
 </section>
 
-<section class="bloc">
+<section id="piece" class="bloc">
   <div class="conteneur">
-    <h2>Tout votre extérieur, pensé ensemble</h2>
-    <div class="grille grille-univers">
-      ${UNIVERS.map((u) => {
-        const premiere = u.groupes[0].pages[0][0];
-        const lien = u.groupes.length === 1 && u.groupes[0].pages.length === 1 ? premiere : `#${u.cle}`;
-        return carteProduit(lien, u.nom, u.accroche);
-      }).join("")}
+    <p class="sous-titre">Votre 5<sup>e</sup> pièce</p>
+    <h2>Le sol, le plafond, les murs</h2>
+    <p class="chapo">Une terrasse se pense comme une pièce : on choisit le sol, on décide de ce qui la couvre et de ce qui la borde. Nous étudions l'ensemble, pour que tout s'accorde.</p>
+    <div class="pieces">
+      ${PIECES.map((x) => `<article class="piece">
+        <div class="piece-photo">${imgPhoto(x.photo, { sizes: "(max-width:900px) 92vw, 380px" })}<span class="piece-etiquette">${x.etiquette}</span></div>
+        <h3>${x.titre}</h3><p>${x.texte}</p>
+        <ul class="piece-liens">${x.liens.map(([c, t]) => `<li><a href="${c}">${t}</a></li>`).join("")}</ul>
+      </article>`).join("")}
     </div>
   </div>
 </section>
 
-<section class="bloc bloc-alt">
-  <div class="conteneur">
-    <h2>Nos engagements</h2>
-    <div class="grille engagements">${ENGAGEMENTS.map(([t, x]) => `<div class="carte"><h3>${t}</h3><p>${x}</p></div>`).join("")}</div>
+<section id="methode" class="bloc bloc-alt">
+  <div class="conteneur deux-colonnes">
+    <div>
+      <p class="sous-titre">Notre méthode</p>
+      <h2>Un seul interlocuteur, du premier rendez-vous à la fin du chantier</h2>
+      <p>${POSE}</p>
+      <ul class="puces">
+        <li><strong>Des prix transparents</strong> : le meilleur produit au meilleur tarif, et un devis détaillé.</li>
+        <li><strong>Structure aluminium garantie 20 ans.</strong></li>
+        <li><strong>Pose assurée en garantie décennale.</strong></li>
+      </ul>
+    </div>
+    <ol class="etapes etapes-verticales">${etapes.map(([t, x]) => `<li><h3>${t}</h3><p>${x}</p></li>`).join("")}</ol>
   </div>
 </section>
 
@@ -213,27 +219,7 @@ const accueil = `
   </div>
 </section>
 
-<section class="bloc bloc-alt">
-  <div class="conteneur deux-colonnes">
-    <div>
-      <h2>Un seul interlocuteur, du premier rendez-vous à la fin du chantier</h2>
-      <p>${POSE}</p>
-      <p>Une terrasse et une pergola se pensent ensemble : hauteurs, fixations, écoulement des eaux, garde-corps. En réunissant tout le projet, on évite les mauvaises surprises entre corps de métier.</p>
-    </div>
-    <ol class="etapes etapes-verticales">${etapes.map(([t, x]) => `<li><h3>${t}</h3><p>${x}</p></li>`).join("")}</ol>
-  </div>
-</section>
-
-${UNIVERS.filter((u) => u.groupes.some((g) => g.pages.length > 1) || u.groupes.length > 1).map((u) => `
-<section id="${u.cle}" class="bloc">
-  <div class="conteneur">
-    <h2>${u.nom}</h2>
-    <p class="chapo">${u.accroche}</p>
-    ${u.groupes.map((g) => `${u.groupes.length > 1 ? `<h3 class="sous-titre">${g.nom}</h3>` : ""}<div class="grille grille-3">${g.pages.map(carteLien).join("")}</div>`).join("")}
-  </div>
-</section>`).join("")}
-
-<section id="faq" class="bloc bloc-alt">
+<section id="faq" class="bloc">
   <div class="conteneur conteneur-etroit">
     <h2>Vos questions</h2>
     ${FAQ.map(([q, r]) => `<details class="faq"><summary>${q}</summary><div>${r}</div></details>`).join("")}
@@ -366,7 +352,7 @@ const aPropos = `
     <div class="grille engagements">${ENGAGEMENTS.map(([t, x]) => `<div class="carte"><h3>${t}</h3><p>${x}</p></div>`).join("")}</div>
   </div>
 </section>
-<section class="bloc bloc-alt">
+<section id="methode" class="bloc bloc-alt">
   <div class="conteneur deux-colonnes">
     <div>
       <h2>Comment se déroule un projet</h2>
@@ -411,10 +397,9 @@ const pagesPlan = [
 export const PAGES = [
   {
     chemin: "/",
-    title: "Terrasse sur mesure Lyon | Instant Terrasse",
-    description: "Terrasses bois, composite, carrelage et aluminium, pergolas, carports, garde-corps, stores bannes et bardage sur mesure à Lyon. Devis gratuit.",
+    title: "Terrasse et pergola sur mesure à Lyon | Instant Terrasse",
+    description: "Créez la 5e pièce de votre maison : terrasses bois, composite, carrelage ou aluminium, pergolas, stores, garde-corps et bardages sur mesure à Lyon. Plan 3D offert.",
     corps: accueil,
-    head: `<link rel="preload" as="image" imagesrcset="/assets/img/hero/terrasse-piscine-vue-600.webp 600w, /assets/img/hero/terrasse-piscine-vue-800.webp 800w, /assets/img/hero/terrasse-piscine-vue-1200.webp 1200w, /assets/img/hero/terrasse-piscine-vue-1600.webp 1600w, /assets/img/hero/terrasse-piscine-vue-1920.webp 1920w, /assets/img/hero/terrasse-piscine-vue-2560.webp 2560w" imagesizes="(max-width:700px) calc(100vw - 32px), 100vw" fetchpriority="high">`,
     jsonld: {
       "@context": "https://schema.org", "@type": "HomeAndConstructionBusiness", name: "Instant Terrasse", url: SITE.url,
       telephone: "+33482531874", logo: `${SITE.url}/assets/img/logo-instant-terrasse-360.webp`,

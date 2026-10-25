@@ -390,6 +390,36 @@ const aPropos = `
 const merci = `<section class="hero hero-page"><div class="conteneur conteneur-etroit"><h1>Merci, votre demande est bien partie</h1><p class="chapo">Nous vous recontactons rapidement. Si vous avez des photos de votre extérieur, envoyez-les-nous sur WhatsApp : elles nous aident à préparer la visite.</p><p class="actions"><a class="bouton" href="${SITE.whatsapp}">Envoyer des photos sur WhatsApp</a> <a class="bouton bouton-clair" href="/">Retour à l'accueil</a></p></div></section>`;
 const erreur = `<section class="hero hero-page"><div class="conteneur conteneur-etroit"><h1>Votre demande n'a pas pu être envoyée</h1><p class="chapo">Vérifiez que le nom, le téléphone et l'e-mail sont bien remplis, ou contactez-nous directement.</p><p class="actions"><a class="bouton" href="tel:${SITE.telLien}">${SITE.tel}</a> <a class="bouton bouton-clair" href="/contact/">Réessayer</a></p></div></section>`;
 
+// ---------- Pages légales ----------
+const SOCIETE = { nom: "ESCOM HABITAT", forme: "SARL", capital: "à compléter", siret: "106 406 465 00018", rcs: "RCS Lyon 106 406 465", tva: "FR70 106 406 465", adresse: "8 avenue Général Leclerc, 69140 Rillieux-la-Pape", directeur: "Antoine Escolle" };
+const pageTexte = (h1, contenu) => `<section class="hero hero-page"><div class="conteneur conteneur-etroit"><p class="fil"><a href="/">Accueil</a></p><h1>${h1}</h1></div></section><section class="bloc"><div class="conteneur conteneur-etroit texte-legal">${contenu}</div></section>`;
+const mentions = pageTexte("Mentions légales", `
+  <h2>Éditeur du site</h2>
+  <p>Le site instantterrasse.com est édité par ${SOCIETE.nom}, ${SOCIETE.forme} au capital de ${SOCIETE.capital}, dont Instant Terrasse est le nom commercial.<br>
+  Siège social : ${SOCIETE.adresse}<br>
+  SIRET : ${SOCIETE.siret} — ${SOCIETE.rcs}<br>
+  TVA intracommunautaire : ${SOCIETE.tva}<br>
+  Téléphone : <a href="tel:${SITE.telLien}">${SITE.tel}</a></p>
+  <p>Directeur de la publication : ${SOCIETE.directeur}.</p>
+  <h2>Hébergement</h2>
+  <p>Vercel Inc., 440 N Barranca Avenue #4133, Covina, CA 91723, États-Unis — vercel.com.</p>
+  <h2>Propriété intellectuelle</h2>
+  <p>Les textes, le logo et la mise en page de ce site appartiennent à ${SOCIETE.nom}. Certaines photos sont des illustrations fournies par nos fournisseurs et restent leur propriété. Toute reproduction sans autorisation est interdite.</p>
+  <h2>Données personnelles</h2>
+  <p>Voir notre <a href="/confidentialite/">politique de confidentialité</a>.</p>`);
+const confidentialite = pageTexte("Confidentialité et cookies", `
+  <h2>Qui traite vos données ?</h2>
+  <p>${SOCIETE.nom} (Instant Terrasse), ${SOCIETE.adresse}, est responsable du traitement des données collectées sur ce site.</p>
+  <h2>Quelles données, et pourquoi ?</h2>
+  <p>Le formulaire de contact recueille votre nom, votre téléphone, votre e-mail, votre code postal, le type de projet et votre message. Ces informations servent uniquement à vous répondre, à préparer la visite et à établir votre devis. Elles ne sont ni vendues ni cédées.</p>
+  <p>Le message est transmis par e-mail grâce au service Brevo (Sendinblue SAS, France).</p>
+  <h2>Combien de temps ?</h2>
+  <p>Vos données sont conservées le temps de traiter votre demande puis, sans suite de votre part, trois ans au plus après notre dernier échange. Si vous devenez client, elles sont conservées le temps de la relation commerciale et des obligations légales.</p>
+  <h2>Vos droits</h2>
+  <p>Vous pouvez demander à consulter, corriger ou supprimer vos données, ou vous opposer à leur utilisation, en nous écrivant à l'adresse du siège ou par téléphone au <a href="tel:${SITE.telLien}">${SITE.tel}</a>. Vous pouvez aussi adresser une réclamation à la CNIL (cnil.fr).</p>
+  <h2>Cookies</h2>
+  <p>Ce site ne dépose aucun cookie publicitaire ni de mesure d'audience. Aucun bandeau de consentement n'est donc nécessaire. Les liens vers Google Maps ou WhatsApp vous conduisent sur des sites tiers, soumis à leurs propres règles.</p>`);
+
 // Toutes les pages produits / projets / annexes, générées depuis le plan.
 const pagesPlan = [
   ...UNIVERS.flatMap((u) => u.groupes.flatMap((g) => g.pages.map((p) => ({ p, u })))),
@@ -421,5 +451,7 @@ export const PAGES = [
   },
   ...pagesPlan.map((p) => p.chemin === "/quisommesnous/" ? { ...p, title: "À propos : Antoine Escolle et Instant Terrasse, Lyon", description: "Instant Terrasse, créée par Antoine Escolle : pergolas, stores et garde-corps depuis 2017, terrasses depuis 2022. Le meilleur produit au meilleur tarif, échantillons à domicile, plan 3D offert.", corps: aPropos, statut: "redigee" } : p).map((p) => p.chemin === "/partenaires/" ? { ...p, title: "Partenaires : Horizon Fenêtre et ESCOM HABITAT | Instant Terrasse", description: "Horizon Fenêtre, menuiseries sur mesure à Lyon, et ESCOM HABITAT, la société qui réunit Instant Terrasse et Horizon Fenêtre.", corps: partenaires, statut: "redigee" } : p).map((p) => p.chemin === "/contact/" ? { ...p, title: "Devis gratuit terrasse et pergola Lyon | Instant Terrasse", description: "Demandez votre devis gratuit pour une terrasse, une pergola, un garde-corps, un store banne ou un bardage à Lyon et dans sa région.", corps: contact, statut: "redigee" } : p),
   { chemin: "/merci/", title: "Merci | Instant Terrasse", description: "Votre demande a bien été envoyée.", corps: merci, horsPlan: true },
+  { chemin: "/mentions-legales/", title: "Mentions légales | Instant Terrasse", description: "Mentions légales du site Instant Terrasse, marque d'ESCOM HABITAT à Rillieux-la-Pape.", corps: mentions, horsPlan: true },
+  { chemin: "/confidentialite/", title: "Confidentialité et cookies | Instant Terrasse", description: "Comment Instant Terrasse utilise les données du formulaire de contact, et l'absence de cookies publicitaires.", corps: confidentialite, horsPlan: true },
   { chemin: "/erreur-envoi/", title: "Envoi impossible | Instant Terrasse", description: "Votre demande n'a pas pu être envoyée.", corps: erreur, horsPlan: true },
 ];

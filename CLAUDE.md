@@ -12,9 +12,10 @@ Remplaçant du site WordPress/Elementor instantterrasse.com. Générateur Node s
 - Toute ancienne URL supprimée ou renommée reçoit une redirection 301 dans vercel.json.
 - Inventaire du WordPress au 21/10/2026 : 21 pages + 6 articles (voir sitemap Rank Math).
 - Domaine principal SANS www (https://instantterrasse.com, comme le WordPress indexé) : SITE.url, canonical et sitemap l'utilisent ; dans Vercel, www doit rediriger vers la version sans www.
-- Redirections 301 des anciennes URL déjà en place dans vercel.json (articles, doublons, /category/, /form/). Reste à traiter : /politique-de-cookies-ue/ (vers la future page cookies).
+- Redirections 301 des anciennes URL déjà en place dans vercel.json (articles, doublons, /category/, /form/). /politique-de-cookies-ue/ redirige vers /confidentialite/.
 - Sitemap (dist/sitemap.xml, toujours généré) : seulement les pages rédigées ; les pages « en préparation » et techniques (merci, erreur) sont exclues et passent en noindex, follow une fois en ligne.
-- Pages à fort trafic encore en préparation, à rédiger avant la bascule : /nos-terrasses/ (position 3,5), /terrasse-sur-plots-lyon/, /terrasse-balcon-lyon/, /terrasse-piscine-lyon/, /toit-terrasse-lyon/, /terrasse-rillieux-la-pape/, /terrasse-lyon/, /realisations/.
+- Pages à fort trafic encore en préparation, à rédiger avant la bascule : /terrasse-rillieux-la-pape/, /terrasse-lyon/ (Antoine a des photos particulières), /realisations/.
+- Pages légales : /mentions-legales/ et /confidentialite/ (site sans cookie). Capital social d'ESCOM HABITAT à compléter (constante SOCIETE dans src/pages.mjs).
 
 ## Contenu
 - Gamme (validée par Antoine le 21/10/2026) :
@@ -26,6 +27,7 @@ Remplaçant du site WordPress/Elementor instantterrasse.com. Générateur Node s
 - Essences de bois (liste d'Antoine, 21/10/2026) :
   - Sur structure aluminium : thermopin, bambou moso X-treme, bambou moso N-Durance, thermofrêne, accoya naturel, accoya gris, kebony.
   - Sur structure traditionnelle, selon disponibilité : pin, mélèze, garapa, ipé, cumaru, itauba, jatoba, douglas.
+- Teintes des lames aluminium (25/10/2026) : blanc veiné, teck vieilli, gris uni, simili bois (« simili bis » dans le message, à confirmer), bois de grange, teck.
 - Bardage bois (21/10/2026) : accoya gris, accoya naturel, kebony, bambou moso X-treme, thermofrêne, thermopin clear (sans nœuds), thermo épicéa.
 - Les photos des essences en lames de terrasse ne doivent pas illustrer le bardage (produits différents) : attendre les photos de bardage.
 - Marques fournisseurs : rester discret, ne pas les citer. Leurs photos sont autorisées sur le site, mais comme illustrations produit : ne jamais les présenter comme des chantiers Instant Terrasse (pas dans « Réalisations », pas de légende de type « notre chantier à … »).

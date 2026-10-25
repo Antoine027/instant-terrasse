@@ -84,7 +84,7 @@ const pied = () => `
       <ul>${[...UNIVERS.slice(2).flatMap((u) => u.groupes.flatMap((g) => g.pages)), ...AUTRES].map(([c, t]) => `<li><a href="${c}">${t}</a></li>`).join("")}</ul>
     </div>
   </div>
-  <p class="conteneur mentions">© ${new Date().getFullYear()} Instant Terrasse — une marque d'ESCOM HABITAT</p>
+  <p class="conteneur mentions">© ${new Date().getFullYear()} Instant Terrasse — une marque d'ESCOM HABITAT · <a href="/mentions-legales/">Mentions légales</a> · <a href="/confidentialite/">Confidentialité et cookies</a></p>
 </footer>`;
 
 // ---------- Page « en préparation » ----------

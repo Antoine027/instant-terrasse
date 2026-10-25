@@ -393,3 +393,14 @@ details[open]>summary.menu-lien::after{transform:translateY(2px) rotate(225deg)}
 .nuancier figcaption{margin-top:10px;font:600 .9rem Montserrat,sans-serif}
 @media (max-width:900px){.nuancier{grid-template-columns:repeat(3,1fr)}}
 @media (max-width:480px){.nuancier{grid-template-columns:repeat(2,1fr)}}
+
+.comparatif-4{min-width:820px}
+.comparatif-4 td{width:19.5%;color:var(--texte)}
+.comparatif-4 tbody th{width:22%}
+.grille-4{grid-template-columns:repeat(4,1fr)}
+@media (max-width:1000px){.grille-4{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:560px){.grille-4{grid-template-columns:1fr}}
+
+.texte-legal h2{font-size:1.25rem;margin:28px 0 8px}
+.texte-legal p{line-height:1.7}
+.mentions a{color:inherit}

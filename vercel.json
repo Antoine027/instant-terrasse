@@ -63,6 +63,11 @@
       "source": "/form/:slug*",
       "destination": "/contact/",
       "statusCode": 301
+    },
+    {
+      "source": "/politique-de-cookies-ue/",
+      "destination": "/confidentialite/",
+      "statusCode": 301
     }
   ],
   "headers": [

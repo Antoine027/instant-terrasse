@@ -2492,5 +2492,19 @@
    799
   ],
   "ratio": 1.3339
+ },
+ {
+  "cle": "pilotis-garde-corps-verre-salon",
+  "dossier": "terrasses",
+  "categorie": "pilotis-hero",
+  "alt": "Terrasse surélevée sur poteaux avec garde-corps en verre, salon et table à manger face à la végétation",
+  "largeurs": [
+   400,
+   600,
+   800,
+   1000,
+   1600
+  ],
+  "ratio": 1.7768
  }
 ]

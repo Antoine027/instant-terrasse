@@ -322,7 +322,11 @@ details[open]>summary.menu-lien::after{transform:translateY(2px) rotate(225deg)}
 .hero-slogan h1{font-size:clamp(2.4rem,1rem + 3.9vw,4.6rem);max-width:none}
 .hero-slogan h1 span{white-space:nowrap}
 @media (max-width:420px){.hero-slogan h1{font-size:2.2rem}}
-@media (min-width:1101px){.hero-slogan::before{background:linear-gradient(90deg,rgba(240,232,218,.97) 0%,rgba(240,232,218,.93) 38%,rgba(240,232,218,.72) 51%,rgba(240,232,218,0) 70%)}}
+@media (min-width:1101px){
+  .hero-slogan{--bord:max(16px,calc((100vw - 1180px) / 2))}
+  .hero-slogan::before{background:linear-gradient(90deg,rgba(240,232,218,.35) 0,rgba(240,232,218,.8) calc(var(--bord) + 10px),rgba(240,232,218,.74) calc(var(--bord) + 470px),rgba(240,232,218,.35) calc(var(--bord) + 640px),rgba(240,232,218,0) calc(var(--bord) + 780px))}
+  .hero-slogan h1,.hero-slogan .chapo{text-shadow:0 0 24px rgba(240,232,218,.9),0 0 6px rgba(240,232,218,.7)}
+}
 .hero-slogan h1 sup{font-size:.45em;vertical-align:super;line-height:0}
 .hero-slogan .h-img{object-position:62% 55%}
 .sous-titre sup,.bloc h2 sup{font-size:.6em}

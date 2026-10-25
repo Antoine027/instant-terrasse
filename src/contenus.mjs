@@ -1,7 +1,7 @@
 // Contenus rédigés des pages. Une page présente ici remplace sa version « en préparation ».
 // Règles : pas de chiffre, garantie, certification ou chantier inventé ; pas de nom de fournisseur.
 import { SITE, POSE, TRIO } from "./pages.mjs";
-import { galerie, imgPhoto } from "./galerie.mjs";
+import { galerie, imgPhoto, PHOTOS } from "./galerie.mjs";
 import { carteProduit } from "./vignettes.mjs";
 
 const img = (nom, alt, ratio) =>
@@ -343,7 +343,7 @@ ${cta("Un projet de bardage ?")}`,
 };
 
 // ---------- Gabarit de page produit (pergolas, etc.) ----------
-const pageProduit = ({ introGalerie = "", fil, h1, kicker, position, chapo, photo, atouts, galerieCat, titreGalerie, details, voisins, ctaTitre, complement = "Une pergola se pense avec la terrasse qu'elle couvre : hauteurs, fixations, écoulement des eaux. Nous pouvons étudier les deux ensemble.", titreVoisins = "Les autres solutions" }) => `
+const pageProduit = ({ extra = "", introGalerie = "", fil, h1, kicker, position, chapo, photo, atouts, galerieCat, titreGalerie, details, voisins, ctaTitre, complement = "Une pergola se pense avec la terrasse qu'elle couvre : hauteurs, fixations, écoulement des eaux. Nous pouvons étudier les deux ensemble.", titreVoisins = "Les autres solutions" }) => `
 ${heroPlein({ fil, h1, kicker, chapo, photo, position })}
 
 <section class="bloc bloc-alt">
@@ -352,7 +352,7 @@ ${heroPlein({ fil, h1, kicker, chapo, photo, position })}
     <div class="grille grille-3">${atouts.map(([t, x]) => `<div class="carte"><h3>${t}</h3><p>${x}</p></div>`).join("")}</div>
   </div>
 </section>
-
+${extra}
 <section id="galerie" class="bloc">
   <div class="conteneur">
     ${galerie(galerieCat, { titre: titreGalerie, intro: introGalerie, legende: "Illustrations" })}
@@ -517,6 +517,13 @@ const terrasseAluminium = {
       ["Idéal autour des piscines", "Une surface saine au contact de l'eau, sans risque d'écharde pieds nus."],
       ["Sur structure aluminium", "Posées sur notre <a href=\"/structure-terrasse-lyon/\">ossature aluminium</a> et plots réglables, pour une terrasse parfaitement plane."],
     ],
+    extra: `<section id="teintes" class="bloc">
+  <div class="conteneur">
+    <h2>Les teintes</h2>
+    <p class="chapo">Des décors bois du plus clair au plus chaud, ou un gris uni pour un style épuré. Vous voyez les échantillons en vrai, chez vous, lors du rendez-vous.</p>
+    <div class="nuancier">${PHOTOS.filter((p) => p.categorie === "teinte-alu").map((p) => `<figure>${imgPhoto(p.cle, { sizes: "(max-width:560px) 45vw, 180px" })}<figcaption>${p.essence}</figcaption></figure>`).join("")}</div>
+  </div>
+</section>`,
     galerieCat: "terrasse-aluminium",
     titreGalerie: "Terrasses en lames aluminium en situation",
     introGalerie: "Filtrez par famille de teintes.",

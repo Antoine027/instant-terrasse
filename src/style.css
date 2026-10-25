@@ -386,3 +386,10 @@ details[open]>summary.menu-lien::after{transform:translateY(2px) rotate(225deg)}
 .v-legende{position:absolute;bottom:18px;left:50%;transform:translateX(-50%);margin:0;font:600 .95rem Montserrat,sans-serif}
 .v-compte{position:absolute;top:30px;left:24px;font:.9rem Lato,sans-serif;opacity:.8}
 @media (max-width:760px){.visionneuse img{max-width:100vw;max-height:calc(100vh - 160px);border-radius:0}.v-prec,.v-suiv{top:auto;bottom:16px;transform:none}.v-legende{bottom:34px}}
+
+.nuancier{display:grid;grid-template-columns:repeat(6,1fr);gap:16px;margin-top:22px}
+.nuancier figure{margin:0;background:#fff;border-radius:var(--rayon);padding:8px 8px 12px;box-shadow:0 4px 16px rgba(47,52,55,.07);text-align:center}
+.nuancier img{display:block;width:100%;height:auto;aspect-ratio:1;object-fit:cover;border-radius:10px}
+.nuancier figcaption{margin-top:10px;font:600 .9rem Montserrat,sans-serif}
+@media (max-width:900px){.nuancier{grid-template-columns:repeat(3,1fr)}}
+@media (max-width:480px){.nuancier{grid-template-columns:repeat(2,1fr)}}

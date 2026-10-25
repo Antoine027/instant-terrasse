@@ -30,19 +30,6 @@
   "ratio": 0.7497
  },
  {
-  "cle": "terrasse-accoya-gris-marches",
-  "dossier": "bois",
-  "categorie": "terrasse-bois",
-  "essence": "Accoya gris",
-  "alt": "Marches et banc intégré en accoya gris",
-  "largeurs": [
-   400,
-   600,
-   720
-  ],
-  "ratio": 1.3333
- },
- {
   "cle": "terrasse-accoya-naturel-piscine-vue-haut",
   "dossier": "bois",
   "categorie": "terrasse-bois",

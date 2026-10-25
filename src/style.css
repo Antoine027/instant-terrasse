@@ -339,7 +339,7 @@ details[open]>summary.menu-lien::after{transform:translateY(2px) rotate(225deg)}
 .pieces-suite a{color:var(--texte);font-weight:700}
 .piece-photo{position:relative;border-radius:var(--rayon);aspect-ratio:4/3;background:var(--fond2)}
 .piece-photo>img{border-radius:var(--rayon)}
-.pieces .piece h3{margin-top:46px}
+.pieces .piece h3{margin-top:22px;padding-right:120px}
 .piece-photo img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s ease}
 .piece:hover .piece-photo img{transform:scale(1.03)}
 .piece-etiquette{position:absolute;left:16px;top:16px;background:rgba(255,255,255,.92);border-radius:999px;padding:7px 14px;font:700 .85rem Montserrat,sans-serif;color:var(--texte)}
@@ -349,11 +349,11 @@ details[open]>summary.menu-lien::after{transform:translateY(2px) rotate(225deg)}
 @media (max-width:900px){.pieces{grid-template-columns:1fr;gap:40px}.piece-photo{aspect-ratio:4/3}}
 
 .piece-sous{font:700 .8rem Montserrat,sans-serif!important;text-transform:uppercase;letter-spacing:.08em;color:var(--accent-texte)!important;margin:-2px 0 8px!important}
-.piece-encart{position:absolute;left:-18px;bottom:-30px;width:126px;z-index:2;border:3px solid #fff;background:#fff;border-radius:12px;overflow:hidden;text-decoration:none;box-shadow:0 8px 22px -8px rgba(0,0,0,.45);transition:transform .2s}
+.piece-encart{position:absolute;right:-18px;bottom:-30px;width:126px;z-index:2;border:3px solid #fff;background:#fff;border-radius:12px;overflow:hidden;text-decoration:none;box-shadow:0 8px 22px -8px rgba(0,0,0,.45);transition:transform .2s}
 .piece-encart:hover{transform:translateY(-3px)}
 .piece-encart img,.piece-encart .vignette{display:block;width:100%;height:76px;object-fit:cover;aspect-ratio:auto}
 .piece-encart .vignette{display:flex!important;align-items:center;justify-content:center}
 .piece-encart .vignette svg{width:40px;height:40px}
 .piece-encart span{display:block;padding:6px 10px;font:700 .8rem Montserrat,sans-serif;color:var(--texte)}
 .piece:hover .piece-encart img{transform:none}
-@media (max-width:900px){.piece-encart{left:-8px}}
+@media (max-width:900px){.piece-encart{right:-8px}}

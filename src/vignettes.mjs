@@ -7,7 +7,7 @@ export const VIGNETTES = {
   "/terrasse-composite-lyon/": null,
   "/terrasse-carrelage-lyon/": null,
   "/terrasse-aluminium-lyon/": "alu-piscine-aspect-teck",
-  "/structure-terrasse-lyon/": "structure-aluminium-carrelage",
+  "/structure-terrasse-lyon/": "structure-plot-rail-lame",
   "/nos-terrasses/": "terrasse-accoya-gris-piscine",
   "/terrasse-piscine-lyon/": "terrasse-bambou-ndurance-piscine-pierre",
   "/terrasse-balcon-lyon/": "gc-maison-verre-depoli",

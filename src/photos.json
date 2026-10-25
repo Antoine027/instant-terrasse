@@ -2060,5 +2060,243 @@
    480
   ],
   "ratio": 0.75
+ },
+ {
+  "cle": "structure-clips-lame-bois",
+  "dossier": "structures",
+  "categorie": "structure-alu",
+  "alt": "Lame de bois rainurée posée sur deux clips, au-dessus d'un rail aluminium",
+  "largeurs": [
+   400,
+   600,
+   800,
+   1000,
+   1600
+  ],
+  "ratio": 1.3333
+ },
+ {
+  "cle": "structure-lames-clipsees-vue-haut",
+  "dossier": "structures",
+  "categorie": "structure-alu",
+  "alt": "Lames brunes en cours de pose sur rails aluminium à clips et plots réglables",
+  "largeurs": [
+   400,
+   600,
+   800,
+   1000,
+   1600
+  ],
+  "ratio": 0.6801
+ },
+ {
+  "cle": "structure-clips-lame-brune",
+  "dossier": "structures",
+  "categorie": "structure-alu",
+  "alt": "Gros plan sur une lame brune maintenue par deux clips sur un rail aluminium",
+  "largeurs": [
+   400,
+   600,
+   800,
+   1000,
+   1600
+  ],
+  "ratio": 1.5109
+ },
+ {
+  "cle": "structure-plot-rail-lame",
+  "dossier": "structures",
+  "categorie": "structure-alu",
+  "alt": "Lame rainurée au-dessus d'un rail aluminium à clips posé sur un plot réglable",
+  "largeurs": [
+   400,
+   600,
+   800,
+   1000,
+   1600
+  ],
+  "ratio": 0.9472
+ },
+ {
+  "cle": "structure-plot-reglable",
+  "dossier": "structures",
+  "categorie": "structure-alu",
+  "alt": "Plot réglable supportant un rail aluminium équipé de clips",
+  "largeurs": [
+   400,
+   600,
+   800,
+   1000,
+   1600
+  ],
+  "ratio": 0.75
+ },
+ {
+  "cle": "structure-rails-vue-ensemble",
+  "dossier": "structures",
+  "categorie": "structure-alu",
+  "alt": "Vue d'ensemble des rails aluminium à clips sur plots réglables, avant la pose des lames",
+  "largeurs": [
+   400,
+   600,
+   800,
+   1000,
+   1600
+  ],
+  "ratio": 1.5003
+ },
+ {
+  "cle": "structure-rails-plots-detail",
+  "dossier": "structures",
+  "categorie": "structure-alu",
+  "alt": "Rails aluminium à clips sur plots réglables, vus de près",
+  "largeurs": [
+   400,
+   600,
+   800,
+   1000,
+   1600
+  ],
+  "ratio": 1.5003
+ },
+ {
+  "cle": "structure-rails-dalle",
+  "dossier": "structures",
+  "categorie": "structure-alu",
+  "alt": "Rails aluminium à clips sur plots posés sur une dalle",
+  "largeurs": [
+   400,
+   600,
+   800,
+   1000,
+   1600
+  ],
+  "ratio": 0.6665
+ },
+ {
+  "cle": "structure-lames-a-clipser",
+  "dossier": "structures",
+  "categorie": "structure-alu",
+  "alt": "Trois lames de bois clipsées sur des rails aluminium, une personne debout dessus",
+  "largeurs": [
+   400,
+   600,
+   800,
+   1000,
+   1600
+  ],
+  "ratio": 1.6753
+ },
+ {
+  "cle": "structure-schema-bordure",
+  "dossier": "structures",
+  "categorie": "structure-alu",
+  "alt": "Vue 3D : lames bois sur rails aluminium à clips, plot réglable et bandeau de finition en bordure",
+  "largeurs": [
+   400,
+   600,
+   800,
+   1000,
+   1600
+  ],
+  "ratio": 1.0
+ },
+ {
+  "cle": "bardage-pose-en-cours",
+  "dossier": "bardage",
+  "categorie": "bardage-pose",
+  "alt": "Bardage vertical en cours de pose : lames clipsées sur rails horizontaux devant le pare-pluie",
+  "largeurs": [
+   400,
+   600,
+   800,
+   1000,
+   1600
+  ],
+  "ratio": 1.3333
+ },
+ {
+  "cle": "bardage-clips-lames-claires",
+  "dossier": "bardage",
+  "categorie": "bardage-pose",
+  "alt": "Lames de bardage claires rainurées, clipsées sur un rail vertical",
+  "largeurs": [
+   400,
+   600,
+   800,
+   1000,
+   1600
+  ],
+  "ratio": 0.6669
+ },
+ {
+  "cle": "bardage-clip-detail",
+  "dossier": "bardage",
+  "categorie": "bardage-pose",
+  "alt": "Gros plan sur un clip qui maintient une lame de bardage par sa rainure",
+  "largeurs": [
+   400,
+   600,
+   800,
+   1000,
+   1600
+  ],
+  "ratio": 1.4994
+ },
+ {
+  "cle": "bardage-rails-angle",
+  "dossier": "bardage",
+  "categorie": "bardage-pose",
+  "alt": "Rails verticaux équipés de clips fixés en angle de façade, avant la pose des lames",
+  "largeurs": [
+   400,
+   600,
+   800,
+   1000,
+   1600
+  ],
+  "ratio": 1.3333
+ },
+ {
+  "cle": "bardage-claire-voie-clips",
+  "dossier": "bardage",
+  "categorie": "bardage-pose",
+  "alt": "Bardage bois à claire-voie : lames clipsées sur rails horizontaux, en façade et en sous-face",
+  "largeurs": [
+   400,
+   600,
+   800,
+   1000,
+   1600
+  ],
+  "ratio": 1.3333
+ },
+ {
+  "cle": "bardage-schema-clips",
+  "dossier": "bardage",
+  "categorie": "bardage-pose",
+  "alt": "Vue 3D éclatée : rail, clips et lames de bardage",
+  "largeurs": [
+   400,
+   600,
+   800,
+   1000,
+   1600
+  ],
+  "ratio": 1.7778
+ },
+ {
+  "cle": "bardage-avant-apres-pose",
+  "dossier": "bardage",
+  "categorie": "bardage-pose",
+  "alt": "Façade à moitié habillée : à gauche les rails à clips, à droite le bardage vertical posé",
+  "largeurs": [
+   400,
+   600,
+   800,
+   1000,
+   1600
+  ],
+  "ratio": 1.7879
  }
 ]

@@ -208,14 +208,9 @@ const structures = {
   title: "Structure de terrasse aluminium ou traditionnelle à Lyon | Instant Terrasse",
   description: "Structure aluminium sur plots réglables, structure traditionnelle sur lambourdes ou dalles sur plots : la base qui fait durer votre terrasse. Lyon et sa région.",
   corps: `
-<section class="hero hero-page">
-  <div class="conteneur">
-    <p class="fil"><a href="/">Accueil</a> › Terrasses</p>
-    <h1>Nos structures de terrasse</h1>
-    <p class="chapo">Une terrasse se juge sur la durée, et sa durée de vie se joue sous les lames. Nous adaptons la structure à votre terrain, à votre revêtement et à votre budget.</p>
-    <p class="actions"><a class="bouton bouton-clair" href="#comparatif-bois">Comparer pour le bois</a> <a class="bouton bouton-clair" href="#comparatif-carrelage">Comparer pour le carrelage</a></p>
-  </div>
-</section>
+${heroPlein({ fil: "Terrasses", h1: ["Nos structures", "de terrasse"], kicker: "Structure aluminium garantie 20 ans", photo: "structure-lames-clipsees-vue-haut", position: "55% 40%",
+  chapo: "Une terrasse se juge sur la durée, et sa durée de vie se joue sous les lames. Nous adaptons la structure à votre terrain, à votre revêtement et à votre budget.",
+  actions: `<a class="bouton" href="#galerie">Voir le système en photos</a> <a class="bouton bouton-blanc" href="#comparatif-bois">Comparer les structures</a>` })}
 
 <section class="bloc bloc-alt">
   <div class="conteneur deux-colonnes deux-colonnes-image">
@@ -240,7 +235,13 @@ const structures = {
   </div>
 </section>
 
-<section class="bloc">
+<section id="galerie" class="bloc">
+  <div class="conteneur">
+    ${galerie("structure-alu", { titre: "Le système à clipser en images", intro: "Plots réglables, rails aluminium et clips : rien ne traverse la lame, et chaque lame se démonte.", legende: "Illustrations du système de pose" })}
+  </div>
+</section>
+
+<section class="bloc bloc-alt">
   <div class="conteneur">
     <h2>Une structure adaptée à chaque terrain</h2>
     <p class="chapo">Le système aluminium s'adapte au sol qui recevra la terrasse. C'est ce que nous vérifions en premier lors de la visite.</p>
@@ -254,7 +255,7 @@ const structures = {
   </div>
 </section>
 
-<section class="bloc bloc-alt">
+<section class="bloc">
   <div class="conteneur">
     <h2>Les autres solutions</h2>
     <div class="grille grille-3">
@@ -265,8 +266,8 @@ const structures = {
     <p class="note-pose">${POSE}</p>
   </div>
 </section>
-${compBois}
-${compCarrelage.replace('class="bloc"', 'class="bloc bloc-alt"')}
+${compBois.replace('class="bloc"', 'class="bloc bloc-alt"')}
+${compCarrelage}
 ${cta("Quelle structure pour votre terrain ?")}`,
 };
 
@@ -330,6 +331,12 @@ ${heroPlein({ fil: "Bardage", h1: ["Bardage bois", "sur mesure"], kicker: "Faça
       <p>${POSE}</p>
       <p>Vous préférez une façade sans aucun entretien ? Découvrez le <a href="/bardage-aluminium-lyon/">bardage aluminium</a>.</p>
     </div>
+  </div>
+</section>
+
+<section id="pose-bardage" class="bloc bloc-alt">
+  <div class="conteneur">
+    ${galerie("bardage-pose", { titre: "La pose à clipser en images", intro: "Les rails sont fixés au mur, puis chaque lame vient s'y clipser.", legende: "Illustrations du système de pose" })}
   </div>
 </section>
 ${cta("Un projet de bardage ?")}`,

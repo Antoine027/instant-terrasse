@@ -156,7 +156,7 @@ export const TRIO = `<ul class="trio"><li><svg aria-hidden="true" viewBox="0 0 2
 const PIECES = [
   { etiquette: "Terrasses & bardages", titre: "Revêtements", encart: ["/bardage-bois-lyon/", "Bardage", "bardage-bambou-xtreme-patio"], texte: "Au sol, du bois, du composite, du carrelage ou des lames aluminium sur une structure garantie 20 ans. Aux murs, un bardage assorti.", photo: "terrasse-thermofrene-pool-house",
     liens: [["/terrasse-bois-lyon/", "Bois"], ["/terrasse-composite-lyon/", "Composite"], ["/terrasse-carrelage-lyon/", "Carrelage"], ["/terrasse-aluminium-lyon/", "Aluminium"], ["/bardage-bois-lyon/", "Bardage"]] },
-  { etiquette: "Pergolas & stores", titre: "Protections solaires", encart: ["/store-banne-lyon/", "Store banne", null], texte: "Une pergola ou un store banne pour profiter de la terrasse aux heures chaudes comme par temps de pluie.", photo: "pergola-toile-retractable-facade",
+  { etiquette: "Pergolas & stores", titre: "Protections solaires", encart: ["/store-banne-lyon/", "Store banne", "store-banne-orange"], texte: "Une pergola ou un store banne pour profiter de la terrasse aux heures chaudes comme par temps de pluie.", photo: "pergola-toile-retractable-facade",
     liens: [["/pergola-bioclimatique-lyon/", "Bioclimatique"], ["/pergola-toile-retractable-lyon/", "Toile rétractable"], ["/pergola-toit-fixe-lyon/", "Toit fixe"], ["/store-banne-lyon/", "Store banne"], ["/carport-lyon/", "Carport"]] },
   { etiquette: "Garde-corps", titre: "Un espace sécurisé", texte: "Un garde-corps aluminium qui sécurise la terrasse sans fermer la vue.", photo: "gc-maison-lisses-pergola",
     liens: [["/garde-corps-aluminium-lyon/", "Garde-corps aluminium"]] },

@@ -683,7 +683,36 @@ ${heroPlein({ fil: "Terrasses & bardages", h1: ["Terrasse composite", "sur mesur
 ${cta("Un projet de terrasse composite ?", "Devis gratuit et sans engagement. Nous venons chez vous avec les échantillons de teintes, et le plan 3D de votre projet est offert.")}`,
 };
 
+// ---------- Store banne ----------
+const storeBanne = {
+  title: "Store banne Lyon : coffre, motorisation, sur mesure | Instant Terrasse",
+  description: "Store banne sur mesure à Lyon : coffre intégral, toile au choix, motorisation et automatismes vent et soleil, lambrequin déroulant. De l'ombre à la demande sur votre terrasse. Devis gratuit.",
+  corps: pageProduit({
+    fil: "Pergolas & stores",
+    h1: ["Store banne", "sur mesure"], kicker: "Protections solaires à Lyon et dans sa région",
+    chapo: "De l'ombre en quelques secondes, et une façade dégagée le reste du temps : le store banne est la protection solaire la plus simple pour profiter de votre terrasse aux heures chaudes.",
+    photo: "store-banne-coffre-bardage", position: "45% 40%",
+    atouts: [
+      ["Coffre intégral", "Toile et bras sont rangés dans un coffre fermé : protégés de la pluie et de la poussière, ils durent plus longtemps."],
+      ["Motorisation", "Ouverture et fermeture à la télécommande, sans manivelle."],
+      ["Automatismes", "Capteurs vent et soleil en option : le store se replie seul quand le vent se lève."],
+      ["Lambrequin déroulant", "Une toile verticale à l'avant pour couper le soleil rasant du soir ou les regards."],
+      ["La toile de votre choix", "Unie, claire ou foncée, vive ou discrète : choisie avec vous sur échantillons, en accord avec la façade."],
+      ["Sans structure au sol", "Fixé à la façade, il libère entièrement la terrasse, sans poteau."],
+    ],
+    galerieCat: "store-banne",
+    titreGalerie: "Stores bannes en situation",
+    details: `<h2>Store banne ou pergola ?</h2>
+      <p>Le store banne offre de l'ombre à la demande, sans poteau et pour un budget plus léger. La <a href="/pergola-bioclimatique-lyon/">pergola bioclimatique</a> va plus loin : elle vous abrite aussi de la pluie et devient une vraie pièce couverte.</p>
+      <p>La largeur, l'avancée et la hauteur de pose dépendent de votre façade et de l'orientation de la terrasse : nous les définissons ensemble lors de la visite.</p>`,
+    complement: "Nous venons chez vous avec les échantillons de toiles, et le plan 3D de votre projet est offert.",
+    voisins: autresPergolas("/store-banne-lyon/").slice(0, 3),
+    ctaTitre: "Un projet de store banne ?",
+  }),
+};
+
 export const CONTENUS = {
+  "/store-banne-lyon/": storeBanne,
   "/terrasse-composite-lyon/": terrasseComposite,
   "/bardage-aluminium-lyon/": bardageAluminium,
   "/terrasse-carrelage-lyon/": terrasseCarrelage,

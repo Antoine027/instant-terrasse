@@ -2326,5 +2326,89 @@
    1536
   ],
   "ratio": 1.5
+ },
+ {
+  "cle": "store-banne-coffre-bardage",
+  "dossier": "stores",
+  "categorie": "store-banne",
+  "alt": "Store banne coffre anthracite à toile beige avec lambrequin déroulé, sur une façade en bardage bois",
+  "largeurs": [
+   400,
+   600,
+   800,
+   1000,
+   1400
+  ],
+  "ratio": 1.6037
+ },
+ {
+  "cle": "store-banne-blanc-terrasse",
+  "dossier": "stores",
+  "categorie": "store-banne",
+  "alt": "Grand store banne blanc au-dessus d'une terrasse en bois, avec lambrequin vertical",
+  "largeurs": [
+   400,
+   600,
+   800,
+   1000,
+   1536
+  ],
+  "ratio": 1.5
+ },
+ {
+  "cle": "store-banne-orange",
+  "dossier": "stores",
+  "categorie": "store-banne",
+  "alt": "Store banne à toile orange devant une baie vitrée, salon de jardin gris",
+  "largeurs": [
+   400,
+   600,
+   800,
+   1000,
+   1560
+  ],
+  "ratio": 1.5476
+ },
+ {
+  "cle": "store-banne-beige-maison",
+  "dossier": "stores",
+  "categorie": "store-banne",
+  "alt": "Store banne beige déployé sur une terrasse carrelée, table de jardin et baies vitrées",
+  "largeurs": [
+   400,
+   600,
+   800,
+   1000,
+   1320
+  ],
+  "ratio": 1.4586
+ },
+ {
+  "cle": "store-banne-gris-bardage",
+  "dossier": "stores",
+  "categorie": "store-banne",
+  "alt": "Store banne gris sur une façade en bardage bois, au-dessus d'une terrasse avec table",
+  "largeurs": [
+   400,
+   600,
+   800,
+   1000,
+   1400
+  ],
+  "ratio": 1.3333
+ },
+ {
+  "cle": "store-banne-toit-terrasse",
+  "dossier": "stores",
+  "categorie": "store-banne",
+  "alt": "Store banne blanc sur un toit-terrasse en ville, table et chaises",
+  "largeurs": [
+   400,
+   600,
+   800,
+   1000,
+   1400
+  ],
+  "ratio": 1.3333
  }
 ]

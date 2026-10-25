@@ -22,7 +22,7 @@ export const VIGNETTES = {
   "/pergola-toit-fixe-lyon/": "pergola-toit-fixe-piscine",
   "/carport-lyon/": null,
   "/garde-corps-aluminium-lyon/": "gc-maison-terrasse-vue",
-  "/store-banne-lyon/": null,
+  "/store-banne-lyon/": "store-banne-beige-maison",
   "/bardage-bois-lyon/": "bardage-thermo-epicea-pilotis",
   "/bardage-aluminium-lyon/": "bardage-alu-horizontal-gris",
   // cartes « univers » de l'accueil

@@ -154,11 +154,11 @@ const etapes = [
 export const TRIO = `<ul class="trio"><li><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V8l7-5 7 5v13"/><path d="M9 21v-6h6v6"/></svg><span>Visite chez vous, avec les échantillons</span></li><li><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 3 7l9 5 9-5-9-5z"/><path d="m3 17 9 5 9-5"/><path d="m3 12 9 5 9-5"/></svg><span>Plan 3D de votre projet offert</span></li><li><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg><span>Pose assurée en garantie décennale</span></li></ul>`;
 
 const PIECES = [
-  { etiquette: "Terrasses & bardages", titre: "Le sol de votre pièce", texte: "Bois, composite, carrelage ou lames aluminium sur une structure garantie 20 ans, et un bardage assorti pour habiller la façade.", photo: "terrasse-thermofrene-bord-de-loire",
+  { etiquette: "Terrasses & bardages", titre: "Le sol de votre pièce", texte: "Bois, composite, carrelage ou lames aluminium sur une structure garantie 20 ans, et un bardage assorti pour habiller la façade.", photo: "terrasse-thermofrene-pool-house",
     liens: [["/terrasse-bois-lyon/", "Bois"], ["/terrasse-composite-lyon/", "Composite"], ["/terrasse-carrelage-lyon/", "Carrelage"], ["/terrasse-aluminium-lyon/", "Aluminium"], ["/bardage-bois-lyon/", "Bardage"]] },
   { etiquette: "Pergolas & stores", titre: "Le plafond de votre pièce", texte: "Une pergola ou un store banne pour profiter de la terrasse aux heures chaudes comme par temps de pluie.", photo: "pergola-toile-retractable-facade",
     liens: [["/pergola-bioclimatique-lyon/", "Bioclimatique"], ["/pergola-toile-retractable-lyon/", "Toile rétractable"], ["/pergola-toit-fixe-lyon/", "Toit fixe"], ["/store-banne-lyon/", "Store banne"]] },
-  { etiquette: "Garde-corps", titre: "Les limites de votre pièce", texte: "Un garde-corps aluminium qui sécurise la terrasse sans fermer la vue.", photo: "gc-maison-terrasse-vue",
+  { etiquette: "Garde-corps", titre: "Les limites de votre pièce", texte: "Un garde-corps aluminium qui sécurise la terrasse sans fermer la vue.", photo: "gc-maison-lisses-pergola",
     liens: [["/garde-corps-aluminium-lyon/", "Garde-corps aluminium"]] },
 ];
 

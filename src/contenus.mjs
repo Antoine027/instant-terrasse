@@ -711,7 +711,36 @@ const storeBanne = {
   }),
 };
 
+// ---------- Carport ----------
+const carport = {
+  title: "Carport aluminium Lyon : abri voiture sur mesure | Instant Terrasse",
+  description: "Carport aluminium sur mesure à Lyon : abri voiture à toit plat, adossé ou autoporté, sans entretien et dans la teinte de vos menuiseries. Devis gratuit.",
+  corps: pageProduit({
+    fil: "Pergolas & stores",
+    h1: ["Carport aluminium", "sur mesure"], kicker: "Abris voiture à Lyon et dans sa région",
+    chapo: "Un abri pour la voiture, aux lignes aussi soignées que votre maison : un carport aluminium à toit plat protège de la pluie, de la grêle et du soleil, sans les travaux d'un garage.",
+    photo: "carport-garage-gravier", position: "55% 45%",
+    atouts: [
+      ["Protection toute l'année", "Pluie, grêle, neige, soleil : la voiture reste à l'abri, et vous montez à pied sec."],
+      ["Lignes épurées", "Un toit plat et des profils fins, dans l'esprit des pergolas contemporaines."],
+      ["Adossé ou autoporté", "Fixé contre la façade ou le garage, ou indépendant sur l'allée."],
+      ["Aluminium sans entretien", "Ni rouille, ni peinture à refaire, dans la teinte de vos menuiseries."],
+      ["Sur mesure", "Pour une ou deux voitures, un camping-car ou un abri de jardin, selon la place disponible."],
+      ["Moins de travaux qu'un garage", "Pas de maçonnerie lourde : une structure légère posée sur des fixations adaptées au sol."],
+    ],
+    galerieCat: "carport",
+    titreGalerie: "Carports en situation",
+    details: `<h2>Avant de se lancer</h2>
+      <p>Un carport est une construction : selon sa surface et votre commune, une déclaration préalable de travaux peut être nécessaire. Nous vous indiquons la démarche lors de la visite.</p>
+      <p>Le même système existe en <a href="/pergola-toit-fixe-lyon/">pergola à toit fixe</a> pour couvrir une terrasse.</p>`,
+    complement: "Nous venons voir l'emplacement, l'accès et le sol, et le plan 3D de votre projet est offert.",
+    voisins: autresPergolas("/carport-lyon/").slice(0, 3),
+    ctaTitre: "Un projet de carport ?",
+  }),
+};
+
 export const CONTENUS = {
+  "/carport-lyon/": carport,
   "/store-banne-lyon/": storeBanne,
   "/terrasse-composite-lyon/": terrasseComposite,
   "/bardage-aluminium-lyon/": bardageAluminium,

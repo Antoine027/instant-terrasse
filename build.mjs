@@ -11,6 +11,11 @@ import { SCRIPT_GALERIE } from "./src/galerie.mjs";
 for (const p of PAGES) if (CONTENUS[p.chemin]) Object.assign(p, CONTENUS[p.chemin], { statut: "redigee" });
 for (const c of Object.keys(CONTENUS)) if (!PAGES.some((p) => p.chemin === c)) throw new Error(`Contenu sans page dans le plan : ${c}`);
 
+// Pages encore « en préparation » : retirées des menus et des liens tant qu'elles ne sont pas rédigées.
+const PREP = new Set(PAGES.filter((p) => !p.corps && !CONTENUS[p.chemin] && !p.horsPlan).map((p) => p.chemin));
+for (const p of PAGES) if (PREP.has(p.chemin)) p.statut = "preparation";
+const visible = ([c]) => !PREP.has(c);
+
 // Tant que le site est en test, il reste invisible pour les moteurs de recherche.
 // À passer à true seulement le jour de la bascule du domaine instantterrasse.com.
 const EN_LIGNE = false;
@@ -36,7 +41,9 @@ const lienMenu = ([chemin, titre], actuel) =>
   `<li><a href="${chemin}"${chemin === actuel ? ' aria-current="page"' : ""}>${titre}</a></li>`;
 
 const menuUnivers = (u, actuel) => {
-  const pages = u.groupes.flatMap((g) => g.pages);
+  const groupes = u.groupes.map((g) => ({ ...g, pages: g.pages.filter(visible) })).filter((g) => g.pages.length);
+  const colonnes = groupes.filter((g) => !g.pied), pieds = groupes.filter((g) => g.pied);
+  const pages = groupes.flatMap((g) => g.pages);
   const dansUnivers = pages.some(([c]) => c === actuel);
   if (pages.length === 1) {
     return `<li class="menu-item"><a class="menu-lien${dansUnivers ? " actif" : ""}" href="${pages[0][0]}">${u.nom}</a></li>`;
@@ -44,8 +51,9 @@ const menuUnivers = (u, actuel) => {
   return `<li class="menu-item">
     <details class="menu-deroulant">
       <summary class="menu-lien${dansUnivers ? " actif" : ""}">${u.nom}</summary>
-      <div class="sous-menu${u.groupes.length > 2 ? " sous-menu-large" : ""}">
-        ${u.groupes.map((g) => `<div><p class="sous-menu-titre">${g.nom}</p><ul>${g.pages.map((p) => lienMenu(p, actuel)).join("")}</ul></div>`).join("")}
+      <div class="sous-menu">
+        <div class="sous-menu-colonnes">${colonnes.map((g) => `<div><p class="sous-menu-titre">${g.nom}</p><ul>${g.pages.map((p) => lienMenu(p, actuel)).join("")}</ul></div>`).join("")}</div>
+        ${pieds.map((g) => `<p class="sous-menu-pied"><span class="sous-menu-titre">${g.nom}</span>${g.pages.map(([c, t]) => `<a href="${c}"${c === actuel ? ' aria-current="page"' : ""}>${t.replace(/^Bardage (.)/, (m, l) => l.toUpperCase())}</a>`).join("")}</p>`).join("")}
       </div>
     </details>
   </li>`;
@@ -61,7 +69,7 @@ const entete = (actuel) => `
     <nav class="menu" aria-label="Navigation principale">
       <ul class="menu-liste">
         ${UNIVERS.map((u) => menuUnivers(u, actuel)).join("")}
-        <li class="menu-item"><a class="menu-lien${actuel === "/realisations/" ? " actif" : ""}" href="/realisations/">Réalisations</a></li>
+        ${PREP.has("/realisations/") ? "" : `<li class="menu-item"><a class="menu-lien${actuel === "/realisations/" ? " actif" : ""}" href="/realisations/">Réalisations</a></li>`}
         <li class="menu-item"><a class="menu-lien" href="/#methode">Notre méthode</a></li>
       </ul>
     </nav>
@@ -78,10 +86,10 @@ const pied = () => `
       <p>Terrasses, pergolas et aménagements extérieurs sur mesure — Lyon &amp; sa région.</p>
       <p><a href="tel:${SITE.telLien}">${SITE.tel}</a><br>${SITE.adresse}</p>
     </div>
-    ${UNIVERS.slice(0, 2).map((u) => `<div><p class="pied-titre">${u.nom}</p><ul>${u.groupes.flatMap((g) => g.pages).slice(0, 7).map(([c, t]) => `<li><a href="${c}">${t}</a></li>`).join("")}</ul></div>`).join("")}
+    ${UNIVERS.slice(0, 2).map((u) => `<div><p class="pied-titre">${u.nom}</p><ul>${u.groupes.flatMap((g) => g.pages).filter(visible).slice(0, 7).map(([c, t]) => `<li><a href="${c}">${t}</a></li>`).join("")}</ul></div>`).join("")}
     <div>
       <p class="pied-titre">Et aussi</p>
-      <ul>${[...UNIVERS.slice(2).flatMap((u) => u.groupes.flatMap((g) => g.pages)), ...AUTRES].map(([c, t]) => `<li><a href="${c}">${t}</a></li>`).join("")}</ul>
+      <ul>${[...UNIVERS.slice(2).flatMap((u) => u.groupes.flatMap((g) => g.pages)), ...AUTRES].filter(visible).map(([c, t]) => `<li><a href="${c}">${t}</a></li>`).join("")}</ul>
     </div>
   </div>
   <p class="conteneur mentions">© ${new Date().getFullYear()} Instant Terrasse — une marque d'ESCOM HABITAT · <a href="/mentions-legales/">Mentions légales</a> · <a href="/confidentialite/">Confidentialité et cookies</a></p>
@@ -151,6 +159,7 @@ ${entete(p.chemin)}
 ${p.corps ?? corpsPreparation(p)}
 </main>
 ${pied()}
+<nav class="barre-mobile" aria-label="Contact rapide"><a href="tel:${SITE.telLien}">Appeler</a><a class="barre-devis" href="/contact/">Devis gratuit</a></nav>
 <script>
 // Un seul sous-menu ouvert à la fois, fermeture au clic extérieur ou Échap.
 const d=[...document.querySelectorAll('.menu-deroulant')];
@@ -163,8 +172,18 @@ const b=document.querySelector('.burger');b&&b.addEventListener('toggle',()=>doc
 </body>
 </html>`;
 
+const sansLiensMorts = (html) => {
+  for (const c of PREP) {
+    const e = c.replace(/[/-]/g, "\\$&");
+    html = html.replace(new RegExp(`<a class="carte[^"]*" href="${e}">[\\s\\S]*?</a>`, "g"), "")
+      .replace(new RegExp(`<li><a href="${e}">[^<]*</a></li>`, "g"), "")
+      .replace(new RegExp(`<a href="${e}"[^>]*>([\\s\\S]*?)</a>`, "g"), "$1");
+  }
+  return html;
+};
 for (const p of PAGES) {
   if (p.statut === "preparation") p.corps = corpsPreparation(p);
+  else if (p.corps) p.corps = sansLiensMorts(p.corps);
   if (p.h1 && p.corps && p.chemin !== "/contact/") p.corps = p.corps.replaceAll('href="/contact/"', `href="/contact/?projet=${encodeURIComponent(p.nomProjet ?? p.h1)}"`);
 }
 for (const p of PAGES) {

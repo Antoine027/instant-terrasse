@@ -1,6 +1,6 @@
 // Contenus rédigés des pages. Une page présente ici remplace sa version « en préparation ».
 // Règles : pas de chiffre, garantie, certification ou chantier inventé ; pas de nom de fournisseur.
-import { SITE, POSE, TRIO } from "./pages.mjs";
+import { SITE, POSE } from "./pages.mjs";
 import { galerie, imgPhoto, PHOTOS } from "./galerie.mjs";
 import { carteProduit } from "./vignettes.mjs";
 
@@ -16,8 +16,7 @@ const heroPlein = ({ fil, h1, kicker, chapo, photo, position = "65% 50%", action
     <p class="kicker">${kicker}</p>
     <h1><span class="fin">${h1[0]}</span> <span class="fort">${h1[1]}</span></h1>
     <p class="chapo">${chapo}</p>
-    <p class="actions">${actions ?? `<a class="bouton" href="/contact/">Demander une visite gratuite</a> <a class="bouton bouton-blanc" href="#galerie">Voir les photos</a>`}</p>
-    ${TRIO}
+    <p class="actions">${actions ?? `<a class="bouton" href="/contact/">Demander une visite gratuite</a> <a class="lien-tel" href="tel:${SITE.telLien}">ou appelez le ${SITE.tel}</a>`}</p>
   </div>
 </section>`;
 
@@ -343,23 +342,31 @@ ${cta("Un projet de bardage ?")}`,
 };
 
 // ---------- Gabarit de page produit (pergolas, etc.) ----------
-const pageProduit = ({ extra = "", introGalerie = "", fil, h1, kicker, position, chapo, photo, atouts, galerieCat, titreGalerie, details, voisins, ctaTitre, complement = "Une pergola se pense avec la terrasse qu'elle couvre : hauteurs, fixations, écoulement des eaux. Nous pouvons étudier les deux ensemble.", titreVoisins = "Les autres solutions" }) => `
-${heroPlein({ fil, h1, kicker, chapo, photo, position })}
-
-<section class="bloc bloc-alt">
+const ICONE_OK = `<svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m8 12.5 2.7 2.7L16.5 9"/></svg>`;
+const atoutsListe = (atouts) => `<ul class="atouts">${atouts.map(([t, x]) => `<li>${ICONE_OK}<div><h3>${t}</h3><p>${x}</p></div></li>`).join("")}</ul>`;
+const voirAussi = (titre, voisins) => `
+<section class="bloc bloc-voisins">
   <div class="conteneur">
-    <h2>Les points forts</h2>
-    <div class="grille grille-3">${atouts.map(([t, x]) => `<div class="carte"><h3>${t}</h3><p>${x}</p></div>`).join("")}</div>
+    <h2>${titre}</h2>
+    <div class="grille grille-voisins">${voisins.map(([c, t]) => carteProduit(c, t, "").replace("carte-photo", "carte-photo carte-mini")).join("")}</div>
   </div>
-</section>
-${extra}
+</section>`;
+
+const pageProduit = ({ extra = "", introGalerie = "", fil, h1, kicker, position, chapo, photo, atouts, galerieCat, titreGalerie, details, voisins, ctaTitre, complement = "Une pergola se pense avec la terrasse qu'elle couvre : hauteurs, fixations, écoulement des eaux. Nous pouvons étudier les deux ensemble.", titreVoisins = "Voir aussi" }) => `
+${heroPlein({ fil, h1, kicker, chapo, photo, position })}
 ${galerieCat ? `<section id="galerie" class="bloc">
   <div class="conteneur">
     ${galerie(galerieCat, { titre: titreGalerie, intro: introGalerie, legende: "Illustrations" })}
   </div>
 </section>` : ""}
-
 <section class="bloc bloc-alt">
+  <div class="conteneur">
+    <h2>Les points forts</h2>
+    ${atoutsListe(atouts)}
+  </div>
+</section>
+${extra}
+<section class="bloc">
   <div class="conteneur deux-colonnes">
     <div>${details}</div>
     <div>
@@ -369,13 +376,7 @@ ${galerieCat ? `<section id="galerie" class="bloc">
     </div>
   </div>
 </section>
-
-<section class="bloc">
-  <div class="conteneur">
-    <h2>${titreVoisins}</h2>
-    <div class="grille grille-3">${voisins.map(([c, t, x]) => carteProduit(c, t, x)).join("")}</div>
-  </div>
-</section>
+${voirAussi(titreVoisins === "Les autres solutions" ? "Les autres solutions" : "Voir aussi", voisins)}
 ${cta(ctaTitre, "Devis gratuit et sans engagement. Nous venons sur place pour prendre les mesures et vous conseiller la solution la plus adaptée.")}`;
 
 const PERGOLAS = [
@@ -531,7 +532,7 @@ const terrasseAluminium = {
       <p>Plages de piscine, balcons, toits-terrasses, escaliers extérieurs, terrasses de restaurants : la lame aluminium convient partout où l'on veut une terrasse durable et facile à vivre. Des trappes de visite peuvent être intégrées pour garder l'accès à un regard ou à un local technique.</p>
       <p>Vous hésitez avec le bois ou le composite ? Consultez notre <a href="/nos-terrasses/">comparatif des matériaux</a>.</p>`,
     complement: "Nous étudions avec vous la structure, les finitions (nez de marche, bordures, découpes) et les éventuels équipements : garde-corps, pergola, éclairage.",
-    titreVoisins: "Pour compléter votre terrasse",
+    titreVoisins: "Voir aussi",
     voisins: [
       ["/structure-terrasse-lyon/", "Nos structures", "La base qui fait durer une terrasse."],
       ["/terrasse-piscine-lyon/", "Terrasse de piscine", "Une plage confortable et sûre autour du bassin."],
@@ -765,7 +766,7 @@ const terrassePilotis = {
       <p>Une terrasse surélevée est une construction à part entière : au-delà de 60 cm de hauteur, une déclaration préalable de travaux est en général nécessaire, et un permis de construire selon la surface. Nous regardons la règle de votre commune avec vous.</p>
       <p>Les poteaux reposent sur des fondations adaptées au sol, et la hauteur de chute détermine le <a href="/garde-corps-aluminium-lyon/">garde-corps</a>. Pour comprendre les différentes ossatures, voyez notre page <a href="/structure-terrasse-lyon/">structures de terrasse</a>.</p>`,
     complement: "Nous venons voir la hauteur, la pente et l'accès au jardin, et le plan 3D de votre terrasse est offert.",
-    titreVoisins: "Pour aller plus loin",
+    titreVoisins: "Voir aussi",
     voisins: [
       ["/garde-corps-aluminium-lyon/", "Garde-corps aluminium", "Obligatoire sur une terrasse surélevée, il peut aussi l'embellir."],
       ["/structure-terrasse-lyon/", "Structures de terrasse", "Traditionnelle ou aluminium : ce qui porte votre terrasse."],
@@ -877,7 +878,7 @@ const terrassePlots = {
       <p>Pour des dalles de grès cérame sur un support plan, les plots suffisent. Sur un sol moins régulier, ou pour des lames, une structure aluminium posée sur les plots rend la terrasse plus rigide et plus plane. Nous comparons les deux solutions sur notre page <a href="/structure-terrasse-lyon/#comparatif-carrelage">structures de terrasse</a>.</p>
       <p>Voir aussi la <a href="/terrasse-carrelage-lyon/">terrasse en carrelage</a> et le <a href="/toit-terrasse-lyon/">toit-terrasse</a>, deux usages typiques des plots.</p>`,
     complement: "Nous venons voir le support existant, les hauteurs et l'écoulement de l'eau, et le plan 3D de votre terrasse est offert.",
-    titreVoisins: "Pour aller plus loin",
+    titreVoisins: "Voir aussi",
     voisins: [
       ["/terrasse-carrelage-lyon/", "Terrasse carrelage", "Du grès cérame posé à sec, sans colle ni joint."],
       ["/structure-terrasse-lyon/", "Structures de terrasse", "Plots, rails aluminium ou ossature bois."],
@@ -910,7 +911,7 @@ const terrasseBalcon = {
       <p>Sur un balcon d'immeuble, le règlement de copropriété peut encadrer l'aspect, le garde-corps ou la nature du sol. Mieux vaut le consulter, ou interroger le syndic, avant de choisir le revêtement : nous vous aidons à préparer la demande si besoin.</p>
       <p>Pour choisir le revêtement, consultez notre <a href="/nos-terrasses/">comparatif des matériaux</a>.</p>`,
     complement: "Nous venons mesurer le balcon, vérifier le support et l'écoulement de l'eau, et le plan 3D est offert.",
-    titreVoisins: "Pour aller plus loin",
+    titreVoisins: "Voir aussi",
     voisins: [
       ["/garde-corps-aluminium-lyon/", "Garde-corps aluminium", "Sécuriser sans fermer la vue."],
       ["/terrasse-aluminium-lyon/", "Terrasse aluminium", "Des lames stables et sans entretien."],
@@ -943,7 +944,7 @@ const terrassePiscine = {
       <p>Le <a href="/terrasse-bois-lyon/">bois</a> reste le plus agréable sous le pied en plein été, à condition de choisir une essence faite pour l'extérieur. Les <a href="/terrasse-aluminium-lyon/">lames aluminium</a> et le <a href="/terrasse-composite-lyon/">composite</a> réduisent l'entretien au minimum, et le <a href="/terrasse-carrelage-lyon/">grès cérame</a> se prolonge jusqu'à la margelle.</p>
       <p>Tous les critères sont dans notre <a href="/nos-terrasses/">comparatif des matériaux</a>.</p>`,
     complement: "Nous venons voir le bassin, les niveaux et le local technique, et le plan 3D de votre plage est offert.",
-    titreVoisins: "Pour aller plus loin",
+    titreVoisins: "Voir aussi",
     voisins: [
       ["/nos-terrasses/", "Comparatif des matériaux", "Bois, composite, aluminium ou carrelage ?"],
       ["/pergola-bioclimatique-lyon/", "Pergola bioclimatique", "Un coin d'ombre réglable près du bassin."],
@@ -976,7 +977,7 @@ const toitTerrasse = {
       <p>Une toiture n'est pas toujours prévue pour être accessible : sa structure doit pouvoir porter la terrasse et ses occupants. Nous vérifions ce point avec vous dès la première visite, ainsi que l'état de l'étanchéité.</p>
       <p>Voir aussi la <a href="/terrasse-sur-plots-lyon/">terrasse sur plots</a> et le <a href="/garde-corps-aluminium-lyon/">garde-corps aluminium</a>.</p>`,
     complement: "Nous venons voir la toiture, l'accès et les évacuations, et le plan 3D de votre toit-terrasse est offert.",
-    titreVoisins: "Pour aller plus loin",
+    titreVoisins: "Voir aussi",
     voisins: [
       ["/garde-corps-aluminium-lyon/", "Garde-corps aluminium", "Sécuriser sans fermer la vue."],
       ["/terrasse-sur-plots-lyon/", "Terrasse sur plots", "Poser sans fondation, de niveau."],

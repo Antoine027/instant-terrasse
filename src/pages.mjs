@@ -21,31 +21,31 @@ export const UNIVERS = [
     accroche: "Bois, composite, carrelage ou aluminium au sol, bois ou aluminium en façade.",
     groupes: [
       {
-        nom: "Par matériau",
+        nom: "Matériaux",
         pages: [
           ["/terrasse-bois-lyon/", "Terrasse bois", "Bois modifiés et bambou sur structure aluminium, ou bois massifs et exotiques sur structure traditionnelle."],
           ["/terrasse-composite-lyon/", "Terrasse composite", "Sans entretien, posée sur structure aluminium."],
           ["/terrasse-carrelage-lyon/", "Terrasse carrelage", "Grès cérame sur plots ou sur structure aluminium."],
           ["/terrasse-aluminium-lyon/", "Terrasse en lames aluminium", "Imputrescible, stable, en coloris unis ou aspect bois."],
-          ["/structure-terrasse-lyon/", "Nos structures", "Traditionnelle, aluminium ou sur plots : la base qui fait durer une terrasse."],
+          ["/structure-terrasse-lyon/", "Structures", "Traditionnelle, aluminium ou sur plots : la base qui fait durer une terrasse."],
           ["/nos-terrasses/", "Comparatif des matériaux", "Bois, composite, carrelage ou aluminium : lequel choisir ?"],
         ],
       },
 {
-        nom: "Bardage",
-        pages: [
-          ["/bardage-bois-lyon/", "Bardage bois", "Accoya, kebony, bambou, thermofrêne, thermopin ou thermo épicéa : un bardage assorti à votre terrasse."],
-          ["/bardage-aluminium-lyon/", "Bardage aluminium", "Une façade moderne, sans entretien."],
-        ],
-      },
-      {
-        nom: "Par projet",
+        nom: "Projets",
         pages: [
           ["/terrasse-piscine-lyon/", "Terrasse de piscine", "Une plage confortable et sûre autour du bassin."],
           ["/terrasse-balcon-lyon/", "Balcon", "Rénover le sol d'un balcon, sans travaux lourds."],
           ["/toit-terrasse-lyon/", "Toit-terrasse", "Créer un espace de vie sur une toiture plate."],
           ["/terrasse-sur-pilotis-lyon/", "Terrasse sur pilotis", "La solution pour les terrains en pente."],
           ["/terrasse-sur-plots-lyon/", "Terrasse et dalles sur plots", "Poser sans fondation sur un support existant."],
+        ],
+      },
+      {
+        nom: "Bardage", pied: true,
+        pages: [
+          ["/bardage-bois-lyon/", "Bardage bois", "Accoya, kebony, bambou, thermofrêne, thermopin ou thermo épicéa : un bardage assorti à votre terrasse."],
+          ["/bardage-aluminium-lyon/", "Bardage aluminium", "Une façade moderne, sans entretien."],
         ],
       },
       {
@@ -72,10 +72,12 @@ export const UNIVERS = [
         ],
       },
       {
-        nom: "Carports",
-        pages: [["/carport-lyon/", "Carport", "Un abri voiture élégant, sans construire de garage."]],
-      },
-      { nom: "Stores bannes", pages: [["/store-banne-lyon/", "Store banne", "Coffre intégral, motorisation, capteurs vent et soleil."]] }
+        nom: "Stores et abris",
+        pages: [
+          ["/store-banne-lyon/", "Store banne", "Coffre intégral, motorisation, capteurs vent et soleil."],
+          ["/carport-lyon/", "Carport", "Un abri voiture élégant, sans construire de garage."],
+        ],
+      }
     ],
   },
   {
@@ -174,12 +176,12 @@ const accueil = `
     <p class="chapo">Une terrasse pensée comme une pièce à part entière : le lien entre l'intérieur et l'extérieur.</p>
     <p class="actions">
       <a class="bouton" href="/contact/">Demander une visite gratuite</a>
-      <a class="bouton bouton-blanc" href="#piece">Découvrir</a>
+      <a class="lien-tel" href="tel:${SITE.telLien}">ou appelez le ${SITE.tel}</a>
     </p>
     <p class="hero-avis">${BADGE_AVIS}</p>
-    ${TRIO}
   </div>
 </section>
+<section class="bandeau-engagements" aria-label="Nos engagements"><div class="conteneur">${TRIO}</div></section>
 
 <section id="piece" class="bloc">
   <div class="conteneur">
@@ -232,7 +234,7 @@ const accueil = `
 <section id="faq" class="bloc">
   <div class="conteneur conteneur-etroit">
     <h2>Vos questions</h2>
-    ${FAQ.map(([q, r]) => `<details class="faq"><summary>${q}</summary><div>${r}</div></details>`).join("")}
+    ${[FAQ[2], FAQ[1], FAQ[3], FAQ[4]].map(([q, r]) => `<details class="faq"><summary>${q}</summary><div>${r}</div></details>`).join("")}
   </div>
 </section>
 

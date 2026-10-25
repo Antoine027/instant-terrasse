@@ -29,7 +29,12 @@ summary.menu-lien::after{content:"";display:inline-block;width:6px;height:6px;ma
 details[open]>summary.menu-lien::after{transform:translateY(2px) rotate(225deg)}
 .menu-lien:hover,details[open]>.menu-lien{background:var(--fond)}
 .menu-lien.actif{color:var(--accent-texte)}
-.sous-menu{position:absolute;top:calc(100% + 8px);left:0;background:#fff;border-radius:var(--rayon);box-shadow:var(--ombre);padding:20px 22px;display:flex;gap:32px;min-width:260px}
+.sous-menu{position:absolute;top:calc(100% + 8px);left:0;background:#fff;border-radius:var(--rayon);box-shadow:var(--ombre);padding:24px 28px;min-width:260px}
+.sous-menu-colonnes{display:flex;gap:44px}
+.sous-menu-pied{margin:18px 0 0;padding-top:14px;border-top:1px solid var(--fond);display:flex;gap:18px;align-items:baseline;white-space:nowrap}
+.sous-menu-pied .sous-menu-titre{margin:0}
+.sous-menu-pied a{text-decoration:none}
+.sous-menu-pied a:hover,.sous-menu-pied a[aria-current]{color:var(--accent-texte)}
 .sous-menu-large{left:-40px}
 .sous-menu ul{list-style:none;margin:0;padding:0}
 .sous-menu li a{display:block;padding:6px 0;text-decoration:none;white-space:nowrap}
@@ -162,7 +167,7 @@ details[open]>summary.menu-lien::after{transform:translateY(2px) rotate(225deg)}
 .pied a{text-decoration:none;opacity:.85}
 .pied a:hover{opacity:1;color:var(--accent-survol)}
 .pied-titre{font-family:Montserrat,sans-serif;font-weight:700;margin:0 0 10px}
-.mentions{opacity:.6;font-size:.85rem;margin-top:40px}
+.mentions{color:#c9c2b6;font-size:.85rem;margin-top:40px}
 
 /* ---------- Mobile ---------- */
 @media (max-width:1240px){
@@ -404,3 +409,46 @@ details[open]>summary.menu-lien::after{transform:translateY(2px) rotate(225deg)}
 .texte-legal h2{font-size:1.25rem;margin:28px 0 8px}
 .texte-legal p{line-height:1.7}
 .mentions a{color:inherit}
+
+/* ---------- Version épurée (ergonomie, premium) ---------- */
+.bloc{padding:96px 0}
+@media (max-width:560px){.bloc{padding:64px 0}}
+.kicker{background:none;box-shadow:none;padding:0;border-radius:0;font:600 .78rem Montserrat,sans-serif;letter-spacing:.16em;text-transform:uppercase;color:var(--accent-texte)}
+.lien-tel{font:600 .95rem Montserrat,sans-serif;color:var(--texte);text-decoration:none;margin-left:14px;border-bottom:1px solid rgba(47,52,55,.35);padding-bottom:2px}
+.lien-tel:hover{color:var(--accent-texte);border-color:var(--accent-texte)}
+.atouts{list-style:none;padding:0;margin:28px 0 0;display:grid;grid-template-columns:repeat(2,1fr);gap:0 64px}
+.atouts li{display:flex;gap:16px;padding:22px 0;border-top:1px solid rgba(47,52,55,.12)}
+.atouts svg{flex:none;color:var(--accent);margin-top:2px}
+.atouts h3{font-size:1.05rem;margin:0 0 4px}
+.atouts p{margin:0;color:var(--doux)}
+@media (max-width:760px){.atouts{grid-template-columns:1fr}}
+.bloc-voisins{padding:72px 0}
+.grille-voisins{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
+.carte-mini .carte-corps{padding:16px 18px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.carte-mini .carte-corps p{display:none}
+.carte-mini .carte-corps h3{margin:0;font-size:1.02rem}
+.carte-mini .fleche{margin:0;width:36px;height:36px;flex:none}
+.bandeau-engagements{background:var(--fond2);padding:22px 0;border-bottom:1px solid rgba(47,52,55,.08)}
+.bandeau-engagements .trio{margin:0;max-width:none;gap:0}
+.bandeau-engagements .trio li{background:none;justify-content:center;align-items:center;border-left:1px solid rgba(47,52,55,.12);border-radius:0;font-size:.92rem}
+.bandeau-engagements .trio li:first-child{border-left:0}
+@media (max-width:700px){.bandeau-engagements .trio{grid-template-columns:1fr;gap:6px}.bandeau-engagements .trio li{border-left:0;justify-content:flex-start}}
+[data-galerie]:not(.tout) figure.plus{display:none}
+.galerie-plus{text-align:center;margin:26px 0 0}
+.barre-mobile{display:none}
+@media (max-width:700px){
+  .barre-mobile{display:grid;grid-template-columns:1fr 1.4fr;gap:10px;position:fixed;left:12px;right:12px;bottom:12px;z-index:30;padding:8px;background:rgba(255,255,255,.95);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border-radius:999px;box-shadow:0 10px 30px -10px rgba(47,52,55,.45)}
+  .barre-mobile a{display:flex;align-items:center;justify-content:center;min-height:46px;border-radius:999px;font:700 .95rem Montserrat,sans-serif;text-decoration:none;color:var(--texte);box-shadow:inset 0 0 0 1.5px rgba(47,52,55,.25)}
+  .barre-mobile .barre-devis{background:var(--bouton);color:#fff;box-shadow:none}
+  body{padding-bottom:84px}
+  .lien-tel{display:inline-block;margin:14px 0 0}
+}
+
+.actions{align-items:center}
+.lien-tel{align-self:center;line-height:1.3}
+.carte-mini .carte-corps{flex-direction:row;text-align:left}
+@media (max-width:700px){.kicker{letter-spacing:.1em}.hero-plein .lien-tel{display:none}}
+
+.zoom{all:unset;display:block;width:100%;height:100%;cursor:zoom-in;border-radius:var(--rayon)}
+.zoom:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.mentions a{color:var(--fond);text-decoration:underline}

@@ -2468,20 +2468,6 @@
   "ratio": 1.3333
  },
  {
-  "cle": "pilotis-balcons-poteaux-bois",
-  "dossier": "terrasses",
-  "categorie": "pilotis",
-  "alt": "Deux niveaux de balcons sur poteaux bois avec garde-corps aluminium à lisses",
-  "largeurs": [
-   400,
-   600,
-   800,
-   1000,
-   1600
-  ],
-  "ratio": 1.4994
- },
- {
   "cle": "pilotis-garde-corps-decoratif",
   "dossier": "terrasses",
   "categorie": "pilotis",

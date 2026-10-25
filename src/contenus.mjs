@@ -747,7 +747,7 @@ const terrassePilotis = {
     fil: "Terrasses & bardages",
     h1: ["Terrasse sur pilotis", "surélevée"], kicker: "Terrains en pente et étages à Lyon et dans sa région",
     chapo: "Quand le jardin est en contrebas ou en pente, la terrasse sur pilotis sort de plain-pied depuis le séjour ou l'étage. Et l'espace gagné dessous devient un abri pour la voiture, le bois ou le salon de jardin.",
-    photo: "pilotis-bois-facade-longue", position: "50% 60%",
+    photo: "pilotis-poteaux-acier-escalier", position: "75% 50%",
     atouts: [
       ["De plain-pied avec la maison", "On sort du séjour ou de la chambre sans marche, comme sur un balcon, mais avec la surface d'une vraie terrasse."],
       ["Le terrain n'est plus un obstacle", "Pente, talus, sol irrégulier : les poteaux reprennent les différences de niveau, sans terrassement lourd."],

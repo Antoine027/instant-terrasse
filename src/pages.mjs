@@ -127,7 +127,10 @@ export const AVIS = {
 };
 const ETOILE = `<svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M12 2.5l2.9 6.1 6.6.8-4.9 4.5 1.3 6.6L12 17.3l-5.9 3.2 1.3-6.6-4.9-4.5 6.6-.8z"/></svg>`;
 const ETOILES = `<span class="etoiles" role="img" aria-label="5 étoiles sur 5">${ETOILE.repeat(5)}</span>`;
-export const BADGE_AVIS = `<a class="badge-avis" href="${AVIS.lien}" target="_blank" rel="noopener" aria-label="Note Google : ${AVIS.note} sur 5, ${AVIS.total} avis"><svg class="logo-google" viewBox="0 0 48 48" width="20" height="20" aria-hidden="true"><path fill="#FFC107" d="M43.6 20.5H42V20H24v8h11.3C33.7 32.7 29.2 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.3-.1-2.4-.4-3.5z"/><path fill="#FF3D00" d="M6.3 14.7l6.6 4.8C14.7 15.1 19 12 24 12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 16.3 4 9.7 8.3 6.3 14.7z"/><path fill="#4CAF50" d="M24 44c5.2 0 9.9-2 13.4-5.2l-6.2-5.2C29.2 35.1 26.7 36 24 36c-5.2 0-9.6-3.3-11.3-8l-6.5 5C9.5 39.6 16.2 44 24 44z"/><path fill="#1976D2" d="M43.6 20.5H42V20H24v8h11.3c-.8 2.2-2.2 4.2-4.1 5.6l6.2 5.2C37 39.2 44 34 44 24c0-1.3-.1-2.4-.4-3.5z"/></svg><strong>${AVIS.note}</strong>${ETOILES}<span>${AVIS.total} avis</span></a>`;
+const LOGO_GOOGLE = `<svg class="logo-google" viewBox="0 0 48 48" width="20" height="20" aria-hidden="true"><path fill="#FFC107" d="M43.6 20.5H42V20H24v8h11.3C33.7 32.7 29.2 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.3-.1-2.4-.4-3.5z"/><path fill="#FF3D00" d="M6.3 14.7l6.6 4.8C14.7 15.1 19 12 24 12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 16.3 4 9.7 8.3 6.3 14.7z"/><path fill="#4CAF50" d="M24 44c5.2 0 9.9-2 13.4-5.2l-6.2-5.2C29.2 35.1 26.7 36 24 36c-5.2 0-9.6-3.3-11.3-8l-6.5 5C9.5 39.6 16.2 44 24 44z"/><path fill="#1976D2" d="M43.6 20.5H42V20H24v8h11.3c-.8 2.2-2.2 4.2-4.1 5.6l6.2 5.2C37 39.2 44 34 44 24c0-1.3-.1-2.4-.4-3.5z"/></svg>`;
+const COULEURS_AVIS = ["#3d6b35", "#4a5961", "#9a5a1f", "#5b4a7a"];
+const CERTIFIE = `<svg class="certifie" viewBox="0 0 24 24" width="16" height="16" aria-label="Avis vérifié"><path fill="#4285F4" d="M12 1l2.6 2.2 3.4-.4.9 3.3 3 1.7-1.2 3.2 1.2 3.2-3 1.7-.9 3.3-3.4-.4L12 23l-2.6-2.2-3.4.4-.9-3.3-3-1.7L3.3 13 2.1 9.8l3-1.7.9-3.3 3.4.4z"/><path fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M7.5 12.2l3 3 6-6"/></svg>`;
+export const BADGE_AVIS = `<a class="badge-avis" href="${AVIS.lien}" target="_blank" rel="noopener" aria-label="Note Google : ${AVIS.note} sur 5, ${AVIS.total} avis">${LOGO_GOOGLE}<strong>${AVIS.note}</strong>${ETOILES}<span>${AVIS.total} avis</span></a>`;
 
 export const FAQ = [
   ["Quel matériau choisir pour ma terrasse ?", "Tout dépend de l'aspect recherché, du budget et du temps que vous voulez consacrer à l'entretien. Le bois apporte la chaleur d'un matériau naturel, le composite et l'aluminium limitent l'entretien, le carrelage offre un rendu minéral. Notre <a href=\"/nos-terrasses/\">comparatif des matériaux</a> vous aide à y voir clair, et nous affinons le choix lors de la visite."],
@@ -215,7 +218,13 @@ const accueil = `
       <h2>Ce que disent nos clients</h2>
       ${BADGE_AVIS}
     </div>
-    <div class="grille grille-avis">${AVIS.liste.map(([n, t]) => `<figure class="carte avis">${ETOILES}<blockquote>« ${t} »</blockquote><figcaption>${n} · avis Google</figcaption></figure>`).join("")}</div>
+    <div class="grille grille-avis">${AVIS.liste.map(([n, t], i) => `<figure class="avis">
+      <figcaption class="avis-tete"><span class="avis-initiale" style="background:${COULEURS_AVIS[i % 4]}" aria-hidden="true">${n[0]}</span><span class="avis-nom">${n}<small>Avis Google</small></span>${LOGO_GOOGLE.replace('width="20" height="20"', 'width="22" height="22"')}</figcaption>
+      <p class="avis-note">${ETOILES}${CERTIFIE}</p>
+      <blockquote class="avis-texte">${t}</blockquote>
+      <button class="avis-suite" type="button" hidden>Lire la suite</button>
+    </figure>`).join("")}</div>
+    <script>document.querySelectorAll('.avis').forEach(a=>{const t=a.querySelector('.avis-texte'),b=a.querySelector('.avis-suite');if(t.scrollHeight>t.clientHeight+2){b.hidden=false;b.onclick=()=>{const o=a.classList.toggle('ouvert');b.textContent=o?'Réduire':'Lire la suite'}}})</script>
     <p class="actions"><a class="bouton bouton-clair" href="${AVIS.lien}" target="_blank" rel="noopener">Voir tous les avis sur Google</a></p>
   </div>
 </section>

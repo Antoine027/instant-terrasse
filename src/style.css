@@ -309,10 +309,20 @@ details[open]>summary.menu-lien::after{transform:translateY(2px) rotate(225deg)}
 /* Avis Google */
 .avis-entete{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px 24px;margin-bottom:24px}
 .avis-entete h2{margin:0}
-.grille-avis{grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
-.avis{margin:0;display:flex;flex-direction:column;gap:12px}
-.avis blockquote{margin:0;color:var(--texte);font-size:1rem;line-height:1.6}
-.avis figcaption{margin-top:auto;font:600 .88rem Montserrat,sans-serif;color:var(--doux)}
+.grille-avis{grid-template-columns:repeat(auto-fit,minmax(240px,1fr));align-items:start}
+.grille-avis{gap:18px}
+.avis{margin:0;display:flex;flex-direction:column;gap:10px;background:#fff;border-radius:15px;padding:20px 20px 16px;box-shadow:0 6px 22px rgba(47,52,55,.08)}
+.avis-tete{display:flex;align-items:center;gap:12px}
+.avis-tete .logo-google{margin-left:auto;align-self:flex-start;flex:none}
+.avis-initiale{flex:none;width:42px;height:42px;border-radius:50%;display:grid;place-items:center;color:#fff;font:600 1.1rem Montserrat,sans-serif}
+.avis-nom{display:flex;flex-direction:column;font:700 .98rem Montserrat,sans-serif;color:var(--texte);line-height:1.3}
+.avis-nom small{font:400 .82rem Lato,sans-serif;color:var(--doux)}
+.avis-note{margin:0;display:flex;align-items:center;gap:6px}
+.avis-note .etoiles{color:#FBBC04}
+.avis-texte{margin:0;color:var(--texte);font-size:.98rem;line-height:1.55;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:4;overflow:hidden}
+.avis.ouvert .avis-texte{-webkit-line-clamp:unset;display:block}
+.avis-suite{align-self:flex-start;margin-top:auto;background:none;border:0;padding:4px 0;font:400 .9rem Lato,sans-serif;color:var(--doux);cursor:pointer}
+.avis-suite:hover{color:var(--accent-texte);text-decoration:underline}
 .etoiles{color:#E8A317;display:inline-flex;gap:2px;line-height:0}
 .badge-avis{display:inline-flex;align-items:center;gap:8px;background:#fff;border:1px solid rgba(47,52,55,.12);border-radius:999px;padding:8px 16px;text-decoration:none;color:var(--texte);font-size:.95rem}
 .badge-avis strong{font-family:Montserrat,sans-serif}

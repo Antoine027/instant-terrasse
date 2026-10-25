@@ -164,7 +164,7 @@ const PIECES = [
 
 const accueil = `
 <section class="hero-plein hero-slogan">
-  ${imgPhoto("pergola-bioclimatique-salon-piscine", { sizes: "(max-width:700px) calc(100vw - 32px), 100vw", prioritaire: true, classe: "h-img" })}
+  ${imgPhoto("terrasse-bambou-ndurance-pergola", { sizes: "(max-width:700px) calc(100vw - 32px), 100vw", prioritaire: true, classe: "h-img" })}
   <div class="conteneur h-txt">
     <p class="kicker">Terrasses et pergolas sur mesure à Lyon</p>
     <h1><span class="fin">Créez la 5<sup>e</sup> pièce</span> <span class="fort">de votre maison</span></h1>

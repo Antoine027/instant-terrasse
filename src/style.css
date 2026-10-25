@@ -66,7 +66,9 @@ details[open]>summary.menu-lien::after{transform:translateY(2px) rotate(225deg)}
 
 /* ---------- Cartes ---------- */
 .grille{display:grid;gap:18px}
-.grille-3{grid-template-columns:repeat(auto-fill,minmax(270px,1fr))}
+.grille-3{grid-template-columns:repeat(3,1fr)}
+@media (max-width:900px){.grille-3{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:560px){.grille-3{grid-template-columns:1fr}}
 .grille-univers{grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
 .carte{background:#fff;border:1px solid rgba(47,52,55,.09);box-shadow:0 6px 18px -12px rgba(47,52,55,.35);border-radius:var(--rayon);padding:26px 26px 22px;position:relative}
 .bloc-alt .carte{background:#fff}

@@ -276,11 +276,10 @@ details[open]>summary.menu-lien::after{transform:translateY(2px) rotate(225deg)}
   .burger summary{background:var(--fond2);border-radius:999px;width:48px;height:48px;padding:0 14px}
 }
 @media (max-width:700px){
-  .hero-plein{display:block;min-height:0;margin-top:-80px}
-  .hero-plein .h-img{position:absolute;inset:0 0 auto 0;width:100%;height:min(78svh,640px);object-position:72% 50%}
-  .hero-plein::before{display:block;inset:0 0 auto 0;height:min(78svh,640px);background:linear-gradient(180deg,rgba(240,232,218,0) 0%,rgba(240,232,218,0) 44%,rgba(240,232,218,.82) 60%,rgba(240,232,218,.97) 72%,#F0E8DA 100%)}
-  .h-txt{padding-top:max(300px,46svh);padding-bottom:28px}
-  .hero-plein:not(.hero-produit) .h-img{object-position:57% 50%}
+  .hero-plein{flex-direction:column;align-items:stretch;min-height:0;margin-top:-80px}
+  .hero-plein .h-img{position:relative;display:block;margin:92px 16px 0;width:calc(100% - 32px);height:36svh;min-height:220px;border-radius:22px;object-position:72% 55%}
+  .hero-plein::before{display:none}
+  .h-txt{padding-top:22px;padding-bottom:28px}
   .kicker{font-size:.8rem;margin-bottom:14px}
   .hero-plein h1{margin-bottom:14px}
   .hero-plein .chapo{font-size:1rem;margin-bottom:18px}
@@ -295,7 +294,7 @@ details[open]>summary.menu-lien::after{transform:translateY(2px) rotate(225deg)}
 .hero-produit .fil{margin:0 0 14px;font-size:.88rem;color:var(--texte)}
 .hero-produit .fil a{text-decoration:underline;text-underline-offset:2px}
 .hero-produit .h-txt{padding-top:120px;padding-bottom:56px}
-@media (max-width:700px){.hero-produit{min-height:0}.hero-produit .h-txt{padding-top:max(270px,40svh)}}
+@media (max-width:700px){.hero-produit{min-height:0}.hero-produit .h-txt{padding-top:20px}}
 
 /* Cartes avec vignette photo */
 .carte-photo{padding:0;overflow:hidden;display:flex;flex-direction:column}

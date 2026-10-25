@@ -326,7 +326,7 @@ details[open]>summary.menu-lien::after{transform:translateY(2px) rotate(225deg)}
 .hero-slogan h1 sup{font-size:.45em;vertical-align:super;line-height:0}
 .hero-slogan .h-img{object-position:62% 55%}
 .sous-titre sup,.bloc h2 sup{font-size:.6em}
-.pieces{display:grid;grid-template-columns:repeat(2,1fr);gap:32px;margin-top:36px}
+.pieces{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:36px}
 .piece h3{font-size:1.35rem;margin:18px 0 6px}
 .piece p{color:var(--doux);margin:0 0 14px;font-size:1.05rem}
 .pieces-suite{margin-top:32px;color:var(--doux)}

@@ -154,10 +154,12 @@ const etapes = [
 export const TRIO = `<ul class="trio"><li><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V8l7-5 7 5v13"/><path d="M9 21v-6h6v6"/></svg><span>Visite chez vous, avec les échantillons</span></li><li><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 3 7l9 5 9-5-9-5z"/><path d="m3 17 9 5 9-5"/><path d="m3 12 9 5 9-5"/></svg><span>Plan 3D de votre projet offert</span></li><li><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg><span>Pose assurée en garantie décennale</span></li></ul>`;
 
 const PIECES = [
-  { etiquette: "Revêtements", titre: "Le sol de votre pièce", texte: "Bois, composite, carrelage ou lames aluminium, posés sur une structure aluminium garantie 20 ans, de plain-pied avec votre intérieur.", photo: "terrasse-thermofrene-bord-de-loire",
-    liens: [["/terrasse-bois-lyon/", "Terrasse bois"], ["/terrasse-composite-lyon/", "Composite"], ["/terrasse-carrelage-lyon/", "Carrelage"], ["/terrasse-aluminium-lyon/", "Lames aluminium"], ["/structure-terrasse-lyon/", "Nos structures"]] },
-  { etiquette: "Protections solaires", titre: "Le plafond de votre pièce", texte: "Une pergola ou un store banne pour profiter de la terrasse aux heures chaudes comme par temps de pluie.", photo: "pergola-toile-retractable-facade",
-    liens: [["/pergola-bioclimatique-lyon/", "Pergola bioclimatique"], ["/pergola-toile-retractable-lyon/", "Toile rétractable"], ["/pergola-toile-tendue-lyon/", "Toile tendue"], ["/pergola-toit-fixe-lyon/", "Toit fixe"], ["/store-banne-lyon/", "Store banne"]] },
+  { etiquette: "Terrasses", titre: "Le sol de votre pièce", texte: "Bois, composite, carrelage ou lames aluminium, posés sur une structure aluminium garantie 20 ans.", photo: "terrasse-thermofrene-bord-de-loire",
+    liens: [["/terrasse-bois-lyon/", "Bois"], ["/terrasse-composite-lyon/", "Composite"], ["/terrasse-carrelage-lyon/", "Carrelage"], ["/terrasse-aluminium-lyon/", "Aluminium"], ["/bardage-bois-lyon/", "Bardage"]] },
+  { etiquette: "Pergolas & stores", titre: "Le plafond de votre pièce", texte: "Une pergola ou un store banne pour profiter de la terrasse aux heures chaudes comme par temps de pluie.", photo: "pergola-toile-retractable-facade",
+    liens: [["/pergola-bioclimatique-lyon/", "Bioclimatique"], ["/pergola-toile-retractable-lyon/", "Toile rétractable"], ["/pergola-toit-fixe-lyon/", "Toit fixe"], ["/store-banne-lyon/", "Store banne"]] },
+  { etiquette: "Garde-corps", titre: "Les limites de votre pièce", texte: "Un garde-corps aluminium qui sécurise la terrasse sans fermer la vue.", photo: "gc-maison-terrasse-vue",
+    liens: [["/garde-corps-aluminium-lyon/", "Garde-corps aluminium"]] },
 ];
 
 const accueil = `
@@ -178,8 +180,8 @@ const accueil = `
 <section id="piece" class="bloc">
   <div class="conteneur">
     <p class="sous-titre">Votre 5<sup>e</sup> pièce</p>
-    <h2>Revêtements et protections solaires</h2>
-    <p class="chapo">Le sol et ce qui le couvre se choisissent ensemble : hauteurs, fixations, écoulement de l'eau. Nous étudions les deux, pour une terrasse qui prolonge vraiment votre maison.</p>
+    <h2>Terrasses, pergolas et garde-corps</h2>
+    <p class="chapo">Le sol, ce qui le couvre et ce qui le borde se choisissent ensemble : hauteurs, fixations, écoulement de l'eau. Nous étudions tout le projet, pour une terrasse qui prolonge vraiment votre maison.</p>
     <div class="pieces">
       ${PIECES.map((x) => `<article class="piece">
         <div class="piece-photo">${imgPhoto(x.photo, { sizes: "(max-width:900px) 92vw, 380px" })}<span class="piece-etiquette">${x.etiquette}</span></div>
@@ -187,7 +189,6 @@ const accueil = `
         <ul class="piece-liens">${x.liens.map(([c, t]) => `<li><a href="${c}">${t}</a></li>`).join("")}</ul>
       </article>`).join("")}
     </div>
-    <p class="pieces-suite">Pour terminer votre pièce : <a href="/garde-corps-aluminium-lyon/">garde-corps</a>, <a href="/bardage-bois-lyon/">bardage bois</a> et <a href="/bardage-aluminium-lyon/">bardage aluminium</a>.</p>
   </div>
 </section>
 

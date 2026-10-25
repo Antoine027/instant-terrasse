@@ -526,7 +526,7 @@ const terrasseAluminium = {
 </section>`,
     galerieCat: "terrasse-aluminium",
     titreGalerie: "Terrasses en lames aluminium en situation",
-    introGalerie: "Filtrez par famille de teintes.",
+    introGalerie: "Filtrez par teinte.",
     details: `<h2>Pour quels projets ?</h2>
       <p>Plages de piscine, balcons, toits-terrasses, escaliers extérieurs, terrasses de restaurants : la lame aluminium convient partout où l'on veut une terrasse durable et facile à vivre. Des trappes de visite peuvent être intégrées pour garder l'accès à un regard ou à un local technique.</p>
       <p>Vous hésitez avec le bois ou le composite ? Consultez notre <a href="/nos-terrasses/">comparatif des matériaux</a>.</p>`,

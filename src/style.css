@@ -357,3 +357,5 @@ details[open]>summary.menu-lien::after{transform:translateY(2px) rotate(225deg)}
 .piece-encart span{display:block;padding:6px 10px;font:700 .8rem Montserrat,sans-serif;color:var(--texte)}
 .piece:hover .piece-encart img{transform:none}
 @media (max-width:900px){.piece-encart{right:-8px}}
+.badge-avis .logo-google{flex:none}
+.badge-avis>span:last-child{color:var(--doux)}

@@ -2312,5 +2312,19 @@
    1600
   ],
   "ratio": 1.7827
+ },
+ {
+  "cle": "accueil-terrasse-soiree",
+  "dossier": "hero",
+  "categorie": "accueil",
+  "alt": "Terrasse en lames brunes prolongeant le salon d'une maison, canapé d'angle et éclairage du soir",
+  "largeurs": [
+   400,
+   600,
+   800,
+   1000,
+   1536
+  ],
+  "ratio": 1.5
  }
 ]

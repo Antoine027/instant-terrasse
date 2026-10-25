@@ -44,9 +44,11 @@ const menuUnivers = (u, actuel) => {
   return `<li class="menu-item">
     <details class="menu-deroulant">
       <summary class="menu-lien${dansUnivers ? " actif" : ""}">${u.nom}</summary>
-      <div class="sous-menu${u.groupes.length > 2 ? " sous-menu-large" : ""}">
+      ${u.cascade ? `<div class="sous-menu sous-menu-cascade">
+        <ul class="cascade">${u.groupes.map((g) => `<li class="cascade-item${g.pages.some(([c]) => c === actuel) ? " cascade-actif" : ""}"><button type="button" class="cascade-titre">${g.nom}</button><ul class="cascade-liste">${g.pages.map((p) => lienMenu(p, actuel)).join("")}</ul></li>`).join("")}</ul>
+      </div>` : `<div class="sous-menu${u.groupes.length > 2 ? " sous-menu-large" : ""}">
         ${u.groupes.map((g) => `<div><p class="sous-menu-titre">${g.nom}</p><ul>${g.pages.map((p) => lienMenu(p, actuel)).join("")}</ul></div>`).join("")}
-      </div>
+      </div>`}
     </details>
   </li>`;
 };

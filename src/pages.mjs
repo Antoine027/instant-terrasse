@@ -18,6 +18,7 @@ export const UNIVERS = [
   {
     cle: "terrasses",
     nom: "Terrasses & bardages",
+    cascade: true,
     accroche: "Bois, composite, carrelage ou aluminium au sol, bois ou aluminium en façade.",
     groupes: [
       {

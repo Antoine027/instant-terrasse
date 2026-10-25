@@ -549,7 +549,7 @@ const terrasseCarrelage = {
   corps: `
 ${heroPlein({ fil: "Terrasses & bardages", h1: ["Terrasse en carrelage", "grès cérame"], kicker: "Terrasses sur mesure à Lyon et dans sa région",
   chapo: "Des dalles de grès cérame épaisses, posées à sec sur plots ou sur une structure aluminium : ni colle, ni joint, ni dalle béton à couler. Une terrasse minérale, facile à vivre et démontable dalle par dalle.",
-  photo: "carrelage-toit-terrasse-montagnes", position: "60% 60%",
+  photo: "carrelage-toit-terrasse-montagnes", position: "50% 60%",
   actions: `<a class="bouton" href="/contact/">Demander une visite gratuite</a> <a class="bouton bouton-blanc" href="/structure-terrasse-lyon/#comparatif-carrelage">Plots ou structure ?</a>` })}
 
 <section class="bloc bloc-alt">

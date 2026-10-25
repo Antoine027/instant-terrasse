@@ -345,3 +345,12 @@ details[open]>summary.menu-lien::after{transform:translateY(2px) rotate(225deg)}
 .piece-liens a{display:inline-block;border:1px solid rgba(47,52,55,.18);border-radius:999px;padding:7px 14px;font:600 .88rem Montserrat,sans-serif;text-decoration:none;background:#fff}
 .piece-liens a:hover{border-color:var(--bouton);color:var(--bouton)}
 @media (max-width:900px){.pieces{grid-template-columns:1fr;gap:40px}.piece-photo{aspect-ratio:4/3}}
+
+.piece-sous{font:700 .8rem Montserrat,sans-serif!important;text-transform:uppercase;letter-spacing:.08em;color:var(--accent-texte)!important;margin:-2px 0 8px!important}
+.piece-encart{position:absolute;right:12px;bottom:12px;width:118px;background:#fff;border-radius:12px;overflow:hidden;text-decoration:none;box-shadow:0 8px 22px -8px rgba(0,0,0,.45);transition:transform .2s}
+.piece-encart:hover{transform:translateY(-3px)}
+.piece-encart img,.piece-encart .vignette{display:block;width:100%;height:76px;object-fit:cover;aspect-ratio:auto}
+.piece-encart .vignette{display:flex!important;align-items:center;justify-content:center}
+.piece-encart .vignette svg{width:40px;height:40px}
+.piece-encart span{display:block;padding:6px 10px;font:700 .8rem Montserrat,sans-serif;color:var(--texte)}
+.piece:hover .piece-encart img{transform:none}

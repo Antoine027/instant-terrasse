@@ -23,12 +23,12 @@ export const VIGNETTES = {
   "/carport-lyon/": "carport-garage-gravier",
   "/garde-corps-aluminium-lyon/": "gc-maison-terrasse-vue",
   "/store-banne-lyon/": "store-banne-beige-maison",
-  "/bardage-bois-lyon/": "bardage-thermo-epicea-pilotis",
+  "/bardage-bois-lyon/": "bardage-thermofrene-maison",
   "/bardage-aluminium-lyon/": "bardage-alu-horizontal-gris",
   // cartes « univers » de l'accueil
   "#terrasses": "terrasse-thermofrene-bord-de-loire",
   "#pergolas": "pergola-bioclimatique-salon-piscine",
-  "#bardage": "bardage-bambou-xtreme-patio",
+  "#bardage": "bardage-thermofrene-maison",
 };
 
 const svg = (d) => `<svg aria-hidden="true" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round">${d}</svg>`;

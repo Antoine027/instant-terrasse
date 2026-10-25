@@ -286,7 +286,7 @@ const bardageBois = {
   title: "Bardage bois Lyon : accoya, kebony, thermofrêne | Instant Terrasse",
   description: "Bardage bois sur mesure à Lyon : accoya gris ou naturel, kebony, bambou X-treme, thermofrêne, thermopin clear, thermo épicéa. Un bardage assorti à votre terrasse. Devis gratuit.",
   corps: `
-${heroPlein({ fil: "Terrasses & bardages", h1: ["Bardage bois", "sur mesure"], kicker: "Façades, murs et abris à Lyon et dans sa région", photo: "bardage-bambou-xtreme-maison", position: "62% 50%",
+${heroPlein({ fil: "Terrasses & bardages", h1: ["Bardage bois", "sur mesure"], kicker: "Façades, murs et abris à Lyon et dans sa région", photo: "bardage-thermofrene-maison", position: "70% 45%",
   chapo: "Habiller une façade, une extension, un mur de clôture ou un abri avec des bois sélectionnés pour durer en extérieur, et assortis à votre terrasse si vous le souhaitez.",
   actions: `<a class="bouton" href="/contact/">Demander une visite gratuite</a> <a class="bouton bouton-blanc" href="#essences-bardage">Voir les essences</a>` })}
 

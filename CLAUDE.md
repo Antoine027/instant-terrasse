@@ -14,7 +14,7 @@ Remplaçant du site WordPress/Elementor instantterrasse.com. Générateur Node s
 - Domaine principal SANS www (https://instantterrasse.com, comme le WordPress indexé) : SITE.url, canonical et sitemap l'utilisent ; dans Vercel, www doit rediriger vers la version sans www.
 - Redirections 301 des anciennes URL déjà en place dans vercel.json (articles, doublons, /category/, /form/). Reste à traiter : /politique-de-cookies-ue/ (vers la future page cookies).
 - Sitemap (dist/sitemap.xml, toujours généré) : seulement les pages rédigées ; les pages « en préparation » et techniques (merci, erreur) sont exclues et passent en noindex, follow une fois en ligne.
-- Pages à fort trafic encore en préparation, à rédiger avant la bascule : /nos-terrasses/ (position 3,5), /terrasse-sur-pilotis-lyon/, /terrasse-sur-plots-lyon/, /terrasse-balcon-lyon/, /terrasse-piscine-lyon/, /toit-terrasse-lyon/, /terrasse-rillieux-la-pape/, /terrasse-lyon/, /realisations/.
+- Pages à fort trafic encore en préparation, à rédiger avant la bascule : /nos-terrasses/ (position 3,5), /terrasse-sur-plots-lyon/, /terrasse-balcon-lyon/, /terrasse-piscine-lyon/, /toit-terrasse-lyon/, /terrasse-rillieux-la-pape/, /terrasse-lyon/, /realisations/.
 
 ## Contenu
 - Gamme (validée par Antoine le 21/10/2026) :

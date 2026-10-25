@@ -2425,5 +2425,86 @@
    1600
   ],
   "ratio": 1.3333
+ },
+ {
+  "cle": "pilotis-bois-facade-longue",
+  "dossier": "terrasses",
+  "categorie": "pilotis",
+  "alt": "Terrasse surélevée sur poteaux bois le long d'une façade, garde-corps aluminium et pare-vue bois",
+  "largeurs": [
+   400,
+   600,
+   800,
+   1000
+  ],
+  "ratio": 1.6064
+ },
+ {
+  "cle": "pilotis-bois-escalier-carport",
+  "dossier": "terrasses",
+  "categorie": "pilotis",
+  "alt": "Terrasse bois sur pilotis avec escalier et garde-corps aluminium noir, espace abrité dessous",
+  "largeurs": [
+   400,
+   600,
+   800,
+   1000,
+   1500
+  ],
+  "ratio": 0.75
+ },
+ {
+  "cle": "pilotis-terrain-pente",
+  "dossier": "terrasses",
+  "categorie": "pilotis",
+  "alt": "Terrasse bois sur pilotis dans un jardin en pente, garde-corps aluminium gris",
+  "largeurs": [
+   400,
+   600,
+   800,
+   1000,
+   1600
+  ],
+  "ratio": 1.3333
+ },
+ {
+  "cle": "pilotis-balcons-poteaux-bois",
+  "dossier": "terrasses",
+  "categorie": "pilotis",
+  "alt": "Deux niveaux de balcons sur poteaux bois avec garde-corps aluminium à lisses",
+  "largeurs": [
+   400,
+   600,
+   800,
+   1000,
+   1600
+  ],
+  "ratio": 1.4994
+ },
+ {
+  "cle": "pilotis-garde-corps-decoratif",
+  "dossier": "terrasses",
+  "categorie": "pilotis",
+  "alt": "Balcon sur poteaux bois avec garde-corps aluminium rouge à motif découpé",
+  "largeurs": [
+   400,
+   600,
+   800,
+   1000,
+   1600
+  ],
+  "ratio": 1.561
+ },
+ {
+  "cle": "pilotis-poteaux-acier-escalier",
+  "dossier": "terrasses",
+  "categorie": "pilotis",
+  "alt": "Terrasse surélevée sur poteaux métalliques avec escalier et garde-corps noir",
+  "largeurs": [
+   400,
+   600,
+   799
+  ],
+  "ratio": 1.3339
  }
 ]

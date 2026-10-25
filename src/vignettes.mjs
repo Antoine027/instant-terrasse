@@ -12,7 +12,7 @@ export const VIGNETTES = {
   "/terrasse-piscine-lyon/": "terrasse-bambou-ndurance-piscine-pierre",
   "/terrasse-balcon-lyon/": "gc-maison-verre-depoli",
   "/toit-terrasse-lyon/": "terrasse-bambou-xtreme-toit",
-  "/terrasse-sur-pilotis-lyon/": "gc-maison-pilotis-lames",
+  "/terrasse-sur-pilotis-lyon/": "pilotis-bois-escalier-carport",
   "/terrasse-sur-plots-lyon/": null,
   "/terrasse-restaurant-chr-lyon/": "terrasse-kebony-restaurant",
   "/terrasse-camping-hpa/": null,

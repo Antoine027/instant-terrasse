@@ -739,7 +739,41 @@ const carport = {
   }),
 };
 
+// ---------- Terrasse sur pilotis ----------
+const terrassePilotis = {
+  title: "Terrasse sur pilotis Lyon : terrasse surélevée sur mesure | Instant Terrasse",
+  description: "Terrasse sur pilotis à Lyon : une terrasse surélevée de plain-pied avec la maison, pour terrain en pente ou rez-de-jardin en contrebas. Garde-corps aluminium, plan 3D offert.",
+  corps: pageProduit({
+    fil: "Terrasses & bardages",
+    h1: ["Terrasse sur pilotis", "surélevée"], kicker: "Terrains en pente et étages à Lyon et dans sa région",
+    chapo: "Quand le jardin est en contrebas ou en pente, la terrasse sur pilotis sort de plain-pied depuis le séjour ou l'étage. Et l'espace gagné dessous devient un abri pour la voiture, le bois ou le salon de jardin.",
+    photo: "pilotis-bois-facade-longue", position: "50% 60%",
+    atouts: [
+      ["De plain-pied avec la maison", "On sort du séjour ou de la chambre sans marche, comme sur un balcon, mais avec la surface d'une vraie terrasse."],
+      ["Le terrain n'est plus un obstacle", "Pente, talus, sol irrégulier : les poteaux reprennent les différences de niveau, sans terrassement lourd."],
+      ["Un espace abrité dessous", "Le dessous de la terrasse protège une voiture, un salon de jardin ou le bois de chauffage."],
+      ["Sécurisée par un garde-corps", "Dès 1 m de hauteur de chute, un garde-corps est obligatoire : aluminium à lisses, à barreaux, vitré ou décoratif."],
+      ["Le revêtement de votre choix", "Bois, composite ou lames aluminium : le platelage se choisit comme pour une terrasse au sol."],
+      ["Étudiée dans son ensemble", "Poteaux, garde-corps, accès au jardin : tout est dessiné sur le plan 3D avant de commander."],
+    ],
+    galerieCat: "pilotis",
+    titreGalerie: "Terrasses sur pilotis en situation",
+    details: `<h2>Avant de se lancer</h2>
+      <p>Une terrasse surélevée est une construction à part entière : au-delà de 60 cm de hauteur, une déclaration préalable de travaux est en général nécessaire, et un permis de construire selon la surface. Nous regardons la règle de votre commune avec vous.</p>
+      <p>Les poteaux reposent sur des fondations adaptées au sol, et la hauteur de chute détermine le <a href="/garde-corps-aluminium-lyon/">garde-corps</a>. Pour comprendre les différentes ossatures, voyez notre page <a href="/structure-terrasse-lyon/">structures de terrasse</a>.</p>`,
+    complement: "Nous venons voir la hauteur, la pente et l'accès au jardin, et le plan 3D de votre terrasse est offert.",
+    titreVoisins: "Pour aller plus loin",
+    voisins: [
+      ["/garde-corps-aluminium-lyon/", "Garde-corps aluminium", "Obligatoire sur une terrasse surélevée, il peut aussi l'embellir."],
+      ["/structure-terrasse-lyon/", "Structures de terrasse", "Traditionnelle ou aluminium : ce qui porte votre terrasse."],
+      ["/terrasse-bois-lyon/", "Terrasse bois", "Les essences pour le platelage, du thermopin à l'ipé."],
+    ],
+    ctaTitre: "Un projet de terrasse surélevée ?",
+  }),
+};
+
 export const CONTENUS = {
+  "/terrasse-sur-pilotis-lyon/": terrassePilotis,
   "/carport-lyon/": carport,
   "/store-banne-lyon/": storeBanne,
   "/terrasse-composite-lyon/": terrasseComposite,

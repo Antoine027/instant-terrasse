@@ -3,7 +3,7 @@ import { carteProduit, vignette } from "./vignettes.mjs";
 // Plan du site et contenu des pages. Une entrée = une page (chemin avec / final).
 // statut "preparation" : page affichée avec un contenu provisoire, à rédiger.
 export const SITE = {
-  url: "https://www.instantterrasse.com",
+  url: "https://instantterrasse.com",
   tel: "04 82 53 18 74",
   telLien: "+33482531874",
   whatsapp: "https://wa.me/33482531874",

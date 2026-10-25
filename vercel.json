@@ -5,19 +5,95 @@
   "framework": null,
   "cleanUrls": true,
   "trailingSlash": true,
-  "regions": ["cdg1"],
+  "regions": [
+    "cdg1"
+  ],
+  "redirects": [
+    {
+      "source": "/nosterrasses/",
+      "destination": "/nos-terrasses/",
+      "statusCode": 301
+    },
+    {
+      "source": "/comment-choisir-sa-terrasse/",
+      "destination": "/nos-terrasses/",
+      "statusCode": 301
+    },
+    {
+      "source": "/terrasse-bois-ou-composite/",
+      "destination": "/nos-terrasses/",
+      "statusCode": 301
+    },
+    {
+      "source": "/prix-terrasse-lyon/",
+      "destination": "/nos-terrasses/",
+      "statusCode": 301
+    },
+    {
+      "source": "/amenagement-terrasse-lyon/",
+      "destination": "/",
+      "statusCode": 301
+    },
+    {
+      "source": "/la-terrasse-aluminium/",
+      "destination": "/terrasse-aluminium-lyon/",
+      "statusCode": 301
+    },
+    {
+      "source": "/terrasse-aluminium/",
+      "destination": "/terrasse-aluminium-lyon/",
+      "statusCode": 301
+    },
+    {
+      "source": "/terrasse-composite/",
+      "destination": "/terrasse-composite-lyon/",
+      "statusCode": 301
+    },
+    {
+      "source": "/comment-nettoyer-une-terrasse-en-bois/",
+      "destination": "/terrasse-bois-lyon/",
+      "statusCode": 301
+    },
+    {
+      "source": "/category/:slug*",
+      "destination": "/conseils/",
+      "statusCode": 301
+    },
+    {
+      "source": "/form/:slug*",
+      "destination": "/contact/",
+      "statusCode": 301
+    }
+  ],
   "headers": [
     {
       "source": "/assets/(.*)",
-      "headers": [{ "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }]
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
     },
     {
       "source": "/(.*)",
       "headers": [
-        { "key": "X-Robots-Tag", "value": "noindex, nofollow" },
-        { "key": "X-Content-Type-Options", "value": "nosniff" },
-        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
-        { "key": "X-Frame-Options", "value": "DENY" }
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow"
+        },
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "DENY"
+        }
       ]
     }
   ]

@@ -119,6 +119,10 @@ const preloadLcp = (corps = "") => {
   return srcset ? `<link rel="preload" as="image" imagesrcset="${srcset}" imagesizes="${sizes ?? "100vw"}" fetchpriority="high">` : "";
 };
 
+// Pages exclues du sitemap et non indexées : pages techniques et pages encore « en préparation »
+// (contenu trop mince pour Google ; elles rejoignent le sitemap dès qu'elles sont rédigées).
+const horsSitemap = (p) => p.horsPlan || p.statut === "preparation";
+
 // ---------- Gabarit ----------
 const gabarit = (p) => `<!doctype html>
 <html lang="fr">
@@ -127,7 +131,7 @@ const gabarit = (p) => `<!doctype html>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>${esc(p.title)}</title>
 <meta name="description" content="${esc(p.description)}">
-${EN_LIGNE ? `<link rel="canonical" href="${SITE.url}${p.chemin}">` : `<meta name="robots" content="noindex, nofollow">`}
+${!EN_LIGNE ? `<meta name="robots" content="noindex, nofollow">` : horsSitemap(p) ? `<meta name="robots" content="noindex, follow">` : `<link rel="canonical" href="${SITE.url}${p.chemin}">`}
 <meta property="og:title" content="${esc(p.title)}">
 <meta property="og:description" content="${esc(p.description)}">
 <meta property="og:locale" content="fr_FR">
@@ -174,10 +178,9 @@ writeFileSync(join(DIST, "robots.txt"), EN_LIGNE
   ? `User-agent: *\nAllow: /\nSitemap: ${SITE.url}/sitemap.xml\n`
   : `User-agent: *\nDisallow: /\n`);
 
-if (EN_LIGNE) {
-  const urls = PAGES.filter((p) => !p.horsPlan).map((p) => `<url><loc>${SITE.url}${p.chemin}</loc></url>`).join("");
-  writeFileSync(join(DIST, "sitemap.xml"), `<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${urls}</urlset>`);
-}
+// Sitemap toujours généré (pour contrôle), mais annoncé dans robots.txt seulement une fois en ligne.
+const urls = PAGES.filter((p) => !horsSitemap(p)).map((p) => `<url><loc>${SITE.url}${p.chemin}</loc></url>`).join("\n");
+writeFileSync(join(DIST, "sitemap.xml"), `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls}\n</urlset>\n`);
 
 const aRediger = PAGES.filter((p) => p.statut === "preparation").length;
 console.log(`OK : ${PAGES.length} pages générées (${aRediger} en préparation) — ${EN_LIGNE ? "site EN LIGNE (indexable)" : "site de TEST (non indexé)"}`);

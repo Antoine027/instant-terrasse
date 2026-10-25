@@ -324,7 +324,8 @@ details[open]>summary.menu-lien::after{transform:translateY(2px) rotate(225deg)}
 @media (max-width:420px){.hero-slogan h1{font-size:2.2rem}}
 @media (min-width:1101px){
   .hero-slogan{--bord:max(16px,calc((100vw - 1180px) / 2))}
-  .hero-slogan::before{background:linear-gradient(90deg,rgba(24,20,16,.55) 0,rgba(24,20,16,.62) calc(var(--bord) + 120px),rgba(24,20,16,.45) calc(var(--bord) + 560px),rgba(24,20,16,.12) calc(var(--bord) + 820px),rgba(24,20,16,0) calc(var(--bord) + 980px))}
+  .hero-slogan::before{background:linear-gradient(90deg,rgba(240,232,218,.35) 0,rgba(240,232,218,.8) calc(var(--bord) + 10px),rgba(240,232,218,.74) calc(var(--bord) + 470px),rgba(240,232,218,.35) calc(var(--bord) + 640px),rgba(240,232,218,0) calc(var(--bord) + 780px))}
+  .hero-slogan h1,.hero-slogan .chapo{text-shadow:0 0 24px rgba(240,232,218,.9),0 0 6px rgba(240,232,218,.7)}
 }
 .hero-slogan h1 sup{font-size:.45em;vertical-align:super;line-height:0}
 .hero-slogan .h-img{object-position:60% 60%}
@@ -344,13 +345,3 @@ details[open]>summary.menu-lien::after{transform:translateY(2px) rotate(225deg)}
 .piece-liens a{display:inline-block;border:1px solid rgba(47,52,55,.18);border-radius:999px;padding:7px 14px;font:600 .88rem Montserrat,sans-serif;text-decoration:none;background:#fff}
 .piece-liens a:hover{border-color:var(--bouton);color:var(--bouton)}
 @media (max-width:900px){.pieces{grid-template-columns:1fr;gap:40px}.piece-photo{aspect-ratio:4/3}}
-
-/* Accueil : texte clair sur photo de soirée */
-@media (min-width:701px){
-  .hero-slogan::after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(180deg,rgba(24,20,16,.25) 0,rgba(24,20,16,0) 30%)}
-  .hero-slogan h1 .fin{color:#fff}
-  .hero-slogan h1 .fort{color:#E3A94A}
-  .hero-slogan .chapo{color:#F3ECE1}
-  .hero-slogan h1,.hero-slogan .chapo{text-shadow:0 2px 18px rgba(0,0,0,.35)}
-}
-@media (min-width:701px) and (max-width:1100px){.hero-slogan::before{background:linear-gradient(90deg,rgba(24,20,16,.62) 0%,rgba(24,20,16,.5) 55%,rgba(24,20,16,.15) 85%,rgba(24,20,16,0) 100%)}}

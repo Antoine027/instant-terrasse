@@ -986,7 +986,35 @@ const toitTerrasse = {
   }),
 };
 
+// ---------- Galerie (page /realisations/) ----------
+// Photos fournisseurs : présentées comme illustrations, jamais comme chantiers Instant Terrasse.
+const GROUPES_GALERIE = [
+  ["terrasse-bois", "Terrasses bois"], ["terrasse-aluminium", "Terrasses aluminium"], ["terrasse-composite", "Terrasses composite"],
+  ["terrasse-carrelage", "Terrasses carrelage"], ["pilotis", "Terrasses sur pilotis"], ["structure-alu", "Structures"],
+  ["bardage-bois", "Bardage bois"], ["bardage-pose", "Bardage bois"], ["bardage-aluminium", "Bardage aluminium"],
+  ["pergola-bioclimatique", "Pergolas"], ["pergola-toile-retractable", "Pergolas"], ["pergola-toit-fixe", "Pergolas"],
+  ["carport", "Carports"], ["store-banne", "Stores bannes"], ["garde-corps", "Garde-corps"],
+];
+const libelleGalerie = Object.fromEntries(GROUPES_GALERIE);
+const ordreGalerie = GROUPES_GALERIE.map(([c]) => c);
+const realisations = {
+  title: "Galerie photos : terrasses, pergolas, garde-corps | Instant Terrasse",
+  description: "Photos de terrasses bois, aluminium et composite, pergolas, stores bannes, carports, bardages et garde-corps aluminium pour inspirer votre projet à Lyon.",
+  corps: `
+${heroPlein({ fil: "Galerie", h1: ["Galerie", "d'inspiration"], kicker: "Terrasses, pergolas, bardages et garde-corps",
+  chapo: "Toute notre gamme en images, classée par produit. Ces photos sont des illustrations de nos fabricants ; les photos de nos propres chantiers viendront s'ajouter ici au fil des projets.",
+  photo: "terrasse-thermofrene-pool-house", position: "60% 50%",
+  actions: `<a class="bouton" href="/contact/">Demander une visite gratuite</a> <a class="bouton bouton-blanc" href="#galerie">Voir les photos</a>` })}
+<section id="galerie" class="bloc">
+  <div class="conteneur">
+    ${galerie(PHOTOS.filter((p) => libelleGalerie[p.categorie]).sort((a, b) => ordreGalerie.indexOf(a.categorie) - ordreGalerie.indexOf(b.categorie)).map((p) => p.cle), { titre: "Toutes les photos", intro: "Choisissez une catégorie, et cliquez sur une photo pour l'agrandir.", groupe: (p) => libelleGalerie[p.categorie] })}
+  </div>
+</section>
+${cta("Une photo vous plaît ?", "Montrez-la-nous lors du rendez-vous : nous partons de vos envies pour dessiner votre projet en 3D.")}`,
+};
+
 export const CONTENUS = {
+  "/realisations/": realisations,
   "/nos-terrasses/": nosTerrasses,
   "/terrasse-sur-plots-lyon/": terrassePlots,
   "/terrasse-balcon-lyon/": terrasseBalcon,

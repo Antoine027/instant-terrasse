@@ -21,12 +21,13 @@ export const imgPhoto = (cle, { sizes = "(max-width:760px) 100vw, 400px", priori
 };
 
 // Galerie filtrable par essence pour une catégorie (ex. "terrasse-bois").
-export const galerie = (categorie, { titre, intro, legende = "Illustrations" } = {}) => {
+export const galerie = (categorie, { titre, intro, legende = "Illustrations", groupe } = {}) => {
   // categorie : nom de catégorie, ou liste de clés de photos (sélection sans filtres).
   const selection = Array.isArray(categorie);
-  const liste = selection ? categorie.map(photo) : PHOTOS.filter((p) => p.categorie === categorie);
+  // groupe : fonction qui donne le libellé de filtre d'une photo (sinon son essence).
+  const liste = (selection ? categorie.map(photo) : PHOTOS.filter((p) => p.categorie === categorie)).map((p) => (groupe ? { ...p, essence: groupe(p) } : p));
   if (!liste.length) return "";
-  const essences = selection ? [] : [...new Set(liste.map((p) => p.essence).filter(Boolean))];
+  const essences = selection && !groupe ? [] : [...new Set(liste.map((p) => p.essence).filter(Boolean))];
   return `
 <div class="galerie-bloc" data-galerie>
   ${titre ? `<h2>${titre}</h2>` : ""}${intro ? `<p class="chapo">${intro}</p>` : ""}

@@ -14,7 +14,8 @@ Remplaçant du site WordPress/Elementor instantterrasse.com. Générateur Node s
 - Domaine principal SANS www (https://instantterrasse.com, comme le WordPress indexé) : SITE.url, canonical et sitemap l'utilisent ; dans Vercel, www doit rediriger vers la version sans www.
 - Redirections 301 des anciennes URL déjà en place dans vercel.json (articles, doublons, /category/, /form/). /politique-de-cookies-ue/ redirige vers /confidentialite/.
 - Sitemap (dist/sitemap.xml, toujours généré) : seulement les pages rédigées ; les pages « en préparation » et techniques (merci, erreur) sont exclues et passent en noindex, follow une fois en ligne.
-- Pages à fort trafic encore en préparation, à rédiger avant la bascule : /terrasse-rillieux-la-pape/, /terrasse-lyon/ (Antoine a des photos particulières), /realisations/.
+- Pages à fort trafic encore en préparation, à rédiger avant la bascule : /terrasse-rillieux-la-pape/, /terrasse-lyon/ (Antoine a des photos particulières).
+- /realisations/ (menu « Galerie ») : galerie d'inspiration de toutes les photos produit, filtrée par catégorie, présentée honnêtement comme illustrations fabricants. Les vrais chantiers y seront ajoutés quand Antoine les fournira.
 - Pages légales : /mentions-legales/ et /confidentialite/ (site sans cookie). Capital social d'ESCOM HABITAT à compléter (constante SOCIETE dans src/pages.mjs).
 
 ## Contenu

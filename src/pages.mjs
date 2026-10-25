@@ -90,7 +90,7 @@ export const UNIVERS = [
 
 // Pages hors univers (navigation secondaire et pied de page).
 export const AUTRES = [
-  ["/realisations/", "Réalisations", "Quelques chantiers Instant Terrasse."],
+  ["/realisations/", "Galerie", "Toute la gamme en photos, classée par produit."],
   ["/conseils/", "Conseils", "Prix, choix des matériaux, entretien : nos guides."],
   ["/quisommesnous/", "À propos", "Qui est derrière Instant Terrasse."],
   ["/contact/", "Contact et devis", "Parlez-nous de votre projet : devis gratuit."],

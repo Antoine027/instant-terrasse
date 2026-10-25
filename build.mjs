@@ -61,7 +61,7 @@ const entete = (actuel) => `
     <nav class="menu" aria-label="Navigation principale">
       <ul class="menu-liste">
         ${UNIVERS.map((u) => menuUnivers(u, actuel)).join("")}
-        <li class="menu-item"><a class="menu-lien${actuel === "/realisations/" ? " actif" : ""}" href="/realisations/">Réalisations</a></li>
+        <li class="menu-item"><a class="menu-lien${actuel === "/realisations/" ? " actif" : ""}" href="/realisations/">Galerie</a></li>
         <li class="menu-item"><a class="menu-lien" href="/#methode">Notre méthode</a></li>
       </ul>
     </nav>

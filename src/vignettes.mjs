@@ -4,7 +4,7 @@ import { imgPhoto } from "./galerie.mjs";
 
 export const VIGNETTES = {
   "/terrasse-bois-lyon/": "terrasse-kebony-piscine-debordement",
-  "/terrasse-composite-lyon/": null,
+  "/terrasse-composite-lyon/": "composite-gris-piscine",
   "/terrasse-carrelage-lyon/": null,
   "/terrasse-aluminium-lyon/": "alu-piscine-aspect-teck",
   "/structure-terrasse-lyon/": "structure-plot-rail-lame",

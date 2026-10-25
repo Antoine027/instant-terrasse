@@ -646,7 +646,45 @@ ${heroPlein({ fil: "Bardage", h1: ["Bardage aluminium", "sur mesure"], kicker: "
 ${cta("Un projet de bardage aluminium ?", "Devis gratuit et sans engagement. Nous venons voir votre façade avec les échantillons de teintes.")}`,
 };
 
+// ---------- Terrasse composite ----------
+const terrasseComposite = {
+  title: "Terrasse composite Lyon : sur structure aluminium | Instant Terrasse",
+  description: "Terrasse composite sur mesure à Lyon, posée sur structure aluminium garantie 20 ans : lames sans écharde, sans saturateur, en plusieurs teintes. Devis gratuit.",
+  corps: `
+${heroPlein({ fil: "Terrasses", h1: ["Terrasse composite", "sur mesure"], kicker: "Terrasses sans entretien à Lyon et dans sa région", photo: "composite-gris-piscine", position: "50% 60%",
+  chapo: "Des lames qui gardent leur aspect sans saturateur ni ponçage, posées sur notre structure aluminium : la terrasse pour profiter de l'extérieur sans y passer ses week-ends.",
+  actions: `<a class="bouton" href="/contact/">Demander une visite gratuite</a> <a class="bouton bouton-blanc" href="/structure-terrasse-lyon/">Notre structure</a>` })}
+
+<section class="bloc bloc-alt">
+  <div class="conteneur">
+    <h2>Les points forts</h2>
+    <div class="grille grille-3">
+      <div class="carte"><h3>Pas d'entretien lourd</h3><p>Ni saturateur, ni ponçage, ni lasure : un nettoyage à l'eau savonneuse suffit.</p></div>
+      <div class="carte"><h3>Confortable pieds nus</h3><p>Pas d'écharde ni de fente : idéal autour d'une piscine et pour les enfants.</p></div>
+      <div class="carte"><h3>Une teinte qui tient</h3><p>Gris, brun ou beige : la couleur se stabilise après quelques mois, sans virer au gris comme le bois.</p></div>
+      <div class="carte"><h3>Sur structure aluminium</h3><p>Rails aluminium sur plots réglables, garantis 20 ans : une terrasse plane et ventilée, qui ne bouge pas.</p></div>
+      <div class="carte"><h3>Fixation invisible</h3><p>Aucune vis en surface : des lignes nettes, et une lame se remplace sans tout démonter.</p></div>
+      <div class="carte"><h3>Pour tous les projets</h3><p>Plage de piscine, terrasse de plain-pied, balcon, toit-terrasse ou terrasse surélevée.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="bloc">
+  <div class="conteneur deux-colonnes deux-colonnes-image">
+    <div class="photo-produit">${imgPhoto("structure-plot-rail-lame", { sizes: "(max-width:1060px) 90vw, 460px" })}</div>
+    <div>
+      <h2>Composite ou bois ?</h2>
+      <p>Le composite vise la tranquillité : une teinte stable et quasiment aucun entretien. Le <a href="/terrasse-bois-lyon/">bois</a> apporte un matériau naturel, qui vit et se patine avec le temps. Les deux se posent sur la même structure aluminium.</p>
+      <p>Lors de la visite, nous venons avec des échantillons des deux pour les comparer chez vous, à la lumière de votre jardin. Vous pouvez aussi consulter notre <a href="/nos-terrasses/">comparatif des matériaux</a>.</p>
+      <p>${POSE}</p>
+    </div>
+  </div>
+</section>
+${cta("Un projet de terrasse composite ?", "Devis gratuit et sans engagement. Nous venons chez vous avec les échantillons de teintes, et le plan 3D de votre projet est offert.")}`,
+};
+
 export const CONTENUS = {
+  "/terrasse-composite-lyon/": terrasseComposite,
   "/bardage-aluminium-lyon/": bardageAluminium,
   "/terrasse-carrelage-lyon/": terrasseCarrelage,
   "/terrasse-aluminium-lyon/": terrasseAluminium,

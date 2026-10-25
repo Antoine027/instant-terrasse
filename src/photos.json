@@ -2298,5 +2298,19 @@
    1600
   ],
   "ratio": 1.7879
+ },
+ {
+  "cle": "composite-gris-piscine",
+  "dossier": "composite",
+  "categorie": "terrasse-composite",
+  "alt": "Terrasse en lames composite grises autour d'une piscine octogonale, salon de jardin et bains de soleil",
+  "largeurs": [
+   400,
+   600,
+   800,
+   1000,
+   1600
+  ],
+  "ratio": 1.7827
  }
 ]

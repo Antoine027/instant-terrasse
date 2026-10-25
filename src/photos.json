@@ -2646,5 +2646,19 @@
    1600
   ],
   "ratio": 1.8745
+ },
+ {
+  "cle": "carrelage-toit-terrasse-montagnes",
+  "dossier": "terrasses",
+  "categorie": "terrasse-carrelage",
+  "alt": "Toit-terrasse en grandes dalles de grès cérame clair, table et parasol face aux montagnes",
+  "largeurs": [
+   400,
+   600,
+   800,
+   1000,
+   1075
+  ],
+  "ratio": 1.5056
  }
 ]

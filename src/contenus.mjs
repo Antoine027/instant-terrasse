@@ -547,14 +547,10 @@ const terrasseCarrelage = {
   title: "Terrasse carrelage Lyon : grès cérame sur plots | Instant Terrasse",
   description: "Terrasse en carrelage grès cérame sur mesure à Lyon : pose sans colle sur plots ou sur structure aluminium, grands formats, mélange bois et carrelage. Devis gratuit.",
   corps: `
-<section class="hero hero-page">
-  <div class="conteneur">
-    <p class="fil"><a href="/">Accueil</a> › Terrasses & bardages</p>
-    <h1>Terrasse en carrelage grès cérame à Lyon</h1>
-    <p class="chapo">Des dalles de grès cérame épaisses, posées à sec sur plots ou sur une structure aluminium : ni colle, ni joint, ni dalle béton à couler. Une terrasse minérale, facile à vivre et démontable dalle par dalle.</p>
-    <p class="actions"><a class="bouton" href="/contact/">Demander un devis gratuit</a> <a class="bouton bouton-clair" href="/structure-terrasse-lyon/#comparatif-carrelage">Plots ou structure aluminium ?</a></p>
-  </div>
-</section>
+${heroPlein({ fil: "Terrasses & bardages", h1: ["Terrasse en carrelage", "grès cérame"], kicker: "Terrasses sur mesure à Lyon et dans sa région",
+  chapo: "Des dalles de grès cérame épaisses, posées à sec sur plots ou sur une structure aluminium : ni colle, ni joint, ni dalle béton à couler. Une terrasse minérale, facile à vivre et démontable dalle par dalle.",
+  photo: "carrelage-toit-terrasse-montagnes", position: "60% 60%",
+  actions: `<a class="bouton" href="/contact/">Demander une visite gratuite</a> <a class="bouton bouton-blanc" href="/structure-terrasse-lyon/#comparatif-carrelage">Plots ou structure ?</a>` })}
 
 <section class="bloc bloc-alt">
   <div class="conteneur">

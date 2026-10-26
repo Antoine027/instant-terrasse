@@ -630,3 +630,4 @@ details[open]>summary.menu-lien::after{transform:translateY(2px) rotate(225deg)}
 }
 .pt-lien{margin-bottom:0}
 @media (min-width:901px){.pt-corps{padding:26px 36px 24px}.pt-photo{min-height:0}}
+.pt-lien{margin-bottom:0!important}.pt-materiaux{margin-bottom:0}@media (min-width:901px){.pt-corps{padding-bottom:28px}}

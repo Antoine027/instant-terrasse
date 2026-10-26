@@ -612,3 +612,6 @@ details[open]>summary.menu-lien::after{transform:translateY(2px) rotate(225deg)}
 }
 
 @media (min-width:1241px){.sous-menu-large{display:grid;grid-template-columns:auto auto;gap:22px 44px;left:-60px}}
+@media (min-width:901px){.pt-corps h3{margin-bottom:22px}.pt-photo{min-height:0}.pt-corps{padding:34px 40px 32px}}
+@media (min-width:901px){.pt-corps h3{margin-bottom:22px}.pt-photo{min-height:0}.pt-corps{padding:34px 40px 32px}}
+.piece-terrasse{border-radius:0}

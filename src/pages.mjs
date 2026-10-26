@@ -199,7 +199,6 @@ const accueil = `
       <a class="pt-photo" href="/nos-terrasses/">${imgPhoto("terrasse-thermofrene-piscine-mer", { sizes: "(max-width:900px) 92vw, 620px" })}</a>
       <div class="pt-corps">
         <p class="pt-sur">Terrasses</p><h3>Le sol de votre 5<sup>e</sup> pièce</h3>
-        <p>Bois, composite, lames aluminium ou carrelage, posés sur une structure garantie 20 ans. Nous vous apportons les échantillons pour choisir chez vous.</p>
         <div class="pt-materiaux">${MATERIAUX_ACCUEIL.map(([c, t, ph]) => `<a class="pt-mat" href="${c}">${imgPhoto(ph, { sizes: "200px" })}<span class="pt-nom">${t}</span></a>`).join("")}</div>
         <p class="pt-lien"><a class="bouton bouton-clair" href="/nos-terrasses/">Comparer les matériaux</a></p>
       </div>

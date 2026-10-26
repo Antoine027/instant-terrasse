@@ -452,7 +452,7 @@ details[open]>summary.menu-lien::after{transform:translateY(2px) rotate(225deg)}
 @media (max-width:700px){.pin-point{width:24px;height:24px}.pin-point::before{width:10px}.pin-point::after{height:10px}.pin-nom{font-size:.78rem;padding:6px 10px}}
 
 .hero-maison{margin-top:-80px;padding:118px 0 36px;background:linear-gradient(var(--fond2),var(--fond))}
-.hm-grille{display:grid;grid-template-columns:minmax(360px,460px) 1fr;gap:48px;align-items:center;margin:0;padding:0 0 0 max(32px,calc((100vw - 1500px) / 2))}
+.hm-grille{display:grid;grid-template-columns:minmax(340px,420px) 1fr;gap:48px;align-items:center;max-width:1500px;margin:0 auto;padding:0 32px}
 .hm-bas{max-width:1500px;margin:0 auto;padding:0 32px}
 .hm-bas{display:block}
 .hm-txt .kicker{margin-bottom:18px;white-space:nowrap;font-size:.84rem}
@@ -464,7 +464,7 @@ details[open]>summary.menu-lien::after{transform:translateY(2px) rotate(225deg)}
 .hero-maison .chapo{margin:0 0 26px;color:var(--texte);max-width:30rem}
 .hero-maison .actions{margin:0}
 .hm-visuel{position:relative}
-.hm-visuel .h-img{display:block;width:100%;height:auto;aspect-ratio:1672/880;object-fit:cover;object-position:80% 100%;border-radius:26px 0 0 26px;min-height:min(70vh,640px);box-shadow:0 30px 60px -30px rgba(47,52,55,.45)}
+.hm-visuel .h-img{display:block;width:100%;height:auto;aspect-ratio:1672/941;object-fit:cover;object-position:50% 50%;border-radius:26px;box-shadow:0 30px 60px -30px rgba(47,52,55,.45)}
 .hm-aide{margin:12px 0 0;text-align:center;font-size:.85rem;color:var(--doux)}
 .hero-maison .trio{margin:36px 0 0;max-width:none}
 @media (max-width:1150px){

@@ -168,19 +168,18 @@ const PIECES = [
 
 // Pastilles posées sur la maison de l'en-tête : [lien, nom, x %, y % de l'image, côté de l'étiquette].
 const PINS = [
-  ["/pergola-bioclimatique-lyon/", "Pergola bioclimatique", 41.5, 47.5],
-  ["/bardage-bois-lyon/", "Bardage bois", 46.5, 33],
-  ["/garde-corps-aluminium-lyon/", "Garde-corps aluminium", 64, 39.5],
-  ["/store-banne-lyon/", "Store banne", 69.5, 48.5],
-  ["/carport-lyon/", "Carport", 89, 49.5, "gauche"],
-  ["/terrasse-bois-lyon/", "Terrasse bois", 57, 67],
+  ["/pergola-bioclimatique-lyon/", "Pergola bioclimatique", 57.8, 46],
+  ["/bardage-bois-lyon/", "Bardage bois", 61, 19],
+  ["/store-banne-lyon/", "Store banne", 80, 26, "gauche"],
+  ["/garde-corps-aluminium-lyon/", "Garde-corps aluminium", 89, 62, "gauche"],
+  ["/terrasse-bois-lyon/", "Terrasse bois", 62, 78],
 ];
 const SCRIPT_PINS = `(()=>{const h=document.querySelector('.hm-visuel'),im=h&&h.querySelector('.h-img'),ps=h&&h.querySelectorAll('.pin');if(!im)return;const place=()=>{const r=im.getBoundingClientRect(),H=h.getBoundingClientRect(),nw=im.naturalWidth||1600,nh=im.naturalHeight||900,s=Math.max(r.width/nw,r.height/nh),w=nw*s,hh=nh*s,op=getComputedStyle(im).objectPosition.split(' ').map(parseFloat),ox=(r.width-w)*op[0]/100,oy=(r.height-hh)*op[1]/100;ps.forEach(p=>{const x=r.left-H.left+ox+w*p.dataset.x/100,y=r.top-H.top+oy+hh*p.dataset.y/100,vis=x>r.left-H.left+12&&x<r.right-H.left-12&&y>r.top-H.top+12&&y<r.bottom-H.top-12;p.style.left=x+'px';p.style.top=y+'px';p.hidden=!vis});h.classList.add('pins-prets')};im.complete?place():im.addEventListener('load',place);addEventListener('resize',place)})();`;
 
 const accueil = `
 <section class="hero-plein hero-slogan hero-maison-plein">
   <div class="hm-visuel">
-    ${imgPhoto("accueil-maison-5e-piece", { sizes: "(max-width:700px) calc(100vw - 32px), 70vw", prioritaire: true, classe: "h-img" })}
+    ${imgPhoto("accueil-terrasse-pergola-store", { sizes: "(max-width:700px) calc(100vw - 32px), 100vw", prioritaire: true, classe: "h-img" })}
     <div class="pins" aria-label="Nos produits sur la maison">${PINS.map(([c, t, x, y, cote]) => `<a class="pin${cote ? " pin-" + cote : ""}" href="${c}" data-x="${x}" data-y="${y}"><span class="pin-point" aria-hidden="true"></span><span class="pin-nom">${t}</span></a>`).join("")}</div>
   </div>
   <div class="conteneur h-txt">

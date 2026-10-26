@@ -194,7 +194,7 @@ const accueil = `
   <div class="conteneur">
     <p class="sous-titre">Votre 5<sup>e</sup> pièce</p>
     <h2>Terrasses, pergolas et garde-corps</h2>
-    <p class="chapo">Une pergola ajoutée sur une terrasse déjà posée, un garde-corps fixé après coup : c'est là que naissent les défauts. Nous dessinons le sol, la pergola et le garde-corps sur un même plan 3D, offert, pour que les hauteurs, les fixations et l'écoulement de l'eau soient prévus dès le départ.</p>
+    <p class="chapo">Le sol, la pergola, le garde-corps : tout est dessiné ensemble, sur un même plan 3D offert. Vous voyez votre terrasse finie avant de vous décider, et chaque élément s'accorde aux autres, des hauteurs aux finitions.</p>
     <article class="piece-terrasse">
       <a class="pt-photo" href="/nos-terrasses/">${imgPhoto("terrasse-thermofrene-piscine-mer", { sizes: "(max-width:900px) 92vw, 620px" })}</a>
       <div class="pt-corps">

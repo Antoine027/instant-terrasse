@@ -214,7 +214,7 @@ const accueil = `
     <h2>Terrasses, pergolas et garde-corps</h2>
     <p class="chapo">Le sol, ce qui le couvre et ce qui le borde se choisissent ensemble : hauteurs, fixations, écoulement de l'eau. Nous étudions tout le projet, pour une terrasse qui prolonge vraiment votre maison.</p>
     <article class="piece-terrasse">
-      <a class="pt-photo" href="/nos-terrasses/">${imgPhoto("terrasse-bambou-ndurance-pergola", { sizes: "(max-width:900px) 92vw, 620px" })}</a>
+      <a class="pt-photo" href="/nos-terrasses/">${imgPhoto("terrasse-thermofrene-piscine-mer", { sizes: "(max-width:900px) 92vw, 620px" })}</a>
       <div class="pt-corps">
         <p class="pt-sur">Terrasses</p><h3>Le sol de votre 5<sup>e</sup> pièce</h3>
         <p>Bois, composite, lames aluminium ou carrelage, posés sur une structure garantie 20 ans. Nous vous apportons les échantillons pour choisir chez vous.</p>

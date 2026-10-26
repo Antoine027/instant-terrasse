@@ -214,16 +214,16 @@ const accueil = `
     <h2>Terrasses, pergolas et garde-corps</h2>
     <p class="chapo">Le sol, ce qui le couvre et ce qui le borde se choisissent ensemble : hauteurs, fixations, écoulement de l'eau. Nous étudions tout le projet, pour une terrasse qui prolonge vraiment votre maison.</p>
     <article class="piece-terrasse">
-      <a class="pt-photo" href="/nos-terrasses/">${imgPhoto("terrasse-thermofrene-pool-house", { sizes: "(max-width:900px) 92vw, 520px" })}<span class="piece-etiquette">Terrasses</span></a>
+      <a class="pt-photo" href="/nos-terrasses/">${imgPhoto("ambiance-plage-piscine", { sizes: "(max-width:900px) 92vw, 520px" })}</a>
       <div class="pt-corps">
-        <h3>Le sol de votre 5<sup>e</sup> pièce</h3>
+        <p class="pt-sur">Terrasses</p><h3>Le sol de votre 5<sup>e</sup> pièce</h3>
         <p>Bois, composite, lames aluminium ou carrelage, posés sur une structure garantie 20 ans. Nous vous apportons les échantillons pour choisir chez vous.</p>
-        <div class="pt-materiaux">${MATERIAUX_ACCUEIL.map(([c, t, ph]) => `<a class="pt-mat" href="${c}">${imgPhoto(ph, { sizes: "200px" })}<span>${t}<span class="fleche" aria-hidden="true">→</span></span></a>`).join("")}</div>
-        <p class="pt-lien"><a href="/nos-terrasses/">Comparer les matériaux</a></p>
+        <div class="pt-materiaux">${MATERIAUX_ACCUEIL.map(([c, t, ph]) => `<a class="pt-mat" href="${c}">${imgPhoto(ph, { sizes: "200px" })}<span class="pt-nom">${t}</span></a>`).join("")}</div>
+        <p class="pt-lien"><a class="bouton bouton-clair" href="/nos-terrasses/">Comparer les matériaux</a></p>
       </div>
     </article>
     <div class="pieces-4">
-      ${AUTRES_PIECES.map(([c, t, x, ph]) => `<a class="piece-mini" href="${c}"><div class="pm-photo">${imgPhoto(ph, { sizes: "(max-width:600px) 92vw, (max-width:1100px) 45vw, 280px" })}</div><div class="pm-corps"><h3>${t}</h3><p>${x}</p><span class="fleche" aria-hidden="true">→</span></div></a>`).join("")}
+      ${AUTRES_PIECES.map(([c, t, x, ph]) => `<a class="piece-mini" href="${c}">${imgPhoto(ph, { sizes: "(max-width:600px) 46vw, (max-width:1100px) 45vw, 290px" })}<div class="pm-corps"><h3>${t}</h3><p>${x}</p></div><span class="pm-fleche" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></span></a>`).join("")}
     </div>
   </div>
 </section>

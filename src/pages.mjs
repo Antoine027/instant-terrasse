@@ -16,76 +16,50 @@ export const POSE =
 // Les univers structurent le menu, l'accueil et le maillage interne.
 export const UNIVERS = [
   {
-    cle: "terrasses",
-    nom: "Terrasses & bardages",
-    cascade: true,
-    accroche: "Bois, composite, carrelage ou aluminium au sol, bois ou aluminium en façade.",
-    groupes: [
-      {
-        nom: "Par matériau", photo: "terrasse-kebony-piscine-debordement",
-        pages: [
-          ["/terrasse-bois-lyon/", "Terrasse bois", "Bois modifiés et bambou sur structure aluminium, ou bois massifs et exotiques sur structure traditionnelle."],
-          ["/terrasse-composite-lyon/", "Terrasse composite", "Sans entretien, posée sur structure aluminium."],
-          ["/terrasse-carrelage-lyon/", "Terrasse carrelage", "Grès cérame sur plots ou sur structure aluminium."],
-          ["/terrasse-aluminium-lyon/", "Terrasse en lames aluminium", "Imputrescible, stable, en coloris unis ou aspect bois."],
-          ["/structure-terrasse-lyon/", "Nos structures", "Traditionnelle, aluminium ou sur plots : la base qui fait durer une terrasse."],
-          ["/nos-terrasses/", "Comparatif des matériaux", "Bois, composite, carrelage ou aluminium : lequel choisir ?"],
-        ],
-      },
-{
-        nom: "Bardage", photo: "bardage-thermofrene-maison",
-        pages: [
-          ["/bardage-bois-lyon/", "Bardage bois", "Accoya, kebony, bambou, thermofrêne, thermopin ou thermo épicéa : un bardage assorti à votre terrasse."],
-          ["/bardage-aluminium-lyon/", "Bardage aluminium", "Une façade moderne, sans entretien."],
-        ],
-      },
-      {
-        nom: "Par projet", photo: "ambiance-plage-piscine",
-        pages: [
-          ["/terrasse-piscine-lyon/", "Terrasse de piscine", "Une plage confortable et sûre autour du bassin."],
-          ["/terrasse-balcon-lyon/", "Balcon", "Rénover le sol d'un balcon, sans travaux lourds."],
-          ["/toit-terrasse-lyon/", "Toit-terrasse", "Créer un espace de vie sur une toiture plate."],
-          ["/terrasse-sur-pilotis-lyon/", "Terrasse sur pilotis", "La solution pour les terrains en pente."],
-          ["/terrasse-sur-plots-lyon/", "Terrasse et dalles sur plots", "Poser sans fondation sur un support existant."],
-        ],
-      },
-      {
-        nom: "Professionnels", photo: "terrasse-kebony-restaurant",
-        pages: [
-          ["/terrasse-restaurant-chr-lyon/", "Restaurants, cafés, hôtels", "Des terrasses robustes pour l'accueil du public."],
-          ["/terrasse-camping-hpa/", "Campings et hébergements", "Terrasses de mobil-homes, decks et pontons."],
-        ],
-      }
-    ],
+    cle: "terrasses", nom: "Terrasses",
+    accroche: "Bois, composite, aluminium ou carrelage, sur une structure qui dure.",
+    groupes: [{ nom: "Matériaux", pages: [
+      ["/terrasse-bois-lyon/", "Terrasse bois", "Bois modifiés et bambou sur structure aluminium, ou bois massifs et exotiques sur structure traditionnelle.", "Bois"],
+      ["/terrasse-composite-lyon/", "Terrasse composite", "Sans entretien, posée sur structure aluminium.", "Composite"],
+      ["/terrasse-aluminium-lyon/", "Terrasse en lames aluminium", "Imputrescible, stable, en coloris unis ou aspect bois.", "Aluminium"],
+      ["/terrasse-carrelage-lyon/", "Terrasse carrelage", "Grès cérame sur plots ou sur structure aluminium.", "Carrelage"],
+      ["/structure-terrasse-lyon/", "Nos structures", "Traditionnelle, aluminium ou sur plots : la base qui fait durer une terrasse.", "Structures"],
+      ["/nos-terrasses/", "Comparatif des matériaux", "Bois, composite, carrelage ou aluminium : lequel choisir ?", "Comparatif"],
+    ] }],
   },
   {
-    cle: "pergolas",
-    nom: "Pergolas & stores",
-    accroche: "Pergolas, stores bannes et carports pour profiter de l'extérieur en toute saison.",
-    groupes: [
-      {
-        nom: "Pergolas",
-        pages: [
-          ["/pergola-bioclimatique-lyon/", "Pergola bioclimatique", "Lames orientables : soleil, ombre ou pluie, vous choisissez."],
-          ["/pergola-toile-retractable-lyon/", "Pergola à toile rétractable", "Une toile qui se déploie et se replie à la demande."],
-          ["/pergola-toile-tendue-lyon/", "Pergola à toile tendue", "Une ombre légère et un style contemporain."],
-          ["/pergola-toit-fixe-lyon/", "Pergola à toit fixe", "Un abri permanent, à l'épreuve de la pluie."],
-        ],
-      },
-      {
-        nom: "Carports",
-        pages: [["/carport-lyon/", "Carport", "Un abri voiture élégant, sans construire de garage."]],
-      },
-      { nom: "Stores bannes", pages: [["/store-banne-lyon/", "Store banne", "Coffre intégral, motorisation, capteurs vent et soleil."]] }
-    ],
+    cle: "projets", nom: "Projets",
+    accroche: "Piscine, balcon, toit-terrasse ou terrain en pente.",
+    groupes: [{ nom: "Votre projet", pages: [
+      ["/terrasse-piscine-lyon/", "Terrasse de piscine", "Une plage confortable et sûre autour du bassin.", "Piscine"],
+      ["/terrasse-balcon-lyon/", "Balcon", "Rénover le sol d'un balcon, sans travaux lourds."],
+      ["/toit-terrasse-lyon/", "Toit-terrasse", "Créer un espace de vie sur une toiture plate."],
+      ["/terrasse-sur-pilotis-lyon/", "Terrasse sur pilotis", "La solution pour les terrains en pente.", "Pilotis"],
+      ["/terrasse-sur-plots-lyon/", "Terrasse et dalles sur plots", "Poser sans fondation sur un support existant.", "Plots"],
+    ] }],
   },
   {
-    cle: "garde-corps",
-    nom: "Garde-corps",
-    accroche: "Garde-corps aluminium pour terrasses, balcons et escaliers, sur mesure.",
-    groupes: [
-      { nom: "Garde-corps", pages: [["/garde-corps-aluminium-lyon/", "Garde-corps aluminium", "Barreaudage, verre ou tôle : sécurité et style, sans entretien."]] }
-    ],
+    cle: "professionnels", nom: "Professionnels",
+    accroche: "Restaurants, hôtels et campings.",
+    groupes: [{ nom: "Professionnels", pages: [
+      ["/terrasse-restaurant-chr-lyon/", "Restaurants, cafés, hôtels", "Des terrasses robustes pour l'accueil du public.", "Restaurants et hôtels (CHR)"],
+      ["/terrasse-camping-hpa/", "Campings et hébergements", "Terrasses de mobil-homes, decks et pontons.", "Campings (HPA)"],
+    ] }],
+  },
+  {
+    cle: "amenagements", nom: "Aménagements",
+    accroche: "Pergolas, stores, carports, garde-corps et bardages autour de la terrasse.",
+    groupes: [{ nom: "Autour de la terrasse", pages: [
+      ["/pergola-bioclimatique-lyon/", "Pergola bioclimatique", "Lames orientables : soleil, ombre ou pluie, vous choisissez."],
+      ["/pergola-toile-retractable-lyon/", "Pergola à toile rétractable", "Une toile qui se déploie et se replie à la demande."],
+      ["/pergola-toile-tendue-lyon/", "Pergola à toile tendue", "Une ombre légère et un style contemporain."],
+      ["/pergola-toit-fixe-lyon/", "Pergola à toit fixe", "Un abri permanent, à l'épreuve de la pluie."],
+      ["/store-banne-lyon/", "Store banne", "Coffre intégral, motorisation, capteurs vent et soleil."],
+      ["/carport-lyon/", "Carport", "Un abri voiture élégant, sans construire de garage."],
+      ["/garde-corps-aluminium-lyon/", "Garde-corps aluminium", "Barreaudage, verre ou tôle : sécurité et style, sans entretien.", "Garde-corps"],
+      ["/bardage-bois-lyon/", "Bardage bois", "Accoya, kebony, bambou, thermofrêne, thermopin ou thermo épicéa : un bardage assorti à votre terrasse."],
+      ["/bardage-aluminium-lyon/", "Bardage aluminium", "Une façade moderne, sans entretien."],
+    ] }],
   },
 ];
 
@@ -212,7 +186,7 @@ const accueil = `
   <div class="conteneur">
     <p class="sous-titre">Votre 5<sup>e</sup> pièce</p>
     <h2>Terrasses, pergolas et garde-corps</h2>
-    <p class="chapo">Le sol, ce qui le couvre et ce qui le borde se choisissent ensemble : hauteurs, fixations, écoulement de l'eau. Nous étudions tout le projet, pour une terrasse qui prolonge vraiment votre maison.</p>
+    <p class="chapo">Une pergola ajoutée sur une terrasse déjà posée, un garde-corps fixé après coup : c'est là que naissent les défauts. Nous dessinons le sol, la pergola et le garde-corps sur un même plan 3D, offert, pour que les hauteurs, les fixations et l'écoulement de l'eau soient prévus dès le départ.</p>
     <article class="piece-terrasse">
       <a class="pt-photo" href="/nos-terrasses/">${imgPhoto("terrasse-thermofrene-piscine-mer", { sizes: "(max-width:900px) 92vw, 620px" })}</a>
       <div class="pt-corps">

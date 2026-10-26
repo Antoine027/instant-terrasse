@@ -11,6 +11,10 @@ import { SCRIPT_GALERIE, imgPhoto } from "./src/galerie.mjs";
 for (const p of PAGES) if (CONTENUS[p.chemin]) Object.assign(p, CONTENUS[p.chemin], { statut: "redigee" });
 for (const c of Object.keys(CONTENUS)) if (!PAGES.some((p) => p.chemin === c)) throw new Error(`Contenu sans page dans le plan : ${c}`);
 
+// Pages « en préparation » : absentes des menus et du pied de page tant qu'elles ne sont pas rédigées.
+const PREP = new Set(PAGES.filter((p) => p.statut === "preparation").map((p) => p.chemin));
+const visible = ([c]) => !PREP.has(c);
+
 // Tant que le site est en test, il reste invisible pour les moteurs de recherche.
 // À passer à true seulement le jour de la bascule du domaine instantterrasse.com.
 const EN_LIGNE = false;
@@ -32,10 +36,12 @@ for (const p of PAGES) {
 }
 
 // ---------- Menu ----------
-const lienMenu = ([chemin, titre], actuel) =>
-  `<li><a href="${chemin}"${chemin === actuel ? ' aria-current="page"' : ""}>${titre}</a></li>`;
+const lienMenu = ([chemin, titre, , court], actuel) =>
+  `<li><a href="${chemin}"${chemin === actuel ? ' aria-current="page"' : ""}>${court ?? titre}</a></li>`;
 
-const menuUnivers = (u, actuel) => {
+const menuUnivers = (u0, actuel) => {
+  const u = { ...u0, groupes: u0.groupes.map((g) => ({ ...g, pages: g.pages.filter(visible) })).filter((g) => g.pages.length) };
+  if (!u.groupes.length) return "";
   const pages = u.groupes.flatMap((g) => g.pages);
   const dansUnivers = pages.some(([c]) => c === actuel);
   if (pages.length === 1) {
@@ -80,10 +86,10 @@ const pied = () => `
       <p>Terrasses, pergolas et aménagements extérieurs sur mesure — Lyon &amp; sa région.</p>
       <p><a href="tel:${SITE.telLien}">${SITE.tel}</a><br>${SITE.adresse}</p>
     </div>
-    ${UNIVERS.slice(0, 2).map((u) => `<div><p class="pied-titre">${u.nom}</p><ul>${u.groupes.flatMap((g) => g.pages).slice(0, 7).map(([c, t]) => `<li><a href="${c}">${t}</a></li>`).join("")}</ul></div>`).join("")}
+    ${[UNIVERS[0], UNIVERS[3]].map((u) => `<div><p class="pied-titre">${u.nom}</p><ul>${u.groupes.flatMap((g) => g.pages).filter(visible).slice(0, 9).map(([c, t]) => `<li><a href="${c}">${t}</a></li>`).join("")}</ul></div>`).join("")}
     <div>
       <p class="pied-titre">Et aussi</p>
-      <ul>${[...UNIVERS.slice(2).flatMap((u) => u.groupes.flatMap((g) => g.pages)), ...AUTRES].map(([c, t]) => `<li><a href="${c}">${t}</a></li>`).join("")}</ul>
+      <ul>${[...UNIVERS[1].groupes.flatMap((g) => g.pages), ...UNIVERS[2].groupes.flatMap((g) => g.pages), ...AUTRES].filter(visible).map(([c, t]) => `<li><a href="${c}">${t}</a></li>`).join("")}</ul>
     </div>
   </div>
   <p class="conteneur mentions">© ${new Date().getFullYear()} Instant Terrasse — une marque d'ESCOM HABITAT · <a href="/mentions-legales/">Mentions légales</a> · <a href="/confidentialite/">Confidentialité et cookies</a></p>

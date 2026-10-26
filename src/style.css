@@ -599,3 +599,6 @@ details[open]>summary.menu-lien::after{transform:translateY(2px) rotate(225deg)}
 .pt-mat{overflow:hidden;display:block}
 .pt-lien{margin-top:30px!important}
 @media (max-width:520px){.pm-corps h3{font-size:.95rem}}
+.piece-mini{aspect-ratio:1/1}
+.piece-mini[href="/store-banne-lyon/"]>img{object-position:30% 50%}
+.piece-mini[href="/pergola-bioclimatique-lyon/"]>img{object-position:50% 40%}

@@ -179,21 +179,21 @@ const SCRIPT_PINS = `(()=>{const h=document.querySelector('.hm-visuel'),im=h&&h.
 
 const accueil = `
 <section class="hero-maison">
-  <div class="conteneur hm-txt">
-    <p class="kicker">Terrasses, pergolas et garde-corps sur mesure à Lyon</p>
-    <h1><span class="fin">Créez la 5<sup>e</sup> pièce</span> <span class="fort">de votre maison</span></h1>
-    <p class="chapo">Une terrasse pensée comme une pièce à part entière : le lien entre l'intérieur et l'extérieur.</p>
-    <p class="actions">
-      <a class="bouton" href="/contact/">Demander une visite gratuite</a>
-      ${BADGE_AVIS}
-    </p>
+  <div class="hm-grille">
+    <div class="hm-txt">
+      <p class="kicker">Terrasses, pergolas et garde-corps sur mesure à Lyon</p>
+      <h1><span class="fin">Créez la 5<sup>e</sup> pièce</span> <span class="fort">de votre maison</span></h1>
+      <p class="chapo">Une terrasse pensée comme une pièce à part entière : le lien entre l'intérieur et l'extérieur.</p>
+      <p class="actions"><a class="bouton" href="/contact/">Demander une visite gratuite</a></p>
+      <p class="hero-avis">${BADGE_AVIS}</p>
+    </div>
+    <div class="hm-visuel">
+      ${imgPhoto("accueil-maison-5e-piece", { sizes: "(max-width:1000px) calc(100vw - 32px), 62vw", prioritaire: true, classe: "h-img" })}
+      <div class="pins" aria-label="Nos produits sur la maison">${PINS.map(([c, t, x, y, cote]) => `<a class="pin${cote ? " pin-" + cote : ""}" href="${c}" data-x="${x}" data-y="${y}"><span class="pin-point" aria-hidden="true"></span><span class="pin-nom">${t}</span></a>`).join("")}</div>
+      <p class="hm-aide" aria-hidden="true">Cliquez sur les points pour découvrir chaque produit</p>
+    </div>
   </div>
-  <div class="hm-visuel">
-    ${imgPhoto("accueil-maison-5e-piece", { sizes: "(max-width:1640px) calc(100vw - 32px), 1600px", prioritaire: true, classe: "h-img" })}
-    <div class="pins" aria-label="Nos produits sur la maison">${PINS.map(([c, t, x, y, cote]) => `<a class="pin${cote ? " pin-" + cote : ""}" href="${c}" data-x="${x}" data-y="${y}"><span class="pin-point" aria-hidden="true"></span><span class="pin-nom">${t}</span></a>`).join("")}</div>
-    <p class="hm-aide" aria-hidden="true">Touchez les points pour découvrir chaque produit</p>
-  </div>
-  <div class="conteneur">${TRIO}</div>
+  <div class="hm-grille hm-bas">${TRIO}</div>
 <script>${SCRIPT_PINS}</script>
 </section>
 

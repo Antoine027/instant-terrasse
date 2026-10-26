@@ -392,7 +392,7 @@ const merci = `<section class="hero hero-page"><div class="conteneur conteneur-e
 const erreur = `<section class="hero hero-page"><div class="conteneur conteneur-etroit"><h1>Votre demande n'a pas pu être envoyée</h1><p class="chapo">Vérifiez que le nom, le téléphone et l'e-mail sont bien remplis, ou contactez-nous directement.</p><p class="actions"><a class="bouton" href="tel:${SITE.telLien}">${SITE.tel}</a> <a class="bouton bouton-clair" href="/contact/">Réessayer</a></p></div></section>`;
 
 // ---------- Pages légales ----------
-const SOCIETE = { nom: "ESCOM HABITAT", forme: "SARL", capital: "à compléter", siret: "106 406 465 00018", rcs: "RCS Lyon 106 406 465", tva: "FR70 106 406 465", adresse: "8 avenue Général Leclerc, 69140 Rillieux-la-Pape", directeur: "Antoine Escolle" };
+const SOCIETE = { nom: "ESCOM HABITAT", forme: "SARL", capital: "1 000 €", siret: "106 406 465 00018", rcs: "RCS Lyon 106 406 465", tva: "FR70 106 406 465", adresse: "8 avenue Général Leclerc, 69140 Rillieux-la-Pape", directeur: "Antoine Escolle" };
 const pageTexte = (h1, contenu) => `<section class="hero hero-page"><div class="conteneur conteneur-etroit"><p class="fil"><a href="/">Accueil</a></p><h1>${h1}</h1></div></section><section class="bloc"><div class="conteneur conteneur-etroit texte-legal">${contenu}</div></section>`;
 const mentions = pageTexte("Mentions légales", `
   <h2>Éditeur du site</h2>

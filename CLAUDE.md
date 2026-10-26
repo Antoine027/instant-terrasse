@@ -16,7 +16,7 @@ Remplaçant du site WordPress/Elementor instantterrasse.com. Générateur Node s
 - Sitemap (dist/sitemap.xml, toujours généré) : seulement les pages rédigées ; les pages « en préparation » et techniques (merci, erreur) sont exclues et passent en noindex, follow une fois en ligne.
 - Pages à fort trafic encore en préparation, à rédiger avant la bascule : /terrasse-rillieux-la-pape/, /terrasse-lyon/ (Antoine a des photos particulières).
 - /realisations/ (menu « Galerie ») : galerie d'inspiration de toutes les photos produit, filtrée par catégorie, présentée honnêtement comme illustrations fabricants. Les vrais chantiers y seront ajoutés quand Antoine les fournira.
-- Pages légales : /mentions-legales/ et /confidentialite/ (site sans cookie). Capital social d'ESCOM HABITAT à compléter (constante SOCIETE dans src/pages.mjs).
+- Pages légales : /mentions-legales/ et /confidentialite/ (site sans cookie). Capital social : 1 000 € (constante SOCIETE dans src/pages.mjs).
 
 ## Contenu
 - Gamme (validée par Antoine le 21/10/2026) :

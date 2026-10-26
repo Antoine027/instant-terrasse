@@ -162,7 +162,8 @@ details[open]>summary.menu-lien::after{transform:translateY(2px) rotate(225deg)}
 .pied a{text-decoration:none;opacity:.85}
 .pied a:hover{opacity:1;color:var(--accent-survol)}
 .pied-titre{font-family:Montserrat,sans-serif;font-weight:700;margin:0 0 10px}
-.mentions{opacity:.6;font-size:.85rem;margin-top:40px}
+.mentions{color:#c9c2b6;font-size:.85rem;margin-top:40px}
+.mentions a{color:var(--fond);text-decoration:underline}
 
 /* ---------- Mobile ---------- */
 @media (max-width:1240px){
@@ -429,4 +430,45 @@ details[open]>summary.menu-lien::after{transform:translateY(2px) rotate(225deg)}
   .cascade-titre{display:none}
   .cascade-panneau,.cascade-item:hover>.cascade-panneau{display:block!important;position:static;padding:4px 0 8px}
   .cascade-photo{display:none}
+}
+
+/* ---------- Maison à pastilles (accueil) ---------- */
+.pins{position:absolute;inset:0;z-index:3;pointer-events:none}
+.pin{position:absolute;pointer-events:auto;transform:translate(-50%,-50%);display:flex;align-items:center;text-decoration:none;opacity:0;transition:opacity .4s}
+.pins-prets .pin{opacity:1}
+.pin[hidden]{display:none}
+.pin-point{position:relative;width:30px;height:30px;border-radius:50%;background:#fff;box-shadow:0 0 0 3px rgba(154,90,31,.9),0 6px 16px rgba(0,0,0,.25);flex:none}
+.pin-point::before,.pin-point::after{content:"";position:absolute;left:50%;top:50%;background:var(--bouton);border-radius:2px;transform:translate(-50%,-50%)}
+.pin-point::before{width:12px;height:2.5px}.pin-point::after{width:2.5px;height:12px}
+.pin-point{animation:pin-halo 2.6s ease-out infinite}
+@keyframes pin-halo{0%{box-shadow:0 0 0 3px rgba(154,90,31,.9),0 0 0 3px rgba(255,255,255,.55),0 6px 16px rgba(0,0,0,.25)}70%{box-shadow:0 0 0 3px rgba(154,90,31,.9),0 0 0 16px rgba(255,255,255,0),0 6px 16px rgba(0,0,0,.25)}100%{box-shadow:0 0 0 3px rgba(154,90,31,.9),0 0 0 3px rgba(255,255,255,0),0 6px 16px rgba(0,0,0,.25)}}
+@media (prefers-reduced-motion:reduce){.pin-point{animation:none}}
+.pin-nom{position:absolute;left:calc(100% + 10px);white-space:nowrap;background:#fff;color:var(--texte);font:600 .88rem Montserrat,sans-serif;padding:8px 14px;border-radius:999px;box-shadow:0 8px 22px -8px rgba(0,0,0,.35);opacity:0;transform:translateX(-6px);transition:opacity .2s,transform .2s;pointer-events:none}
+.pin-gauche .pin-nom{left:auto;right:calc(100% + 10px);transform:translateX(6px)}
+.pin:hover .pin-nom,.pin:focus-visible .pin-nom{opacity:1;transform:none}
+.pin:hover .pin-point,.pin:focus-visible .pin-point{background:var(--bouton)}
+.pin:hover .pin-point::before,.pin:hover .pin-point::after,.pin:focus-visible .pin-point::before,.pin:focus-visible .pin-point::after{background:#fff}
+.pin:focus-visible{outline:none}
+@media (max-width:700px){.pin-point{width:24px;height:24px}.pin-point::before{width:10px}.pin-point::after{height:10px}.pin-nom{font-size:.78rem;padding:6px 10px}}
+
+.hero-maison{margin-top:-80px;padding:132px 0 40px;background:linear-gradient(var(--fond2),var(--fond))}
+.hm-txt{text-align:center}
+.hm-txt .kicker{margin-bottom:18px}
+.hero-maison h1{font-size:clamp(2.4rem,1rem + 3.9vw,4.6rem);letter-spacing:-.04em;line-height:1;margin:0 auto 20px;max-width:none}
+.hero-maison h1 span{display:block}
+.hero-maison h1 .fin{font-weight:300}
+.hero-maison h1 .fort{font-weight:700;color:var(--bouton)}
+.hero-maison h1 sup{font-size:.45em;vertical-align:super;line-height:0}
+.hero-maison .chapo{margin:0 auto 26px;color:var(--texte)}
+.hero-maison .actions{justify-content:center;align-items:center;margin:0 0 40px}
+.hm-visuel{position:relative;max-width:1600px;margin:0 auto;padding:0 16px}
+.hm-visuel .h-img{display:block;width:100%;height:auto;aspect-ratio:1672/941;object-fit:cover;object-position:50% 50%;border-radius:26px;box-shadow:0 30px 60px -30px rgba(47,52,55,.45)}
+.hm-aide{display:none;margin:12px 0 0;text-align:center;font-size:.85rem;color:var(--doux)}
+.hero-maison .trio{margin:32px auto 0;max-width:46rem}
+@media (max-width:700px){
+  .hero-maison{padding:118px 0 28px}
+  .hm-visuel .h-img{border-radius:18px}
+  .hm-aide{display:block}
+  .hero-maison .actions{flex-direction:column;gap:14px;margin-bottom:28px}
+  .hero-maison .trio{grid-template-columns:1fr}
 }

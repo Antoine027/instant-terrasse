@@ -2660,5 +2660,19 @@
    1075
   ],
   "ratio": 1.5056
+ },
+ {
+  "cle": "accueil-maison-5e-piece",
+  "dossier": "accueil",
+  "categorie": "accueil-hero",
+  "alt": "Maison contemporaine avec terrasse bois au bord de la piscine, pergola bioclimatique, store banne, balcon avec garde-corps, bardage bois et carport",
+  "largeurs": [
+   400,
+   600,
+   800,
+   1000,
+   1600
+  ],
+  "ratio": 1.7768
  }
 ]

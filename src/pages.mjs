@@ -131,7 +131,7 @@ const ETOILES = `<span class="etoiles" role="img" aria-label="5 étoiles sur 5">
 const LOGO_GOOGLE = `<svg class="logo-google" viewBox="0 0 48 48" width="20" height="20" aria-hidden="true"><path fill="#FFC107" d="M43.6 20.5H42V20H24v8h11.3C33.7 32.7 29.2 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.3-.1-2.4-.4-3.5z"/><path fill="#FF3D00" d="M6.3 14.7l6.6 4.8C14.7 15.1 19 12 24 12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 16.3 4 9.7 8.3 6.3 14.7z"/><path fill="#4CAF50" d="M24 44c5.2 0 9.9-2 13.4-5.2l-6.2-5.2C29.2 35.1 26.7 36 24 36c-5.2 0-9.6-3.3-11.3-8l-6.5 5C9.5 39.6 16.2 44 24 44z"/><path fill="#1976D2" d="M43.6 20.5H42V20H24v8h11.3c-.8 2.2-2.2 4.2-4.1 5.6l6.2 5.2C37 39.2 44 34 44 24c0-1.3-.1-2.4-.4-3.5z"/></svg>`;
 const COULEURS_AVIS = ["#3d6b35", "#4a5961", "#9a5a1f", "#5b4a7a"];
 const CERTIFIE = `<svg class="certifie" viewBox="0 0 24 24" width="16" height="16" aria-label="Avis vérifié"><path fill="#4285F4" d="M12 1l2.6 2.2 3.4-.4.9 3.3 3 1.7-1.2 3.2 1.2 3.2-3 1.7-.9 3.3-3.4-.4L12 23l-2.6-2.2-3.4.4-.9-3.3-3-1.7L3.3 13 2.1 9.8l3-1.7.9-3.3 3.4.4z"/><path fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M7.5 12.2l3 3 6-6"/></svg>`;
-export const BADGE_AVIS = `<a class="badge-avis" href="${AVIS.lien}" target="_blank" rel="noopener" aria-label="Note Google : ${AVIS.note} sur 5, ${AVIS.total} avis">${LOGO_GOOGLE}<strong>${AVIS.note}</strong>${ETOILES}<span>${AVIS.total} avis</span></a>`;
+export const BADGE_AVIS = `<a class="badge-avis" href="${AVIS.lien}" target="_blank" rel="noopener" aria-label="${AVIS.note} sur 5 sur Google, ${AVIS.total} avis">${LOGO_GOOGLE}<strong>${AVIS.note}</strong>${ETOILES}<span>${AVIS.total} avis</span></a>`;
 
 export const FAQ = [
   ["Quel matériau choisir pour ma terrasse ?", "Tout dépend de l'aspect recherché, du budget et du temps que vous voulez consacrer à l'entretien. Le bois apporte la chaleur d'un matériau naturel, le composite et l'aluminium limitent l'entretien, le carrelage offre un rendu minéral. Notre <a href=\"/nos-terrasses/\">comparatif des matériaux</a> vous aide à y voir clair, et nous affinons le choix lors de la visite."],
@@ -166,20 +166,35 @@ const PIECES = [
     liens: [["/garde-corps-aluminium-lyon/", "Garde-corps aluminium"]] },
 ];
 
+// Pastilles posées sur la maison de l'en-tête : [lien, nom, x %, y % de l'image, côté de l'étiquette].
+const PINS = [
+  ["/pergola-bioclimatique-lyon/", "Pergola bioclimatique", 41.5, 47.5],
+  ["/bardage-bois-lyon/", "Bardage bois", 46.5, 33],
+  ["/garde-corps-aluminium-lyon/", "Garde-corps aluminium", 64, 39.5],
+  ["/store-banne-lyon/", "Store banne", 69.5, 48.5],
+  ["/carport-lyon/", "Carport", 89, 49.5, "gauche"],
+  ["/terrasse-bois-lyon/", "Terrasse bois", 57, 67],
+];
+const SCRIPT_PINS = `(()=>{const h=document.querySelector('.hm-visuel'),im=h&&h.querySelector('.h-img'),ps=h&&h.querySelectorAll('.pin');if(!im)return;const place=()=>{const r=im.getBoundingClientRect(),H=h.getBoundingClientRect(),nw=im.naturalWidth||1600,nh=im.naturalHeight||900,s=Math.max(r.width/nw,r.height/nh),w=nw*s,hh=nh*s,op=getComputedStyle(im).objectPosition.split(' ').map(parseFloat),ox=(r.width-w)*op[0]/100,oy=(r.height-hh)*op[1]/100;ps.forEach(p=>{const x=r.left-H.left+ox+w*p.dataset.x/100,y=r.top-H.top+oy+hh*p.dataset.y/100,vis=x>r.left-H.left+12&&x<r.right-H.left-12&&y>r.top-H.top+12&&y<r.bottom-H.top-12;p.style.left=x+'px';p.style.top=y+'px';p.hidden=!vis});h.classList.add('pins-prets')};im.complete?place():im.addEventListener('load',place);addEventListener('resize',place)})();`;
+
 const accueil = `
-<section class="hero-plein hero-slogan">
-  ${imgPhoto("pergola-bioclimatique-salon-piscine", { sizes: "(max-width:700px) calc(100vw - 32px), 100vw", prioritaire: true, classe: "h-img" })}
-  <div class="conteneur h-txt">
+<section class="hero-maison">
+  <div class="conteneur hm-txt">
     <p class="kicker">Terrasses, pergolas et garde-corps sur mesure à Lyon</p>
     <h1><span class="fin">Créez la 5<sup>e</sup> pièce</span> <span class="fort">de votre maison</span></h1>
     <p class="chapo">Une terrasse pensée comme une pièce à part entière : le lien entre l'intérieur et l'extérieur.</p>
     <p class="actions">
       <a class="bouton" href="/contact/">Demander une visite gratuite</a>
-      <a class="bouton bouton-blanc" href="#piece">Découvrir</a>
+      ${BADGE_AVIS}
     </p>
-    <p class="hero-avis">${BADGE_AVIS}</p>
-    ${TRIO}
   </div>
+  <div class="hm-visuel">
+    ${imgPhoto("accueil-maison-5e-piece", { sizes: "(max-width:1640px) calc(100vw - 32px), 1600px", prioritaire: true, classe: "h-img" })}
+    <div class="pins" aria-label="Nos produits sur la maison">${PINS.map(([c, t, x, y, cote]) => `<a class="pin${cote ? " pin-" + cote : ""}" href="${c}" data-x="${x}" data-y="${y}"><span class="pin-point" aria-hidden="true"></span><span class="pin-nom">${t}</span></a>`).join("")}</div>
+    <p class="hm-aide" aria-hidden="true">Touchez les points pour découvrir chaque produit</p>
+  </div>
+  <div class="conteneur">${TRIO}</div>
+<script>${SCRIPT_PINS}</script>
 </section>
 
 <section id="piece" class="bloc">

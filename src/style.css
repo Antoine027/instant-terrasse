@@ -617,3 +617,8 @@ details[open]>summary.menu-lien::after{transform:translateY(2px) rotate(225deg)}
 .piece-terrasse{border-radius:var(--rayon);overflow:hidden}
 .pt-photo,.pt-photo img{border-radius:var(--rayon) 0 0 var(--rayon)}
 @media (max-width:900px){.pt-photo,.pt-photo img{border-radius:var(--rayon) var(--rayon) 0 0}}
+/* Bloc Terrasses et cartes : coins arrondis seulement à l'extérieur de l'ensemble */
+.piece-terrasse{border-radius:var(--rayon) var(--rayon) 0 0}
+.pt-photo,.pt-photo img{border-radius:var(--rayon) 0 0 0}
+.piece-mini{border-radius:0 0 var(--rayon) var(--rayon)}
+@media (max-width:900px){.pt-photo,.pt-photo img{border-radius:var(--rayon) var(--rayon) 0 0}}

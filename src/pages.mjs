@@ -157,6 +157,18 @@ const etapes = [
 
 export const TRIO = `<ul class="trio"><li><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V8l7-5 7 5v13"/><path d="M9 21v-6h6v6"/></svg><span>Visite chez vous, avec les échantillons</span></li><li><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 3 7l9 5 9-5-9-5z"/><path d="m3 17 9 5 9-5"/><path d="m3 12 9 5 9-5"/></svg><span>Plan 3D de votre projet offert</span></li><li><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg><span>Pose assurée en garantie décennale</span></li></ul>`;
 
+const MATERIAUX_ACCUEIL = [
+  ["/terrasse-bois-lyon/", "Bois", "terrasse-kebony-piscine-debordement"],
+  ["/terrasse-composite-lyon/", "Composite", "composite-gris-piscine"],
+  ["/terrasse-aluminium-lyon/", "Aluminium", "alu-piscine-aspect-teck"],
+  ["/terrasse-carrelage-lyon/", "Carrelage", "carrelage-toit-terrasse-montagnes"],
+];
+const AUTRES_PIECES = [
+  ["/bardage-bois-lyon/", "Bardage", "Un bardage bois ou aluminium, assorti à la terrasse.", "bardage-thermofrene-maison"],
+  ["/pergola-bioclimatique-lyon/", "Pergolas", "Bioclimatique, toile ou toit fixe : de l'ombre et un abri.", "pergola-bioclimatique-salon-piscine"],
+  ["/store-banne-lyon/", "Store banne", "De l'ombre à la demande, replié quand le soleil tourne.", "store-banne-orange"],
+  ["/garde-corps-aluminium-lyon/", "Garde-corps", "Sécuriser la terrasse sans fermer la vue.", "gc-maison-lisses-pergola"],
+];
 const PIECES = [
   { etiquette: "Terrasses", titre: "Revêtements", encart: ["/bardage-bois-lyon/", "Bardage", "bardage-thermofrene-maison"], texte: "Au sol, du bois, du composite, du carrelage ou des lames aluminium sur une structure garantie 20 ans. Aux murs, un bardage assorti.", photo: "terrasse-thermofrene-pool-house",
     liens: [["/terrasse-bois-lyon/", "Bois"], ["/terrasse-composite-lyon/", "Composite"], ["/terrasse-carrelage-lyon/", "Carrelage"], ["/terrasse-aluminium-lyon/", "Aluminium"], ["/bardage-bois-lyon/", "Bardage"]] },
@@ -201,12 +213,17 @@ const accueil = `
     <p class="sous-titre">Votre 5<sup>e</sup> pièce</p>
     <h2>Terrasses, pergolas et garde-corps</h2>
     <p class="chapo">Le sol, ce qui le couvre et ce qui le borde se choisissent ensemble : hauteurs, fixations, écoulement de l'eau. Nous étudions tout le projet, pour une terrasse qui prolonge vraiment votre maison.</p>
-    <div class="pieces">
-      ${PIECES.map((x) => `<article class="piece">
-        <div class="piece-photo">${imgPhoto(x.photo, { sizes: "(max-width:900px) 92vw, 380px" })}<span class="piece-etiquette">${x.etiquette}</span>${x.encart ? `<a class="piece-encart" href="${x.encart[0]}">${x.encart[2] ? imgPhoto(x.encart[2], { sizes: "120px" }) : vignette(x.encart[0])}<span>${x.encart[1]} →</span></a>` : ""}</div>
-        <h3>${x.titre}</h3>${x.sous ? `<p class="piece-sous">${x.sous}</p>` : ""}<p>${x.texte}</p>
-        <ul class="piece-liens">${x.liens.map(([c, t]) => `<li><a href="${c}">${t}</a></li>`).join("")}</ul>
-      </article>`).join("")}
+    <article class="piece-terrasse">
+      <a class="pt-photo" href="/nos-terrasses/">${imgPhoto("terrasse-thermofrene-pool-house", { sizes: "(max-width:900px) 92vw, 520px" })}<span class="piece-etiquette">Terrasses</span></a>
+      <div class="pt-corps">
+        <h3>Le sol de votre 5<sup>e</sup> pièce</h3>
+        <p>Bois, composite, lames aluminium ou carrelage, posés sur une structure garantie 20 ans. Nous vous apportons les échantillons pour choisir chez vous.</p>
+        <div class="pt-materiaux">${MATERIAUX_ACCUEIL.map(([c, t, ph]) => `<a class="pt-mat" href="${c}">${imgPhoto(ph, { sizes: "200px" })}<span>${t}<span class="fleche" aria-hidden="true">→</span></span></a>`).join("")}</div>
+        <p class="pt-lien"><a href="/nos-terrasses/">Comparer les matériaux</a></p>
+      </div>
+    </article>
+    <div class="pieces-4">
+      ${AUTRES_PIECES.map(([c, t, x, ph]) => `<a class="piece-mini" href="${c}"><div class="pm-photo">${imgPhoto(ph, { sizes: "(max-width:600px) 92vw, (max-width:1100px) 45vw, 280px" })}</div><div class="pm-corps"><h3>${t}</h3><p>${x}</p><span class="fleche" aria-hidden="true">→</span></div></a>`).join("")}
     </div>
   </div>
 </section>

@@ -513,3 +513,41 @@ details[open]>summary.menu-lien::after{transform:translateY(2px) rotate(225deg)}
 .hero-maison-plein .hm-visuel{width:100%;-webkit-mask-image:linear-gradient(90deg,rgba(0,0,0,.18) 0,rgba(0,0,0,.35) 28%,#000 58%);mask-image:linear-gradient(90deg,rgba(0,0,0,.18) 0,rgba(0,0,0,.35) 28%,#000 58%)}
 .hero-maison-plein .hm-visuel .h-img{object-position:50% 50%}
 @media (max-width:1100px){.hero-maison-plein .hm-visuel{width:auto;-webkit-mask-image:none;mask-image:none}}
+
+/* ---------- Accueil : terrasse pleine largeur + 4 cartes ---------- */
+.piece-terrasse{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:0;margin-top:36px;background:#fff;border-radius:var(--rayon);overflow:hidden;box-shadow:0 10px 30px -18px rgba(47,52,55,.4);border:1px solid rgba(47,52,55,.08)}
+.pt-photo{position:relative;display:block;min-height:100%}
+.pt-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.pt-corps{padding:34px 36px}
+.pt-corps h3{font-size:1.5rem;margin:0 0 10px}
+.pt-corps h3 sup{font-size:.55em}
+.pt-corps>p{color:var(--doux);margin:0 0 22px}
+.pt-materiaux{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.pt-mat{display:block;text-decoration:none;border-radius:12px;overflow:hidden;background:var(--fond2);transition:transform .15s,box-shadow .15s}
+.pt-mat:hover{transform:translateY(-3px);box-shadow:var(--ombre)}
+.pt-mat img{display:block;width:100%;aspect-ratio:1;object-fit:cover}
+.pt-mat>span{display:flex;align-items:center;justify-content:space-between;gap:6px;padding:10px 12px;font:700 .95rem Montserrat,sans-serif;color:var(--texte)}
+.pt-mat .fleche{width:28px;height:28px;margin:0}.pt-mat .fleche svg{width:15px;height:15px}
+.pt-mat .fleche{display:inline-flex;align-items:center;justify-content:center;border-radius:50%;background:var(--bouton);color:#fff}
+.pt-lien{margin:20px 0 0}.pt-lien a{font-weight:700;color:var(--accent-texte)}
+.pieces-4{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:20px}
+.piece-mini{display:flex;flex-direction:column;text-decoration:none;background:#fff;border-radius:var(--rayon);overflow:hidden;box-shadow:0 10px 30px -18px rgba(47,52,55,.4);border:1px solid rgba(47,52,55,.08);transition:transform .15s,box-shadow .15s}
+.piece-mini:hover{transform:translateY(-3px);box-shadow:var(--ombre)}
+.pm-photo img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover}
+.pm-corps{padding:18px 20px 20px;display:flex;flex-direction:column;flex:1}
+.pm-corps h3{font-size:1.15rem;margin:0 0 6px}
+.pm-corps p{margin:0 0 14px;color:var(--doux);font-size:.97rem}
+.pm-corps .fleche{margin-top:auto;display:inline-flex;align-items:center;justify-content:center;width:38px;height:38px;border-radius:50%;background:var(--bouton);color:#fff}
+@media (max-width:1100px){.pieces-4{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:900px){.piece-terrasse{grid-template-columns:1fr}.pt-photo{aspect-ratio:16/9}.pt-corps{padding:24px 20px}.pt-materiaux{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:520px){.pieces-4{grid-template-columns:1fr}}
+.pt-mat img{height:auto;aspect-ratio:1/1}
+.pm-photo img{height:auto;aspect-ratio:4/3}
+.pt-mat{align-self:start}
+.pt-photo{min-height:340px}
+.pt-materiaux{grid-template-columns:repeat(4,minmax(0,1fr))}
+.pt-mat .fleche{flex:none}
+.pt-corps{min-width:0}
+@media (max-width:900px){.pt-materiaux{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:520px){.pieces-4{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.pm-corps{padding:12px 12px 14px}.pm-corps h3{font-size:1rem}.pm-corps p{display:none}.pm-corps .fleche{width:32px;height:32px;margin-top:6px}.pt-mat>span{font-size:.88rem;padding:8px 10px}}
+@media (max-width:900px){.piece-terrasse{grid-template-columns:minmax(0,1fr)}}

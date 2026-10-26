@@ -602,3 +602,11 @@ details[open]>summary.menu-lien::after{transform:translateY(2px) rotate(225deg)}
 .piece-mini{aspect-ratio:1/1}
 .piece-mini[href="/store-banne-lyon/"]>img{object-position:30% 50%}
 .piece-mini[href="/pergola-bioclimatique-lyon/"]>img{object-position:50% 40%}
+/* Matériaux en 2 x 2, plus grands */
+@media (min-width:901px){
+  .pt-materiaux{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+  .pt-materiaux .pt-mat img{aspect-ratio:16/10}
+  .pt-materiaux .pt-mat>.pt-nom{font-size:1.1rem;left:16px;bottom:14px}
+  .pt-corps{padding:40px 40px 36px}
+  .pt-corps>p{margin-bottom:20px}
+}

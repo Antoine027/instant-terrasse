@@ -452,9 +452,10 @@ details[open]>summary.menu-lien::after{transform:translateY(2px) rotate(225deg)}
 @media (max-width:700px){.pin-point{width:24px;height:24px}.pin-point::before{width:10px}.pin-point::after{height:10px}.pin-nom{font-size:.78rem;padding:6px 10px}}
 
 .hero-maison{margin-top:-80px;padding:118px 0 36px;background:linear-gradient(var(--fond2),var(--fond))}
-.hm-grille{display:grid;grid-template-columns:minmax(380px,500px) 1fr;gap:56px;align-items:center;max-width:1560px;margin:0 auto;padding:0 32px}
+.hm-grille{display:grid;grid-template-columns:minmax(360px,460px) 1fr;gap:48px;align-items:center;margin:0;padding:0 0 0 max(32px,calc((100vw - 1500px) / 2))}
+.hm-bas{max-width:1500px;margin:0 auto;padding:0 32px}
 .hm-bas{display:block}
-.hm-txt .kicker{margin-bottom:18px}
+.hm-txt .kicker{margin-bottom:18px;white-space:nowrap;font-size:.84rem}
 .hero-maison h1{font-size:clamp(2.2rem,3.05vw,3.4rem);letter-spacing:-.04em;line-height:1;margin:0 0 20px;max-width:none}
 .hero-maison h1 span{display:block;white-space:nowrap}
 .hero-maison h1 .fin{font-weight:300}
@@ -463,11 +464,13 @@ details[open]>summary.menu-lien::after{transform:translateY(2px) rotate(225deg)}
 .hero-maison .chapo{margin:0 0 26px;color:var(--texte);max-width:30rem}
 .hero-maison .actions{margin:0}
 .hm-visuel{position:relative}
-.hm-visuel .h-img{display:block;width:100%;height:auto;aspect-ratio:1672/820;object-fit:cover;object-position:50% 100%;border-radius:26px;box-shadow:0 30px 60px -30px rgba(47,52,55,.45)}
+.hm-visuel .h-img{display:block;width:100%;height:auto;aspect-ratio:1672/880;object-fit:cover;object-position:80% 100%;border-radius:26px 0 0 26px;min-height:min(70vh,640px);box-shadow:0 30px 60px -30px rgba(47,52,55,.45)}
 .hm-aide{margin:12px 0 0;text-align:center;font-size:.85rem;color:var(--doux)}
 .hero-maison .trio{margin:36px 0 0;max-width:none}
 @media (max-width:1150px){
   .hm-grille{grid-template-columns:1fr;gap:28px;padding:0 16px}
+  .hm-visuel .h-img{border-radius:18px;min-height:0}
+  .hm-txt .kicker{white-space:normal}
   .hero-maison h1{font-size:clamp(2.2rem,6vw,3.4rem)}
   .hm-txt{text-align:center}.hero-maison .chapo{margin-left:auto;margin-right:auto}.hero-maison .actions{justify-content:center}
   .hm-visuel .h-img{aspect-ratio:1672/941;border-radius:18px}

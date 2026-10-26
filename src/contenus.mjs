@@ -379,6 +379,7 @@ ${galerieCat ? `<section id="galerie" class="bloc">
 ${cta(ctaTitre, "Devis gratuit et sans engagement. Nous venons sur place pour prendre les mesures et vous conseiller la solution la plus adaptée.")}`;
 
 const PERGOLAS = [
+  ["/pergolas-lyon/", "Comparer les pergolas", "Bioclimatique, toile ou toit fixe : laquelle choisir ?"],
   ["/pergola-bioclimatique-lyon/", "Pergola bioclimatique", "Lames orientables : soleil, ombre ou pluie, vous choisissez."],
   ["/pergola-toile-retractable-lyon/", "Pergola à toile rétractable", "Une toile qui se déploie et se replie à la demande."],
   ["/pergola-toile-tendue-lyon/", "Pergola à toile tendue", "Une ombre légère et un style contemporain."],
@@ -1013,7 +1014,67 @@ ${heroPlein({ fil: "Galerie", h1: ["Galerie", "d'inspiration"], kicker: "Terrass
 ${cta("Une photo vous plaît ?", "Montrez-la-nous lors du rendez-vous : nous partons de vos envies pour dessiner votre projet en 3D.")}`,
 };
 
+// ---------- Pergolas : page comparative ----------
+const TYPES_PERGOLA = ["Bioclimatique", "Toile rétractable", "Toit fixe"];
+const LIGNES_PERGOLA = [
+  ["Le principe", "Des lames orientables qui pivotent pour laisser passer le soleil, faire de l'ombre ou fermer la toiture.", "Une toile qui se déploie et se replie sur la structure, à la demande.", "Une toiture pleine et permanente, comme une avancée de la maison."],
+  ["Ombre", "Réglable selon l'heure et la saison.", "Totale toile déployée, nulle toile repliée.", "Permanente."],
+  ["Pluie", "Lames fermées, la toiture fait barrage et l'eau est évacuée par les poteaux.", "Toile tendue en pente, elle protège d'une averse.", "Abri complet, en toute saison."],
+  ["Lumière en hiver", "Lames ouvertes, le soleil d'hiver entre dans la maison.", "Toile repliée, la terrasse retrouve tout le ciel.", "La lumière reste filtrée par le toit."],
+  ["Esprit", "Architectural, aux lignes nettes.", "Léger, avec la douceur d'une toile.", "Sobre, dans le prolongement de la façade."],
+  ["Pour qui ?", "Ceux qui vivent dehors du printemps à l'automne et veulent tout régler.", "Ceux qui veulent de l'ombre l'été et du ciel le reste de l'année.", "Ceux qui veulent un abri fixe : coin repas, cuisine d'été, voiture."],
+];
+const pergolas = {
+  title: "Pergola sur mesure Lyon : bioclimatique, toile ou toit fixe | Instant Terrasse",
+  description: "Pergola bioclimatique, à toile rétractable ou à toit fixe à Lyon : comparez l'ombre, la protection contre la pluie et la lumière en hiver pour choisir la vôtre. Plan 3D offert.",
+  corps: `
+${heroPlein({ fil: "Aménagements", h1: ["Quelle pergola", "pour votre terrasse ?"], kicker: "Pergolas sur mesure à Lyon et dans sa région",
+  chapo: "Bioclimatique, à toile rétractable ou à toit fixe : trois façons de couvrir votre 5<sup>e</sup> pièce, selon ce que vous attendez de l'ombre, de la pluie et de la lumière.",
+  photo: "pergola-bioclimatique-salon-piscine", position: "60% 50%",
+  actions: `<a class="bouton" href="/contact/">Demander une visite gratuite</a> <a class="bouton bouton-blanc" href="#comparatif">Voir le comparatif</a>` })}
+
+<section id="comparatif" class="bloc">
+  <div class="conteneur">
+    <h2>Le comparatif</h2>
+    <p class="chapo">Les trois se font sur mesure, en aluminium, dans la teinte de vos menuiseries. Ce qui les distingue, c'est la toiture.</p>
+    <div class="tableau-defile">
+      <table class="comparatif comparatif-4">
+        <thead><tr><th scope="col"><span class="vh">Critère</span></th>${TYPES_PERGOLA.map((m) => `<th scope="col">${m}</th>`).join("")}</tr></thead>
+        <tbody>${LIGNES_PERGOLA.map(([crit, ...v]) => `<tr><th scope="row">${crit}</th>${v.map((x) => `<td>${x}</td>`).join("")}</tr>`).join("")}</tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="bloc bloc-alt">
+  <div class="conteneur">
+    <h2>Découvrir chaque pergola</h2>
+    <div class="grille grille-3">
+      ${carteProduit("/pergola-bioclimatique-lyon/", "Pergola bioclimatique", "Lames orientables : soleil, ombre ou pluie, vous choisissez.")}
+      ${carteProduit("/pergola-toile-retractable-lyon/", "Pergola à toile rétractable", "Une toile qui se déploie et se replie à la demande.")}
+      ${carteProduit("/pergola-toit-fixe-lyon/", "Pergola à toit fixe", "Un abri permanent, à l'épreuve de la pluie.")}
+    </div>
+  </div>
+</section>
+
+<section class="bloc">
+  <div class="conteneur deux-colonnes">
+    <div>
+      <h2>Et si une pergola n'est pas nécessaire ?</h2>
+      <p>Pour de l'ombre seulement, aux heures chaudes, un <a href="/store-banne-lyon/">store banne</a> fixé à la façade peut suffire. Et pour abriter une voiture, le même système existe en <a href="/carport-lyon/">carport</a>.</p>
+    </div>
+    <div>
+      <h2>Votre projet</h2>
+      <p>${POSE}</p>
+      <p>Une pergola se pense avec la terrasse qu'elle couvre : hauteurs, fixations, écoulement de l'eau. Le plan 3D offert vous montre l'ensemble avant de vous décider.</p>
+    </div>
+  </div>
+</section>
+${cta("Vous hésitez entre deux pergolas ?", "Nous venons chez vous, nous regardons l'exposition et l'usage de la terrasse, et nous vous conseillons la plus adaptée.")}`,
+};
+
 export const CONTENUS = {
+  "/pergolas-lyon/": pergolas,
   "/realisations/": realisations,
   "/nos-terrasses/": nosTerrasses,
   "/terrasse-sur-plots-lyon/": terrassePlots,

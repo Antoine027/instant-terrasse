@@ -51,6 +51,7 @@ export const UNIVERS = [
     accroche: "Pergolas, stores, carports, garde-corps et bardages autour de la terrasse.",
     groupes: [
       { nom: "Protections solaires", pages: [
+        ["/pergolas-lyon/", "Pergolas : comparatif", "Bioclimatique, toile ou toit fixe : laquelle choisir ?", "Choisir sa pergola"],
         ["/pergola-bioclimatique-lyon/", "Pergola bioclimatique", "Lames orientables : soleil, ombre ou pluie, vous choisissez."],
         ["/pergola-toile-retractable-lyon/", "Pergola à toile rétractable", "Une toile qui se déploie et se replie à la demande."],
         ["/pergola-toile-tendue-lyon/", "Pergola à toile tendue", "Une ombre légère et un style contemporain."],
@@ -147,7 +148,7 @@ const MATERIAUX_ACCUEIL = [
 ];
 const AUTRES_PIECES = [
   ["/bardage-bois-lyon/", "Bardage", "Un bardage bois ou aluminium, assorti à la terrasse.", "bardage-thermofrene-horizontal"],
-  ["/pergola-bioclimatique-lyon/", "Pergolas", "Bioclimatique, toile ou toit fixe : de l'ombre et un abri.", "pergola-bioclimatique-piscine"],
+  ["/pergolas-lyon/", "Pergolas", "Bioclimatique, toile ou toit fixe : de l'ombre et un abri.", "pergola-bioclimatique-piscine"],
   ["/store-banne-lyon/", "Store banne", "De l'ombre à la demande, replié quand le soleil tourne.", "store-banne-beige-maison"],
   ["/garde-corps-aluminium-lyon/", "Garde-corps", "Sécuriser la terrasse sans fermer la vue.", "gc-maison-lisses-noires"],
 ];

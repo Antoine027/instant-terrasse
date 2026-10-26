@@ -601,7 +601,7 @@ details[open]>summary.menu-lien::after{transform:translateY(2px) rotate(225deg)}
 @media (max-width:520px){.pm-corps h3{font-size:.95rem}}
 .piece-mini{aspect-ratio:1/1}
 .piece-mini[href="/store-banne-lyon/"]>img{object-position:30% 50%}
-.piece-mini[href="/pergola-bioclimatique-lyon/"]>img{object-position:50% 40%}
+.piece-mini[href="/pergolas-lyon/"]>img{object-position:50% 40%}
 /* Matériaux en 2 x 2, plus grands */
 @media (min-width:901px){
   .pt-materiaux{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
@@ -631,3 +631,4 @@ details[open]>summary.menu-lien::after{transform:translateY(2px) rotate(225deg)}
 .pt-lien{margin-bottom:0}
 @media (min-width:901px){.pt-corps{padding:26px 36px 24px}.pt-photo{min-height:0}}
 .pt-lien{margin-bottom:0!important}.pt-materiaux{margin-bottom:0}@media (min-width:901px){.pt-corps{padding-bottom:28px}}
+.comparatif-4 thead th:first-child,.comparatif-4 tbody th{width:16%}

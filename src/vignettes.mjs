@@ -20,6 +20,7 @@ export const VIGNETTES = {
   "/pergola-toile-retractable-lyon/": "pergola-toile-retractable-facade",
   "/pergola-toile-tendue-lyon/": null,
   "/pergola-toit-fixe-lyon/": "pergola-toit-fixe-piscine",
+  "/pergolas-lyon/": "pergola-bioclimatique-salon-piscine",
   "/carport-lyon/": "carport-garage-gravier",
   "/garde-corps-aluminium-lyon/": "gc-maison-terrasse-vue",
   "/store-banne-lyon/": "store-banne-beige-maison",

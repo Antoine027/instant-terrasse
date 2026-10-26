@@ -610,3 +610,5 @@ details[open]>summary.menu-lien::after{transform:translateY(2px) rotate(225deg)}
   .pt-corps{padding:40px 40px 36px}
   .pt-corps>p{margin-bottom:20px}
 }
+
+@media (min-width:1241px){.sous-menu-large{display:grid;grid-template-columns:auto auto;gap:22px 44px;left:-60px}}

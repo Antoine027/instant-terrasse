@@ -18,7 +18,7 @@ export const UNIVERS = [
   {
     cle: "terrasses", nom: "Terrasses",
     accroche: "Bois, composite, aluminium ou carrelage, sur une structure qui dure.",
-    groupes: [{ nom: "Matériaux", pages: [
+    groupes: [{ nom: "", pages: [
       ["/terrasse-bois-lyon/", "Terrasse bois", "Bois modifiés et bambou sur structure aluminium, ou bois massifs et exotiques sur structure traditionnelle.", "Bois"],
       ["/terrasse-composite-lyon/", "Terrasse composite", "Sans entretien, posée sur structure aluminium.", "Composite"],
       ["/terrasse-aluminium-lyon/", "Terrasse en lames aluminium", "Imputrescible, stable, en coloris unis ou aspect bois.", "Aluminium"],
@@ -30,12 +30,12 @@ export const UNIVERS = [
   {
     cle: "projets", nom: "Projets",
     accroche: "Piscine, balcon, toit-terrasse ou terrain en pente.",
-    groupes: [{ nom: "Votre projet", pages: [
-      ["/terrasse-piscine-lyon/", "Terrasse de piscine", "Une plage confortable et sûre autour du bassin.", "Piscine"],
-      ["/terrasse-balcon-lyon/", "Balcon", "Rénover le sol d'un balcon, sans travaux lourds."],
+    groupes: [{ nom: "", pages: [
+      ["/terrasse-piscine-lyon/", "Terrasse de piscine", "Une plage confortable et sûre autour du bassin."],
+      ["/terrasse-sur-plots-lyon/", "Terrasse et dalles sur plots", "Poser sans fondation sur un support existant.", "Terrasse sur plots"],
+      ["/terrasse-sur-pilotis-lyon/", "Terrasse sur pilotis", "La solution pour les terrains en pente."],
+      ["/terrasse-balcon-lyon/", "Balcon", "Rénover le sol d'un balcon, sans travaux lourds.", "Terrasse de balcon"],
       ["/toit-terrasse-lyon/", "Toit-terrasse", "Créer un espace de vie sur une toiture plate."],
-      ["/terrasse-sur-pilotis-lyon/", "Terrasse sur pilotis", "La solution pour les terrains en pente.", "Pilotis"],
-      ["/terrasse-sur-plots-lyon/", "Terrasse et dalles sur plots", "Poser sans fondation sur un support existant.", "Plots"],
     ] }],
   },
   {
@@ -49,17 +49,25 @@ export const UNIVERS = [
   {
     cle: "amenagements", nom: "Aménagements",
     accroche: "Pergolas, stores, carports, garde-corps et bardages autour de la terrasse.",
-    groupes: [{ nom: "Autour de la terrasse", pages: [
-      ["/pergola-bioclimatique-lyon/", "Pergola bioclimatique", "Lames orientables : soleil, ombre ou pluie, vous choisissez."],
-      ["/pergola-toile-retractable-lyon/", "Pergola à toile rétractable", "Une toile qui se déploie et se replie à la demande."],
-      ["/pergola-toile-tendue-lyon/", "Pergola à toile tendue", "Une ombre légère et un style contemporain."],
-      ["/pergola-toit-fixe-lyon/", "Pergola à toit fixe", "Un abri permanent, à l'épreuve de la pluie."],
-      ["/store-banne-lyon/", "Store banne", "Coffre intégral, motorisation, capteurs vent et soleil."],
-      ["/carport-lyon/", "Carport", "Un abri voiture élégant, sans construire de garage."],
-      ["/garde-corps-aluminium-lyon/", "Garde-corps aluminium", "Barreaudage, verre ou tôle : sécurité et style, sans entretien.", "Garde-corps"],
-      ["/bardage-bois-lyon/", "Bardage bois", "Accoya, kebony, bambou, thermofrêne, thermopin ou thermo épicéa : un bardage assorti à votre terrasse."],
-      ["/bardage-aluminium-lyon/", "Bardage aluminium", "Une façade moderne, sans entretien."],
-    ] }],
+    groupes: [
+      { nom: "Protections solaires", pages: [
+        ["/pergola-bioclimatique-lyon/", "Pergola bioclimatique", "Lames orientables : soleil, ombre ou pluie, vous choisissez."],
+        ["/pergola-toile-retractable-lyon/", "Pergola à toile rétractable", "Une toile qui se déploie et se replie à la demande."],
+        ["/pergola-toile-tendue-lyon/", "Pergola à toile tendue", "Une ombre légère et un style contemporain."],
+        ["/pergola-toit-fixe-lyon/", "Pergola à toit fixe", "Un abri permanent, à l'épreuve de la pluie."],
+        ["/store-banne-lyon/", "Store banne", "Coffre intégral, motorisation, capteurs vent et soleil."],
+      ] },
+      { nom: "Bardage", pages: [
+        ["/bardage-bois-lyon/", "Bardage bois", "Accoya, kebony, bambou, thermofrêne, thermopin ou thermo épicéa : un bardage assorti à votre terrasse."],
+        ["/bardage-aluminium-lyon/", "Bardage aluminium", "Une façade moderne, sans entretien."],
+      ] },
+      { nom: "Garde-corps", pages: [
+        ["/garde-corps-aluminium-lyon/", "Garde-corps aluminium", "Barreaudage, verre ou tôle : sécurité et style, sans entretien."],
+      ] },
+      { nom: "Carport", pages: [
+        ["/carport-lyon/", "Carport", "Un abri voiture élégant, sans construire de garage."],
+      ] },
+    ],
   },
 ];
 

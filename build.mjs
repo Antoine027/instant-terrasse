@@ -53,7 +53,7 @@ const menuUnivers = (u0, actuel) => {
       ${u.cascade ? `<div class="sous-menu sous-menu-cascade">
         <ul class="cascade">${u.groupes.map((g) => `<li class="cascade-item${g.pages.some(([c]) => c === actuel) ? " cascade-actif" : ""}"><button type="button" class="cascade-titre">${g.nom}</button><div class="cascade-panneau"><div><p class="sous-menu-titre">${g.nom}</p><ul class="cascade-liste">${g.pages.map((p) => lienMenu(p, actuel)).join("")}</ul></div>${g.photo ? `<a class="cascade-photo" href="${g.pages[0][0]}" tabindex="-1" aria-hidden="true">${imgPhoto(g.photo, { sizes: "220px" })}</a>` : ""}</div></li>`).join("")}</ul>
       </div>` : `<div class="sous-menu${u.groupes.length > 2 ? " sous-menu-large" : ""}">
-        ${u.groupes.map((g) => `<div><p class="sous-menu-titre">${g.nom}</p><ul>${g.pages.map((p) => lienMenu(p, actuel)).join("")}</ul></div>`).join("")}
+        ${u.groupes.map((g) => `<div>${g.nom ? `<p class="sous-menu-titre">${g.nom}</p>` : ""}<ul>${g.pages.map((p) => lienMenu(p, actuel)).join("")}</ul></div>`).join("")}
       </div>`}
     </details>
   </li>`;

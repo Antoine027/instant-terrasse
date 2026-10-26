@@ -178,22 +178,22 @@ const PINS = [
 const SCRIPT_PINS = `(()=>{const h=document.querySelector('.hm-visuel'),im=h&&h.querySelector('.h-img'),ps=h&&h.querySelectorAll('.pin');if(!im)return;const place=()=>{const r=im.getBoundingClientRect(),H=h.getBoundingClientRect(),nw=im.naturalWidth||1600,nh=im.naturalHeight||900,s=Math.max(r.width/nw,r.height/nh),w=nw*s,hh=nh*s,op=getComputedStyle(im).objectPosition.split(' ').map(parseFloat),ox=(r.width-w)*op[0]/100,oy=(r.height-hh)*op[1]/100;ps.forEach(p=>{const x=r.left-H.left+ox+w*p.dataset.x/100,y=r.top-H.top+oy+hh*p.dataset.y/100,vis=x>r.left-H.left+12&&x<r.right-H.left-12&&y>r.top-H.top+12&&y<r.bottom-H.top-12;p.style.left=x+'px';p.style.top=y+'px';p.hidden=!vis});h.classList.add('pins-prets')};im.complete?place():im.addEventListener('load',place);addEventListener('resize',place)})();`;
 
 const accueil = `
-<section class="hero-maison">
-  <div class="hm-grille">
-    <div class="hm-txt">
-      <p class="kicker">Terrasses, pergolas et garde-corps sur mesure à Lyon</p>
-      <h1><span class="fin">Créez la 5<sup>e</sup> pièce</span> <span class="fort">de votre maison</span></h1>
-      <p class="chapo">Une terrasse pensée comme une pièce à part entière&nbsp;: le lien entre l'intérieur et l'extérieur.</p>
-      <p class="actions"><a class="bouton" href="/contact/">Demander une visite gratuite</a></p>
-      <p class="hero-avis">${BADGE_AVIS}</p>
-    </div>
-    <div class="hm-visuel">
-      ${imgPhoto("accueil-maison-5e-piece", { sizes: "(max-width:1000px) calc(100vw - 32px), 62vw", prioritaire: true, classe: "h-img" })}
-      <div class="pins" aria-label="Nos produits sur la maison">${PINS.map(([c, t, x, y, cote]) => `<a class="pin${cote ? " pin-" + cote : ""}" href="${c}" data-x="${x}" data-y="${y}"><span class="pin-point" aria-hidden="true"></span><span class="pin-nom">${t}</span></a>`).join("")}</div>
-      <p class="hm-aide" aria-hidden="true">Cliquez sur les points pour découvrir chaque produit</p>
-    </div>
+<section class="hero-plein hero-slogan hero-maison-plein">
+  <div class="hm-visuel">
+    ${imgPhoto("accueil-maison-5e-piece", { sizes: "(max-width:700px) calc(100vw - 32px), 70vw", prioritaire: true, classe: "h-img" })}
+    <div class="pins" aria-label="Nos produits sur la maison">${PINS.map(([c, t, x, y, cote]) => `<a class="pin${cote ? " pin-" + cote : ""}" href="${c}" data-x="${x}" data-y="${y}"><span class="pin-point" aria-hidden="true"></span><span class="pin-nom">${t}</span></a>`).join("")}</div>
   </div>
-  <div class="hm-grille hm-bas">${TRIO}</div>
+  <div class="conteneur h-txt">
+    <p class="kicker">Terrasses, pergolas et garde-corps sur mesure à Lyon</p>
+    <h1><span class="fin">Créez la 5<sup>e</sup> pièce</span> <span class="fort">de votre maison</span></h1>
+    <p class="chapo">Une terrasse pensée comme une pièce à part entière&nbsp;: le lien entre l'intérieur et l'extérieur.</p>
+    <p class="actions">
+      <a class="bouton" href="/contact/">Demander une visite gratuite</a>
+      <a class="bouton bouton-blanc" href="#piece">Découvrir</a>
+    </p>
+    <p class="hero-avis">${BADGE_AVIS}</p>
+    ${TRIO}
+  </div>
 <script>${SCRIPT_PINS}</script>
 </section>
 

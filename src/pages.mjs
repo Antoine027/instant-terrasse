@@ -167,12 +167,12 @@ const SCRIPT_PINS = `(()=>{const h=document.querySelector('.hm-visuel'),im=h&&h.
 
 // Choix du projet dans le formulaire de rappel : [libellé, tracé de l'icône].
 const CHOIX_PROJET = [
-  ["Terrasse", '<path d="M2 17h20"/><path d="M3 17l2-6h14l2 6"/><path d="M8 11l-1 6M12 11v6M16 11l1 6"/><path d="M4 20h16"/>'],
-  ["Pergola", '<path d="M3 6h18"/><path d="M5 6v14M19 6v14"/><path d="M7 9h10M7 12h10"/><path d="M3 20h18"/>'],
-  ["Store banne", '<path d="M3 4h18"/><path d="M4 4l-1 7h18l-1-7"/><path d="M3 11c1.5 1.5 3 1.5 4.5 0s3-1.5 4.5 0 3 1.5 4.5 0 3-1.5 4.5 0"/>'],
-  ["Garde-corps", '<path d="M3 6h18"/><path d="M4 6v13M20 6v13"/><path d="M8 6v13M12 6v13M16 6v13"/><path d="M2 19h20"/>'],
-  ["Bardage", '<path d="M4 3h16v18H4z"/><path d="M4 7h16M4 11h16M4 15h16M4 19h16"/>'],
-  ["Carport", '<path d="M2 8l10-4 10 4"/><path d="M4 8v12M20 8v12"/><path d="M7 17h10l-1-4H8l-1 4z"/><circle cx="9" cy="18" r="1"/><circle cx="15" cy="18" r="1"/>'],
+  ["Terrasse", '<path d="M12 3C7.6 3 4 5.2 4 8h16c0-2.8-3.6-5-8-5z"/><path d="M12 8v9"/><path d="M2 21l2.5-4h15l2.5 4z"/><path d="M8 17l-1 4M12 17v4M16 17l1 4"/>'],
+  ["Pergola", '<path d="M3 5h18M3 8h18"/><path d="M6.5 5v3M10 5v3M14 5v3M17.5 5v3"/><path d="M5 8v12M19 8v12"/><path d="M2 20h20"/>'],
+  ["Store banne", '<path d="M4 4h16l1 6H3z"/><path d="M8 4l-1 6M12 4v6M16 4l1 6"/><path d="M3 10a2.25 2.25 0 0 0 4.5 0 2.25 2.25 0 0 0 4.5 0 2.25 2.25 0 0 0 4.5 0 2.25 2.25 0 0 0 4.5 0"/><path d="M5 13.5V21h14v-7.5"/><path d="M9.5 21v-4.5h5V21"/>'],
+  ["Garde-corps", '<path d="M2 20h20"/><path d="M4 20V8M12 20V8M20 20V8"/><path d="M3 8h18"/><path d="M4 12h16M4 15.5h16"/>'],
+  ["Bardage", '<path d="M3 10l9-6 9 6"/><path d="M5 8.7V21h14V8.7"/><path d="M8.5 6.7V21M12 5v16M15.5 6.7V21"/>'],
+  ["Carport", '<path d="M2 5h20"/><path d="M4 5v15M20 5v15"/><path d="M7.5 14l1.5-3h6l1.5 3"/><path d="M6.5 14h11v3.5h-11z"/><circle cx="9" cy="18.5" r="1"/><circle cx="15" cy="18.5" r="1"/>'],
 ];
 
 const accueil = `
@@ -270,7 +270,7 @@ const accueil = `
       </div>
       <fieldset class="choix-projet">
         <legend>Mon projet <i>(plusieurs choix possibles)</i></legend>
-        <div class="choix-grille">${CHOIX_PROJET.map(([v, ic]) => `<label class="choix"><input type="checkbox" name="projet" value="${v}"><span class="choix-tuile"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">${ic}</svg>${v}</span></label>`).join("")}</div>
+        <div class="choix-grille">${CHOIX_PROJET.map(([v, ic]) => `<label class="choix"><input type="checkbox" name="projet" value="${v}"><span class="choix-tuile"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">${ic}</svg>${v}</span></label>`).join("")}</div>
       </fieldset>
       <label><span>Un mot sur votre projet <i>(facultatif)</i></span><textarea name="message" rows="3" maxlength="3000"></textarea></label>
       <label class="pot-de-miel" aria-hidden="true">Site web<input name="site_web" tabindex="-1" autocomplete="off"></label>

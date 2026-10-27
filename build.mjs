@@ -168,6 +168,7 @@ document.addEventListener('click',e=>{if(!e.target.closest('.menu-deroulant'))d.
 document.addEventListener('keydown',e=>{if(e.key==='Escape')d.forEach(y=>y.open=false)});
 ${SCRIPT_GALERIE}
 const af=document.querySelector('.appel-flottant');if(af){const m=()=>af.classList.toggle('visible',scrollY>innerHeight*.8);addEventListener('scroll',m,{passive:true});m()}
+if(matchMedia('(max-width:700px)').matches)document.querySelectorAll('.pt-materiaux,.pieces-4').forEach(c=>{const n=c.children.length,d=document.createElement('div');d.className='points';d.setAttribute('aria-hidden','true');d.innerHTML='<span></span>'.repeat(n);c.after(d);const ps=d.children;const u=()=>{const w=c.firstElementChild.getBoundingClientRect().width+14;const i=Math.min(n-1,Math.round(c.scrollLeft/w));[...ps].forEach((p,j)=>p.classList.toggle('on',j===i))};c.addEventListener('scroll',u,{passive:true});u()});
 const b=document.querySelector('.burger');b&&b.addEventListener('toggle',()=>document.body.classList.toggle('menu-ouvert',b.open));
 </script>
 </body>

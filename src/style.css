@@ -734,3 +734,4 @@ details[open]>summary.menu-lien::after{transform:translateY(2px) rotate(225deg)}
   .hero-maison-plein .hm-visuel{position:relative;inset:auto;height:min(58svh,520px);min-height:340px}
   .hero-maison-plein .h-txt{margin-top:-72px}
 }
+@media (max-width:700px){.hero-maison-plein .trio{border-radius:0}}

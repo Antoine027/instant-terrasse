@@ -926,3 +926,7 @@ details[open]>summary.menu-lien::after{transform:translateY(2px) rotate(225deg)}
 .grille-avis .avis{height:auto}
 .avis.ouvert{align-self:start}
 @media (max-width:700px){.grille-avis{align-items:stretch}.grille-avis .avis.ouvert{align-self:stretch}}
+.pt-nom small{display:block;font:600 .62em/1.2 Montserrat,sans-serif;letter-spacing:.14em;opacity:.85;margin-bottom:2px}
+@media (max-width:700px){.pt-materiaux .pt-mat>.pt-acc{top:84px}.pt-materiaux .pt-mat>.pt-nom small{font-size:.5em}}
+@media (min-width:701px){.pt-materiaux .pt-mat>.pt-nom{display:block}}
+.pt-materiaux .pt-mat>.pt-nom{flex-direction:column;align-items:flex-start;justify-content:flex-start}@media (max-width:700px){.pt-materiaux .pt-mat>.pt-nom small{margin-bottom:4px}}

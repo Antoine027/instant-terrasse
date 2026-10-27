@@ -218,7 +218,7 @@ const accueil = `
       <a class="pt-photo" href="/nos-terrasses/">${imgPhoto("terrasse-thermofrene-piscine-mer", { sizes: "(max-width:900px) 92vw, 620px" })}</a>
       <div class="pt-corps">
         <p class="pt-sur">Terrasses</p><h3>Des revêtements de terrasse…</h3>
-        <div class="pt-materiaux">${MATERIAUX_ACCUEIL.map(([c, t, ph, acc]) => `<a class="pt-mat" href="${c}">${imgPhoto(ph, { sizes: "(max-width:700px) 92vw, 300px" })}<span class="pt-nom"><small>Terrasse</small>${t}</span><span class="pt-acc">${acc}</span><span class="pt-dec">Découvrir <span aria-hidden="true">→</span></span></a>`).join("")}<a class="pt-mat pt-comparer" href="/nos-terrasses/"><span class="pt-nom">Comparer</span><span class="pt-acc">Bois, composite, aluminium ou carrelage : lequel choisir ?</span><span class="pt-dec">Voir le comparatif <span aria-hidden="true">→</span></span></a></div>
+        <div class="pt-materiaux">${MATERIAUX_ACCUEIL.map(([c, t, ph, acc]) => `<a class="pt-mat" href="${c}">${imgPhoto(ph, { sizes: "(max-width:700px) 92vw, 300px" })}<span class="pt-nom"><small>Terrasse</small>${t}</span><span class="pt-acc">${acc}</span><span class="pt-dec">Découvrir <span aria-hidden="true">→</span></span></a>`).join("")}<a class="pt-mat pt-comparer" href="/nos-terrasses/"><span class="pt-nom">Comparer</span><span class="pt-acc">Bois, composite, aluminium ou carrelage&nbsp;: lequel choisir&nbsp;?</span><span class="pt-dec">Voir le comparatif <span aria-hidden="true">→</span></span></a></div>
         <p class="pt-lien"><a class="bouton bouton-clair" href="/nos-terrasses/">Comparer les matériaux</a></p>
       </div>
     </article>

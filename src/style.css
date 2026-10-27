@@ -975,3 +975,4 @@ details[open]>summary.menu-lien::after{transform:translateY(2px) rotate(225deg)}
   .projet-mini .pm-corps p{display:block!important;top:52px}
   .projet-mini .pt-dec{bottom:16px}
 }
+@media (min-width:701px){.titre-projets{margin-top:28px}}

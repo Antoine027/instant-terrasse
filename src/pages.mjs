@@ -163,18 +163,19 @@ const PIECES = [
 
 // Pastilles posées sur la maison de l'en-tête : [lien, nom, x %, y % de l'image, côté de l'étiquette].
 const PINS = [
-  ["/pergola-bioclimatique-lyon/", "Pergola bioclimatique", 72, 24, "gauche"],
-  ["/bardage-bois-lyon/", "Bardage bois", 49, 22],
-  ["/store-banne-lyon/", "Store banne", 33, 33],
-  ["/garde-corps-aluminium-lyon/", "Garde-corps aluminium", 11, 57],
-  ["/terrasse-carrelage-lyon/", "Terrasse carrelage", 64, 86],
+  ["/pergola-bioclimatique-lyon/", "Pergola bioclimatique", 74, 22, "gauche"],
+  ["/bardage-bois-lyon/", "Bardage bois", 58, 46],
+  ["/store-banne-lyon/", "Store banne", 86, 31, "gauche"],
+  ["/garde-corps-aluminium-lyon/", "Garde-corps aluminium", 38, 58],
+  ["/terrasse-carrelage-lyon/", "Terrasse carrelage", 72, 86, "gauche"],
+  ["/terrasse-piscine-lyon/", "Terrasse de piscine", 16, 78],
 ];
-const SCRIPT_PINS = `(()=>{const h=document.querySelector('.hm-visuel'),im=h&&h.querySelector('.h-img'),ps=h&&h.querySelectorAll('.pin');if(!im)return;const place=()=>{const r=im.getBoundingClientRect(),H=h.getBoundingClientRect(),nw=im.naturalWidth||1600,nh=im.naturalHeight||900,s=Math.max(r.width/nw,r.height/nh),w=nw*s,hh=nh*s,op=getComputedStyle(im).objectPosition.split(' ').map(parseFloat),ox=(r.width-w)*op[0]/100,oy=(r.height-hh)*op[1]/100;ps.forEach(p=>{const x=r.left-H.left+ox+w*p.dataset.x/100,y=r.top-H.top+oy+hh*p.dataset.y/100;let vis=x>r.left-H.left+12&&x<r.right-H.left-12&&y>r.top-H.top+12&&y<r.bottom-H.top-12;const tx=h.parentNode.querySelector('.h-txt .chapo');if(tx&&getComputedStyle(h).position==='absolute'){const t=tx.getBoundingClientRect();if(x+H.left<t.right+30)vis=false}p.style.left=x+'px';p.style.top=y+'px';p.hidden=!vis});h.classList.add('pins-prets')};im.complete?place():im.addEventListener('load',place);addEventListener('resize',place)})();`;
+const SCRIPT_PINS = `(()=>{const h=document.querySelector('.hm-visuel'),im=h&&h.querySelector('.h-img'),ps=h&&h.querySelectorAll('.pin');if(!im)return;const place=()=>{const r=im.getBoundingClientRect(),H=h.getBoundingClientRect(),nw=im.naturalWidth||1600,nh=im.naturalHeight||900,s=Math.max(r.width/nw,r.height/nh),w=nw*s,hh=nh*s,op=getComputedStyle(im).objectPosition.split(' ').map(parseFloat),ox=(r.width-w)*op[0]/100,oy=(r.height-hh)*op[1]/100;ps.forEach(p=>{const x=r.left-H.left+ox+w*p.dataset.x/100,y=r.top-H.top+oy+hh*p.dataset.y/100;let vis=x>r.left-H.left+12&&x<r.right-H.left-12&&y>r.top-H.top+12&&y<r.bottom-H.top-12;if(getComputedStyle(h).position==='absolute'){const t=h.parentNode.querySelector('.h-txt .chapo').getBoundingClientRect();if(x+H.left<t.right+30)vis=false;h.parentNode.querySelectorAll('.h-txt>*').forEach(e=>{const b=e.getBoundingClientRect();if(x+H.left>b.left-24&&x+H.left<b.right+24&&y+H.top>b.top-24&&y+H.top<b.bottom+24)vis=false})}p.style.left=x+'px';p.style.top=y+'px';p.hidden=!vis});h.classList.add('pins-prets')};im.complete?place():im.addEventListener('load',place);addEventListener('resize',place)})();`;
 
 const accueil = `
 <section class="hero-plein hero-slogan hero-maison-plein">
   <div class="hm-visuel">
-    ${imgPhoto("accueil-terrasse-pergola-droite", { sizes: "(max-width:700px) calc(100vw - 32px), 100vw", prioritaire: true, classe: "h-img" })}
+    ${imgPhoto("accueil-panorama-pergola-piscine", { sizes: "(max-width:700px) calc(100vw - 32px), 100vw", prioritaire: true, classe: "h-img" })}
     <div class="pins" aria-label="Nos produits sur la maison">${PINS.map(([c, t, x, y, cote]) => `<a class="pin${cote ? " pin-" + cote : ""}" href="${c}" data-x="${x}" data-y="${y}"><span class="pin-point" aria-hidden="true"></span><span class="pin-nom">${t}</span></a>`).join("")}</div>
   </div>
   <div class="conteneur h-txt">

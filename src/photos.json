@@ -2688,5 +2688,19 @@
    1600
   ],
   "ratio": 1.7768
+ },
+ {
+  "cle": "accueil-terrasse-carrelage-pergola",
+  "dossier": "accueil",
+  "categorie": "accueil-hero",
+  "alt": "Grande terrasse en dalles claires avec pergola bioclimatique, salon, store banne, bardage bois et garde-corps aluminium face aux collines",
+  "largeurs": [
+   400,
+   600,
+   800,
+   1000,
+   1600
+  ],
+  "ratio": 2.0
  }
 ]

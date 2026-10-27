@@ -2690,18 +2690,17 @@
   "ratio": 1.7768
  },
  {
-  "cle": "accueil-panorama-pergola-piscine",
+  "cle": "accueil-piscine-store-pergola",
   "dossier": "accueil",
   "categorie": "accueil-hero",
-  "alt": "Grande terrasse en dalles claires avec plage de piscine en bois, pergola bioclimatique, store banne, bardage bois et garde-corps aluminium face aux collines",
+  "alt": "Terrasse en dalles claires autour d une piscine, store banne, pergola bioclimatique sur terrasse bois, bardage et garde-corps face aux collines",
   "largeurs": [
    400,
    600,
    800,
    1000,
-   1600,
-   2164
+   1600
   ],
-  "ratio": 2.9766
+  "ratio": 1.7768
  }
 ]

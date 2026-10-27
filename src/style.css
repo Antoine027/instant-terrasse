@@ -640,9 +640,6 @@ details[open]>summary.menu-lien::after{transform:translateY(2px) rotate(225deg)}
 }
 
 .hero-maison-plein .hm-visuel .h-img{object-position:72% 60%}
-@media (max-width:1100px){.hero-maison-plein .hm-visuel .h-img{aspect-ratio:2164/727;object-position:50% 50%}}
+@media (max-width:1100px){.hero-maison-plein .hm-visuel .h-img{aspect-ratio:auto;object-position:50% 50%}}
 
-@media (min-width:1101px){
-  .hero-maison-plein{min-height:max(640px,33.6vw)}
-  .hero-maison-plein .hm-visuel .h-img{object-position:100% 60%}
-}
+@media (min-width:1101px){.hero-maison-plein .hm-visuel .h-img{object-position:75% 55%}}

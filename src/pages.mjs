@@ -85,7 +85,7 @@ export const AUTRES = [
 ];
 
 export const ENGAGEMENTS = [
-  ["Des prix transparents", "Le meilleur produit au meilleur tarif, et un devis détaillé : vous savez ce que vous payez, et pourquoi."],
+  ["Des prix transparents", "Un devis détaillé ligne par ligne : vous savez ce que vous payez, et pourquoi."],
   ["Les échantillons chez vous", "Pas de showroom : nous venons avec les échantillons, pour les voir à la lumière de votre jardin et à côté de votre façade."],
   ["Plan 3D offert", "Avant de signer, vous voyez votre projet en 3D : implantation, hauteurs, matériau."],
   ["Structure aluminium garantie 20 ans", "Nos structures de terrasse en aluminium sont garanties 20 ans."],
@@ -94,7 +94,7 @@ export const ENGAGEMENTS = [
 
 export const MOT_ANTOINE = `
       <p>Je travaille depuis 2017 dans les pergolas, les stores bannes et les garde-corps. Début 2022, j'ai ajouté la terrasse : pendant quatre ans, j'ai été commercial pour une entreprise de terrasses, où j'ai appris les matériaux, les structures, et surtout ce que les clients attendent vraiment.</p>
-      <p>J'ai créé Instant Terrasse avec une idée simple : proposer le meilleur produit au meilleur tarif, en toute transparence. Je viens chez vous avec les échantillons, je vous montre votre projet en 3D, et je vous explique chaque ligne du devis.</p>
+      <p>J'ai créé Instant Terrasse avec une idée simple : proposer des produits de qualité, au prix juste, en toute transparence. Je viens chez vous avec les échantillons, je vous montre votre projet en 3D, et je vous explique chaque ligne du devis.</p>
       <p class="signature">Antoine Escolle, fondateur d'Instant Terrasse</p>`;
 
 // Avis Google (fiche « Instant Terrasse - Lyon », relevés le 22/10/2026). Textes recopiés tels quels, extraits arrêtés en fin de phrase.
@@ -119,7 +119,7 @@ export const BADGE_AVIS = `<a class="badge-avis" href="${AVIS.lien}" target="_bl
 export const FAQ = [
   ["Quel matériau choisir pour ma terrasse ?", "Tout dépend de l'aspect recherché, du budget et du temps que vous voulez consacrer à l'entretien. Le bois apporte la chaleur d'un matériau naturel, le composite et l'aluminium limitent l'entretien, le carrelage offre un rendu minéral. Notre <a href=\"/nos-terrasses/\">comparatif des matériaux</a> vous aide à y voir clair, et nous affinons le choix lors de la visite."],
   ["Qui réalise la pose ?", `${POSE}`],
-  ["Combien coûte une terrasse ou une pergola ?", "Le prix dépend du matériau, de la surface, de la structure nécessaire, de la hauteur et de l'accès au chantier. C'est pourquoi nous venons voir les lieux avant de chiffrer. Notre objectif : le meilleur produit au meilleur tarif, avec un devis détaillé, gratuit et sans engagement."],
+  ["Combien coûte une terrasse ou une pergola ?", "Le prix dépend du matériau, de la surface, de la structure nécessaire, de la hauteur et de l'accès au chantier. C'est pourquoi nous venons voir les lieux avant de chiffrer. Notre objectif : le juste prix pour un produit de qualité, avec un devis détaillé, gratuit et sans engagement."],
   ["Quelles sont les garanties ?", "Nos structures de terrasse en aluminium sont garanties 20 ans, et la pose est réalisée par notre installateur partenaire, assuré en garantie décennale."],
   ["Avez-vous un showroom ?", "Non, et c'est volontaire : c'est nous qui venons chez vous avec les échantillons. Un matériau se choisit mieux à la lumière de votre jardin et à côté de votre façade que sous les néons d'un magasin."],
   ["Proposez-vous un plan 3D ?", "Oui, le plan 3D de votre projet est offert. Vous voyez votre future terrasse, sa hauteur et son matériau avant de vous engager."],
@@ -212,7 +212,7 @@ const accueil = `
       <h2>Un seul interlocuteur, du premier rendez-vous à la fin du chantier</h2>
       <p>${POSE}</p>
       <ul class="puces">
-        <li><strong>Des prix transparents</strong> : le meilleur produit au meilleur tarif, et un devis détaillé.</li>
+        <li><strong>Des prix transparents</strong> : un devis détaillé, ligne par ligne.</li>
         <li><strong>Structure aluminium garantie 20 ans.</strong></li>
         <li><strong>Pose assurée en garantie décennale.</strong></li>
       </ul>
@@ -458,7 +458,7 @@ export const PAGES = [
       makesOffer: ["Terrasses bois, composite, carrelage et aluminium", "Pergolas et carports", "Garde-corps aluminium", "Stores bannes", "Bardage bois et aluminium"].map((n) => ({ "@type": "Offer", itemOffered: { "@type": "Service", name: n } })),
     },
   },
-  ...pagesPlan.map((p) => p.chemin === "/quisommesnous/" ? { ...p, title: "À propos : Antoine Escolle et Instant Terrasse, Lyon", description: "Instant Terrasse, créée par Antoine Escolle : pergolas, stores et garde-corps depuis 2017, terrasses depuis 2022. Le meilleur produit au meilleur tarif, échantillons à domicile, plan 3D offert.", corps: aPropos, statut: "redigee" } : p).map((p) => p.chemin === "/partenaires/" ? { ...p, title: "Partenaires : Horizon Fenêtre et ESCOM HABITAT | Instant Terrasse", description: "Horizon Fenêtre, menuiseries sur mesure à Lyon, et ESCOM HABITAT, la société qui réunit Instant Terrasse et Horizon Fenêtre.", corps: partenaires, statut: "redigee" } : p).map((p) => p.chemin === "/contact/" ? { ...p, title: "Devis gratuit terrasse et pergola Lyon | Instant Terrasse", description: "Demandez votre devis gratuit pour une terrasse, une pergola, un garde-corps, un store banne ou un bardage à Lyon et dans sa région.", corps: contact, statut: "redigee" } : p),
+  ...pagesPlan.map((p) => p.chemin === "/quisommesnous/" ? { ...p, title: "À propos : Antoine Escolle et Instant Terrasse, Lyon", description: "Instant Terrasse, créée par Antoine Escolle : pergolas, stores et garde-corps depuis 2017, terrasses depuis 2022. Produits de qualité, devis transparent, échantillons à domicile, plan 3D offert.", corps: aPropos, statut: "redigee" } : p).map((p) => p.chemin === "/partenaires/" ? { ...p, title: "Partenaires : Horizon Fenêtre et ESCOM HABITAT | Instant Terrasse", description: "Horizon Fenêtre, menuiseries sur mesure à Lyon, et ESCOM HABITAT, la société qui réunit Instant Terrasse et Horizon Fenêtre.", corps: partenaires, statut: "redigee" } : p).map((p) => p.chemin === "/contact/" ? { ...p, title: "Devis gratuit terrasse et pergola Lyon | Instant Terrasse", description: "Demandez votre devis gratuit pour une terrasse, une pergola, un garde-corps, un store banne ou un bardage à Lyon et dans sa région.", corps: contact, statut: "redigee" } : p),
   { chemin: "/merci/", title: "Merci | Instant Terrasse", description: "Votre demande a bien été envoyée.", corps: merci, horsPlan: true },
   { chemin: "/mentions-legales/", title: "Mentions légales | Instant Terrasse", description: "Mentions légales du site Instant Terrasse, marque d'ESCOM HABITAT à Rillieux-la-Pape.", corps: mentions, horsPlan: true },
   { chemin: "/confidentialite/", title: "Confidentialité et cookies | Instant Terrasse", description: "Comment Instant Terrasse utilise les données du formulaire de contact, et l'absence de cookies publicitaires.", corps: confidentialite, horsPlan: true },

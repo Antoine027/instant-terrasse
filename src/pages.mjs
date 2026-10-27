@@ -124,7 +124,7 @@ export const FAQ = [
   ["Avez-vous un showroom&nbsp;?", "Non, et c'est volontaire : c'est nous qui venons chez vous avec les échantillons. Un matériau se choisit mieux à la lumière de votre jardin et à côté de votre façade que sous les néons d'un magasin."],
   ["Proposez-vous un plan 3D&nbsp;?", "Oui, le plan 3D de votre projet est offert. Vous voyez votre future terrasse, sa hauteur et son matériau avant de vous engager."],
   ["Faut-il une autorisation pour une terrasse ou une pergola&nbsp;?", "Selon la surface, la hauteur et votre commune, une déclaration préalable de travaux peut être nécessaire, notamment pour une pergola ou une terrasse surélevée. Nous vous indiquons la démarche à suivre lors de la visite."],
-  ["Pouvez-vous réaliser la terrasse, la pergola et le garde-corps en même temps&nbsp;?", "Oui, et c'est même recommandé : hauteurs, fixations et écoulement des eaux se pensent ensemble. Vous n'avez qu'un seul interlocuteur pour tout le projet."],
+  ["Pouvez-vous réaliser la terrasse, la pergola et le garde-corps en même temps&nbsp;?", "Oui, et c'est même recommandé : hauteurs, fixations et écoulement des eaux se pensent ensemble. Vous gardez un interlocuteur principal pour tout le projet."],
   ["Dans quelle zone intervenez-vous&nbsp;?", "À Lyon et dans sa région. Indiquez votre code postal dans la demande de devis, nous vous répondons rapidement."],
 ];
 
@@ -236,7 +236,7 @@ const accueil = `
     <div>
       <p class="sous-titre">Notre méthode</p>
       <a class="carte-antoine" href="/quisommesnous/">${imgPhoto("antoine-escolle", { sizes: "100px", classe: "ca-photo" })}<span><strong>Antoine</strong>, votre interlocuteur du premier rendez-vous à la fin du chantier.<em>Mon parcours →</em></span></a>
-      <h2><span class="long">Un seul interlocuteur, du premier rendez-vous à la fin du chantier</span><span class="court">Un seul interlocuteur, du début à la fin</span></h2>
+      <h2><span class="long">Votre interlocuteur principal, du premier rendez-vous à la fin du chantier</span><span class="court">Votre interlocuteur principal, du début à la fin</span></h2>
       <p>${POSE}</p>
       <ul class="puces">
         <li><strong>Des produits sélectionnés pour leur qualité.</strong></li>
@@ -384,7 +384,7 @@ const partenaires = `
       tags: ["Fenêtres", "Baies coulissantes", "Volets roulants", "Volets battants", "Portes d'entrée", "Portes de garage", "Portails", "Clôtures", "Moustiquaires"],
       bouton: "Découvrir Horizon Fenêtre", tel: "04 28 55 00 24", telLien: "+33428550024", appel: "Appeler Horizon Fenêtre" })}
     ${carteMarque({ url: "https://www.escomhabitat.com/", logo: "escom-habitat.webp", w: 480, h: 149, alt: "ESCOM HABITAT", classe: "escom",
-      titre: "Deux savoir-faire, une seule entreprise", texte: "ESCOM HABITAT, à Rillieux-la-Pape, réunit Instant Terrasse et Horizon Fenêtre : un seul interlocuteur pour vos aménagements extérieurs et vos menuiseries.",
+      titre: "Deux savoir-faire, une seule entreprise", texte: "ESCOM HABITAT, à Rillieux-la-Pape, réunit Instant Terrasse et Horizon Fenêtre : un interlocuteur principal pour vos aménagements extérieurs et vos menuiseries.",
       tags: ["Instant Terrasse", "Horizon Fenêtre", "Particuliers", "Professionnels", "Lyon et alentours"],
       bouton: "Découvrir ESCOM HABITAT", tel: "06 27 94 41 62", telLien: "+33627944162", appel: "Appeler ESCOM HABITAT" })}
   </div>

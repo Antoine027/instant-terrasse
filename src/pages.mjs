@@ -147,10 +147,10 @@ const MATERIAUX_ACCUEIL = [
   ["/terrasse-carrelage-lyon/", "Carrelage", "carrelage-toit-terrasse-montagnes", "Grès cérame posé sans colle, sur plots"],
 ];
 const AUTRES_PIECES = [
-  ["/bardage-bois-lyon/", "Bardage", "Un bardage bois ou aluminium, assorti à la terrasse.", "bardage-thermofrene-horizontal"],
+  ["/bardage-bois-lyon/", "Bardage", "Un bardage bois ou aluminium, assorti à la terrasse.", "bardage-accoya-naturel-jardin"],
   ["/pergolas-lyon/", "Pergolas", "Bioclimatique, toile ou toit fixe : de l'ombre et un abri.", "pergola-bioclimatique-piscine"],
   ["/store-banne-lyon/", "Store banne", "De l'ombre à la demande, replié quand le soleil tourne.", "store-banne-beige-maison"],
-  ["/garde-corps-aluminium-lyon/", "Garde-corps", "Sécuriser la terrasse sans fermer la vue.", "gc-maison-lisses-noires"],
+  ["/garde-corps-aluminium-lyon/", "Garde-corps", "Sécuriser la terrasse sans fermer la vue.", "gc-maison-verre-clair"],
 ];
 const PIECES = [
   { etiquette: "Terrasses", titre: "Revêtements", encart: ["/bardage-bois-lyon/", "Bardage", "bardage-thermofrene-maison"], texte: "Au sol, du bois, du composite, du carrelage ou des lames aluminium sur une structure garantie 20 ans. Aux murs, un bardage assorti.", photo: "terrasse-thermofrene-pool-house",

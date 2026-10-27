@@ -141,10 +141,10 @@ const etapes = [
 export const TRIO = `<ul class="trio"><li><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V8l7-5 7 5v13"/><path d="M9 21v-6h6v6"/></svg><span>Visite chez vous, avec les échantillons</span></li><li><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 3 7l9 5 9-5-9-5z"/><path d="m3 17 9 5 9-5"/><path d="m3 12 9 5 9-5"/></svg><span>Plan 3D de votre projet offert</span></li><li><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg><span>Pose assurée en garantie décennale</span></li></ul>`;
 
 const MATERIAUX_ACCUEIL = [
-  ["/terrasse-bois-lyon/", "Bois", "terrasse-bambou-ndurance-piscine-pierre"],
-  ["/terrasse-composite-lyon/", "Composite", "composite-gris-piscine"],
-  ["/terrasse-aluminium-lyon/", "Aluminium", "alu-piscine-aspect-teck"],
-  ["/terrasse-carrelage-lyon/", "Carrelage", "carrelage-toit-terrasse-montagnes"],
+  ["/terrasse-bois-lyon/", "Bois", "terrasse-bambou-ndurance-piscine-pierre", "Naturel et chaleureux"],
+  ["/terrasse-composite-lyon/", "Composite", "composite-gris-piscine", "L'aspect du bois, sans entretien"],
+  ["/terrasse-aluminium-lyon/", "Aluminium", "alu-piscine-aspect-teck", "Stable et imputrescible"],
+  ["/terrasse-carrelage-lyon/", "Carrelage", "carrelage-toit-terrasse-montagnes", "Minéral et intemporel"],
 ];
 const AUTRES_PIECES = [
   ["/bardage-bois-lyon/", "Bardage", "Un bardage bois ou aluminium, assorti à la terrasse.", "bardage-thermofrene-horizontal"],
@@ -194,12 +194,12 @@ const accueil = `
       <a class="pt-photo" href="/nos-terrasses/">${imgPhoto("terrasse-thermofrene-piscine-mer", { sizes: "(max-width:900px) 92vw, 620px" })}</a>
       <div class="pt-corps">
         <p class="pt-sur">Terrasses</p><h3>Le sol de votre 5<sup>e</sup> pièce</h3>
-        <div class="pt-materiaux">${MATERIAUX_ACCUEIL.map(([c, t, ph]) => `<a class="pt-mat" href="${c}">${imgPhoto(ph, { sizes: "200px" })}<span class="pt-nom">${t}</span></a>`).join("")}</div>
+        <div class="pt-materiaux">${MATERIAUX_ACCUEIL.map(([c, t, ph, acc]) => `<a class="pt-mat" href="${c}">${imgPhoto(ph, { sizes: "(max-width:700px) 92vw, 300px" })}<span class="pt-nom">${t}</span><span class="pt-acc">${acc}</span><span class="pt-dec">Découvrir <span aria-hidden="true">→</span></span></a>`).join("")}</div>
         <p class="pt-lien"><a class="bouton bouton-clair" href="/nos-terrasses/">Comparer les matériaux</a></p>
       </div>
     </article>
     <div class="pieces-4">
-      ${AUTRES_PIECES.map(([c, t, x, ph]) => `<a class="piece-mini" href="${c}">${imgPhoto(ph, { sizes: "(max-width:600px) 46vw, (max-width:1100px) 45vw, 290px" })}<div class="pm-corps"><h3>${t}</h3><p>${x}</p></div><span class="pm-fleche" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></span></a>`).join("")}
+      ${AUTRES_PIECES.map(([c, t, x, ph]) => `<a class="piece-mini" href="${c}">${imgPhoto(ph, { sizes: "(max-width:600px) 46vw, (max-width:1100px) 45vw, 290px" })}<div class="pm-corps"><h3>${t}</h3><p>${x}</p><span class="pt-dec">Découvrir <span aria-hidden="true">→</span></span></div><span class="pm-fleche" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></span></a>`).join("")}
     </div>
   </div>
 </section>

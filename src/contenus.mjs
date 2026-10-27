@@ -553,6 +553,12 @@ ${heroPlein({ fil: "Terrasses", h1: ["Terrasse en carrelage", "grès cérame"], 
   photo: "carrelage-toit-terrasse-montagnes", position: "50% 60%",
   actions: `<a class="bouton" href="/contact/">Demander une visite gratuite</a> <a class="bouton bouton-blanc" href="/structure-terrasse-lyon/#comparatif-carrelage">Plots ou structure ?</a>` })}
 
+<section id="galerie" class="bloc">
+  <div class="conteneur">
+    ${galerie("terrasse-carrelage", { titre: "Terrasses carrelage en situation", legende: "Illustrations" })}
+  </div>
+</section>
+
 <section class="bloc bloc-alt">
   <div class="conteneur">
     <h2>Pourquoi le grès cérame en extérieur</h2>

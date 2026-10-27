@@ -2672,5 +2672,47 @@
    725
   ],
   "ratio": 2.3237
+ },
+ {
+  "cle": "carrelage-aspect-bois-garde-corps-feuilles",
+  "dossier": "terrasses",
+  "categorie": "terrasse-carrelage",
+  "alt": "Terrasse en carrelage aspect bois avec garde-corps aluminium découpé à motif feuillage et main courante bois",
+  "largeurs": [
+   400,
+   600,
+   800,
+   1000,
+   1600
+  ],
+  "ratio": 1.4994
+ },
+ {
+  "cle": "carrelage-gris-garde-corps-verre-depoli",
+  "dossier": "terrasses",
+  "categorie": "terrasse-carrelage",
+  "alt": "Terrasse surélevée en grandes dalles de grès cérame gris, garde-corps aluminium et verre dépoli",
+  "largeurs": [
+   400,
+   600,
+   800,
+   1000,
+   1600
+  ],
+  "ratio": 1.3333
+ },
+ {
+  "cle": "carrelage-beige-pergola-toit-fixe",
+  "dossier": "terrasses",
+  "categorie": "terrasse-carrelage",
+  "alt": "Grande terrasse en carrelage beige avec pergola à toit fixe et garde-corps verre dépoli anthracite",
+  "largeurs": [
+   400,
+   600,
+   800,
+   1000,
+   1600
+  ],
+  "ratio": 1.3333
  }
 ]

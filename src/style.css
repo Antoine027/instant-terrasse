@@ -740,3 +740,11 @@ details[open]>summary.menu-lien::after{transform:translateY(2px) rotate(225deg)}
   .hero-maison-plein .actions .bouton{background:#f0b15a;color:#1b1d1f;box-shadow:0 10px 26px -12px rgba(240,177,90,.6)}
   .hero-maison-plein .actions .bouton:hover,.hero-maison-plein .actions .bouton:active{background:#e3a94a;color:#1b1d1f}
 }
+.hero-rassure{display:none}
+.appel-flottant{display:none}
+@media (max-width:700px){
+  .hero-maison-plein .hero-rassure{display:block;margin:10px 0 0;font-size:.85rem;color:rgba(255,255,255,.72);text-align:center}
+  .appel-flottant{display:flex;position:fixed;right:16px;bottom:calc(20px + env(safe-area-inset-bottom));z-index:40;width:58px;height:58px;border-radius:50%;align-items:center;justify-content:center;background:var(--bouton);color:#fff;box-shadow:0 12px 28px -8px rgba(0,0,0,.45),0 0 0 4px rgba(255,255,255,.85);text-decoration:none}
+  .appel-flottant:active{transform:scale(.95)}
+}
+@media (max-width:700px){.appel-flottant{opacity:0;transform:translateY(16px) scale(.9);pointer-events:none;transition:opacity .25s,transform .25s}.appel-flottant.visible{opacity:1;transform:none;pointer-events:auto}}

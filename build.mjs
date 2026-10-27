@@ -159,6 +159,7 @@ ${entete(p.chemin)}
 ${p.corps ?? corpsPreparation(p)}
 </main>
 ${pied()}
+<a class="appel-flottant" href="tel:${SITE.telLien}" aria-label="Appeler Instant Terrasse au ${SITE.tel}"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg></a>
 <script>
 // Un seul sous-menu ouvert à la fois, fermeture au clic extérieur ou Échap.
 const d=[...document.querySelectorAll('.menu-deroulant')];
@@ -166,6 +167,7 @@ d.forEach(x=>x.addEventListener('toggle',()=>{if(x.open)d.forEach(y=>y!==x&&(y.o
 document.addEventListener('click',e=>{if(!e.target.closest('.menu-deroulant'))d.forEach(y=>y.open=false)});
 document.addEventListener('keydown',e=>{if(e.key==='Escape')d.forEach(y=>y.open=false)});
 ${SCRIPT_GALERIE}
+const af=document.querySelector('.appel-flottant');if(af){const m=()=>af.classList.toggle('visible',scrollY>innerHeight*.8);addEventListener('scroll',m,{passive:true});m()}
 const b=document.querySelector('.burger');b&&b.addEventListener('toggle',()=>document.body.classList.toggle('menu-ouvert',b.open));
 </script>
 </body>

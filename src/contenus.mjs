@@ -1073,7 +1073,41 @@ ${heroPlein({ fil: "Aménagements", h1: ["Quelle pergola", "pour votre terrasse 
 ${cta("Vous hésitez entre deux pergolas ?", "Nous venons chez vous, nous regardons l'exposition et l'usage de la terrasse, et nous vous conseillons la plus adaptée.")}`,
 };
 
+// ---------- Terrasses de restaurants (CHR) ----------
+const terrasseRestaurant = {
+  title: "Terrasse de restaurant Lyon : café, hôtel, CHR sur mesure | Instant Terrasse",
+  description: "Terrasse de restaurant, café ou hôtel à Lyon : plancher sans entretien, garde-corps et pare-vue, pergola ou store pour l'ombre. Un seul interlocuteur, plan 3D offert.",
+  corps: pageProduit({
+    fil: "Professionnels",
+    h1: ["Terrasse de restaurant", "et d'hôtel"], kicker: "Cafés, hôtels et restaurants à Lyon et dans sa région",
+    chapo: "Une terrasse accueillante fait venir les clients et les fait rester. Plancher, garde-corps, pare-vue, ombre : nous concevons l'ensemble pour qu'il encaisse le service, saison après saison.",
+    photo: "terrasse-kebony-restaurant", position: "50% 55%",
+    atouts: [
+      ["Pensée pour le service", "Un sol plan et sans marche inutile, pour circuler facilement entre les tables."],
+      ["Sans entretien", "Lames aluminium, composite ou bois modifié : pas de saturateur à refaire chaque saison."],
+      ["Délimitée et protégée", "Garde-corps, pare-vue bois ou vitré : la terrasse se distingue de la rue et protège du vent."],
+      ["De l'ombre et un abri", "Pergola ou store banne pour ouvrir la terrasse plus tôt au printemps et plus tard en automne."],
+      ["Sur un sol existant", "Plots réglables ou structure aluminium pour rattraper la pente d'un trottoir ou d'une cour."],
+      ["Un seul interlocuteur", "Nous coordonnons la pose avec notre installateur partenaire, pour limiter la gêne pendant les travaux."],
+    ],
+    galerieCat: ["restaurant-terrasse-gabions", "terrasse-kebony-restaurant", "terrasse-thermopin-restaurant", "alu-restaurant-vue-mer", "alu-restaurant-salle"],
+    titreGalerie: "Terrasses de restaurants en situation",
+    details: `<h2>Avant de se lancer</h2>
+      <p>Une terrasse posée sur le domaine public demande une autorisation d'occupation de la mairie. Sur une cour ou un terrain privé, les règles d'urbanisme et d'accessibilité s'appliquent aussi. Nous regardons ces points avec vous dès la première visite.</p>
+      <p>Pour l'ombre, voyez nos <a href="/pergolas-lyon/">pergolas</a> et le <a href="/store-banne-lyon/">store banne</a> ; pour délimiter, le <a href="/garde-corps-aluminium-lyon/">garde-corps aluminium</a>.</p>`,
+    complement: "Nous venons voir les lieux, les accès et vos horaires de service, et le plan 3D de votre terrasse est offert.",
+    titreVoisins: "Voir aussi",
+    voisins: [
+      ["/terrasse-aluminium-lyon/", "Terrasse aluminium", "Des lames stables et sans entretien."],
+      ["/pergolas-lyon/", "Pergolas", "Bioclimatique, toile ou toit fixe."],
+      ["/garde-corps-aluminium-lyon/", "Garde-corps aluminium", "Délimiter et sécuriser la terrasse."],
+    ],
+    ctaTitre: "Un projet de terrasse pour votre établissement ?",
+  }),
+};
+
 export const CONTENUS = {
+  "/terrasse-restaurant-chr-lyon/": terrasseRestaurant,
   "/pergolas-lyon/": pergolas,
   "/realisations/": realisations,
   "/nos-terrasses/": nosTerrasses,

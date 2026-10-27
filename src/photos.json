@@ -2660,5 +2660,17 @@
    1075
   ],
   "ratio": 1.5056
+ },
+ {
+  "cle": "restaurant-terrasse-gabions",
+  "dossier": "terrasses",
+  "categorie": "restaurant",
+  "alt": "Terrasse de restaurant sur bordure en gabions, garde-corps métal noir avec panneaux bois et main courante bois",
+  "largeurs": [
+   400,
+   600,
+   725
+  ],
+  "ratio": 2.3237
  }
 ]

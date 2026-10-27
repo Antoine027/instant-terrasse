@@ -152,6 +152,13 @@ const MATERIAUX_ACCUEIL = [
   ["/terrasse-aluminium-lyon/", "Aluminium", "alu-piscine-aspect-teck", "Ne pourrit pas, ne bouge pas, en 6 teintes"],
   ["/terrasse-carrelage-lyon/", "Carrelage", "carrelage-toit-terrasse-montagnes", "Grès cérame posé sans colle, sur plots"],
 ];
+const PROJETS_ACCUEIL = [
+  ["/terrasse-piscine-lyon/", "Terrasse de piscine", "Une plage agréable pieds nus.", "terrasse-thermofrene-piscine-mer"],
+  ["/terrasse-balcon-lyon/", "Balcon", "Un vrai sol, posé sur l'existant.", "gc-maison-balcon-lisses"],
+  ["/toit-terrasse-lyon/", "Toit-terrasse", "Sans percer l'étanchéité.", "terrasse-bambou-xtreme-toit"],
+  ["/terrasse-sur-pilotis-lyon/", "Terrasse sur pilotis", "Pour les terrains en pente.", "pilotis-terrain-pente"],
+  ["/terrasse-sur-plots-lyon/", "Terrasse sur plots", "Sans fondation, de niveau.", "structure-plot-rail-lame"],
+];
 const AUTRES_PIECES = [
   ["/bardage-bois-lyon/", "Bardage", "Un bardage bois ou aluminium, assorti à la terrasse.", "bardage-accoya-naturel-jardin"],
   ["/pergolas-lyon/", "Pergolas", "Bioclimatique, toile ou toit fixe : de l'ombre et un abri.", "pergola-bioclimatique-piscine"],
@@ -215,6 +222,8 @@ const accueil = `
         <p class="pt-lien"><a class="bouton bouton-clair" href="/nos-terrasses/">Comparer les matériaux</a></p>
       </div>
     </article>
+    <h3 class="titre-autour titre-projets">Votre projet</h3>
+    <div class="projets-car">${PROJETS_ACCUEIL.map(([c, t, x, ph]) => `<a class="piece-mini projet-mini" href="${c}">${imgPhoto(ph, { sizes: "(max-width:700px) 82vw, 240px" })}<div class="pm-corps"><h3>${t}</h3><p>${x}</p><span class="pt-dec">Découvrir <span aria-hidden="true">→</span></span></div><span class="pm-fleche" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></span></a>`).join("")}</div>
     <h3 class="titre-autour">Aménagements</h3>
     <div class="pieces-4">
       ${AUTRES_PIECES.map(([c, t, x, ph]) => `<a class="piece-mini" href="${c}">${imgPhoto(ph, { sizes: "(max-width:600px) 46vw, (max-width:1100px) 45vw, 290px" })}<div class="pm-corps"><h3>${t}</h3><p>${x}</p><span class="pt-dec">Découvrir <span aria-hidden="true">→</span></span></div><span class="pm-fleche" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></span></a>`).join("")}

@@ -957,3 +957,21 @@ details[open]>summary.menu-lien::after{transform:translateY(2px) rotate(225deg)}
 @media (min-width:1101px){.pieces-4{grid-template-columns:repeat(5,1fr);gap:14px}}
 @media (min-width:1101px){.pieces-4 .pm-corps p{display:none}.pieces-4 .piece-mini{aspect-ratio:4/5}}
 .piece-mini[href="/store-banne-lyon/"]>img{object-position:58% 50%}
+/* Carrousel « Votre projet » : cartes deux fois moins hautes */
+.projets-car{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-top:16px}
+.titre-projets{display:block;font-size:1.3rem;margin:40px 0 0}
+.projet-mini{aspect-ratio:16/10!important}
+.projet-mini .pm-corps{padding:14px 52px 14px 16px}
+.projet-mini .pm-corps h3{font-size:1.02rem}
+.projet-mini .pm-corps p{display:none}
+.projet-mini .pm-fleche{width:34px;height:34px;right:12px;bottom:14px}
+@media (max-width:1100px) and (min-width:701px){.projets-car{grid-template-columns:repeat(3,1fr)}}
+@media (max-width:700px){
+  .titre-projets{font-size:1.45rem;margin:34px 0 16px}
+  .projets-car{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;margin:0 -16px;padding:4px 16px 6px;scroll-padding:0 16px;scrollbar-width:none;gap:14px}
+  .projets-car::-webkit-scrollbar{display:none}
+  .projets-car .projet-mini{flex:0 0 82%;aspect-ratio:8/5!important;scroll-snap-align:start}
+  .projet-mini .pm-corps h3{font-size:1.3rem;top:18px}
+  .projet-mini .pm-corps p{display:block!important;top:52px}
+  .projet-mini .pt-dec{bottom:16px}
+}

@@ -165,6 +165,16 @@ const PIECES = [
 const PINS = [];
 const SCRIPT_PINS = `(()=>{const h=document.querySelector('.hm-visuel'),im=h&&h.querySelector('.h-img'),ps=h&&h.querySelectorAll('.pin');if(!im)return;const place=()=>{const r=im.getBoundingClientRect(),H=h.getBoundingClientRect(),nw=im.naturalWidth||1600,nh=im.naturalHeight||900,s=Math.max(r.width/nw,r.height/nh),w=nw*s,hh=nh*s,op=getComputedStyle(im).objectPosition.split(' ').map(parseFloat),ox=(r.width-w)*op[0]/100,oy=(r.height-hh)*op[1]/100;ps.forEach(p=>{const x=r.left-H.left+ox+w*p.dataset.x/100,y=r.top-H.top+oy+hh*p.dataset.y/100;let vis=x>r.left-H.left+12&&x<r.right-H.left-12&&y>r.top-H.top+12&&y<r.bottom-H.top-12;if(getComputedStyle(h).position==='absolute'){const t=h.parentNode.querySelector('.h-txt .chapo').getBoundingClientRect();if(x+H.left<t.right+30)vis=false;h.parentNode.querySelectorAll('.h-txt>*').forEach(e=>{const b=e.getBoundingClientRect();if(x+H.left>b.left-40&&x+H.left<b.right+40&&y+H.top>b.top-30&&y+H.top<b.bottom+30)vis=false});if(y+H.top<100)vis=false}p.style.left=x+'px';p.style.top=y+'px';p.hidden=!vis});h.classList.add('pins-prets')};im.complete?place():im.addEventListener('load',place);addEventListener('resize',place)})();`;
 
+// Choix du projet dans le formulaire de rappel : [libellé, tracé de l'icône].
+const CHOIX_PROJET = [
+  ["Terrasse", '<path d="M2 17h20"/><path d="M3 17l2-6h14l2 6"/><path d="M8 11l-1 6M12 11v6M16 11l1 6"/><path d="M4 20h16"/>'],
+  ["Pergola", '<path d="M3 6h18"/><path d="M5 6v14M19 6v14"/><path d="M7 9h10M7 12h10"/><path d="M3 20h18"/>'],
+  ["Store banne", '<path d="M3 4h18"/><path d="M4 4l-1 7h18l-1-7"/><path d="M3 11c1.5 1.5 3 1.5 4.5 0s3-1.5 4.5 0 3 1.5 4.5 0 3-1.5 4.5 0"/>'],
+  ["Garde-corps", '<path d="M3 6h18"/><path d="M4 6v13M20 6v13"/><path d="M8 6v13M12 6v13M16 6v13"/><path d="M2 19h20"/>'],
+  ["Bardage", '<path d="M4 3h16v18H4z"/><path d="M4 7h16M4 11h16M4 15h16M4 19h16"/>'],
+  ["Carport", '<path d="M2 8l10-4 10 4"/><path d="M4 8v12M20 8v12"/><path d="M7 17h10l-1-4H8l-1 4z"/><circle cx="9" cy="18" r="1"/><circle cx="15" cy="18" r="1"/>'],
+];
+
 const accueil = `
 <section class="hero-plein hero-slogan hero-maison-plein">
   <div class="hm-visuel">
@@ -258,9 +268,10 @@ const accueil = `
         <label><span>Nom <b aria-hidden="true">*</b></span><input name="nom" required autocomplete="name" maxlength="120"></label>
         <label><span>Téléphone <b aria-hidden="true">*</b></span><input name="telephone" type="tel" required autocomplete="tel" maxlength="30"></label>
       </div>
-      <label>Mon projet
-        <select name="projet">${["Terrasse", "Pergola", "Store banne", "Garde-corps", "Bardage", "Carport", "Plusieurs éléments", "Autre projet"].map((p) => `<option>${p}</option>`).join("")}</select>
-      </label>
+      <fieldset class="choix-projet">
+        <legend>Mon projet <i>(plusieurs choix possibles)</i></legend>
+        <div class="choix-grille">${CHOIX_PROJET.map(([v, ic]) => `<label class="choix"><input type="checkbox" name="projet" value="${v}"><span class="choix-tuile"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">${ic}</svg>${v}</span></label>`).join("")}</div>
+      </fieldset>
       <label><span>Un mot sur votre projet <i>(facultatif)</i></span><textarea name="message" rows="3" maxlength="3000"></textarea></label>
       <label class="pot-de-miel" aria-hidden="true">Site web<input name="site_web" tabindex="-1" autocomplete="off"></label>
       <button class="bouton" type="submit">Être rappelé</button>

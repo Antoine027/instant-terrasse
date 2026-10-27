@@ -11,10 +11,18 @@ const propre = (v, max) => String(v ?? "").replace(/[\u0000-\u001f\u007f]/g, " "
 const html = (s) => s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
 
 async function lireCorps(req) {
-  if (req.body && typeof req.body === "object") return req.body;
+  // Les cases « projet » peuvent être cochées plusieurs fois : on les réunit en une seule valeur.
+  if (req.body && typeof req.body === "object") {
+    const b = { ...req.body };
+    if (Array.isArray(b.projet)) b.projet = b.projet.join(", ");
+    return b;
+  }
   const morceaux = [];
   for await (const m of req) morceaux.push(m);
-  return Object.fromEntries(new URLSearchParams(Buffer.concat(morceaux).toString("utf8").slice(0, 20000)));
+  const p = new URLSearchParams(Buffer.concat(morceaux).toString("utf8").slice(0, 20000));
+  const b = Object.fromEntries(p);
+  if (p.getAll("projet").length > 1) b.projet = p.getAll("projet").join(", ");
+  return b;
 }
 
 export default async function handler(req, res) {

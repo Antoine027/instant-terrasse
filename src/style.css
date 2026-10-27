@@ -797,3 +797,18 @@ details[open]>summary.menu-lien::after{transform:translateY(2px) rotate(225deg)}
   #piece>.conteneur>.sous-titre,#piece>.conteneur>h2,#piece>.conteneur>.chapo{display:none}
   #piece{padding-top:40px}
 }
+/* Mobile : méthode resserrée en frise */
+@media (max-width:700px){
+  #methode .deux-colonnes>div>p:not(.sous-titre){display:none}
+  #methode h2{font-size:1.45rem;margin-bottom:14px}
+  #methode .puces{margin:0 0 26px}
+  #methode .puces li{font-size:.95rem;margin-bottom:6px;line-height:1.45}
+  #methode .etapes{gap:0;position:relative}
+  #methode .etapes::before{content:"";position:absolute;left:17px;top:18px;bottom:18px;width:2px;background:rgba(215,154,58,.35)}
+  #methode .etapes li{background:none;border:0;border-radius:0;padding:0 0 18px 52px}
+  #methode .etapes li:last-child{padding-bottom:0}
+  #methode .etapes li::before{left:0;top:-2px;width:36px;height:36px;border-radius:50%;background:var(--fond2);border:2px solid var(--accent);display:flex;align-items:center;justify-content:center;font-size:.85rem;color:var(--accent-texte);box-sizing:border-box}
+  #methode .etapes h3{font-size:1.02rem;margin:5px 0 3px}
+  #methode .etapes p{font-size:.93rem;line-height:1.5}
+}
+@media (max-width:700px){#methode .deux-colonnes{gap:6px}#methode .etapes::before{bottom:auto;height:calc(100% - 70px)}}

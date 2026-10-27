@@ -174,7 +174,7 @@ const SCRIPT_PINS = `(()=>{const h=document.querySelector('.hm-visuel'),im=h&&h.
 const accueil = `
 <section class="hero-plein hero-slogan hero-maison-plein">
   <div class="hm-visuel">
-    ${imgPhoto("accueil-terrasse-carrelage-pergola", { sizes: "(max-width:700px) calc(100vw - 32px), 100vw", prioritaire: true, classe: "h-img" })}
+    ${imgPhoto("accueil-terrasse-pergola-droite", { sizes: "(max-width:700px) calc(100vw - 32px), 100vw", prioritaire: true, classe: "h-img" })}
     <div class="pins" aria-label="Nos produits sur la maison">${PINS.map(([c, t, x, y, cote]) => `<a class="pin${cote ? " pin-" + cote : ""}" href="${c}" data-x="${x}" data-y="${y}"><span class="pin-point" aria-hidden="true"></span><span class="pin-nom">${t}</span></a>`).join("")}</div>
   </div>
   <div class="conteneur h-txt">

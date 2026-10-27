@@ -954,3 +954,5 @@ details[open]>summary.menu-lien::after{transform:translateY(2px) rotate(225deg)}
   #methode .etapes li{padding-left:56px}
   #methode .etapes::before{left:20px}
 }
+@media (min-width:1101px){.pieces-4{grid-template-columns:repeat(5,1fr);gap:14px}}
+@media (min-width:1101px){.pieces-4 .pm-corps p{display:none}.pieces-4 .piece-mini{aspect-ratio:4/5}}

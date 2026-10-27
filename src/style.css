@@ -976,3 +976,13 @@ details[open]>summary.menu-lien::after{transform:translateY(2px) rotate(225deg)}
   .projet-mini .pt-dec{bottom:16px}
 }
 @media (min-width:701px){.titre-projets{margin-top:28px}}
+/* Mobile : menu qui se cache en descendant, réapparaît en remontant ; espaces ; bouton d'appel plus bas */
+@media (max-width:700px){
+  .entete{transition:transform .3s ease}
+  .entete.cache{transform:translateY(-130%)}
+  #avis{padding-bottom:8px}
+  .avis-lien{margin-top:6px;margin-bottom:0}
+  #faq{padding-top:28px}
+  .appel-flottant{bottom:calc(10px + env(safe-area-inset-bottom));right:10px;width:46px;height:46px}
+  .appel-flottant svg{width:20px;height:20px}
+}

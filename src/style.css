@@ -944,3 +944,13 @@ details[open]>summary.menu-lien::after{transform:translateY(2px) rotate(225deg)}
   #methode .puces li::before{content:"";position:absolute;left:0;top:3px;width:18px;height:18px;border-radius:50%;background:var(--accent) no-repeat center/11px url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12.5l4.5 4.5L19 7.5'/%3E%3C/svg%3E")}
   #methode .puces li::marker{content:none}
 }
+@media (max-width:700px){
+  #methode h2{font-size:1.6rem}
+  #methode .puces li{font-size:1.02rem}
+  #methode .etapes h3{font-size:1.12rem}
+  #methode .etapes p{font-size:1rem}
+  #methode .etape-ic{width:42px;height:42px}
+  #methode .etape-ic svg{width:22px;height:22px}
+  #methode .etapes li{padding-left:56px}
+  #methode .etapes::before{left:20px}
+}

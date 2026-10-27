@@ -235,7 +235,7 @@ const accueil = `
   <div class="conteneur deux-colonnes">
     <div>
       <p class="sous-titre">Notre méthode</p>
-      <a class="carte-antoine" href="/quisommesnous/">${imgPhoto("antoine-escolle", { sizes: "100px", classe: "ca-photo" })}<span><strong>Antoine</strong>, votre interlocuteur du premier rendez-vous à la fin du chantier.<em>Mon parcours →</em></span></a>
+      <a class="carte-antoine" href="/quisommesnous/">${imgPhoto("antoine-escolle-2", { sizes: "100px", classe: "ca-photo" })}<span><strong>Antoine</strong>, votre interlocuteur du premier rendez-vous à la fin du chantier.<em>Mon parcours →</em></span></a>
       <h2><span class="long">Votre interlocuteur principal, du premier rendez-vous à la fin du chantier</span><span class="court">Votre interlocuteur principal, du début à la fin</span></h2>
       <p>${POSE}</p>
       <ul class="puces">
@@ -413,7 +413,7 @@ const aPropos = `
 </section>
 <section class="bloc bloc-alt">
   <div class="conteneur conteneur-etroit mot-texte">
-    <div class="portrait-antoine">${imgPhoto("antoine-escolle", { sizes: "(max-width:700px) 60vw, 280px" })}<p><strong>Antoine Escolle</strong><br>Fondateur d'Instant Terrasse</p></div>
+    <div class="portrait-antoine">${imgPhoto("antoine-escolle-2", { sizes: "(max-width:700px) 60vw, 280px" })}<p><strong>Antoine Escolle</strong><br>Fondateur d'Instant Terrasse</p></div>
     <h2>Mon parcours</h2>
     ${MOT_ANTOINE}
   </div>

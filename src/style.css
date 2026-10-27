@@ -632,3 +632,9 @@ details[open]>summary.menu-lien::after{transform:translateY(2px) rotate(225deg)}
 @media (min-width:901px){.pt-corps{padding:26px 36px 24px}.pt-photo{min-height:0}}
 .pt-lien{margin-bottom:0!important}.pt-materiaux{margin-bottom:0}@media (min-width:901px){.pt-corps{padding-bottom:28px}}
 .comparatif-4 thead th:first-child,.comparatif-4 tbody th{width:16%}
+
+/* le fondu s'applique à la photo seule, pas aux pastilles */
+@media (min-width:1101px){
+  .hero-maison-plein .hm-visuel{-webkit-mask-image:none;mask-image:none}
+  .hero-maison-plein .hm-visuel .h-img{-webkit-mask-image:linear-gradient(90deg,rgba(0,0,0,.18) 0,rgba(0,0,0,.35) 28%,#000 58%);mask-image:linear-gradient(90deg,rgba(0,0,0,.18) 0,rgba(0,0,0,.35) 28%,#000 58%)}
+}

@@ -833,3 +833,10 @@ details[open]>summary.menu-lien::after{transform:translateY(2px) rotate(225deg)}
   .pied-groupe li a{display:block;padding:7px 0;font-size:.95rem}
   .mentions{margin-top:22px;font-size:.8rem;line-height:1.7}
 }
+.court{display:none}
+@media (max-width:700px){
+  #methode .long{display:none}#methode .court{display:inline}
+  #methode .puces li{margin-bottom:4px}
+  #methode .etapes li{padding-bottom:14px}
+  #methode .etapes h3{margin-top:7px}
+}

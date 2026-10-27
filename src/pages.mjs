@@ -132,10 +132,10 @@ const carteLien = ([chemin, titre, texte]) =>
   carteProduit(chemin, titre, texte);
 
 const etapes = [
-  ["Échange", "Nous parlons de votre projet, de vos envies et de l'usage de votre extérieur."],
-  ["Visite avec échantillons", "Nous venons chez vous avec les échantillons : vous comparez les matériaux à côté de votre façade, et nous relevons dimensions, accès et support."],
-  ["Plan 3D et devis", "Vous recevez un plan 3D offert de votre projet et un devis détaillé : vous savez exactement ce que vous achetez."],
-  ["Réalisation", "La pose est confiée à notre installateur partenaire, assuré en décennale. Nous restons votre interlocuteur jusqu'à la fin du chantier."],
+  ["Échange", "Nous parlons de votre projet, de vos envies et de l'usage de votre extérieur.", "Vos envies, votre usage, votre extérieur."],
+  ["Visite avec échantillons", "Nous venons chez vous avec les échantillons : vous comparez les matériaux à côté de votre façade, et nous relevons dimensions, accès et support.", "Chez vous, matériaux en main, mesures prises."],
+  ["Plan 3D et devis", "Vous recevez un plan 3D offert de votre projet et un devis détaillé : vous savez exactement ce que vous achetez.", "Votre projet en 3D, offert, et un devis détaillé."],
+  ["Réalisation", "La pose est confiée à notre installateur partenaire, assuré en décennale. Nous restons votre interlocuteur jusqu'à la fin du chantier.", "Pose par notre installateur partenaire, suivie de bout en bout."],
 ];
 
 export const TRIO = `<ul class="trio"><li><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V8l7-5 7 5v13"/><path d="M9 21v-6h6v6"/></svg><span>Visite chez vous, avec les échantillons</span></li><li><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 3 7l9 5 9-5-9-5z"/><path d="m3 17 9 5 9-5"/><path d="m3 12 9 5 9-5"/></svg><span>Plan 3D de votre projet offert</span></li><li><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg><span>Pose assurée en garantie décennale</span></li></ul>`;
@@ -212,12 +212,12 @@ const accueil = `
       <h2>Un seul interlocuteur, du premier rendez-vous à la fin du chantier</h2>
       <p>${POSE}</p>
       <ul class="puces">
-        <li><strong>Des produits sélectionnés pour leur qualité</strong>, et un devis détaillé ligne par ligne.</li>
+        <li><strong>Des produits sélectionnés pour leur qualité</strong><span class="long">, et un devis détaillé ligne par ligne</span>.</li>
         <li><strong>Structure aluminium garantie 20 ans.</strong></li>
         <li><strong>Pose assurée en garantie décennale.</strong></li>
       </ul>
     </div>
-    <ol class="etapes etapes-verticales">${etapes.map(([t, x]) => `<li><h3>${t}</h3><p>${x}</p></li>`).join("")}</ol>
+    <ol class="etapes etapes-verticales">${etapes.map(([t, x, c]) => `<li><h3>${t}</h3><p><span class="long">${x}</span><span class="court">${c}</span></p></li>`).join("")}</ol>
   </div>
 </section>
 
@@ -378,7 +378,7 @@ const aPropos = `
       <p>${POSE}</p>
       <p>Vous n'avez donc qu'un numéro à retenir : le nôtre. C'est nous qui préparons la commande, organisons la livraison et coordonnons la pose.</p>
     </div>
-    <ol class="etapes etapes-verticales">${etapes.map(([t, x]) => `<li><h3>${t}</h3><p>${x}</p></li>`).join("")}</ol>
+    <ol class="etapes etapes-verticales">${etapes.map(([t, x, c]) => `<li><h3>${t}</h3><p><span class="long">${x}</span><span class="court">${c}</span></p></li>`).join("")}</ol>
   </div>
 </section>
 <section class="bloc">

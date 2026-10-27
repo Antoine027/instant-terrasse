@@ -141,7 +141,7 @@ const etapes = [
 export const TRIO = `<ul class="trio"><li><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V8l7-5 7 5v13"/><path d="M9 21v-6h6v6"/></svg><span>Visite chez vous, avec les échantillons</span></li><li><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 3 7l9 5 9-5-9-5z"/><path d="m3 17 9 5 9-5"/><path d="m3 12 9 5 9-5"/></svg><span>Plan 3D de votre projet offert</span></li><li><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg><span>Pose assurée en garantie décennale</span></li></ul>`;
 
 const MATERIAUX_ACCUEIL = [
-  ["/terrasse-bois-lyon/", "Bois", "terrasse-kebony-piscine-debordement"],
+  ["/terrasse-bois-lyon/", "Bois", "terrasse-bambou-ndurance-piscine-pierre"],
   ["/terrasse-composite-lyon/", "Composite", "composite-gris-piscine"],
   ["/terrasse-aluminium-lyon/", "Aluminium", "alu-piscine-aspect-teck"],
   ["/terrasse-carrelage-lyon/", "Carrelage", "carrelage-toit-terrasse-montagnes"],
@@ -163,20 +163,15 @@ const PIECES = [
 
 // Pastilles posées sur la maison de l'en-tête : [lien, nom, x %, y % de l'image, côté de l'étiquette].
 const PINS = [
-  ["/pergola-bioclimatique-lyon/", "Pergola bioclimatique", 80, 22, "gauche"],
-  ["/bardage-bois-lyon/", "Bardage bois", 66, 19],
-  ["/store-banne-lyon/", "Store banne", 58, 31],
-  ["/garde-corps-aluminium-lyon/", "Garde-corps aluminium", 30, 56],
-  ["/terrasse-bois-lyon/", "Terrasse bois", 88, 74, "gauche"],
-  ["/terrasse-carrelage-lyon/", "Terrasse carrelage", 58, 82],
-  ["/terrasse-piscine-lyon/", "Terrasse de piscine", 20, 80],
+  ["/terrasse-piscine-lyon/", "Terrasse de piscine", 58, 52],
+  ["/terrasse-bois-lyon/", "Terrasse bois", 72, 80, "gauche"],
 ];
 const SCRIPT_PINS = `(()=>{const h=document.querySelector('.hm-visuel'),im=h&&h.querySelector('.h-img'),ps=h&&h.querySelectorAll('.pin');if(!im)return;const place=()=>{const r=im.getBoundingClientRect(),H=h.getBoundingClientRect(),nw=im.naturalWidth||1600,nh=im.naturalHeight||900,s=Math.max(r.width/nw,r.height/nh),w=nw*s,hh=nh*s,op=getComputedStyle(im).objectPosition.split(' ').map(parseFloat),ox=(r.width-w)*op[0]/100,oy=(r.height-hh)*op[1]/100;ps.forEach(p=>{const x=r.left-H.left+ox+w*p.dataset.x/100,y=r.top-H.top+oy+hh*p.dataset.y/100;let vis=x>r.left-H.left+12&&x<r.right-H.left-12&&y>r.top-H.top+12&&y<r.bottom-H.top-12;if(getComputedStyle(h).position==='absolute'){const t=h.parentNode.querySelector('.h-txt .chapo').getBoundingClientRect();if(x+H.left<t.right+30)vis=false;h.parentNode.querySelectorAll('.h-txt>*').forEach(e=>{const b=e.getBoundingClientRect();if(x+H.left>b.left-40&&x+H.left<b.right+40&&y+H.top>b.top-30&&y+H.top<b.bottom+30)vis=false});if(y+H.top<100)vis=false}p.style.left=x+'px';p.style.top=y+'px';p.hidden=!vis});h.classList.add('pins-prets')};im.complete?place():im.addEventListener('load',place);addEventListener('resize',place)})();`;
 
 const accueil = `
 <section class="hero-plein hero-slogan hero-maison-plein">
   <div class="hm-visuel">
-    ${imgPhoto("accueil-piscine-store-pergola", { sizes: "(max-width:700px) calc(100vw - 32px), 100vw", prioritaire: true, classe: "h-img" })}
+    ${imgPhoto("terrasse-kebony-piscine-debordement", { sizes: "(max-width:700px) calc(100vw - 32px), 100vw", prioritaire: true, classe: "h-img" })}
     <div class="pins" aria-label="Nos produits sur la maison">${PINS.map(([c, t, x, y, cote]) => `<a class="pin${cote ? " pin-" + cote : ""}" href="${c}" data-x="${x}" data-y="${y}"><span class="pin-point" aria-hidden="true"></span><span class="pin-nom">${t}</span></a>`).join("")}</div>
   </div>
   <div class="conteneur h-txt">

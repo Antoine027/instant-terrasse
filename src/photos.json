@@ -2660,47 +2660,5 @@
    1075
   ],
   "ratio": 1.5056
- },
- {
-  "cle": "accueil-maison-5e-piece",
-  "dossier": "accueil",
-  "categorie": "accueil-hero",
-  "alt": "Maison contemporaine avec terrasse bois au bord de la piscine, pergola bioclimatique, store banne, balcon avec garde-corps, bardage bois et carport",
-  "largeurs": [
-   400,
-   600,
-   800,
-   1000,
-   1600
-  ],
-  "ratio": 1.7768
- },
- {
-  "cle": "accueil-terrasse-pergola-store",
-  "dossier": "accueil",
-  "categorie": "accueil-hero",
-  "alt": "Terrasse bois en hauteur avec pergola bioclimatique, salon, store banne, bardage bois et garde-corps aluminium à lisses",
-  "largeurs": [
-   400,
-   600,
-   800,
-   1000,
-   1600
-  ],
-  "ratio": 1.7768
- },
- {
-  "cle": "accueil-piscine-store-pergola",
-  "dossier": "accueil",
-  "categorie": "accueil-hero",
-  "alt": "Terrasse en dalles claires autour d une piscine, store banne, pergola bioclimatique sur terrasse bois, bardage et garde-corps face aux collines",
-  "largeurs": [
-   400,
-   600,
-   800,
-   1000,
-   1600
-  ],
-  "ratio": 1.7768
  }
 ]

@@ -921,3 +921,8 @@ details[open]>summary.menu-lien::after{transform:translateY(2px) rotate(225deg)}
   .grille-avis+.points{margin-top:4px}
 }
 @media (max-width:700px){#avis{padding-bottom:20px}#faq{padding-top:24px}#piece{padding-bottom:28px}}
+/* Cartes d'avis toutes de la même hauteur */
+.grille-avis{align-items:stretch}
+.grille-avis .avis{height:auto}
+.avis.ouvert{align-self:start}
+@media (max-width:700px){.grille-avis{align-items:stretch}.grille-avis .avis.ouvert{align-self:stretch}}

@@ -222,11 +222,11 @@ const accueil = `
         <p class="pt-lien"><a class="bouton bouton-clair" href="/nos-terrasses/">Comparer les matériaux</a></p>
       </div>
     </article>
-    <h3 class="titre-autour">… et des aménagements…</h3>
+    <h3 class="titre-autour">Et des aménagements…</h3>
     <div class="pieces-4">
       ${AUTRES_PIECES.map(([c, t, x, ph]) => `<a class="piece-mini" href="${c}">${imgPhoto(ph, { sizes: "(max-width:600px) 46vw, (max-width:1100px) 45vw, 290px" })}<div class="pm-corps"><h3>${t}</h3><p>${x}</p><span class="pt-dec">Découvrir <span aria-hidden="true">→</span></span></div><span class="pm-fleche" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></span></a>`).join("")}
     </div>
-    <h3 class="titre-autour titre-projets">… pour tous vos projets.</h3>
+    <h3 class="titre-autour titre-projets">Pour tous vos projets.</h3>
     <div class="projets-car">${PROJETS_ACCUEIL.map(([c, t, x, ph]) => `<a class="piece-mini projet-mini" href="${c}">${imgPhoto(ph, { sizes: "(max-width:700px) 82vw, 240px" })}<div class="pm-corps"><h3>${t}</h3><p>${x}</p><span class="pt-dec">Découvrir <span aria-hidden="true">→</span></span></div><span class="pm-fleche" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></span></a>`).join("")}</div>
   </div>
 </section>
@@ -235,6 +235,7 @@ const accueil = `
   <div class="conteneur deux-colonnes">
     <div>
       <p class="sous-titre">Notre méthode</p>
+      <a class="carte-antoine" href="/quisommesnous/">${imgPhoto("antoine-escolle", { sizes: "96px", classe: "ca-photo" })}<span><strong>Antoine</strong>, votre interlocuteur du premier rendez-vous à la fin du chantier.<em>Mon parcours →</em></span></a>
       <h2><span class="long">Un seul interlocuteur, du premier rendez-vous à la fin du chantier</span><span class="court">Un seul interlocuteur, du début à la fin</span></h2>
       <p>${POSE}</p>
       <ul class="puces">
@@ -412,6 +413,7 @@ const aPropos = `
 </section>
 <section class="bloc bloc-alt">
   <div class="conteneur conteneur-etroit mot-texte">
+    <div class="portrait-antoine">${imgPhoto("antoine-escolle", { sizes: "(max-width:700px) 60vw, 280px" })}<p><strong>Antoine Escolle</strong><br>Fondateur d'Instant Terrasse</p></div>
     <h2>Mon parcours</h2>
     ${MOT_ANTOINE}
   </div>

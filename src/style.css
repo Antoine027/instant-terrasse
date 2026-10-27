@@ -986,3 +986,13 @@ details[open]>summary.menu-lien::after{transform:translateY(2px) rotate(225deg)}
   .appel-flottant{bottom:calc(10px + env(safe-area-inset-bottom));right:10px;width:46px;height:46px}
   .appel-flottant svg{width:20px;height:20px}
 }
+/* Antoine */
+.carte-antoine{display:flex;align-items:center;gap:16px;margin:0 0 22px;padding:12px 18px 12px 12px;background:#fff;border-radius:18px;text-decoration:none;color:var(--texte);box-shadow:0 12px 30px -20px rgba(47,52,55,.45);max-width:34rem}
+.carte-antoine .ca-photo{flex:none;width:72px;height:72px;border-radius:50%;object-fit:cover;object-position:50% 28%;border:3px solid var(--fond2)}
+.carte-antoine span{font-size:.98rem;line-height:1.45}
+.carte-antoine em{display:block;margin-top:4px;font:600 .88rem Montserrat,sans-serif;font-style:normal;color:var(--accent-texte)}
+.carte-antoine:hover em{text-decoration:underline}
+.portrait-antoine{display:flex;align-items:center;gap:22px;margin:0 0 26px}
+.portrait-antoine img{width:150px;height:150px;border-radius:50%;object-fit:cover;object-position:50% 28%;box-shadow:0 14px 30px -18px rgba(47,52,55,.5)}
+.portrait-antoine p{margin:0;font-size:1.05rem}
+@media (max-width:700px){.carte-antoine .ca-photo{width:64px;height:64px}.portrait-antoine img{width:120px;height:120px}}

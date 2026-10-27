@@ -47,8 +47,9 @@ Remplaçant du site WordPress/Elementor instantterrasse.com. Générateur Node s
 - Pas de showroom : rendez-vous à domicile avec les échantillons.
 - Structures aluminium garanties 20 ans.
 - Avis Google : 4 avis, 5,0/5 (fiche « Instant Terrasse - Lyon », relevés le 22/10/2026), constante AVIS dans src/pages.mjs. Textes recopiés tels quels, noms abrégés. Ne pas ajouter de balisage Review/AggregateRating (avis sur son propre site non éligibles aux étoiles Google).
-- Pas encore fournis : photos de vrais chantiers, fourchettes de prix, photo d'Antoine.
-- Parcours d'Antoine (MOT_ANTOINE) : uniquement sur la page À propos. Quand une photo d'Antoine sera fournie, l'ajouter sur l'accueil avec une seule phrase (« Antoine, votre interlocuteur du premier rendez-vous à la fin du chantier ») et un lien vers À propos.
+- Pas encore fournis : photos de vrais chantiers, fourchettes de prix.
+- Photo d'Antoine fournie le 27/10/2026 (clé antoine-escolle) : carte sur l'accueil (section méthode) et portrait sur la page À propos.
+- Parcours d'Antoine (MOT_ANTOINE) : uniquement sur la page À propos. Sur l'accueil : sa photo avec une seule phrase (« Antoine, votre interlocuteur du premier rendez-vous à la fin du chantier ») et un lien vers À propos.
 - Zone : Lyon et sa région. Téléphone 04 82 53 18 74.
 
 ## Charte et règles de rédaction

@@ -2884,5 +2884,19 @@
   "types": [
    "Vitré"
   ]
+ },
+ {
+  "cle": "antoine-escolle",
+  "dossier": "equipe",
+  "categorie": "portrait",
+  "alt": "Antoine Escolle, fondateur d'Instant Terrasse",
+  "largeurs": [
+   400,
+   600,
+   800,
+   1000,
+   1145
+  ],
+  "ratio": 0.8333
  }
 ]

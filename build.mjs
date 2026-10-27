@@ -86,11 +86,12 @@ const pied = () => `
       <p>Terrasses, pergolas et aménagements extérieurs sur mesure — Lyon &amp; sa région.</p>
       <p><a href="tel:${SITE.telLien}">${SITE.tel}</a><br>${SITE.adresse}</p>
     </div>
-    ${[UNIVERS[0], UNIVERS[3]].map((u) => `<div><p class="pied-titre">${u.nom}</p><ul>${u.groupes.flatMap((g) => g.pages).filter(visible).slice(0, 9).map(([c, t]) => `<li><a href="${c}">${t}</a></li>`).join("")}</ul></div>`).join("")}
-    <div>
-      <p class="pied-titre">Et aussi</p>
-      <ul>${[...UNIVERS[1].groupes.flatMap((g) => g.pages), ...UNIVERS[2].groupes.flatMap((g) => g.pages), ...AUTRES].filter(visible).map(([c, t]) => `<li><a href="${c}">${t}</a></li>`).join("")}</ul>
-    </div>
+    ${[
+      ["Terrasses", UNIVERS[0].groupes.flatMap((g) => g.pages)],
+      ["Projets", [...UNIVERS[1].groupes.flatMap((g) => g.pages), ...UNIVERS[2].groupes.flatMap((g) => g.pages)]],
+      ["Aménagements", UNIVERS[3].groupes.flatMap((g) => g.pages)],
+      ["Instant Terrasse", AUTRES],
+    ].map(([nom, pages]) => `<details class="pied-groupe" open><summary class="pied-titre">${nom}</summary><ul>${pages.filter(visible).map(([c, t, , court]) => `<li><a href="${c}">${court ?? t}</a></li>`).join("")}</ul></details>`).join("")}
   </div>
   <p class="conteneur mentions">© ${new Date().getFullYear()} Instant Terrasse — une marque d'ESCOM HABITAT · <a href="/mentions-legales/">Mentions légales</a> · <a href="/confidentialite/">Confidentialité et cookies</a></p>
 </footer>`;
@@ -169,6 +170,7 @@ document.addEventListener('keydown',e=>{if(e.key==='Escape')d.forEach(y=>y.open=
 ${SCRIPT_GALERIE}
 const af=document.querySelector('.appel-flottant');if(af){const m=()=>af.classList.toggle('visible',scrollY>innerHeight*.8);addEventListener('scroll',m,{passive:true});m()}
 if(matchMedia('(max-width:700px)').matches)document.querySelectorAll('.pt-materiaux,.pieces-4').forEach(c=>{const n=c.children.length,d=document.createElement('div');d.className='points';d.setAttribute('aria-hidden','true');d.innerHTML='<span></span>'.repeat(n);c.after(d);const ps=d.children;const u=()=>{const w=c.firstElementChild.getBoundingClientRect().width+14;const i=Math.min(n-1,Math.round(c.scrollLeft/w));[...ps].forEach((p,j)=>p.classList.toggle('on',j===i))};c.addEventListener('scroll',u,{passive:true});u()});
+if(matchMedia('(max-width:700px)').matches)document.querySelectorAll('.pied-groupe').forEach(d=>d.open=false);
 const b=document.querySelector('.burger');b&&b.addEventListener('toggle',()=>document.body.classList.toggle('menu-ouvert',b.open));
 </script>
 </body>

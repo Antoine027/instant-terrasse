@@ -203,12 +203,12 @@ const accueil = `
     <article class="piece-terrasse">
       <a class="pt-photo" href="/nos-terrasses/">${imgPhoto("terrasse-thermofrene-piscine-mer", { sizes: "(max-width:900px) 92vw, 620px" })}</a>
       <div class="pt-corps">
-        <p class="pt-sur">Terrasses</p><h3>Le sol de votre 5<sup>e</sup> pièce</h3>
+        <p class="pt-sur">Terrasses</p><h3>Revêtements de terrasse</h3>
         <div class="pt-materiaux">${MATERIAUX_ACCUEIL.map(([c, t, ph, acc]) => `<a class="pt-mat" href="${c}">${imgPhoto(ph, { sizes: "(max-width:700px) 92vw, 300px" })}<span class="pt-nom">${t}</span><span class="pt-acc">${acc}</span><span class="pt-dec">Découvrir <span aria-hidden="true">→</span></span></a>`).join("")}<a class="pt-mat pt-comparer" href="/nos-terrasses/"><span class="pt-nom">Comparer</span><span class="pt-acc">Bois, composite, aluminium ou carrelage : lequel choisir ?</span><span class="pt-dec">Voir le comparatif <span aria-hidden="true">→</span></span></a></div>
         <p class="pt-lien"><a class="bouton bouton-clair" href="/nos-terrasses/">Comparer les matériaux</a></p>
       </div>
     </article>
-    <h3 class="titre-autour">Autour de la terrasse</h3>
+    <h3 class="titre-autour">Aménagements</h3>
     <div class="pieces-4">
       ${AUTRES_PIECES.map(([c, t, x, ph]) => `<a class="piece-mini" href="${c}">${imgPhoto(ph, { sizes: "(max-width:600px) 46vw, (max-width:1100px) 45vw, 290px" })}<div class="pm-corps"><h3>${t}</h3><p>${x}</p><span class="pt-dec">Découvrir <span aria-hidden="true">→</span></span></div><span class="pm-fleche" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></span></a>`).join("")}
     </div>

@@ -21,13 +21,15 @@ export const imgPhoto = (cle, { sizes = "(max-width:760px) 100vw, 400px", priori
 };
 
 // Galerie filtrable par essence pour une catégorie (ex. "terrasse-bois").
-export const galerie = (categorie, { titre, intro, legende = "Illustrations", groupe } = {}) => {
+export const galerie = (categorie, { titre, intro, legende = "Illustrations", groupe, types } = {}) => {
   // categorie : nom de catégorie, ou liste de clés de photos (sélection sans filtres).
   const selection = Array.isArray(categorie);
   // groupe : fonction qui donne le libellé de filtre d'une photo (sinon son essence).
   const liste = (selection ? categorie.map(photo) : PHOTOS.filter((p) => p.categorie === categorie)).map((p) => (groupe ? { ...p, essence: groupe(p) } : p));
   if (!liste.length) return "";
-  const essences = selection && !groupe ? [] : [...new Set(liste.map((p) => p.essence).filter(Boolean))];
+  // types : liste ordonnée de filtres ; une photo peut appartenir à plusieurs (champ « types » du manifeste).
+  if (types) liste.forEach((p, i) => { liste[i] = { ...p, essence: (p.types || []).join("|") }; });
+  const essences = types ? types.filter((t) => liste.some((p) => (p.types || []).includes(t))) : selection && !groupe ? [] : [...new Set(liste.map((p) => p.essence).filter(Boolean))];
   return `
 <div class="galerie-bloc" data-galerie>
   ${titre ? `<h2>${titre}</h2>` : ""}${intro ? `<p class="chapo">${intro}</p>` : ""}
@@ -36,12 +38,12 @@ export const galerie = (categorie, { titre, intro, legende = "Illustrations", gr
     ${essences.map((e) => `<button type="button" class="filtre" aria-pressed="false" data-filtre="${slug(e)}">${e}</button>`).join("")}
   </div>` : ""}
   <div class="mosaique">
-    ${liste.map((p) => `<figure data-essence="${slug(p.essence || "")}" style="--r:${p.ratio}" tabindex="0" role="button" aria-label="Agrandir : ${esc(p.alt)}">${imgPhoto(p.cle, { sizes: "(max-width:560px) 100vw, (max-width:1060px) 50vw, 380px" })}${p.essence && essences.length > 1 ? `<figcaption>${p.essence}</figcaption>` : ""}</figure>`).join("")}
+    ${liste.map((p) => `<figure data-essence="${(p.essence || "").split("|").map(slug).join(" ")}" style="--r:${p.ratio}" tabindex="0" role="button" aria-label="Agrandir : ${esc(p.alt)}">${imgPhoto(p.cle, { sizes: "(max-width:560px) 100vw, (max-width:1060px) 50vw, 380px" })}${p.essence && essences.length > 1 && !types ? `<figcaption>${p.essence}</figcaption>` : ""}</figure>`).join("")}
   </div>
   <p class="legende">${legende}.</p>
 </div>`;
 };
 
 // Script des filtres (une seule fois par page).
-export const SCRIPT_GALERIE = `document.querySelectorAll('[data-galerie]').forEach(g=>{const b=g.querySelectorAll('.filtre');b.forEach(x=>x.addEventListener('click',()=>{b.forEach(y=>y.setAttribute('aria-pressed',y===x));const f=x.dataset.filtre;g.querySelectorAll('figure').forEach(fig=>fig.hidden=!(f==='tout'||fig.dataset.essence===f))}))});
+export const SCRIPT_GALERIE = `document.querySelectorAll('[data-galerie]').forEach(g=>{const b=g.querySelectorAll('.filtre');b.forEach(x=>x.addEventListener('click',()=>{b.forEach(y=>y.setAttribute('aria-pressed',y===x));const f=x.dataset.filtre;g.querySelectorAll('figure').forEach(fig=>fig.hidden=!(f==='tout'||fig.dataset.essence.split(' ').includes(f)))}))});
 (()=>{let d,im,cp,nb,liste=[],i=0;const ouvre=(g,fig)=>{if(!d){d=document.createElement('dialog');d.className='visionneuse';d.setAttribute('aria-label','Photo agrandie');d.innerHTML='<img alt=""><p class="v-legende"></p><span class="v-compte"></span><button class="v-fermer" aria-label="Fermer">×</button><button class="v-prec" aria-label="Photo précédente">‹</button><button class="v-suiv" aria-label="Photo suivante">›</button>';document.body.append(d);im=d.querySelector('img');cp=d.querySelector('.v-legende');nb=d.querySelector('.v-compte');d.querySelector('.v-fermer').onclick=()=>d.close();d.querySelector('.v-prec').onclick=()=>va(-1);d.querySelector('.v-suiv').onclick=()=>va(1);d.addEventListener('click',e=>{if(e.target===d)d.close()});d.addEventListener('keydown',e=>{if(e.key==='ArrowLeft')va(-1);if(e.key==='ArrowRight')va(1)});let x0=null;d.addEventListener('touchstart',e=>x0=e.touches[0].clientX,{passive:true});d.addEventListener('touchend',e=>{if(x0===null)return;const dx=e.changedTouches[0].clientX-x0;if(Math.abs(dx)>40)va(dx<0?1:-1);x0=null});d.addEventListener('close',()=>document.body.style.overflow='')}liste=[...g.querySelectorAll('.mosaique figure:not([hidden])')];i=liste.indexOf(fig);montre();d.showModal();document.body.style.overflow='hidden'};const montre=()=>{const s=liste[i].querySelector('img');im.removeAttribute('src');im.srcset=s.srcset;im.sizes='100vw';im.src=s.src;im.alt=s.alt;const c=liste[i].querySelector('figcaption');cp.textContent=c?c.textContent:'';nb.textContent=(i+1)+' / '+liste.length};const va=n=>{i=(i+n+liste.length)%liste.length;montre()};document.querySelectorAll('[data-galerie]').forEach(g=>g.querySelectorAll('.mosaique figure').forEach(f=>{f.addEventListener('click',()=>ouvre(g,f));f.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();ouvre(g,f)}})}))})();`;

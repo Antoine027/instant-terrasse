@@ -343,7 +343,7 @@ ${cta("Un projet de bardage ?")}`,
 };
 
 // ---------- Gabarit de page produit (pergolas, etc.) ----------
-const pageProduit = ({ extra = "", introGalerie = "", fil, h1, kicker, position, chapo, photo, atouts, galerieCat, titreGalerie, details, voisins, ctaTitre, complement = "Une pergola se pense avec la terrasse qu'elle couvre : hauteurs, fixations, écoulement des eaux. Nous pouvons étudier les deux ensemble.", titreVoisins = "Les autres solutions" }) => `
+const pageProduit = ({ typesGalerie, extra = "", introGalerie = "", fil, h1, kicker, position, chapo, photo, atouts, galerieCat, titreGalerie, details, voisins, ctaTitre, complement = "Une pergola se pense avec la terrasse qu'elle couvre : hauteurs, fixations, écoulement des eaux. Nous pouvons étudier les deux ensemble.", titreVoisins = "Les autres solutions" }) => `
 ${heroPlein({ fil, h1, kicker, chapo, photo, position })}
 
 <section class="bloc bloc-alt">
@@ -355,7 +355,7 @@ ${heroPlein({ fil, h1, kicker, chapo, photo, position })}
 ${extra}
 ${galerieCat ? `<section id="galerie" class="bloc">
   <div class="conteneur">
-    ${galerie(galerieCat, { titre: titreGalerie, intro: introGalerie, legende: "Illustrations" })}
+    ${galerie(galerieCat, { titre: titreGalerie, intro: introGalerie, legende: "Illustrations", types: typesGalerie })}
   </div>
 </section>` : ""}
 
@@ -483,9 +483,10 @@ const gardeCorps = {
       ["Toutes les configurations", "Terrasses, balcons, escaliers, rampants, toits-terrasses, coursives."],
       ["Particuliers et professionnels", "Maisons, immeubles de logements, bureaux, commerces et établissements recevant du public."],
     ],
-    galerieCat: "garde-corps",
+    galerieCat: [...PHOTOS.filter((p) => p.categorie === "garde-corps").map((p) => p.cle), "carrelage-gris-garde-corps-verre-depoli", "carrelage-beige-pergola-toit-fixe", "restaurant-terrasse-gabions"],
+    typesGalerie: ["Vitré", "Barreaudage", "Découpe laser", "Main courante bois"],
     titreGalerie: "Garde-corps en situation",
-    introGalerie: "Choisissez votre type de projet.",
+    introGalerie: "Choisissez un type de garde-corps.",
     details: `<h2>Un garde-corps, c'est d'abord de la sécurité</h2>
       <p>Hauteur, espacement des barreaux, résistance du support : un garde-corps doit respecter des règles précises, plus exigeantes encore dans les bâtiments recevant du public. Nous définissons le modèle et les fixations adaptés à votre support lors de la visite.</p>
       <p>Pour une terrasse neuve, le plus simple est de prévoir le garde-corps dès la conception : les fixations s'intègrent proprement à la structure.</p>`,

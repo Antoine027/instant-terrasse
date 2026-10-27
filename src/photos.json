@@ -1036,7 +1036,10 @@
    1000,
    1600
   ],
-  "ratio": 1.4162
+  "ratio": 1.4162,
+  "types": [
+   "Vitré"
+  ]
  },
  {
   "cle": "garde-corps-pro-bureaux",
@@ -1051,7 +1054,10 @@
    1000,
    1600
   ],
-  "ratio": 1.5317
+  "ratio": 1.5317,
+  "types": [
+   "Vitré"
+  ]
  },
  {
   "cle": "garde-corps-pro-cafe",
@@ -1066,7 +1072,10 @@
    1000,
    1600
   ],
-  "ratio": 0.8121
+  "ratio": 0.8121,
+  "types": [
+   "Barreaudage"
+  ]
  },
  {
   "cle": "garde-corps-pro-logements",
@@ -1081,7 +1090,10 @@
    1000,
    1535
   ],
-  "ratio": 1.0
+  "ratio": 1.0,
+  "types": [
+   "Vitré"
+  ]
  },
  {
   "cle": "gc-collectif-verre-depoli-angle",
@@ -1096,7 +1108,10 @@
    1000,
    1200
   ],
-  "ratio": 1.5769
+  "ratio": 1.5769,
+  "types": [
+   "Vitré"
+  ]
  },
  {
   "cle": "gc-collectif-barreaudage-beige",
@@ -1111,7 +1126,10 @@
    1000,
    1600
   ],
-  "ratio": 1.7778
+  "ratio": 1.7778,
+  "types": [
+   "Barreaudage"
+  ]
  },
  {
   "cle": "gc-collectif-barreaudage-arche",
@@ -1126,7 +1144,10 @@
    1000,
    1600
   ],
-  "ratio": 0.6669
+  "ratio": 0.6669,
+  "types": [
+   "Barreaudage"
+  ]
  },
  {
   "cle": "gc-collectif-verre-lisses",
@@ -1141,7 +1162,11 @@
    1000,
    1600
   ],
-  "ratio": 0.6669
+  "ratio": 0.6669,
+  "types": [
+   "Vitré",
+   "Barreaudage"
+  ]
  },
  {
   "cle": "gc-collectif-tole-perforee-tour",
@@ -1156,7 +1181,10 @@
    1000,
    1600
   ],
-  "ratio": 1.4994
+  "ratio": 1.4994,
+  "types": [
+   "Découpe laser"
+  ]
  },
  {
   "cle": "gc-collectif-barreaudage-creme",
@@ -1171,7 +1199,10 @@
    1000,
    1200
   ],
-  "ratio": 0.7105
+  "ratio": 0.7105,
+  "types": [
+   "Barreaudage"
+  ]
  },
  {
   "cle": "gc-collectif-lisses-anthracite",
@@ -1186,7 +1217,10 @@
    1000,
    1200
   ],
-  "ratio": 1.4907
+  "ratio": 1.4907,
+  "types": [
+   "Barreaudage"
+  ]
  },
  {
   "cle": "gc-collectif-renovation",
@@ -1201,7 +1235,11 @@
    1000,
    1600
   ],
-  "ratio": 0.8444
+  "ratio": 0.8444,
+  "types": [
+   "Vitré",
+   "Barreaudage"
+  ]
  },
  {
   "cle": "gc-maison-terrasse-bois-lisses",
@@ -1216,7 +1254,10 @@
    1000,
    1200
   ],
-  "ratio": 1.5
+  "ratio": 1.5,
+  "types": [
+   "Barreaudage"
+  ]
  },
  {
   "cle": "gc-collectif-verre-lisses-terrasse",
@@ -1231,7 +1272,11 @@
    1000,
    1200
   ],
-  "ratio": 1.5
+  "ratio": 1.5,
+  "types": [
+   "Vitré",
+   "Barreaudage"
+  ]
  },
  {
   "cle": "gc-collectif-tole-perforee-ronds",
@@ -1246,7 +1291,10 @@
    1000,
    1600
   ],
-  "ratio": 1.4496
+  "ratio": 1.4496,
+  "types": [
+   "Découpe laser"
+  ]
  },
  {
   "cle": "gc-collectif-barreaudage-bronze",
@@ -1261,7 +1309,10 @@
    1000,
    1200
   ],
-  "ratio": 1.5
+  "ratio": 1.5,
+  "types": [
+   "Barreaudage"
+  ]
  },
  {
   "cle": "gc-collectif-verre-blanc",
@@ -1276,7 +1327,10 @@
    1000,
    1200
   ],
-  "ratio": 1.4981
+  "ratio": 1.4981,
+  "types": [
+   "Vitré"
+  ]
  },
  {
   "cle": "gc-collectif-lisses-bardage-bois",
@@ -1291,7 +1345,10 @@
    1000,
    1200
   ],
-  "ratio": 1.5
+  "ratio": 1.5,
+  "types": [
+   "Barreaudage"
+  ]
  },
  {
   "cle": "gc-collectif-renovation-barreaudage",
@@ -1306,7 +1363,10 @@
    1000,
    1600
   ],
-  "ratio": 1.3333
+  "ratio": 1.3333,
+  "types": [
+   "Barreaudage"
+  ]
  },
  {
   "cle": "gc-collectif-tole-perforee-verre",
@@ -1321,7 +1381,11 @@
    1000,
    1600
   ],
-  "ratio": 1.4992
+  "ratio": 1.4992,
+  "types": [
+   "Découpe laser",
+   "Vitré"
+  ]
  },
  {
   "cle": "gc-collectif-decoupe-laser",
@@ -1336,7 +1400,10 @@
    1000,
    1500
   ],
-  "ratio": 1.5
+  "ratio": 1.5,
+  "types": [
+   "Découpe laser"
+  ]
  },
  {
   "cle": "gc-collectif-barreaudage-jaune",
@@ -1351,7 +1418,10 @@
    1000,
    1600
   ],
-  "ratio": 1.4994
+  "ratio": 1.4994,
+  "types": [
+   "Barreaudage"
+  ]
  },
  {
   "cle": "gc-collectif-tole-decoupee-gris",
@@ -1366,7 +1436,10 @@
    1000,
    1200
   ],
-  "ratio": 1.4528
+  "ratio": 1.4528,
+  "types": [
+   "Découpe laser"
+  ]
  },
  {
   "cle": "gc-collectif-tole-perforee-bronze",
@@ -1381,7 +1454,10 @@
    1000,
    1200
   ],
-  "ratio": 1.3333
+  "ratio": 1.3333,
+  "types": [
+   "Découpe laser"
+  ]
  },
  {
   "cle": "gc-collectif-barreaudage-pignon-bois",
@@ -1396,7 +1472,10 @@
    1000,
    1200
   ],
-  "ratio": 0.7458
+  "ratio": 0.7458,
+  "types": [
+   "Barreaudage"
+  ]
  },
  {
   "cle": "gc-collectif-garde-corps-fenetres",
@@ -1411,7 +1490,10 @@
    1000,
    1200
   ],
-  "ratio": 1.3333
+  "ratio": 1.3333,
+  "types": [
+   "Barreaudage"
+  ]
  },
  {
   "cle": "gc-collectif-verre-depoli-balcons",
@@ -1426,7 +1508,10 @@
    1000,
    1200
   ],
-  "ratio": 1.5
+  "ratio": 1.5,
+  "types": [
+   "Vitré"
+  ]
  },
  {
   "cle": "gc-collectif-lisses-perfore",
@@ -1441,7 +1526,11 @@
    1000,
    1200
   ],
-  "ratio": 0.7495
+  "ratio": 0.7495,
+  "types": [
+   "Barreaudage",
+   "Découpe laser"
+  ]
  },
  {
   "cle": "gc-maison-lisses-noires",
@@ -1457,7 +1546,10 @@
    1600,
    2302
   ],
-  "ratio": 1.4997
+  "ratio": 1.4997,
+  "types": [
+   "Barreaudage"
+  ]
  },
  {
   "cle": "gc-maison-terrasse-vue",
@@ -1472,7 +1564,10 @@
    1000,
    1600
   ],
-  "ratio": 1.3333
+  "ratio": 1.3333,
+  "types": [
+   "Barreaudage"
+  ]
  },
  {
   "cle": "gc-maison-panneaux-bois",
@@ -1487,7 +1582,10 @@
    1000,
    1024
   ],
-  "ratio": 1.3333
+  "ratio": 1.3333,
+  "types": [
+   "Barreaudage"
+  ]
  },
  {
   "cle": "gc-maison-decoupe-laser-lisses",
@@ -1502,7 +1600,11 @@
    1000,
    1600
   ],
-  "ratio": 1.3326
+  "ratio": 1.3326,
+  "types": [
+   "Découpe laser",
+   "Barreaudage"
+  ]
  },
  {
   "cle": "gc-maison-balcon-lisses",
@@ -1517,7 +1619,10 @@
    1000,
    1131
   ],
-  "ratio": 1.3337
+  "ratio": 1.3337,
+  "types": [
+   "Barreaudage"
+  ]
  },
  {
   "cle": "gc-maison-verre-vue-mer",
@@ -1532,7 +1637,10 @@
    1000,
    1200
   ],
-  "ratio": 1.7778
+  "ratio": 1.7778,
+  "types": [
+   "Vitré"
+  ]
  },
  {
   "cle": "gc-maison-terrasse-brique",
@@ -1547,7 +1655,10 @@
    1000,
    1200
   ],
-  "ratio": 1.964
+  "ratio": 1.964,
+  "types": [
+   "Barreaudage"
+  ]
  },
  {
   "cle": "gc-maison-barreaudage-rocher",
@@ -1562,7 +1673,10 @@
    1000,
    1200
   ],
-  "ratio": 1.5852
+  "ratio": 1.5852,
+  "types": [
+   "Barreaudage"
+  ]
  },
  {
   "cle": "gc-maison-verre-depoli",
@@ -1577,7 +1691,10 @@
    1000,
    1200
   ],
-  "ratio": 1.3652
+  "ratio": 1.3652,
+  "types": [
+   "Vitré"
+  ]
  },
  {
   "cle": "gc-maison-terrasse-poteaux",
@@ -1590,7 +1707,10 @@
    600,
    799
   ],
-  "ratio": 1.3339
+  "ratio": 1.3339,
+  "types": [
+   "Barreaudage"
+  ]
  },
  {
   "cle": "gc-maison-verre-clair",
@@ -1605,7 +1725,10 @@
    1000,
    1536
   ],
-  "ratio": 0.75
+  "ratio": 0.75,
+  "types": [
+   "Vitré"
+  ]
  },
  {
   "cle": "gc-maison-lisses-brun",
@@ -1620,7 +1743,10 @@
    1000,
    1600
   ],
-  "ratio": 1.4994
+  "ratio": 1.4994,
+  "types": [
+   "Barreaudage"
+  ]
  },
  {
   "cle": "gc-maison-decoupe-rouge",
@@ -1635,7 +1761,10 @@
    1000,
    1600
   ],
-  "ratio": 1.3333
+  "ratio": 1.3333,
+  "types": [
+   "Découpe laser"
+  ]
  },
  {
   "cle": "gc-maison-verre-depoli-carrelage",
@@ -1650,7 +1779,10 @@
    1000,
    1600
   ],
-  "ratio": 1.3333
+  "ratio": 1.3333,
+  "types": [
+   "Vitré"
+  ]
  },
  {
   "cle": "gc-maison-lisses-escalier",
@@ -1665,7 +1797,10 @@
    1000,
    1600
   ],
-  "ratio": 1.3333
+  "ratio": 1.3333,
+  "types": [
+   "Barreaudage"
+  ]
  },
  {
   "cle": "gc-maison-escalier-main-courante-bois",
@@ -1680,7 +1815,11 @@
    1000,
    1500
   ],
-  "ratio": 0.75
+  "ratio": 0.75,
+  "types": [
+   "Barreaudage",
+   "Main courante bois"
+  ]
  },
  {
   "cle": "gc-maison-pilotis-lames",
@@ -1694,7 +1833,10 @@
    800,
    1000
   ],
-  "ratio": 1.6064
+  "ratio": 1.6064,
+  "types": [
+   "Barreaudage"
+  ]
  },
  {
   "cle": "gc-maison-verre-blanc",
@@ -1709,7 +1851,10 @@
    1000,
    1600
   ],
-  "ratio": 1.3333
+  "ratio": 1.3333,
+  "types": [
+   "Vitré"
+  ]
  },
  {
   "cle": "gc-maison-lisses-pergola",
@@ -1724,7 +1869,10 @@
    1000,
    1600
   ],
-  "ratio": 1.3333
+  "ratio": 1.3333,
+  "types": [
+   "Barreaudage"
+  ]
  },
  {
   "cle": "gc-maison-decoupe-main-courante-bois",
@@ -1739,7 +1887,11 @@
    1000,
    1600
   ],
-  "ratio": 1.4994
+  "ratio": 1.4994,
+  "types": [
+   "Découpe laser",
+   "Main courante bois"
+  ]
  },
  {
   "cle": "gc-maison-pilotis-lisses-clair",
@@ -1754,7 +1906,10 @@
    1000,
    1600
   ],
-  "ratio": 1.3333
+  "ratio": 1.3333,
+  "types": [
+   "Barreaudage"
+  ]
  },
  {
   "cle": "alu-piscine-aspect-teck",
@@ -2671,7 +2826,10 @@
    600,
    725
   ],
-  "ratio": 2.3237
+  "ratio": 2.3237,
+  "types": [
+   "Main courante bois"
+  ]
  },
  {
   "cle": "carrelage-aspect-bois-garde-corps-feuilles",
@@ -2685,7 +2843,11 @@
    1000,
    1600
   ],
-  "ratio": 1.4994
+  "ratio": 1.4994,
+  "types": [
+   "Découpe laser",
+   "Main courante bois"
+  ]
  },
  {
   "cle": "carrelage-gris-garde-corps-verre-depoli",
@@ -2699,7 +2861,10 @@
    1000,
    1600
   ],
-  "ratio": 1.3333
+  "ratio": 1.3333,
+  "types": [
+   "Vitré"
+  ]
  },
  {
   "cle": "carrelage-beige-pergola-toit-fixe",
@@ -2713,6 +2878,9 @@
    1000,
    1600
   ],
-  "ratio": 1.3333
+  "ratio": 1.3333,
+  "types": [
+   "Vitré"
+  ]
  }
 ]

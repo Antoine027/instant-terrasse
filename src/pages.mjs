@@ -219,7 +219,7 @@ const accueil = `
   <div class="conteneur deux-colonnes">
     <div>
       <p class="sous-titre">Notre méthode</p>
-      <h2>Un seul interlocuteur, du premier rendez-vous à la fin du chantier</h2>
+      <h2><span class="long">Un seul interlocuteur, du premier rendez-vous à la fin du chantier</span><span class="court">Un seul interlocuteur, du début à la fin</span></h2>
       <p>${POSE}</p>
       <ul class="puces">
         <li><strong>Des produits sélectionnés pour leur qualité</strong><span class="long">, et un devis détaillé ligne par ligne</span>.</li>
@@ -235,7 +235,7 @@ const accueil = `
   <div class="conteneur">
     <div class="avis-entete">
       <h2>Ce que disent nos clients</h2>
-      ${BADGE_AVIS}
+      <span class="avis-badge-pc">${BADGE_AVIS}</span>
     </div>
     <div class="grille grille-avis">${AVIS.liste.map(([n, t], i) => `<figure class="avis">
       <figcaption class="avis-tete"><span class="avis-initiale" style="background:${COULEURS_AVIS[i % 4]}" aria-hidden="true">${n[0]}</span><span class="avis-nom">${n}<small>Avis Google</small></span>${LOGO_GOOGLE.replace('width="20" height="20"', 'width="22" height="22"')}</figcaption>
@@ -244,7 +244,7 @@ const accueil = `
       <button class="avis-suite" type="button" hidden>Lire la suite</button>
     </figure>`).join("")}</div>
     <script>document.querySelectorAll('.avis').forEach(a=>{const t=a.querySelector('.avis-texte'),b=a.querySelector('.avis-suite');if(t.scrollHeight>t.clientHeight+2){b.hidden=false;b.onclick=()=>{const o=a.classList.toggle('ouvert');b.textContent=o?'Réduire':'Lire la suite'}}})</script>
-    <p class="actions"><a class="bouton bouton-clair" href="${AVIS.lien}" target="_blank" rel="noopener">Voir tous les avis sur Google</a></p>
+    <p class="actions avis-lien"><a class="bouton bouton-clair" href="${AVIS.lien}" target="_blank" rel="noopener">Voir tous les avis sur Google</a></p>
   </div>
 </section>
 

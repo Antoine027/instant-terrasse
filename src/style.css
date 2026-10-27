@@ -848,3 +848,13 @@ details[open]>summary.menu-lien::after{transform:translateY(2px) rotate(225deg)}
 .faq summary::after{right:4px;color:var(--accent)}
 .faq div{padding:0 0 22px}
 @media (max-width:700px){.faq summary{font-size:.98rem;padding:17px 36px 17px 0}}
+/* Formulaire de rappel en bas de l'accueil */
+.bloc-rappel .deux-colonnes{align-items:center;gap:48px}
+.bloc-rappel .formulaire{color:var(--texte)}
+.formulaire label i{font-weight:400;color:var(--doux)}
+.rappel-direct{margin:22px 0 0;color:var(--fond);line-height:1.7}
+.rappel-direct a{color:#f0b15a;font-weight:700;text-decoration:none}
+.formulaire-court .bouton{justify-self:stretch;justify-content:center}
+.formulaire-court .mentions-form a{color:inherit}
+@media (max-width:700px){.bloc-rappel .deux-colonnes{gap:24px}.bloc-rappel .chapo{font-size:1rem}}
+@media (max-width:560px){.formulaire-court .deux-champs{grid-template-columns:1fr 1fr;gap:10px}}

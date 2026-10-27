@@ -245,14 +245,27 @@ const accueil = `
   </div>
 </section>
 
-<section class="bloc bloc-cta">
-  <div class="conteneur">
-    <h2>Parlons de votre projet</h2>
-    <p class="chapo">Devis gratuit et sans engagement, réponse sous 24 h. Lyon et sa région.</p>
-    <p class="actions">
-      <a class="bouton" href="/contact/">Demander un devis</a>
-      <a class="bouton bouton-clair" href="${SITE.whatsapp}">WhatsApp</a>
-    </p>
+<section id="rappel" class="bloc bloc-cta bloc-rappel">
+  <div class="conteneur deux-colonnes">
+    <div>
+      <h2>Parlons de votre projet</h2>
+      <p class="chapo">Laissez votre numéro : nous vous rappelons pour en parler et organiser la visite, gratuite et sans engagement.</p>
+      <p class="rappel-direct">Vous préférez appeler ?<br><a href="tel:${SITE.telLien}">${SITE.tel}</a> · <a href="${SITE.whatsapp}">WhatsApp</a></p>
+    </div>
+    <form class="formulaire formulaire-court" method="post" action="/api/contact">
+      <input type="hidden" name="court" value="1"><input type="hidden" name="souhait" value="Être rappelé">
+      <div class="deux-champs">
+        <label><span>Nom <b aria-hidden="true">*</b></span><input name="nom" required autocomplete="name" maxlength="120"></label>
+        <label><span>Téléphone <b aria-hidden="true">*</b></span><input name="telephone" type="tel" required autocomplete="tel" maxlength="30"></label>
+      </div>
+      <label>Mon projet
+        <select name="projet">${["Terrasse", "Pergola", "Store banne", "Garde-corps", "Bardage", "Carport", "Plusieurs éléments", "Autre projet"].map((p) => `<option>${p}</option>`).join("")}</select>
+      </label>
+      <label><span>Un mot sur votre projet <i>(facultatif)</i></span><textarea name="message" rows="3" maxlength="3000"></textarea></label>
+      <label class="pot-de-miel" aria-hidden="true">Site web<input name="site_web" tabindex="-1" autocomplete="off"></label>
+      <button class="bouton" type="submit">Être rappelé</button>
+      <p class="mentions-form">Vos informations servent uniquement à vous recontacter. <a href="/confidentialite/">Confidentialité</a></p>
+    </form>
   </div>
 </section>`;
 

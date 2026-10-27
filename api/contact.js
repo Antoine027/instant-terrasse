@@ -24,12 +24,15 @@ export default async function handler(req, res) {
   if (propre(corps.site_web, 200)) return aller(res, "/merci/"); // pot de miel anti-robots
 
   const d = Object.fromEntries(Object.entries(CHAMPS).map(([k, max]) => [k, propre(corps[k], max)]));
-  if (OBLIGATOIRES.some((k) => !d[k]) || !/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(d.email)) return aller(res, "/erreur-envoi/");
+  // Formulaire court de l'accueil (rappel) : l'e-mail est facultatif.
+  const court = propre(corps.court, 5) === "1";
+  const requis = court ? ["nom", "telephone"] : OBLIGATOIRES;
+  if (requis.some((k) => !d[k]) || (d.email && !/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(d.email))) return aller(res, "/erreur-envoi/");
 
   const cle = process.env.BREVO_API_KEY, vers = process.env.CONTACT_TO, de = process.env.CONTACT_FROM;
   if (!cle || !vers || !de) { console.error("contact: variables Brevo manquantes"); return aller(res, "/erreur-envoi/"); }
 
-  const lignes = [["Nom", d.nom], ["Téléphone", d.telephone], ["E-mail", d.email], ["Code postal", d.codepostal],
+  const lignes = [["Nom", d.nom], ["Téléphone", d.telephone], ["E-mail", d.email || "(non renseigné)"], ["Code postal", d.codepostal],
     ["Projet", d.projet], ["Souhait", d.souhait], ["Message", d.message || "(aucun)"]];
   try {
     const r = await fetch("https://api.brevo.com/v3/smtp/email", {
@@ -38,7 +41,7 @@ export default async function handler(req, res) {
       body: JSON.stringify({
         sender: { name: "Site Instant Terrasse", email: de },
         to: [{ email: vers }],
-        replyTo: { email: d.email, name: d.nom },
+        ...(d.email ? { replyTo: { email: d.email, name: d.nom } } : {}),
         subject: `Demande Instant Terrasse : ${d.projet || "projet"} – ${d.nom}`,
         textContent: lignes.map(([k, v]) => `${k} : ${v}`).join("\n"),
         htmlContent: `<table cellpadding="6" style="font-family:Arial,sans-serif;font-size:14px;border-collapse:collapse">${lignes.map(([k, v]) => `<tr><th align="left" style="background:#F8F3EB;color:#2F3437">${html(k)}</th><td>${html(v).replace(/\n/g, "<br>")}</td></tr>`).join("")}</table>`,

@@ -656,3 +656,33 @@ details[open]>summary.menu-lien::after{transform:translateY(2px) rotate(225deg)}
 @media (min-width:1101px){
   .hero-maison-plein::before{display:block;content:"";position:absolute;inset:0;z-index:1;pointer-events:none;background:radial-gradient(ellipse 560px 420px at calc(max(16px,(100vw - 1180px) / 2) + 260px) 56%,rgba(248,243,235,.7) 0,rgba(248,243,235,.4) 55%,rgba(248,243,235,0) 100%)}
 }
+
+/* ================= Mobile : en-tête de l'accueil repensé ================= */
+@media (max-width:700px){
+  .hero-maison-plein{margin-top:-80px;padding-bottom:8px;background:var(--fond)}
+  .hero-maison-plein .hm-visuel{margin:0;width:100%;position:relative}
+  .hero-maison-plein .hm-visuel .h-img{aspect-ratio:auto;height:52svh;min-height:320px;max-height:460px;width:100%;object-fit:cover;object-position:62% 50%;border-radius:0 0 28px 28px}
+  .hero-maison-plein .hm-visuel::after{content:"";position:absolute;inset:0 0 auto 0;height:120px;border-radius:0;background:linear-gradient(rgba(20,22,24,.28),rgba(20,22,24,0));pointer-events:none}
+  .hero-maison-plein .h-txt{padding:26px 20px 8px;text-align:left}
+  .hero-maison-plein .kicker{background:none;box-shadow:none;padding:0;border-radius:0;margin:0 0 12px;font:700 .72rem Montserrat,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-texte)}
+  .hero-maison-plein h1{font-size:2.35rem;line-height:1.02;letter-spacing:-.035em;margin:0 0 14px}
+  .hero-maison-plein .chapo{font-size:1rem;line-height:1.55;margin:0 0 22px;color:var(--doux)}
+  .hero-maison-plein .actions{display:block;margin:0}
+  .hero-maison-plein .actions .bouton{display:flex;justify-content:center;width:100%;padding:16px 20px;font-size:1rem}
+  .hero-maison-plein .actions .bouton-blanc{display:none}
+  .hero-maison-plein .hero-avis{margin:16px 0 0;text-align:center}
+  .hero-maison-plein .hero-avis .badge-avis{background:none;border:0;box-shadow:none;padding:0;font-size:.92rem}
+  .hero-maison-plein .trio{display:block;margin:22px 0 0;background:#fff;border-radius:18px;padding:4px 16px;box-shadow:0 10px 30px -18px rgba(47,52,55,.35)}
+  .hero-maison-plein .trio li{background:none;border-radius:0;padding:13px 0;font-size:.9rem;border-top:1px solid var(--fond)}
+  .hero-maison-plein .trio li:first-child{border-top:0}
+  .entete{padding-top:10px}
+  .entete-in{min-height:58px;padding:4px 6px 4px 16px}
+  .entete .logo img{height:40px;width:auto}
+  .burger summary{width:44px;height:44px}
+  /* Avis en carrousel horizontal */
+  .grille-avis{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:14px;margin:0 -16px;padding:4px 16px 18px;scrollbar-width:none}
+  .grille-avis::-webkit-scrollbar{display:none}
+  .grille-avis .avis{flex:0 0 84%;scroll-snap-align:center}
+}
+@media (max-width:700px){.hero-maison-plein .kicker{letter-spacing:.08em;font-size:.68rem}}
+@media (max-width:700px){.chapo{font-size:1.02rem;line-height:1.6}.bloc{padding:52px 0}h2{font-size:1.55rem}}

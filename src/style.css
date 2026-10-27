@@ -996,3 +996,6 @@ details[open]>summary.menu-lien::after{transform:translateY(2px) rotate(225deg)}
 .portrait-antoine img{width:150px;height:150px;border-radius:50%;object-fit:cover;object-position:50% 28%;box-shadow:0 14px 30px -18px rgba(47,52,55,.5)}
 .portrait-antoine p{margin:0;font-size:1.05rem}
 @media (max-width:700px){.carte-antoine .ca-photo{width:64px;height:64px}.portrait-antoine img{width:120px;height:120px}}
+.carte-antoine{gap:18px;padding:14px 20px 14px 14px}
+.carte-antoine .ca-photo{width:96px;height:96px}
+@media (max-width:700px){.carte-antoine .ca-photo{width:92px;height:92px}.carte-antoine span{font-size:1rem}}

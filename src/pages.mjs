@@ -235,7 +235,7 @@ const accueil = `
   <div class="conteneur deux-colonnes">
     <div>
       <p class="sous-titre">Notre méthode</p>
-      <a class="carte-antoine" href="/quisommesnous/">${imgPhoto("antoine-escolle", { sizes: "96px", classe: "ca-photo" })}<span><strong>Antoine</strong>, votre interlocuteur du premier rendez-vous à la fin du chantier.<em>Mon parcours →</em></span></a>
+      <a class="carte-antoine" href="/quisommesnous/">${imgPhoto("antoine-escolle", { sizes: "100px", classe: "ca-photo" })}<span><strong>Antoine</strong>, votre interlocuteur du premier rendez-vous à la fin du chantier.<em>Mon parcours →</em></span></a>
       <h2><span class="long">Un seul interlocuteur, du premier rendez-vous à la fin du chantier</span><span class="court">Un seul interlocuteur, du début à la fin</span></h2>
       <p>${POSE}</p>
       <ul class="puces">

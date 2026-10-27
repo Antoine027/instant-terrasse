@@ -484,7 +484,7 @@ const gardeCorps = {
       ["Particuliers et professionnels", "Maisons, immeubles de logements, bureaux, commerces et établissements recevant du public."],
     ],
     galerieCat: [...PHOTOS.filter((p) => p.categorie === "garde-corps").map((p) => p.cle), "carrelage-gris-garde-corps-verre-depoli", "carrelage-beige-pergola-toit-fixe", "restaurant-terrasse-gabions"],
-    typesGalerie: ["Vitré", "Barreaudage", "Découpe laser", "Main courante bois"],
+    typesGalerie: ["Vitré", "Barreaudage", "Découpe laser", "Remplissage bois", "Main courante bois"],
     titreGalerie: "Garde-corps en situation",
     introGalerie: "Choisissez un type de garde-corps.",
     details: `<h2>Un garde-corps, c'est d'abord de la sécurité</h2>

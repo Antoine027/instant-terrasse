@@ -1074,7 +1074,7 @@
   ],
   "ratio": 0.8121,
   "types": [
-   "Barreaudage"
+   "Remplissage bois"
   ]
  },
  {
@@ -1420,7 +1420,8 @@
   ],
   "ratio": 1.4994,
   "types": [
-   "Barreaudage"
+   "Barreaudage",
+   "Remplissage bois"
   ]
  },
  {
@@ -1584,7 +1585,7 @@
   ],
   "ratio": 1.3333,
   "types": [
-   "Barreaudage"
+   "Remplissage bois"
   ]
  },
  {
@@ -1835,7 +1836,7 @@
   ],
   "ratio": 1.6064,
   "types": [
-   "Barreaudage"
+   "Remplissage bois"
   ]
  },
  {
@@ -2828,7 +2829,8 @@
   ],
   "ratio": 2.3237,
   "types": [
-   "Main courante bois"
+   "Main courante bois",
+   "Remplissage bois"
   ]
  },
  {

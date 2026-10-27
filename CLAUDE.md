@@ -41,7 +41,7 @@ Remplaçant du site WordPress/Elementor instantterrasse.com. Générateur Node s
 
 ## Faits validés par Antoine (21/10/2026) — base des textes personnalisés
 - Antoine Escolle travaille depuis 2017 dans les pergolas, stores bannes et garde-corps, et dans la terrasse depuis début 2022 : 4 ans commercial dans une entreprise de terrasses (ne pas la nommer), puis création d'Instant Terrasse (ESCOM HABITAT, 2026). Écrire « depuis 2017 » / « depuis début 2022 », pas un nombre d'années qui vieillit.
-- Positionnement : le meilleur produit au meilleur tarif, transparence (devis détaillé). Sur le site, ne jamais écrire « meilleur tarif » ni rien qui suggère « pas cher » (demande d'Antoine, 27/10/2026) : parler de qualité, de prix juste et de devis détaillé.
+- Positionnement : le meilleur produit au meilleur tarif, transparence (devis détaillé). Sur le site, ne jamais écrire « meilleur tarif » ni rien qui suggère « pas cher » (demande d'Antoine, 27/10/2026) : parler de « produits sélectionnés pour leur qualité » et de devis détaillé, pas de prix.
 - Installateur partenaire assuré en garantie décennale.
 - Plan 3D offert.
 - Pas de showroom : rendez-vous à domicile avec les échantillons.

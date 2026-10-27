@@ -228,7 +228,7 @@ const accueil = `
       <h2><span class="long">Un seul interlocuteur, du premier rendez-vous à la fin du chantier</span><span class="court">Un seul interlocuteur, du début à la fin</span></h2>
       <p>${POSE}</p>
       <ul class="puces">
-        <li><strong>Des produits sélectionnés pour leur qualité</strong><span class="long">, et un devis détaillé ligne par ligne</span>.</li>
+        <li><strong>Des produits sélectionnés pour leur qualité.</strong></li>
         <li><strong>Structure aluminium garantie 20 ans.</strong></li>
         <li><strong>Pose assurée en garantie décennale.</strong></li>
       </ul>

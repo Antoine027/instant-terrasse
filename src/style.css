@@ -887,3 +887,15 @@ details[open]>summary.menu-lien::after{transform:translateY(2px) rotate(225deg)}
 .choix-tuile svg{width:36px;height:36px;stroke-width:1.6}
 .choix-tuile{min-height:92px;gap:8px}
 .choix-tuile svg{width:40px;height:40px}
+/* Carte de confiance Google à côté du formulaire */
+.carte-google{display:inline-flex;flex-direction:column;gap:6px;margin:26px 0 0;padding:18px 22px;background:#fff;border-radius:18px;text-decoration:none;color:var(--texte);box-shadow:0 18px 40px -20px rgba(0,0,0,.6);transition:transform .2s}
+.carte-google:hover{transform:translateY(-2px)}
+.cg-haut{display:flex;align-items:center;gap:12px}
+.cg-note{display:flex;align-items:center;gap:8px}
+.cg-note strong{font:800 1.9rem/1 Montserrat,sans-serif}
+.carte-google .etoiles{color:#FBBC04;display:inline-flex;gap:2px}
+.carte-google .etoiles svg{width:22px;height:22px}
+.cg-texte{font:600 .9rem Montserrat,sans-serif;color:var(--doux)}
+.cg-citation{font:italic 400 .98rem/1.45 Lato,sans-serif;color:var(--texte);border-top:1px solid var(--fond);padding-top:8px;margin-top:2px}
+.cg-citation em{font-style:normal;color:var(--doux);font-size:.88rem}
+@media (max-width:700px){.carte-google{display:flex;margin-top:20px}}

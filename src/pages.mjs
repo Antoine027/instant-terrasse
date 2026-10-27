@@ -260,6 +260,11 @@ const accueil = `
     <div>
       <h2>Parlons de votre projet</h2>
       <p class="chapo">Laissez votre numéro : nous vous rappelons pour en parler et organiser la visite, gratuite et sans engagement.</p>
+      <a class="carte-google" href="${AVIS.lien}" target="_blank" rel="noopener" aria-label="Note Google ${AVIS.note} sur 5, ${AVIS.total} avis : voir les avis">
+        <span class="cg-haut">${LOGO_GOOGLE.replace('width="20" height="20"', 'width="30" height="30"')}<span class="cg-note"><strong>${AVIS.note}</strong>${ETOILES}</span></span>
+        <span class="cg-texte">Note Google, ${AVIS.total} avis clients</span>
+        <span class="cg-citation">« Le résultat dépasse mes attentes. » <em>—&nbsp;Clement&nbsp;V.</em></span>
+      </a>
       <p class="rappel-direct">Vous préférez appeler ?<br><a href="tel:${SITE.telLien}">${SITE.tel}</a> · <a href="${SITE.whatsapp}">WhatsApp</a></p>
     </div>
     <form class="formulaire formulaire-court" method="post" action="/api/contact">

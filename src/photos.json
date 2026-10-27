@@ -2660,5 +2660,18 @@
    1075
   ],
   "ratio": 1.5056
+ },
+ {
+  "cle": "accueil-terrasse-pergola-vue-mer",
+  "dossier": "accueil",
+  "categorie": "accueil-hero",
+  "alt": "Terrasse bois sous une pergola bioclimatique, table et chaises face à la mer et aux pins",
+  "largeurs": [
+   400,
+   600,
+   800,
+   1000
+  ],
+  "ratio": 2.0513
  }
 ]

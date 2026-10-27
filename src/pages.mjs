@@ -131,6 +131,12 @@ export const FAQ = [
 const carteLien = ([chemin, titre, texte]) =>
   carteProduit(chemin, titre, texte);
 
+const ICONES_ETAPES = [
+  '<path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/><path d="M8.5 11h.01M12 11h.01M15.5 11h.01"/>',
+  '<path d="M3 11l9-7 9 7"/><path d="M5 9.5V20h14V9.5"/><path d="M10 20v-5h4v5"/>',
+  '<path d="M12 3l8 4.5v9L12 21l-8-4.5v-9z"/><path d="M12 12l8-4.5M12 12v9M12 12L4 7.5"/>',
+  '<path d="M14.5 6.5a4 4 0 0 0-5.3 5.3L4 17l3 3 5.2-5.2a4 4 0 0 0 5.3-5.3l-2.5 2.5-2.5-.5-.5-2.5z"/>',
+];
 const etapes = [
   ["Échange", "Nous parlons de votre projet, de vos envies et de l'usage de votre extérieur.", "Vos envies, votre usage, votre extérieur."],
   ["Visite avec échantillons", "Nous venons chez vous avec les échantillons : vous comparez les matériaux à côté de votre façade, et nous relevons dimensions, accès et support.", "Chez vous, matériaux en main, mesures prises."],
@@ -227,7 +233,7 @@ const accueil = `
         <li><strong>Pose assurée en garantie décennale.</strong></li>
       </ul>
     </div>
-    <ol class="etapes etapes-verticales">${etapes.map(([t, x, c]) => `<li><h3>${t}</h3><p><span class="long">${x}</span><span class="court">${c}</span></p></li>`).join("")}</ol>
+    <ol class="etapes etapes-verticales">${etapes.map(([t, x, c], i) => `<li><span class="etape-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">${ICONES_ETAPES[i]}</svg><b>${i + 1}</b></span><h3>${t}</h3><p><span class="long">${x}</span><span class="court">${c}</span></p></li>`).join("")}</ol>
   </div>
 </section>
 
@@ -413,7 +419,7 @@ const aPropos = `
       <p>${POSE}</p>
       <p>Vous n'avez donc qu'un numéro à retenir : le nôtre. C'est nous qui préparons la commande, organisons la livraison et coordonnons la pose.</p>
     </div>
-    <ol class="etapes etapes-verticales">${etapes.map(([t, x, c]) => `<li><h3>${t}</h3><p><span class="long">${x}</span><span class="court">${c}</span></p></li>`).join("")}</ol>
+    <ol class="etapes etapes-verticales">${etapes.map(([t, x, c], i) => `<li><span class="etape-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">${ICONES_ETAPES[i]}</svg><b>${i + 1}</b></span><h3>${t}</h3><p><span class="long">${x}</span><span class="court">${c}</span></p></li>`).join("")}</ol>
   </div>
 </section>
 <section class="bloc">

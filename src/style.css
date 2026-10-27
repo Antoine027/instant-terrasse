@@ -793,3 +793,7 @@ details[open]>summary.menu-lien::after{transform:translateY(2px) rotate(225deg)}
   .points span.on{width:20px;border-radius:4px;background:var(--bouton)}
   .pt-lien{margin-top:20px!important}
 }
+@media (max-width:700px){
+  #piece>.conteneur>.sous-titre,#piece>.conteneur>h2,#piece>.conteneur>.chapo{display:none}
+  #piece{padding-top:40px}
+}

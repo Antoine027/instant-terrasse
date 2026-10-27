@@ -162,10 +162,7 @@ const PIECES = [
 ];
 
 // Pastilles posées sur la maison de l'en-tête : [lien, nom, x %, y % de l'image, côté de l'étiquette].
-const PINS = [
-  ["/terrasse-piscine-lyon/", "Terrasse de piscine", 58, 52],
-  ["/terrasse-bois-lyon/", "Terrasse bois", 72, 80, "gauche"],
-];
+const PINS = [];
 const SCRIPT_PINS = `(()=>{const h=document.querySelector('.hm-visuel'),im=h&&h.querySelector('.h-img'),ps=h&&h.querySelectorAll('.pin');if(!im)return;const place=()=>{const r=im.getBoundingClientRect(),H=h.getBoundingClientRect(),nw=im.naturalWidth||1600,nh=im.naturalHeight||900,s=Math.max(r.width/nw,r.height/nh),w=nw*s,hh=nh*s,op=getComputedStyle(im).objectPosition.split(' ').map(parseFloat),ox=(r.width-w)*op[0]/100,oy=(r.height-hh)*op[1]/100;ps.forEach(p=>{const x=r.left-H.left+ox+w*p.dataset.x/100,y=r.top-H.top+oy+hh*p.dataset.y/100;let vis=x>r.left-H.left+12&&x<r.right-H.left-12&&y>r.top-H.top+12&&y<r.bottom-H.top-12;if(getComputedStyle(h).position==='absolute'){const t=h.parentNode.querySelector('.h-txt .chapo').getBoundingClientRect();if(x+H.left<t.right+30)vis=false;h.parentNode.querySelectorAll('.h-txt>*').forEach(e=>{const b=e.getBoundingClientRect();if(x+H.left>b.left-40&&x+H.left<b.right+40&&y+H.top>b.top-30&&y+H.top<b.bottom+30)vis=false});if(y+H.top<100)vis=false}p.style.left=x+'px';p.style.top=y+'px';p.hidden=!vis});h.classList.add('pins-prets')};im.complete?place():im.addEventListener('load',place);addEventListener('resize',place)})();`;
 
 const accueil = `

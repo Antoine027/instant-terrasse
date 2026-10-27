@@ -179,7 +179,6 @@ const accueil = `
       <a class="bouton" href="/contact/">Demander une visite gratuite</a>
       <a class="bouton bouton-blanc" href="#piece">Découvrir</a>
     </p>
-    <p class="hero-rassure">Gratuit, sans engagement · Réponse sous 24 h</p>
     <p class="hero-avis">${BADGE_AVIS}</p>
     ${TRIO}
   </div>

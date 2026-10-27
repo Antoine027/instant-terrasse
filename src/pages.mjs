@@ -172,7 +172,7 @@ const accueil = `
     <div class="pins" aria-label="Nos produits sur la maison">${PINS.map(([c, t, x, y, cote]) => `<a class="pin${cote ? " pin-" + cote : ""}" href="${c}" data-x="${x}" data-y="${y}"><span class="pin-point" aria-hidden="true"></span><span class="pin-nom">${t}</span></a>`).join("")}</div>
   </div>
   <div class="conteneur h-txt">
-    <p class="kicker">Terrasses, pergolas et garde-corps sur mesure à Lyon</p>
+    <p class="kicker"><span class="k-long">Terrasses, pergolas et garde-corps s</span><span class="k-court">S</span>ur mesure à Lyon</p>
     <h1><span class="fin">Créez la 5<sup>e</sup> pièce</span> <span class="fort">de votre maison</span></h1>
     <p class="chapo">Une terrasse pensée comme une pièce à part entière&nbsp;: le lien entre l'intérieur et l'extérieur.</p>
     <p class="actions">

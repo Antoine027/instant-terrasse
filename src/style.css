@@ -714,3 +714,23 @@ details[open]>summary.menu-lien::after{transform:translateY(2px) rotate(225deg)}
   .hero-maison-plein .trio li{font-size:.9rem}
 }
 @media (max-width:380px){.hero-maison-plein h1{font-size:2.2rem}.hero-maison-plein .trio li{font-size:.85rem}}
+.k-court{display:none}
+/* Mobile : photo nette en haut, texte sur fond sombre en bas */
+@media (max-width:700px){
+  .k-long{display:none}.k-court{display:inline}
+  .hero-maison-plein{background:#1b1d1f;min-height:100svh;padding-bottom:28px}
+  .hero-maison-plein .hm-visuel{inset:0 0 auto 0;height:64svh}
+  .hero-maison-plein .hm-visuel .h-img{object-position:66% 50%}
+  .hero-maison-plein .hm-visuel::after{background:linear-gradient(180deg,rgba(27,29,31,.35) 0,rgba(27,29,31,0) 18%,rgba(27,29,31,0) 50%,rgba(27,29,31,.75) 80%,#1b1d1f 100%)}
+  .hero-maison-plein .kicker{font-size:.74rem;letter-spacing:.18em;margin-bottom:10px}
+  .hero-maison-plein h1{font-size:2.55rem;margin-bottom:12px}
+  .hero-maison-plein .chapo{font-size:.98rem;color:rgba(255,255,255,.82);margin-bottom:22px;text-shadow:none}
+  .hero-maison-plein h1{text-shadow:0 2px 24px rgba(0,0,0,.45)}
+  .hero-maison-plein .trio{margin-top:22px;padding-top:20px;border-top:1px solid rgba(255,255,255,.14);width:100%}
+}
+@media (max-width:380px){.hero-maison-plein h1{font-size:2.25rem}}
+@media (max-width:700px){
+  .hero-maison-plein{display:block;min-height:0}
+  .hero-maison-plein .hm-visuel{position:relative;inset:auto;height:min(58svh,520px);min-height:340px}
+  .hero-maison-plein .h-txt{margin-top:-72px}
+}

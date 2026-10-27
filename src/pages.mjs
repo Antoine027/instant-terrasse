@@ -141,7 +141,7 @@ const etapes = [
 export const TRIO = `<ul class="trio"><li><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V8l7-5 7 5v13"/><path d="M9 21v-6h6v6"/></svg><span>Visite chez vous, avec les échantillons</span></li><li><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 3 7l9 5 9-5-9-5z"/><path d="m3 17 9 5 9-5"/><path d="m3 12 9 5 9-5"/></svg><span>Plan 3D de votre projet offert</span></li><li><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg><span>Pose assurée en garantie décennale</span></li></ul>`;
 
 const MATERIAUX_ACCUEIL = [
-  ["/terrasse-bois-lyon/", "Bois", "terrasse-bambou-ndurance-piscine-pierre", "Accoya, kebony, bambou : la chaleur du vrai bois"],
+  ["/terrasse-bois-lyon/", "Bois", "terrasse-kebony-piscine-debordement", "Accoya, kebony, bambou : la chaleur du vrai bois"],
   ["/terrasse-composite-lyon/", "Composite", "composite-gris-piscine", "L'aspect du bois, sans saturateur ni ponçage"],
   ["/terrasse-aluminium-lyon/", "Aluminium", "alu-piscine-aspect-teck", "Ne pourrit pas, ne bouge pas, en 6 teintes"],
   ["/terrasse-carrelage-lyon/", "Carrelage", "carrelage-toit-terrasse-montagnes", "Grès cérame posé sans colle, sur plots"],

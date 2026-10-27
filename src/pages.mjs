@@ -117,15 +117,15 @@ const CERTIFIE = `<svg class="certifie" viewBox="0 0 24 24" width="16" height="1
 export const BADGE_AVIS = `<a class="badge-avis" href="${AVIS.lien}" target="_blank" rel="noopener" aria-label="${AVIS.note} sur 5 sur Google, ${AVIS.total} avis">${LOGO_GOOGLE}<strong>${AVIS.note}</strong>${ETOILES}<span>${AVIS.total} avis</span></a>`;
 
 export const FAQ = [
-  ["Quel matériau choisir pour ma terrasse ?", "Tout dépend de l'aspect recherché, du budget et du temps que vous voulez consacrer à l'entretien. Le bois apporte la chaleur d'un matériau naturel, le composite et l'aluminium limitent l'entretien, le carrelage offre un rendu minéral. Notre <a href=\"/nos-terrasses/\">comparatif des matériaux</a> vous aide à y voir clair, et nous affinons le choix lors de la visite."],
-  ["Qui réalise la pose ?", `${POSE}`],
-  ["Combien coûte une terrasse ou une pergola ?", "Le prix dépend du matériau, de la surface, de la structure nécessaire, de la hauteur et de l'accès au chantier. C'est pourquoi nous venons voir les lieux avant de chiffrer. Nous vous proposons des produits sélectionnés pour leur qualité, avec un devis détaillé, gratuit et sans engagement."],
-  ["Quelles sont les garanties ?", "Nos structures de terrasse en aluminium sont garanties 20 ans, et la pose est réalisée par notre installateur partenaire, assuré en garantie décennale."],
-  ["Avez-vous un showroom ?", "Non, et c'est volontaire : c'est nous qui venons chez vous avec les échantillons. Un matériau se choisit mieux à la lumière de votre jardin et à côté de votre façade que sous les néons d'un magasin."],
-  ["Proposez-vous un plan 3D ?", "Oui, le plan 3D de votre projet est offert. Vous voyez votre future terrasse, sa hauteur et son matériau avant de vous engager."],
-  ["Faut-il une autorisation pour une terrasse ou une pergola ?", "Selon la surface, la hauteur et votre commune, une déclaration préalable de travaux peut être nécessaire, notamment pour une pergola ou une terrasse surélevée. Nous vous indiquons la démarche à suivre lors de la visite."],
-  ["Pouvez-vous réaliser la terrasse, la pergola et le garde-corps en même temps ?", "Oui, et c'est même recommandé : hauteurs, fixations et écoulement des eaux se pensent ensemble. Vous n'avez qu'un seul interlocuteur pour tout le projet."],
-  ["Dans quelle zone intervenez-vous ?", "À Lyon et dans sa région. Indiquez votre code postal dans la demande de devis, nous vous répondons rapidement."],
+  ["Quel matériau choisir pour ma terrasse&nbsp;?", "Tout dépend de l'aspect recherché, du budget et du temps que vous voulez consacrer à l'entretien. Le bois apporte la chaleur d'un matériau naturel, le composite et l'aluminium limitent l'entretien, le carrelage offre un rendu minéral. Notre <a href=\"/nos-terrasses/\">comparatif des matériaux</a> vous aide à y voir clair, et nous affinons le choix lors de la visite."],
+  ["Qui réalise la pose&nbsp;?", `${POSE}`],
+  ["Combien coûte une terrasse ou une pergola&nbsp;?", "Le prix dépend du matériau, de la surface, de la structure nécessaire, de la hauteur et de l'accès au chantier. C'est pourquoi nous venons voir les lieux avant de chiffrer. Nous vous proposons des produits sélectionnés pour leur qualité, avec un devis détaillé, gratuit et sans engagement."],
+  ["Quelles sont les garanties&nbsp;?", "Nos structures de terrasse en aluminium sont garanties 20 ans, et la pose est réalisée par notre installateur partenaire, assuré en garantie décennale."],
+  ["Avez-vous un showroom&nbsp;?", "Non, et c'est volontaire : c'est nous qui venons chez vous avec les échantillons. Un matériau se choisit mieux à la lumière de votre jardin et à côté de votre façade que sous les néons d'un magasin."],
+  ["Proposez-vous un plan 3D&nbsp;?", "Oui, le plan 3D de votre projet est offert. Vous voyez votre future terrasse, sa hauteur et son matériau avant de vous engager."],
+  ["Faut-il une autorisation pour une terrasse ou une pergola&nbsp;?", "Selon la surface, la hauteur et votre commune, une déclaration préalable de travaux peut être nécessaire, notamment pour une pergola ou une terrasse surélevée. Nous vous indiquons la démarche à suivre lors de la visite."],
+  ["Pouvez-vous réaliser la terrasse, la pergola et le garde-corps en même temps&nbsp;?", "Oui, et c'est même recommandé : hauteurs, fixations et écoulement des eaux se pensent ensemble. Vous n'avez qu'un seul interlocuteur pour tout le projet."],
+  ["Dans quelle zone intervenez-vous&nbsp;?", "À Lyon et dans sa région. Indiquez votre code postal dans la demande de devis, nous vous répondons rapidement."],
 ];
 
 const carteLien = ([chemin, titre, texte]) =>
@@ -241,7 +241,7 @@ const accueil = `
 <section id="faq" class="bloc">
   <div class="conteneur conteneur-etroit">
     <h2>Vos questions</h2>
-    ${FAQ.map(([q, r]) => `<details class="faq"><summary>${q}</summary><div>${r}</div></details>`).join("")}
+    ${[0, 2, 1, 6, 8].map((i) => FAQ[i]).map(([q, r]) => `<details class="faq"><summary>${q}</summary><div>${r}</div></details>`).join("")}
   </div>
 </section>
 
@@ -301,7 +301,13 @@ const contact = `
 <script>
 const v=new URLSearchParams(location.search).get('projet');const s=document.getElementById('projet');
 if(v&&s){const o=[...s.options].find(o=>o.text===v);if(o)s.value=o.text}
-</script>`;
+</script>
+<section class="bloc bloc-alt">
+  <div class="conteneur conteneur-etroit">
+    <h2>Avant votre demande</h2>
+    ${[5, 4, 3, 7].map((i) => FAQ[i]).map(([q, r]) => `<details class="faq"><summary>${q}</summary><div>${r}</div></details>`).join("")}
+  </div>
+</section>`;
 
 const fleche = `<svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg>`;
 const carteMarque = ({ url, logo, w, h, alt, titre, texte, tags, bouton, tel, telLien, appel, classe }) => `

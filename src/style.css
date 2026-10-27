@@ -840,3 +840,11 @@ details[open]>summary.menu-lien::after{transform:translateY(2px) rotate(225deg)}
   #methode .etapes li{padding-bottom:14px}
   #methode .etapes h3{margin-top:7px}
 }
+/* FAQ : lignes légères */
+.faq{background:none;border:0;border-bottom:1px solid rgba(47,52,55,.14);border-radius:0;margin:0}
+.faq:first-of-type{border-top:1px solid rgba(47,52,55,.14)}
+.bloc-alt .faq{background:none}
+.faq summary{padding:20px 44px 20px 0}
+.faq summary::after{right:4px;color:var(--accent)}
+.faq div{padding:0 0 22px}
+@media (max-width:700px){.faq summary{font-size:.98rem;padding:17px 36px 17px 0}}

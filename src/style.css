@@ -686,3 +686,31 @@ details[open]>summary.menu-lien::after{transform:translateY(2px) rotate(225deg)}
 }
 @media (max-width:700px){.hero-maison-plein .kicker{letter-spacing:.08em;font-size:.68rem}}
 @media (max-width:700px){.chapo{font-size:1.02rem;line-height:1.6}.bloc{padding:52px 0}h2{font-size:1.55rem}}
+
+/* ================= Mobile : texte en superposition sur la photo ================= */
+@media (max-width:700px){
+  .hero-maison-plein{position:relative;display:flex;flex-direction:column;justify-content:flex-end;min-height:100svh;margin-top:-80px;padding:0 0 26px;background:#1d1f21;overflow:hidden}
+  .hero-maison-plein .hm-visuel{position:absolute;inset:0;margin:0;width:auto}
+  .hero-maison-plein .hm-visuel .h-img{position:absolute;inset:0;width:100%;height:100%;max-height:none;min-height:0;aspect-ratio:auto;object-fit:cover;object-position:60% 50%;border-radius:0;-webkit-mask-image:none;mask-image:none}
+  .hero-maison-plein .hm-visuel::after{content:"";position:absolute;inset:0;height:auto;background:linear-gradient(180deg,rgba(20,22,24,.45) 0,rgba(20,22,24,.15) 22%,rgba(20,22,24,.35) 45%,rgba(20,22,24,.78) 72%,rgba(20,22,24,.9) 100%)}
+  .hero-maison-plein::before{display:none!important}
+  .hero-maison-plein .h-txt{position:relative;z-index:2;padding:0 20px;text-align:center}
+  .hero-maison-plein .h-txt>*{max-width:none}
+  .hero-maison-plein .kicker{color:#f3d7a8;margin:0 0 12px;text-shadow:none}
+  .hero-maison-plein h1{color:#fff;font-size:2.5rem;text-shadow:0 2px 18px rgba(0,0,0,.35)}
+  .hero-maison-plein h1 .fort{color:#f0b15a}
+  .hero-maison-plein .chapo{color:rgba(255,255,255,.9);text-shadow:0 1px 10px rgba(0,0,0,.4);margin-bottom:20px}
+  .hero-maison-plein .hero-avis{margin:14px 0 0}
+  .hero-maison-plein .hero-avis .badge-avis{display:inline-flex;background:rgba(255,255,255,.14);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.25);border-radius:999px;padding:8px 16px;color:#fff}
+  .hero-maison-plein .hero-avis .badge-avis strong{color:#fff}
+  .hero-maison-plein .hero-avis .badge-avis>span:last-child{color:rgba(255,255,255,.8)}
+  .hero-maison-plein .trio{background:none;box-shadow:none;padding:0;margin:20px auto 0;display:grid;gap:10px;justify-content:center;text-align:left;width:max-content;max-width:100%}
+  .hero-maison-plein .trio li{border:0;padding:0;color:#fff;font-size:.95rem;gap:12px;align-items:center}
+  .hero-maison-plein .trio svg{width:30px;height:30px;padding:6px;border-radius:50%;background:rgba(255,255,255,.92);color:var(--bouton);flex:none;box-sizing:border-box}
+}
+@media (max-width:700px){
+  .hero-maison-plein .hm-visuel::after{background:linear-gradient(180deg,rgba(20,22,24,.35) 0,rgba(20,22,24,0) 20%,rgba(20,22,24,.2) 40%,rgba(20,22,24,.72) 66%,rgba(20,22,24,.88) 100%)}
+  .hero-maison-plein .trio{width:auto;justify-content:start;margin-left:4px;margin-right:4px}
+  .hero-maison-plein .trio li{font-size:.9rem}
+}
+@media (max-width:380px){.hero-maison-plein h1{font-size:2.2rem}.hero-maison-plein .trio li{font-size:.85rem}}

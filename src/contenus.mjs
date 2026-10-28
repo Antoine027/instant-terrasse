@@ -1,6 +1,6 @@
 // Contenus rédigés des pages. Une page présente ici remplace sa version « en préparation ».
 // Règles : pas de chiffre, garantie, certification ou chantier inventé ; pas de nom de fournisseur.
-import { SITE, POSE, TRIO, BADGE_AVIS } from "./pages.mjs";
+import { SITE, POSE, TRIO, BADGE_AVIS, blocRappel } from "./pages.mjs";
 import { galerie, imgPhoto, PHOTOS, credit } from "./galerie.mjs";
 import { carteProduit } from "./vignettes.mjs";
 
@@ -25,14 +25,9 @@ const heroPlein = ({ fil, h1, kicker, chapo, photo, position = "65% 50%", action
   </div>
 </section>`;
 
-const cta = (titre = "Un projet de terrasse en bois ?", texte = "Devis gratuit et sans engagement. Nous venons voir votre terrain et nous vous orientons vers l'essence et la structure les plus adaptées.") => `
-<section class="bloc bloc-cta">
-  <div class="conteneur">
-    <h2>${titre}</h2>
-    <p class="chapo">${texte}</p>
-    <p class="actions"><a class="bouton" href="/contact/">Demander un devis</a> <a class="bouton bouton-clair" href="tel:${SITE.telLien}">${SITE.tel}</a></p>
-  </div>
-</section>`;
+// Bas de page produit : formulaire de rappel court (projet pré-coché selon la page).
+const cta = (titre = "Un projet de terrasse en bois ?", texte = "Laissez votre numéro : nous vous rappelons pour en parler et organiser la visite, gratuite et sans engagement.") =>
+  blocRappel(titre, texte.replace(/^Devis gratuit et sans engagement\. /, "Laissez votre numéro, nous vous rappelons. "), true);
 
 // ---------- Terrasse bois ----------
 const essencesAlu = [
@@ -89,7 +84,7 @@ const terrasseBois = {
   title: "Terrasse bois Lyon : thermopin, kebony, accoya, ipé | Instant Terrasse",
   description: "Terrasse bois sur mesure à Lyon : thermopin, thermofrêne, kebony, accoya, bambou sur structure aluminium, ou ipé, cumaru, mélèze, douglas sur structure traditionnelle.",
   corps: `
-${heroPlein({ fil: "Terrasses", h1: ["Terrasse bois", "sur mesure"], kicker: "Terrasses bois à Lyon et dans sa région", photo: "terrasse-kebony-piscine-debordement", position: "60% 55%",
+${heroPlein({ fil: "Terrasses", h1: ["Terrasse bois", "sur mesure à Lyon"], kicker: "Terrasses bois à Lyon et dans sa région", photo: "terrasse-kebony-piscine-debordement", position: "60% 55%",
   chapo: "Bois modifiés et bambou sur structure aluminium, ou bois massifs et exotiques sur structure traditionnelle : nous vous aidons à choisir l'essence qui correspond à votre maison, à votre budget et au temps que vous voulez consacrer à l'entretien.",
   actions: `<a class="bouton" href="/contact/">Demander une visite gratuite</a> <a class="bouton bouton-blanc" href="#essences-aluminium">Voir les essences</a>` })}
 

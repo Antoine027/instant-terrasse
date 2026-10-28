@@ -186,6 +186,39 @@ const CHOIX_PROJET = [
   ["Carport", '<path d="M2 5h20"/><path d="M4 5v15M20 5v15"/><path d="M7.5 14l1.5-3h6l1.5 3"/><path d="M6.5 14h11v3.5h-11z"/><circle cx="9" cy="18.5" r="1"/><circle cx="15" cy="18.5" r="1"/>'],
 ];
 
+// Bloc « rappel » (formulaire court + note Google) : accueil et bas des pages produit.
+export const blocRappel = (titre = "Parlons de votre projet", texte = "Laissez votre numéro : nous vous rappelons pour en parler et organiser la visite, gratuite et sans engagement.", cocher = false) => `
+<section id="rappel" class="bloc bloc-cta bloc-rappel">
+  <div class="conteneur deux-colonnes">
+    <div>
+      <h2>${titre.replace(/ ([?!:])/g, "&nbsp;$1")}</h2>
+      <p class="chapo">${texte}</p>
+      <a class="carte-google" href="${AVIS.lien}" target="_blank" rel="noopener" aria-label="Note Google ${AVIS.note} sur 5, ${AVIS.total} avis : voir les avis">
+        <span class="cg-haut">${LOGO_GOOGLE.replace('width="20" height="20"', 'width="30" height="30"')}<span class="cg-note"><strong>${AVIS.note}</strong>${ETOILES}</span></span>
+        <span class="cg-texte">Note Google, ${AVIS.total} avis clients</span>
+        <span class="cg-citation">« Le résultat dépasse mes attentes. » <em>—&nbsp;Clement&nbsp;V.</em></span>
+      </a>
+      <p class="rappel-direct">Vous préférez appeler ?<br><a href="tel:${SITE.telLien}">${SITE.tel}</a> · <a href="${SITE.whatsapp}">WhatsApp</a></p>
+    </div>
+    <form class="formulaire formulaire-court" method="post" action="/api/contact">
+      <input type="hidden" name="court" value="1"><input type="hidden" name="souhait" value="Être rappelé">
+      <div class="deux-champs">
+        <label><span>Nom <b aria-hidden="true">*</b></span><input name="nom" required autocomplete="name" maxlength="120"></label>
+        <label><span>Téléphone <b aria-hidden="true">*</b></span><input name="telephone" type="tel" required autocomplete="tel" maxlength="30"></label>
+      </div>
+      <fieldset class="choix-projet">
+        <legend>Mon projet <i>(plusieurs choix possibles)</i></legend>
+        <div class="choix-grille">${CHOIX_PROJET.map(([v, ic]) => `<label class="choix"><input type="checkbox" name="projet" value="${v}"><span class="choix-tuile"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">${ic}</svg>${v}</span></label>`).join("")}</div>
+      </fieldset>
+      <label><span>Un mot sur votre projet <i>(facultatif)</i></span><textarea name="message" rows="3" maxlength="3000"></textarea></label>
+      <label class="pot-de-miel" aria-hidden="true">Site web<input name="site_web" tabindex="-1" autocomplete="off"></label>
+      <button class="bouton" type="submit">Être rappelé</button>
+      <p class="mentions-form">Vos informations servent uniquement à vous recontacter. <a href="/confidentialite/">Confidentialité</a></p>
+    </form>
+    ${cocher ? `<script>(()=>{const p=location.pathname,m=[["pergola","Pergola"],["store","Store banne"],["garde-corps","Garde-corps"],["bardage","Bardage"],["carport","Carport"]].find(([k])=>p.includes(k)),c=document.querySelector('#rappel .choix input[value="'+(m?m[1]:"Terrasse")+'"]');if(c)c.checked=true})()</script>` : ""}
+  </div>
+</section>`;
+
 const accueil = `
 <section class="hero-plein hero-slogan hero-maison-plein">
   <div class="hm-visuel">
@@ -269,35 +302,7 @@ const accueil = `
   </div></div>
 </section>
 
-<section id="rappel" class="bloc bloc-cta bloc-rappel">
-  <div class="conteneur deux-colonnes">
-    <div>
-      <h2>Parlons de votre projet</h2>
-      <p class="chapo">Laissez votre numéro : nous vous rappelons pour en parler et organiser la visite, gratuite et sans engagement.</p>
-      <a class="carte-google" href="${AVIS.lien}" target="_blank" rel="noopener" aria-label="Note Google ${AVIS.note} sur 5, ${AVIS.total} avis : voir les avis">
-        <span class="cg-haut">${LOGO_GOOGLE.replace('width="20" height="20"', 'width="30" height="30"')}<span class="cg-note"><strong>${AVIS.note}</strong>${ETOILES}</span></span>
-        <span class="cg-texte">Note Google, ${AVIS.total} avis clients</span>
-        <span class="cg-citation">« Le résultat dépasse mes attentes. » <em>—&nbsp;Clement&nbsp;V.</em></span>
-      </a>
-      <p class="rappel-direct">Vous préférez appeler ?<br><a href="tel:${SITE.telLien}">${SITE.tel}</a> · <a href="${SITE.whatsapp}">WhatsApp</a></p>
-    </div>
-    <form class="formulaire formulaire-court" method="post" action="/api/contact">
-      <input type="hidden" name="court" value="1"><input type="hidden" name="souhait" value="Être rappelé">
-      <div class="deux-champs">
-        <label><span>Nom <b aria-hidden="true">*</b></span><input name="nom" required autocomplete="name" maxlength="120"></label>
-        <label><span>Téléphone <b aria-hidden="true">*</b></span><input name="telephone" type="tel" required autocomplete="tel" maxlength="30"></label>
-      </div>
-      <fieldset class="choix-projet">
-        <legend>Mon projet <i>(plusieurs choix possibles)</i></legend>
-        <div class="choix-grille">${CHOIX_PROJET.map(([v, ic]) => `<label class="choix"><input type="checkbox" name="projet" value="${v}"><span class="choix-tuile"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">${ic}</svg>${v}</span></label>`).join("")}</div>
-      </fieldset>
-      <label><span>Un mot sur votre projet <i>(facultatif)</i></span><textarea name="message" rows="3" maxlength="3000"></textarea></label>
-      <label class="pot-de-miel" aria-hidden="true">Site web<input name="site_web" tabindex="-1" autocomplete="off"></label>
-      <button class="bouton" type="submit">Être rappelé</button>
-      <p class="mentions-form">Vos informations servent uniquement à vous recontacter. <a href="/confidentialite/">Confidentialité</a></p>
-    </form>
-  </div>
-</section>`;
+${blocRappel()}`;
 
 const projetsListe = [...UNIVERS.flatMap((u) => u.groupes.flatMap((g) => g.pages.map((p) => p[1]))), "Autre projet"];
 
@@ -359,7 +364,7 @@ const carteMarque = ({ url, logo, w, h, alt, titre, texte, tags, bouton, tel, te
   <a class="marque-lien" href="${url}" target="_blank" rel="noopener">
     <div class="marque-logo"><img src="/assets/img/${logo}" alt="${alt}" width="${w}" height="${h}" loading="lazy" decoding="async"></div>
     <div class="marque-corps">
-      <h2>${titre}</h2><p>${texte}</p>
+      <h2>${titre.replace(/ ([?!:])/g, "&nbsp;$1")}</h2><p>${texte}</p>
       <ul class="tags">${tags.map((t) => `<li>${t}</li>`).join("")}</ul>
       <span class="marque-btn">${bouton} ${fleche}</span>
     </div>

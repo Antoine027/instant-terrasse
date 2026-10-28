@@ -147,7 +147,7 @@ const MATERIAUX_ACCUEIL = [
   ["/terrasse-bois-lyon/", "Bois", "terrasse-kebony-piscine-debordement", "Accoya, kebony, bambou : la chaleur du vrai bois"],
   ["/terrasse-composite-lyon/", "Composite", "composite-gris-piscine", "L'aspect du bois, sans saturateur ni ponçage"],
   ["/terrasse-aluminium-lyon/", "Aluminium", "alu-piscine-aspect-teck", "Ne pourrit pas, ne bouge pas, en 6 teintes"],
-  ["/terrasse-carrelage-lyon/", "Carrelage", "carrelage-toit-terrasse-montagnes", "Grès cérame posé sans colle, sur plots"],
+  ["/terrasse-carrelage-lyon/", "Carrelage", "carrelage-bh-grand-format-baie", "Grès cérame posé sans colle, sur plots"],
 ];
 const PROJETS_ACCUEIL = [
   ["/terrasse-piscine-lyon/", "Terrasse de piscine", "Une plage agréable pieds nus.", "terrasse-thermofrene-piscine-mer"],

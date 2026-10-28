@@ -1395,3 +1395,11 @@ details[open]>summary.menu-lien::after{transform:translateY(2px) rotate(225deg)}
   .bloc-rappel:has(h1) .carte-google .cg-haut{justify-content:center}
   .bloc-rappel:has(h1) .rappel-direct{justify-content:center;text-align:center}
 }
+@media (max-width:700px){
+  section.bloc-rappel:has(h1){padding-top:38px!important}
+  .bloc-rappel:has(h1) h1{margin:0 0 12px!important}
+  .bloc-rappel:has(h1) .chapo{margin:0 0 26px!important}
+  .bloc-rappel:has(h1) form{padding:20px 18px 16px}
+  .bloc-rappel:has(h1) .choix-grille{gap:8px}
+  .bloc-rappel:has(h1) .choix-tuile{padding:11px 4px}
+}

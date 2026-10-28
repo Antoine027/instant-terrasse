@@ -3075,5 +3075,35 @@
    1600
   ],
   "ratio": 2.0592
+ },
+ {
+  "cle": "teinte-composite-gris",
+  "dossier": "composite",
+  "categorie": "teinte-composite",
+  "essence": "Gris",
+  "alt": "Lame de terrasse composite gris veiné, rainurée sur les chants pour la fixation invisible",
+  "largeurs": [
+   400,
+   600,
+   800,
+   1000,
+   1600
+  ],
+  "ratio": 1.1454
+ },
+ {
+  "cle": "teinte-composite-brun",
+  "dossier": "composite",
+  "categorie": "teinte-composite",
+  "essence": "Brun",
+  "alt": "Lame de terrasse composite brun veiné, rainurée sur les chants pour la fixation invisible",
+  "largeurs": [
+   400,
+   600,
+   800,
+   1000,
+   1600
+  ],
+  "ratio": 1.2878
  }
 ]

@@ -1197,3 +1197,5 @@ details[open]>summary.menu-lien::after{transform:translateY(2px) rotate(225deg)}
   .entete.serre2 .logo img{height:44px;width:auto}
   .entete.serre2 .entete-cta{font-size:15px}
 }
+.nuancier-2{grid-template-columns:repeat(2,minmax(0,260px))}
+.nuancier-2 img{object-fit:contain;background:#fff}

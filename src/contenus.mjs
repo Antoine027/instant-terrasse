@@ -673,11 +673,19 @@ ${heroPlein({ fil: "Terrasses", h1: ["Terrasse composite", "sur mesure"], kicker
     <div class="grille grille-3">
       <div class="carte"><h3>Pas d'entretien lourd</h3><p>Ni saturateur, ni ponçage, ni lasure : un nettoyage à l'eau savonneuse suffit.</p></div>
       <div class="carte"><h3>Confortable pieds nus</h3><p>Pas d'écharde ni de fente : idéal autour d'une piscine et pour les enfants.</p></div>
-      <div class="carte"><h3>Une teinte qui tient</h3><p>Gris, brun ou beige : la couleur se stabilise après quelques mois, sans virer au gris comme le bois.</p></div>
+      <div class="carte"><h3>Une teinte qui tient</h3><p>Gris ou brun : la couleur se stabilise après quelques mois, sans virer au gris comme le bois.</p></div>
       <div class="carte"><h3>Sur structure aluminium</h3><p>Rails aluminium sur plots réglables, garantis 20 ans : une terrasse plane et ventilée, qui ne bouge pas.</p></div>
       <div class="carte"><h3>Fixation invisible</h3><p>Aucune vis en surface : des lignes nettes, et une lame se remplace sans tout démonter.</p></div>
       <div class="carte"><h3>Pour tous les projets</h3><p>Plage de piscine, terrasse de plain-pied, balcon, toit-terrasse ou terrasse surélevée.</p></div>
     </div>
+  </div>
+</section>
+
+<section class="bloc">
+  <div class="conteneur">
+    <h2>Les teintes</h2>
+    <p class="chapo">Des lames veinées comme du bois, rainurées sur les chants pour une fixation invisible. Nous apportons les échantillons lors de la visite.</p>
+    <div class="nuancier nuancier-2">${PHOTOS.filter((p) => p.categorie === "teinte-composite").map((p) => `<figure>${imgPhoto(p.cle, { sizes: "(max-width:560px) 45vw, 260px" })}<figcaption>${p.essence}</figcaption></figure>`).join("")}</div>
   </div>
 </section>
 

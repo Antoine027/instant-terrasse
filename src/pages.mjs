@@ -329,7 +329,7 @@ const contact = `
       </fieldset>
       <fieldset class="choix-souhait">
         <legend><span class="etape-num">2</span>Vous souhaitez</legend>
-        <div class="souhaits">${[["Demander une visite sur place", "Une visite gratuite", "Demander ma visite gratuite"], ["Obtenir un devis gratuit", "Un devis", "Recevoir mon devis gratuit"], ["Être rappelé", "Être rappelé", "Être rappelé"], ["Poser une question", "Poser une question", "Envoyer ma question"]].map(([v, t, b], i) => `<label class="souhait"><input type="radio" name="souhait" value="${v}" data-bouton="${b}"${i ? "" : " checked"}><span>${t}</span></label>`).join("")}</div>
+        <div class="souhaits">${[["Demander une visite sur place", "Visite gratuite", "Demander ma visite gratuite"], ["Obtenir un devis gratuit", "Devis", "Recevoir mon devis gratuit"], ["Être rappelé", "Rappel", "Être rappelé"], ["Poser une question", "Question", "Envoyer ma question"]].map(([v, t, b], i) => `<label class="souhait"><input type="radio" name="souhait" value="${v}" data-bouton="${b}"${i ? "" : " checked"}><span>${t}</span></label>`).join("")}</div>
       </fieldset>
       <fieldset class="coordonnees">
         <legend><span class="etape-num">3</span>Vos coordonnées</legend>

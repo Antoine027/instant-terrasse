@@ -1281,3 +1281,21 @@ details[open]>summary.menu-lien::after{transform:translateY(2px) rotate(225deg)}
   .essence .puces li{font-size:.92rem;line-height:1.35;margin:0 0 4px}
   .essence>.evol-ligne{margin:12px 20px 18px;padding-top:12px}
 }
+
+/* Formulaire de contact optimisé */
+.formulaire-contact fieldset{border:0;margin:0 0 18px;padding:0;min-width:0}
+.formulaire-contact legend{display:flex;align-items:center;gap:10px;font:700 1rem Montserrat,sans-serif;margin-bottom:12px;padding:0}
+.formulaire-contact legend i{font:italic 400 .85rem Lato,sans-serif;color:var(--doux)}
+.etape-num{display:inline-grid;place-items:center;width:26px;height:26px;border-radius:50%;background:var(--accent);color:#fff;font:700 .85rem Montserrat,sans-serif;flex:none}
+.souhaits{display:flex;flex-wrap:wrap;gap:8px}
+.souhait{position:relative;cursor:pointer}
+.souhait input{position:absolute;opacity:0;pointer-events:none}
+.souhait span{display:block;padding:10px 16px;border-radius:999px;border:1px solid rgba(47,52,55,.15);background:var(--fond2);font:600 .9rem Montserrat,sans-serif;transition:background .15s,color .15s,border-color .15s}
+.souhait input:checked+span{background:var(--bouton);border-color:var(--bouton);color:#fff}
+.souhait input:focus-visible+span{outline:2px solid var(--accent);outline-offset:2px}
+.formulaire-contact label i{font-style:italic;font-weight:400;color:var(--doux)}
+.bouton-envoi{width:100%;justify-content:center;padding:17px 22px;font-size:1.05rem}
+.rassure-form{list-style:none;display:flex;flex-wrap:wrap;justify-content:center;gap:6px 16px;margin:14px 0 0;padding:0;font-size:.82rem;color:var(--doux)}
+.rassure-form li{display:flex;align-items:center;gap:6px}
+.rassure-form li::before{content:"";width:14px;height:14px;flex:none;background:var(--accent);-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 6 9 17l-5-5'/%3E%3C/svg%3E") center/contain no-repeat;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 6 9 17l-5-5'/%3E%3C/svg%3E") center/contain no-repeat}
+.formulaire-contact .coordonnees{display:grid;gap:14px}.formulaire-contact .coordonnees .deux-champs,.formulaire-contact .coordonnees>label{margin:0}

@@ -322,32 +322,35 @@ const contact = `
       <p class="contact-direct">Vous préférez parler directement ?<br><a class="bouton bouton-clair" href="tel:${SITE.telLien}">${SITE.tel}</a> <a class="bouton bouton-clair" href="${SITE.whatsapp}">WhatsApp</a></p>
       <p class="note-pose">Des photos de votre extérieur nous aident beaucoup : envoyez-les sur WhatsApp après votre demande.</p>
     </div>
-    <form class="formulaire" method="post" action="/api/contact">
-      <label>Je souhaite
-        <select name="souhait">
-          <option>Obtenir un devis gratuit</option><option>Demander une visite sur place</option><option>Être rappelé</option><option>Poser une question</option>
-        </select>
-      </label>
+    <form class="formulaire formulaire-contact" method="post" action="/api/contact">
       <fieldset class="choix-projet">
-        <legend>Mon projet <i>(plusieurs choix possibles)</i></legend>
+        <legend><span class="etape-num">1</span>Votre projet <i>(plusieurs choix possibles)</i></legend>
         <div class="choix-grille">${CHOIX_PROJET.map(([v, ic]) => `<label class="choix"><input type="checkbox" name="projet" value="${v}"><span class="choix-tuile"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">${ic}</svg>${v}</span></label>`).join("")}</div>
       </fieldset>
-      <div class="deux-champs">
-        <label><span>Nom <b aria-hidden="true">*</b></span><input name="nom" required autocomplete="name" maxlength="120"></label>
-        <label><span>Téléphone <b aria-hidden="true">*</b></span><input name="telephone" type="tel" required autocomplete="tel" maxlength="30"></label>
-      </div>
-      <div class="deux-champs">
-        <label><span>E-mail <b aria-hidden="true">*</b></span><input name="email" type="email" required autocomplete="email" maxlength="160"></label>
-        <label><span>Code postal</span><input name="codepostal" inputmode="numeric" autocomplete="postal-code" maxlength="10"></label>
-      </div>
-      <label>Votre projet en quelques mots<textarea name="message" rows="5" maxlength="3000" placeholder="Surface approximative, matériau envisagé, délai souhaité…"></textarea></label>
+      <fieldset class="choix-souhait">
+        <legend><span class="etape-num">2</span>Vous souhaitez</legend>
+        <div class="souhaits">${[["Demander une visite sur place", "Une visite gratuite", "Demander ma visite gratuite"], ["Obtenir un devis gratuit", "Un devis", "Recevoir mon devis gratuit"], ["Être rappelé", "Être rappelé", "Être rappelé"], ["Poser une question", "Poser une question", "Envoyer ma question"]].map(([v, t, b], i) => `<label class="souhait"><input type="radio" name="souhait" value="${v}" data-bouton="${b}"${i ? "" : " checked"}><span>${t}</span></label>`).join("")}</div>
+      </fieldset>
+      <fieldset class="coordonnees">
+        <legend><span class="etape-num">3</span>Vos coordonnées</legend>
+        <div class="deux-champs">
+          <label><span>Nom <b aria-hidden="true">*</b></span><input name="nom" required autocomplete="name" maxlength="120"></label>
+          <label><span>Téléphone <b aria-hidden="true">*</b></span><input name="telephone" type="tel" required autocomplete="tel" maxlength="30"></label>
+        </div>
+        <div class="deux-champs">
+          <label><span>E-mail <i>(facultatif)</i></span><input name="email" type="email" autocomplete="email" maxlength="160"></label>
+          <label><span>Code postal</span><input name="codepostal" inputmode="numeric" autocomplete="postal-code" maxlength="10" placeholder="ex. 69140"></label>
+        </div>
+        <label><span>Un mot sur votre projet <i>(facultatif)</i></span><textarea name="message" rows="3" maxlength="3000" placeholder="Surface approximative, matériau envisagé, délai souhaité…"></textarea></label>
+      </fieldset>
       <label class="pot-de-miel" aria-hidden="true">Site web<input name="site_web" tabindex="-1" autocomplete="off"></label>
-      <button class="bouton" type="submit">Envoyer ma demande</button>
-      <p class="mentions-form">Vos informations servent uniquement à répondre à votre demande et ne sont jamais transmises à des tiers.</p>
+      <button class="bouton bouton-envoi" type="submit">Demander ma visite gratuite</button>
+      <ul class="rassure-form"><li>Gratuit et sans engagement</li><li>Plan 3D offert</li><li>Données jamais transmises à des tiers</li></ul>
     </form>
   </div>
 </section>
 <script>
+document.querySelectorAll('.souhait input').forEach(r=>r.addEventListener('change',()=>{const b=document.querySelector('.bouton-envoi');if(b&&r.checked)b.textContent=r.dataset.bouton}));
 const v=(new URLSearchParams(location.search).get('projet')||'').toLowerCase();
 if(v){const m=[['pergola','Pergola'],['store','Store banne'],['garde','Garde-corps'],['bardage','Bardage'],['carport','Carport']].find(([k])=>v.includes(k));const c=document.querySelector('.formulaire .choix input[value="'+(m?m[1]:'Terrasse')+'"]');if(c)c.checked=true}
 </script>
@@ -453,7 +456,7 @@ const aPropos = `
 </section>`;
 
 const merci = `<section class="hero hero-page"><div class="conteneur conteneur-etroit"><h1>Merci, votre demande est bien partie</h1><p class="chapo">Nous vous recontactons rapidement. Si vous avez des photos de votre extérieur, envoyez-les-nous sur WhatsApp : elles nous aident à préparer la visite.</p><p class="actions"><a class="bouton" href="${SITE.whatsapp}">Envoyer des photos sur WhatsApp</a> <a class="bouton bouton-clair" href="/">Retour à l'accueil</a></p></div></section>`;
-const erreur = `<section class="hero hero-page"><div class="conteneur conteneur-etroit"><h1>Votre demande n'a pas pu être envoyée</h1><p class="chapo">Vérifiez que le nom, le téléphone et l'e-mail sont bien remplis, ou contactez-nous directement.</p><p class="actions"><a class="bouton" href="tel:${SITE.telLien}">${SITE.tel}</a> <a class="bouton bouton-clair" href="/contact/">Réessayer</a></p></div></section>`;
+const erreur = `<section class="hero hero-page"><div class="conteneur conteneur-etroit"><h1>Votre demande n'a pas pu être envoyée</h1><p class="chapo">Vérifiez que le nom et le téléphone sont bien remplis, ou contactez-nous directement.</p><p class="actions"><a class="bouton" href="tel:${SITE.telLien}">${SITE.tel}</a> <a class="bouton bouton-clair" href="/contact/">Réessayer</a></p></div></section>`;
 
 // ---------- Pages légales ----------
 const SOCIETE = { nom: "ESCOM HABITAT", forme: "SARL", capital: "1 000 €", siret: "106 406 465 00018", rcs: "RCS Lyon 106 406 465", tva: "FR70 106 406 465", adresse: "8 avenue Général Leclerc, 69140 Rillieux-la-Pape", directeur: "Antoine Escolle" };

@@ -4,7 +4,7 @@
 // Variables d'environnement Vercel : BREVO_API_KEY, CONTACT_TO (destinataire), CONTACT_FROM (expéditeur vérifié dans Brevo).
 
 const CHAMPS = { nom: 120, telephone: 30, email: 160, codepostal: 10, projet: 120, souhait: 60, message: 3000 };
-const OBLIGATOIRES = ["nom", "telephone", "email"];
+const OBLIGATOIRES = ["nom", "telephone"]; // e-mail facultatif partout (28/10/2026)
 
 const aller = (res, chemin) => { res.statusCode = 303; res.setHeader("Location", chemin); res.setHeader("Cache-Control", "no-store"); res.end(); };
 const propre = (v, max) => String(v ?? "").replace(/[\u0000-\u001f\u007f]/g, " ").trim().slice(0, max);

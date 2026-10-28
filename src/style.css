@@ -1225,3 +1225,22 @@ details[open]>summary.menu-lien::after{transform:translateY(2px) rotate(225deg)}
 .essence .evol-pastilles,.essence .evol-pastilles.evol-2{display:flex;gap:8px}.essence .evol-pastilles figure{flex:1;min-width:0}.essence .evol-pastilles img{aspect-ratio:1/2;height:auto;max-height:230px;border-radius:6px;box-shadow:0 2px 8px rgba(47,52,55,.12)}.essence .evol-pastilles figcaption{font-size:.8rem;color:var(--texte)}
 .evol-photo img{display:block;width:100%;height:auto;border-radius:8px}.evol-legendes{display:grid;grid-template-columns:repeat(3,1fr);margin-top:6px;text-align:center;font:600 .8rem Montserrat,sans-serif;color:var(--texte)}.evol-duo{display:grid;grid-template-columns:1fr 1fr;gap:6px}.evol-duo img{display:block;width:100%;height:auto;border-radius:8px}
 .essence .evol-pastilles figure:first-child:nth-last-child(2),.essence .evol-pastilles figure:first-child:nth-last-child(2)~figure{flex:0 0 calc((100% - 16px) / 3)}
+
+/* Cartes d'essences : lame + évolution côte à côte, 2 cartes par ligne (ordinateur) */
+.essence>.evol-ligne{margin:0 26px 26px;padding-top:16px;border-top:1px solid var(--fond)}
+@media (min-width:1061px){
+  .grille-essences{grid-template-columns:repeat(2,1fr)}
+  .essence{display:grid;grid-template-columns:1fr 1fr;grid-template-areas:"photo evol" "texte texte";align-content:start}
+  .essence-photo{grid-area:photo;height:250px}
+  .essence>.evol-ligne{grid-area:evol;margin:0;padding:22px 24px 10px 8px;border:0;background:linear-gradient(200deg,#fff 0%,var(--fond2) 100%);display:flex;flex-direction:column;justify-content:center}
+  .essence-texte{grid-area:texte;padding-top:18px}
+  .essence .evol-pastilles img{max-height:170px}
+}
+@media (min-width:1061px){
+  .essence{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+  .essence-photo{min-width:0;padding:22px 18px 6px 24px}
+  .essence-photo img{max-width:100%!important;width:100%!important;height:auto;max-height:100%}
+  .essence .evol-pastilles figure{flex:0 0 calc((100% - 16px) / 3)}
+  .essence .evol-pastilles figcaption{white-space:nowrap}
+}
+@media (min-width:1061px){.essence>.evol-ligne .evol-pastilles{width:100%}}

@@ -120,8 +120,8 @@ ${heroPlein({ fil: "Terrasses", h1: ["Terrasse bois", "sur mesure"], kicker: "Te
           <h3>${e.nom}</h3>
           <p>${e.texte}</p>
           <ul class="puces">${e.points.map((p) => `<li>${p}</li>`).join("")}</ul>
-          ${e.evol ? evolution(e.nom, ...e.evol) : ""}
         </div>
+        ${e.evol ? evolution(e.nom, ...e.evol) : ""}
       </article>`).join("")}
     </div>
     <p class="evol-note">Teintes indicatives : le rendu dépend de l'exposition. Un saturateur prolonge la teinte d'origine.</p>

@@ -1205,3 +1205,16 @@ details[open]>summary.menu-lien::after{transform:translateY(2px) rotate(225deg)}
 .v-credit{display:block;font-size:.5em;font-weight:400;opacity:.75;margin-top:2px}
 .essence-photo img[src*="-lame-"]{mix-blend-mode:multiply}
 .pt-mat[href="/terrasse-carrelage-lyon/"]>img{object-position:85% 50%}
+
+/* Évolution de la teinte des bois (curseur) */
+.evol{margin-top:18px;padding-top:16px;border-top:1px solid var(--fond)}
+.evol-titre{margin:0 0 8px;font:700 .72rem Montserrat,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:var(--accent-texte)}
+.evol-img{position:relative;aspect-ratio:2/1;border-radius:10px;overflow:hidden;background:var(--fond)}
+.evol-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:opacity .35s}
+.evol-img img.cache{opacity:0}
+.evol input[type=range]{width:100%;margin:12px 0 4px;accent-color:var(--accent);cursor:pointer}
+.evol-etapes{display:flex;justify-content:space-between;gap:6px}
+.evol-etapes span{font-size:.78rem;color:var(--doux);cursor:pointer;flex:1;text-align:center}
+.evol-etapes span:first-child{text-align:left}.evol-etapes span:last-child{text-align:right}
+.evol-etapes span.on{color:var(--texte);font-weight:700}
+.evol-note{margin:18px 0 0;font-size:.85rem;color:var(--doux)}

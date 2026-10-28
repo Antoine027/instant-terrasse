@@ -1062,3 +1062,30 @@ details[open]>summary.menu-lien::after{transform:translateY(2px) rotate(225deg)}
   .projets-car .projet-mini .pm-corps{flex:1 1 auto!important;min-width:0}
   .projets-car .projet-mini .pm-corps h3{white-space:normal!important;overflow:visible;line-height:1.2;font-size:clamp(.82rem,.55rem + .35vw,.95rem)}
 }
+
+/* ================= Mobile : en-têtes des pages alignés sur l'accueil ================= */
+.hero-avis-mobile{display:none}
+@media (max-width:700px){
+  .hero-produit{display:block;position:relative;min-height:0;margin-top:-80px;padding:0 0 28px;background:#1b1d1f;overflow:hidden}
+  .hero-produit .h-img{position:relative!important;inset:auto;display:block;margin:0!important;width:100%!important;height:min(58svh,520px)!important;min-height:340px!important;border-radius:0!important;object-fit:cover}
+  .hero-produit::before{display:block!important;content:"";position:absolute;inset:0 0 auto 0;height:max(340px,min(58svh,520px));z-index:1;pointer-events:none;background:linear-gradient(180deg,rgba(27,29,31,.35) 0,rgba(27,29,31,0) 18%,rgba(27,29,31,0) 50%,rgba(27,29,31,.75) 80%,#1b1d1f 100%)}
+  .hero-produit .h-txt{position:relative;z-index:2;margin-top:-72px;padding:0 20px!important;text-align:center}
+  .hero-produit .h-txt>*{max-width:none}
+  .hero-produit .fil,.hero-produit .kicker{display:none}
+  .hero-produit h1{color:#fff;font-size:2.4rem;line-height:1.02;letter-spacing:-.035em;margin:0 0 12px;text-shadow:0 2px 24px rgba(0,0,0,.45)}
+  .hero-produit h1 .fort{color:#f0b15a}
+  .hero-produit .chapo{font-size:.98rem;line-height:1.55;color:rgba(255,255,255,.82);margin:0 0 22px}
+  .hero-produit .actions{display:grid;gap:10px;margin:0}
+  .hero-produit .actions .bouton{display:flex;justify-content:center;width:100%;margin:0;padding:16px 20px;font-size:1rem;background:#f0b15a;color:#1b1d1f;border:0;box-shadow:0 10px 26px -12px rgba(240,177,90,.6)}
+  .hero-produit .actions .bouton:hover,.hero-produit .actions .bouton:active{background:#e3a94a;color:#1b1d1f}
+  .hero-produit .actions .bouton-blanc{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.35);box-shadow:none;padding:13px 20px}
+  .hero-produit .actions .bouton-blanc:hover,.hero-produit .actions .bouton-blanc:active{background:rgba(255,255,255,.08);color:#fff}
+  .hero-avis-mobile{display:block;margin:14px 0 0;text-align:center}
+  .hero-produit .badge-avis{display:inline-flex;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);box-shadow:none;border-radius:999px;padding:8px 16px;color:#fff;font-size:.92rem}
+  .hero-produit .badge-avis strong{color:#fff}
+  .hero-produit .badge-avis>span:last-child{color:rgba(255,255,255,.8)}
+  .hero-produit .trio{display:grid;gap:10px;background:none;box-shadow:none;margin:22px 4px 0;padding:20px 0 0;border-top:1px solid rgba(255,255,255,.14);border-radius:0;text-align:left;width:auto}
+  .hero-produit .trio li{background:none;border:0;padding:0;color:#fff;font-size:.9rem;gap:12px;align-items:center}
+  .hero-produit .trio svg{width:30px;height:30px;padding:6px;border-radius:50%;background:rgba(255,255,255,.92);color:var(--bouton);flex:none;box-sizing:border-box}
+}
+@media (max-width:380px){.hero-produit h1{font-size:2.1rem}}

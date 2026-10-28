@@ -1,6 +1,6 @@
 // Contenus rédigés des pages. Une page présente ici remplace sa version « en préparation ».
 // Règles : pas de chiffre, garantie, certification ou chantier inventé ; pas de nom de fournisseur.
-import { SITE, POSE, TRIO } from "./pages.mjs";
+import { SITE, POSE, TRIO, BADGE_AVIS } from "./pages.mjs";
 import { galerie, imgPhoto, PHOTOS } from "./galerie.mjs";
 import { carteProduit } from "./vignettes.mjs";
 
@@ -17,6 +17,7 @@ const heroPlein = ({ fil, h1, kicker, chapo, photo, position = "65% 50%", action
     <h1><span class="fin">${h1[0]}</span> <span class="fort">${h1[1]}</span></h1>
     <p class="chapo">${chapo}</p>
     <p class="actions">${actions ?? `<a class="bouton" href="/contact/">Demander une visite gratuite</a> <a class="bouton bouton-blanc" href="#galerie">Voir les photos</a>`}</p>
+    <p class="hero-avis hero-avis-mobile">${BADGE_AVIS}</p>
     ${TRIO}
   </div>
 </section>`;

@@ -345,7 +345,6 @@ const contact = `
       </fieldset>
       <label class="pot-de-miel" aria-hidden="true">Site web<input name="site_web" tabindex="-1" autocomplete="off"></label>
       <button class="bouton bouton-envoi" type="submit">Demander ma visite gratuite</button>
-      <ul class="rassure-form"><li>Gratuit et sans engagement</li><li>Plan 3D offert</li><li>Données jamais transmises à des tiers</li></ul>
     </form>
   </div>
 </section>

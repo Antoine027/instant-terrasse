@@ -198,7 +198,7 @@ export const blocRappel = (titre = "Parlons de votre projet", texte = "Laissez v
         <span class="cg-texte">Note Google, ${AVIS.total} avis clients</span>
         <span class="cg-citation">« Le résultat dépasse mes attentes. » <em>—&nbsp;Clement&nbsp;V.</em></span>
       </a>
-      <p class="rappel-direct">Vous préférez appeler ?<br><a href="tel:${SITE.telLien}">${SITE.tel}</a> · <a href="${SITE.whatsapp}">WhatsApp</a></p>
+      <p class="rappel-direct"><span>Vous préférez appeler&nbsp;?</span><a class="rd-tel" href="tel:${SITE.telLien}"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>${SITE.tel}</a><a class="rd-wa" href="${SITE.whatsapp}">WhatsApp</a></p>
     </div>
     <form class="formulaire formulaire-court" method="post" action="/api/contact">
       <input type="hidden" name="court" value="1"><input type="hidden" name="souhait" value="Être rappelé">
@@ -213,7 +213,7 @@ export const blocRappel = (titre = "Parlons de votre projet", texte = "Laissez v
       <label><span>Un mot sur votre projet <i>(facultatif)</i></span><textarea name="message" rows="3" maxlength="3000"></textarea></label>
       <label class="pot-de-miel" aria-hidden="true">Site web<input name="site_web" tabindex="-1" autocomplete="off"></label>
       <button class="bouton" type="submit">Être rappelé</button>
-      <p class="mentions-form">Vos informations servent uniquement à vous recontacter. <a href="/confidentialite/">Confidentialité</a></p>
+      <p class="mentions-form">Utilisées uniquement pour vous rappeler. <a href="/confidentialite/">Confidentialité</a></p>
     </form>
     ${cocher ? `<script>(()=>{const q=(new URLSearchParams(location.search).get("projet")||"").toLowerCase();if(location.pathname.startsWith("/contact")&&!q)return;const p=location.pathname+" "+q,m=[["pergola","Pergola"],["store","Store banne"],["garde-corps","Garde-corps"],["bardage","Bardage"],["carport","Carport"]].find(([k])=>p.includes(k)),c=document.querySelector('#rappel .choix input[value="'+(m?m[1]:"Terrasse")+'"]');if(c)c.checked=true})()</script>` : ""}
   </div>

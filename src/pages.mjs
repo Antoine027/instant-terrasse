@@ -160,7 +160,7 @@ const PROJETS_ACCUEIL = [
   ["/terrasse-sur-plots-lyon/", "Terrasse sur plots", "Sans fondation, de niveau.", "structure-plot-rail-lame"],
 ];
 const AUTRES_PIECES = [
-  ["/bardage-bois-lyon/", "Bardage", "Un bardage bois ou aluminium, assorti à la terrasse.", "bardage-accoya-naturel-jardin"],
+  ["/bardage-bois-lyon/", "Bardage", "Un bardage bois ou aluminium, assorti à la terrasse.", "bardage-bambou-xtreme-patio"],
   ["/pergolas-lyon/", "Pergolas", "Bioclimatique, toile ou toit fixe : de l'ombre et un abri.", "pergola-bioclimatique-piscine"],
   ["/store-banne-lyon/", "Store banne", "De l'ombre à la demande, replié quand le soleil tourne.", "store-banne-beige-maison"],
   ["/garde-corps-aluminium-lyon/", "Garde-corps", "Sécuriser la terrasse sans fermer la vue.", "gc-maison-verre-clair"],
@@ -236,7 +236,7 @@ const accueil = `
     <div>
       <p class="sous-titre">Notre méthode</p>
       <a class="carte-antoine" href="/quisommesnous/">${imgPhoto("antoine-escolle-2", { sizes: "100px", classe: "ca-photo" })}<span><strong>Antoine</strong>, votre interlocuteur du premier rendez-vous à la fin du chantier.<em>Mon parcours →</em></span></a>
-      <h2><span class="long">Votre interlocuteur principal, du premier rendez-vous à la fin du chantier</span><span class="court">Votre interlocuteur principal, du début à la fin</span></h2>
+      <h2><span class="long">Votre projet, en 4 étapes</span><span class="court">Votre interlocuteur principal, du début à la fin</span></h2>
       <p>${POSE}</p>
       <ul class="puces">
         <li><strong>Des produits sélectionnés pour leur qualité.</strong></li>
@@ -266,10 +266,10 @@ const accueil = `
 </section>
 
 <section id="faq" class="bloc">
-  <div class="conteneur conteneur-etroit">
+  <div class="conteneur"><div class="faq-liste">
     <h2>Vos questions</h2>
     ${[0, 2, 1, 6, 8].map((i) => FAQ[i]).map(([q, r]) => `<details class="faq"><summary>${q}</summary><div>${r}</div></details>`).join("")}
-  </div>
+  </div></div>
 </section>
 
 <section id="rappel" class="bloc bloc-cta bloc-rappel">

@@ -49,7 +49,7 @@ const essencesAlu = [
     points: ["Bois modifié très durable", "Patine gris argenté"],
   },
   {
-    nom: "Accoya naturel et gris", photo: ["accoya", "Lames de terrasse Accoya en version naturelle claire et en version grise", 395],
+    nom: "Accoya naturel et gris", photos: [["accoya-naturel-lame", "Lame de terrasse en accoya naturel, teinte claire", 260, "Naturel"], ["accoya-gris-lame", "Lame de terrasse en accoya gris", 227, "Gris"]],
     texte: "Un bois acétylé réputé pour sa stabilité : il bouge très peu avec l'humidité, ce qui limite les déformations. En teinte naturelle claire, ou grise dès la pose pour un aspect patiné immédiat.",
     points: ["Très grande stabilité", "Deux teintes au choix"],
   },
@@ -101,7 +101,7 @@ ${heroPlein({ fil: "Terrasses", h1: ["Terrasse bois", "sur mesure"], kicker: "Te
     <div class="grille grille-essences">
       ${essencesAlu.map((e) => `
       <article class="essence">
-        <div class="essence-photo">${img(...e.photo)}</div>
+        <div class="essence-photo${e.photos ? " essence-photo-duo" : ""}">${e.photos ? e.photos.map(([n, a, r, l]) => `<figure>${img(n, a, r)}<figcaption>${l}</figcaption></figure>`).join("") : img(...e.photo)}</div>
         <div class="essence-texte">
           <h3>${e.nom}</h3>
           <p>${e.texte}</p>

@@ -7,6 +7,7 @@ export const SITE = {
   tel: "04 82 53 18 74",
   telLien: "+33482531874",
   whatsapp: "https://wa.me/33482531874",
+  email: "contact@instantterrasse.com",
   adresse: "8 avenue Général Leclerc, 69140 Rillieux-la-Pape",
 };
 
@@ -198,7 +199,7 @@ export const blocRappel = (titre = "Parlons de votre projet", texte = "Laissez v
         <span class="cg-texte">Note Google, ${AVIS.total} avis clients</span>
         <span class="cg-citation">« Le résultat dépasse mes attentes. » <em>—&nbsp;Clement&nbsp;V.</em></span>
       </a>
-      <p class="rappel-direct"><span>Vous préférez appeler&nbsp;?</span><a class="rd-tel" href="tel:${SITE.telLien}"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>${SITE.tel}</a><a class="rd-wa" href="${SITE.whatsapp}">WhatsApp</a></p>
+      <p class="rappel-direct"><span>Vous préférez appeler&nbsp;?</span><a class="rd-tel" href="tel:${SITE.telLien}"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>${SITE.tel}</a><a class="rd-wa" href="${SITE.whatsapp}">WhatsApp</a><span class="rd-mail">ou par e-mail : <a href="mailto:${SITE.email}">${SITE.email}</a></span></p>
     </div>
     <form class="formulaire formulaire-court" method="post" action="/api/contact">
       <input type="hidden" name="court" value="1"><input type="hidden" name="souhait" value="Être rappelé">
@@ -421,7 +422,8 @@ const mentions = pageTexte("Mentions légales", `
   Siège social : ${SOCIETE.adresse}<br>
   SIRET : ${SOCIETE.siret} — ${SOCIETE.rcs}<br>
   TVA intracommunautaire : ${SOCIETE.tva}<br>
-  Téléphone : <a href="tel:${SITE.telLien}">${SITE.tel}</a></p>
+  Téléphone : <a href="tel:${SITE.telLien}">${SITE.tel}</a><br>
+  E-mail : <a href="mailto:${SITE.email}">${SITE.email}</a></p>
   <p>Directeur de la publication : ${SOCIETE.directeur}.</p>
   <h2>Hébergement</h2>
   <p>Vercel Inc., 440 N Barranca Avenue #4133, Covina, CA 91723, États-Unis — vercel.com.</p>

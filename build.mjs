@@ -112,7 +112,7 @@ const pied = (corps = "") => {
     <div>
       <p class="logo"><img src="/assets/img/logo-instant-terrasse-clair-184.webp" srcset="/assets/img/logo-instant-terrasse-clair-184.webp 1x, /assets/img/logo-instant-terrasse-clair-368.webp 2x" alt="Instant Terrasse" width="184" height="64" loading="lazy" decoding="async"></p>
       <p>Terrasses, pergolas et aménagements extérieurs sur mesure — Lyon &amp; sa région.</p>
-      <p><a href="tel:${SITE.telLien}">${SITE.tel}</a><br>${SITE.adresse}</p>
+      <p><a href="tel:${SITE.telLien}">${SITE.tel}</a><br><a href="mailto:${SITE.email}">${SITE.email}</a><br>${SITE.adresse}</p>
     </div>
     ${[
       ["Terrasses", univ("terrasses")],

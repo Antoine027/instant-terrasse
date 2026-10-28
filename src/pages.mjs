@@ -326,9 +326,10 @@ const contact = `
           <option>Obtenir un devis gratuit</option><option>Demander une visite sur place</option><option>Être rappelé</option><option>Poser une question</option>
         </select>
       </label>
-      <label>Mon projet
-        <select name="projet" id="projet">${projetsListe.map((p) => `<option>${p}</option>`).join("")}</select>
-      </label>
+      <fieldset class="choix-projet">
+        <legend>Mon projet <i>(plusieurs choix possibles)</i></legend>
+        <div class="choix-grille">${CHOIX_PROJET.map(([v, ic]) => `<label class="choix"><input type="checkbox" name="projet" value="${v}"><span class="choix-tuile"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">${ic}</svg>${v}</span></label>`).join("")}</div>
+      </fieldset>
       <div class="deux-champs">
         <label><span>Nom <b aria-hidden="true">*</b></span><input name="nom" required autocomplete="name" maxlength="120"></label>
         <label><span>Téléphone <b aria-hidden="true">*</b></span><input name="telephone" type="tel" required autocomplete="tel" maxlength="30"></label>
@@ -345,8 +346,8 @@ const contact = `
   </div>
 </section>
 <script>
-const v=new URLSearchParams(location.search).get('projet');const s=document.getElementById('projet');
-if(v&&s){const o=[...s.options].find(o=>o.text===v);if(o)s.value=o.text}
+const v=(new URLSearchParams(location.search).get('projet')||'').toLowerCase();
+if(v){const m=[['pergola','Pergola'],['store','Store banne'],['garde','Garde-corps'],['bardage','Bardage'],['carport','Carport']].find(([k])=>v.includes(k));const c=document.querySelector('.formulaire .choix input[value="'+(m?m[1]:'Terrasse')+'"]');if(c)c.checked=true}
 </script>
 <section class="bloc bloc-alt">
   <div class="conteneur conteneur-etroit">

@@ -79,6 +79,7 @@ const essencesTrad = [
   ["Garapa", "Bois exotique clair, jaune doré, pour une terrasse lumineuse."],
   ["Itauba", "Bois exotique naturellement huileux, brun-vert, très stable."],
   ["Jatoba", "Bois exotique dur aux reflets brun-rouge."],
+  ["Muiracatiara (tigerwood)", "Bois exotique dur, veiné de brun foncé sur fond doré : un aspect tigré très décoratif."],
 ];
 
 const terrasseBois = {

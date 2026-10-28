@@ -1265,19 +1265,10 @@ details[open]>summary.menu-lien::after{transform:translateY(2px) rotate(225deg)}
   .essence .evol-pastilles figure{display:flex;flex-direction:column}
   .essence .evol-pastilles img{flex:1;min-height:0;max-height:none;height:0;aspect-ratio:auto;object-fit:cover}
 }
-
-/* Mobile : cartes d'essences plus compactes, évolution repliée */
-.evol-voir{display:none}
-@media (max-width:1060px){
-  .essence-photo{height:170px;padding:16px 24px 4px}
-  .essence-texte{padding:4px 22px 14px}
-  .essence-texte p{margin-bottom:8px}
-  .essence .puces{margin:0}
-  .essence>.evol-ligne{margin:0 22px 18px;padding-top:12px}
-  .evol-voir{all:unset;box-sizing:border-box;display:flex;align-items:center;justify-content:space-between;width:100%;cursor:pointer;font:700 .92rem Montserrat,sans-serif;color:var(--accent-texte);padding:4px 0}
-  .evol-voir svg{transition:transform .2s}
-  .evol-ligne.ouvert .evol-voir svg{transform:rotate(180deg)}
-  .evol-ligne:not(.ouvert) .evol-pastilles{display:none}
-  .evol-ligne.ouvert .evol-pastilles{margin-top:12px}
-  .essence .evol-pastilles img{max-height:200px}
+/* Mobile : essences de bois en carrousel horizontal */
+@media (max-width:700px){
+  .grille-essences{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:14px;margin:20px -16px 0;padding:4px 16px 18px;scrollbar-width:none}
+  .grille-essences::-webkit-scrollbar{display:none}
+  .grille-essences>.essence{flex:0 0 86%;scroll-snap-align:center}
 }
+@media (max-width:700px){.essence .evol-pastilles img{max-height:150px}.essence-photo{height:250px}}

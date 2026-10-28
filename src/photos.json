@@ -3033,5 +3033,47 @@
    1600
   ],
   "ratio": 1.3333
+ },
+ {
+  "cle": "composite-brun-transats",
+  "dossier": "composite",
+  "categorie": "terrasse-composite",
+  "alt": "Terrasse en lames composite brun veiné, transats alignés au soleil",
+  "largeurs": [
+   400,
+   600,
+   800,
+   1000,
+   1600
+  ],
+  "ratio": 1.5537
+ },
+ {
+  "cle": "composite-gris-piscine-jardin",
+  "dossier": "composite",
+  "categorie": "terrasse-composite",
+  "alt": "Plage de piscine en lames composite grises, salon de jardin et jardin arboré",
+  "largeurs": [
+   400,
+   600,
+   800,
+   1000,
+   1600
+  ],
+  "ratio": 1.7827
+ },
+ {
+  "cle": "composite-brun-passerelle-bassin",
+  "dossier": "composite",
+  "categorie": "terrasse-composite",
+  "alt": "Passerelle et plages en lames composite brunes autour d'un bassin, dans le parc d'un hôtel",
+  "largeurs": [
+   400,
+   600,
+   800,
+   1000,
+   1600
+  ],
+  "ratio": 2.0592
  }
 ]

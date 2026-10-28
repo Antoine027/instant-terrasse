@@ -681,6 +681,12 @@ ${heroPlein({ fil: "Terrasses", h1: ["Terrasse composite", "sur mesure"], kicker
   </div>
 </section>
 
+<section class="bloc" id="galerie">
+  <div class="conteneur">
+    ${galerie("terrasse-composite", { titre: "Terrasses composite en situation", legende: "Illustrations" })}
+  </div>
+</section>
+
 <section class="bloc">
   <div class="conteneur deux-colonnes deux-colonnes-image">
     <div class="photo-produit">${imgPhoto("structure-plot-rail-lame", { sizes: "(max-width:1060px) 90vw, 460px" })}</div>

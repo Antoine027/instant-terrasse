@@ -8,7 +8,7 @@ const img = (nom, alt, ratio) =>
   `<img src="/assets/img/bois/${nom}-400.webp" srcset="/assets/img/bois/${nom}-400.webp 400w, /assets/img/bois/${nom}-800.webp 800w" sizes="(max-width:700px) 90vw, 360px" alt="${alt}" width="400" height="${ratio}" loading="lazy" decoding="async"${credit("Grad")}>`;
 
 // Évolution de la teinte (photos fabricant ©Grad) : curseur à la pose → patine.
-const evolution = (nom, cle, etapes) => `<div class="evol-ligne"><h3>${nom}</h3><div class="evol-pastilles">${etapes.map((t, i) => `<figure><img src="/assets/img/bois/evol-${cle}-${i}-v2-400.webp" srcset="/assets/img/bois/evol-${cle}-${i}-v2-400.webp 400w, /assets/img/bois/evol-${cle}-${i}-v2-800.webp 800w" sizes="(max-width:700px) 30vw, 260px" alt="${nom} : ${t.toLowerCase()}" width="400" height="167" loading="lazy" decoding="async"${credit("Grad")}><figcaption>${t}</figcaption></figure>`).join(`<span class="evol-fleche" aria-hidden="true">→</span>`)}</div></div>`;
+const evolution = (nom, cle, etapes) => `<div class="evol-ligne"><p class="evol-titre">Évolution de la teinte</p><div class="evol-pastilles${etapes.length === 2 ? " evol-2" : ""}">${etapes.map((t, i) => `<figure><img src="/assets/img/bois/evol-${cle}-${i}-v2-400.webp" srcset="/assets/img/bois/evol-${cle}-${i}-v2-400.webp 400w, /assets/img/bois/evol-${cle}-${i}-v2-800.webp 800w" sizes="(max-width:700px) 30vw, 110px" alt="${nom} : ${t.toLowerCase()}" width="400" height="167" loading="lazy" decoding="async"${credit("Grad")}><figcaption>${t}</figcaption></figure>`).join(`<span class="evol-fleche" aria-hidden="true">→</span>`)}</div></div>`;
 
 // Bandeau photo plein écran (même style que l'accueil)
 const heroPlein = ({ fil, h1, kicker, chapo, photo, position = "65% 50%", actions }) => `
@@ -120,17 +120,10 @@ ${heroPlein({ fil: "Terrasses", h1: ["Terrasse bois", "sur mesure"], kicker: "Te
           <h3>${e.nom}</h3>
           <p>${e.texte}</p>
           <ul class="puces">${e.points.map((p) => `<li>${p}</li>`).join("")}</ul>
+          ${e.evol ? evolution(e.nom, ...e.evol) : ""}
         </div>
       </article>`).join("")}
     </div>
-  </div>
-</section>
-
-<section id="evolution" class="bloc">
-  <div class="conteneur">
-    <h2>Comment votre bois évolue</h2>
-    <p class="chapo">Un bois laissé au naturel prend une patine avec le soleil et la pluie. Voici la teinte de chaque essence à la pose, puis après quelques mois et quelques années.</p>
-    <div class="evol-tableau">${essencesAlu.filter((e) => e.evol).map((e) => evolution(e.nom, ...e.evol)).join("")}</div>
     <p class="evol-note">Teintes indicatives : le rendu dépend de l'exposition. Un saturateur prolonge la teinte d'origine.</p>
   </div>
 </section>

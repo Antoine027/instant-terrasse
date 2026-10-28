@@ -50,7 +50,7 @@ export const UNIVERS = [
       ] },
     ],
   },  {
-    cle: "projets", nom: "Projets",
+    cle: "projets", nom: "Types de projets",
     accroche: "Piscine, balcon, toit-terrasse ou terrain en pente.",
     groupes: [{ nom: "", pages: [
       ["/terrasse-piscine-lyon/", "Terrasse de piscine", "Une plage confortable et sûre autour du bassin."],

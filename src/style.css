@@ -1164,3 +1164,25 @@ details[open]>summary.menu-lien::after{transform:translateY(2px) rotate(225deg)}
   .sous-menu li a[aria-current],.cascade-liste a[aria-current]{outline:2px solid var(--accent)}
   .sous-menu li a[aria-current] .mm-txt b{color:var(--accent-texte)}
 }
+
+/* ================= Sous-menus ordinateur : sections titrées et cartes photo (28/10) ================= */
+@media (min-width:1241px){
+  .sous-menu,.sous-menu-large{display:flex;gap:22px;padding:16px 16px 18px;border-radius:22px;box-shadow:0 24px 60px -24px rgba(47,52,55,.45);left:-20px}
+  .sous-menu-large{left:-140px}
+  .sous-menu-droite{left:auto;right:-20px}
+  .sm-col>div+div{margin-top:10px}
+  .sous-menu-titre{display:flex;align-items:center;gap:10px;margin:0 0 6px;padding:4px 10px 0;font-size:.72rem;letter-spacing:.1em;color:var(--accent-texte)}
+  .sous-menu-titre::after{content:"";flex:1;height:1px;background:rgba(160,94,30,.22)}
+  .sous-menu ul{display:grid;gap:4px}
+  .sous-menu ul.sm-2col{grid-template-columns:repeat(2,1fr);column-gap:8px}
+  .sous-menu li a{display:flex;align-items:center;gap:14px;width:300px;box-sizing:border-box;padding:8px 12px 8px 8px;border-radius:14px;white-space:normal;transition:background .15s}
+  .sous-menu li a:hover,.sous-menu li a[aria-current]{background:var(--fond2);color:inherit}
+  .mm-vig{display:block;flex:none;width:56px;height:56px;border-radius:11px;overflow:hidden;background:var(--fond)}
+  .mm-vig img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .3s}
+  .sous-menu li a:hover .mm-vig img{transform:scale(1.06)}
+  .mm-txt{display:grid;gap:3px;min-width:0}
+  .mm-txt b{font:700 .93rem/1.25 Montserrat,sans-serif;color:var(--texte)}
+  .sous-menu li a:hover .mm-txt b,.sous-menu li a[aria-current] .mm-txt b{color:var(--accent-texte)}
+  .mm-txt small{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;font-size:.8rem;line-height:1.35;color:var(--doux)}
+}
+.mm-vig-vide{color:var(--accent-texte)}.mm-vig-vide svg{width:100%;height:100%;padding:13px;box-sizing:border-box}

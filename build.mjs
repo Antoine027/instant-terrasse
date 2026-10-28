@@ -39,7 +39,7 @@ for (const p of PAGES) {
 // Lien de sous-menu : vignette photo et description courte (visibles seulement dans le menu mobile).
 const vignetteMenu = (chemin) => {
   const cle = VIGNETTES[chemin];
-  if (!cle) return `<span class="mm-vig mm-vig-vide" aria-hidden="true"></span>`;
+  if (!cle) return `<span class="mm-vig mm-vig-vide" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4 3 20h18L12 4z"/><path d="M12 4v16"/><path d="M12 20l-3.5-6M12 20l3.5-6"/><path d="M10 3.5l2 .5 2-.5"/></svg></span>`;
   const p = photo(cle);
   return `<span class="mm-vig" aria-hidden="true"><img src="/assets/img/${p.dossier}/${p.cle}-400.webp" alt="" width="52" height="52" loading="lazy" decoding="async"></span>`;
 };
@@ -49,9 +49,10 @@ const lienMenu = ([chemin, titre, desc, court], actuel) =>
 // Pictos des rubriques (menu mobile).
 const ic = (d) => `<svg class="mm-ic" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">${d}</svg>`;
 const ICONES_MENU = {
-  terrasses: ic('<path d="M2 15h20M2 18.5h20"/><path d="M5 15V9l7-5 7 5v6"/>'),
-  amenagements: ic('<path d="M3 5h18M3 8h18"/><path d="M5 8v12M19 8v12"/><path d="M2 20h20"/>'),
-  projets: ic('<path d="M3 20h18"/><path d="M5 20v-6h14v6"/><path d="M8 14V9h8v5"/><path d="M11 9V5h2v4"/>'),
+  // Terrasse : platelage en perspective ; aménagements : pergola à lames ; types de projets : maison et piscine
+  terrasses: ic('<path d="M7 9h10l4 11H3z"/><path d="M5.2 14h13.6"/><path d="M10 9l-1.3 11M14 9l1.3 11"/>'),
+  amenagements: ic('<path d="M3 5h18M3 8h18"/><path d="M6.5 5v3M10 5v3M14 5v3M17.5 5v3"/><path d="M5 8v12M19 8v12"/><path d="M2 20h20"/>'),
+  projets: ic('<path d="M3 11l9-7 9 7"/><path d="M5.5 9.5V15h13V9.5"/><path d="M10.5 15v-3.5h3V15"/><path d="M2 19c1.7 0 1.7-1.3 3.3-1.3S7 19 8.7 19s1.7-1.3 3.3-1.3 1.7 1.3 3.3 1.3 1.7-1.3 3.3-1.3S20.3 19 22 19"/>'),
   galerie: ic('<rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="m21 16-5-5-8 9"/>'),
   methode: ic('<path d="M9 6h11M9 12h11M9 18h11"/><circle cx="4.5" cy="6" r="1.5"/><circle cx="4.5" cy="12" r="1.5"/><circle cx="4.5" cy="18" r="1.5"/>'),
   professionnels: ic('<rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/><path d="M3 13h18"/>'),
@@ -70,8 +71,12 @@ const menuUnivers = (u0, actuel) => {
       <summary class="menu-lien${dansUnivers ? " actif" : ""}">${ICONES_MENU[u.cle] ?? ""}<span class="mm-nom">${u.nom}</span></summary>
       ${u.cascade ? `<div class="sous-menu sous-menu-cascade">
         <ul class="cascade">${u.groupes.map((g) => `<li class="cascade-item${g.pages.some(([c]) => c === actuel) ? " cascade-actif" : ""}"><button type="button" class="cascade-titre">${g.nom}</button><div class="cascade-panneau"><div><p class="sous-menu-titre">${g.nom}</p><ul class="cascade-liste">${g.pages.map((p) => lienMenu(p, actuel)).join("")}</ul></div>${g.photo ? `<a class="cascade-photo" href="${g.pages[0][0]}" tabindex="-1" aria-hidden="true">${imgPhoto(g.photo, { sizes: "220px" })}</a>` : ""}</div></li>`).join("")}</ul>
-      </div>` : `<div class="sous-menu${u.groupes.length > 2 ? " sous-menu-large" : ""}">
-        ${u.groupes.map((g) => `<div>${g.nom ? `<p class="sous-menu-titre">${g.nom}</p>` : ""}<ul>${g.pages.map((p) => lienMenu(p, actuel)).join("")}</ul></div>`).join("")}
+      </div>` : `<div class="sous-menu${u.groupes.length > 2 ? " sous-menu-large" : ""}${u.cle === "professionnels" ? " sous-menu-droite" : ""}">
+        ${(() => {
+          const groupe = (g) => `<div>${g.nom ? `<p class="sous-menu-titre">${g.nom}</p>` : ""}<ul${g.pages.length > 4 && u.groupes.length === 1 ? ' class="sm-2col"' : ""}>${g.pages.map((p) => lienMenu(p, actuel)).join("")}</ul></div>`;
+          // Plus de deux groupes : le premier en colonne de gauche, les autres empilés à droite (ordinateur).
+          return u.groupes.length > 2 ? `<div class="sm-col">${groupe(u.groupes[0])}</div><div class="sm-col">${u.groupes.slice(1).map(groupe).join("")}</div>` : u.groupes.map(groupe).join("");
+        })()}
       </div>`}
     </details>
   </li>`;
@@ -111,7 +116,7 @@ const pied = (corps = "") => {
     </div>
     ${[
       ["Terrasses", univ("terrasses")],
-      ["Projets", [...univ("projets"), ...univ("professionnels")]],
+      ["Types de projets", [...univ("projets"), ...univ("professionnels")]],
       ["Aménagements", univ("amenagements")],
       ["Instant Terrasse", AUTRES],
     ].map(([nom, pages]) => `<details class="pied-groupe" open><summary class="pied-titre">${nom}</summary><ul>${pages.filter(visible).map(([c, t, , court]) => `<li><a href="${c}">${court ?? t}</a></li>`).join("")}</ul></details>`).join("")}

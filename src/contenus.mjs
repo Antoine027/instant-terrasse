@@ -54,7 +54,7 @@ const essencesAlu = [
     points: ["Très grande stabilité", "Teinte claire, sans nœuds"],
   },
   {
-    nom: "Accoya gris", photo: ["accoya-gris-lame-2", "Lame de terrasse en accoya gris", 325],
+    nom: "Accoya gris", photo: ["accoya-gris-lame-3", "Lame de terrasse en accoya gris", 325],
     texte: "Le même bois acétylé, teinté gris : la terrasse a son aspect patiné dès la pose, sans attendre que le bois grise.",
     points: ["Très grande stabilité", "Aspect patiné immédiat"],
   },

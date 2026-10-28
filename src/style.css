@@ -1319,3 +1319,32 @@ details[open]>summary.menu-lien::after{transform:translateY(2px) rotate(225deg)}
   .hero-page:has(.formulaire-contact) h1{font-size:clamp(2.2rem,1.4rem + 2vw,3.2rem)}
 }
 @media (min-width:1061px){section.hero.hero-page:has(.formulaire-contact){padding-top:28px!important;padding-bottom:28px!important}.hero-page:has(.formulaire-contact) .deux-colonnes{align-items:start}}
+/* Contact (mobile) : formulaire tout de suite après le titre, compact */
+@media (max-width:700px){
+  section.hero.hero-page:has(.formulaire-contact){padding-top:12px!important}
+  .hero-page:has(.formulaire-contact) .deux-colonnes{display:flex;flex-direction:column;gap:0}
+  .hero-page:has(.formulaire-contact) .deux-colonnes>div:first-child{display:contents}
+  .hero-page:has(.formulaire-contact) .fil{display:none}
+  .hero-page:has(.formulaire-contact) h1{font-size:2rem;margin:0 0 8px}
+  .hero-page:has(.formulaire-contact) .chapo{font-size:.95rem;margin:0 0 12px}
+  .hero-page:has(.formulaire-contact) .puces{display:none}
+  .hero-page:has(.formulaire-contact) .deux-colonnes>div>p:has(.badge-avis){order:0;margin:0 0 16px}
+  .formulaire-contact{order:1;padding:18px 16px}
+  .hero-page:has(.formulaire-contact) .contact-direct{order:2;margin-top:22px}
+  .hero-page:has(.formulaire-contact) .note-pose{order:3}
+  .formulaire-contact fieldset{margin-bottom:14px}
+  .formulaire-contact .choix-grille{gap:6px}
+  .formulaire-contact .choix-tuile{padding:10px 4px;min-height:0;font-size:.8rem}
+  .formulaire-contact .choix-tuile svg{width:24px;height:24px}
+  .souhaits{grid-template-columns:repeat(4,1fr);gap:6px}
+  .souhait span{padding:10px 2px;font-size:.78rem}
+  .formulaire-contact .coordonnees{gap:10px}
+  .formulaire-contact .coordonnees .deux-champs{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+  .formulaire-contact textarea{height:70px;min-height:0}
+}
+@media (max-width:700px){
+  .souhaits{grid-template-columns:1.45fr 1fr 1fr 1.1fr}
+  .souhait span{padding:10px 4px;font-size:.8rem;white-space:nowrap}
+  .hero-page:has(.formulaire-contact) .chapo{display:none}
+  .hero-page:has(.formulaire-contact) h1{font-size:1.9rem;margin-bottom:12px}
+}

@@ -1,6 +1,7 @@
 // Galeries photo générées depuis src/photos.json (rempli par outils/photos.py).
 // Les photos gardent leur format d'origine (pas de recadrage) : mise en page en colonnes.
 import { readFileSync } from "node:fs";
+import { RANG } from "./ordre-photos.mjs";
 export const PHOTOS = JSON.parse(readFileSync(new URL("./photos.json", import.meta.url), "utf8"));
 
 const esc = (s) => String(s).replace(/&/g, "&amp;").replace(/"/g, "&quot;").replace(/</g, "&lt;");
@@ -50,7 +51,9 @@ export const galerie = (categorie, { titre, intro, legende = "Illustrations", gr
   if (types) liste.forEach((p, i) => { liste[i] = { ...p, essence: (p.types || []).join("|") }; });
   const essences = types ? types.filter((t) => liste.some((p) => (p.types || []).includes(t))) : selection && !groupe ? [] : [...new Set(liste.map((p) => p.essence).filter(Boolean))];
   // ordre : clés des photos à afficher en premier (les plus belles), sans changer l'ordre des filtres.
-  if (ordre) { const rang = (p) => { const i = ordre.indexOf(p.cle); return i < 0 ? ordre.length : i; }; liste.sort((a, b) => rang(a) - rang(b)); }
+  // Les plus belles photos d'abord (RANG), sauf ordre imposé.
+  const rang = ordre ? (p) => { const i = ordre.indexOf(p.cle); return i < 0 ? ordre.length : i; } : (p) => RANG[p.cle] ?? 0.5;
+  liste.sort((a, b) => rang(a) - rang(b));
   return `
 <div class="galerie-bloc" data-galerie>
   ${titre ? `<h2>${titre}</h2>` : ""}${intro ? `<p class="chapo">${intro}</p>` : ""}

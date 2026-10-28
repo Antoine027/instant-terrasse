@@ -124,9 +124,7 @@ ${heroPlein({ fil: "Terrasses", h1: ["Terrasse bois", "sur mesure"], kicker: "Te
 
 <section id="galerie" class="bloc bloc-alt">
   <div class="conteneur">
-    ${galerie("terrasse-bois", { titre: "Nos bois en situation", intro: "Choisissez une essence pour voir son rendu en terrasse.", legende: "Illustrations de terrasses dans nos essences",
-      // « Tout voir » : les plus belles photos en premier, toutes essences mélangées
-      ordre: ["terrasse-kebony-piscine-debordement", "terrasse-accoya-naturel-piscine-vue-haut", "terrasse-thermofrene-pool-house", "terrasse-bambou-ndurance-piscine-pierre", "terrasse-bambou-ndurance-piscine-tropicale", "terrasse-thermofrene-piscine-mer", "terrasse-kebony-port", "terrasse-kebony-piscine-pool-house", "terrasse-bambou-ndurance-pergola", "terrasse-thermofrene-patio-encaisse", "terrasse-kebony-piscine-jardin", "terrasse-thermofrene-bord-de-loire", "terrasse-thermofrene-piscine-naturelle", "terrasse-accoya-gris-piscine", "terrasse-accoya-naturel-balcon", "terrasse-thermopin-salon-jardin", "terrasse-thermopin-estrade", "terrasse-kebony-vue-jardin", "terrasse-bambou-xtreme-spa", "terrasse-bambou-xtreme-toit", "terrasse-kebony-maison", "terrasse-thermopin-jardin-pins", "terrasse-thermopin-table", "terrasse-kebony-port-mer", "terrasse-thermofrene-marches", "terrasse-kebony-restaurant", "terrasse-thermopin-restaurant", "terrasse-thermopin-vue", "terrasse-accoya-naturel-salle-a-manger", "terrasse-kebony-surelevee", "terrasse-accoya-naturel-bord-piscine", "terrasse-accoya-naturel-marches", "terrasse-accoya-gris-maison", "terrasse-kebony-facade-brique", "terrasse-kebony-jardin", "terrasse-thermofrene-balcon"] })}
+    ${galerie("terrasse-bois", { titre: "Nos bois en situation", intro: "Choisissez une essence pour voir son rendu en terrasse.", legende: "Illustrations de terrasses dans nos essences" })}
   </div>
 </section>
 

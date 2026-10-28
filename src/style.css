@@ -1257,3 +1257,11 @@ details[open]>summary.menu-lien::after{transform:translateY(2px) rotate(225deg)}
   .essence-texte p,.essence-texte .puces li{font-size:1rem}
   .essence .puces{margin-bottom:0}
 }
+@media (min-width:1061px){
+  .essence-photo{padding:28px 12px 28px 28px;align-items:stretch}
+  .essence-photo img{height:100%!important;object-position:center}
+  .essence>.evol-ligne{padding:28px 28px 28px 12px;justify-content:flex-start}
+  .essence .evol-pastilles{height:100%}
+  .essence .evol-pastilles figure{display:flex;flex-direction:column}
+  .essence .evol-pastilles img{flex:1;min-height:0;max-height:none;height:0;aspect-ratio:auto;object-fit:cover}
+}

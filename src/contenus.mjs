@@ -38,8 +38,8 @@ const cta = (titre = "Un projet de terrasse en bois ?", texte = "Devis gratuit e
 const essencesAlu = [
   {
     nom: "Thermopin", evol: ["thermopin", ["À la pose", "6 mois", "1 an"]], photo: ["thermopin", "Lame de terrasse en thermopin, teinte miel avec nœuds apparents", 378],
-    texte: "Un pin chauffé à haute température, sans produit chimique, pour le rendre plus stable et plus résistant. Teinte miel à la pose, nœuds apparents : le bois au naturel, à un prix accessible.",
-    points: ["Aspect bois naturel", "Excellent rapport qualité-prix"],
+    texte: "Un pin chauffé à haute température, sans produit chimique, pour le rendre plus stable et plus résistant. Teinte miel à la pose, nœuds apparents : le bois au naturel.",
+    points: ["Aspect bois naturel", "Bois européen traité sans produit chimique"],
   },
   {
     nom: "Thermofrêne", evol: ["thermofrene", ["À la pose", "6 mois", "1 an"]], photo: ["thermofrene", "Lame de terrasse en thermofrêne, teinte brun chaud au veinage marqué", 358],

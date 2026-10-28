@@ -187,11 +187,11 @@ const CHOIX_PROJET = [
 ];
 
 // Bloc « rappel » (formulaire court + note Google) : accueil et bas des pages produit.
-export const blocRappel = (titre = "Parlons de votre projet", texte = "Laissez votre numéro : nous vous rappelons pour en parler et organiser la visite, gratuite et sans engagement.", cocher = false) => `
+export const blocRappel = (titre = "Parlons de votre projet", texte = "Laissez votre numéro : nous vous rappelons pour en parler et organiser la visite, gratuite et sans engagement.", cocher = false, balise = "h2") => `
 <section id="rappel" class="bloc bloc-cta bloc-rappel">
   <div class="conteneur deux-colonnes">
     <div>
-      <h2>${titre.replace(/ ([?!:])/g, "&nbsp;$1")}</h2>
+      <${balise}>${titre.replace(/ ([?!:])/g, "&nbsp;$1")}</${balise}>
       <p class="chapo">${texte}</p>
       <a class="carte-google" href="${AVIS.lien}" target="_blank" rel="noopener" aria-label="Note Google ${AVIS.note} sur 5, ${AVIS.total} avis : voir les avis">
         <span class="cg-haut">${LOGO_GOOGLE.replace('width="20" height="20"', 'width="30" height="30"')}<span class="cg-note"><strong>${AVIS.note}</strong>${ETOILES}</span></span>
@@ -215,7 +215,7 @@ export const blocRappel = (titre = "Parlons de votre projet", texte = "Laissez v
       <button class="bouton" type="submit">Être rappelé</button>
       <p class="mentions-form">Vos informations servent uniquement à vous recontacter. <a href="/confidentialite/">Confidentialité</a></p>
     </form>
-    ${cocher ? `<script>(()=>{const p=location.pathname,m=[["pergola","Pergola"],["store","Store banne"],["garde-corps","Garde-corps"],["bardage","Bardage"],["carport","Carport"]].find(([k])=>p.includes(k)),c=document.querySelector('#rappel .choix input[value="'+(m?m[1]:"Terrasse")+'"]');if(c)c.checked=true})()</script>` : ""}
+    ${cocher ? `<script>(()=>{const q=(new URLSearchParams(location.search).get("projet")||"").toLowerCase();if(location.pathname.startsWith("/contact")&&!q)return;const p=location.pathname+" "+q,m=[["pergola","Pergola"],["store","Store banne"],["garde-corps","Garde-corps"],["bardage","Bardage"],["carport","Carport"]].find(([k])=>p.includes(k)),c=document.querySelector('#rappel .choix input[value="'+(m?m[1]:"Terrasse")+'"]');if(c)c.checked=true})()</script>` : ""}
   </div>
 </section>`;
 
@@ -307,52 +307,7 @@ ${blocRappel()}`;
 const projetsListe = [...UNIVERS.flatMap((u) => u.groupes.flatMap((g) => g.pages.map((p) => p[1]))), "Autre projet"];
 
 const contact = `
-<section class="hero hero-page">
-  <div class="conteneur deux-colonnes">
-    <div>
-      <p class="fil"><a href="/">Accueil</a></p>
-      <h1>Parlez-nous de votre projet</h1>
-      <p class="chapo">Devis gratuit et sans engagement. Décrivez-nous votre projet, nous vous recontactons rapidement pour en parler et organiser une visite.</p>
-      <ul class="puces">
-        <li>Visite chez vous, avec les échantillons</li>
-        <li>Plan 3D de votre projet offert</li>
-        <li>Devis détaillé, gratuit et sans engagement</li>
-      </ul>
-      <p>${BADGE_AVIS}</p>
-      <p class="contact-direct">Vous préférez parler directement ?<br><a class="bouton bouton-clair" href="tel:${SITE.telLien}">${SITE.tel}</a> <a class="bouton bouton-clair" href="${SITE.whatsapp}">WhatsApp</a></p>
-      <p class="note-pose">Des photos de votre extérieur nous aident beaucoup : envoyez-les sur WhatsApp après votre demande.</p>
-    </div>
-    <form class="formulaire formulaire-contact" method="post" action="/api/contact">
-      <fieldset class="choix-projet">
-        <legend><span class="etape-num">1</span>Votre projet <i>(plusieurs choix possibles)</i></legend>
-        <div class="choix-grille">${CHOIX_PROJET.map(([v, ic]) => `<label class="choix"><input type="checkbox" name="projet" value="${v}"><span class="choix-tuile"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">${ic}</svg>${v}</span></label>`).join("")}</div>
-      </fieldset>
-      <fieldset class="choix-souhait">
-        <legend><span class="etape-num">2</span>Vous souhaitez</legend>
-        <div class="souhaits">${[["Demander une visite sur place", "Visite gratuite", "Demander ma visite gratuite"], ["Obtenir un devis gratuit", "Devis", "Recevoir mon devis gratuit"], ["Être rappelé", "Rappel", "Être rappelé"], ["Poser une question", "Question", "Envoyer ma question"]].map(([v, t, b], i) => `<label class="souhait"><input type="radio" name="souhait" value="${v}" data-bouton="${b}"${i ? "" : " checked"}><span>${t}</span></label>`).join("")}</div>
-      </fieldset>
-      <fieldset class="coordonnees">
-        <legend><span class="etape-num">3</span>Vos coordonnées</legend>
-        <div class="deux-champs">
-          <label><span>Nom <b aria-hidden="true">*</b></span><input name="nom" required autocomplete="name" maxlength="120"></label>
-          <label><span>Téléphone <b aria-hidden="true">*</b></span><input name="telephone" type="tel" required autocomplete="tel" maxlength="30"></label>
-        </div>
-        <div class="deux-champs">
-          <label><span>E-mail <i>(facultatif)</i></span><input name="email" type="email" autocomplete="email" maxlength="160"></label>
-          <label><span>Code postal</span><input name="codepostal" inputmode="numeric" autocomplete="postal-code" maxlength="10" placeholder="ex. 69140"></label>
-        </div>
-        <label><span>Un mot sur votre projet <i>(facultatif)</i></span><textarea name="message" rows="3" maxlength="3000" placeholder="Surface approximative, matériau envisagé, délai souhaité…"></textarea></label>
-      </fieldset>
-      <label class="pot-de-miel" aria-hidden="true">Site web<input name="site_web" tabindex="-1" autocomplete="off"></label>
-      <button class="bouton bouton-envoi" type="submit">Demander ma visite gratuite</button>
-    </form>
-  </div>
-</section>
-<script>
-document.querySelectorAll('.souhait input').forEach(r=>r.addEventListener('change',()=>{const b=document.querySelector('.bouton-envoi');if(b&&r.checked)b.textContent=r.dataset.bouton}));
-const v=(new URLSearchParams(location.search).get('projet')||'').toLowerCase();
-if(v){const m=[['pergola','Pergola'],['store','Store banne'],['garde','Garde-corps'],['bardage','Bardage'],['carport','Carport']].find(([k])=>v.includes(k));const c=document.querySelector('.formulaire .choix input[value="'+(m?m[1]:'Terrasse')+'"]');if(c)c.checked=true}
-</script>
+${blocRappel("Parlez-nous de votre projet", "Laissez votre numéro : nous vous rappelons pour en parler et organiser la visite chez vous, avec les échantillons. Devis détaillé et plan 3D offerts.", true, "h1")}
 <section class="bloc bloc-alt">
   <div class="conteneur conteneur-etroit">
     <h2>Avant votre demande</h2>

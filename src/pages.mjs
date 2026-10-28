@@ -26,27 +26,7 @@ export const UNIVERS = [
       ["/structure-terrasse-lyon/", "Nos structures", "Traditionnelle, aluminium ou sur plots : la base qui fait durer une terrasse.", "Structures"],
       ["/nos-terrasses/", "Comparatif des matériaux", "Bois, composite, carrelage ou aluminium : lequel choisir ?", "Comparatif"],
     ] }],
-  },
-  {
-    cle: "projets", nom: "Projets",
-    accroche: "Piscine, balcon, toit-terrasse ou terrain en pente.",
-    groupes: [{ nom: "", pages: [
-      ["/terrasse-piscine-lyon/", "Terrasse de piscine", "Une plage confortable et sûre autour du bassin."],
-      ["/terrasse-sur-plots-lyon/", "Terrasse et dalles sur plots", "Poser sans fondation sur un support existant.", "Terrasse sur plots"],
-      ["/terrasse-sur-pilotis-lyon/", "Terrasse sur pilotis", "La solution pour les terrains en pente."],
-      ["/terrasse-balcon-lyon/", "Balcon", "Rénover le sol d'un balcon, sans travaux lourds.", "Terrasse de balcon"],
-      ["/toit-terrasse-lyon/", "Toit-terrasse", "Créer un espace de vie sur une toiture plate."],
-    ] }],
-  },
-  {
-    cle: "professionnels", nom: "Professionnels",
-    accroche: "Restaurants, hôtels et campings.",
-    groupes: [{ nom: "Professionnels", pages: [
-      ["/terrasse-restaurant-chr-lyon/", "Restaurants, cafés, hôtels", "Des terrasses robustes pour l'accueil du public.", "Restaurants et hôtels (CHR)"],
-      ["/terrasse-camping-hpa/", "Campings et hébergements", "Terrasses de mobil-homes, decks et pontons.", "Campings (HPA)"],
-    ] }],
-  },
-  {
+  },  {
     cle: "amenagements", nom: "Aménagements",
     accroche: "Pergolas, stores, carports, garde-corps et bardages autour de la terrasse.",
     groupes: [
@@ -69,6 +49,23 @@ export const UNIVERS = [
         ["/carport-lyon/", "Carport", "Un abri voiture élégant, sans construire de garage."],
       ] },
     ],
+  },  {
+    cle: "projets", nom: "Projets",
+    accroche: "Piscine, balcon, toit-terrasse ou terrain en pente.",
+    groupes: [{ nom: "", pages: [
+      ["/terrasse-piscine-lyon/", "Terrasse de piscine", "Une plage confortable et sûre autour du bassin."],
+      ["/terrasse-sur-plots-lyon/", "Terrasse et dalles sur plots", "Poser sans fondation sur un support existant.", "Terrasse sur plots"],
+      ["/terrasse-sur-pilotis-lyon/", "Terrasse sur pilotis", "La solution pour les terrains en pente."],
+      ["/terrasse-balcon-lyon/", "Balcon", "Rénover le sol d'un balcon, sans travaux lourds.", "Terrasse de balcon"],
+      ["/toit-terrasse-lyon/", "Toit-terrasse", "Créer un espace de vie sur une toiture plate."],
+    ] }],
+  },  {
+    cle: "professionnels", nom: "Professionnels", menuToujours: true, // affiché dans le menu même si une page est en préparation
+    accroche: "Restaurants, hôtels et campings.",
+    groupes: [{ nom: "", pages: [
+      ["/terrasse-camping-hpa/", "Campings et hébergements", "Terrasses de mobil-homes, decks et pontons.", "Terrasse pour hôtellerie de plein air"],
+      ["/terrasse-restaurant-chr-lyon/", "Restaurants, cafés, hôtels", "Des terrasses robustes pour l'accueil du public.", "Terrasse pour café, hôtel, restaurant"],
+    ] }],
   },
 ];
 

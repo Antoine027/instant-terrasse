@@ -40,7 +40,7 @@ const lienMenu = ([chemin, titre, , court], actuel) =>
   `<li><a href="${chemin}"${chemin === actuel ? ' aria-current="page"' : ""}>${court ?? titre}</a></li>`;
 
 const menuUnivers = (u0, actuel) => {
-  const u = { ...u0, groupes: u0.groupes.map((g) => ({ ...g, pages: g.pages.filter(visible) })).filter((g) => g.pages.length) };
+  const u = { ...u0, groupes: u0.groupes.map((g) => ({ ...g, pages: u0.menuToujours ? g.pages : g.pages.filter(visible) })).filter((g) => g.pages.length) };
   if (!u.groupes.length) return "";
   const pages = u.groupes.flatMap((g) => g.pages);
   const dansUnivers = pages.some(([c]) => c === actuel);
@@ -68,9 +68,11 @@ const entete = (actuel) => `
     </details>
     <nav class="menu" aria-label="Navigation principale">
       <ul class="menu-liste">
-        ${UNIVERS.map((u) => menuUnivers(u, actuel)).join("")}
+        ${UNIVERS.filter((u) => u.cle !== "professionnels").map((u) => menuUnivers(u, actuel)).join("")}
         <li class="menu-item"><a class="menu-lien${actuel === "/realisations/" ? " actif" : ""}" href="/realisations/">Galerie</a></li>
         <li class="menu-item"><a class="menu-lien" href="/#methode">Notre méthode</a></li>
+        ${menuUnivers(UNIVERS.find((u) => u.cle === "professionnels"), actuel)}
+        <li class="menu-cta"><a class="bouton" href="/contact/">Demander une visite gratuite</a><a class="menu-tel" href="tel:${SITE.telLien}">ou appelez le ${SITE.tel}</a></li>
       </ul>
     </nav>
     <a class="bouton bouton-petit entete-cta" href="/contact/">Devis gratuit</a>
@@ -78,6 +80,7 @@ const entete = (actuel) => `
 </header>`;
 
 // ---------- Pied de page ----------
+const univ = (cle) => UNIVERS.find((u) => u.cle === cle).groupes.flatMap((g) => g.pages);
 const pied = (corps = "") => {
   const credits = [...new Set([...corps.matchAll(/data-credit="(©[^"]+)"/g)].map((m) => m[1]))];
   return `
@@ -89,9 +92,9 @@ const pied = (corps = "") => {
       <p><a href="tel:${SITE.telLien}">${SITE.tel}</a><br>${SITE.adresse}</p>
     </div>
     ${[
-      ["Terrasses", UNIVERS[0].groupes.flatMap((g) => g.pages)],
-      ["Projets", [...UNIVERS[1].groupes.flatMap((g) => g.pages), ...UNIVERS[2].groupes.flatMap((g) => g.pages)]],
-      ["Aménagements", UNIVERS[3].groupes.flatMap((g) => g.pages)],
+      ["Terrasses", univ("terrasses")],
+      ["Projets", [...univ("projets"), ...univ("professionnels")]],
+      ["Aménagements", univ("amenagements")],
       ["Instant Terrasse", AUTRES],
     ].map(([nom, pages]) => `<details class="pied-groupe" open><summary class="pied-titre">${nom}</summary><ul>${pages.filter(visible).map(([c, t, , court]) => `<li><a href="${c}">${court ?? t}</a></li>`).join("")}</ul></details>`).join("")}
   </div>

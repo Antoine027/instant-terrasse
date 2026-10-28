@@ -1106,3 +1106,33 @@ details[open]>summary.menu-lien::after{transform:translateY(2px) rotate(225deg)}
   .hero-maison-plein h1,.hero-maison-plein .chapo,.hero-maison-plein .kicker{text-shadow:none}
 }
 
+
+/* ================= Menu mobile lisible : une ligne = une entrée (28/10) ================= */
+.menu-cta{display:none}
+@media (max-width:1240px){
+  .menu{padding:6px 0 0;overflow-x:hidden}
+  .menu-liste{gap:0}
+  .menu-item{border-bottom:1px solid #efe7da}
+  .menu-lien{display:flex;align-items:center;justify-content:space-between;padding:17px 22px;border-radius:0!important;font-size:1.06rem;font-weight:600;white-space:normal}
+  .menu-lien:hover,details[open]>.menu-lien{background:none}
+  details[open]>summary.menu-lien{color:var(--accent-texte)}
+  summary.menu-lien::after{margin-left:12px;width:8px;height:8px;opacity:.7}
+  a.menu-lien::after{content:"";width:7px;height:7px;margin-left:12px;border-top:2px solid currentColor;border-right:2px solid currentColor;transform:rotate(45deg);opacity:.35;flex:none}
+  .sous-menu,.sous-menu-large,.sous-menu-cascade{display:block;margin:0 14px 14px;padding:6px;background:var(--fond2);border-radius:16px}
+  .sous-menu>div+div{margin-top:4px}
+  .sous-menu-titre{padding:12px 14px 6px;margin:0!important;font-size:.7rem}
+  .cascade-panneau{padding:0!important}
+  .sous-menu li a,.cascade-liste a{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px;border-radius:12px;font-size:.98rem;font-weight:500;white-space:normal;border-bottom:1px solid rgba(47,52,55,.07)}
+  .sous-menu li:last-child a,.cascade-liste li:last-child a{border-bottom:0}
+  .sous-menu li a::after,.cascade-liste a::after{content:"›";font-size:1.3rem;line-height:1;color:var(--accent-texte);opacity:.8}
+  .sous-menu li a:active,.cascade-liste a:active{background:#fff}
+  .sous-menu li a[aria-current],.cascade-liste a[aria-current]{background:#fff;color:var(--accent-texte);font-weight:700}
+  .menu-cta{display:grid;gap:10px;padding:18px 18px 20px;text-align:center}
+  .menu-cta .bouton{justify-content:center;width:100%}
+  .menu-tel{font-size:.92rem;color:var(--doux);text-decoration:none}
+}
+@media (max-width:1240px){
+  .sous-menu li a,.cascade-liste a{border-radius:0}
+  .sous-menu li a[aria-current],.cascade-liste a[aria-current]{border-radius:10px}
+  .menu{max-height:calc(100svh - 110px);overscroll-behavior:contain}
+}

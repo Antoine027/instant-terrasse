@@ -1386,3 +1386,12 @@ details[open]>summary.menu-lien::after{transform:translateY(2px) rotate(225deg)}
   .bloc-rappel:has(h1) fieldset{margin-bottom:10px}
 }
 @media (max-width:700px){section.bloc-rappel:has(h1){padding-top:24px!important}}
+/* Contact (mobile) : tout centré */
+@media (max-width:700px){
+  .bloc-rappel:has(h1) h1,.bloc-rappel:has(h1) .chapo{text-align:center}
+  .bloc-rappel:has(h1) form label:not(.choix)>span,.bloc-rappel:has(h1) form legend,.bloc-rappel:has(h1) .mentions-form{display:block;text-align:center;width:100%}
+  .bloc-rappel:has(h1) form input,.bloc-rappel:has(h1) form textarea{text-align:center}
+  .bloc-rappel:has(h1) .carte-google{align-self:center;margin-left:auto;margin-right:auto;text-align:center}
+  .bloc-rappel:has(h1) .carte-google .cg-haut{justify-content:center}
+  .bloc-rappel:has(h1) .rappel-direct{justify-content:center;text-align:center}
+}

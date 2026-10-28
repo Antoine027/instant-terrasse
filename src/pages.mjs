@@ -321,7 +321,6 @@ const contact = `
       <p>${BADGE_AVIS}</p>
       <p class="contact-direct">Vous préférez parler directement ?<br><a class="bouton bouton-clair" href="tel:${SITE.telLien}">${SITE.tel}</a> <a class="bouton bouton-clair" href="${SITE.whatsapp}">WhatsApp</a></p>
       <p class="note-pose">Des photos de votre extérieur nous aident beaucoup : envoyez-les sur WhatsApp après votre demande.</p>
-      <div class="contact-ambiance">${imgPhoto("terrasse-kebony-piscine-debordement", { sizes: "560px" })}</div>
     </div>
     <form class="formulaire formulaire-contact" method="post" action="/api/contact">
       <fieldset class="choix-projet">

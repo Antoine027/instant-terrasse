@@ -1301,3 +1301,21 @@ details[open]>summary.menu-lien::after{transform:translateY(2px) rotate(225deg)}
 .formulaire-contact .coordonnees{display:grid;gap:14px}.formulaire-contact .coordonnees .deux-champs,.formulaire-contact .coordonnees>label{margin:0}
 .souhaits{display:grid;grid-template-columns:repeat(4,auto);justify-content:start}.souhait span{text-align:center;white-space:nowrap}@media (max-width:420px){.souhaits{grid-template-columns:repeat(4,1fr);gap:6px}.souhait span{padding:10px 4px;font-size:.78rem}}
 .contact-ambiance{display:none}@media (min-width:1061px){.contact-ambiance{display:block;margin-top:26px;border-radius:var(--rayon);overflow:hidden;box-shadow:0 16px 40px -24px rgba(47,52,55,.5)}.contact-ambiance img{display:block;width:100%;height:240px;object-fit:cover}}
+/* Contact (ordinateur) : tout le formulaire visible sans défiler */
+@media (min-width:1061px){
+
+  .formulaire-contact{padding:20px 24px 18px}
+  .formulaire-contact fieldset{margin-bottom:12px}
+  .formulaire-contact legend{margin-bottom:8px}
+  .formulaire-contact .choix-grille{gap:8px}
+  .formulaire-contact .choix-tuile{flex-direction:row;justify-content:center;gap:8px;padding:10px 8px;min-height:0}
+  .formulaire-contact .choix-tuile svg{width:22px;height:22px;margin:0}
+  .formulaire-contact .souhait span{padding:8px 14px}
+  .formulaire-contact .coordonnees{gap:8px}
+  .formulaire-contact input,.formulaire-contact textarea{padding-top:9px;padding-bottom:9px}
+  .formulaire-contact label>span{margin-bottom:4px}
+  .formulaire-contact textarea{height:62px;min-height:0}
+  .formulaire-contact .bouton-envoi{padding:14px 20px}
+  .hero-page:has(.formulaire-contact) h1{font-size:clamp(2.2rem,1.4rem + 2vw,3.2rem)}
+}
+@media (min-width:1061px){section.hero.hero-page:has(.formulaire-contact){padding-top:28px!important;padding-bottom:28px!important}.hero-page:has(.formulaire-contact) .deux-colonnes{align-items:start}}

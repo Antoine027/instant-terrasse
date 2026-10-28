@@ -1186,3 +1186,14 @@ details[open]>summary.menu-lien::after{transform:translateY(2px) rotate(225deg)}
   .mm-txt small{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;font-size:.8rem;line-height:1.35;color:var(--doux)}
 }
 .mm-vig-vide{color:var(--accent-texte)}.mm-vig-vide svg{width:100%;height:100%;padding:13px;box-sizing:border-box}
+/* En-tête ordinateur : tailles en px pour que le menu tienne même si le navigateur grossit la police par défaut */
+@media (min-width:1241px){
+  .entete .menu-lien{font-size:15px;padding:10px 10px}
+  .entete .entete-cta{font-size:15px;padding:12px 20px}
+  .menu-liste{gap:2px}
+}
+@media (min-width:1241px) and (max-width:1380px){
+  .entete .menu-lien{font-size:14px;padding:9px 8px}
+  .entete .logo img{height:44px;width:auto}
+  .entete .entete-cta{padding:11px 16px}
+}

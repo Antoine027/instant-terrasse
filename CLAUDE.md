@@ -31,7 +31,8 @@ Remplaçant du site WordPress/Elementor instantterrasse.com. Générateur Node s
 - Teintes des lames aluminium (25/10/2026) : blanc veiné, teck vieilli, gris uni, simili bois (« simili bis » dans le message, à confirmer), bois de grange, teck.
 - Bardage bois (21/10/2026) : accoya gris, accoya naturel, kebony, bambou moso X-treme, thermofrêne, thermopin clear (sans nœuds), thermo épicéa.
 - Les photos des essences en lames de terrasse ne doivent pas illustrer le bardage (produits différents) : attendre les photos de bardage.
-- Marques fournisseurs : rester discret, ne pas les citer. Leurs photos sont autorisées sur le site, mais comme illustrations produit : ne jamais les présenter comme des chantiers Instant Terrasse (pas dans « Réalisations », pas de légende de type « notre chantier à … »).
+- Crédits photo (demande d'Antoine, 28/10/2026) : chaque photo affiche un seul crédit, selon sa catégorie : garde-corps ©Kordo ; terrasses et bardage ©Grad ; pergolas, carports et stores bannes ©MSB. Table CREDITS dans src/galerie.mjs (le build échoue si une catégorie n'a pas de crédit). La photo d'Antoine n'a pas de crédit.
+- Marques fournisseurs : en dehors des crédits photo, rester discret, ne pas les citer dans les textes. Leurs photos sont autorisées sur le site, mais comme illustrations produit : ne jamais les présenter comme des chantiers Instant Terrasse (pas dans « Réalisations », pas de légende de type « notre chantier à … »).
 
 ## Pose : partenaire, discret mais sans mentir
 - La pose est réalisée par un installateur partenaire, jamais nommé.

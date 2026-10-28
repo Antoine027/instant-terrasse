@@ -6,6 +6,22 @@ export const PHOTOS = JSON.parse(readFileSync(new URL("./photos.json", import.me
 const esc = (s) => String(s).replace(/&/g, "&amp;").replace(/"/g, "&quot;").replace(/</g, "&lt;");
 const slug = (s) => s.normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase().replace(/[^a-z0-9]+/g, "-");
 
+// Crédit photo par catégorie : un seul crédit par photo (demande d'Antoine, 28/10/2026).
+// Garde-corps : Kordo ; terrasses et bardage : Grad ; pergolas, carports et stores : MSB.
+const CREDITS = {
+  "garde-corps": "Kordo",
+  "pergola-bioclimatique": "MSB", "pergola-toile-retractable": "MSB", "pergola-toit-fixe": "MSB", carport: "MSB", "store-banne": "MSB",
+  "bardage-bois": "Grad", "bardage-aluminium": "Grad", "bardage-pose": "Grad",
+  "terrasse-bois": "Grad", "terrasse-composite": "Grad", "terrasse-aluminium": "Grad", "terrasse-carrelage": "Grad",
+  "structure-alu": "Grad", schema: "Grad", "teinte-alu": "Grad", ambiance: "Grad", pilotis: "Grad", "pilotis-hero": "Grad", restaurant: "Grad", accueil: "Grad",
+  portrait: null, // photo d'Antoine : pas de crédit fournisseur
+};
+for (const p of PHOTOS) {
+  if (!(p.categorie in CREDITS)) throw new Error(`Crédit photo manquant pour la catégorie « ${p.categorie} » (${p.cle}) : compléter CREDITS dans src/galerie.mjs`);
+}
+export const credit = (c) => (c ? `<small class="credit">©${c}</small>` : "");
+export const creditPhoto = (cle) => CREDITS[photo(cle).categorie];
+
 export const photo = (cle) => {
   const p = PHOTOS.find((x) => x.cle === cle);
   if (!p) throw new Error(`Photo inconnue : ${cle}`);
@@ -17,7 +33,7 @@ export const imgPhoto = (cle, { sizes = "(max-width:760px) 100vw, 400px", priori
   const p = photo(cle);
   const base = `/assets/img/${p.dossier}/${p.cle}`;
   const w = p.largeurs.includes(1000) ? 1000 : p.largeurs[p.largeurs.length - 1];
-  return `<img${classe ? ` class="${classe}"` : ""} src="${base}-${w}.webp" srcset="${p.largeurs.map((l) => `${base}-${l}.webp ${l}w`).join(", ")}" sizes="${sizes}" alt="${esc(p.alt)}" width="${w}" height="${Math.round(w / p.ratio)}"${prioritaire ? ' fetchpriority="high"' : ' loading="lazy"'} decoding="async">`;
+  return `<img${classe ? ` class="${classe}"` : ""} src="${base}-${w}.webp" srcset="${p.largeurs.map((l) => `${base}-${l}.webp ${l}w`).join(", ")}" sizes="${sizes}" alt="${esc(p.alt)}" width="${w}" height="${Math.round(w / p.ratio)}"${prioritaire ? ' fetchpriority="high"' : ' loading="lazy"'} decoding="async"${CREDITS[p.categorie] ? ` data-credit="©${CREDITS[p.categorie]}"` : ""}>${credit(CREDITS[p.categorie])}`;
 };
 
 // Galerie filtrable par essence pour une catégorie (ex. "terrasse-bois").
@@ -46,4 +62,4 @@ export const galerie = (categorie, { titre, intro, legende = "Illustrations", gr
 
 // Script des filtres (une seule fois par page).
 export const SCRIPT_GALERIE = `document.querySelectorAll('[data-galerie]').forEach(g=>{const b=g.querySelectorAll('.filtre');b.forEach(x=>x.addEventListener('click',()=>{b.forEach(y=>y.setAttribute('aria-pressed',y===x));const f=x.dataset.filtre;g.querySelectorAll('figure').forEach(fig=>fig.hidden=!(f==='tout'||fig.dataset.essence.split(' ').includes(f)))}))});
-(()=>{let d,im,cp,nb,liste=[],i=0;const ouvre=(g,fig)=>{if(!d){d=document.createElement('dialog');d.className='visionneuse';d.setAttribute('aria-label','Photo agrandie');d.innerHTML='<img alt=""><p class="v-legende"></p><span class="v-compte"></span><button class="v-fermer" aria-label="Fermer">×</button><button class="v-prec" aria-label="Photo précédente">‹</button><button class="v-suiv" aria-label="Photo suivante">›</button>';document.body.append(d);im=d.querySelector('img');cp=d.querySelector('.v-legende');nb=d.querySelector('.v-compte');d.querySelector('.v-fermer').onclick=()=>d.close();d.querySelector('.v-prec').onclick=()=>va(-1);d.querySelector('.v-suiv').onclick=()=>va(1);d.addEventListener('click',e=>{if(e.target===d)d.close()});d.addEventListener('keydown',e=>{if(e.key==='ArrowLeft')va(-1);if(e.key==='ArrowRight')va(1)});let x0=null;d.addEventListener('touchstart',e=>x0=e.touches[0].clientX,{passive:true});d.addEventListener('touchend',e=>{if(x0===null)return;const dx=e.changedTouches[0].clientX-x0;if(Math.abs(dx)>40)va(dx<0?1:-1);x0=null});d.addEventListener('close',()=>document.body.style.overflow='')}liste=[...g.querySelectorAll('.mosaique figure:not([hidden])')];i=liste.indexOf(fig);montre();d.showModal();document.body.style.overflow='hidden'};const montre=()=>{const s=liste[i].querySelector('img');im.removeAttribute('src');im.srcset=s.srcset;im.sizes='100vw';im.src=s.src;im.alt=s.alt;const c=liste[i].querySelector('figcaption');cp.textContent=c?c.textContent:'';nb.textContent=(i+1)+' / '+liste.length};const va=n=>{i=(i+n+liste.length)%liste.length;montre()};document.querySelectorAll('[data-galerie]').forEach(g=>g.querySelectorAll('.mosaique figure').forEach(f=>{f.addEventListener('click',()=>ouvre(g,f));f.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();ouvre(g,f)}})}))})();`;
+(()=>{let d,im,cp,nb,liste=[],i=0;const ouvre=(g,fig)=>{if(!d){d=document.createElement('dialog');d.className='visionneuse';d.setAttribute('aria-label','Photo agrandie');d.innerHTML='<img alt=""><p class="v-legende"></p><span class="v-compte"></span><button class="v-fermer" aria-label="Fermer">×</button><button class="v-prec" aria-label="Photo précédente">‹</button><button class="v-suiv" aria-label="Photo suivante">›</button>';document.body.append(d);im=d.querySelector('img');cp=d.querySelector('.v-legende');nb=d.querySelector('.v-compte');d.querySelector('.v-fermer').onclick=()=>d.close();d.querySelector('.v-prec').onclick=()=>va(-1);d.querySelector('.v-suiv').onclick=()=>va(1);d.addEventListener('click',e=>{if(e.target===d)d.close()});d.addEventListener('keydown',e=>{if(e.key==='ArrowLeft')va(-1);if(e.key==='ArrowRight')va(1)});let x0=null;d.addEventListener('touchstart',e=>x0=e.touches[0].clientX,{passive:true});d.addEventListener('touchend',e=>{if(x0===null)return;const dx=e.changedTouches[0].clientX-x0;if(Math.abs(dx)>40)va(dx<0?1:-1);x0=null});d.addEventListener('close',()=>document.body.style.overflow='')}liste=[...g.querySelectorAll('.mosaique figure:not([hidden])')];i=liste.indexOf(fig);montre();d.showModal();document.body.style.overflow='hidden'};const montre=()=>{const s=liste[i].querySelector('img');im.removeAttribute('src');im.srcset=s.srcset;im.sizes='100vw';im.src=s.src;im.alt=s.alt;const c=liste[i].querySelector('figcaption');cp.textContent=[c?c.textContent:'',s.dataset.credit||''].filter(Boolean).join('  ·  ');nb.textContent=(i+1)+' / '+liste.length};const va=n=>{i=(i+n+liste.length)%liste.length;montre()};document.querySelectorAll('[data-galerie]').forEach(g=>g.querySelectorAll('.mosaique figure').forEach(f=>{f.addEventListener('click',()=>ouvre(g,f));f.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();ouvre(g,f)}})}))})();`;

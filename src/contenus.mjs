@@ -49,9 +49,14 @@ const essencesAlu = [
     points: ["Bois modifié très durable", "Patine gris argenté"],
   },
   {
-    nom: "Accoya naturel et gris", photos: [["accoya-naturel-lame", "Lame de terrasse en accoya naturel, teinte claire", 260, "Naturel"], ["accoya-gris-lame", "Lame de terrasse en accoya gris", 227, "Gris"]],
-    texte: "Un bois acétylé réputé pour sa stabilité : il bouge très peu avec l'humidité, ce qui limite les déformations. En teinte naturelle claire, ou grise dès la pose pour un aspect patiné immédiat.",
-    points: ["Très grande stabilité", "Deux teintes au choix"],
+    nom: "Accoya naturel", photo: ["accoya-naturel-lame", "Lame de terrasse en accoya naturel, teinte claire", 260],
+    texte: "Un bois acétylé réputé pour sa stabilité : il bouge très peu avec l'humidité, ce qui limite les déformations. Teinte claire à la pose, qui grise naturellement avec le temps.",
+    points: ["Très grande stabilité", "Teinte claire, sans nœuds"],
+  },
+  {
+    nom: "Accoya gris", photo: ["accoya-gris-lame", "Lame de terrasse en accoya gris", 227],
+    texte: "Le même bois acétylé, teinté gris : la terrasse a son aspect patiné dès la pose, sans attendre que le bois grise.",
+    points: ["Très grande stabilité", "Aspect patiné immédiat"],
   },
   {
     nom: "Bambou X-treme et N-Durance", photo: ["bambou-moso", "Lames de terrasse en bambou densifié, version brun foncé et version brun-rouge", 379],

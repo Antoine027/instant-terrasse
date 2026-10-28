@@ -47,14 +47,19 @@ const essencesAlu = [
     points: ["Bois modifié très durable", "Patine gris argenté"],
   },
   {
-    nom: "Bambou X-treme", evol: ["bambou-xtreme", ["À la pose", "6 mois", "2 ans"]], photo: ["bambou-xtreme-lame-2", "Lame de terrasse en bambou X-treme brun foncé", 338],
-    texte: "Des fibres de bambou densifiées et traitées pour en faire des lames très dures. Le X-treme est brun foncé, avec une surface finement texturée. Le bambou repousse en quelques années.",
-    points: ["Très dur et dense", "Brun foncé"],
+    nom: "Thermopin", evol: ["thermopin", ["À la pose", "6 mois", "1 an"]], photo: ["thermopin", "Lame de terrasse en thermopin, teinte miel avec nœuds apparents", 378],
+    texte: "Un pin chauffé à haute température, sans produit chimique, pour le rendre plus stable et plus résistant. Teinte miel à la pose, nœuds apparents : le bois au naturel.",
+    points: ["Aspect bois naturel", "Bois européen traité sans produit chimique"],
   },
   {
     nom: "Accoya naturel", evol: ["accoya-naturel", ["À la pose", "6 mois", "2 ans"]], photo: ["accoya-naturel-lame-3", "Lame de terrasse en accoya naturel, teinte claire", 266],
     texte: "Un bois acétylé réputé pour sa stabilité : il bouge très peu avec l'humidité, ce qui limite les déformations. Teinte claire à la pose, qui grise naturellement avec le temps.",
     points: ["Très grande stabilité", "Teinte claire, sans nœuds"],
+  },
+  {
+    nom: "Bambou X-treme", evol: ["bambou-xtreme", ["À la pose", "6 mois", "2 ans"]], photo: ["bambou-xtreme-lame-2", "Lame de terrasse en bambou X-treme brun foncé", 338],
+    texte: "Des fibres de bambou densifiées et traitées pour en faire des lames très dures. Le X-treme est brun foncé, avec une surface finement texturée. Le bambou repousse en quelques années.",
+    points: ["Très dur et dense", "Brun foncé"],
   },
   {
     nom: "Bambou N-Durance", evol: ["bambou-ndurance", ["À la pose", "3 ans"]], photo: ["bambou-ndurance-lame-2", "Lame de terrasse en bambou N-Durance brun-rouge", 267],
@@ -65,11 +70,6 @@ const essencesAlu = [
     nom: "Accoya gris", evol: ["accoya-gris", ["À la pose", "3 ans"]], photo: ["accoya-gris-lame-3", "Lame de terrasse en accoya gris", 325],
     texte: "Le même bois acétylé, teinté gris : la terrasse a son aspect patiné dès la pose, sans attendre que le bois grise.",
     points: ["Très grande stabilité", "Aspect patiné immédiat"],
-  },
-  {
-    nom: "Thermopin", evol: ["thermopin", ["À la pose", "6 mois", "1 an"]], photo: ["thermopin", "Lame de terrasse en thermopin, teinte miel avec nœuds apparents", 378],
-    texte: "Un pin chauffé à haute température, sans produit chimique, pour le rendre plus stable et plus résistant. Teinte miel à la pose, nœuds apparents : le bois au naturel.",
-    points: ["Aspect bois naturel", "Bois européen traité sans produit chimique"],
   },
 ];
 

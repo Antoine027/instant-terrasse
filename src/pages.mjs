@@ -158,7 +158,7 @@ const PROJETS_ACCUEIL = [
   ["/terrasse-sur-plots-lyon/", "Terrasse sur plots", "Sans fondation, de niveau.", "structure-plot-rail-lame"],
 ];
 const AUTRES_PIECES = [
-  ["/bardage-bois-lyon/", "Bardage", "Un bardage bois ou aluminium, assorti à la terrasse.", "bardage-bambou-xtreme-patio"],
+  ["/bardage-bois-lyon/", "Bardage", "Un bardage bois ou aluminium, assorti à la terrasse.", "bardage-bambou-xtreme-maison"],
   ["/pergolas-lyon/", "Pergolas", "Bioclimatique, toile ou toit fixe : de l'ombre et un abri.", "pergola-bioclimatique-piscine"],
   ["/store-banne-lyon/", "Store banne", "De l'ombre à la demande, replié quand le soleil tourne.", "store-banne-beige-maison"],
   ["/garde-corps-aluminium-lyon/", "Garde-corps", "Sécuriser la terrasse sans fermer la vue.", "gc-maison-verre-clair"],

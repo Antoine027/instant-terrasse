@@ -1091,7 +1091,7 @@ details[open]>summary.menu-lien::after{transform:translateY(2px) rotate(225deg)}
 @media (max-width:380px){.hero-produit h1{font-size:2.1rem}}
 
 /* ================= Ordinateur : finitions de l'accueil (28/10) ================= */
-.piece-mini[href="/bardage-bois-lyon/"]>img{object-position:72% 50%}
+.piece-mini[href="/bardage-bois-lyon/"]>img{object-position:40% 50%}
 .faq-liste{max-width:820px}
 @media (min-width:701px){
   #faq{padding-top:8px}
@@ -1412,4 +1412,10 @@ details[open]>summary.menu-lien::after{transform:translateY(2px) rotate(225deg)}
   .bloc .chapo,.bloc>.conteneur>p,.bloc .deux-colonnes p{max-width:760px}
   .bloc h2{font-size:clamp(2rem,1rem + 1.6vw,2.9rem)}
   .entete-in{max-width:1480px}
+}
+@media (min-width:1101px){
+  .projets-car .projet-mini{padding:10px 18px 10px 10px!important;border-radius:999px}
+  .projets-car .projet-mini>img{width:54px!important;height:54px!important}
+  .projets-car .projet-mini .pm-corps h3{font-size:1.05rem!important}
+  .projets-car{gap:20px!important;margin-top:20px}
 }

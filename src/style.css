@@ -1403,3 +1403,4 @@ details[open]>summary.menu-lien::after{transform:translateY(2px) rotate(225deg)}
   .bloc-rappel:has(h1) .choix-grille{gap:8px}
   .bloc-rappel:has(h1) .choix-tuile{padding:11px 4px}
 }
+@media (max-width:1240px){.entete-contact a,.entete-contact a:first-child{background:#f0b15a;color:#1b1d1f}}

@@ -54,17 +54,17 @@ const essencesAlu = [
     points: ["Très grande stabilité", "Teinte claire, sans nœuds"],
   },
   {
-    nom: "Accoya gris", photo: ["accoya-gris-lame", "Lame de terrasse en accoya gris", 227],
+    nom: "Accoya gris", photo: ["accoya-gris-lame-2", "Lame de terrasse en accoya gris", 325],
     texte: "Le même bois acétylé, teinté gris : la terrasse a son aspect patiné dès la pose, sans attendre que le bois grise.",
     points: ["Très grande stabilité", "Aspect patiné immédiat"],
   },
   {
-    nom: "Bambou X-treme", photo: ["bambou-xtreme-lame", "Lame de terrasse en bambou X-treme brun foncé", 270],
+    nom: "Bambou X-treme", photo: ["bambou-xtreme-lame-2", "Lame de terrasse en bambou X-treme brun foncé", 338],
     texte: "Des fibres de bambou densifiées et traitées pour en faire des lames très dures. Le X-treme est brun foncé, avec une surface finement texturée. Le bambou repousse en quelques années.",
     points: ["Très dur et dense", "Brun foncé"],
   },
   {
-    nom: "Bambou N-Durance", photo: ["terrasse-bambou-ndurance-piscine-pierre", "Terrasse en bambou N-Durance autour d'une piscine, murets en pierre", 267],
+    nom: "Bambou N-Durance", photo: ["bambou-ndurance-lame-2", "Lame de terrasse en bambou N-Durance brun-rouge", 267],
     texte: "Le même bambou densifié, en teinte brun-rouge à l'allure d'un bois exotique. Une alternative aux bois tropicaux, issue d'une ressource qui repousse vite.",
     points: ["Très dur et dense", "Brun-rouge, aspect bois exotique"],
   },

@@ -1203,3 +1203,4 @@ details[open]>summary.menu-lien::after{transform:translateY(2px) rotate(225deg)}
 .essence-photo-duo img{mix-blend-mode:multiply;max-height:150px}.essence-photo-duo figure{justify-content:flex-end;padding-bottom:28px}
 .carte-lame .lames{display:flex;gap:6px;justify-content:center;align-items:center;height:170px;margin:-8px -8px 16px;padding:8px;background:#fff;border-radius:12px}.carte-lame .lames img{flex:1;min-width:0;max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain;mix-blend-mode:multiply}
 .v-credit{display:block;font-size:.5em;font-weight:400;opacity:.75;margin-top:2px}
+.essence-photo img[src*="-lame-"]{mix-blend-mode:multiply}

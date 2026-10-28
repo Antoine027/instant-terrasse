@@ -59,9 +59,14 @@ const essencesAlu = [
     points: ["Très grande stabilité", "Aspect patiné immédiat"],
   },
   {
-    nom: "Bambou X-treme et N-Durance", photo: ["bambou-moso", "Lames de terrasse en bambou densifié, version brun foncé et version brun-rouge", 379],
-    texte: "Des fibres de bambou densifiées et traitées pour en faire des lames très dures. Le X-treme est brun foncé, le N-Durance brun-rouge, à l'allure d'un bois exotique. Le bambou repousse en quelques années.",
-    points: ["Très dur et dense", "Ressource à pousse rapide"],
+    nom: "Bambou X-treme", photo: ["bambou-xtreme-lame", "Lame de terrasse en bambou X-treme brun foncé", 270],
+    texte: "Des fibres de bambou densifiées et traitées pour en faire des lames très dures. Le X-treme est brun foncé, avec une surface finement texturée. Le bambou repousse en quelques années.",
+    points: ["Très dur et dense", "Brun foncé"],
+  },
+  {
+    nom: "Bambou N-Durance", photo: ["terrasse-bambou-ndurance-piscine-pierre", "Terrasse en bambou N-Durance autour d'une piscine, murets en pierre", 267],
+    texte: "Le même bambou densifié, en teinte brun-rouge à l'allure d'un bois exotique. Une alternative aux bois tropicaux, issue d'une ressource qui repousse vite.",
+    points: ["Très dur et dense", "Brun-rouge, aspect bois exotique"],
   },
 ];
 

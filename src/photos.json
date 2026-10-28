@@ -3105,5 +3105,170 @@
    1600
   ],
   "ratio": 1.2878
+ },
+ {
+  "cle": "bardage-lame-accoya-naturel-1",
+  "dossier": "bardage",
+  "categorie": "lame-bardage",
+  "essence": "Accoya naturel",
+  "alt": "Lame de bardage en accoya naturel",
+  "largeurs": [
+   400,
+   600,
+   800,
+   1000,
+   1195
+  ],
+  "ratio": 0.8536
+ },
+ {
+  "cle": "bardage-lame-accoya-naturel-2",
+  "dossier": "bardage",
+  "categorie": "lame-bardage",
+  "essence": "Accoya naturel",
+  "alt": "Lame de bardage en accoya naturel",
+  "largeurs": [
+   400,
+   600,
+   800,
+   1000,
+   1221
+  ],
+  "ratio": 0.8721
+ },
+ {
+  "cle": "bardage-lame-accoya-gris",
+  "dossier": "bardage",
+  "categorie": "lame-bardage",
+  "essence": "Accoya gris",
+  "alt": "Lame de bardage en accoya gris",
+  "largeurs": [
+   400,
+   600,
+   800,
+   1000,
+   1227
+  ],
+  "ratio": 0.8764
+ },
+ {
+  "cle": "bardage-lame-kebony-1",
+  "dossier": "bardage",
+  "categorie": "lame-bardage",
+  "essence": "Kebony",
+  "alt": "Lame de bardage en kebony",
+  "largeurs": [
+   400,
+   600,
+   800,
+   1000,
+   1400
+  ],
+  "ratio": 1.1391
+ },
+ {
+  "cle": "bardage-lame-kebony-2",
+  "dossier": "bardage",
+  "categorie": "lame-bardage",
+  "essence": "Kebony",
+  "alt": "Lame de bardage en kebony",
+  "largeurs": [
+   400,
+   600,
+   800,
+   1000,
+   1400
+  ],
+  "ratio": 1.1609
+ },
+ {
+  "cle": "bardage-lame-bambou-1",
+  "dossier": "bardage",
+  "categorie": "lame-bardage",
+  "essence": "Bambou X-treme",
+  "alt": "Lame de bardage en bambou X-treme",
+  "largeurs": [
+   400,
+   600,
+   800,
+   1000,
+   1400
+  ],
+  "ratio": 1.1794
+ },
+ {
+  "cle": "bardage-lame-bambou-2",
+  "dossier": "bardage",
+  "categorie": "lame-bardage",
+  "essence": "Bambou X-treme",
+  "alt": "Lame de bardage en bambou X-treme",
+  "largeurs": [
+   400,
+   600,
+   800,
+   1000,
+   1400
+  ],
+  "ratio": 1.1676
+ },
+ {
+  "cle": "bardage-lame-bambou-3",
+  "dossier": "bardage",
+  "categorie": "lame-bardage",
+  "essence": "Bambou X-treme",
+  "alt": "Lame de bardage en bambou X-treme",
+  "largeurs": [
+   400,
+   600,
+   800,
+   1000,
+   1400
+  ],
+  "ratio": 1.1735
+ },
+ {
+  "cle": "bardage-lame-thermofrene",
+  "dossier": "bardage",
+  "categorie": "lame-bardage",
+  "essence": "Thermofrêne",
+  "alt": "Lame de bardage en thermofrêne",
+  "largeurs": [
+   400,
+   600,
+   800,
+   1000,
+   1400
+  ],
+  "ratio": 1.141
+ },
+ {
+  "cle": "bardage-lame-thermopin-clear",
+  "dossier": "bardage",
+  "categorie": "lame-bardage",
+  "essence": "Thermopin clear",
+  "alt": "Lame de bardage en thermopin clear",
+  "largeurs": [
+   400,
+   600,
+   800,
+   1000,
+   1400
+  ],
+  "ratio": 1.7766
+ },
+ {
+  "cle": "bardage-lame-thermo-epicea",
+  "dossier": "bardage",
+  "categorie": "lame-bardage",
+  "essence": "Thermo épicéa",
+  "alt": "Lame de bardage en thermo épicéa",
+  "largeurs": [
+   400,
+   600,
+   800,
+   1000,
+   1400
+  ],
+  "ratio": 1.7766
  }
 ]

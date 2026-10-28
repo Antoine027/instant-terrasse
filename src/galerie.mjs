@@ -19,7 +19,8 @@ const CREDITS = {
 for (const p of PHOTOS) {
   if (!(p.categorie in CREDITS)) throw new Error(`Crédit photo manquant pour la catégorie « ${p.categorie} » (${p.cle}) : compléter CREDITS dans src/galerie.mjs`);
 }
-export const credit = (c) => (c ? `<small class="credit">©${c}</small>` : "");
+// Le crédit est porté par l'attribut data-credit ; build.mjs l'affiche en bas de page (une ligne par page).
+export const credit = (c) => (c ? ` data-credit="©${c}"` : "");
 export const creditPhoto = (cle) => CREDITS[photo(cle).categorie];
 
 export const photo = (cle) => {
@@ -33,7 +34,7 @@ export const imgPhoto = (cle, { sizes = "(max-width:760px) 100vw, 400px", priori
   const p = photo(cle);
   const base = `/assets/img/${p.dossier}/${p.cle}`;
   const w = p.largeurs.includes(1000) ? 1000 : p.largeurs[p.largeurs.length - 1];
-  return `<img${classe ? ` class="${classe}"` : ""} src="${base}-${w}.webp" srcset="${p.largeurs.map((l) => `${base}-${l}.webp ${l}w`).join(", ")}" sizes="${sizes}" alt="${esc(p.alt)}" width="${w}" height="${Math.round(w / p.ratio)}"${prioritaire ? ' fetchpriority="high"' : ' loading="lazy"'} decoding="async"${CREDITS[p.categorie] ? ` data-credit="©${CREDITS[p.categorie]}"` : ""}>${credit(CREDITS[p.categorie])}`;
+  return `<img${classe ? ` class="${classe}"` : ""} src="${base}-${w}.webp" srcset="${p.largeurs.map((l) => `${base}-${l}.webp ${l}w`).join(", ")}" sizes="${sizes}" alt="${esc(p.alt)}" width="${w}" height="${Math.round(w / p.ratio)}"${prioritaire ? ' fetchpriority="high"' : ' loading="lazy"'} decoding="async"${CREDITS[p.categorie] ? ` data-credit="©${CREDITS[p.categorie]}"` : ""}>`;
 };
 
 // Galerie filtrable par essence pour une catégorie (ex. "terrasse-bois").

@@ -1106,10 +1106,3 @@ details[open]>summary.menu-lien::after{transform:translateY(2px) rotate(225deg)}
   .hero-maison-plein h1,.hero-maison-plein .chapo,.hero-maison-plein .kicker{text-shadow:none}
 }
 
-/* ================= Crédits photo (©Grad, ©MSB, ©Kordo) ================= */
-.credit{position:absolute;top:8px;right:10px;z-index:3;font:600 .62rem/1 Lato,sans-serif;letter-spacing:.03em;color:rgba(255,255,255,.92);text-shadow:0 1px 3px rgba(0,0,0,.65),0 0 8px rgba(0,0,0,.35);pointer-events:none;white-space:nowrap}
-.mosaique figure,.pt-mat,.piece-mini,.vignette,.photo-produit,.pt-photo,.essence-photo,.nuancier figure,.hm-visuel{position:relative}
-.hero-plein>.credit,.hm-visuel>.credit{top:auto;bottom:12px;right:16px}
-@media (max-width:700px){
-  .hero-maison-plein .hm-visuel>.credit,.hero-produit>.credit{bottom:auto;top:82px;right:14px}
-}

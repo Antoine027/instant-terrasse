@@ -5,7 +5,7 @@ import { galerie, imgPhoto, PHOTOS, credit } from "./galerie.mjs";
 import { carteProduit } from "./vignettes.mjs";
 
 const img = (nom, alt, ratio) =>
-  `<img src="/assets/img/bois/${nom}-400.webp" srcset="/assets/img/bois/${nom}-400.webp 400w, /assets/img/bois/${nom}-800.webp 800w" sizes="(max-width:700px) 90vw, 360px" alt="${alt}" width="400" height="${ratio}" loading="lazy" decoding="async">${credit("Grad")}`;
+  `<img src="/assets/img/bois/${nom}-400.webp" srcset="/assets/img/bois/${nom}-400.webp 400w, /assets/img/bois/${nom}-800.webp 800w" sizes="(max-width:700px) 90vw, 360px" alt="${alt}" width="400" height="${ratio}" loading="lazy" decoding="async"${credit("Grad")}>`;
 
 // Bandeau photo plein écran (même style que l'accueil)
 const heroPlein = ({ fil, h1, kicker, chapo, photo, position = "65% 50%", actions }) => `

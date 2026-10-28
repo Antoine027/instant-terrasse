@@ -78,7 +78,9 @@ const entete = (actuel) => `
 </header>`;
 
 // ---------- Pied de page ----------
-const pied = () => `
+const pied = (corps = "") => {
+  const credits = [...new Set([...corps.matchAll(/data-credit="(©[^"]+)"/g)].map((m) => m[1]))];
+  return `
 <footer class="pied">
   <div class="conteneur pied-grille">
     <div>
@@ -93,8 +95,9 @@ const pied = () => `
       ["Instant Terrasse", AUTRES],
     ].map(([nom, pages]) => `<details class="pied-groupe" open><summary class="pied-titre">${nom}</summary><ul>${pages.filter(visible).map(([c, t, , court]) => `<li><a href="${c}">${court ?? t}</a></li>`).join("")}</ul></details>`).join("")}
   </div>
-  <p class="conteneur mentions">© ${new Date().getFullYear()} Instant Terrasse — une marque d'ESCOM HABITAT · <a href="/mentions-legales/">Mentions légales</a> · <a href="/confidentialite/">Confidentialité et cookies</a></p>
+  <p class="conteneur mentions">© ${new Date().getFullYear()} Instant Terrasse — une marque d'ESCOM HABITAT · <a href="/mentions-legales/">Mentions légales</a> · <a href="/confidentialite/">Confidentialité et cookies</a>${credits.length ? ` · Crédits photo : ${credits.join(", ")}` : ""}</p>
 </footer>`;
+};
 
 // ---------- Page « en préparation » ----------
 const corpsPreparation = (p) => {
@@ -159,7 +162,7 @@ ${entete(p.chemin)}
 <main id="contenu">
 ${p.corps ?? corpsPreparation(p)}
 </main>
-${pied()}
+${pied(p.corps ?? "")}
 <a class="appel-flottant" href="tel:${SITE.telLien}" aria-label="Appeler Instant Terrasse au ${SITE.tel}"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg></a>
 <script>
 // Un seul sous-menu ouvert à la fois, fermeture au clic extérieur ou Échap.

@@ -8,7 +8,7 @@ const img = (nom, alt, ratio) =>
   `<img src="/assets/img/bois/${nom}-400.webp" srcset="/assets/img/bois/${nom}-400.webp 400w, /assets/img/bois/${nom}-800.webp 800w" sizes="(max-width:700px) 90vw, 360px" alt="${alt}" width="400" height="${ratio}" loading="lazy" decoding="async"${credit("Grad")}>`;
 
 // Évolution de la teinte (photos fabricant ©Grad) : curseur à la pose → patine.
-const evolution = (nom, cle, etapes) => `<div class="evol-ligne"><p class="evol-titre">Évolution de la teinte</p><div class="evol-pastilles${etapes.length === 2 ? " evol-2" : ""}">${etapes.map((t, i) => `<figure><img src="/assets/img/bois/evol-${cle}-${i}-v2-400.webp" srcset="/assets/img/bois/evol-${cle}-${i}-v2-400.webp 400w, /assets/img/bois/evol-${cle}-${i}-v2-800.webp 800w" sizes="(max-width:700px) 30vw, 110px" alt="${nom} : ${t.toLowerCase()}" width="400" height="167" loading="lazy" decoding="async"${credit("Grad")}><figcaption>${t}</figcaption></figure>`).join(`<span class="evol-fleche" aria-hidden="true">→</span>`)}</div></div>`;
+const evolution = (nom, cle, etapes) => `<div class="evol-ligne"><p class="evol-titre">Évolution de la teinte</p><div class="evol-pastilles">${etapes.map((t, i) => `<figure><img src="/assets/img/bois/evol-${cle}-${i}-v3-200.webp" srcset="/assets/img/bois/evol-${cle}-${i}-v3-200.webp 200w, /assets/img/bois/evol-${cle}-${i}-v3-400.webp 400w" sizes="(max-width:700px) 30vw, 110px" alt="${nom} : ${t.toLowerCase()}" width="200" height="400" loading="lazy" decoding="async"${credit("Grad")}><figcaption>${t}</figcaption></figure>`).join("")}</div></div>`;
 
 // Bandeau photo plein écran (même style que l'accueil)
 const heroPlein = ({ fil, h1, kicker, chapo, photo, position = "65% 50%", actions }) => `

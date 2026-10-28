@@ -8,8 +8,8 @@ const img = (nom, alt, ratio) =>
   `<img src="/assets/img/bois/${nom}-400.webp" srcset="/assets/img/bois/${nom}-400.webp 400w, /assets/img/bois/${nom}-800.webp 800w" sizes="(max-width:700px) 90vw, 360px" alt="${alt}" width="400" height="${ratio}" loading="lazy" decoding="async"${credit("Grad")}>`;
 
 // Évolution de la teinte (photos fabricant ©Grad) : curseur à la pose → patine.
-const evolution = (nom, cle, n) => {
-  const etapes = n === 3 ? ["À la pose", "Quelques mois", "Patiné"] : ["À la pose", "Après 3 ans"];
+const evolution = (nom, cle, etapes) => {
+  const n = etapes.length;
   return `<div class="evol"><p class="evol-titre">Évolution de la teinte</p><div class="evol-img">${etapes.map((t, i) => `<img src="/assets/img/bois/evol-${cle}-${i}-400.webp" srcset="/assets/img/bois/evol-${cle}-${i}-400.webp 400w, /assets/img/bois/evol-${cle}-${i}-800.webp 800w" sizes="(max-width:700px) 90vw, 340px" alt="${nom} : ${t.toLowerCase()}" width="400" height="200" loading="lazy" decoding="async"${credit("Grad")}${i ? ' class="cache"' : ""}>`).join("")}</div><input type="range" min="0" max="${n - 1}" value="0" step="1" aria-label="Évolution de la teinte : ${nom}"><div class="evol-etapes">${etapes.map((t, i) => `<span${i ? "" : ' class="on"'}>${t}</span>`).join("")}</div></div>`;
 };
 const SCRIPT_EVOL = `document.querySelectorAll('.evol').forEach(e=>{const r=e.querySelector('input'),im=e.querySelectorAll('.evol-img img'),et=e.querySelectorAll('.evol-etapes span');const f=()=>{im.forEach((x,i)=>x.classList.toggle('cache',i!=r.value));et.forEach((x,i)=>x.classList.toggle('on',i==r.value))};r.addEventListener('input',f);et.forEach((x,i)=>x.addEventListener('click',()=>{r.value=i;f()}))})`;
@@ -41,37 +41,37 @@ const cta = (titre = "Un projet de terrasse en bois ?", texte = "Devis gratuit e
 // ---------- Terrasse bois ----------
 const essencesAlu = [
   {
-    nom: "Thermopin", evol: ["thermopin", 3], photo: ["thermopin", "Lame de terrasse en thermopin, teinte miel avec nœuds apparents", 378],
+    nom: "Thermopin", evol: ["thermopin", ["À la pose", "6 mois", "1 an"]], photo: ["thermopin", "Lame de terrasse en thermopin, teinte miel avec nœuds apparents", 378],
     texte: "Un pin chauffé à haute température, sans produit chimique, pour le rendre plus stable et plus résistant. Teinte miel à la pose, nœuds apparents : le bois au naturel, à un prix accessible.",
     points: ["Aspect bois naturel", "Excellent rapport qualité-prix"],
   },
   {
-    nom: "Thermofrêne", evol: ["thermofrene", 3], photo: ["thermofrene", "Lame de terrasse en thermofrêne, teinte brun chaud au veinage marqué", 358],
+    nom: "Thermofrêne", evol: ["thermofrene", ["À la pose", "6 mois", "1 an"]], photo: ["thermofrene", "Lame de terrasse en thermofrêne, teinte brun chaud au veinage marqué", 358],
     texte: "Le frêne, bois dur européen, traité thermiquement à cœur. Il prend une belle teinte brun chaud et garde un veinage très marqué, proche des bois exotiques.",
     points: ["Bois dur européen", "Veinage prononcé"],
   },
   {
-    nom: "Kebony", evol: ["kebony", 3], photo: ["kebony", "Lame de terrasse en Kebony, teinte brune", 402],
+    nom: "Kebony", evol: ["kebony", ["À la pose", "6 mois", "1 an"]], photo: ["kebony", "Lame de terrasse en Kebony, teinte brune", 402],
     texte: "Un bois résineux modifié par un procédé d'origine végétale qui renforce durablement ses fibres. Brun profond à la pose, il évolue vers un gris argenté homogène.",
     points: ["Bois modifié très durable", "Patine gris argenté"],
   },
   {
-    nom: "Accoya naturel", evol: ["accoya-naturel", 3], photo: ["accoya-naturel-lame-3", "Lame de terrasse en accoya naturel, teinte claire", 266],
+    nom: "Accoya naturel", evol: ["accoya-naturel", ["À la pose", "6 mois", "2 ans"]], photo: ["accoya-naturel-lame-3", "Lame de terrasse en accoya naturel, teinte claire", 266],
     texte: "Un bois acétylé réputé pour sa stabilité : il bouge très peu avec l'humidité, ce qui limite les déformations. Teinte claire à la pose, qui grise naturellement avec le temps.",
     points: ["Très grande stabilité", "Teinte claire, sans nœuds"],
   },
   {
-    nom: "Accoya gris", evol: ["accoya-gris", 2], photo: ["accoya-gris-lame-3", "Lame de terrasse en accoya gris", 325],
+    nom: "Accoya gris", evol: ["accoya-gris", ["À la pose", "3 ans"]], photo: ["accoya-gris-lame-3", "Lame de terrasse en accoya gris", 325],
     texte: "Le même bois acétylé, teinté gris : la terrasse a son aspect patiné dès la pose, sans attendre que le bois grise.",
     points: ["Très grande stabilité", "Aspect patiné immédiat"],
   },
   {
-    nom: "Bambou X-treme", evol: ["bambou-xtreme", 3], photo: ["bambou-xtreme-lame-2", "Lame de terrasse en bambou X-treme brun foncé", 338],
+    nom: "Bambou X-treme", evol: ["bambou-xtreme", ["À la pose", "6 mois", "2 ans"]], photo: ["bambou-xtreme-lame-2", "Lame de terrasse en bambou X-treme brun foncé", 338],
     texte: "Des fibres de bambou densifiées et traitées pour en faire des lames très dures. Le X-treme est brun foncé, avec une surface finement texturée. Le bambou repousse en quelques années.",
     points: ["Très dur et dense", "Brun foncé"],
   },
   {
-    nom: "Bambou N-Durance", evol: ["bambou-ndurance", 2], photo: ["bambou-ndurance-lame-2", "Lame de terrasse en bambou N-Durance brun-rouge", 267],
+    nom: "Bambou N-Durance", evol: ["bambou-ndurance", ["À la pose", "3 ans"]], photo: ["bambou-ndurance-lame-2", "Lame de terrasse en bambou N-Durance brun-rouge", 267],
     texte: "Le même bambou densifié, en teinte brun-rouge à l'allure d'un bois exotique. Une alternative aux bois tropicaux, issue d'une ressource qui repousse vite.",
     points: ["Très dur et dense", "Brun-rouge, aspect bois exotique"],
   },

@@ -19,7 +19,7 @@ for p in json.load(open(sys.argv[1])):
     largeurs = sorted(set(largeurs))
     for w in largeurs:
         im.resize((w, round(im.height * w / im.width)), Image.LANCZOS).save(os.path.join(dest, f'{p["cle"]}-{w}.webp'), "WEBP", quality=80, method=6)
-    entree = {k: p[k] for k in ("cle", "dossier", "categorie", "essence", "alt") if k in p}
+    entree = {k: p[k] for k in ("cle", "dossier", "categorie", "essence", "alt", "credit") if k in p}
     entree.update(largeurs=largeurs, ratio=round(im.width / im.height, 4))
     photos = [x for x in photos if x["cle"] != p["cle"]] + [entree]
     print(f'{p["cle"]:40s} {im.width}x{im.height} -> {largeurs}')

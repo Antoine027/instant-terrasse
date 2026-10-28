@@ -2898,5 +2898,140 @@
    1145
   ],
   "ratio": 0.8333
+ },
+ {
+  "cle": "carrelage-bh-pergola-cour",
+  "dossier": "terrasses",
+  "categorie": "terrasse-carrelage",
+  "alt": "Terrasse en grès cérame gris grand format sous une pergola à toit translucide, coin salon et barbecue",
+  "credit": "BHsolutions",
+  "largeurs": [
+   400,
+   600,
+   800,
+   1000,
+   1600
+  ],
+  "ratio": 1.3333
+ },
+ {
+  "cle": "carrelage-bh-aspect-bois-gris-jardin",
+  "dossier": "terrasses",
+  "categorie": "terrasse-carrelage",
+  "alt": "Grande terrasse en carrelage aspect bois gris le long d'une maison, fauteuils et jardin arboré",
+  "credit": "BHsolutions",
+  "largeurs": [
+   400,
+   600,
+   800,
+   1000,
+   1600
+  ],
+  "ratio": 1.3333
+ },
+ {
+  "cle": "carrelage-bh-aspect-bois-gris-table",
+  "dossier": "terrasses",
+  "categorie": "terrasse-carrelage",
+  "alt": "Terrasse en carrelage aspect bois gris, table à manger sous un store banne et bac maçonné",
+  "credit": "BHsolutions",
+  "largeurs": [
+   400,
+   600,
+   800,
+   1000,
+   1600
+  ],
+  "ratio": 1.3333
+ },
+ {
+  "cle": "carrelage-bh-aspect-bois-gris-vue",
+  "dossier": "terrasses",
+  "categorie": "terrasse-carrelage",
+  "alt": "Terrasse en lames de carrelage aspect bois gris posées en décalé, avec bordure côté jardin",
+  "credit": "BHsolutions",
+  "largeurs": [
+   400,
+   600,
+   800,
+   1000,
+   1600
+  ],
+  "ratio": 1.4077
+ },
+ {
+  "cle": "carrelage-bh-aspect-bois-clair-pergola",
+  "dossier": "terrasses",
+  "categorie": "terrasse-carrelage",
+  "alt": "Terrasse en carrelage aspect bois clair sous une pergola, vue sur le jardin",
+  "credit": "BHsolutions",
+  "largeurs": [
+   400,
+   600,
+   800,
+   1000,
+   1600
+  ],
+  "ratio": 1.3333
+ },
+ {
+  "cle": "carrelage-bh-aspect-bois-clair-transats",
+  "dossier": "terrasses",
+  "categorie": "terrasse-carrelage",
+  "alt": "Terrasse en carrelage aspect bois clair, transats et table à manger sous une pergola",
+  "credit": "BHsolutions",
+  "largeurs": [
+   400,
+   600,
+   800,
+   1000,
+   1600
+  ],
+  "ratio": 1.3333
+ },
+ {
+  "cle": "carrelage-bh-sureleve-gazon",
+  "dossier": "terrasses",
+  "categorie": "terrasse-carrelage",
+  "alt": "Terrasse surélevée en grès cérame gris grand format, bordure aluminium posée sur la pelouse",
+  "credit": "BHsolutions",
+  "largeurs": [
+   400,
+   600,
+   800,
+   1000,
+   1600
+  ],
+  "ratio": 1.3333
+ },
+ {
+  "cle": "carrelage-bh-grand-format-baie",
+  "dossier": "terrasses",
+  "categorie": "terrasse-carrelage",
+  "alt": "Terrasse en grès cérame gris grand format devant une baie vitrée",
+  "credit": "BHsolutions",
+  "largeurs": [
+   400,
+   600,
+   800,
+   1000,
+   1600
+  ],
+  "ratio": 1.3333
+ },
+ {
+  "cle": "carrelage-bh-pergola-salon",
+  "dossier": "terrasses",
+  "categorie": "terrasse-carrelage",
+  "alt": "Coin salon sur carrelage gris grand format sous une pergola, mur végétalisé",
+  "credit": "BHsolutions",
+  "largeurs": [
+   400,
+   600,
+   800,
+   1000,
+   1600
+  ],
+  "ratio": 1.3333
  }
 ]

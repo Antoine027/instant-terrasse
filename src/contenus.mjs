@@ -49,7 +49,7 @@ const essencesAlu = [
     points: ["Bois modifié très durable", "Patine gris argenté"],
   },
   {
-    nom: "Accoya naturel", photo: ["accoya-naturel-lame", "Lame de terrasse en accoya naturel, teinte claire", 260],
+    nom: "Accoya naturel", photo: ["accoya-naturel-lame-2", "Lame de terrasse en accoya naturel, teinte claire", 225],
     texte: "Un bois acétylé réputé pour sa stabilité : il bouge très peu avec l'humidité, ce qui limite les déformations. Teinte claire à la pose, qui grise naturellement avec le temps.",
     points: ["Très grande stabilité", "Teinte claire, sans nœuds"],
   },

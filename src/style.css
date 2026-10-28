@@ -1056,3 +1056,9 @@ details[open]>summary.menu-lien::after{transform:translateY(2px) rotate(225deg)}
 @media (min-width:701px){.projets-car .projet-mini{flex-direction:row!important;height:auto!important;min-height:0!important}.projets-car .projet-mini .pm-corps{display:block;padding:0!important;flex:none}.projets-car .projet-mini .pm-corps h3{margin:0}}
 @media (min-width:701px){.projets-car{display:grid!important;grid-template-columns:repeat(5,minmax(0,1fr));gap:20px}.projets-car .projet-mini{display:flex!important;justify-content:flex-start}.projets-car .projet-mini .pm-corps h3{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}}@media (min-width:701px) and (max-width:1100px){.projets-car{grid-template-columns:repeat(3,minmax(0,1fr))}}
 @media (min-width:701px){.projets-car .projet-mini .pm-corps h3{font-size:.92rem}.projets-car .projet-mini{padding-right:14px}}
+@media (min-width:701px){
+  .projets-car .projet-mini{width:100%;min-width:0;box-sizing:border-box;padding:8px 14px 8px 8px}
+  .projets-car .projet-mini>img{flex:none}
+  .projets-car .projet-mini .pm-corps{flex:1 1 auto!important;min-width:0}
+  .projets-car .projet-mini .pm-corps h3{white-space:normal!important;overflow:visible;line-height:1.2;font-size:clamp(.82rem,.55rem + .35vw,.95rem)}
+}

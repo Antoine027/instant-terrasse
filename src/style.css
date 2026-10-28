@@ -1136,3 +1136,31 @@ details[open]>summary.menu-lien::after{transform:translateY(2px) rotate(225deg)}
   .sous-menu li a[aria-current],.cascade-liste a[aria-current]{border-radius:10px}
   .menu{max-height:calc(100svh - 110px);overscroll-behavior:contain}
 }
+
+/* ================= Menu mobile, proposition : pictos, vignettes, sections nettes ================= */
+.mm-ic,.mm-vig,.mm-txt small{display:none}
+.mm-txt b{font-weight:inherit}
+@media (max-width:1240px){
+  .menu{padding:8px 0 0}
+  .menu-item{border-bottom:1px solid #ece3d4}
+  .menu-lien{justify-content:flex-start;gap:14px;padding:14px 18px;font-size:1.12rem;font-weight:700}
+  .mm-nom{flex:1}
+  .mm-ic{display:block;flex:none;width:42px;height:42px;padding:10px;border-radius:12px;background:var(--fond2);color:var(--accent-texte);box-sizing:border-box}
+  details[open]>summary.menu-lien{background:var(--fond2)}
+  details[open]>summary.menu-lien .mm-ic{background:var(--accent);color:#fff}
+  /* Sous-menu : fond blanc, sections titrées, une carte par page */
+  .sous-menu,.sous-menu-large,.sous-menu-cascade{margin:0;padding:6px 14px 16px;background:var(--fond2);border-radius:0}
+  .sous-menu>div+div{margin-top:10px}
+  .sous-menu-titre{display:flex;align-items:center;gap:10px;padding:14px 4px 8px!important;font-size:.78rem!important;letter-spacing:.1em;color:var(--accent-texte)!important}
+  .sous-menu-titre::after{content:"";flex:1;height:1px;background:rgba(160,94,30,.25)}
+  .sous-menu ul,.cascade-liste{display:grid;gap:8px}
+  .sous-menu li a,.cascade-liste a{display:flex;align-items:center;gap:14px;padding:10px 12px;background:#fff;border:0!important;border-radius:14px!important;box-shadow:0 2px 10px -6px rgba(47,52,55,.35)}
+  .sous-menu li a::after,.cascade-liste a::after{content:"";width:7px;height:7px;flex:none;border-top:2px solid var(--accent-texte);border-right:2px solid var(--accent-texte);transform:rotate(45deg);opacity:.7;font-size:0}
+  .mm-vig{display:block;flex:none;width:52px;height:52px;border-radius:10px;overflow:hidden;background:var(--fond)}
+  .mm-vig img{width:100%;height:100%;object-fit:cover;display:block}
+  .mm-txt{flex:1;min-width:0;display:grid;gap:2px}
+  .mm-txt b{font:700 .98rem/1.25 Montserrat,sans-serif;color:var(--texte)}
+  .mm-txt small{display:block;font-size:.84rem;line-height:1.35;color:var(--doux);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .sous-menu li a[aria-current],.cascade-liste a[aria-current]{outline:2px solid var(--accent)}
+  .sous-menu li a[aria-current] .mm-txt b{color:var(--accent-texte)}
+}

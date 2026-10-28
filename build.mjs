@@ -4,8 +4,8 @@ import { mkdirSync, writeFileSync, readFileSync, cpSync, rmSync, existsSync } fr
 import { join } from "node:path";
 import { SITE, POSE, UNIVERS, AUTRES, PAGES } from "./src/pages.mjs";
 import { CONTENUS } from "./src/contenus.mjs";
-import { carteProduit } from "./src/vignettes.mjs";
-import { SCRIPT_GALERIE, imgPhoto } from "./src/galerie.mjs";
+import { carteProduit, VIGNETTES } from "./src/vignettes.mjs";
+import { SCRIPT_GALERIE, imgPhoto, photo } from "./src/galerie.mjs";
 
 // Les pages rédigées remplacent leur version « en préparation ».
 for (const p of PAGES) if (CONTENUS[p.chemin]) Object.assign(p, CONTENUS[p.chemin], { statut: "redigee" });
@@ -36,8 +36,26 @@ for (const p of PAGES) {
 }
 
 // ---------- Menu ----------
-const lienMenu = ([chemin, titre, , court], actuel) =>
-  `<li><a href="${chemin}"${chemin === actuel ? ' aria-current="page"' : ""}>${court ?? titre}</a></li>`;
+// Lien de sous-menu : vignette photo et description courte (visibles seulement dans le menu mobile).
+const vignetteMenu = (chemin) => {
+  const cle = VIGNETTES[chemin];
+  if (!cle) return `<span class="mm-vig mm-vig-vide" aria-hidden="true"></span>`;
+  const p = photo(cle);
+  return `<span class="mm-vig" aria-hidden="true"><img src="/assets/img/${p.dossier}/${p.cle}-400.webp" alt="" width="52" height="52" loading="lazy" decoding="async"></span>`;
+};
+const lienMenu = ([chemin, titre, desc, court], actuel) =>
+  `<li><a href="${chemin}"${chemin === actuel ? ' aria-current="page"' : ""}>${vignetteMenu(chemin)}<span class="mm-txt"><b>${court ?? titre}</b>${desc ? `<small>${desc}</small>` : ""}</span></a></li>`;
+
+// Pictos des rubriques (menu mobile).
+const ic = (d) => `<svg class="mm-ic" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">${d}</svg>`;
+const ICONES_MENU = {
+  terrasses: ic('<path d="M2 15h20M2 18.5h20"/><path d="M5 15V9l7-5 7 5v6"/>'),
+  amenagements: ic('<path d="M3 5h18M3 8h18"/><path d="M5 8v12M19 8v12"/><path d="M2 20h20"/>'),
+  projets: ic('<path d="M3 20h18"/><path d="M5 20v-6h14v6"/><path d="M8 14V9h8v5"/><path d="M11 9V5h2v4"/>'),
+  galerie: ic('<rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="m21 16-5-5-8 9"/>'),
+  methode: ic('<path d="M9 6h11M9 12h11M9 18h11"/><circle cx="4.5" cy="6" r="1.5"/><circle cx="4.5" cy="12" r="1.5"/><circle cx="4.5" cy="18" r="1.5"/>'),
+  professionnels: ic('<rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/><path d="M3 13h18"/>'),
+};
 
 const menuUnivers = (u0, actuel) => {
   const u = { ...u0, groupes: u0.groupes.map((g) => ({ ...g, pages: u0.menuToujours ? g.pages : g.pages.filter(visible) })).filter((g) => g.pages.length) };
@@ -49,7 +67,7 @@ const menuUnivers = (u0, actuel) => {
   }
   return `<li class="menu-item">
     <details class="menu-deroulant">
-      <summary class="menu-lien${dansUnivers ? " actif" : ""}">${u.nom}</summary>
+      <summary class="menu-lien${dansUnivers ? " actif" : ""}">${ICONES_MENU[u.cle] ?? ""}<span class="mm-nom">${u.nom}</span></summary>
       ${u.cascade ? `<div class="sous-menu sous-menu-cascade">
         <ul class="cascade">${u.groupes.map((g) => `<li class="cascade-item${g.pages.some(([c]) => c === actuel) ? " cascade-actif" : ""}"><button type="button" class="cascade-titre">${g.nom}</button><div class="cascade-panneau"><div><p class="sous-menu-titre">${g.nom}</p><ul class="cascade-liste">${g.pages.map((p) => lienMenu(p, actuel)).join("")}</ul></div>${g.photo ? `<a class="cascade-photo" href="${g.pages[0][0]}" tabindex="-1" aria-hidden="true">${imgPhoto(g.photo, { sizes: "220px" })}</a>` : ""}</div></li>`).join("")}</ul>
       </div>` : `<div class="sous-menu${u.groupes.length > 2 ? " sous-menu-large" : ""}">
@@ -69,8 +87,8 @@ const entete = (actuel) => `
     <nav class="menu" aria-label="Navigation principale">
       <ul class="menu-liste">
         ${UNIVERS.filter((u) => u.cle !== "professionnels").map((u) => menuUnivers(u, actuel)).join("")}
-        <li class="menu-item"><a class="menu-lien${actuel === "/realisations/" ? " actif" : ""}" href="/realisations/">Galerie</a></li>
-        <li class="menu-item"><a class="menu-lien" href="/#methode">Notre méthode</a></li>
+        <li class="menu-item"><a class="menu-lien${actuel === "/realisations/" ? " actif" : ""}" href="/realisations/">${ICONES_MENU.galerie}<span class="mm-nom">Galerie</span></a></li>
+        <li class="menu-item"><a class="menu-lien" href="/#methode">${ICONES_MENU.methode}<span class="mm-nom">Notre méthode</span></a></li>
         ${menuUnivers(UNIVERS.find((u) => u.cle === "professionnels"), actuel)}
         <li class="menu-cta"><a class="bouton" href="/contact/">Demander une visite gratuite</a><a class="menu-tel" href="tel:${SITE.telLien}">ou appelez le ${SITE.tel}</a></li>
       </ul>

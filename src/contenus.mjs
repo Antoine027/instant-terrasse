@@ -102,7 +102,7 @@ ${heroPlein({ fil: "Terrasses", h1: ["Terrasse bois", "sur mesure"], kicker: "Te
     </div>
     <div class="grille">
       <div class="carte"><h3>Sur structure aluminium</h3><p>Plots réglables, rails aluminium et fixations invisibles. Rien ne pourrit sous les lames, l'air circule, la terrasse reste plane. C'est la structure de nos bois modifiés et de nos bambous.</p></div>
-      <div class="carte"><h3>Sur structure traditionnelle</h3><p>Des lambourdes en bois sur plots réglables : la technique classique et éprouvée, adaptée aux bois massifs et exotiques.</p></div>
+      <div class="carte"><h3>Sur structure traditionnelle</h3><p>Des lambourdes en bois sur plots réglables : la technique classique et éprouvée, adaptée aux lames classiques et aux bois exotiques.</p></div>
     </div>
   </div>
 </section>

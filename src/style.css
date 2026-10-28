@@ -1244,3 +1244,16 @@ details[open]>summary.menu-lien::after{transform:translateY(2px) rotate(225deg)}
   .essence .evol-pastilles figcaption{white-space:nowrap}
 }
 @media (min-width:1061px){.essence>.evol-ligne .evol-pastilles{width:100%}}
+/* Finitions cartes d'essences (ordinateur) */
+@media (min-width:1061px){
+  .essence{--bande:250px;background:linear-gradient(160deg,#fff 0%,var(--fond2) 100%) top/100% var(--bande) no-repeat,#fff;grid-template-rows:var(--bande) auto}
+  .essence-photo,.essence>.evol-ligne{background:none!important;height:var(--bande);box-sizing:border-box}
+  .essence-photo{padding:28px 12px 28px 28px}
+  .essence-photo img{max-height:100%!important;width:auto!important;max-width:100%!important;object-fit:contain}
+  .essence>.evol-ligne{padding:24px 28px 20px 12px;justify-content:center}
+  .essence .evol-pastilles img{max-height:150px}
+  .essence-texte{padding:20px 28px 22px}
+  .essence-texte h3{font-size:1.15rem}
+  .essence-texte p,.essence-texte .puces li{font-size:1rem}
+  .essence .puces{margin-bottom:0}
+}

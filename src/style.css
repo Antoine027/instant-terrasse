@@ -1373,3 +1373,16 @@ details[open]>summary.menu-lien::after{transform:translateY(2px) rotate(225deg)}
   .bloc-rappel:has(h1) .rappel-direct{order:3}
   section.bloc-rappel:has(h1){padding-top:20px}
 }
+@media (max-width:700px){
+  section.bloc-rappel:has(h1){padding-top:14px!important}
+  .bloc-rappel:has(h1) h1{font-size:1.75rem!important;line-height:1.1;margin:0 0 6px!important}
+  .bloc-rappel:has(h1) .chapo{font-size:.9rem!important;line-height:1.45;margin:0 0 14px!important}
+  .bloc-rappel:has(h1) .deux-colonnes{gap:0!important}
+  .bloc-rappel:has(h1) form{padding:16px 16px 14px}
+  .bloc-rappel:has(h1) .choix-tuile{padding:8px 4px;gap:4px;min-height:0}
+  .bloc-rappel:has(h1) .choix-tuile svg{width:26px;height:26px}
+  .bloc-rappel:has(h1) .choix-grille{gap:6px}
+  .bloc-rappel:has(h1) textarea{height:56px;min-height:0}
+  .bloc-rappel:has(h1) fieldset{margin-bottom:10px}
+}
+@media (max-width:700px){section.bloc-rappel:has(h1){padding-top:24px!important}}

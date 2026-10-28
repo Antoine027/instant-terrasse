@@ -40,7 +40,7 @@ export const imgPhoto = (cle, { sizes = "(max-width:760px) 100vw, 400px", priori
 };
 
 // Galerie filtrable par essence pour une catégorie (ex. "terrasse-bois").
-export const galerie = (categorie, { titre, intro, legende = "Illustrations", groupe, types } = {}) => {
+export const galerie = (categorie, { titre, intro, legende = "Illustrations", groupe, types, ordre } = {}) => {
   // categorie : nom de catégorie, ou liste de clés de photos (sélection sans filtres).
   const selection = Array.isArray(categorie);
   // groupe : fonction qui donne le libellé de filtre d'une photo (sinon son essence).
@@ -49,6 +49,8 @@ export const galerie = (categorie, { titre, intro, legende = "Illustrations", gr
   // types : liste ordonnée de filtres ; une photo peut appartenir à plusieurs (champ « types » du manifeste).
   if (types) liste.forEach((p, i) => { liste[i] = { ...p, essence: (p.types || []).join("|") }; });
   const essences = types ? types.filter((t) => liste.some((p) => (p.types || []).includes(t))) : selection && !groupe ? [] : [...new Set(liste.map((p) => p.essence).filter(Boolean))];
+  // ordre : clés des photos à afficher en premier (les plus belles), sans changer l'ordre des filtres.
+  if (ordre) { const rang = (p) => { const i = ordre.indexOf(p.cle); return i < 0 ? ordre.length : i; }; liste.sort((a, b) => rang(a) - rang(b)); }
   return `
 <div class="galerie-bloc" data-galerie>
   ${titre ? `<h2>${titre}</h2>` : ""}${intro ? `<p class="chapo">${intro}</p>` : ""}

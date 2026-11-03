@@ -1,6 +1,6 @@
 // Galeries photo générées depuis src/photos.json (rempli par outils/photos.py).
 // Les photos gardent leur format d'origine (pas de recadrage) : mise en page en colonnes.
-import { readFileSync } from "node:fs";
+import { readFileSync, existsSync } from "node:fs";
 import { RANG } from "./ordre-photos.mjs";
 export const PHOTOS = JSON.parse(readFileSync(new URL("./photos.json", import.meta.url), "utf8"));
 
@@ -71,3 +71,17 @@ export const galerie = (categorie, { titre, intro, legende = "Illustrations", gr
 // Script des filtres (une seule fois par page).
 export const SCRIPT_GALERIE = `document.querySelectorAll('[data-galerie]').forEach(g=>{const b=g.querySelectorAll('.filtre');b.forEach(x=>x.addEventListener('click',()=>{b.forEach(y=>y.setAttribute('aria-pressed',y===x));const f=x.dataset.filtre;g.querySelectorAll('figure').forEach(fig=>fig.hidden=!(f==='tout'||fig.dataset.essence.split(' ').includes(f)))}))});
 (()=>{let d,im,cp,nb,liste=[],i=0;const ouvre=(g,fig)=>{if(!d){d=document.createElement('dialog');d.className='visionneuse';d.setAttribute('aria-label','Photo agrandie');d.innerHTML='<img alt=""><p class="v-legende"></p><span class="v-compte"></span><button class="v-fermer" aria-label="Fermer">×</button><button class="v-prec" aria-label="Photo précédente">‹</button><button class="v-suiv" aria-label="Photo suivante">›</button>';document.body.append(d);im=d.querySelector('img');cp=d.querySelector('.v-legende');nb=d.querySelector('.v-compte');d.querySelector('.v-fermer').onclick=()=>d.close();d.querySelector('.v-prec').onclick=()=>va(-1);d.querySelector('.v-suiv').onclick=()=>va(1);d.addEventListener('click',e=>{if(e.target===d)d.close()});d.addEventListener('keydown',e=>{if(e.key==='ArrowLeft')va(-1);if(e.key==='ArrowRight')va(1)});let x0=null;d.addEventListener('touchstart',e=>x0=e.touches[0].clientX,{passive:true});d.addEventListener('touchend',e=>{if(x0===null)return;const dx=e.changedTouches[0].clientX-x0;if(Math.abs(dx)>40)va(dx<0?1:-1);x0=null});d.addEventListener('close',()=>document.body.style.overflow='')}liste=[...g.querySelectorAll('.mosaique figure:not([hidden])')];i=liste.indexOf(fig);montre();d.showModal();document.body.style.overflow='hidden'};const montre=()=>{const s=liste[i].querySelector('img');im.removeAttribute('src');im.srcset=s.srcset;im.sizes='100vw';im.src=s.src;im.alt=s.alt;const c=liste[i].querySelector('figcaption');cp.textContent=c?c.textContent:'';if(s.dataset.credit){const k=document.createElement('small');k.className='v-credit';k.textContent=s.dataset.credit;cp.append(k)};nb.textContent=(i+1)+' / '+liste.length};const va=n=>{i=(i+n+liste.length)%liste.length;montre()};document.querySelectorAll('[data-galerie]').forEach(g=>g.querySelectorAll('.mosaique figure').forEach(f=>{f.addEventListener('click',()=>ouvre(g,f));f.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();ouvre(g,f)}})}))})();`;
+
+// Photo d'en-tête : sur mobile (cadre presque carré), une version recadrée en portrait, légère et nette.
+// Les recadrages sont produits par outils/recadrages.py d'après RECADRAGES (écrit par build.mjs).
+export const RECADRAGES = new Map();
+const LARGEURS_PORTRAIT = [400, 600, 800, 1000, 1200, 1400];
+export const imgHero = (cle, position = "50% 50%", sizes = "100vw") => {
+  const p = photo(cle);
+  RECADRAGES.set(cle, { dossier: p.dossier, position });
+  const base = `/assets/img/${p.dossier}/${cle}-p`;
+  const dispo = LARGEURS_PORTRAIT.filter((w) => existsSync(new URL(`../public${base}-${w}.webp`, import.meta.url)));
+  const img = imgPhoto(cle, { sizes, prioritaire: true, classe: "h-img" }).replace("<img ", `<img style="object-position:${position}" `);
+  if (!dispo.length) return img;
+  return `<picture class="h-pic"><source media="(max-width:700px)" srcset="${dispo.map((w) => `${base}-${w}.webp ${w}w`).join(", ")}" sizes="100vw">${img}</picture>`;
+};

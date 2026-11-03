@@ -1,7 +1,7 @@
 // Contenus rédigés des pages. Une page présente ici remplace sa version « en préparation ».
 // Règles : pas de chiffre, garantie, certification ou chantier inventé ; pas de nom de fournisseur.
 import { SITE, POSE, TRIO, BADGE_AVIS, blocRappel } from "./pages.mjs";
-import { galerie, imgPhoto, PHOTOS, credit } from "./galerie.mjs";
+import { galerie, imgPhoto, imgHero, PHOTOS, credit } from "./galerie.mjs";
 import { carteProduit } from "./vignettes.mjs";
 
 const img = (nom, alt, ratio) =>
@@ -13,7 +13,7 @@ const evolution = (nom, cle, etapes) => `<div class="evol-ligne" role="group" ar
 // Bandeau photo plein écran (même style que l'accueil)
 const heroPlein = ({ fil, h1, kicker, chapo, photo, position = "65% 50%", actions }) => `
 <section class="hero-plein hero-produit">
-  ${imgPhoto(photo, { sizes: "(max-width:700px) 220vw, 100vw", prioritaire: true, classe: "h-img" }).replace("<img ", `<img style="object-position:${position}" `)}
+  ${imgHero(photo, position)}
   <div class="conteneur h-txt">
     <p class="fil"><a href="/">Accueil</a> › ${fil}</p>
     <p class="kicker">${kicker}</p>

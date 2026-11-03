@@ -1420,3 +1420,5 @@ details[open]>summary.menu-lien::after{transform:translateY(2px) rotate(225deg)}
 /* Accessibilité : texte réservé aux lecteurs d'écran ; titre de section masqué mais présent */
 .sr{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 #piece>.conteneur>h2{display:block!important;position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;margin:0}
+.h-pic{display:contents}
+.comparatif thead th.col-accent{background:var(--bouton)}

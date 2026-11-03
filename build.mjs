@@ -5,7 +5,7 @@ import { join } from "node:path";
 import { SITE, POSE, UNIVERS, AUTRES, PAGES } from "./src/pages.mjs";
 import { CONTENUS } from "./src/contenus.mjs";
 import { carteProduit, VIGNETTES } from "./src/vignettes.mjs";
-import { SCRIPT_GALERIE, imgPhoto, photo } from "./src/galerie.mjs";
+import { SCRIPT_GALERIE, imgPhoto, photo, RECADRAGES } from "./src/galerie.mjs";
 import { cssPourPage } from "./src/purge-css.mjs";
 
 // Les pages rédigées remplacent leur version « en préparation ».
@@ -160,6 +160,9 @@ const preloadLcp = (corps = "") => {
   const m = corps.match(/<img[^>]*fetchpriority="high"[^>]*>/);
   if (!m) return "";
   const srcset = m[0].match(/srcset="([^"]+)"/)?.[1], sizes = m[0].match(/sizes="([^"]+)"/)?.[1];
+  // Photo d'en-tête avec version portrait mobile : un préchargement par format (media), pas de double téléchargement.
+  const src = corps.match(/<source media="\(max-width:700px\)" srcset="([^"]+)" sizes="100vw">\s*<img[^>]*fetchpriority="high"/);
+  if (src && srcset) return `<link rel="preload" as="image" media="(max-width:700px)" imagesrcset="${src[1]}" imagesizes="100vw" fetchpriority="high"><link rel="preload" as="image" media="(min-width:701px)" imagesrcset="${srcset}" imagesizes="${sizes ?? "100vw"}" fetchpriority="high">`;
   return srcset ? `<link rel="preload" as="image" imagesrcset="${srcset}" imagesizes="${sizes ?? "100vw"}" fetchpriority="high">` : "";
 };
 
@@ -180,6 +183,7 @@ ${!EN_LIGNE ? `<meta name="robots" content="noindex, nofollow">` : horsSitemap(p
 <meta property="og:description" content="${esc(p.description)}">
 <meta property="og:locale" content="fr_FR">
 <meta name="theme-color" content="#F8F3EB">
+<link rel="preload" href="/assets/fonts/montserrat-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32.png">
 <link rel="icon" type="image/png" sizes="48x48" href="/assets/img/favicon-48.png">
@@ -224,6 +228,7 @@ for (const p of PAGES) {
   writeFileSync(join(dossier, "index.html"), html.replace("/*CSS*/", cssPourPage(css, html)));
 }
 
+writeFileSync("outils/recadrages.json", JSON.stringify(Object.fromEntries(RECADRAGES), null, 1));
 writeFileSync(join(DIST, "robots.txt"), EN_LIGNE
   ? `User-agent: *\nAllow: /\nSitemap: ${SITE.url}/sitemap.xml\n`
   : `User-agent: *\nDisallow: /\n`);

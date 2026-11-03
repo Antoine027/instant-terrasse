@@ -1,0 +1,90 @@
+{
+ "alu-piscine-blanche-vue": {
+  "dossier": "aluminium",
+  "position": "66% 50%"
+ },
+ "terrasse-kebony-piscine-debordement": {
+  "dossier": "bois",
+  "position": "60% 55%"
+ },
+ "structure-lames-clipsees-vue-haut": {
+  "dossier": "structures",
+  "position": "55% 40%"
+ },
+ "bardage-thermofrene-maison": {
+  "dossier": "bardage",
+  "position": "70% 45%"
+ },
+ "pergola-bioclimatique-salon-piscine": {
+  "dossier": "pergolas",
+  "position": "60% 50%"
+ },
+ "pergola-toile-retractable-facade": {
+  "dossier": "pergolas",
+  "position": "65% 50%"
+ },
+ "pergola-toit-fixe-piscine": {
+  "dossier": "pergolas",
+  "position": "65% 50%"
+ },
+ "gc-maison-lisses-noires": {
+  "dossier": "garde-corps",
+  "position": "60% 45%"
+ },
+ "alu-piscine-jardin-tropical": {
+  "dossier": "aluminium",
+  "position": "65% 50%"
+ },
+ "carrelage-toit-terrasse-montagnes": {
+  "dossier": "terrasses",
+  "position": "50% 60%"
+ },
+ "bardage-alu-vertical-brun-escalier": {
+  "dossier": "bardage",
+  "position": "60% 50%"
+ },
+ "composite-gris-piscine": {
+  "dossier": "composite",
+  "position": "50% 60%"
+ },
+ "store-banne-coffre-bardage": {
+  "dossier": "stores",
+  "position": "45% 40%"
+ },
+ "carport-garage-gravier": {
+  "dossier": "pergolas",
+  "position": "55% 45%"
+ },
+ "pilotis-garde-corps-verre-salon": {
+  "dossier": "terrasses",
+  "position": "65% 50%"
+ },
+ "terrasse-accoya-naturel-piscine-vue-haut": {
+  "dossier": "bois",
+  "position": "60% 50%"
+ },
+ "ambiance-dalles-sur-plots": {
+  "dossier": "terrasses",
+  "position": "55% 55%"
+ },
+ "ambiance-balcon-lames": {
+  "dossier": "terrasses",
+  "position": "55% 50%"
+ },
+ "ambiance-plage-piscine": {
+  "dossier": "terrasses",
+  "position": "45% 55%"
+ },
+ "ambiance-toit-terrasse": {
+  "dossier": "terrasses",
+  "position": "40% 60%"
+ },
+ "terrasse-thermofrene-pool-house": {
+  "dossier": "bois",
+  "position": "60% 50%"
+ },
+ "terrasse-kebony-restaurant": {
+  "dossier": "bois",
+  "position": "50% 55%"
+ }
+}

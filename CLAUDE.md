@@ -58,4 +58,6 @@ Remplaçant du site WordPress/Elementor instantterrasse.com. Générateur Node s
 - Charte : fond #F0E8DA, fond secondaire #F8F3EB, texte #2F3437, accent #D79A3A (survol #E3A94A), rayon 15px, Montserrat (titres), Lato (texte), polices hébergées dans public/assets/fonts.
 - Ne jamais inventer de chantier, avis client, certification, garantie ou chiffre.
 - Textes personnalisés, pas génériques : partir des faits ci-dessus, phrases concrètes, pas de superlatifs creux.
-- Objectif PageSpeed 100 sur chaque page (mesurer avec Lighthouse) ; images en WebP avec variantes 400/600/1000/1600 via outils/photos.py.
+- Objectif PageSpeed 100 sur chaque page (mesurer avec Lighthouse) ; images en WebP avec variantes 400 à 2400 via outils/photos.py (1200/1400/2000 ajoutées le 03/11/2026).
+- Netteté des photos (03/11/2026) : chaque emplacement a un attribut sizes calé sur la taille réellement affichée (cartes recadrées comprises). Photos d'en-tête : version portrait pour mobile, via imgHero() ; après ajout ou changement d'une photo d'en-tête, lancer node build.mjs, python3 -I outils/recadrages.py, puis node build.mjs.
+- CSS : src/purge-css.mjs ne garde dans chaque page que les règles utilisées par son HTML (scripts en ligne compris). Une classe ajoutée en JS doit apparaître en toutes lettres dans le script.

@@ -1,4 +1,4 @@
-import { imgPhoto } from "./galerie.mjs";
+import { imgPhoto, imgHero } from "./galerie.mjs";
 import { carteProduit, vignette } from "./vignettes.mjs";
 // Plan du site et contenu des pages. Une entrée = une page (chemin avec / final).
 // statut "preparation" : page affichée avec un contenu provisoire, à rédiger.
@@ -223,7 +223,7 @@ export const blocRappel = (titre = "Parlons de votre projet", texte = "Laissez v
 const accueil = `
 <section class="hero-plein hero-slogan hero-maison-plein">
   <div class="hm-visuel">
-    ${imgPhoto("alu-piscine-blanche-vue", { sizes: "(max-width:700px) 225vw, 100vw", prioritaire: true, classe: "h-img" })}
+    ${imgHero("alu-piscine-blanche-vue", "66% 50%")}
   </div>
   <div class="conteneur h-txt">
     <p class="kicker"><span class="k-long">Terrasses, pergolas et garde-corps s</span><span class="k-court">S</span>ur mesure à Lyon</p>

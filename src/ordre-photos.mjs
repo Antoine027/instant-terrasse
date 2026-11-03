@@ -53,6 +53,7 @@ export const RANG = {
  "gc-collectif-barreaudage-beige": 0.98,
  "bardage-bambou-xtreme-maison": 0.0,
  "bardage-thermo-epicea-pilotis": 0.03,
+ "bardage-thermofrene-maison-hd": 0.99,
  "bardage-thermofrene-maison": 0.061,
  "bardage-thermo-epicea-maison": 0.091,
  "bardage-accoya-gris-maison": 0.121,

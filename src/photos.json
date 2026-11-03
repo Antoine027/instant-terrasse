@@ -3270,5 +3270,22 @@
    1400
   ],
   "ratio": 1.7766
+ },
+ {
+  "cle": "bardage-thermofrene-maison-hd",
+  "dossier": "bardage",
+  "categorie": "carte-accueil",
+  "essence": "Thermofrêne",
+  "alt": "Étage de maison contemporaine en bardage thermofrêne brun foncé",
+  "largeurs": [
+   400,
+   600,
+   800,
+   1000,
+   1600,
+   2400
+  ],
+  "ratio": 1.5003,
+  "credit": "Grad"
  }
 ]

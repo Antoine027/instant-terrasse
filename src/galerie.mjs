@@ -62,7 +62,7 @@ export const galerie = (categorie, { titre, intro, legende = "Illustrations", gr
     ${essences.map((e) => `<button type="button" class="filtre" aria-pressed="false" data-filtre="${slug(e)}">${e}</button>`).join("")}
   </div>` : ""}
   <div class="mosaique">
-    ${liste.map((p) => `<figure data-essence="${(p.essence || "").split("|").map(slug).join(" ")}" style="--r:${p.ratio}" tabindex="0" role="button" aria-label="Agrandir : ${esc(p.alt)}">${imgPhoto(p.cle, { sizes: "(max-width:560px) 100vw, (max-width:1060px) 50vw, 380px" })}${p.essence && essences.length > 1 && !types ? `<figcaption>${p.essence}</figcaption>` : ""}</figure>`).join("")}
+    ${liste.map((p) => `<figure data-essence="${(p.essence || "").split("|").map(slug).join(" ")}" style="--r:${p.ratio}" tabindex="0" aria-label="Agrandir : ${esc(p.alt)}">${imgPhoto(p.cle, { sizes: "(max-width:560px) 100vw, (max-width:1060px) 96vw, 660px" })}${p.essence && essences.length > 1 && !types ? `<figcaption>${p.essence}</figcaption>` : ""}</figure>`).join("")}
   </div>
   <p class="legende">${legende}.</p>
 </div>`;

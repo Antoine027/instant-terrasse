@@ -46,7 +46,7 @@ const icone = (chemin) =>
 export const vignette = (chemin) => {
   const cle = VIGNETTES[chemin];
   return cle
-    ? `<div class="vignette">${imgPhoto(cle, { sizes: "(max-width:560px) 92vw, (max-width:1060px) 45vw, 290px" })}</div>`
+    ? `<div class="vignette">${imgPhoto(cle, { sizes: "(max-width:560px) 115vw, (max-width:1060px) 60vw, 570px" })}</div>`
     : `<div class="vignette vignette-vide">${icone(chemin)}</div>`;
 };
 

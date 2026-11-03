@@ -5,7 +5,7 @@ import { galerie, imgPhoto, PHOTOS, credit } from "./galerie.mjs";
 import { carteProduit } from "./vignettes.mjs";
 
 const img = (nom, alt, ratio) =>
-  `<img src="/assets/img/bois/${nom}-400.webp" srcset="/assets/img/bois/${nom}-400.webp 400w, /assets/img/bois/${nom}-800.webp 800w" sizes="(max-width:700px) 90vw, 360px" alt="${alt}" width="400" height="${ratio}" loading="lazy" decoding="async"${credit("Grad")}>`;
+  `<img src="/assets/img/bois/${nom}-400.webp" srcset="/assets/img/bois/${nom}-400.webp 400w, /assets/img/bois/${nom}-800.webp 800w" sizes="(max-width:700px) 82vw, 460px" alt="${alt}" width="400" height="${ratio}" loading="lazy" decoding="async"${credit("Grad")}>`;
 
 // Évolution de la teinte (photos fabricant ©Grad) : curseur à la pose → patine.
 const evolution = (nom, cle, etapes) => `<div class="evol-ligne" role="group" aria-label="Évolution de la teinte"><div class="evol-pastilles">${etapes.map((t, i) => `<figure><img src="/assets/img/bois/evol-${cle}-${i}-v3-200.webp" srcset="/assets/img/bois/evol-${cle}-${i}-v3-200.webp 200w, /assets/img/bois/evol-${cle}-${i}-v3-400.webp 400w" sizes="(max-width:700px) 30vw, 110px" alt="${nom} : ${t.toLowerCase()}" width="200" height="400" loading="lazy" decoding="async"${credit("Grad")}><figcaption>${t}</figcaption></figure>`).join("")}</div></div>`;
@@ -13,7 +13,7 @@ const evolution = (nom, cle, etapes) => `<div class="evol-ligne" role="group" ar
 // Bandeau photo plein écran (même style que l'accueil)
 const heroPlein = ({ fil, h1, kicker, chapo, photo, position = "65% 50%", actions }) => `
 <section class="hero-plein hero-produit">
-  ${imgPhoto(photo, { sizes: "(max-width:700px) calc(100vw - 32px), 100vw", prioritaire: true, classe: "h-img" }).replace("<img ", `<img style="object-position:${position}" `)}
+  ${imgPhoto(photo, { sizes: "(max-width:700px) 220vw, 100vw", prioritaire: true, classe: "h-img" }).replace("<img ", `<img style="object-position:${position}" `)}
   <div class="conteneur h-txt">
     <p class="fil"><a href="/">Accueil</a> › ${fil}</p>
     <p class="kicker">${kicker}</p>
@@ -307,7 +307,7 @@ ${heroPlein({ fil: "Aménagements", h1: ["Bardage bois", "sur mesure"], kicker: 
     <h2>Nos essences de bardage</h2>
     <p class="chapo">Des bois modifiés et traités, choisis pour leur stabilité : un bardage doit rester droit et beau malgré le soleil et la pluie.</p>
     <div class="grille grille-3">
-      ${bardageEssences.map(([n, t, g]) => `<div class="carte carte-lame"><div class="lames">${PHOTOS.filter((p) => p.categorie === "lame-bardage" && p.essence === n).map((p) => imgPhoto(p.cle, { sizes: "(max-width:700px) 40vw, 160px" })).join("")}</div><h3>${n}</h3><p>${t}</p><p class="garantie">Garantie fabricant : ${g.toLowerCase()}, selon conditions</p></div>`).join("")}
+      ${bardageEssences.map(([n, t, g]) => `<div class="carte carte-lame"><div class="lames">${PHOTOS.filter((p) => p.categorie === "lame-bardage" && p.essence === n).map((p) => imgPhoto(p.cle, { sizes: "276px" })).join("")}</div><h3>${n}</h3><p>${t}</p><p class="garantie">Garantie fabricant : ${g.toLowerCase()}, selon conditions</p></div>`).join("")}
     </div>
   </div>
 </section>
@@ -535,7 +535,7 @@ const terrasseAluminium = {
   <div class="conteneur">
     <h2>Les teintes</h2>
     <p class="chapo">Des décors bois du plus clair au plus chaud, ou un gris uni pour un style épuré. Vous voyez les échantillons en vrai, chez vous, lors du rendez-vous.</p>
-    <div class="nuancier">${PHOTOS.filter((p) => p.categorie === "teinte-alu").map((p) => `<figure>${imgPhoto(p.cle, { sizes: "(max-width:560px) 45vw, 180px" })}<figcaption>${p.essence}</figcaption></figure>`).join("")}</div>
+    <div class="nuancier">${PHOTOS.filter((p) => p.categorie === "teinte-alu").map((p) => `<figure>${imgPhoto(p.cle, { sizes: "(max-width:560px) 45vw, 230px" })}<figcaption>${p.essence}</figcaption></figure>`).join("")}</div>
   </div>
 </section>`,
     galerieCat: "terrasse-aluminium",

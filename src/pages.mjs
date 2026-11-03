@@ -111,8 +111,8 @@ const ETOILE = `<svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="tru
 const ETOILES = `<span class="etoiles" role="img" aria-label="5 étoiles sur 5">${ETOILE.repeat(5)}</span>`;
 const LOGO_GOOGLE = `<svg class="logo-google" viewBox="0 0 48 48" width="20" height="20" aria-hidden="true"><path fill="#FFC107" d="M43.6 20.5H42V20H24v8h11.3C33.7 32.7 29.2 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.3-.1-2.4-.4-3.5z"/><path fill="#FF3D00" d="M6.3 14.7l6.6 4.8C14.7 15.1 19 12 24 12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 16.3 4 9.7 8.3 6.3 14.7z"/><path fill="#4CAF50" d="M24 44c5.2 0 9.9-2 13.4-5.2l-6.2-5.2C29.2 35.1 26.7 36 24 36c-5.2 0-9.6-3.3-11.3-8l-6.5 5C9.5 39.6 16.2 44 24 44z"/><path fill="#1976D2" d="M43.6 20.5H42V20H24v8h11.3c-.8 2.2-2.2 4.2-4.1 5.6l6.2 5.2C37 39.2 44 34 44 24c0-1.3-.1-2.4-.4-3.5z"/></svg>`;
 const COULEURS_AVIS = ["#3d6b35", "#4a5961", "#9a5a1f", "#5b4a7a"];
-const CERTIFIE = `<svg class="certifie" viewBox="0 0 24 24" width="16" height="16" aria-label="Avis vérifié"><path fill="#4285F4" d="M12 1l2.6 2.2 3.4-.4.9 3.3 3 1.7-1.2 3.2 1.2 3.2-3 1.7-.9 3.3-3.4-.4L12 23l-2.6-2.2-3.4.4-.9-3.3-3-1.7L3.3 13 2.1 9.8l3-1.7.9-3.3 3.4.4z"/><path fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M7.5 12.2l3 3 6-6"/></svg>`;
-export const BADGE_AVIS = `<a class="badge-avis" href="${AVIS.lien}" target="_blank" rel="noopener" aria-label="${AVIS.note} sur 5 sur Google, ${AVIS.total} avis">${LOGO_GOOGLE}<strong>${AVIS.note}</strong>${ETOILES}<span>${AVIS.total} avis</span></a>`;
+const CERTIFIE = `<svg class="certifie" viewBox="0 0 24 24" width="16" height="16" role="img" aria-label="Avis vérifié"><path fill="#4285F4" d="M12 1l2.6 2.2 3.4-.4.9 3.3 3 1.7-1.2 3.2 1.2 3.2-3 1.7-.9 3.3-3.4-.4L12 23l-2.6-2.2-3.4.4-.9-3.3-3-1.7L3.3 13 2.1 9.8l3-1.7.9-3.3 3.4.4z"/><path fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M7.5 12.2l3 3 6-6"/></svg>`;
+export const BADGE_AVIS = `<a class="badge-avis" href="${AVIS.lien}" target="_blank" rel="noopener" >${LOGO_GOOGLE}<strong>${AVIS.note}</strong><span class="sr"> sur 5 sur Google</span>${ETOILES}<span>${AVIS.total} avis</span></a>`;
 
 export const FAQ = [
   ["Quel matériau choisir pour ma terrasse&nbsp;?", "Tout dépend de l'aspect recherché, du budget et du temps que vous voulez consacrer à l'entretien. Le bois apporte la chaleur d'un matériau naturel, le composite et l'aluminium limitent l'entretien, le carrelage offre un rendu minéral. Notre <a href=\"/nos-terrasses/\">comparatif des matériaux</a> vous aide à y voir clair, et nous affinons le choix lors de la visite."],
@@ -189,12 +189,12 @@ const CHOIX_PROJET = [
 
 // Bloc « rappel » (formulaire court + note Google) : accueil et bas des pages produit.
 export const blocRappel = (titre = "Parlons de votre projet", texte = "Laissez votre numéro : nous vous rappelons pour en parler et organiser la visite, gratuite et sans engagement.", cocher = false, balise = "h2") => `
-<section id="rappel" class="bloc bloc-cta bloc-rappel">
+<section id="rappel" class="bloc bloc-cta bloc-rappel${balise === "h1" ? " rappel-page" : ""}">
   <div class="conteneur deux-colonnes">
     <div>
       <${balise}>${titre.replace(/ ([?!:])/g, "&nbsp;$1")}</${balise}>
       <p class="chapo">${texte}</p>
-      <a class="carte-google" href="${AVIS.lien}" target="_blank" rel="noopener" aria-label="Note Google ${AVIS.note} sur 5, ${AVIS.total} avis : voir les avis">
+      <a class="carte-google" href="${AVIS.lien}" target="_blank" rel="noopener">
         <span class="cg-haut">${LOGO_GOOGLE.replace('width="20" height="20"', 'width="30" height="30"')}<span class="cg-note"><strong>${AVIS.note}</strong>${ETOILES}</span></span>
         <span class="cg-texte">Note Google, ${AVIS.total} avis clients</span>
         <span class="cg-citation">« Le résultat dépasse mes attentes. » <em>—&nbsp;Clement&nbsp;V.</em></span>
@@ -223,8 +223,7 @@ export const blocRappel = (titre = "Parlons de votre projet", texte = "Laissez v
 const accueil = `
 <section class="hero-plein hero-slogan hero-maison-plein">
   <div class="hm-visuel">
-    ${imgPhoto("alu-piscine-blanche-vue", { sizes: "(max-width:700px) 150vh, 100vw", prioritaire: true, classe: "h-img" })}
-    <div class="pins" aria-label="Nos produits sur la maison">${PINS.map(([c, t, x, y, cote]) => `<a class="pin${cote ? " pin-" + cote : ""}" href="${c}" data-x="${x}" data-y="${y}"><span class="pin-point" aria-hidden="true"></span><span class="pin-nom">${t}</span></a>`).join("")}</div>
+    ${imgPhoto("alu-piscine-blanche-vue", { sizes: "(max-width:700px) 225vw, 100vw", prioritaire: true, classe: "h-img" })}
   </div>
   <div class="conteneur h-txt">
     <p class="kicker"><span class="k-long">Terrasses, pergolas et garde-corps s</span><span class="k-court">S</span>ur mesure à Lyon</p>
@@ -237,7 +236,6 @@ const accueil = `
     <p class="hero-avis">${BADGE_AVIS}</p>
     ${TRIO}
   </div>
-<script>${SCRIPT_PINS}</script>
 </section>
 
 <section id="piece" class="bloc">
@@ -249,16 +247,16 @@ const accueil = `
       <a class="pt-photo" href="/nos-terrasses/">${imgPhoto("terrasse-thermofrene-piscine-mer", { sizes: "(max-width:900px) 92vw, 620px" })}</a>
       <div class="pt-corps">
         <p class="pt-sur">Terrasses</p><h3>Des revêtements de terrasse…</h3>
-        <div class="pt-materiaux">${MATERIAUX_ACCUEIL.map(([c, t, ph, acc]) => `<a class="pt-mat" href="${c}">${imgPhoto(ph, { sizes: "(max-width:700px) 160vw, 300px" })}<span class="pt-nom"><small>Terrasse</small>${t}</span><span class="pt-acc">${acc}</span><span class="pt-dec">Découvrir <span aria-hidden="true">→</span></span></a>`).join("")}<a class="pt-mat pt-comparer" href="/nos-terrasses/"><span class="pt-nom">Comparer</span><span class="pt-acc">Bois, composite, aluminium ou carrelage&nbsp;: lequel choisir&nbsp;?</span><span class="pt-dec">Voir le comparatif <span aria-hidden="true">→</span></span></a></div>
+        <div class="pt-materiaux">${MATERIAUX_ACCUEIL.map(([c, t, ph, acc]) => `<a class="pt-mat" href="${c}">${imgPhoto(ph, { sizes: "(max-width:700px) 170vw, (max-width:1500px) 48vw, 800px" })}<span class="pt-nom"><small>Terrasse</small>${t}</span><span class="pt-acc">${acc}</span><span class="pt-dec">Découvrir <span aria-hidden="true">→</span></span></a>`).join("")}<a class="pt-mat pt-comparer" href="/nos-terrasses/"><span class="pt-nom">Comparer</span><span class="pt-acc">Bois, composite, aluminium ou carrelage&nbsp;: lequel choisir&nbsp;?</span><span class="pt-dec">Voir le comparatif <span aria-hidden="true">→</span></span></a></div>
         <p class="pt-lien"><a class="bouton bouton-clair" href="/nos-terrasses/">Comparer les matériaux</a></p>
       </div>
     </article>
     <h3 class="titre-autour">Et des aménagements…</h3>
     <div class="pieces-4">
-      ${AUTRES_PIECES.map(([c, t, x, ph]) => `<a class="piece-mini" href="${c}">${imgPhoto(ph, { sizes: "(max-width:700px) 190vw, (max-width:1100px) 45vw, 290px" })}<div class="pm-corps"><h3>${t}</h3><p>${x}</p><span class="pt-dec">Découvrir <span aria-hidden="true">→</span></span></div><span class="pm-fleche" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></span></a>`).join("")}
+      ${AUTRES_PIECES.map(([c, t, x, ph]) => `<a class="piece-mini" href="${c}">${imgPhoto(ph, { sizes: "(max-width:700px) 145vw, (max-width:1100px) 62vw, (max-width:1500px) 32vw, 530px" })}<div class="pm-corps"><h3>${t}</h3><p>${x}</p><span class="pt-dec">Découvrir <span aria-hidden="true">→</span></span></div><span class="pm-fleche" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></span></a>`).join("")}
     </div>
     <h3 class="titre-autour titre-projets">Pour tous vos projets.</h3>
-    <div class="projets-car">${PROJETS_ACCUEIL.map(([c, t, x, ph]) => `<a class="piece-mini projet-mini" href="${c}">${imgPhoto(ph, { sizes: "(max-width:700px) 82vw, 240px" })}<div class="pm-corps"><h3>${t}</h3><p>${x}</p><span class="pt-dec">Découvrir <span aria-hidden="true">→</span></span></div><span class="pm-fleche" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></span></a>`).join("")}</div>
+    <div class="projets-car">${PROJETS_ACCUEIL.map(([c, t, x, ph]) => `<a class="piece-mini projet-mini" href="${c}">${imgPhoto(ph, { sizes: "(max-width:700px) 78vw, 96px" })}<div class="pm-corps"><h3>${t}</h3><p>${x}</p><span class="pt-dec">Découvrir <span aria-hidden="true">→</span></span></div><span class="pm-fleche" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></span></a>`).join("")}</div>
   </div>
 </section>
 
@@ -374,7 +372,7 @@ const aPropos = `
 </section>
 <section class="bloc bloc-alt">
   <div class="conteneur conteneur-etroit mot-texte">
-    <div class="portrait-antoine">${imgPhoto("antoine-escolle-2", { sizes: "(max-width:700px) 60vw, 280px" })}<p><strong>Antoine Escolle</strong><br>Fondateur d'Instant Terrasse</p></div>
+    <div class="portrait-antoine">${imgPhoto("antoine-escolle-2", { sizes: "150px" })}<p><strong>Antoine Escolle</strong><br>Fondateur d'Instant Terrasse</p></div>
     <h2>Mon parcours</h2>
     ${MOT_ANTOINE}
   </div>

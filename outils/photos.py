@@ -1,4 +1,4 @@
-"""Prépare les photos du site : redimensionne en WebP (600/1000/1600 px de large, sans dépasser l'original)
+"""Prépare les photos du site : redimensionne en WebP (400 à 2400 px de large, sans dépasser l'original)
 et met à jour src/photos.json (clé, dossier, largeurs, ratio, texte alternatif, catégorie, essence).
 Usage : python3 -I outils/photos.py lot.json   (lot = liste de photos à ajouter, voir ci-dessous)
 [{"src": "chemin/source.jpg", "cle": "terrasse-accoya-naturel-piscine", "dossier": "bois",
@@ -15,7 +15,7 @@ for p in json.load(open(sys.argv[1])):
     im = im.convert("RGB")
     if p.get("recadre"): im = im.crop(tuple(p["recadre"]))
     dest = os.path.join(RACINE, "public", "assets", "img", p["dossier"]); os.makedirs(dest, exist_ok=True)
-    largeurs = [w for w in (400, 600, 800, 1000, 1600) if w < im.width] + ([im.width] if im.width < 1600 else [])
+    largeurs = [w for w in (400, 600, 800, 1000, 1200, 1400, 1600, 2000, 2400) if w < im.width] + ([im.width] if im.width < 2400 else [])
     largeurs = sorted(set(largeurs))
     for w in largeurs:
         im.resize((w, round(im.height * w / im.width)), Image.LANCZOS).save(os.path.join(dest, f'{p["cle"]}-{w}.webp'), "WEBP", quality=80, method=6)

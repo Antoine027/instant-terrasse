@@ -1316,22 +1316,10 @@ details[open]>summary.menu-lien::after{transform:translateY(2px) rotate(225deg)}
   .formulaire-contact label>span{margin-bottom:4px}
   .formulaire-contact textarea{height:62px;min-height:0}
   .formulaire-contact .bouton-envoi{padding:14px 20px}
-  .hero-page:has(.formulaire-contact) h1{font-size:clamp(2.2rem,1.4rem + 2vw,3.2rem)}
 }
-@media (min-width:1061px){section.hero.hero-page:has(.formulaire-contact){padding-top:28px!important;padding-bottom:28px!important}.hero-page:has(.formulaire-contact) .deux-colonnes{align-items:start}}
 /* Contact (mobile) : formulaire tout de suite après le titre, compact */
 @media (max-width:700px){
-  section.hero.hero-page:has(.formulaire-contact){padding-top:12px!important}
-  .hero-page:has(.formulaire-contact) .deux-colonnes{display:flex;flex-direction:column;gap:0}
-  .hero-page:has(.formulaire-contact) .deux-colonnes>div:first-child{display:contents}
-  .hero-page:has(.formulaire-contact) .fil{display:none}
-  .hero-page:has(.formulaire-contact) h1{font-size:2rem;margin:0 0 8px}
-  .hero-page:has(.formulaire-contact) .chapo{font-size:.95rem;margin:0 0 12px}
-  .hero-page:has(.formulaire-contact) .puces{display:none}
-  .hero-page:has(.formulaire-contact) .deux-colonnes>div>p:has(.badge-avis){order:0;margin:0 0 16px}
   .formulaire-contact{order:1;padding:18px 16px}
-  .hero-page:has(.formulaire-contact) .contact-direct{order:2;margin-top:22px}
-  .hero-page:has(.formulaire-contact) .note-pose{order:3}
   .formulaire-contact fieldset{margin-bottom:14px}
   .formulaire-contact .choix-grille{gap:6px}
   .formulaire-contact .choix-tuile{padding:10px 4px;min-height:0;font-size:.8rem}
@@ -1345,8 +1333,6 @@ details[open]>summary.menu-lien::after{transform:translateY(2px) rotate(225deg)}
 @media (max-width:700px){
   .souhaits{grid-template-columns:1.45fr 1fr 1fr 1.1fr}
   .souhait span{padding:10px 4px;font-size:.8rem;white-space:nowrap}
-  .hero-page:has(.formulaire-contact) .chapo{display:none}
-  .hero-page:has(.formulaire-contact) h1{font-size:1.9rem;margin-bottom:12px}
 }
 .bloc-rappel h1{color:#fff;font-size:clamp(2rem,1.3rem + 2vw,3rem);margin:0 0 14px}
 .rappel-direct{display:flex;flex-wrap:wrap;align-items:center;gap:10px 12px;margin-top:26px}.rappel-direct>span{flex-basis:100%;color:rgba(255,255,255,.75);font-size:.95rem}.rappel-direct a{display:inline-flex;align-items:center;gap:8px;padding:11px 20px;border-radius:999px;border:1.5px solid rgba(255,255,255,.35);color:#fff!important;text-decoration:none;font:700 1.05rem Montserrat,sans-serif}.rappel-direct .rd-tel{background:#f0b15a;border-color:#f0b15a;color:#1b1d1f!important}.rappel-direct a:hover{border-color:#fff}.mentions-form{white-space:nowrap}@media (max-width:380px){.mentions-form{white-space:normal}}
@@ -1364,44 +1350,44 @@ details[open]>summary.menu-lien::after{transform:translateY(2px) rotate(225deg)}
 .appel-flottant{display:none!important}
 /* Contact (mobile) : formulaire juste sous le titre */
 @media (max-width:700px){
-  .page-contact .bloc-rappel .deux-colonnes,.bloc-rappel:has(h1) .deux-colonnes{display:flex;flex-direction:column}
-  .bloc-rappel:has(h1) .deux-colonnes>div:first-child{display:contents}
-  .bloc-rappel:has(h1) h1{order:0;font-size:1.9rem;margin:0 0 6px}
-  .bloc-rappel:has(h1) .chapo{order:0;font-size:.95rem;margin:0 0 16px}
-  .bloc-rappel:has(h1) form{order:1}
-  .bloc-rappel:has(h1) .carte-google{order:2;margin-top:22px}
-  .bloc-rappel:has(h1) .rappel-direct{order:3}
-  section.bloc-rappel:has(h1){padding-top:20px}
+  .page-contact .bloc-rappel .deux-colonnes,.bloc-rappel.rappel-page .deux-colonnes{display:flex;flex-direction:column}
+  .bloc-rappel.rappel-page .deux-colonnes>div:first-child{display:contents}
+  .bloc-rappel.rappel-page h1{order:0;font-size:1.9rem;margin:0 0 6px}
+  .bloc-rappel.rappel-page .chapo{order:0;font-size:.95rem;margin:0 0 16px}
+  .bloc-rappel.rappel-page form{order:1}
+  .bloc-rappel.rappel-page .carte-google{order:2;margin-top:22px}
+  .bloc-rappel.rappel-page .rappel-direct{order:3}
+  section.bloc-rappel.rappel-page{padding-top:20px}
 }
 @media (max-width:700px){
-  section.bloc-rappel:has(h1){padding-top:14px!important}
-  .bloc-rappel:has(h1) h1{font-size:1.75rem!important;line-height:1.1;margin:0 0 6px!important}
-  .bloc-rappel:has(h1) .chapo{font-size:.9rem!important;line-height:1.45;margin:0 0 14px!important}
-  .bloc-rappel:has(h1) .deux-colonnes{gap:0!important}
-  .bloc-rappel:has(h1) form{padding:16px 16px 14px}
-  .bloc-rappel:has(h1) .choix-tuile{padding:8px 4px;gap:4px;min-height:0}
-  .bloc-rappel:has(h1) .choix-tuile svg{width:26px;height:26px}
-  .bloc-rappel:has(h1) .choix-grille{gap:6px}
-  .bloc-rappel:has(h1) textarea{height:56px;min-height:0}
-  .bloc-rappel:has(h1) fieldset{margin-bottom:10px}
+  section.bloc-rappel.rappel-page{padding-top:14px!important}
+  .bloc-rappel.rappel-page h1{font-size:1.75rem!important;line-height:1.1;margin:0 0 6px!important}
+  .bloc-rappel.rappel-page .chapo{font-size:.9rem!important;line-height:1.45;margin:0 0 14px!important}
+  .bloc-rappel.rappel-page .deux-colonnes{gap:0!important}
+  .bloc-rappel.rappel-page form{padding:16px 16px 14px}
+  .bloc-rappel.rappel-page .choix-tuile{padding:8px 4px;gap:4px;min-height:0}
+  .bloc-rappel.rappel-page .choix-tuile svg{width:26px;height:26px}
+  .bloc-rappel.rappel-page .choix-grille{gap:6px}
+  .bloc-rappel.rappel-page textarea{height:56px;min-height:0}
+  .bloc-rappel.rappel-page fieldset{margin-bottom:10px}
 }
-@media (max-width:700px){section.bloc-rappel:has(h1){padding-top:24px!important}}
+@media (max-width:700px){section.bloc-rappel.rappel-page{padding-top:24px!important}}
 /* Contact (mobile) : tout centré */
 @media (max-width:700px){
-  .bloc-rappel:has(h1) h1,.bloc-rappel:has(h1) .chapo{text-align:center}
-  .bloc-rappel:has(h1) form label:not(.choix)>span,.bloc-rappel:has(h1) form legend,.bloc-rappel:has(h1) .mentions-form{display:block;text-align:center;width:100%}
-  .bloc-rappel:has(h1) form input,.bloc-rappel:has(h1) form textarea{text-align:center}
-  .bloc-rappel:has(h1) .carte-google{align-self:center;margin-left:auto;margin-right:auto;text-align:center}
-  .bloc-rappel:has(h1) .carte-google .cg-haut{justify-content:center}
-  .bloc-rappel:has(h1) .rappel-direct{justify-content:center;text-align:center}
+  .bloc-rappel.rappel-page h1,.bloc-rappel.rappel-page .chapo{text-align:center}
+  .bloc-rappel.rappel-page form label:not(.choix)>span,.bloc-rappel.rappel-page form legend,.bloc-rappel.rappel-page .mentions-form{display:block;text-align:center;width:100%}
+  .bloc-rappel.rappel-page form input,.bloc-rappel.rappel-page form textarea{text-align:center}
+  .bloc-rappel.rappel-page .carte-google{align-self:center;margin-left:auto;margin-right:auto;text-align:center}
+  .bloc-rappel.rappel-page .carte-google .cg-haut{justify-content:center}
+  .bloc-rappel.rappel-page .rappel-direct{justify-content:center;text-align:center}
 }
 @media (max-width:700px){
-  section.bloc-rappel:has(h1){padding-top:38px!important}
-  .bloc-rappel:has(h1) h1{margin:0 0 12px!important}
-  .bloc-rappel:has(h1) .chapo{margin:0 0 26px!important}
-  .bloc-rappel:has(h1) form{padding:20px 18px 16px}
-  .bloc-rappel:has(h1) .choix-grille{gap:8px}
-  .bloc-rappel:has(h1) .choix-tuile{padding:11px 4px}
+  section.bloc-rappel.rappel-page{padding-top:38px!important}
+  .bloc-rappel.rappel-page h1{margin:0 0 12px!important}
+  .bloc-rappel.rappel-page .chapo{margin:0 0 26px!important}
+  .bloc-rappel.rappel-page form{padding:20px 18px 16px}
+  .bloc-rappel.rappel-page .choix-grille{gap:8px}
+  .bloc-rappel.rappel-page .choix-tuile{padding:11px 4px}
 }
 @media (max-width:1240px){.entete-contact a,.entete-contact a:first-child{background:#f0b15a;color:#1b1d1f}}
 @media (max-width:1240px){.entete-contact a{background:var(--fond2);color:#e2a145}.entete-contact a svg{stroke-width:2.3}.entete-contact a:first-child{background:#f0b15a;color:#1b1d1f}}
@@ -1430,3 +1416,7 @@ details[open]>summary.menu-lien::after{transform:translateY(2px) rotate(225deg)}
 .piece-mini[href="/bardage-bois-lyon/"]>img{object-position:50% 50%}
 .piece-mini[href="/bardage-bois-lyon/"]>img{object-position:62% 50%}
 .piece-mini[href="/bardage-bois-lyon/"]>img{object-position:62% 50%}
+
+/* Accessibilité : texte réservé aux lecteurs d'écran ; titre de section masqué mais présent */
+.sr{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+#piece>.conteneur>h2{display:block!important;position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;margin:0}

@@ -6,6 +6,7 @@ import { SITE, POSE, UNIVERS, AUTRES, PAGES } from "./src/pages.mjs";
 import { CONTENUS } from "./src/contenus.mjs";
 import { carteProduit, VIGNETTES } from "./src/vignettes.mjs";
 import { SCRIPT_GALERIE, imgPhoto, photo } from "./src/galerie.mjs";
+import { cssPourPage } from "./src/purge-css.mjs";
 
 // Les pages rédigées remplacent leur version « en préparation ».
 for (const p of PAGES) if (CONTENUS[p.chemin]) Object.assign(p, CONTENUS[p.chemin], { statut: "redigee" });
@@ -186,7 +187,7 @@ ${!EN_LIGNE ? `<meta name="robots" content="noindex, nofollow">` : horsSitemap(p
 <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
 ${p.head ?? preloadLcp(p.corps)}
 ${p.jsonld ? `<script type="application/ld+json">${JSON.stringify(p.jsonld)}</script>` : ""}
-<style>${css}</style>
+<style>/*CSS*/</style>
 </head>
 <body>
 ${entete(p.chemin)}
@@ -194,7 +195,7 @@ ${entete(p.chemin)}
 ${p.corps ?? corpsPreparation(p)}
 </main>
 ${pied(p.corps ?? "")}
-<a class="appel-flottant" href="tel:${SITE.telLien}" aria-label="Appeler Instant Terrasse au ${SITE.tel}"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg></a>
+
 <script>
 // Un seul sous-menu ouvert à la fois, fermeture au clic extérieur ou Échap.
 const d=[...document.querySelectorAll('.menu-deroulant')];
@@ -202,7 +203,6 @@ d.forEach(x=>x.addEventListener('toggle',()=>{if(x.open)d.forEach(y=>y!==x&&(y.o
 document.addEventListener('click',e=>{if(!e.target.closest('.menu-deroulant'))d.forEach(y=>y.open=false)});
 document.addEventListener('keydown',e=>{if(e.key==='Escape')d.forEach(y=>y.open=false)});
 ${SCRIPT_GALERIE}
-const af=document.querySelector('.appel-flottant');if(af){let cache=false;const f=document.querySelectorAll('form,.pied');if('IntersectionObserver' in window){const vus=new Set();const io=new IntersectionObserver(es=>{es.forEach(e=>e.isIntersecting?vus.add(e.target):vus.delete(e.target));cache=vus.size>0;m()});f.forEach(x=>io.observe(x))}const m=()=>af.classList.toggle('visible',scrollY>innerHeight*.8&&!cache);addEventListener('scroll',m,{passive:true});m()}
 (()=>{const e=document.querySelector('.entete'),l=e&&e.querySelector('.menu-liste'),c=e&&e.querySelector('.entete-cta');if(!l||!c)return;const f=()=>{e.classList.remove('serre','serre2');if(innerWidth<1241)return;const ko=()=>{const a=l.firstElementChild.getBoundingClientRect(),z=l.lastElementChild.previousElementSibling.getBoundingClientRect();return z.right>c.getBoundingClientRect().left-12||a.left<e.querySelector('.logo').getBoundingClientRect().right+12};if(ko()){e.classList.add('serre');if(ko())e.classList.add('serre2')}};f();addEventListener('resize',f);document.fonts&&document.fonts.ready.then(f)})();
 const en=document.querySelector('.entete');if(en){let y0=scrollY;const r=()=>{const y=scrollY;en.classList.toggle('reduit',y>60);if(Math.abs(y-y0)>6){en.classList.toggle('cache',y>y0&&y>160&&!document.body.classList.contains('menu-ouvert'));y0=y}};addEventListener('scroll',r,{passive:true});r()}
 if(matchMedia('(max-width:700px)').matches)document.querySelectorAll('.pt-materiaux,.projets-car,.pieces-4,.grille-avis,.grille-essences').forEach(c=>{const n=c.children.length,d=document.createElement('div');d.className='points';d.setAttribute('aria-hidden','true');d.innerHTML='<span></span>'.repeat(n);c.after(d);const ps=d.children;const u=()=>{const w=c.firstElementChild.getBoundingClientRect().width+14;const i=Math.min(n-1,Math.round(c.scrollLeft/w));[...ps].forEach((p,j)=>p.classList.toggle('on',j===i))};c.addEventListener('scroll',u,{passive:true});u()});
@@ -220,7 +220,8 @@ for (const p of PAGES) {
   const dossier = join(DIST, p.chemin);
   mkdirSync(dossier, { recursive: true });
   const FLECHE = `<span class="fleche" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></span>`;
-  writeFileSync(join(dossier, "index.html"), gabarit(p).replaceAll('<span class="fleche" aria-hidden="true">→</span>', FLECHE));
+  const html = gabarit(p).replaceAll('<span class="fleche" aria-hidden="true">→</span>', FLECHE);
+  writeFileSync(join(dossier, "index.html"), html.replace("/*CSS*/", cssPourPage(css, html)));
 }
 
 writeFileSync(join(DIST, "robots.txt"), EN_LIGNE

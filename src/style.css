@@ -1427,3 +1427,4 @@ details[open]>summary.menu-lien::after{transform:translateY(2px) rotate(225deg)}
   .hero-maison-plein::before{background:radial-gradient(ellipse 640px 460px at calc(max(16px,(100vw - 1480px) / 2) + 300px) 52%,rgba(248,243,235,.78) 0,rgba(248,243,235,.5) 45%,rgba(248,243,235,0) 100%)!important}
 }
 .piece-mini[href="/bardage-bois-lyon/"]>img{object-position:75% 50%}
+.piece-mini[href="/bardage-bois-lyon/"]>img{object-position:50% 50%}

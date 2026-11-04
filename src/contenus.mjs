@@ -271,11 +271,9 @@ ${heroPlein({ fil: "Terrasses", h1: ["Nos structures", "de terrasse"], kicker: "
         <li><strong>Des clips qui tiennent</strong> : ils suivent la dilatation du bois sans casser, et leur résistance à l'arrachement dépasse de 1,5 à 2,5 fois l'exigence de la norme.</li>
         <li><strong>Démontable</strong> : une lame se déclipse et se remet en place sans rien abîmer, pour accéder dessous ou remplacer une lame.</li>
         <li><strong>Imputrescible</strong> : l'aluminium ne pourrit pas, ne gonfle pas et résiste à la corrosion, y compris autour des piscines.</li>
-        <li><strong>Plane</strong> : les plots rattrapent les défauts de niveau du terrain ou de la dalle.</li>
         <li><strong>Ventilée</strong> : les lames ne touchent pas directement l'ossature, l'air circule et le bois sèche plus vite.</li>
         <li><strong>Conforme et testée</strong> : un système testé par le FCBA (l'institut technologique de la filière bois) et conforme au DTU 51-4, la norme des terrasses en bois.</li>
         <li><strong>Fabriquée en France</strong>, en aluminium majoritairement recyclé et entièrement recyclable.</li>
-        <li><strong>Polyvalente</strong> : elle accueille le bois, le <a href="/terrasse-composite-lyon/">composite</a>, le <a href="/terrasse-carrelage-lyon/">carrelage</a> et les <a href="/terrasse-aluminium-lyon/">lames aluminium</a>.</li>
       </ul>
       <button class="voir-tout" type="button" onclick="this.previousElementSibling.classList.add('ouvert');this.remove()">Voir tous les avantages</button>
     </div>

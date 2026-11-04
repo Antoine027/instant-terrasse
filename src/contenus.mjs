@@ -39,7 +39,7 @@ const essencesAlu = [
   {
     nom: "Kebony", evol: ["kebony", ["À la pose", "6 mois", "1 an"]], photo: ["kebony", "Lame de terrasse en Kebony, teinte brune", 402],
     texte: "Un bois résineux modifié par un procédé d'origine végétale qui renforce durablement ses fibres. Brun profond à la pose, il évolue vers un gris argenté homogène.",
-    points: ["Bois modifié très durable", "Patine gris argenté"],
+    points: ["Bois très durable", "Patine gris argenté"],
   },
   {
     nom: "Thermopin", evol: ["thermopin", ["À la pose", "6 mois", "1 an"]], photo: ["thermopin", "Lame de terrasse en thermopin, teinte miel avec nœuds apparents", 378],
@@ -169,7 +169,7 @@ ${cta()}`,
 
 // ---------- Tableaux comparatifs ----------
 const tableau = (id, titre, intro, colonnes, lignes, verdicts) => `
-<section id="${id}" class="bloc">
+<section id="${id}" class="bloc comp">
   <div class="conteneur">
     <h2>${titre}</h2>
     <p class="chapo">${intro}</p>
@@ -180,6 +180,10 @@ const tableau = (id, titre, intro, colonnes, lignes, verdicts) => `
       </table>
     </div>
     <div class="grille verdicts">${verdicts.map(([t, x]) => `<div class="carte"><h3>${t}</h3><p>${x}</p></div>`).join("")}</div>
+    <div class="comp-mobile">
+      <p class="comp-aide">Touchez un critère pour comparer</p>
+      ${lignes.map(([crit, a, b]) => `<details class="comp-ligne"><summary>${crit}</summary><dl><dt>${colonnes[0]}</dt><dd>${a}</dd><dt class="acc">${colonnes[1]}</dt><dd>${b}</dd></dl></details>`).join("")}
+    </div>
   </div>
 </section>`;
 
@@ -200,8 +204,8 @@ const compBois = tableau(
     ["Budget", "Généralement plus économique à l'achat", "Investissement plus élevé, pensé pour durer"],
   ],
   [
-    ["La traditionnelle, si…", "vous voulez un bois massif ou exotique (ipé, cumaru, mélèze…) avec un budget maîtrisé."],
-    ["L'aluminium, si…", "vous cherchez la durabilité et la planéité dans le temps, ou un bois modifié, du bambou ou du composite."],
+    ["La traditionnelle, si…", "vous voulez une essence comme l'ipé, le cumaru ou le mélèze, avec un budget maîtrisé."],
+    ["L'aluminium, si…", "vous cherchez la durabilité et la planéité dans le temps, avec nos essences phares ou du composite."],
   ]
 );
 
@@ -238,7 +242,7 @@ ${heroPlein({ fil: "Terrasses", h1: ["Nos structures", "de terrasse"], kicker: "
   <div class="conteneur">
     <h2>Une structure adaptée à chaque terrain</h2>
     <p class="chapo">Quelle que soit la nature du support, nous avons une structure adaptée. Nous le vérifions dès la visite.</p>
-    <div class="grille grille-3">
+    <div class="grille grille-3 terrains-car">
       <div class="carte"><h3>Sol dur</h3><p>Dalle béton, ancienne terrasse : la structure se pose directement ou sur cales, pour une terrasse de faible épaisseur.</p></div>
       <div class="carte"><h3>Sol stabilisé</h3><p>Gravier compacté : les plots réglables reprennent les écarts de niveau, sans couler de béton.</p></div>
       <div class="carte"><h3>Toit-terrasse et sol étanche</h3><p>La structure repose sur l'étanchéité sans la percer. Voir notre page <a href="/toit-terrasse-lyon/">toit-terrasse</a>.</p></div>
@@ -261,7 +265,7 @@ ${heroPlein({ fil: "Terrasses", h1: ["Nos structures", "de terrasse"], kicker: "
       <p class="sous-titre">Notre solution phare</p>
       <h3 class="h2">Structure aluminium sur plots</h3>
       <p>Des plots réglables en hauteur posés sur le support, des rails en aluminium livrés avec leurs clips, et des lames qui viennent s'y clipser : aucune vis ne traverse la lame.</p>
-      <ul class="puces">
+      <ul class="puces puces-longues">
         <li><strong>Garantie 20 ans</strong> : nos structures aluminium sont garanties 20 ans.</li>
         <li><strong>Fixation invisible</strong> : pas de vis en surface, donc pas de trou où l'eau s'infiltre, et des lignes de lames parfaitement droites.</li>
         <li><strong>Des clips qui tiennent</strong> : ils suivent la dilatation du bois sans casser, et leur résistance à l'arrachement dépasse de 1,5 à 2,5 fois l'exigence de la norme.</li>
@@ -273,6 +277,7 @@ ${heroPlein({ fil: "Terrasses", h1: ["Nos structures", "de terrasse"], kicker: "
         <li><strong>Fabriquée en France</strong>, en aluminium majoritairement recyclé et entièrement recyclable.</li>
         <li><strong>Polyvalente</strong> : elle accueille le bois, le <a href="/terrasse-composite-lyon/">composite</a>, le <a href="/terrasse-carrelage-lyon/">carrelage</a> et les <a href="/terrasse-aluminium-lyon/">lames aluminium</a>.</li>
       </ul>
+      <button class="voir-tout" type="button" onclick="this.previousElementSibling.classList.add('ouvert');this.remove()">Voir tous les avantages</button>
     </div>
   </div>
 </section>
@@ -1179,7 +1184,7 @@ const terrasseRestaurant = {
     photo: "terrasse-kebony-restaurant", position: "50% 55%",
     atouts: [
       ["Pensée pour le service", "Un sol plan et sans marche inutile, pour circuler facilement entre les tables."],
-      ["Sans entretien", "Lames aluminium, composite ou bois modifié : pas de saturateur à refaire chaque saison."],
+      ["Sans entretien", "Lames aluminium, composite ou essences sélectionnées : pas de saturateur à refaire chaque saison."],
       ["Délimitée et protégée", "Garde-corps, pare-vue bois ou vitré : la terrasse se distingue de la rue et protège du vent."],
       ["De l'ombre et un abri", "Pergola ou store banne pour ouvrir la terrasse plus tôt au printemps et plus tard en automne."],
       ["Sur un sol existant", "Plots réglables ou structure aluminium pour rattraper la pente d'un trottoir ou d'une cour."],

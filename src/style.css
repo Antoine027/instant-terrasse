@@ -1434,3 +1434,49 @@ details[open]>summary.menu-lien::after{transform:translateY(2px) rotate(225deg)}
 .partie .chapo{max-width:720px;margin:0}
 h3.h2{font-size:clamp(1.5rem,1rem + 1.2vw,2.1rem);margin:0 0 14px}
 .en-court{display:none}@media (max-width:700px){.evol-note{text-align:center;white-space:nowrap;font-size:min(.85rem,3.25vw)}.evol-note .en-long{display:none}.evol-note .en-court{display:inline}}
+
+/* Comparatifs : accordéon sur mobile, tableau sur ordinateur */
+.comp-mobile,.voir-tout{display:none}
+@media (max-width:700px){
+  .comp .conteneur{display:flex;flex-direction:column}
+  .comp .tableau-defile{display:none}
+  .comp .verdicts{order:2;margin:18px 0 0;gap:10px}
+  .comp .verdicts .carte{padding:14px 16px}
+  .comp .verdicts h3{font-size:1rem;margin:0 0 4px}
+  .comp .verdicts p{font-size:.92rem;margin:0}
+  .comp-mobile{display:block;order:3;margin-top:22px;background:#fff;border-radius:var(--rayon);overflow:hidden}
+  .comp-aide{margin:0;padding:12px 16px;font-size:.8rem;color:var(--doux);text-align:center;border-bottom:1px solid var(--fond)}
+  .comp-ligne{border-bottom:1px solid var(--fond)}
+  .comp-ligne:last-child{border-bottom:0}
+  .comp-ligne summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;padding:13px 16px;font:700 .95rem Montserrat,sans-serif}
+  .comp-ligne summary::-webkit-details-marker{display:none}
+  .comp-ligne summary::after{content:"+";font-size:1.2rem;color:var(--accent-texte)}
+  .comp-ligne[open] summary::after{content:"−"}
+  .comp-ligne dl{margin:0;padding:0 16px 14px;display:grid;gap:4px}
+  .comp-ligne dt{font:700 .72rem Montserrat,sans-serif;letter-spacing:.06em;text-transform:uppercase;color:var(--doux);margin-top:6px}
+  .comp-ligne dt.acc{color:var(--accent-texte)}
+  .comp-ligne dd{margin:0;font-size:.92rem;line-height:1.45}
+  .comp h2,.comp .chapo{text-align:center}
+}
+/* Page Structures (mobile) : centrage et hauteur réduite */
+@media (max-width:700px){
+  #terrains h2,#terrains .chapo,.partie,.partie .chapo,.sous-partie h3,.sous-partie .sous-titre,.sous-partie .deux-colonnes>div>p{text-align:center}
+  #terrains,.sous-partie,.comp{padding:40px 0}
+  .partie{padding:36px 0 0}
+  .partie+.sous-partie{padding-top:18px}
+  .terrains-car{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:12px;margin:18px -16px 0;padding:4px 16px 14px;scrollbar-width:none}
+  .terrains-car::-webkit-scrollbar{display:none}
+  .terrains-car>.carte{flex:0 0 78%;scroll-snap-align:center;text-align:center}
+  .sous-partie .deux-colonnes{gap:16px}
+  .sous-partie .photo-produit{padding:12px}
+  .sous-partie .photo-produit img{max-height:210px;width:auto!important;margin:0 auto}
+  .sous-partie .puces{max-width:420px;margin:0 auto}
+  .sous-partie .puces li{font-size:.93rem}
+  .puces-longues:not(.ouvert) li:nth-child(n+5){display:none}
+  .voir-tout{display:block;margin:10px auto 0;background:none;border:0;font:700 .92rem Montserrat,sans-serif;color:var(--accent-texte);text-decoration:underline;text-underline-offset:3px;cursor:pointer}
+  #galerie .mosaique{flex-wrap:nowrap;overflow-x:auto;scroll-snap-type:x mandatory;margin:0 -16px;padding:0 16px 8px;scrollbar-width:none}
+  #galerie .mosaique::-webkit-scrollbar{display:none}
+  #galerie .mosaique figure{flex:0 0 auto;height:230px;width:auto;aspect-ratio:var(--r);scroll-snap-align:center}
+  #galerie .mosaique img{height:100%;width:100%;object-fit:cover}
+}
+@media (max-width:700px){#galerie h2,#galerie .chapo{text-align:center}}

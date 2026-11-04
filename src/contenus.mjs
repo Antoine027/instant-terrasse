@@ -258,6 +258,7 @@ ${heroPlein({ fil: "Terrasses", h1: ["Nos structures", "de terrasse"], kicker: "
     <p class="chapo">Deux techniques pour porter des lames de bois : la structure aluminium sur plots, ou la structure traditionnelle sur lambourdes.</p>
   </div>
 </section>
+<div class="struct-car struct-car-bois">
 <section id="structure-aluminium" class="bloc bloc-alt sous-partie">
   <div class="conteneur deux-colonnes deux-colonnes-image">
     <div class="photo-produit">${img("structure-aluminium", "Système de structure aluminium : plot réglable, rail aluminium, clip et pattes de fixation sous une lame de terrasse", 404)}</div>
@@ -275,7 +276,7 @@ ${heroPlein({ fil: "Terrasses", h1: ["Nos structures", "de terrasse"], kicker: "
         <li><strong>Conforme et testée</strong> : un système testé par le FCBA (l'institut technologique de la filière bois) et conforme au DTU 51-4, la norme des terrasses en bois.</li>
         <li><strong>Fabriquée en France</strong>, en aluminium majoritairement recyclé et entièrement recyclable.</li>
       </ul>
-      <button class="voir-tout" type="button" onclick="this.previousElementSibling.classList.add('ouvert');this.remove()">Voir tous les avantages</button>
+      <button class="voir-tout" type="button" onclick="this.previousElementSibling.classList.add('ouvert');this.remove()">Voir le détail</button>
     </div>
   </div>
 </section>
@@ -298,6 +299,7 @@ ${heroPlein({ fil: "Terrasses", h1: ["Nos structures", "de terrasse"], kicker: "
     </div>
   </div>
 </section>
+</div>
 ${compBois.replace('class="bloc"', 'class="bloc bloc-alt"')}
 
 <section id="structures-carrelage" class="bloc partie bloc-alt">
@@ -306,6 +308,7 @@ ${compBois.replace('class="bloc"', 'class="bloc bloc-alt"')}
     <p class="chapo">Le carrelage extérieur se pose sans colle, en dalles épaisses : sur une structure aluminium, ou directement sur des plots.</p>
   </div>
 </section>
+<div class="struct-car struct-car-carrelage">
 <section id="carrelage-structure-aluminium" class="bloc bloc-alt sous-partie">
   <div class="conteneur deux-colonnes deux-colonnes-image">
     <div class="photo-produit photo-produit-trad">${imgPhoto("carrelage-structure-aluminium-schema", { sizes: "(max-width:1060px) 90vw, 520px" })}</div>
@@ -338,6 +341,7 @@ ${compBois.replace('class="bloc"', 'class="bloc bloc-alt"')}
     </div>
   </div>
 </section>
+</div>
 ${compCarrelage}
 
 <section id="galerie" class="bloc bloc-alt">

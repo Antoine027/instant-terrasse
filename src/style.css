@@ -1497,3 +1497,21 @@ h3.h2{font-size:clamp(1.5rem,1rem + 1.2vw,2.1rem);margin:0 0 14px}
   .bloc-rappel form input,.bloc-rappel form textarea{text-align:center}
   .galerie-bloc .legende,.galerie-bloc>p:last-child{text-align:center}
 }
+
+/* Page Structures (mobile) : sous-parties en carrousel de cartes */
+@media (min-width:701px){.struct-car{display:contents}}
+@media (max-width:700px){
+  .struct-car{display:flex;align-items:flex-start;overflow-x:auto;scroll-snap-type:x mandatory;gap:12px;padding:18px 16px 14px;background:var(--fond2);scrollbar-width:none}
+  .struct-car::-webkit-scrollbar{display:none}
+  .struct-car>.sous-partie{flex:0 0 86%;scroll-snap-align:center;padding:16px 0 18px!important;background:#fff;border-radius:var(--rayon);box-shadow:0 8px 24px -16px rgba(47,52,55,.35)}
+  .struct-car>.sous-partie>.conteneur{padding:0 16px}
+  .struct-car .photo-produit{padding:0;box-shadow:none;background:none}
+  .struct-car .photo-produit img{max-height:170px}
+  .struct-car .sous-titre{margin:4px 0 2px}
+  .struct-car h3.h2{font-size:1.3rem;margin:0 0 8px}
+  .struct-car .deux-colonnes>div>p{font-size:.93rem;line-height:1.5;margin:0 0 10px}
+  .struct-car .puces li{font-size:.9rem;margin:4px 0}
+  .struct-car .puces-longues:not(.ouvert) li:nth-child(n+4){display:none}
+  .struct-car .deux-colonnes>div>p:last-child:not(:first-of-type){display:none}
+  .partie+.struct-car{margin-top:0}
+}

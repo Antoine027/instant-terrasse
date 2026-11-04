@@ -85,7 +85,7 @@ const terrasseBois = {
   description: "Terrasse bois sur mesure à Lyon : thermopin, thermofrêne, kebony, accoya, bambou sur structure aluminium, ou ipé, cumaru, mélèze, douglas sur structure traditionnelle.",
   corps: `
 ${heroPlein({ fil: "Terrasses", h1: ["Terrasse bois", "sur mesure à Lyon"], kicker: "Terrasses bois à Lyon et dans sa région", photo: "terrasse-kebony-piscine-debordement", position: "60% 55%",
-  chapo: "Bois modifiés et bambou sur structure aluminium, ou bois massifs et exotiques sur structure traditionnelle : nous vous aidons à choisir l'essence qui correspond à votre maison, à votre budget et au temps que vous voulez consacrer à l'entretien.",
+  chapo: "Nos essences phares sur structure aluminium, et d'autres essences sur structure traditionnelle : nous vous aidons à choisir l'essence qui correspond à votre maison, à votre budget et au temps que vous voulez consacrer à l'entretien.",
   actions: `<a class="bouton" href="/contact/">Demander une visite gratuite</a> <a class="bouton bouton-blanc" href="#essences-aluminium">Voir les essences</a>` })}
 
 <section class="bloc bloc-alt">
@@ -96,8 +96,8 @@ ${heroPlein({ fil: "Terrasses", h1: ["Terrasse bois", "sur mesure à Lyon"], kic
       <p><a href="/structure-terrasse-lyon/#comparatif-bois">Comparer les deux structures en détail →</a></p>
     </div>
     <div class="grille">
-      <a class="carte carte-structure" href="/structure-terrasse-lyon/"><div><h3>Sur structure aluminium</h3><p><span class="cs-long">Plots réglables, rails aluminium et fixations invisibles. Rien ne pourrit sous les lames, l'air circule, la terrasse reste plane. C'est la structure de nos bois modifiés et de nos bambous.</span><span class="cs-court">Rails alu, fixations invisibles. Pour les bois modifiés et le bambou.</span></p></div><span class="cs-img">${img("structure-aluminium", "Structure aluminium : plot réglable, rail aluminium et clip sous une lame de terrasse", 404)}</span></a>
-      <a class="carte carte-structure" href="/structure-terrasse-lyon/#structure-traditionnelle"><div><h3>Sur structure traditionnelle</h3><p><span class="cs-long">Des lambourdes en bois sur plots réglables : la technique classique et éprouvée, adaptée aux lames classiques et aux bois exotiques.</span><span class="cs-court">Lambourdes en bois. Pour les lames classiques et les bois exotiques.</span></p></div><span class="cs-img"><img src="/assets/img/structures/structure-traditionnelle-carte-300.webp" srcset="/assets/img/structures/structure-traditionnelle-carte-300.webp 300w, /assets/img/structures/structure-traditionnelle-carte-600.webp 600w" sizes="160px" alt="Structure traditionnelle : plot réglable, lambourde en bois et lame vissée" width="300" height="291" loading="lazy" decoding="async"></span></a>
+      <a class="carte carte-structure" href="/structure-terrasse-lyon/"><div><h3>Sur structure aluminium</h3><p><span class="cs-long">Plots réglables, rails aluminium et fixations invisibles. Rien ne pourrit sous les lames, l'air circule, la terrasse reste plane. Notre solution phare.</span><span class="cs-court">Rails alu, fixations invisibles. Notre solution phare.</span></p></div><span class="cs-img">${img("structure-aluminium", "Structure aluminium : plot réglable, rail aluminium et clip sous une lame de terrasse", 404)}</span></a>
+      <a class="carte carte-structure" href="/structure-terrasse-lyon/#structure-traditionnelle"><div><h3>Sur structure traditionnelle</h3><p><span class="cs-long">Des lambourdes en bois sur plots réglables : la technique classique et éprouvée, pour toutes nos essences.</span><span class="cs-court">Lambourdes en bois. Pour toutes nos essences.</span></p></div><span class="cs-img"><img src="/assets/img/structures/structure-traditionnelle-carte-300.webp" srcset="/assets/img/structures/structure-traditionnelle-carte-300.webp 300w, /assets/img/structures/structure-traditionnelle-carte-600.webp 600w" sizes="160px" alt="Structure traditionnelle : plot réglable, lambourde en bois et lame vissée" width="300" height="291" loading="lazy" decoding="async"></span></a>
     </div>
   </div>
 </section>
@@ -105,7 +105,7 @@ ${heroPlein({ fil: "Terrasses", h1: ["Terrasse bois", "sur mesure à Lyon"], kic
 <section id="essences-aluminium" class="bloc">
   <div class="conteneur">
     <p class="sous-titre">Sur structure aluminium</p>
-    <h2>Bois modifiés et bambou</h2>
+    <h2>Nos essences phares</h2>
     <p class="chapo">Des bois traités pour gagner en stabilité et en durabilité, posés sur une ossature qui ne pourrit pas.</p>
     <div class="grille grille-essences">
       ${essencesAlu.map((e) => `
@@ -132,7 +132,7 @@ ${heroPlein({ fil: "Terrasses", h1: ["Terrasse bois", "sur mesure à Lyon"], kic
 <section id="essences-traditionnelles" class="bloc">
   <div class="conteneur">
     <p class="sous-titre">Sur structure traditionnelle</p>
-    <h2>Bois massifs et exotiques</h2>
+    <h2>D'autres essences</h2>
     <p class="chapo">Les grands classiques de la terrasse en bois, posés sur lambourdes. Selon disponibilité : nous vous confirmons les essences et les sections en stock au moment du devis.</p>
     <div class="grille grille-3">
       ${essencesTrad.map(([n, t]) => `<div class="carte"><h3>${n}</h3><p>${t}</p></div>`).join("")}
@@ -158,7 +158,7 @@ ${heroPlein({ fil: "Terrasses", h1: ["Terrasse bois", "sur mesure à Lyon"], kic
   <div class="conteneur"><div class="faq-liste">
     <h2>Vos questions sur le bois</h2>
     <details class="faq"><summary>Comment entretenir une terrasse en bois ?</summary><div><p>Nous conseillons un nettoyage au minimum deux fois par an, et plus souvent à l'ombre et sous les arbres, où la saleté s'accumule le plus. Il existe des nettoyeurs spécifiques pour terrasses, bien plus pratiques qu'un balai-brosse. Le nettoyeur haute pression est en revanche fortement déconseillé : il abîme les fibres du bois.</p></div></details>
-    <details class="faq"><summary>Un saturateur est-il obligatoire ?</summary><div><p>Pas pour les bois modifiés (thermofrêne, thermopin, kebony, accoya). Il est en revanche conseillé pour le bambou. Dans tous les cas, le saturateur aide le bois à garder une teinte proche de celle d'origine.</p></div></details>
+    <details class="faq"><summary>Un saturateur est-il obligatoire ?</summary><div><p>Pas pour le thermofrêne, le thermopin, le kebony et l'accoya. Il est en revanche conseillé pour le bambou. Dans tous les cas, le saturateur aide le bois à garder une teinte proche de celle d'origine.</p></div></details>
     <details class="faq"><summary>Le bois va-t-il changer de couleur ?</summary><div><p>Oui : au soleil et à la pluie, le bois prend une patine grise. C'est naturel et ce n'est pas un défaut. Les pastilles de chaque essence, plus haut sur cette page, montrent cette évolution. Un saturateur limite ce changement et garde une teinte très proche de celle d'origine.</p></div></details>
     <details class="faq"><summary>Une terrasse en bois est-elle glissante ?</summary><div><p>Le bois offre naturellement une très bonne résistance à la glissance. Mais sur une terrasse mouillée, la fine couche noire de saleté qui se dépose avec le temps (pollution, végétation) peut rendre la surface glissante. D'où l'importance d'un nettoyage régulier.</p></div></details>
     <details class="faq"><summary>Vos bois font-ils des échardes ?</summary><div><p>Non. Avec le temps, des gerces (petites fentes dans le sens du bois) peuvent apparaître, car le bois reste un matériau naturel. Une gerce ne rend pas la lame impropre à l'utilisation. Seul un relevé de fibres impose de changer la lame concernée. C'est pour limiter ces phénomènes que nous sélectionnons des bois très stables.</p></div></details>
@@ -196,7 +196,7 @@ const compBois = tableau(
     ["Fixation des lames", "Vissées : chaque vis perce la lame, l'eau peut s'y infiltrer et la vis finir par s'arracher", "Clips invisibles, testés à 1,5 à 2,5 fois la résistance demandée par la norme"],
     ["Écoulement de l'eau", "L'eau peut stagner sur les lambourdes, sous les lames", "Lames sans contact direct avec l'ossature, espacement constant entre les lames"],
     ["Ventilation", "Selon la hauteur disponible", "Circulation d'air prévue entre ossature et lames"],
-    ["Revêtements possibles", "Bois massifs et exotiques", "Bois modifiés, bambou, composite, carrelage, lames aluminium"],
+    ["Revêtements possibles", "Toutes nos essences de bois", "Nos essences phares, composite, carrelage, lames aluminium"],
     ["Budget", "Généralement plus économique à l'achat", "Investissement plus élevé, pensé pour durer"],
   ],
   [
@@ -289,7 +289,7 @@ ${heroPlein({ fil: "Terrasses", h1: ["Nos structures", "de terrasse"], kicker: "
       <ul class="puces">
         <li><strong>Plots réglables</strong> : ils mettent la terrasse de niveau sur un sol irrégulier.</li>
         <li><strong>Lambourdes en bois</strong> : l'ossature qui porte les lames.</li>
-        <li><strong>Lames vissées</strong> : pour les bois massifs et exotiques (ipé, cumaru, mélèze, douglas…).</li>
+        <li><strong>Lames vissées</strong> : pour toutes nos essences, dont l'ipé, le cumaru, le mélèze, le douglas…</li>
       </ul>
       <p>Généralement plus économique à l'achat que la structure aluminium. Le <a href="#comparatif-bois">comparatif ci-dessous</a> vous aide à choisir entre les deux.</p>
     </div>
@@ -890,7 +890,7 @@ const LIGNES_MATERIAUX = [
     "Lames striées, pensées pour les plages de piscine.",
     "À choisir en finition antidérapante pour l'extérieur (classement R11 conseillé)."],
   ["Durabilité",
-    "Selon l'essence : les bois modifiés (accoya, kebony, thermo) et les bois exotiques durent plusieurs décennies, les résineux moins longtemps.",
+    "Selon l'essence : l'accoya, le kebony, les bois thermo-traités, l'ipé ou le cumaru durent plusieurs décennies, les résineux moins longtemps.",
     "Ne pourrit pas ; la teinte se stabilise après quelques mois.",
     "Imputrescible et indéformable : ni fente, ni vrillage.",
     "Le grès cérame ne vieillit pour ainsi dire pas, et une dalle abîmée se remplace seule."],
@@ -1028,7 +1028,7 @@ const terrassePiscine = {
     atouts: [
       ["Agréable pieds nus", "Des matériaux sans écharde, choisis pour rester supportables au soleil."],
       ["Sûr au bord de l'eau", "Des surfaces qui accrochent, même au sortir du bain."],
-      ["Fait pour l'eau", "Bois modifiés, composite, aluminium ou grès cérame : ni pourriture, ni gonflement."],
+      ["Fait pour l'eau", "Bois sélectionnés, composite, aluminium ou grès cérame : ni pourriture, ni gonflement."],
       ["Accès au local technique", "Une trappe peut être intégrée pour garder l'accès à la pompe ou au volet."],
       ["Finitions soignées", "Margelles, nez de marche et bordures dessinés autour du bassin."],
       ["Avec la pergola", "Une pergola ou un store banne pour un coin d'ombre près de l'eau."],

@@ -1568,3 +1568,21 @@ h3.h2{font-size:clamp(1.5rem,1rem + 1.2vw,2.1rem);margin:0 0 14px}
   #comparatif-carrelage{padding-top:24px}
 }
 @media (max-width:700px){.partie{padding-bottom:12px!important}.partie .partie-titre{margin-bottom:0}}
+/* Page Structures (mobile), v5 : cartes empilées, photo à gauche, pastilles à droite */
+@media (max-width:700px){
+  .struct-car{display:flex;flex-direction:column;overflow:visible;gap:12px;padding:10px 16px 18px}
+  .struct-car>.sous-partie{flex:none;width:auto;padding:14px 12px!important}
+  .struct-car>.sous-partie>.conteneur{padding:0}
+  .struct-car .deux-colonnes{display:grid;grid-template-columns:38% 1fr;gap:12px;align-items:center}
+  .struct-car .photo-produit img{max-height:none;width:100%!important;height:auto}
+  .struct-car .deux-colonnes>div:last-child{text-align:left}
+  .struct-car .sous-partie .sous-titre,.struct-car h3.h2{text-align:left}
+  .struct-car .sous-titre{font-size:.66rem;margin:0 0 2px}
+  .struct-car h3.h2{font-size:1.02rem;line-height:1.2;margin:0 0 8px}
+  .struct-car .puces{justify-content:flex-start;gap:5px}
+  .struct-car .puces li{font-size:.72rem;padding:4px 9px}
+  .struct-car .voir-tout{margin:8px 0 0;font-size:.82rem}
+  .struct-car .detail .deux-colonnes{grid-template-columns:1fr}
+  .struct-car .detail .photo-produit img{max-width:240px;margin:0 auto}
+  .partie .partie-titre::after{content:none}
+}

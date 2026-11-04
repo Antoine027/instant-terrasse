@@ -189,7 +189,7 @@ const tableau = (id, titre, intro, colonnes, lignes, verdicts) => `
 
 const compBois = tableau(
   "comparatif-bois",
-  "Terrasse bois : structure traditionnelle ou aluminium ?",
+  "Comparer en quelques critères",
   "Les deux techniques ont leur place. Voici ce qui les distingue, pour choisir en connaissance de cause.",
   ["Structure traditionnelle", "Structure aluminium"],
   [
@@ -211,7 +211,7 @@ const compBois = tableau(
 
 const compCarrelage = tableau(
   "comparatif-carrelage",
-  "Terrasse carrelage : plots simples ou structure aluminium ?",
+  "Comparer en quelques critères",
   "Le carrelage extérieur se pose sans colle, en dalles épaisses sur des plots. La question est ce qu'il y a dessous.",
   ["Sur plots simples", "Sur structure aluminium"],
   [

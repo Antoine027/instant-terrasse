@@ -99,7 +99,7 @@ export const RANG = {
  "alu-piscine-cour": 0.35,
  "alu-terrasse-falaise": 0.4,
  "alu-escalier-maison-bois": 0.45,
- "alu-piscine-salon-rotin": 0.55,
+ "alu-pontons-lac": 0.2,
  "alu-piscine-blanche-vue": 0.032,
  "alu-piscine-jardin-tropical": 0.065,
  "alu-piscine-haricot": 0.097,

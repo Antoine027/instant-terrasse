@@ -3808,20 +3808,6 @@
   "ratio": 1.3333
  },
  {
-  "cle": "alu-piscine-salon-rotin",
-  "dossier": "aluminium",
-  "categorie": "terrasse-aluminium",
-  "alt": "Terrasse en lames aluminium aspect bois avec salon en rotin, au bord d'une piscine (visuel d'illustration)",
-  "largeurs": [
-   400,
-   600,
-   800,
-   1000,
-   1086
-  ],
-  "ratio": 0.75
- },
- {
   "cle": "alu-terrasse-fauteuils-rouges",
   "dossier": "aluminium",
   "categorie": "terrasse-aluminium",
@@ -3976,5 +3962,23 @@
    1280
   ],
   "ratio": 1.5006
+ },
+ {
+  "cle": "alu-pontons-lac",
+  "dossier": "aluminium",
+  "categorie": "terrasse-aluminium",
+  "alt": "Pontons d'amarrage en lames aluminium aspect bois sur un lac, au bord d'un camping",
+  "largeurs": [
+   400,
+   600,
+   800,
+   1000,
+   1200,
+   1400,
+   1600,
+   2000,
+   2364
+  ],
+  "ratio": 1.3906
  }
 ]

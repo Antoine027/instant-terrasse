@@ -367,7 +367,7 @@ ${heroPlein({ fil: "Aménagements", h1: ["Bardage bois", "sur mesure"], kicker: 
 <section id="essences-bardage" class="bloc">
   <div class="conteneur">
     <h2>Nos essences de bardage</h2>
-    <p class="chapo">Des bois modifiés et traités, choisis pour leur stabilité : un bardage doit rester droit et beau malgré le soleil et la pluie.</p>
+    <p class="chapo">Des bois sélectionnés pour leur stabilité : un bardage doit rester droit et beau malgré le soleil et la pluie.</p>
     <div class="grille grille-3">
       ${bardageEssences.map(([n, t, g]) => `<div class="carte carte-lame"><div class="lames">${PHOTOS.filter((p) => p.categorie === "lame-bardage" && p.essence === n).map((p) => imgPhoto(p.cle, { sizes: "276px" })).join("")}</div><h3>${n}</h3><p>${t}</p><p class="garantie">Garantie fabricant : ${g.toLowerCase()}, selon conditions</p></div>`).join("")}
     </div>

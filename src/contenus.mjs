@@ -119,7 +119,7 @@ ${heroPlein({ fil: "Terrasses", h1: ["Terrasse bois", "sur mesure à Lyon"], kic
         ${e.evol ? evolution(e.nom, ...e.evol) : ""}
       </article>`).join("")}
     </div>
-    <p class="evol-note">Teintes indicatives : le rendu dépend de l'exposition. Un saturateur prolonge la teinte d'origine.</p>
+    <p class="evol-note"><span class="en-long">Teintes indicatives : le rendu dépend de l'exposition. Un saturateur prolonge la teinte d'origine.</span><span class="en-court">Teintes indicatives. Un saturateur prolonge la teinte d'origine.</span></p>
   </div>
 </section>
 

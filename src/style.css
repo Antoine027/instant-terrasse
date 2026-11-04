@@ -1433,3 +1433,4 @@ details[open]>summary.menu-lien::after{transform:translateY(2px) rotate(225deg)}
 .partie-titre{font-size:clamp(2rem,1.2rem + 2vw,3rem);margin:0 0 10px}
 .partie .chapo{max-width:720px;margin:0}
 h3.h2{font-size:clamp(1.5rem,1rem + 1.2vw,2.1rem);margin:0 0 14px}
+.en-court{display:none}@media (max-width:700px){.evol-note{text-align:center;white-space:nowrap;font-size:min(.85rem,3.25vw)}.evol-note .en-long{display:none}.evol-note .en-court{display:inline}}

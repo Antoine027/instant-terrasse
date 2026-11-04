@@ -1480,3 +1480,10 @@ h3.h2{font-size:clamp(1.5rem,1rem + 1.2vw,2.1rem);margin:0 0 14px}
   #galerie .mosaique img{height:100%;width:100%;object-fit:cover}
 }
 @media (max-width:700px){#galerie h2,#galerie .chapo{text-align:center}}
+/* Mobile : pied de page centré */
+@media (max-width:700px){
+  .pied,.pied .mentions{text-align:center}
+  .pied .logo img{margin:0 auto}
+  .pied-groupe summary{position:relative;justify-content:center}
+  .pied-groupe summary::after{position:absolute;right:0}
+}

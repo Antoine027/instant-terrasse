@@ -14,7 +14,7 @@ const CREDITS = {
   "pergola-bioclimatique": "MSB", "pergola-toile-retractable": "MSB", "pergola-toit-fixe": "MSB", carport: "MSB", "store-banne": "MSB",
   "bardage-bois": "Grad", "bardage-aluminium": "Grad", "bardage-pose": "Grad", "lame-bardage": "Grad",
   "terrasse-bois": "Grad", "terrasse-composite": "Grad", "terrasse-aluminium": "Aludeck", "terrasse-carrelage": "Grad",
-  "structure-alu": "Grad", schema: "Grad", "teinte-alu": "Aludeck", "teinte-composite": "Grad", ambiance: "Grad", pilotis: "Grad", "pilotis-hero": "Grad", restaurant: "Grad", accueil: "Grad",
+  "structure-alu": "Grad", schema: "Grad", "structure-trad": "Grad", "teinte-alu": "Aludeck", "teinte-composite": "Grad", ambiance: "Grad", pilotis: "Grad", "pilotis-hero": "Grad", restaurant: "Grad", accueil: "Grad",
   portrait: null, // photo d'Antoine : pas de crédit fournisseur
 };
 // Une photo peut porter son propre crédit (champ « credit » du manifeste), qui remplace celui de sa catégorie.

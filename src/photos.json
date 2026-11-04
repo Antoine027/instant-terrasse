@@ -3612,5 +3612,19 @@
   ],
   "ratio": 1.5003,
   "credit": "Grad"
+ },
+ {
+  "cle": "structure-traditionnelle-plot-lambourde",
+  "dossier": "structures",
+  "categorie": "structure-trad",
+  "alt": "Structure traditionnelle : plot réglable sous une lambourde en bois, lame de terrasse vissée",
+  "largeurs": [
+   400,
+   600,
+   800,
+   1000,
+   1055
+  ],
+  "ratio": 0.8115
  }
 ]

@@ -1423,3 +1423,4 @@ details[open]>summary.menu-lien::after{transform:translateY(2px) rotate(225deg)}
 .h-pic{display:contents}
 .comparatif thead th.col-accent{background:var(--bouton)}
 /* Règle des boutons (04/11/2026) : marron sur fond clair (par défaut), orange sur fond sombre (en-têtes mobiles, bouton d'appel du bloc rappel). */
+.photo-produit-trad img{max-height:520px;width:auto!important;margin:0 auto;mix-blend-mode:multiply}

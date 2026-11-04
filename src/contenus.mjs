@@ -277,11 +277,27 @@ ${heroPlein({ fil: "Terrasses", h1: ["Nos structures", "de terrasse"], kicker: "
   </div>
 </section>
 
+<section id="structure-traditionnelle" class="bloc">
+  <div class="conteneur deux-colonnes deux-colonnes-image">
+    <div class="photo-produit photo-produit-trad">${imgPhoto("structure-traditionnelle-plot-lambourde", { sizes: "(max-width:1060px) 80vw, 420px" })}</div>
+    <div>
+      <h2>La structure traditionnelle</h2>
+      <p>La technique classique de la terrasse en bois : des lambourdes en bois posées sur des plots réglables, et des lames vissées sur les lambourdes.</p>
+      <ul class="puces">
+        <li><strong>Plots réglables</strong> : ils mettent la terrasse de niveau sur un sol irrégulier.</li>
+        <li><strong>Lambourdes en bois</strong> : l'ossature qui porte les lames.</li>
+        <li><strong>Lames vissées</strong> : pour les bois massifs et exotiques (ipé, cumaru, mélèze, douglas…).</li>
+      </ul>
+      <p>Généralement plus économique à l'achat que la structure aluminium. Le <a href="#comparatif-bois">comparatif ci-dessous</a> vous aide à choisir entre les deux.</p>
+    </div>
+  </div>
+</section>
+
 <section class="bloc">
   <div class="conteneur">
     <h2>Les autres solutions</h2>
     <div class="grille grille-3">
-      <a class="carte carte-lien" href="/terrasse-bois-lyon/#essences-traditionnelles"><h3>Structure traditionnelle</h3><p>Des lambourdes en bois, la technique classique, pour les terrasses en bois massifs et exotiques.</p><span class="fleche" aria-hidden="true">→</span></a>
+      <a class="carte carte-lien" href="/terrasse-bois-lyon/#essences-traditionnelles"><h3>Bois massifs et exotiques</h3><p>Les essences posées sur structure traditionnelle : ipé, cumaru, mélèze, douglas, tigerwood…</p><span class="fleche" aria-hidden="true">→</span></a>
       <a class="carte carte-lien" href="#comparatif-carrelage"><h3>Dalles sur plots</h3><p>Pour le carrelage sur un support existant (dalle béton, toit-terrasse) : posé sans colle ni fondation.</p><span class="fleche" aria-hidden="true">→</span></a>
       <a class="carte carte-lien" href="/terrasse-sur-pilotis-lyon/"><h3>Terrasse sur pilotis</h3><p>Pour les terrains en pente ou les terrasses surélevées.</p><span class="fleche" aria-hidden="true">→</span></a>
     </div>

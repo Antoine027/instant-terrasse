@@ -1426,3 +1426,10 @@ details[open]>summary.menu-lien::after{transform:translateY(2px) rotate(225deg)}
 .photo-produit-trad img{max-height:520px;width:auto!important;margin:0 auto;mix-blend-mode:multiply}
 .carte-structure{display:grid;grid-template-columns:1fr 130px;gap:18px;align-items:center;text-decoration:none;color:inherit}.carte-structure:hover h3{color:var(--accent-texte)}.cs-img{display:flex;align-items:center;justify-content:center;height:130px}.cs-img img{max-width:100%;max-height:130px;width:auto!important;height:auto;mix-blend-mode:multiply}@media (max-width:420px){.carte-structure{grid-template-columns:1fr 92px;gap:12px}.cs-img{height:100px}.cs-img img{max-height:100px}}
 .cs-court{display:none}@media (max-width:700px){.cs-long{display:none}.cs-court{display:inline}.carte-structure{grid-template-columns:1fr 150px;gap:10px;padding:16px 14px 16px 20px}.carte-structure h3{font-size:1.05rem;margin-bottom:4px}.carte-structure p{font-size:.9rem;line-height:1.45;margin:0}.cs-img{height:auto}.cs-img img{max-height:150px;width:100%!important}}
+/* Page Structures : grandes parties et sous-parties */
+.partie{padding:56px 0 8px;text-align:left}
+.partie+.sous-partie{padding-top:24px}
+.partie-num{margin:0 0 6px;font:700 .8rem Montserrat,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-texte)}
+.partie-titre{font-size:clamp(2rem,1.2rem + 2vw,3rem);margin:0 0 10px}
+.partie .chapo{max-width:720px;margin:0}
+h3.h2{font-size:clamp(1.5rem,1rem + 1.2vw,2.1rem);margin:0 0 14px}

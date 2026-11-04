@@ -3626,5 +3626,36 @@
    1055
   ],
   "ratio": 0.8115
+ },
+ {
+  "cle": "carrelage-structure-aluminium-schema",
+  "dossier": "structures",
+  "categorie": "structure-trad",
+  "alt": "Carrelage sur structure aluminium : rails aluminium sur plots réglables, supports et dalle de grès cérame",
+  "largeurs": [
+   400,
+   600,
+   800,
+   1000,
+   1200,
+   1322
+  ],
+  "ratio": 1.5444
+ },
+ {
+  "cle": "carrelage-plots-schema",
+  "dossier": "structures",
+  "categorie": "structure-trad",
+  "alt": "Carrelage sur plots : dalle de grès cérame posée directement sur des plots réglables, sans rail",
+  "largeurs": [
+   400,
+   600,
+   800,
+   1000,
+   1200,
+   1400,
+   1497
+  ],
+  "ratio": 1.8902
  }
 ]

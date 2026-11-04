@@ -234,6 +234,20 @@ ${heroPlein({ fil: "Terrasses", h1: ["Nos structures", "de terrasse"], kicker: "
   chapo: "Une terrasse se juge sur la durée, et sa durée de vie se joue sous les lames. Nous adaptons la structure à votre terrain, à votre revêtement et à votre budget.",
   actions: `<a class="bouton" href="#structures-bois">Structures bois</a> <a class="bouton bouton-blanc" href="#structures-carrelage">Structures carrelage</a>` })}
 
+<section id="terrains" class="bloc">
+  <div class="conteneur">
+    <h2>Une structure adaptée à chaque terrain</h2>
+    <p class="chapo">Bois ou carrelage, structure aluminium ou traditionnelle : quelle que soit la solution présentée sur cette page, nous l'adaptons au sol qui recevra la terrasse. C'est ce que nous vérifions en premier lors de la visite.</p>
+    <div class="grille grille-3">
+      <div class="carte"><h3>Sol dur</h3><p>Dalle béton, ancienne terrasse : la structure se pose directement ou sur cales, pour une terrasse de faible épaisseur.</p></div>
+      <div class="carte"><h3>Sol stabilisé</h3><p>Gravier compacté : les plots réglables reprennent les écarts de niveau, sans couler de béton.</p></div>
+      <div class="carte"><h3>Toit-terrasse et sol étanche</h3><p>La structure repose sur l'étanchéité sans la percer. Voir notre page <a href="/toit-terrasse-lyon/">toit-terrasse</a>.</p></div>
+      <div class="carte"><h3>Terrasse surélevée</h3><p>Avec des réhausses, les plots montent jusqu'à environ 40 cm. Au-delà, la terrasse repose sur des poutres et des poteaux.</p></div>
+      <div class="carte"><h3>Terrain en pente ou instable</h3><p>La terrasse est portée par des fondations sur poteaux : c'est la <a href="/terrasse-sur-pilotis-lyon/">terrasse sur pilotis</a>.</p></div>
+    </div>
+  </div>
+</section>
+
 <section id="structures-bois" class="bloc partie bloc-alt">
   <div class="conteneur">
     <p class="partie-num">Partie 1</p>
@@ -264,25 +278,7 @@ ${heroPlein({ fil: "Terrasses", h1: ["Nos structures", "de terrasse"], kicker: "
   </div>
 </section>
 
-<section id="galerie" class="bloc">
-  <div class="conteneur">
-    ${galerie("structure-alu", { titre: "Le système à clipser en images", intro: "Plots réglables, rails aluminium et clips : rien ne traverse la lame, et chaque lame se démonte.", legende: "Illustrations du système de pose" })}
-  </div>
-</section>
 
-<section class="bloc bloc-alt">
-  <div class="conteneur">
-    <h3 class="h2">Une structure adaptée à chaque terrain</h3>
-    <p class="chapo">Le système aluminium s'adapte au sol qui recevra la terrasse. C'est ce que nous vérifions en premier lors de la visite.</p>
-    <div class="grille grille-3">
-      <div class="carte"><h3>Sol dur</h3><p>Dalle béton, ancienne terrasse : les rails se posent directement ou sur cales, pour une terrasse de faible épaisseur.</p></div>
-      <div class="carte"><h3>Sol stabilisé</h3><p>Gravier compacté : les plots réglables reprennent les écarts de niveau, sans couler de béton.</p></div>
-      <div class="carte"><h3>Toit-terrasse et sol étanche</h3><p>La structure repose sur l'étanchéité sans la percer. Voir notre page <a href="/toit-terrasse-lyon/">toit-terrasse</a>.</p></div>
-      <div class="carte"><h3>Terrasse surélevée</h3><p>Avec des réhausses, les plots montent jusqu'à environ 40 cm. Au-delà, la terrasse repose sur des poutres et des poteaux.</p></div>
-      <div class="carte"><h3>Terrain en pente ou instable</h3><p>La terrasse est portée par des fondations sur poteaux : c'est la <a href="/terrasse-sur-pilotis-lyon/">terrasse sur pilotis</a>.</p></div>
-    </div>
-  </div>
-</section>
 
 <section id="structure-traditionnelle" class="bloc sous-partie">
   <div class="conteneur deux-colonnes deux-colonnes-image">
@@ -352,6 +348,11 @@ ${compCarrelage}
       <a class="carte carte-lien" href="/terrasse-sur-pilotis-lyon/"><h3>Terrasse sur pilotis</h3><p>Pour les terrains en pente ou les terrasses surélevées.</p><span class="fleche" aria-hidden="true">→</span></a>
     </div>
     <p class="note-pose">${POSE}</p>
+  </div>
+</section>
+<section id="galerie" class="bloc bloc-alt">
+  <div class="conteneur">
+    ${galerie("structure-alu", { titre: "Le système à clipser en images", intro: "Plots réglables, rails aluminium et clips : rien ne traverse la lame, et chaque lame se démonte.", legende: "Illustrations du système de pose" })}
   </div>
 </section>
 ${cta("Quelle structure pour votre terrain ?")}`,

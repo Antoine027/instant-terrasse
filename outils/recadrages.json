@@ -7,9 +7,9 @@
   "dossier": "bois",
   "position": "60% 55%"
  },
- "structure-lames-clipsees-vue-haut": {
+ "structure-rails-plots-entete": {
   "dossier": "structures",
-  "position": "55% 40%"
+  "position": "50% 50%"
  },
  "bardage-thermofrene-maison": {
   "dossier": "bardage",

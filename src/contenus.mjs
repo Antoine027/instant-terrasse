@@ -230,7 +230,7 @@ const structures = {
   title: "Structure de terrasse aluminium ou traditionnelle à Lyon | Instant Terrasse",
   description: "Structure aluminium sur plots réglables, structure traditionnelle sur lambourdes ou dalles sur plots : la base qui fait durer votre terrasse. Lyon et sa région.",
   corps: `
-${heroPlein({ fil: "Terrasses", h1: ["Nos structures", "de terrasse"], kicker: "Structure aluminium garantie 20 ans", photo: "structure-lames-clipsees-vue-haut", position: "55% 40%",
+${heroPlein({ fil: "Terrasses", h1: ["Nos structures", "de terrasse"], kicker: "Structure aluminium garantie 20 ans", photo: "structure-rails-plots-entete", position: "50% 50%",
   chapo: "Une terrasse se juge sur la durée, et sa durée de vie se joue sous les lames. Nous adaptons la structure à votre terrain, à votre revêtement et à votre budget.",
   actions: `<a class="bouton" href="#structures-bois">Structures bois</a> <a class="bouton bouton-blanc" href="#structures-carrelage">Structures carrelage</a>` })}
 

@@ -3657,5 +3657,23 @@
    1497
   ],
   "ratio": 1.8902
+ },
+ {
+  "cle": "structure-rails-plots-entete",
+  "dossier": "structures",
+  "categorie": "structure-alu",
+  "alt": "Structure aluminium en cours de pose : rails à clips sur plots réglables, première lame posée",
+  "largeurs": [
+   400,
+   600,
+   800,
+   1000,
+   1200,
+   1400,
+   1600,
+   2000,
+   2400
+  ],
+  "ratio": 1.5003
  }
 ]

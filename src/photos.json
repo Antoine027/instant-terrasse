@@ -2094,56 +2094,6 @@
   ]
  },
  {
-  "cle": "alu-piscine-aspect-teck",
-  "dossier": "aluminium",
-  "categorie": "terrasse-aluminium",
-  "essence": "Teck",
-  "alt": "Plage de piscine en lames aluminium aspect bois, bains de soleil et vue sur les montagnes",
-  "largeurs": [
-   400,
-   600,
-   800,
-   1000
-  ],
-  "ratio": 1.5009
- },
- {
-  "cle": "alu-piscine-jardin-tropical",
-  "dossier": "aluminium",
-  "categorie": "terrasse-aluminium",
-  "essence": "Teck",
-  "alt": "Terrasse en lames aluminium aspect bois autour d'une piscine, jardin tropical",
-  "largeurs": [
-   400,
-   600,
-   800,
-   1000,
-   1200,
-   1400,
-   1600,
-   2000,
-   2400
-  ],
-  "ratio": 1.3333
- },
- {
-  "cle": "alu-piscine-haricot",
-  "dossier": "aluminium",
-  "categorie": "terrasse-aluminium",
-  "essence": "Teck",
-  "alt": "Lames aluminium aspect bois autour d'une piscine en forme de haricot",
-  "largeurs": [
-   400,
-   600,
-   800,
-   1000,
-   1200,
-   1400,
-   1600
-  ],
-  "ratio": 1.3335
- },
- {
   "cle": "alu-terrasse-couverte",
   "dossier": "aluminium",
   "categorie": "terrasse-aluminium",
@@ -2165,40 +2115,6 @@
   "categorie": "terrasse-aluminium",
   "essence": "Simili bois",
   "alt": "Terrasse et marches en lames aluminium aspect teck, mur en pierre",
-  "largeurs": [
-   400,
-   600,
-   800,
-   1000,
-   1200,
-   1400,
-   1600
-  ],
-  "ratio": 1.3333
- },
- {
-  "cle": "alu-piscine-blanche-vue",
-  "dossier": "aluminium",
-  "categorie": "terrasse-aluminium",
-  "essence": "Blanc veiné",
-  "alt": "Plage de piscine à débordement en lames aluminium claires, vue sur la baie",
-  "largeurs": [
-   400,
-   600,
-   800,
-   1000,
-   1200,
-   1400,
-   1600
-  ],
-  "ratio": 1.7778
- },
- {
-  "cle": "alu-piscine-grise",
-  "dossier": "aluminium",
-  "categorie": "terrasse-aluminium",
-  "essence": "Bois de grange",
-  "alt": "Plage de piscine en lames aluminium gris clair",
   "largeurs": [
    400,
    600,
@@ -3765,5 +3681,300 @@
    2400
   ],
   "ratio": 1.7765
+ },
+ {
+  "cle": "alu-piscine-aspect-teck",
+  "dossier": "aluminium",
+  "categorie": "terrasse-aluminium",
+  "essence": "Teck",
+  "alt": "Plage de piscine en lames aluminium aspect bois, bains de soleil et vue sur les montagnes",
+  "largeurs": [
+   400,
+   600,
+   800,
+   1000,
+   1200,
+   1400,
+   1600
+  ],
+  "ratio": 1.5009
+ },
+ {
+  "cle": "alu-piscine-blanche-vue",
+  "dossier": "aluminium",
+  "categorie": "terrasse-aluminium",
+  "essence": "Blanc veiné",
+  "alt": "Plage de piscine à débordement en lames aluminium claires, vue sur la baie",
+  "largeurs": [
+   400,
+   600,
+   800,
+   1000,
+   1200,
+   1400,
+   1600
+  ],
+  "ratio": 1.7778
+ },
+ {
+  "cle": "alu-piscine-grise",
+  "dossier": "aluminium",
+  "categorie": "terrasse-aluminium",
+  "essence": "Bois de grange",
+  "alt": "Plage de piscine en lames aluminium gris clair",
+  "largeurs": [
+   400,
+   600,
+   800,
+   1000,
+   1200,
+   1400,
+   1600,
+   2000,
+   2016
+  ],
+  "ratio": 1.3333
+ },
+ {
+  "cle": "alu-piscine-haricot",
+  "dossier": "aluminium",
+  "categorie": "terrasse-aluminium",
+  "essence": "Teck",
+  "alt": "Lames aluminium aspect bois autour d'une piscine en forme de haricot",
+  "largeurs": [
+   400,
+   600,
+   800,
+   1000,
+   1200,
+   1400,
+   1600,
+   2000,
+   2400
+  ],
+  "ratio": 1.3333
+ },
+ {
+  "cle": "alu-piscine-jardin-tropical",
+  "dossier": "aluminium",
+  "categorie": "terrasse-aluminium",
+  "essence": "Teck",
+  "alt": "Terrasse en lames aluminium aspect bois autour d'une piscine, jardin tropical",
+  "largeurs": [
+   400,
+   600,
+   800,
+   1000,
+   1200,
+   1400,
+   1600,
+   2000,
+   2400
+  ],
+  "ratio": 1.3333
+ },
+ {
+  "cle": "alu-restaurant-canal-vignes",
+  "dossier": "aluminium",
+  "categorie": "terrasse-aluminium",
+  "alt": "Terrasse de restaurant en lames aluminium aspect bois, sous de grands parasols, avec vue sur un canal et les vignes",
+  "largeurs": [
+   400,
+   600,
+   800,
+   1000,
+   1200,
+   1400,
+   1536
+  ],
+  "ratio": 0.75
+ },
+ {
+  "cle": "alu-terrasse-salon-parasol",
+  "dossier": "aluminium",
+  "categorie": "terrasse-aluminium",
+  "alt": "Terrasse en lames aluminium aspect bois clair devant une maison contemporaine, salon de jardin et parasol",
+  "largeurs": [
+   400,
+   600,
+   800,
+   1000,
+   1200,
+   1400,
+   1600,
+   2000,
+   2400
+  ],
+  "ratio": 1.3333
+ },
+ {
+  "cle": "alu-piscine-salon-rotin",
+  "dossier": "aluminium",
+  "categorie": "terrasse-aluminium",
+  "alt": "Terrasse en lames aluminium aspect bois avec salon en rotin, au bord d'une piscine (visuel d'illustration)",
+  "largeurs": [
+   400,
+   600,
+   800,
+   1000,
+   1086
+  ],
+  "ratio": 0.75
+ },
+ {
+  "cle": "alu-terrasse-fauteuils-rouges",
+  "dossier": "aluminium",
+  "categorie": "terrasse-aluminium",
+  "alt": "Terrasse en lames aluminium aspect bois, fauteuils rouges et garde-corps vitré",
+  "largeurs": [
+   400,
+   600,
+   800,
+   1000,
+   1200,
+   1400,
+   1600,
+   2000,
+   2400
+  ],
+  "ratio": 1.3333
+ },
+ {
+  "cle": "alu-piscine-carbet",
+  "dossier": "aluminium",
+  "categorie": "terrasse-aluminium",
+  "alt": "Plage de piscine en lames aluminium gris clair, passerelle courbe vers un carbet",
+  "largeurs": [
+   400,
+   600,
+   800,
+   960
+  ],
+  "ratio": 0.75
+ },
+ {
+  "cle": "alu-piscine-maison-creole",
+  "dossier": "aluminium",
+  "categorie": "terrasse-aluminium",
+  "alt": "Terrasse en lames aluminium gris clair entre une maison créole et sa piscine",
+  "largeurs": [
+   400,
+   600,
+   800,
+   960
+  ],
+  "ratio": 0.75
+ },
+ {
+  "cle": "alu-piscine-toit-terrasse",
+  "dossier": "aluminium",
+  "categorie": "terrasse-aluminium",
+  "alt": "Piscine encastrée dans une terrasse en lames aluminium aspect bois, garde-corps et vue dégagée",
+  "largeurs": [
+   400,
+   600,
+   800,
+   960
+  ],
+  "ratio": 0.75
+ },
+ {
+  "cle": "alu-piscine-debordement-mer",
+  "dossier": "aluminium",
+  "categorie": "terrasse-aluminium",
+  "alt": "Terrasse en lames aluminium gris clair autour d'une piscine à débordement, vue sur la mer",
+  "largeurs": [
+   400,
+   600,
+   800,
+   1000,
+   1200,
+   1280
+  ],
+  "ratio": 1.3333
+ },
+ {
+  "cle": "alu-terrasse-vue-mer",
+  "dossier": "aluminium",
+  "categorie": "terrasse-aluminium",
+  "alt": "Terrasse en lames aluminium gris bleuté le long d'une baie vitrée, face à la mer",
+  "largeurs": [
+   400,
+   600,
+   800,
+   1000,
+   1200,
+   1280
+  ],
+  "ratio": 2.1441
+ },
+ {
+  "cle": "alu-terrasse-falaise",
+  "dossier": "aluminium",
+  "categorie": "terrasse-aluminium",
+  "alt": "Terrasse en lames aluminium gris bleuté en bord de falaise, vue sur l'océan",
+  "largeurs": [
+   400,
+   600,
+   800,
+   1000,
+   1200,
+   1280
+  ],
+  "ratio": 2.1441
+ },
+ {
+  "cle": "alu-terrasse-banc-courbe",
+  "dossier": "aluminium",
+  "categorie": "terrasse-aluminium",
+  "alt": "Terrasse en lames aluminium aspect bois avec banc courbe, vue sur une baie",
+  "largeurs": [
+   400,
+   600,
+   800,
+   960
+  ],
+  "ratio": 0.75
+ },
+ {
+  "cle": "alu-piscine-debordement-baie",
+  "dossier": "aluminium",
+  "categorie": "terrasse-aluminium",
+  "alt": "Grande terrasse en lames aluminium aspect bois autour d'une piscine à débordement, vue sur la mer",
+  "largeurs": [
+   400,
+   600,
+   800,
+   960
+  ],
+  "ratio": 0.75
+ },
+ {
+  "cle": "alu-escalier-maison-bois",
+  "dossier": "aluminium",
+  "categorie": "terrasse-aluminium",
+  "alt": "Terrasse et escalier en lames aluminium aspect bois devant une maison en bois",
+  "largeurs": [
+   400,
+   600,
+   800,
+   960
+  ],
+  "ratio": 0.75
+ },
+ {
+  "cle": "alu-piscine-cour",
+  "dossier": "aluminium",
+  "categorie": "terrasse-aluminium",
+  "alt": "Plage de piscine en lames aluminium grises dans une cour, bains de soleil",
+  "largeurs": [
+   400,
+   600,
+   800,
+   1000,
+   1200,
+   1280
+  ],
+  "ratio": 1.5006
  }
 ]

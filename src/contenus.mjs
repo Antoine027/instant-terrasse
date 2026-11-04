@@ -189,22 +189,27 @@ const tableau = (id, titre, intro, colonnes, lignes, verdicts) => `
 
 // Galerie de la page Structures : photo et filtres auxquels elle appartient.
 const GALERIE_STRUCTURES = [
-  ["structure-clips-lame-bois", ["Structure bois", "Structure aluminium"]],
-  ["structure-lames-clipsees-vue-haut", ["Structure bois", "Structure aluminium"]],
-  ["structure-clips-lame-brune", ["Structure bois", "Structure aluminium"]],
-  ["structure-plot-rail-lame", ["Structure bois", "Structure aluminium"]],
-  ["structure-plot-reglable", ["Structure bois", "Structure aluminium"]],
-  ["structure-rails-vue-ensemble", ["Structure bois", "Structure aluminium"]],
-  ["structure-rails-plots-detail", ["Structure bois", "Structure aluminium"]],
-  ["structure-rails-dalle", ["Structure bois", "Structure aluminium"]],
-  ["structure-lames-a-clipser", ["Structure bois", "Structure aluminium"]],
-  ["structure-schema-bordure", ["Structure bois", "Structure aluminium"]],
-  ["structure-rails-plots-entete", ["Structure bois", "Structure aluminium"]],
+  ["structure-clips-lame-bois", ["Structure bois"]],
+  ["structure-lames-clipsees-vue-haut", ["Structure bois"]],
+  ["structure-clips-lame-brune", ["Structure bois"]],
+  ["structure-plot-rail-lame", ["Structure bois"]],
+  ["structure-plot-reglable", ["Structure bois"]],
+  ["structure-rails-vue-ensemble", ["Structure bois"]],
+  ["structure-rails-plots-detail", ["Structure bois"]],
+  ["structure-rails-dalle", ["Structure bois"]],
+  ["structure-lames-a-clipser", ["Structure bois"]],
+  ["structure-schema-bordure", ["Structure bois"]],
+  ["structure-rails-plots-entete", ["Structure bois"]],
   ["structure-traditionnelle-plot-lambourde", ["Structure bois"]],
-  ["carrelage-structure-aluminium-schema", ["Structure carrelage", "Structure aluminium"]],
+  ["carrelage-structure-aluminium-schema", ["Structure carrelage"]],
   ["carrelage-plots-schema", ["Structure carrelage"]],
   ["ambiance-dalles-sur-plots", ["Structure carrelage"]],
   ["carrelage-bh-sureleve-gazon", ["Structure carrelage"]],
+  ["structure-lames-alu-piscine", ["Structure lames aluminium"]],
+  ["structure-lames-alu-pose", ["Structure lames aluminium"]],
+  ["structure-lames-alu-balcon-dessous", ["Structure lames aluminium"]],
+  ["structure-lames-alu-assemblage", ["Structure lames aluminium"]],
+  ["structure-lames-alu-equerre", ["Structure lames aluminium"]],
 ];
 
 const compBois = tableau(
@@ -369,7 +374,7 @@ ${compCarrelage}
 
 <section id="galerie" class="bloc bloc-alt">
   <div class="conteneur">
-    ${galerie(GALERIE_STRUCTURES.map(([cle]) => cle), { titre: "Nos structures en images", intro: "Choisissez un type de structure pour n'afficher que celui qui vous intéresse.", legende: "Illustrations", types: ["Structure bois", "Structure carrelage", "Structure aluminium"], typesDe: (p) => GALERIE_STRUCTURES.find(([c]) => c === p.cle)[1] })}
+    ${galerie(GALERIE_STRUCTURES.map(([cle]) => cle), { titre: "Nos structures en images", intro: "Choisissez un type de structure pour n'afficher que celui qui vous intéresse.", legende: "Illustrations", types: ["Structure bois", "Structure carrelage", "Structure lames aluminium"], typesDe: (p) => GALERIE_STRUCTURES.find(([c]) => c === p.cle)[1] })}
   </div>
 </section>
 ${cta("Quelle structure pour votre terrain ?")}`,

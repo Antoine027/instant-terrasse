@@ -3675,5 +3675,95 @@
    2400
   ],
   "ratio": 1.5003
+ },
+ {
+  "cle": "structure-lames-alu-piscine",
+  "dossier": "structures",
+  "categorie": "structure-lame-alu",
+  "alt": "Ossature métallique d'une terrasse en lames aluminium autour d'une piscine, avant la pose des lames",
+  "largeurs": [
+   400,
+   600,
+   800,
+   1000,
+   1200,
+   1400,
+   1600,
+   2000,
+   2400
+  ],
+  "ratio": 2.0562
+ },
+ {
+  "cle": "structure-lames-alu-balcon-dessous",
+  "dossier": "structures",
+  "categorie": "structure-lame-alu",
+  "alt": "Balcon en lames aluminium vu de dessous, avec son ossature et un garde-corps vitré",
+  "largeurs": [
+   400,
+   600,
+   800,
+   1000,
+   1200,
+   1400,
+   1600,
+   2000,
+   2400
+  ],
+  "ratio": 2.0562
+ },
+ {
+  "cle": "structure-lames-alu-assemblage",
+  "dossier": "structures",
+  "categorie": "structure-lame-alu",
+  "alt": "Assemblage boulonné de deux profilés aluminium sur plot réglable",
+  "largeurs": [
+   400,
+   600,
+   800,
+   1000,
+   1200,
+   1400,
+   1600,
+   2000,
+   2400
+  ],
+  "ratio": 1.4997
+ },
+ {
+  "cle": "structure-lames-alu-equerre",
+  "dossier": "structures",
+  "categorie": "structure-lame-alu",
+  "alt": "Équerre de jonction entre profilés aluminium, posés sur plot réglable",
+  "largeurs": [
+   400,
+   600,
+   800,
+   1000,
+   1200,
+   1400,
+   1600,
+   2000,
+   2400
+  ],
+  "ratio": 1.4997
+ },
+ {
+  "cle": "structure-lames-alu-pose",
+  "dossier": "structures",
+  "categorie": "structure-lame-alu",
+  "alt": "Pose de lames aluminium sur une ossature métallique au-dessus d'un vide sanitaire",
+  "largeurs": [
+   400,
+   600,
+   800,
+   1000,
+   1200,
+   1400,
+   1600,
+   2000,
+   2400
+  ],
+  "ratio": 1.7765
  }
 ]

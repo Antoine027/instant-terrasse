@@ -339,17 +339,6 @@ ${compBois.replace('class="bloc"', 'class="bloc bloc-alt"')}
 </section>
 ${compCarrelage}
 
-<section class="bloc">
-  <div class="conteneur">
-    <h2>Les autres solutions</h2>
-    <div class="grille grille-3">
-      <a class="carte carte-lien" href="/terrasse-bois-lyon/#essences-traditionnelles"><h3>Bois massifs et exotiques</h3><p>Les essences posées sur structure traditionnelle : ipé, cumaru, mélèze, douglas, tigerwood…</p><span class="fleche" aria-hidden="true">→</span></a>
-      <a class="carte carte-lien" href="#carrelage-plots"><h3>Dalles sur plots</h3><p>Pour le carrelage sur un support existant (dalle béton, toit-terrasse) : posé sans colle ni fondation.</p><span class="fleche" aria-hidden="true">→</span></a>
-      <a class="carte carte-lien" href="/terrasse-sur-pilotis-lyon/"><h3>Terrasse sur pilotis</h3><p>Pour les terrains en pente ou les terrasses surélevées.</p><span class="fleche" aria-hidden="true">→</span></a>
-    </div>
-    <p class="note-pose">${POSE}</p>
-  </div>
-</section>
 <section id="galerie" class="bloc bloc-alt">
   <div class="conteneur">
     ${galerie("structure-alu", { titre: "Le système à clipser en images", intro: "Plots réglables, rails aluminium et clips : rien ne traverse la lame, et chaque lame se démonte.", legende: "Illustrations du système de pose" })}

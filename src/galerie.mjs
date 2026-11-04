@@ -42,14 +42,15 @@ export const imgPhoto = (cle, { sizes = "(max-width:760px) 100vw, 400px", priori
 };
 
 // Galerie filtrable par essence pour une catégorie (ex. "terrasse-bois").
-export const galerie = (categorie, { titre, intro, legende = "Illustrations", groupe, types, ordre } = {}) => {
+export const galerie = (categorie, { titre, intro, legende = "Illustrations", groupe, types, typesDe, ordre } = {}) => {
   // categorie : nom de catégorie, ou liste de clés de photos (sélection sans filtres).
   const selection = Array.isArray(categorie);
   // groupe : fonction qui donne le libellé de filtre d'une photo (sinon son essence).
   const liste = (selection ? categorie.map(photo) : PHOTOS.filter((p) => p.categorie === categorie)).map((p) => (groupe ? { ...p, essence: groupe(p) } : p));
   if (!liste.length) return "";
   // types : liste ordonnée de filtres ; une photo peut appartenir à plusieurs (champ « types » du manifeste).
-  if (types) liste.forEach((p, i) => { liste[i] = { ...p, essence: (p.types || []).join("|") }; });
+  // typesDe : fonction qui donne les filtres d'une photo (sinon son champ « types »).
+  if (types) liste.forEach((p, i) => { const t = typesDe ? typesDe(p) : p.types || []; liste[i] = { ...p, types: t, essence: t.join("|") }; });
   const essences = types ? types.filter((t) => liste.some((p) => (p.types || []).includes(t))) : selection && !groupe ? [] : [...new Set(liste.map((p) => p.essence).filter(Boolean))];
   // ordre : clés des photos à afficher en premier (les plus belles), sans changer l'ordre des filtres.
   // Les plus belles photos d'abord (RANG), sauf ordre imposé.

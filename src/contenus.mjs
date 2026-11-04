@@ -187,6 +187,26 @@ const tableau = (id, titre, intro, colonnes, lignes, verdicts) => `
   </div>
 </section>`;
 
+// Galerie de la page Structures : photo et filtres auxquels elle appartient.
+const GALERIE_STRUCTURES = [
+  ["structure-clips-lame-bois", ["Structure bois", "Structure aluminium"]],
+  ["structure-lames-clipsees-vue-haut", ["Structure bois", "Structure aluminium"]],
+  ["structure-clips-lame-brune", ["Structure bois", "Structure aluminium"]],
+  ["structure-plot-rail-lame", ["Structure bois", "Structure aluminium"]],
+  ["structure-plot-reglable", ["Structure bois", "Structure aluminium"]],
+  ["structure-rails-vue-ensemble", ["Structure bois", "Structure aluminium"]],
+  ["structure-rails-plots-detail", ["Structure bois", "Structure aluminium"]],
+  ["structure-rails-dalle", ["Structure bois", "Structure aluminium"]],
+  ["structure-lames-a-clipser", ["Structure bois", "Structure aluminium"]],
+  ["structure-schema-bordure", ["Structure bois", "Structure aluminium"]],
+  ["structure-rails-plots-entete", ["Structure bois", "Structure aluminium"]],
+  ["structure-traditionnelle-plot-lambourde", ["Structure bois"]],
+  ["carrelage-structure-aluminium-schema", ["Structure carrelage", "Structure aluminium"]],
+  ["carrelage-plots-schema", ["Structure carrelage"]],
+  ["ambiance-dalles-sur-plots", ["Structure carrelage"]],
+  ["carrelage-bh-sureleve-gazon", ["Structure carrelage"]],
+];
+
 const compBois = tableau(
   "comparatif-bois",
   "Comparer en quelques critères",
@@ -349,7 +369,7 @@ ${compCarrelage}
 
 <section id="galerie" class="bloc bloc-alt">
   <div class="conteneur">
-    ${galerie("structure-alu", { titre: "Le système à clipser en images", intro: "Plots réglables, rails aluminium et clips : rien ne traverse la lame, et chaque lame se démonte.", legende: "Illustrations du système de pose" })}
+    ${galerie(GALERIE_STRUCTURES.map(([cle]) => cle), { titre: "Nos structures en images", intro: "Choisissez un type de structure pour n'afficher que celui qui vous intéresse.", legende: "Illustrations", types: ["Structure bois", "Structure carrelage", "Structure aluminium"], typesDe: (p) => GALERIE_STRUCTURES.find(([c]) => c === p.cle)[1] })}
   </div>
 </section>
 ${cta("Quelle structure pour votre terrain ?")}`,

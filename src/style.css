@@ -1553,3 +1553,18 @@ h3.h2{font-size:clamp(1.5rem,1rem + 1.2vw,2.1rem);margin:0 0 14px}
   .comp .verdicts{order:4;margin-top:16px}
   .comp-mobile{order:2}
 }
+/* Page Structures (mobile), v4 : un fond par partie, 2e carte bien visible */
+@media (max-width:700px){
+  #structures-bois,.struct-car-bois,.struct-car-bois+.points,#comparatif-bois{background:var(--fond2)!important}
+  #structures-carrelage,.struct-car-carrelage,.struct-car-carrelage+.points,#comparatif-carrelage{background:var(--fond)!important}
+  .struct-car{align-items:stretch;padding:8px 16px 6px;gap:12px}
+  .struct-car>.sous-partie{flex-basis:78%;scroll-snap-align:start}
+  .struct-car{scroll-padding:0 16px}
+  .struct-car+.points{margin:0;padding:8px 0 4px}
+  .partie .partie-titre::after{content:"2 solutions · faites glisser →";display:block;margin-top:8px;font:600 .78rem Lato,sans-serif;letter-spacing:.02em;color:var(--accent-texte)}
+  .struct-car .photo-produit img{max-height:210px}
+  .struct-car h3.h2{font-size:1.2rem}
+  #comparatif-bois{padding-top:24px}
+  #comparatif-carrelage{padding-top:24px}
+}
+@media (max-width:700px){.partie{padding-bottom:12px!important}.partie .partie-titre{margin-bottom:0}}

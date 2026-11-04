@@ -96,8 +96,8 @@ ${heroPlein({ fil: "Terrasses", h1: ["Terrasse bois", "sur mesure à Lyon"], kic
       <p><a href="/structure-terrasse-lyon/#comparatif-bois">Comparer les deux structures en détail →</a></p>
     </div>
     <div class="grille">
-      <div class="carte"><h3>Sur structure aluminium</h3><p>Plots réglables, rails aluminium et fixations invisibles. Rien ne pourrit sous les lames, l'air circule, la terrasse reste plane. C'est la structure de nos bois modifiés et de nos bambous.</p></div>
-      <div class="carte"><h3>Sur structure traditionnelle</h3><p>Des lambourdes en bois sur plots réglables : la technique classique et éprouvée, adaptée aux lames classiques et aux bois exotiques.</p></div>
+      <a class="carte carte-structure" href="/structure-terrasse-lyon/"><div><h3>Sur structure aluminium</h3><p>Plots réglables, rails aluminium et fixations invisibles. Rien ne pourrit sous les lames, l'air circule, la terrasse reste plane. C'est la structure de nos bois modifiés et de nos bambous.</p></div><span class="cs-img">${img("structure-aluminium", "Structure aluminium : plot réglable, rail aluminium et clip sous une lame de terrasse", 404)}</span></a>
+      <a class="carte carte-structure" href="/structure-terrasse-lyon/#structure-traditionnelle"><div><h3>Sur structure traditionnelle</h3><p>Des lambourdes en bois sur plots réglables : la technique classique et éprouvée, adaptée aux lames classiques et aux bois exotiques.</p></div><span class="cs-img">${imgPhoto("structure-traditionnelle-plot-lambourde", { sizes: "140px" })}</span></a>
     </div>
   </div>
 </section>

@@ -144,7 +144,6 @@ ${heroPlein({ fil: "Terrasses", h1: ["Terrasse bois", "sur mesure à Lyon"], kic
   <div class="conteneur deux-colonnes">
     <div>
       <h2>Bien choisir son bois</h2>
-      <p>Tous les bois grisent au soleil : c'est une patine naturelle, pas un défaut. Si vous voulez garder la teinte d'origine, un saturateur une à deux fois par an suffit. Si vous préférez le gris argenté, un simple nettoyage annuel.</p>
       <p>Pour hésiter moins longtemps, posez-vous trois questions : quel aspect vous plaît (clair, miel, brun, exotique) ? Quel budget ? Combien de temps voulez-vous consacrer à l'entretien ? Nous faisons le reste lors de la visite.</p>
     </div>
     <div>
@@ -153,6 +152,17 @@ ${heroPlein({ fil: "Terrasses", h1: ["Terrasse bois", "sur mesure à Lyon"], kic
       <p>Vous hésitez encore entre le bois et un autre matériau ? Consultez notre <a href="/nos-terrasses/">comparatif des matériaux</a> ou découvrez la <a href="/terrasse-composite-lyon/">terrasse composite</a>.</p>
     </div>
   </div>
+</section>
+
+<section id="faq-bois" class="bloc bloc-alt">
+  <div class="conteneur"><div class="faq-liste">
+    <h2>Vos questions sur le bois</h2>
+    <details class="faq"><summary>Comment entretenir une terrasse en bois ?</summary><div><p>Un nettoyage une à deux fois par an suffit : balai-brosse, eau et savon doux, puis rinçage. Pensez à retirer les feuilles et la terre qui stagnent, surtout à l'ombre. Si vous utilisez un nettoyeur haute pression, gardez une pression modérée et de la distance pour ne pas abîmer les fibres du bois.</p></div></details>
+    <details class="faq"><summary>Un saturateur est-il obligatoire ?</summary><div><p>Non. Sur les bois modifiés et le bambou que nous proposons sur structure aluminium, le saturateur ne conditionne pas la durée de vie : il sert à conserver la teinte d'origine. Comptez une à deux applications par an si vous voulez garder cette couleur. Pour les bois massifs et exotiques, nous vous indiquons l'entretien conseillé pour l'essence choisie.</p></div></details>
+    <details class="faq"><summary>Le bois va-t-il changer de couleur ?</summary><div><p>Oui : au soleil et à la pluie, tous les bois prennent une patine grise argentée. C'est naturel et ce n'est pas un défaut. Les pastilles de chaque essence, plus haut sur cette page, montrent cette évolution. Un saturateur prolonge la teinte d'origine si vous la préférez.</p></div></details>
+    <details class="faq"><summary>Une terrasse en bois est-elle glissante ?</summary><div><p>Mouillée, à l'ombre, avec de la mousse ou des feuilles, une terrasse peut devenir glissante, quel que soit le matériau. Un nettoyage régulier et une structure qui laisse l'eau s'écouler limitent ce risque. Autour d'une piscine, nous vous conseillons lors de la visite l'essence et la finition les plus adaptées.</p></div></details>
+    <details class="faq"><summary>Y a-t-il un risque d'échardes ?</summary><div><p>Le bois reste un matériau naturel : avec le temps, quelques fibres peuvent se soulever, plus ou moins selon l'essence et l'entretien. Nous vous montrons les échantillons et vous orientons vers une essence adaptée si vous marchez souvent pieds nus. Si l'absence d'échardes est un critère décisif, le <a href="/terrasse-composite-lyon/">composite</a> ou les <a href="/terrasse-aluminium-lyon/">lames aluminium</a> sont faits pour vous.</p></div></details>
+  </div></div>
 </section>
 ${cta()}`,
 };

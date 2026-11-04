@@ -1422,6 +1422,4 @@ details[open]>summary.menu-lien::after{transform:translateY(2px) rotate(225deg)}
 #piece>.conteneur>h2{display:block!important;position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;margin:0}
 .h-pic{display:contents}
 .comparatif thead th.col-accent{background:var(--bouton)}
-/* Boutons d'action en orange (texte foncé) sur tout le site, comme sur mobile (04/11/2026) */
-.bouton:not(.bouton-clair):not(.bouton-blanc){background:#f0b15a;color:#1b1d1f;box-shadow:0 10px 26px -14px rgba(201,135,40,.7)}
-.bouton:not(.bouton-clair):not(.bouton-blanc):hover,.bouton:not(.bouton-clair):not(.bouton-blanc):active{background:#e3a94a;color:#1b1d1f}
+/* Règle des boutons (04/11/2026) : marron sur fond clair (par défaut), orange sur fond sombre (en-têtes mobiles, bouton d'appel du bloc rappel). */

@@ -1515,3 +1515,41 @@ h3.h2{font-size:clamp(1.5rem,1rem + 1.2vw,2.1rem);margin:0 0 14px}
   .struct-car .deux-colonnes>div>p:last-child:not(:first-of-type){display:none}
   .partie+.struct-car{margin-top:0}
 }
+
+/* Page Structures (mobile), v3 : textes courts, images plus grandes, comparatif en cartes */
+@media (max-width:700px){
+  .partie .chapo,.comp>.conteneur>.chapo{display:none}
+  .partie{padding:30px 0 0}
+  .comp{padding:30px 0}
+  .comp h2{font-size:1.35rem}
+  .struct-car{padding:14px 12px 10px}
+  .struct-car>.sous-partie{flex-basis:90%}
+  .struct-car .photo-produit img{max-height:240px}
+  .struct-car .deux-colonnes>div>p:not(.sous-titre){display:none}
+  .struct-car .sous-partie.detail .deux-colonnes>div>p:not(.sous-titre){display:block}
+  .struct-car .li-det{display:none}
+  .struct-car .detail .li-det{display:inline}
+  .struct-car .puces-longues:not(.ouvert) li:nth-child(n+4){display:list-item}
+  .struct-car .puces{display:flex;flex-wrap:wrap;justify-content:center;gap:6px;max-width:none}
+  .struct-car .puces li{padding:5px 12px;margin:0;border-radius:999px;background:var(--fond2);font-size:.82rem}
+  .struct-car .puces li::before{display:none}
+  .struct-car .detail .puces{display:block}
+  .struct-car .detail .puces li{background:none;padding:0 0 0 22px;margin:6px 0;border-radius:0;font-size:.9rem}
+  .struct-car .detail .puces li::before{display:block}
+  .struct-car .voir-tout{margin-top:12px}
+  .comp-mobile{background:none;border-radius:0;overflow:visible;margin-top:18px}
+  .comp-aide{border:0;padding:0 0 8px}
+  .comp-car{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:10px;margin:0 -16px;padding:4px 16px 10px;scrollbar-width:none}
+  .comp-car::-webkit-scrollbar{display:none}
+  .comp-carte{flex:0 0 86%;scroll-snap-align:center;background:#fff;border-radius:var(--rayon);padding:14px 14px 16px;box-shadow:0 8px 24px -16px rgba(47,52,55,.35)}
+  .comp-num{margin:0;font-size:.72rem;color:var(--doux);text-align:center}
+  .comp-carte h3{margin:2px 0 10px;font-size:1.05rem;text-align:center}
+  .comp-duo{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+  .comp-duo>div{background:var(--fond2);border-radius:10px;padding:10px}
+  .comp-duo>div.acc{background:#fdf3e2}
+  .comp-duo p{margin:0;font-size:.85rem;line-height:1.4}
+  .comp-duo .comp-col{font:700 .68rem Montserrat,sans-serif;letter-spacing:.05em;text-transform:uppercase;color:var(--doux);margin-bottom:4px}
+  .comp-duo .acc .comp-col{color:var(--accent-texte)}
+  .comp .verdicts{order:4;margin-top:16px}
+  .comp-mobile{order:2}
+}

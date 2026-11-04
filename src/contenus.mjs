@@ -181,8 +181,8 @@ const tableau = (id, titre, intro, colonnes, lignes, verdicts) => `
     </div>
     <div class="grille verdicts">${verdicts.map(([t, x]) => `<div class="carte"><h3>${t}</h3><p>${x}</p></div>`).join("")}</div>
     <div class="comp-mobile">
-      <p class="comp-aide">Touchez un critère pour comparer</p>
-      ${lignes.map(([crit, a, b]) => `<details class="comp-ligne"><summary>${crit}</summary><dl><dt>${colonnes[0]}</dt><dd>${a}</dd><dt class="acc">${colonnes[1]}</dt><dd>${b}</dd></dl></details>`).join("")}
+      <p class="comp-aide">Faites glisser pour comparer, critère par critère</p>
+      <div class="comp-car">${lignes.map(([crit, a, b], i) => `<div class="comp-carte"><p class="comp-num">${i + 1} / ${lignes.length}</p><h3>${crit}</h3><div class="comp-duo"><div><p class="comp-col">${colonnes[0]}</p><p>${a}</p></div><div class="acc"><p class="comp-col">${colonnes[1]}</p><p>${b}</p></div></div></div>`).join("")}</div>
     </div>
   </div>
 </section>`;
@@ -267,16 +267,16 @@ ${heroPlein({ fil: "Terrasses", h1: ["Nos structures", "de terrasse"], kicker: "
       <h3 class="h2">Structure aluminium sur plots</h3>
       <p>Des plots réglables en hauteur posés sur le support, des rails en aluminium livrés avec leurs clips, et des lames qui viennent s'y clipser : aucune vis ne traverse la lame.</p>
       <ul class="puces puces-longues">
-        <li><strong>Garantie 20 ans</strong> : nos structures aluminium sont garanties 20 ans.</li>
-        <li><strong>Fixation invisible</strong> : pas de vis en surface, donc pas de trou où l'eau s'infiltre, et des lignes de lames parfaitement droites.</li>
-        <li><strong>Des clips qui tiennent</strong> : ils suivent la dilatation du bois sans casser, et leur résistance à l'arrachement dépasse de 1,5 à 2,5 fois l'exigence de la norme.</li>
-        <li><strong>Démontable</strong> : une lame se déclipse et se remet en place sans rien abîmer, pour accéder dessous ou remplacer une lame.</li>
-        <li><strong>Imputrescible</strong> : l'aluminium ne pourrit pas, ne gonfle pas et résiste à la corrosion, y compris autour des piscines.</li>
-        <li><strong>Ventilée</strong> : les lames ne touchent pas directement l'ossature, l'air circule et le bois sèche plus vite.</li>
-        <li><strong>Conforme et testée</strong> : un système testé par le FCBA (l'institut technologique de la filière bois) et conforme au DTU 51-4, la norme des terrasses en bois.</li>
-        <li><strong>Fabriquée en France</strong>, en aluminium majoritairement recyclé et entièrement recyclable.</li>
+        <li><strong>Garantie 20 ans</strong><span class="li-det"> : nos structures aluminium sont garanties 20 ans.</span></li>
+        <li><strong>Fixation invisible</strong><span class="li-det"> : pas de vis en surface, donc pas de trou où l'eau s'infiltre, et des lignes de lames parfaitement droites.</span></li>
+        <li><strong>Des clips qui tiennent</strong><span class="li-det"> : ils suivent la dilatation du bois sans casser, et leur résistance à l'arrachement dépasse de 1,5 à 2,5 fois l'exigence de la norme.</span></li>
+        <li><strong>Démontable</strong><span class="li-det"> : une lame se déclipse et se remet en place sans rien abîmer, pour accéder dessous ou remplacer une lame.</span></li>
+        <li><strong>Imputrescible</strong><span class="li-det"> : l'aluminium ne pourrit pas, ne gonfle pas et résiste à la corrosion, y compris autour des piscines.</span></li>
+        <li><strong>Ventilée</strong><span class="li-det"> : les lames ne touchent pas directement l'ossature, l'air circule et le bois sèche plus vite.</span></li>
+        <li><strong>Conforme et testée</strong><span class="li-det"> : un système testé par le FCBA (l'institut technologique de la filière bois) et conforme au DTU 51-4, la norme des terrasses en bois.</span></li>
+        <li><strong>Fabriquée en France</strong><span class="li-det">, en aluminium majoritairement recyclé et entièrement recyclable.</span></li>
       </ul>
-      <button class="voir-tout" type="button" onclick="this.previousElementSibling.classList.add('ouvert');this.remove()">Voir le détail</button>
+      <button class="voir-tout" type="button" onclick="this.closest('.sous-partie').classList.add('detail');this.remove()">Voir le détail</button>
     </div>
   </div>
 </section>
@@ -291,10 +291,11 @@ ${heroPlein({ fil: "Terrasses", h1: ["Nos structures", "de terrasse"], kicker: "
       <h3 class="h2">Structure traditionnelle</h3>
       <p>La technique classique de la terrasse en bois : des lambourdes en bois posées sur des plots réglables, et des lames vissées sur les lambourdes.</p>
       <ul class="puces">
-        <li><strong>Plots réglables</strong> : ils mettent la terrasse de niveau sur un sol irrégulier.</li>
-        <li><strong>Lambourdes en bois</strong> : l'ossature qui porte les lames.</li>
-        <li><strong>Lames vissées</strong> : pour toutes nos essences, dont l'ipé, le cumaru, le mélèze, le douglas…</li>
+        <li><strong>Plots réglables</strong><span class="li-det"> : ils mettent la terrasse de niveau sur un sol irrégulier.</span></li>
+        <li><strong>Lambourdes en bois</strong><span class="li-det"> : l'ossature qui porte les lames.</span></li>
+        <li><strong>Lames vissées</strong><span class="li-det"> : pour toutes nos essences, dont l'ipé, le cumaru, le mélèze, le douglas…</span></li>
       </ul>
+      <button class="voir-tout" type="button" onclick="this.closest('.sous-partie').classList.add('detail');this.remove()">Voir le détail</button>
       <p>Généralement plus économique à l'achat que la structure aluminium. Le <a href="#comparatif-bois">comparatif ci-dessous</a> vous aide à choisir entre les deux.</p>
     </div>
   </div>
@@ -317,10 +318,11 @@ ${compBois.replace('class="bloc"', 'class="bloc bloc-alt"')}
       <h3 class="h2">Carrelage sur structure aluminium</h3>
       <p>Les dalles reposent sur des rails aluminium, eux-mêmes posés sur des plots réglables.</p>
       <ul class="puces">
-        <li><strong>Supports irréguliers et grandes hauteurs</strong> : sols durs ou stabilisés, sans couler de dalle béton.</li>
-        <li><strong>Calepinage libre</strong> : grands formats, joints décalés, mélange de formats ou de bois et carrelage.</li>
-        <li><strong>La terrasse la plus stable possible</strong>, pour un budget plus élevé.</li>
+        <li><strong>Supports irréguliers et grandes hauteurs</strong><span class="li-det"> : sols durs ou stabilisés, sans couler de dalle béton.</span></li>
+        <li><strong>Calepinage libre</strong><span class="li-det"> : grands formats, joints décalés, mélange de formats ou de bois et carrelage.</span></li>
+        <li><strong>La terrasse la plus stable possible</strong><span class="li-det">, pour un budget plus élevé.</span></li>
       </ul>
+      <button class="voir-tout" type="button" onclick="this.closest('.sous-partie').classList.add('detail');this.remove()">Voir le détail</button>
     </div>
   </div>
 </section>
@@ -333,10 +335,11 @@ ${compBois.replace('class="bloc"', 'class="bloc bloc-alt"')}
       <h3 class="h2">Carrelage sur plots</h3>
       <p>Chaque dalle repose directement sur des plots réglables placés à ses angles, sans rail : posé sans colle ni fondation.</p>
       <ul class="puces">
-        <li><strong>Support existant stable</strong> : dalle béton, toit-terrasse, ancienne terrasse.</li>
-        <li><strong>Formats courants</strong>, pose à joints alignés.</li>
-        <li><strong>Pose rapide</strong>, solution la plus économique.</li>
+        <li><strong>Support existant stable</strong><span class="li-det"> : dalle béton, toit-terrasse, ancienne terrasse.</span></li>
+        <li><strong>Formats courants</strong><span class="li-det">, pose à joints alignés.</span></li>
+        <li><strong>Pose rapide</strong><span class="li-det">, solution la plus économique.</span></li>
       </ul>
+      <button class="voir-tout" type="button" onclick="this.closest('.sous-partie').classList.add('detail');this.remove()">Voir le détail</button>
       <p>Voir aussi la <a href="/terrasse-sur-plots-lyon/">terrasse sur plots</a> et la <a href="/terrasse-carrelage-lyon/">terrasse carrelage</a>.</p>
     </div>
   </div>

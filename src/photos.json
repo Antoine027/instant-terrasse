@@ -3787,7 +3787,8 @@
    1400,
    1536
   ],
-  "ratio": 0.75
+  "ratio": 0.75,
+  "essence": "Teck"
  },
  {
   "cle": "alu-terrasse-salon-parasol",
@@ -3805,7 +3806,8 @@
    2000,
    2400
   ],
-  "ratio": 1.3333
+  "ratio": 1.3333,
+  "essence": "Teck"
  },
  {
   "cle": "alu-terrasse-fauteuils-rouges",
@@ -3823,7 +3825,8 @@
    2000,
    2400
   ],
-  "ratio": 1.3333
+  "ratio": 1.3333,
+  "essence": "Teck"
  },
  {
   "cle": "alu-piscine-carbet",
@@ -3836,7 +3839,8 @@
    800,
    960
   ],
-  "ratio": 0.75
+  "ratio": 0.75,
+  "essence": "Bois de grange"
  },
  {
   "cle": "alu-piscine-maison-creole",
@@ -3849,7 +3853,8 @@
    800,
    960
   ],
-  "ratio": 0.75
+  "ratio": 0.75,
+  "essence": "Bois de grange"
  },
  {
   "cle": "alu-piscine-toit-terrasse",
@@ -3862,7 +3867,8 @@
    800,
    960
   ],
-  "ratio": 0.75
+  "ratio": 0.75,
+  "essence": "Teck"
  },
  {
   "cle": "alu-piscine-debordement-mer",
@@ -3877,7 +3883,8 @@
    1200,
    1280
   ],
-  "ratio": 1.3333
+  "ratio": 1.3333,
+  "essence": "Bois de grange"
  },
  {
   "cle": "alu-terrasse-vue-mer",
@@ -3892,7 +3899,8 @@
    1200,
    1280
   ],
-  "ratio": 2.1441
+  "ratio": 2.1441,
+  "essence": "Bois de grange"
  },
  {
   "cle": "alu-terrasse-falaise",
@@ -3907,7 +3915,8 @@
    1200,
    1280
   ],
-  "ratio": 2.1441
+  "ratio": 2.1441,
+  "essence": "Bois de grange"
  },
  {
   "cle": "alu-terrasse-banc-courbe",
@@ -3920,7 +3929,8 @@
    800,
    960
   ],
-  "ratio": 0.75
+  "ratio": 0.75,
+  "essence": "Teck"
  },
  {
   "cle": "alu-piscine-debordement-baie",
@@ -3933,7 +3943,8 @@
    800,
    960
   ],
-  "ratio": 0.75
+  "ratio": 0.75,
+  "essence": "Teck"
  },
  {
   "cle": "alu-escalier-maison-bois",
@@ -3946,7 +3957,8 @@
    800,
    960
   ],
-  "ratio": 0.75
+  "ratio": 0.75,
+  "essence": "Teck"
  },
  {
   "cle": "alu-piscine-cour",
@@ -3961,7 +3973,8 @@
    1200,
    1280
   ],
-  "ratio": 1.5006
+  "ratio": 1.5006,
+  "essence": "Bois de grange"
  },
  {
   "cle": "alu-pontons-lac",
@@ -3979,6 +3992,7 @@
    2000,
    2364
   ],
-  "ratio": 1.3906
+  "ratio": 1.3906,
+  "essence": "Teck"
  }
 ]

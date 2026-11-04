@@ -237,7 +237,7 @@ ${heroPlein({ fil: "Terrasses", h1: ["Nos structures", "de terrasse"], kicker: "
 <section id="terrains" class="bloc">
   <div class="conteneur">
     <h2>Une structure adaptée à chaque terrain</h2>
-    <p class="chapo">Bois ou carrelage, structure aluminium ou traditionnelle : quelle que soit la solution présentée sur cette page, nous l'adaptons au sol qui recevra la terrasse. C'est ce que nous vérifions en premier lors de la visite.</p>
+    <p class="chapo">Quelle que soit la nature du support, nous avons une structure adaptée. Nous le vérifions dès la visite.</p>
     <div class="grille grille-3">
       <div class="carte"><h3>Sol dur</h3><p>Dalle béton, ancienne terrasse : la structure se pose directement ou sur cales, pour une terrasse de faible épaisseur.</p></div>
       <div class="carte"><h3>Sol stabilisé</h3><p>Gravier compacté : les plots réglables reprennent les écarts de niveau, sans couler de béton.</p></div>

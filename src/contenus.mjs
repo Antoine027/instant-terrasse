@@ -532,7 +532,7 @@ const terrasseAluminium = {
     fil: "Terrasses",
     h1: ["Terrasse en lames", "aluminium"], kicker: "Terrasses sur mesure à Lyon et dans sa région",
     chapo: "L'aspect d'une terrasse bois, sans ses contraintes : des lames en aluminium qui ne pourrissent pas, ne se déforment pas et ne demandent ni saturateur ni ponçage. En coloris unis ou en décor bois.",
-    photo: "alu-piscine-jardin-tropical",
+    photo: "alu-piscine-blanche-vue", position: "62% 55%",
     atouts: [
       ["Imputrescible", "L'aluminium ne craint ni l'eau, ni les champignons, ni les insectes."],
       ["Stable dans le temps", "Pas de fente, pas de vrillage, pas d'écharde : les lames restent droites."],

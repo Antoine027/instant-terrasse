@@ -1,7 +1,7 @@
 {
  "alu-piscine-blanche-vue": {
   "dossier": "aluminium",
-  "position": "66% 50%"
+  "position": "62% 55%"
  },
  "terrasse-kebony-piscine-debordement": {
   "dossier": "bois",
@@ -30,10 +30,6 @@
  "gc-maison-lisses-noires": {
   "dossier": "garde-corps",
   "position": "60% 45%"
- },
- "alu-piscine-jardin-tropical": {
-  "dossier": "aluminium",
-  "position": "65% 50%"
  },
  "carrelage-toit-terrasse-montagnes": {
   "dossier": "terrasses",

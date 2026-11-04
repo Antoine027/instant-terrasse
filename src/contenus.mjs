@@ -250,7 +250,6 @@ ${heroPlein({ fil: "Terrasses", h1: ["Nos structures", "de terrasse"], kicker: "
 
 <section id="structures-bois" class="bloc partie bloc-alt">
   <div class="conteneur">
-    <p class="partie-num">Partie 1</p>
     <h2 class="partie-titre">Terrasse bois</h2>
     <p class="chapo">Deux techniques pour porter des lames de bois : la structure aluminium sur plots, ou la structure traditionnelle sur lambourdes.</p>
   </div>
@@ -259,7 +258,7 @@ ${heroPlein({ fil: "Terrasses", h1: ["Nos structures", "de terrasse"], kicker: "
   <div class="conteneur deux-colonnes deux-colonnes-image">
     <div class="photo-produit">${img("structure-aluminium", "Système de structure aluminium : plot réglable, rail aluminium, clip et pattes de fixation sous une lame de terrasse", 404)}</div>
     <div>
-      <p class="sous-titre">Bois · 1</p>
+      <p class="sous-titre">Notre solution phare</p>
       <h3 class="h2">Structure aluminium sur plots</h3>
       <p>Des plots réglables en hauteur posés sur le support, des rails en aluminium livrés avec leurs clips, et des lames qui viennent s'y clipser : aucune vis ne traverse la lame.</p>
       <ul class="puces">
@@ -284,7 +283,7 @@ ${heroPlein({ fil: "Terrasses", h1: ["Nos structures", "de terrasse"], kicker: "
   <div class="conteneur deux-colonnes deux-colonnes-image">
     <div class="photo-produit photo-produit-trad">${imgPhoto("structure-traditionnelle-plot-lambourde", { sizes: "(max-width:1060px) 80vw, 420px" })}</div>
     <div>
-      <p class="sous-titre">Bois · 2</p>
+      <p class="sous-titre">La technique classique</p>
       <h3 class="h2">Structure traditionnelle</h3>
       <p>La technique classique de la terrasse en bois : des lambourdes en bois posées sur des plots réglables, et des lames vissées sur les lambourdes.</p>
       <ul class="puces">
@@ -300,7 +299,6 @@ ${compBois.replace('class="bloc"', 'class="bloc bloc-alt"')}
 
 <section id="structures-carrelage" class="bloc partie bloc-alt">
   <div class="conteneur">
-    <p class="partie-num">Partie 2</p>
     <h2 class="partie-titre">Terrasse carrelage</h2>
     <p class="chapo">Le carrelage extérieur se pose sans colle, en dalles épaisses : sur une structure aluminium, ou directement sur des plots.</p>
   </div>
@@ -309,7 +307,7 @@ ${compBois.replace('class="bloc"', 'class="bloc bloc-alt"')}
   <div class="conteneur deux-colonnes deux-colonnes-image">
     <div class="photo-produit photo-produit-trad">${imgPhoto("carrelage-structure-aluminium-schema", { sizes: "(max-width:1060px) 90vw, 520px" })}</div>
     <div>
-      <p class="sous-titre">Carrelage · 1</p>
+      <p class="sous-titre">Pour tous les supports</p>
       <h3 class="h2">Carrelage sur structure aluminium</h3>
       <p>Les dalles reposent sur des rails aluminium, eux-mêmes posés sur des plots réglables.</p>
       <ul class="puces">
@@ -325,7 +323,7 @@ ${compBois.replace('class="bloc"', 'class="bloc bloc-alt"')}
   <div class="conteneur deux-colonnes deux-colonnes-image">
     <div class="photo-produit photo-produit-trad">${imgPhoto("carrelage-plots-schema", { sizes: "(max-width:1060px) 90vw, 520px" })}</div>
     <div>
-      <p class="sous-titre">Carrelage · 2</p>
+      <p class="sous-titre">Sur support existant</p>
       <h3 class="h2">Carrelage sur plots</h3>
       <p>Chaque dalle repose directement sur des plots réglables placés à ses angles, sans rail : posé sans colle ni fondation.</p>
       <ul class="puces">

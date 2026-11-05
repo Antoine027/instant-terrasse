@@ -1723,3 +1723,17 @@ h3.h2{font-size:clamp(1.5rem,1rem + 1.2vw,2.1rem);margin:0 0 14px}
 }
 @media (max-width:1060px) and (min-width:701px){.projets-alu{grid-template-columns:repeat(2,1fr)}}
 .hero-plein h1 .lyon-l{display:inline}@media (min-width:701px){.hero-plein h1 .lyon-l{display:block}}
+
+/* Page Aluminium : section ossature compacte, photo + texte */
+.ossature-grille{display:grid;grid-template-columns:minmax(0,360px) 1fr;gap:36px;align-items:center}
+.ossature-photo img{display:block;width:100%;height:auto;aspect-ratio:3/2;object-fit:cover;border-radius:var(--rayon)}
+.ossature h2{margin-top:0}
+.ossature p{margin:0 0 10px}
+@media (max-width:700px){
+  .bloc.ossature{padding:32px 0}
+  .ossature-grille{grid-template-columns:34% 1fr;gap:14px}
+  main .ossature-grille,main .ossature-grille *{text-align:left}
+  .ossature-photo img{aspect-ratio:1}
+  .ossature h2{font-size:1.1rem;line-height:1.25;margin-bottom:6px}
+  .ossature p{font-size:.88rem;line-height:1.45;margin-bottom:6px}
+}

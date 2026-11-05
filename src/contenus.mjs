@@ -844,6 +844,16 @@ ${cta("Un projet de bardage aluminium ?", "Devis gratuit et sans engagement. Nou
 };
 
 // ---------- Terrasse composite ----------
+// Évolution des teintes composite (visuels fabricant fournis par Antoine, 05/11/2026) : fichier, étapes.
+const EVOL_COMP = {
+  "Anise": ["anise", ["À la pose", "1-2 mois", "6-8 mois"]],
+  "Mentha Nigra": ["mentha-nigra", ["À la pose", "1-2 mois", "6-8 mois"]],
+  "Malui Gris": ["malui-gris", ["À la pose", "1-2 mois", "6-8 mois"]],
+  "Varia Brun foncé": ["varia-brun-fonce", ["À la pose", "1-2 mois", "6-8 mois"]],
+  "Brun": ["brun", ["À la pose", "6 mois", "1 an"]],
+  "Gris": ["gris", ["À la pose", "6 mois", "1 an"]],
+};
+
 // Ordre du nuancier composite (teintes chaudes vers froides ; noms fabricant donnés par Antoine le 05/11/2026).
 const ORDRE_TEINTES_COMP = ["Anise", "Brun", "Varia Brun foncé", "Mentha Nigra", "Gris", "Malui Gris"];
 
@@ -860,7 +870,8 @@ ${heroPlein({ fil: "Terrasses", h1: ['<span class="pc-nowrap">Terrasse composite
     <p class="sous-titre">L'aspect du bois</p>
     <h2>Nos teintes</h2>
     <p class="chapo">Six teintes veinées comme du bois. Vous voyez les échantillons chez vous, lors du rendez-vous.</p>
-    <div class="nuancier nuancier-comp" data-galerie>${PHOTOS.filter((p) => p.categorie === "teinte-composite").sort((a, b) => ORDRE_TEINTES_COMP.indexOf(a.essence) - ORDRE_TEINTES_COMP.indexOf(b.essence)).map((p) => `<figure tabindex="0" aria-label="Agrandir : ${p.essence}">${imgPhoto(p.cle, { sizes: "(max-width:560px) 45vw, 230px" })}<figcaption>${p.essence}</figcaption></figure>`).join("")}</div>
+    <div class="nuancier nuancier-comp" data-galerie>${PHOTOS.filter((p) => p.categorie === "teinte-composite").sort((a, b) => ORDRE_TEINTES_COMP.indexOf(a.essence) - ORDRE_TEINTES_COMP.indexOf(b.essence)).map((p) => { const ev = EVOL_COMP[p.essence]; return `<div class="teinte-comp"><figure tabindex="0" aria-label="Agrandir : ${p.essence}">${imgPhoto(p.cle, { sizes: "(max-width:560px) 45vw, 230px" })}<figcaption>${p.essence}</figcaption></figure>${ev ? `<div class="evol-comp">${ev[1].map((l, i) => `<span><img src="/assets/img/composite/evol-comp-${ev[0]}-${i}.webp" alt="${p.essence}, ${l.toLowerCase()}" width="200" height="200" loading="lazy" decoding="async"><small>${l}</small></span>`).join("")}</div>` : ""}</div>`; }).join("")}</div>
+    <p class="evol-note">La teinte s'éclaircit les premiers mois, puis se stabilise. Teintes indicatives.</p>
   </div>
 </section>
 
@@ -914,7 +925,7 @@ ${heroPlein({ fil: "Terrasses", h1: ['<span class="pc-nowrap">Terrasse composite
   <div class="faq-liste">
     <h2>Vos questions sur le composite</h2>
     <details class="faq"><summary>Comment entretenir une terrasse composite ?</summary><div><p>Un nettoyage à l'eau savonneuse suffit. Il n'y a ni saturateur, ni ponçage, ni lasure à prévoir.</p></div></details>
-    <details class="faq"><summary>La couleur du composite change-t-elle ?</summary><div><p>La teinte se stabilise après quelques mois, puis ne bouge plus. Contrairement au bois, le composite ne vire pas au gris.</p></div></details>
+    <details class="faq"><summary>La couleur du composite change-t-elle ?</summary><div><p>La teinte s'éclaircit légèrement pendant les premiers mois, puis se stabilise, selon les teintes entre 6 mois et 1 an. Les pastilles sous chaque teinte, plus haut sur cette page, montrent cette évolution. Contrairement au bois, le composite ne vire pas au gris.</p></div></details>
     <details class="faq"><summary>Le composite fait-il des échardes ?</summary><div><p>Non. Les lames ne font ni écharde ni fente : la terrasse reste agréable pieds nus, autour d'une piscine comme pour les enfants.</p></div></details>
     <details class="faq"><summary>Peut-on remplacer une lame abîmée ?</summary><div><p>Oui. Les lames sont clipsées sur la structure, sans vis en surface : une lame se change sans démonter toute la terrasse.</p></div></details>
     <details class="faq"><summary>Sur quelle structure les lames sont-elles posées ?</summary><div><p>Sur des rails aluminium posés sur plots réglables, pour une terrasse plane et ventilée. Nos structures aluminium sont garanties 20 ans.</p></div></details>

@@ -1744,3 +1744,18 @@ h3.h2{font-size:clamp(1.5rem,1rem + 1.2vw,2.1rem);margin:0 0 14px}
 @media (max-width:700px){.nuancier-comp{grid-template-columns:repeat(3,1fr);gap:8px}}
 #comparer p{margin:0}
 @media (min-width:701px){.galerie-comp .mosaique::after{display:none}}
+
+/* Composite : évolution sous chaque teinte */
+.teinte-comp{display:flex;flex-direction:column;gap:8px}
+.evol-comp{display:grid;grid-template-columns:repeat(3,1fr);gap:4px}
+.evol-comp span{display:flex;flex-direction:column;align-items:center;gap:3px}
+.evol-comp img{display:block;width:100%;height:auto;aspect-ratio:1;object-fit:cover;border-radius:6px}
+.evol-comp small{font:600 .66rem Montserrat,sans-serif;color:var(--doux);white-space:nowrap}
+@media (max-width:700px){.evol-comp small{font-size:.56rem}.evol-comp{gap:3px}}
+#teintes .evol-note{margin-top:16px}
+.nuancier-comp{grid-template-columns:repeat(6,minmax(0,1fr))}
+.teinte-comp{min-width:0}
+.evol-comp{grid-template-columns:repeat(3,minmax(0,1fr))}
+.evol-comp span{min-width:0}
+.nuancier .evol-comp img{border-radius:6px;width:100%}
+@media (max-width:700px){.nuancier-comp{grid-template-columns:repeat(3,minmax(0,1fr))}.evol-comp small{font-size:.52rem;letter-spacing:-.01em}}

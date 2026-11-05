@@ -166,7 +166,7 @@ ${heroPlein({ fil: "Terrasses", h1: ["Terrasse bois", "sur mesure à Lyon"], kic
     <div class="en-long"><p>Instant Terrasse est basée à Rillieux-la-Pape, au nord de Lyon. Nous venons chez vous, à Lyon et dans sa région, avec les échantillons de bois : vous les comparez à la lumière de votre extérieur, à côté de votre façade, et nous prenons les mesures pour votre plan 3D.</p>
     <p>Étés chauds, hivers humides, orages : une terrasse lyonnaise passe par tous les temps. C'est pour cela que nous sélectionnons des bois très stables, et que nous privilégions une structure aluminium qui laisse l'air circuler sous les lames.</p></div>
     <p class="en-court">Depuis Rillieux-la-Pape, nous venons chez vous, à Lyon et dans sa région, avec les échantillons. Face aux étés chauds et aux hivers humides, nous sélectionnons des bois très stables, posés sur une structure aluminium ventilée.</p>
-    <p class="lien-methode"><a href="/#methode">Découvrir notre méthode, du premier rendez-vous à la fin du chantier →</a></p>
+    <p class="lien-methode"><a href="/#methode">Découvrir notre méthode →</a></p>
   </div>
   <div class="faq-liste">
     <h2>Vos questions sur le bois</h2>

@@ -1678,3 +1678,6 @@ h3.h2{font-size:clamp(1.5rem,1rem + 1.2vw,2.1rem);margin:0 0 14px}
   .grille-essences>.essence:last-child:nth-child(odd) .essence-texte{justify-content:center;padding:20px 28px 22px calc(var(--gap-ess) + 29px)}
   .grille-essences{--gap-ess:22px}
 }
+
+/* Note sous les essences phares : une seule ligne sur ordinateur */
+@media (min-width:1061px){.evol-note{max-width:none!important}}

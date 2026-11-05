@@ -853,16 +853,16 @@ const LAMES_COMP = [
     texte: "Lame co-extrudée : un cœur et une coque de deux matériaux différents. Une teinte grise nuancée, au veinage très proche du bois.",
     points: ["Nuances et veinage proches du bois", "Composite co-extrudé", "Garantie 15 ans*"] },
   { nom: "Anise", cle: "teinte-composite-miel", evol: ["anise", ["À la pose", "1-2 mois", "6-8 mois"]],
-    texte: "75 % de fibres de bois certifiées PEFC, liées par des polymères et compressées. Teinte miel lumineuse, qui se patine avec le temps.",
+    texte: "Lame pleine à 75 % de fibres de bois PEFC, sans PVC ni plastifiant : ni l'eau ni les insectes n'y pénètrent. Teinte miel lumineuse, qui se patine avec le temps.",
     points: ["75 % de fibres de bois PEFC", "Chauffe peu, proche du bois", "Garantie 10 ans*"] },
   { nom: "Varia Brun foncé", cle: "teinte-composite-brun-fonce", evol: ["varia-brun-fonce", ["À la pose", "1-2 mois", "6-8 mois"]],
-    texte: "75 % de fibres de bois certifiées PEFC, liées par des polymères et compressées. Teinte brun foncé, qui se patine avec le temps.",
+    texte: "Lame pleine à 75 % de fibres de bois PEFC, sans PVC ni plastifiant : ni l'eau ni les insectes n'y pénètrent. Teinte brun foncé, qui se patine avec le temps.",
     points: ["75 % de fibres de bois PEFC", "Chauffe peu, proche du bois", "Garantie 10 ans*"] },
   { nom: "Mentha Nigra", cle: "teinte-composite-vert-olive", evol: ["mentha-nigra", ["À la pose", "1-2 mois", "6-8 mois"]],
-    texte: "75 % de fibres de bois certifiées PEFC, liées par des polymères et compressées. Teinte vert sombre originale, qui se patine avec le temps.",
+    texte: "Lame pleine à 75 % de fibres de bois PEFC, sans PVC ni plastifiant : ni l'eau ni les insectes n'y pénètrent. Teinte vert sombre originale, qui se patine avec le temps.",
     points: ["75 % de fibres de bois PEFC", "Chauffe peu, proche du bois", "Garantie 10 ans*"] },
   { nom: "Malui Gris", cle: "teinte-composite-gris-anthracite", evol: ["malui-gris", ["À la pose", "1-2 mois", "6-8 mois"]],
-    texte: "75 % de fibres de bois certifiées PEFC, liées par des polymères et compressées. Teinte gris profond, qui se patine avec le temps.",
+    texte: "Lame pleine à 75 % de fibres de bois PEFC, sans PVC ni plastifiant : ni l'eau ni les insectes n'y pénètrent. Teinte gris profond, qui se patine avec le temps.",
     points: ["75 % de fibres de bois PEFC", "Chauffe peu, proche du bois", "Garantie 10 ans*"] },
 ];
 
@@ -947,6 +947,7 @@ ${heroPlein({ fil: "Terrasses", h1: ['<span class="pc-nowrap">Terrasse composite
     <details class="faq"><summary>Comment entretenir une terrasse composite ?</summary><div><p>Un nettoyage à l'eau savonneuse suffit. Il n'y a ni saturateur, ni ponçage, ni lasure à prévoir.</p></div></details>
     <details class="faq"><summary>La couleur du composite change-t-elle ?</summary><div><p>La teinte s'éclaircit légèrement pendant les premiers mois, puis se stabilise, selon les teintes entre 6 mois et 1 an. Les pastilles sous chaque teinte, plus haut sur cette page, montrent cette évolution. Contrairement au bois, le composite ne vire pas au gris.</p></div></details>
     <details class="faq"><summary>Le composite fait-il des échardes ?</summary><div><p>Non. Les lames ne font ni écharde ni fente : la terrasse reste agréable pieds nus, autour d'une piscine comme pour les enfants.</p></div></details>
+    <details class="faq"><summary>Le composite est-il écologique ?</summary><div><p>Nos lames pleine masse contiennent 75 % de fibres de bois issues de forêts gérées durablement (PEFC), sans PVC ni plastifiant. Elles sont certifiées Cradle to Cradle niveau Gold, qui évalue la santé des matériaux et leur recyclage.</p></div></details>
     <details class="faq"><summary>Peut-on remplacer une lame abîmée ?</summary><div><p>Oui. Les lames sont clipsées sur la structure, sans vis en surface : une lame se change sans démonter toute la terrasse.</p></div></details>
     <details class="faq"><summary>Quelle garantie pour une terrasse composite ?</summary><div><p>Les lames sont garanties par le fabricant, sous conditions : 15 ans pour la gamme co-extrudée (Nekko), 10 ans pour la gamme pleine masse. La structure aluminium est garantie 20 ans.</p></div></details>
     <details class="faq"><summary>Sur quelle structure les lames sont-elles posées ?</summary><div><p>Sur des rails aluminium posés sur plots réglables, pour une terrasse plane et ventilée. Nos structures aluminium sont garanties 20 ans.</p></div></details>

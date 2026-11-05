@@ -97,25 +97,28 @@ const decouvrir = (ici) => `
   </div>
 </section>`;
 
-// Guide « Quel bois choisir » (page Bois) : critère, icône, lignes [libellé, essences, teinte de la pastille], note.
+// Guide « Quel bois choisir » (page Bois) : critère, icône, lignes [libellé, essences], note. Classement par dureté proposé le 05/11/2026, à valider par Antoine.
 const ico = (d) => `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">${d}</svg>`;
 const CHOISIR = [
   ["Selon l'aspect", ico('<circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 0 0 18"/>'), [
-    ["Clair", ["Accoya naturel", "Garapa"], "#E6D3AE"],
-    ["Miel, nœuds apparents", ["Thermopin"], "#D29A55"],
-    ["Brun", ["Thermofrêne", "Kebony", "Bambou X-treme", "Ipé", "Cumaru"], "#7A4B2C"],
-    ["Brun-rouge, allure exotique", ["Bambou N-Durance", "Jatoba", "Muiracatiara"], "#8C3E26"],
-    ["Gris patiné dès la pose", ["Accoya gris"], "#9C9A94"],
+    ["Clair", ["accoya naturel", "garapa", "pin"]],
+    ["Miel", ["thermopin", "mélèze"]],
+    ["Rosé", ["douglas"]],
+    ["Brun", ["thermofrêne", "kebony", "bambou X-treme", "ipé", "cumaru"]],
+    ["Brun-vert", ["itauba"]],
+    ["Brun-rouge, allure exotique", ["bambou N-Durance", "jatoba", "muiracatiara"]],
+    ["Gris patiné dès la pose", ["accoya gris"]],
   ]],
   ["Selon l'entretien", ico('<path d="M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11z"/>'), [
-    ["Sans saturateur obligatoire", ["Thermofrêne", "Thermopin", "Kebony", "Accoya"]],
-    ["Saturateur conseillé", ["Bambou"]],
-  ], "Pour toutes les essences : un nettoyage au minimum deux fois par an. Sans saturateur, le bois prend une patine grise avec le temps."],
-  ["Selon la stabilité et la dureté", ico('<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>'), [
-    ["Très grande stabilité", ["Accoya naturel", "Accoya gris", "Itauba"]],
-    ["Très dur et dense", ["Bambou X-treme", "Bambou N-Durance", "Ipé"]],
-    ["Grande longévité", ["Kebony", "Ipé"]],
-  ], "L'accoya bouge très peu avec l'humidité : moins de déformations."],
+    ["Sans saturateur obligatoire", ["thermofrêne", "thermopin", "kebony", "accoya"]],
+    ["Saturateur conseillé", ["bambou"]],
+    ["Pour toutes les essences", ["un nettoyage au minimum deux fois par an. Sans saturateur, le bois prend une patine grise avec le temps"]],
+  ]],
+  ["Selon la dureté", ico('<path d="M4 20h16"/><path d="M7 20V9l5-5 5 5v11"/>'), [
+    ["Dur", ["ipé", "cumaru", "jatoba", "muiracatiara", "itauba", "garapa", "bambou X-treme", "bambou N-Durance"]],
+    ["Mi-dur", ["thermofrêne", "kebony"]],
+    ["Tendre", ["pin", "douglas", "mélèze", "thermopin", "accoya"]],
+  ], "Plus un bois est dur, moins il se marque, mais plus il chauffe au soleil. Plus il est tendre, plus il reste agréable pieds nus, mais il se marque plus facilement. Les bois mi-durs sont souvent un bon compromis."],
 ];
 
 const terrasseBois = {
@@ -185,8 +188,8 @@ ${heroPlein({ fil: "Terrasses", h1: ["Terrasse bois", "sur mesure à Lyon"], kic
     <div class="grille grille-3 choisir-grille">${CHOISIR.map(([titre, icone, lignes, note]) => `
       <div class="carte choisir-carte">
         <h3><span class="choisir-ico" aria-hidden="true">${icone}</span>${titre}</h3>
-        ${lignes.map(([lab, ess, teinte]) => `<div class="crit"><p class="crit-lab">${teinte ? `<span class="pastille" style="background:${teinte}" aria-hidden="true"></span>` : ""}${lab}</p><ul class="crit-ess">${ess.map((e) => `<li>${e}</li>`).join("")}</ul></div>`).join("")}
         ${note ? `<p class="crit-note">${note}</p>` : ""}
+        ${lignes.map(([lab, ess]) => `<p class="crit"><strong>${lab}</strong> : ${ess.join(", ")}.</p>`).join("")}
       </div>`).join("")}
     </div>
     <p class="note-choisir">Le prix dépend de l'essence, de la structure et de la surface : tout est détaillé ligne par ligne dans votre devis.</p>

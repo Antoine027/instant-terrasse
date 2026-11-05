@@ -51,7 +51,7 @@ const essencesAlu = [
   {
     nom: "Accoya naturel", evol: ["accoya-naturel", ["À la pose", "6 mois", "2 ans"]], photo: ["accoya-naturel-lame-3", "Lame de terrasse en accoya naturel, teinte claire", 266],
     texte: "Un bois acétylé réputé pour sa stabilité : il bouge très peu avec l'humidité, ce qui limite les déformations. Teinte claire à la pose, qui grise naturellement avec le temps.",
-    points: ["Bois acétylé", "Très grande stabilité", "Teinte claire, sans nœuds", "Garantie fabricant jusqu'à 50 ans*"],
+    points: ["Bois acétylé", "Très grande stabilité", "Garantie fabricant jusqu'à 50 ans*"],
   },
   {
     nom: "Bambou X-treme", evol: ["bambou-xtreme", ["À la pose", "6 mois", "2 ans"]], photo: ["bambou-xtreme-lame-2", "Lame de terrasse en bambou X-treme brun foncé", 338],

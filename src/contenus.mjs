@@ -128,7 +128,7 @@ ${heroPlein({ fil: "Terrasses", h1: ["Terrasse bois", "sur mesure à Lyon"], kic
   </div>
 </section>
 
-<section id="galerie" class="bloc bloc-alt">
+<section id="galerie" class="bloc bloc-alt galerie-bois">
   <div class="conteneur">
     ${galerie("terrasse-bois", { titre: "Nos bois en situation", intro: "Choisissez une essence pour voir son rendu en terrasse.", legende: "Illustrations de terrasses dans nos essences", limite: 11 })}
   </div>

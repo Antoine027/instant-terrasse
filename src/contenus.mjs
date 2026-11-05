@@ -844,8 +844,8 @@ ${cta("Un projet de bardage aluminium ?", "Devis gratuit et sans engagement. Nou
 };
 
 // ---------- Terrasse composite ----------
-// Ordre du nuancier composite (teintes chaudes vers froides ; noms provisoires sauf Gris et Brun).
-const ORDRE_TEINTES_COMP = ["Miel", "Brun", "Brun foncé", "Vert olive", "Gris", "Gris anthracite"];
+// Ordre du nuancier composite (teintes chaudes vers froides ; noms fabricant donnés par Antoine le 05/11/2026).
+const ORDRE_TEINTES_COMP = ["Anise", "Brun", "Varia Brun foncé", "Mentha Nigra", "Gris", "Malui Gris"];
 
 const terrasseComposite = {
   title: "Terrasse composite Lyon : sur structure aluminium | Instant Terrasse",
@@ -871,7 +871,7 @@ ${heroPlein({ fil: "Terrasses", h1: ['<span class="pc-nowrap">Terrasse composite
       <div class="carte atout-carte"><span class="atout-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11z"/></svg></span><h3>Sans entretien lourd</h3><p>Ni saturateur, ni ponçage, ni lasure : un nettoyage à l'eau savonneuse suffit.</p></div>
       <div class="carte atout-carte"><span class="atout-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 3c1.5 0 2.5 2 2.5 5S9.5 13 8 13s-2.5-2-2.5-5S6.5 3 8 3z"/><path d="M16 9c1.5 0 2.5 2 2.5 5s-1 5-2.5 5-2.5-2-2.5-5 1-5 2.5-5z"/></svg></span><h3>Confortable pieds nus</h3><p>Pas d'écharde ni de fente : idéal autour d'une piscine et pour les enfants.</p></div>
       <div class="carte atout-carte"><span class="atout-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 0 0 18"/></svg></span><h3>Une teinte qui tient</h3><p>La couleur se stabilise après quelques mois, sans virer au gris comme le bois.</p></div>
-      <div class="carte atout-carte"><span class="atout-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/><path d="M8 6c1 2 1 4 0 6M15 12c1 2 1 4 0 6"/></svg></span><h3>L'aspect du bois</h3><p>Des lames veinées comme du bois, en 6 teintes, du gris anthracite au miel.</p></div>
+      <div class="carte atout-carte"><span class="atout-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/><path d="M8 6c1 2 1 4 0 6M15 12c1 2 1 4 0 6"/></svg></span><h3>L'aspect du bois</h3><p>Des lames veinées comme du bois, en 6 teintes, de l'Anise au Malui Gris.</p></div>
       <div class="carte atout-carte"><span class="atout-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9h18v6H3z"/><path d="M8 9v6M16 9v6"/></svg></span><h3>Fixation invisible</h3><p>Aucune vis en surface : les lames, rainurées sur les chants, se clipsent sur la structure.</p></div>
       <div class="carte atout-carte"><span class="atout-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 0 1 15-6.7L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-15 6.7L3 16"/><path d="M3 21v-5h5"/></svg></span><h3>Une lame se remplace</h3><p>Une lame abîmée se change sans démonter toute la terrasse.</p></div>
     </div>

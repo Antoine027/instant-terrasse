@@ -3916,8 +3916,8 @@
   "cle": "teinte-composite-vert-olive",
   "dossier": "composite",
   "categorie": "teinte-composite",
-  "essence": "Vert olive",
-  "alt": "Lame de terrasse composite teinte vert olive",
+  "essence": "Mentha Nigra",
+  "alt": "Lame de terrasse composite, teinte Mentha Nigra",
   "largeurs": [
    400,
    600,
@@ -3933,8 +3933,8 @@
   "cle": "teinte-composite-miel",
   "dossier": "composite",
   "categorie": "teinte-composite",
-  "essence": "Miel",
-  "alt": "Lame de terrasse composite teinte miel",
+  "essence": "Anise",
+  "alt": "Lame de terrasse composite, teinte Anise",
   "largeurs": [
    400,
    600,
@@ -3950,8 +3950,8 @@
   "cle": "teinte-composite-gris-anthracite",
   "dossier": "composite",
   "categorie": "teinte-composite",
-  "essence": "Gris anthracite",
-  "alt": "Lame de terrasse composite teinte gris anthracite",
+  "essence": "Malui Gris",
+  "alt": "Lame de terrasse composite, teinte Malui Gris",
   "largeurs": [
    400,
    600,
@@ -3967,8 +3967,8 @@
   "cle": "teinte-composite-brun-fonce",
   "dossier": "composite",
   "categorie": "teinte-composite",
-  "essence": "Brun foncé",
-  "alt": "Lame de terrasse composite teinte brun foncé",
+  "essence": "Varia Brun foncé",
+  "alt": "Lame de terrasse composite, teinte Varia Brun foncé",
   "largeurs": [
    400,
    600,

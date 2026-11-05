@@ -1586,3 +1586,20 @@ h3.h2{font-size:clamp(1.5rem,1rem + 1.2vw,2.1rem);margin:0 0 14px}
   .struct-car .detail .photo-produit img{max-width:240px;margin:0 auto}
   .partie .partie-titre::after{content:none}
 }
+
+/* « Découvrez aussi » (pages revêtements) */
+.decouvrir h2{text-align:center}
+.decouvrir-grille{margin-top:22px}
+.decouvrir-comp{text-align:center;margin:22px 0 0}
+.decouvrir-comp a{font:700 .95rem Montserrat,sans-serif;color:var(--accent-texte);text-decoration:underline;text-underline-offset:3px}
+@media (max-width:700px){
+  .decouvrir{padding:36px 0}
+  .decouvrir h2{font-size:1.35rem}
+  .decouvrir-grille{display:flex;flex-direction:column;gap:10px;margin-top:16px}
+  .decouvrir .carte-photo{flex-direction:row;align-items:stretch}
+  .decouvrir .vignette{flex:0 0 38%;aspect-ratio:auto;min-height:96px}
+  .decouvrir .carte-corps{padding:12px 14px;display:flex;flex-direction:column;justify-content:center}
+  .decouvrir .carte-corps h3{font-size:1rem;margin:0 0 4px}
+  .decouvrir .carte-corps p{font-size:.85rem;line-height:1.4;margin:0}
+  .decouvrir .fleche{display:none}
+}

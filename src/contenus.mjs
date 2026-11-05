@@ -80,6 +80,22 @@ const essencesTrad = [
   ["Muiracatiara (tigerwood)", "Bois exotique dur, veiné de brun foncé sur fond doré : un aspect tigré très décoratif."],
 ];
 
+// « Découvrez aussi » : liens internes entre les pages de revêtement, en bas de page.
+const REVETEMENTS = [
+  ["/terrasse-bois-lyon/", "Terrasse bois", "terrasse-kebony-piscine-debordement", "Accoya, kebony, bambou : la chaleur du vrai bois."],
+  ["/terrasse-composite-lyon/", "Terrasse composite", "composite-gris-piscine", "L'aspect du bois, sans saturateur ni ponçage."],
+  ["/terrasse-aluminium-lyon/", "Terrasse aluminium", "alu-piscine-aspect-teck", "Ne pourrit pas, ne bouge pas, en 6 teintes."],
+  ["/terrasse-carrelage-lyon/", "Terrasse carrelage", "carrelage-bh-grand-format-baie", "Grès cérame posé sans colle, sur plots."],
+];
+const decouvrir = (ici) => `
+<section class="bloc decouvrir">
+  <div class="conteneur">
+    <h2>Découvrez aussi nos autres terrasses</h2>
+    <div class="grille grille-3 decouvrir-grille">${REVETEMENTS.filter(([c]) => c !== ici).map(([c, t, ph, x]) => `<a class="carte carte-lien carte-photo" href="${c}"><div class="vignette">${imgPhoto(ph, { sizes: "(max-width:700px) 40vw, (max-width:1060px) 31vw, 360px" })}</div><div class="carte-corps"><h3>${t}</h3><p>${x}</p><span class="fleche" aria-hidden="true">→</span></div></a>`).join("")}</div>
+    <p class="decouvrir-comp"><a href="/nos-terrasses/">Comparer tous les matériaux <span aria-hidden="true">→</span></a></p>
+  </div>
+</section>`;
+
 const terrasseBois = {
   title: "Terrasse bois Lyon : thermopin, kebony, accoya, ipé | Instant Terrasse",
   description: "Terrasse bois sur mesure à Lyon : thermopin, thermofrêne, kebony, accoya, bambou sur structure aluminium, ou ipé, cumaru, mélèze, douglas sur structure traditionnelle.",
@@ -1248,15 +1264,15 @@ export const CONTENUS = {
   "/terrasse-sur-pilotis-lyon/": terrassePilotis,
   "/carport-lyon/": carport,
   "/store-banne-lyon/": storeBanne,
-  "/terrasse-composite-lyon/": terrasseComposite,
+  "/terrasse-composite-lyon/": { ...terrasseComposite, corps: terrasseComposite.corps + decouvrir("/terrasse-composite-lyon/") },
   "/bardage-aluminium-lyon/": bardageAluminium,
-  "/terrasse-carrelage-lyon/": terrasseCarrelage,
-  "/terrasse-aluminium-lyon/": terrasseAluminium,
+  "/terrasse-carrelage-lyon/": { ...terrasseCarrelage, corps: terrasseCarrelage.corps + decouvrir("/terrasse-carrelage-lyon/") },
+  "/terrasse-aluminium-lyon/": { ...terrasseAluminium, corps: terrasseAluminium.corps + decouvrir("/terrasse-aluminium-lyon/") },
   "/garde-corps-aluminium-lyon/": gardeCorps,
   "/pergola-bioclimatique-lyon/": pergolaBioclimatique,
   "/pergola-toile-retractable-lyon/": pergolaToileRetractable,
   "/pergola-toit-fixe-lyon/": pergolaToitFixe,
   "/bardage-bois-lyon/": bardageBois,
-  "/terrasse-bois-lyon/": terrasseBois,
+  "/terrasse-bois-lyon/": { ...terrasseBois, corps: terrasseBois.corps + decouvrir("/terrasse-bois-lyon/") },
   "/structure-terrasse-lyon/": structures,
 };

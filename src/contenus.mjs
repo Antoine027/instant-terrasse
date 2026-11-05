@@ -656,9 +656,8 @@ ${heroPlein({ fil: "Terrasses", h1: ['<span class="pc-nowrap">Terrasse aluminium
   <div class="conteneur">
     <p class="sous-titre">Décor bois ou teinte unie</p>
     <h2>Nos teintes</h2>
-    <p class="chapo">Des décors bois du plus clair au plus chaud, ou un gris uni pour un style épuré. Vous voyez les échantillons en vrai, chez vous, lors du rendez-vous.</p>
+    <p class="chapo">Décors bois ou gris uni, en lames garanties 20 ans par le fabricant. Vous voyez les échantillons chez vous, lors du rendez-vous.</p>
     <div class="nuancier">${PHOTOS.filter((p) => p.categorie === "teinte-alu").sort((a, b) => ORDRE_TEINTES_ALU.indexOf(a.essence) - ORDRE_TEINTES_ALU.indexOf(b.essence)).map((p) => `<figure>${imgPhoto(p.cle, { sizes: "(max-width:560px) 45vw, 230px" })}<figcaption>${p.essence}</figcaption></figure>`).join("")}</div>
-    <p class="evol-note">Lames garanties 20 ans*. D'autres teintes, comme le beige, sont possibles sur mesure. Teintes indicatives.<br>*Garantie fabricant, sous conditions.</p>
   </div>
 </section>
 

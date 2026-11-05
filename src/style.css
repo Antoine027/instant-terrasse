@@ -1705,5 +1705,5 @@ h3.h2{font-size:clamp(1.5rem,1rem + 1.2vw,2.1rem);margin:0 0 14px}
 }
 
 /* Nuancier Aluminium : échantillons en portrait, comme des lames */
-#teintes .nuancier img{aspect-ratio:3/4}
+#teintes .nuancier img{aspect-ratio:2/3}
 @media (min-width:701px){#teintes .nuancier img{aspect-ratio:2/3}}

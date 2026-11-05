@@ -2850,90 +2850,6 @@
   "ratio": 1.7768
  },
  {
-  "cle": "teinte-alu-blanc-veine",
-  "dossier": "teintes",
-  "categorie": "teinte-alu",
-  "essence": "Blanc veiné",
-  "alt": "Lame de terrasse aluminium, teinte blanc veiné",
-  "largeurs": [
-   400,
-   600,
-   800,
-   1000
-  ],
-  "ratio": 1.0
- },
- {
-  "cle": "teinte-alu-chene-grise",
-  "dossier": "teintes",
-  "categorie": "teinte-alu",
-  "essence": "Teck vieilli",
-  "alt": "Lame de terrasse aluminium, teinte teck vieilli",
-  "largeurs": [
-   400,
-   600,
-   800,
-   1000
-  ],
-  "ratio": 1.0
- },
- {
-  "cle": "teinte-alu-gris-uni",
-  "dossier": "teintes",
-  "categorie": "teinte-alu",
-  "essence": "Gris uni",
-  "alt": "Lame de terrasse aluminium, teinte gris uni",
-  "largeurs": [
-   400,
-   600,
-   800,
-   1000
-  ],
-  "ratio": 1.0
- },
- {
-  "cle": "teinte-alu-bois-rouge",
-  "dossier": "teintes",
-  "categorie": "teinte-alu",
-  "essence": "Simili bois",
-  "alt": "Lame de terrasse aluminium, teinte simili bois",
-  "largeurs": [
-   400,
-   600,
-   800,
-   1000
-  ],
-  "ratio": 1.0
- },
- {
-  "cle": "teinte-alu-gris-perle-veine",
-  "dossier": "teintes",
-  "categorie": "teinte-alu",
-  "essence": "Bois de grange",
-  "alt": "Lame de terrasse aluminium, teinte bois de grange",
-  "largeurs": [
-   400,
-   600,
-   800,
-   1000
-  ],
-  "ratio": 1.0
- },
- {
-  "cle": "teinte-alu-chene-naturel",
-  "dossier": "teintes",
-  "categorie": "teinte-alu",
-  "essence": "Teck",
-  "alt": "Lame de terrasse aluminium, teinte teck",
-  "largeurs": [
-   400,
-   600,
-   800,
-   1000
-  ],
-  "ratio": 1.0
- },
- {
   "cle": "ambiance-dalles-sur-plots",
   "dossier": "terrasses",
   "categorie": "ambiance",
@@ -4246,5 +4162,113 @@
    1254
   ],
   "ratio": 1.0
+ },
+ {
+  "cle": "teinte-alu-blanc-veine-v2",
+  "dossier": "teintes",
+  "categorie": "teinte-alu",
+  "essence": "Blanc veiné",
+  "alt": "Lame de terrasse aluminium, teinte blanc veiné",
+  "largeurs": [
+   400,
+   600,
+   800,
+   1000,
+   1200,
+   1400,
+   1600,
+   1707
+  ],
+  "ratio": 0.6668
+ },
+ {
+  "cle": "teinte-alu-chene-grise-v2",
+  "dossier": "teintes",
+  "categorie": "teinte-alu",
+  "essence": "Teck vieilli",
+  "alt": "Lame de terrasse aluminium, teinte teck vieilli",
+  "largeurs": [
+   400,
+   600,
+   800,
+   1000,
+   1200,
+   1400,
+   1600,
+   1706
+  ],
+  "ratio": 0.6664
+ },
+ {
+  "cle": "teinte-alu-gris-uni-v2",
+  "dossier": "teintes",
+  "categorie": "teinte-alu",
+  "essence": "Gris uni",
+  "alt": "Lame de terrasse aluminium, teinte gris uni",
+  "largeurs": [
+   400,
+   600,
+   800,
+   1000,
+   1200,
+   1400,
+   1600,
+   1706
+  ],
+  "ratio": 0.6664
+ },
+ {
+  "cle": "teinte-alu-bois-rouge-v2",
+  "dossier": "teintes",
+  "categorie": "teinte-alu",
+  "essence": "Simili bois",
+  "alt": "Lame de terrasse aluminium, teinte simili bois",
+  "largeurs": [
+   400,
+   600,
+   800,
+   1000,
+   1200,
+   1400,
+   1600,
+   1706
+  ],
+  "ratio": 0.6664
+ },
+ {
+  "cle": "teinte-alu-gris-perle-veine-v2",
+  "dossier": "teintes",
+  "categorie": "teinte-alu",
+  "essence": "Bois de grange",
+  "alt": "Lame de terrasse aluminium, teinte bois de grange",
+  "largeurs": [
+   400,
+   600,
+   800,
+   1000,
+   1200,
+   1400,
+   1600,
+   1707
+  ],
+  "ratio": 0.6668
+ },
+ {
+  "cle": "teinte-alu-chene-naturel-v2",
+  "dossier": "teintes",
+  "categorie": "teinte-alu",
+  "essence": "Teck",
+  "alt": "Lame de terrasse aluminium, teinte teck",
+  "largeurs": [
+   400,
+   600,
+   800,
+   1000,
+   1200,
+   1400,
+   1600,
+   1707
+  ],
+  "ratio": 0.6668
  }
 ]

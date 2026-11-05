@@ -4113,7 +4113,7 @@
   "ratio": 1.5
  },
  {
-  "cle": "lame-trad-meleze",
+  "cle": "lame-trad-v2-meleze",
   "dossier": "bois",
   "categorie": "lame-trad",
   "alt": "Lames de terrasse neuves en mélèze (visuel d'illustration)",
@@ -4128,7 +4128,7 @@
   "ratio": 1.0
  },
  {
-  "cle": "lame-trad-muiracatiara",
+  "cle": "lame-trad-v2-muiracatiara",
   "dossier": "bois",
   "categorie": "lame-trad",
   "alt": "Lames de terrasse neuves en muiracatiara (visuel d'illustration)",
@@ -4143,7 +4143,7 @@
   "ratio": 1.0
  },
  {
-  "cle": "lame-trad-pin",
+  "cle": "lame-trad-v2-pin",
   "dossier": "bois",
   "categorie": "lame-trad",
   "alt": "Lames de terrasse neuves en pin (visuel d'illustration)",
@@ -4158,7 +4158,7 @@
   "ratio": 1.0
  },
  {
-  "cle": "lame-trad-douglas",
+  "cle": "lame-trad-v2-douglas",
   "dossier": "bois",
   "categorie": "lame-trad",
   "alt": "Lames de terrasse neuves en douglas (visuel d'illustration)",
@@ -4173,7 +4173,7 @@
   "ratio": 1.0
  },
  {
-  "cle": "lame-trad-garapa",
+  "cle": "lame-trad-v2-garapa",
   "dossier": "bois",
   "categorie": "lame-trad",
   "alt": "Lames de terrasse neuves en garapa (visuel d'illustration)",
@@ -4188,7 +4188,7 @@
   "ratio": 1.0
  },
  {
-  "cle": "lame-trad-ipe",
+  "cle": "lame-trad-v2-ipe",
   "dossier": "bois",
   "categorie": "lame-trad",
   "alt": "Lames de terrasse neuves en ipé (visuel d'illustration)",
@@ -4203,7 +4203,7 @@
   "ratio": 1.0
  },
  {
-  "cle": "lame-trad-jatoba",
+  "cle": "lame-trad-v2-jatoba",
   "dossier": "bois",
   "categorie": "lame-trad",
   "alt": "Lames de terrasse neuves en jatoba (visuel d'illustration)",
@@ -4218,7 +4218,7 @@
   "ratio": 1.0
  },
  {
-  "cle": "lame-trad-cumaru",
+  "cle": "lame-trad-v2-cumaru",
   "dossier": "bois",
   "categorie": "lame-trad",
   "alt": "Lames de terrasse neuves en cumaru (visuel d'illustration)",
@@ -4233,7 +4233,7 @@
   "ratio": 1.0
  },
  {
-  "cle": "lame-trad-itauba",
+  "cle": "lame-trad-v2-itauba",
   "dossier": "bois",
   "categorie": "lame-trad",
   "alt": "Lames de terrasse neuves en itauba (visuel d'illustration)",

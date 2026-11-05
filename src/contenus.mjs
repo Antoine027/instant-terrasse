@@ -157,7 +157,15 @@ ${heroPlein({ fil: "Terrasses", h1: ["Terrasse bois", "sur mesure à Lyon"], kic
   </div>
 </section>
 
-<section id="faq-bois" class="bloc">
+<section id="lyon" class="bloc">
+  <div class="conteneur conteneur-etroit">
+    <h2>Votre terrasse bois à Lyon et dans sa région</h2>
+    <p>Instant Terrasse est basée à Rillieux-la-Pape, au nord de Lyon. Nous venons chez vous, à Lyon et dans sa région, avec les échantillons de bois : vous les comparez à la lumière de votre extérieur, à côté de votre façade, et nous prenons les mesures pour votre plan 3D.</p>
+    <p>Étés chauds, hivers humides, orages : une terrasse lyonnaise passe par tous les temps. C'est pour cela que nous sélectionnons des bois très stables, et que nous privilégions une structure aluminium qui laisse l'air circuler sous les lames.</p>
+  </div>
+</section>
+
+<section id="faq-bois" class="bloc bloc-alt">
   <div class="conteneur"><div class="faq-liste">
     <h2>Vos questions sur le bois</h2>
     <details class="faq"><summary>Comment entretenir une terrasse en bois ?</summary><div><p>Nous conseillons un nettoyage au minimum deux fois par an, et plus souvent à l'ombre et sous les arbres, où la saleté s'accumule le plus. Il existe des nettoyeurs spécifiques pour terrasses, bien plus pratiques qu'un balai-brosse. Le nettoyeur haute pression est en revanche fortement déconseillé : il abîme les fibres du bois.</p></div></details>

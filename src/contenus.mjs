@@ -652,7 +652,7 @@ const terrasseAluminium = {
   title: "Terrasse aluminium Lyon : lames alu aspect bois | Instant Terrasse",
   description: "Terrasse en lames aluminium sur mesure à Lyon : imputrescible, stable, sans entretien, en décor bois ou teinte unie. Piscines, balcons, restaurants. Devis gratuit.",
   corps: `
-${heroPlein({ fil: "Terrasses", h1: ['<span class="pc-nowrap">Terrasse aluminium</span>', 'sur mesure <span class="lyon-l">à Lyon</span>'], kicker: "Terrasses aluminium à Lyon et dans sa région", photo: "alu-piscine-jardin-tropical", position: "60% 55%",
+${heroPlein({ fil: "Terrasses", h1: ['<span class="pc-nowrap">Terrasse aluminium</span>', 'sur mesure <span class="lyon-l">à Lyon</span>'], kicker: "Terrasses aluminium à Lyon et dans sa région", photo: "alu-piscine-aspect-teck", position: "60% 50%",
   chapo: `<span class="en-long">L'aspect du bois, sans ses contraintes : des lames aluminium qui ne pourrissent pas, ne se déforment pas et ne demandent aucun traitement.</span><span class="en-court">Décor bois ou teinte unie : des lames qui ne pourrissent pas et ne demandent aucun traitement.</span>`,
   actions: `<a class="bouton" href="/contact/">Demander une visite gratuite</a> <a class="bouton bouton-blanc" href="#teintes">Voir les teintes</a>` })}
 

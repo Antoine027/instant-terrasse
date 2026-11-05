@@ -917,7 +917,7 @@ ${heroPlein({ fil: "Terrasses", h1: ['<span class="pc-nowrap">Terrasse composite
 
 <section id="structure" class="bloc bloc-alt ossature">
   <div class="conteneur ossature-grille">
-    <div class="ossature-photo">${imgPhoto("structure-plot-rail-lame", { sizes: "(max-width:700px) 34vw, 360px" })}</div>
+    <div class="ossature-photo ossature-sombre">${imgPhoto("structure-composite-eclate", { sizes: "(max-width:700px) 34vw, 360px" })}</div>
     <div>
       <h2>Une ossature aluminium sous vos lames</h2>
       <p>Rails aluminium sur plots réglables : la terrasse reste plane et ventilée, et ne bouge pas. Structure garantie 20 ans.</p>

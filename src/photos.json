@@ -4265,5 +4265,23 @@
    1304
   ],
   "ratio": 1.7766
+ },
+ {
+  "cle": "structure-composite-eclate",
+  "dossier": "structures",
+  "categorie": "structure-alu",
+  "alt": "Vue éclatée de la structure : lame composite clipsée sur rail aluminium, posé sur plot réglable",
+  "largeurs": [
+   400,
+   600,
+   800,
+   1000,
+   1200,
+   1400,
+   1600,
+   2000,
+   2400
+  ],
+  "ratio": 1.0081
  }
 ]

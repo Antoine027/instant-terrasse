@@ -634,7 +634,7 @@ const gardeCorps = {
 
 // ---------- Terrasse en lames aluminium ----------
 // Ordre du nuancier de la page Lames aluminium (demande d'Antoine, 05/11/2026).
-const ORDRE_TEINTES_ALU = ["Simili bois", "Teck vieilli", "Teck", "Blanc veiné", "Bois de grange", "Gris uni"];
+const ORDRE_TEINTES_ALU = ["Simili bois", "Teck", "Teck vieilli", "Bois de grange", "Blanc veiné", "Gris uni"];
 
 // Types de projets mis en avant sur la page Lames aluminium : lien, titre, texte, photo.
 const PROJETS_ALU = [

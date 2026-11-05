@@ -633,8 +633,8 @@ const gardeCorps = {
 };
 
 // ---------- Terrasse en lames aluminium ----------
-// Galerie Lames aluminium : premières photos de « Tout voir », teintes mélangées (demande d'Antoine, 05/11/2026).
-const ORDRE_GALERIE_ALU = ["alu-piscine-aspect-teck", "alu-piscine-debordement-mer", "alu-restaurant-salle", "alu-piscine-blanche-vue", "alu-marches-aspect-teck", "alu-piscine-haricot", "alu-piscine-cour", "alu-escalier", "alu-salon-garde-corps", "alu-terrasse-salon-parasol", "alu-terrasse-vue-mer", "alu-restaurant-vue-mer", "alu-terrasse-couverte", "alu-piscine-jardin-tropical", "alu-detail-rocher"];
+// Galerie Lames aluminium : 9 premières photos de « Tout voir » = les plus belles, teintes mélangées, 3 lignes complètes (demande d'Antoine, 05/11/2026).
+const ORDRE_GALERIE_ALU = ["alu-piscine-aspect-teck", "alu-piscine-carbet", "alu-piscine-blanche-vue", "alu-piscine-jardin-tropical", "alu-piscine-debordement-mer", "alu-restaurant-vue-mer", "alu-piscine-haricot", "alu-terrasse-vue-mer", "alu-piscine-debordement-baie"];
 
 // Ordre du nuancier de la page Lames aluminium (demande d'Antoine, 05/11/2026).
 const ORDRE_TEINTES_ALU = ["Simili bois", "Teck", "Teck vieilli", "Bois de grange", "Blanc veiné", "Gris uni"];

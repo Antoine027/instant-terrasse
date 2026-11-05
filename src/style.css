@@ -1709,3 +1709,6 @@ h3.h2{font-size:clamp(1.5rem,1rem + 1.2vw,2.1rem);margin:0 0 14px}
 @media (min-width:701px){#teintes .nuancier img{aspect-ratio:2/3}}
 
 .nuancier[data-galerie] figure{cursor:zoom-in}
+
+/* Galerie limitée (« Tout voir » replié) : la dernière ligne s'étire, pas de trou à droite */
+@media (min-width:701px){.galerie-alu .galerie-bloc.plein .mosaique::after{display:none}}

@@ -97,30 +97,6 @@ const decouvrir = (ici) => `
   </div>
 </section>`;
 
-// Guide « Quel bois choisir » (page Bois) : critère, icône, lignes [libellé, essences], note. Classement par dureté proposé le 05/11/2026, à valider par Antoine.
-const ico = (d) => `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">${d}</svg>`;
-const CHOISIR = [
-  ["Selon l'aspect", ico('<circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 0 0 18"/>'), [
-    ["Clair", ["accoya naturel", "garapa", "pin"]],
-    ["Miel", ["thermopin", "mélèze"]],
-    ["Rosé", ["douglas"]],
-    ["Brun", ["thermofrêne", "kebony", "bambou X-treme", "ipé", "cumaru"]],
-    ["Brun-vert", ["itauba"]],
-    ["Brun-rouge, allure exotique", ["bambou N-Durance", "jatoba", "muiracatiara"]],
-    ["Gris patiné dès la pose", ["accoya gris"]],
-  ]],
-  ["Selon l'entretien", ico('<path d="M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11z"/>'), [
-    ["Sans saturateur obligatoire", ["thermofrêne", "thermopin", "kebony", "accoya"]],
-    ["Saturateur conseillé", ["bambou"]],
-    ["Pour toutes les essences", ["un nettoyage au minimum deux fois par an. Sans saturateur, le bois prend une patine grise avec le temps"]],
-  ]],
-  ["Selon la dureté", ico('<path d="M4 20h16"/><path d="M7 20V9l5-5 5 5v11"/>'), [
-    ["Dur", ["ipé", "cumaru", "jatoba", "muiracatiara", "itauba", "garapa", "bambou X-treme", "bambou N-Durance"]],
-    ["Mi-dur", ["thermofrêne", "kebony"]],
-    ["Tendre", ["pin", "douglas", "mélèze", "thermopin", "accoya"]],
-  ], "Plus un bois est dur, moins il se marque, mais plus il chauffe au soleil. Plus il est tendre, plus il reste agréable pieds nus, mais il se marque plus facilement. Les bois mi-durs sont souvent un bon compromis."],
-];
-
 const terrasseBois = {
   title: "Terrasse bois Lyon : thermopin, kebony, accoya, ipé | Instant Terrasse",
   description: "Terrasse bois sur mesure à Lyon : thermopin, thermofrêne, kebony, accoya, bambou sur structure aluminium, ou ipé, cumaru, mélèze, douglas sur structure traditionnelle.",
@@ -181,22 +157,7 @@ ${heroPlein({ fil: "Terrasses", h1: ["Terrasse bois", "sur mesure à Lyon"], kic
   </div>
 </section>
 
-<section id="choisir" class="bloc">
-  <div class="conteneur">
-    <h2>Quel bois choisir pour votre terrasse ?</h2>
-    <p class="chapo">Trois critères suffisent pour réduire le choix à deux ou trois essences. Nous comparons ensuite les échantillons avec vous, chez vous, à la lumière de votre extérieur.</p>
-    <div class="grille grille-3 choisir-grille">${CHOISIR.map(([titre, icone, lignes, note]) => `
-      <div class="carte choisir-carte">
-        <h3><span class="choisir-ico" aria-hidden="true">${icone}</span>${titre}</h3>
-        ${note ? `<p class="crit-note">${note}</p>` : ""}
-        ${lignes.map(([lab, ess]) => `<p class="crit"><strong>${lab}</strong> : ${ess.join(", ")}.</p>`).join("")}
-      </div>`).join("")}
-    </div>
-    <p class="note-choisir">Le prix dépend de l'essence, de la structure et de la surface : tout est détaillé ligne par ligne dans votre devis.</p>
-  </div>
-</section>
-
-<section id="faq-bois" class="bloc bloc-alt">
+<section id="faq-bois" class="bloc">
   <div class="conteneur"><div class="faq-liste">
     <h2>Vos questions sur le bois</h2>
     <details class="faq"><summary>Comment entretenir une terrasse en bois ?</summary><div><p>Nous conseillons un nettoyage au minimum deux fois par an, et plus souvent à l'ombre et sous les arbres, où la saleté s'accumule le plus. Il existe des nettoyeurs spécifiques pour terrasses, bien plus pratiques qu'un balai-brosse. Le nettoyeur haute pression est en revanche fortement déconseillé : il abîme les fibres du bois.</p></div></details>

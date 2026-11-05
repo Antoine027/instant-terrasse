@@ -1779,3 +1779,4 @@ h3.h2{font-size:clamp(1.5rem,1rem + 1.2vw,2.1rem);margin:0 0 14px}
 }
 .grille-comp .essence-photo img{background:transparent!important}
 @media (min-width:1061px){.grille-comp .essence .evol-pastilles figcaption{font-size:.62rem;letter-spacing:-.02em}}
+@media (max-width:560px){#galerie.galerie-comp .mosaique figure{height:175px;scroll-snap-align:start}.galerie-comp .mosaique{scroll-padding:0 16px}}

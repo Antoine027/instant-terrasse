@@ -844,18 +844,27 @@ ${cta("Un projet de bardage aluminium ?", "Devis gratuit et sans engagement. Nou
 };
 
 // ---------- Terrasse composite ----------
-// Évolution des teintes composite (visuels fabricant fournis par Antoine, 05/11/2026) : fichier, étapes.
-const EVOL_COMP = {
-  "Anise": ["anise", ["À la pose", "1-2 mois", "6-8 mois"]],
-  "Mentha Nigra": ["mentha-nigra", ["À la pose", "1-2 mois", "6-8 mois"]],
-  "Malui Gris": ["malui-gris", ["À la pose", "1-2 mois", "6-8 mois"]],
-  "Varia Brun foncé": ["varia-brun-fonce", ["À la pose", "1-2 mois", "6-8 mois"]],
-  "Nekko Brun": ["brun", ["À la pose", "6 mois", "1 an"]],
-  "Nekko Gris": ["gris", ["À la pose", "6 mois", "1 an"]],
-};
-
-// Ordre du nuancier composite (teintes chaudes vers froides ; noms fabricant donnés par Antoine le 05/11/2026).
-const ORDRE_TEINTES_COMP = ["Anise", "Nekko Brun", "Varia Brun foncé", "Mentha Nigra", "Nekko Gris", "Malui Gris"];
+// Lames composite (infos de l'ancien site, validées par Antoine le 05/11/2026). Évolution : visuels fabricant.
+const LAMES_COMP = [
+  { nom: "Nekko Brun", cle: "teinte-composite-brun", evol: ["brun", ["À la pose", "6 mois", "1 an"]],
+    texte: "Lame co-extrudée : un cœur et une coque de deux matériaux différents. Une teinte brune aux nuances marquées, au veinage très proche du bois.",
+    points: ["Nuances et veinage proches du bois", "Teinte brune nuancée", "Composite co-extrudé"] },
+  { nom: "Nekko Gris", cle: "teinte-composite-gris", evol: ["gris", ["À la pose", "6 mois", "1 an"]],
+    texte: "Lame co-extrudée : un cœur et une coque de deux matériaux différents. Une teinte grise nuancée, au veinage très proche du bois.",
+    points: ["Nuances et veinage proches du bois", "Teinte grise nuancée", "Composite co-extrudé"] },
+  { nom: "Anise", cle: "teinte-composite-miel", evol: ["anise", ["À la pose", "1-2 mois", "6-8 mois"]],
+    texte: "75 % de fibres de bois certifiées PEFC, liées par des polymères et compressées. Teinte miel lumineuse, qui se patine avec le temps.",
+    points: ["75 % de fibres de bois PEFC", "Chauffe peu, proche du bois", "Composite pleine masse"] },
+  { nom: "Varia Brun foncé", cle: "teinte-composite-brun-fonce", evol: ["varia-brun-fonce", ["À la pose", "1-2 mois", "6-8 mois"]],
+    texte: "75 % de fibres de bois certifiées PEFC, liées par des polymères et compressées. Teinte brun foncé, qui se patine avec le temps.",
+    points: ["75 % de fibres de bois PEFC", "Chauffe peu, proche du bois", "Composite pleine masse"] },
+  { nom: "Mentha Nigra", cle: "teinte-composite-vert-olive", evol: ["mentha-nigra", ["À la pose", "1-2 mois", "6-8 mois"]],
+    texte: "75 % de fibres de bois certifiées PEFC, liées par des polymères et compressées. Teinte vert sombre originale, qui se patine avec le temps.",
+    points: ["75 % de fibres de bois PEFC", "Chauffe peu, proche du bois", "Composite pleine masse"] },
+  { nom: "Malui Gris", cle: "teinte-composite-gris-anthracite", evol: ["malui-gris", ["À la pose", "1-2 mois", "6-8 mois"]],
+    texte: "75 % de fibres de bois certifiées PEFC, liées par des polymères et compressées. Teinte gris profond, qui se patine avec le temps.",
+    points: ["75 % de fibres de bois PEFC", "Chauffe peu, proche du bois", "Composite pleine masse"] },
+];
 
 const terrasseComposite = {
   title: "Terrasse composite Lyon : sur structure aluminium | Instant Terrasse",
@@ -867,11 +876,22 @@ ${heroPlein({ fil: "Terrasses", h1: ['<span class="pc-nowrap">Terrasse composite
 
 <section id="teintes" class="bloc">
   <div class="conteneur">
-    <p class="sous-titre">L'aspect du bois</p>
-    <h2>Nos teintes</h2>
-    <p class="chapo">Six teintes veinées comme du bois. Vous voyez les échantillons chez vous, lors du rendez-vous.</p>
-    <div class="nuancier nuancier-comp" data-galerie>${PHOTOS.filter((p) => p.categorie === "teinte-composite").sort((a, b) => ORDRE_TEINTES_COMP.indexOf(a.essence) - ORDRE_TEINTES_COMP.indexOf(b.essence)).map((p) => { const ev = EVOL_COMP[p.essence]; return `<div class="teinte-comp"><figure tabindex="0" aria-label="Agrandir : ${p.essence}">${imgPhoto(p.cle, { sizes: "(max-width:560px) 45vw, 230px" })}<figcaption>${p.essence}</figcaption></figure>${ev ? `<div class="evol-comp">${ev[1].map((l, i) => `<span><img src="/assets/img/composite/evol-comp-${ev[0]}-${i}.webp" alt="${p.essence}, ${l.toLowerCase()}" width="200" height="200" loading="lazy" decoding="async"><small>${l}</small></span>`).join("")}</div>` : ""}</div>`; }).join("")}</div>
-    <p class="evol-note">La teinte s'éclaircit les premiers mois, puis se stabilise. Teintes indicatives.</p>
+    <p class="sous-titre">Deux gammes, six teintes</p>
+    <h2>Nos lames composite</h2>
+    <p class="chapo">Une gamme co-extrudée, notre haut de gamme, et une gamme pleine masse, riche en fibres de bois. Vous voyez les échantillons chez vous, lors du rendez-vous.</p>
+    <div class="grille grille-essences grille-comp">
+      ${LAMES_COMP.map((e) => `
+      <article class="essence">
+        <div class="essence-photo">${imgPhoto(e.cle, { sizes: "(max-width:700px) 82vw, 460px" })}</div>
+        <div class="essence-texte">
+          <h3>${e.nom}</h3>
+          <p>${e.texte}</p>
+          <ul class="puces">${e.points.map((x) => `<li>${x}</li>`).join("")}</ul>
+        </div>
+        ${evolution(e.nom, "comp-" + e.evol[0], e.evol[1])}
+      </article>`).join("")}
+    </div>
+    <p class="evol-note"><span class="en-long">Teintes indicatives : la teinte s'éclaircit les premiers mois, puis se stabilise.</span><span class="en-court">Teintes indicatives.</span></p>
   </div>
 </section>
 
@@ -882,7 +902,7 @@ ${heroPlein({ fil: "Terrasses", h1: ['<span class="pc-nowrap">Terrasse composite
       <div class="carte atout-carte"><span class="atout-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11z"/></svg></span><h3>Sans entretien lourd</h3><p>Ni saturateur, ni ponçage, ni lasure : un nettoyage à l'eau savonneuse suffit.</p></div>
       <div class="carte atout-carte"><span class="atout-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 3c1.5 0 2.5 2 2.5 5S9.5 13 8 13s-2.5-2-2.5-5S6.5 3 8 3z"/><path d="M16 9c1.5 0 2.5 2 2.5 5s-1 5-2.5 5-2.5-2-2.5-5 1-5 2.5-5z"/></svg></span><h3>Confortable pieds nus</h3><p>Pas d'écharde ni de fente : idéal autour d'une piscine et pour les enfants.</p></div>
       <div class="carte atout-carte"><span class="atout-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 0 0 18"/></svg></span><h3>Une teinte qui tient</h3><p>La couleur se stabilise après quelques mois, sans virer au gris comme le bois.</p></div>
-      <div class="carte atout-carte"><span class="atout-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/><path d="M8 6c1 2 1 4 0 6M15 12c1 2 1 4 0 6"/></svg></span><h3>L'aspect du bois</h3><p>Des lames veinées comme du bois, en 6 teintes, de l'Anise au Malui Gris.</p></div>
+      <div class="carte atout-carte"><span class="atout-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/><path d="M8 6c1 2 1 4 0 6M15 12c1 2 1 4 0 6"/></svg></span><h3>L'aspect du bois</h3><p>Des lames veinées comme du bois, en 6 teintes et deux gammes : co-extrudée ou pleine masse.</p></div>
       <div class="carte atout-carte"><span class="atout-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9h18v6H3z"/><path d="M8 9v6M16 9v6"/></svg></span><h3>Fixation invisible</h3><p>Aucune vis en surface : les lames, rainurées sur les chants, se clipsent sur la structure.</p></div>
       <div class="carte atout-carte"><span class="atout-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 0 1 15-6.7L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-15 6.7L3 16"/><path d="M3 21v-5h5"/></svg></span><h3>Une lame se remplace</h3><p>Une lame abîmée se change sans démonter toute la terrasse.</p></div>
     </div>

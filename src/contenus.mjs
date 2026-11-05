@@ -673,7 +673,7 @@ ${heroPlein({ fil: "Terrasses", h1: ["Terrasse aluminium", "sur mesure à Lyon"]
       <p><a href="/structure-terrasse-lyon/#galerie">Voir nos structures en images →</a></p>
     </div>
     <div class="grille">
-      <a class="carte carte-structure" href="/structure-terrasse-lyon/#galerie"><div><h3>Sur plots réglables</h3><p>Des profilés aluminium posés sur plots réglables, pour une terrasse plane même sur un sol irrégulier.</p></div><div class="cs-img cs-photo">${imgPhoto("structure-lames-alu-assemblage", { sizes: "260px" })}</div></a>
+      <a class="carte carte-structure" href="/structure-terrasse-lyon/#galerie"><div><h3>Sur structure aluminium</h3><p>Des profilés aluminium posés sur plots réglables, pour une terrasse plane même sur un sol irrégulier.</p></div><div class="cs-img cs-photo">${imgPhoto("structure-lames-alu-assemblage", { sizes: "260px" })}</div></a>
     </div>
   </div>
 </section>

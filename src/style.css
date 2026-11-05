@@ -1656,3 +1656,6 @@ h3.h2{font-size:clamp(1.5rem,1rem + 1.2vw,2.1rem);margin:0 0 14px}
   .carte-trad h3{font-size:1rem;margin:0 0 4px}
   .carte-trad p{font-size:.9rem;line-height:1.45;margin:0}
 }
+
+/* Téléphone : galeries en carrousel, pas de « Voir plus / Voir moins » */
+@media (max-width:700px){.voir-plus{display:none!important}}

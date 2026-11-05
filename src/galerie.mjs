@@ -14,7 +14,7 @@ const CREDITS = {
   "pergola-bioclimatique": "MSB", "pergola-toile-retractable": "MSB", "pergola-toit-fixe": "MSB", carport: "MSB", "store-banne": "MSB",
   "bardage-bois": "Grad", "bardage-aluminium": "Grad", "bardage-pose": "Grad", "lame-bardage": "Grad",
   "terrasse-bois": "Grad", "terrasse-composite": "Grad", "terrasse-aluminium": "Aludeck", "terrasse-carrelage": "Grad",
-  "structure-alu": "Grad", schema: "Grad", "structure-trad": null, // schéma créé par Antoine : pas de crédit
+  "structure-alu": "Grad", schema: "Grad", "structure-trad": null, "lame-trad": null, // schéma créé par Antoine : pas de crédit
   "teinte-alu": "Aludeck", "structure-lame-alu": "Aludeck", "teinte-composite": "Grad", ambiance: "Grad", pilotis: "Grad", "pilotis-hero": "Grad", restaurant: "Grad", accueil: "Grad",
   portrait: null, // photo d'Antoine : pas de crédit fournisseur
 };

@@ -4111,5 +4111,140 @@
    1536
   ],
   "ratio": 1.5
+ },
+ {
+  "cle": "lame-trad-meleze",
+  "dossier": "bois",
+  "categorie": "lame-trad",
+  "alt": "Lames de terrasse neuves en mélèze (visuel d'illustration)",
+  "largeurs": [
+   400,
+   600,
+   800,
+   1000,
+   1200,
+   1254
+  ],
+  "ratio": 1.0
+ },
+ {
+  "cle": "lame-trad-muiracatiara",
+  "dossier": "bois",
+  "categorie": "lame-trad",
+  "alt": "Lames de terrasse neuves en muiracatiara (visuel d'illustration)",
+  "largeurs": [
+   400,
+   600,
+   800,
+   1000,
+   1200,
+   1254
+  ],
+  "ratio": 1.0
+ },
+ {
+  "cle": "lame-trad-pin",
+  "dossier": "bois",
+  "categorie": "lame-trad",
+  "alt": "Lames de terrasse neuves en pin (visuel d'illustration)",
+  "largeurs": [
+   400,
+   600,
+   800,
+   1000,
+   1200,
+   1254
+  ],
+  "ratio": 1.0
+ },
+ {
+  "cle": "lame-trad-itauba",
+  "dossier": "bois",
+  "categorie": "lame-trad",
+  "alt": "Lames de terrasse neuves en itauba (visuel d'illustration)",
+  "largeurs": [
+   400,
+   600,
+   800,
+   1000,
+   1200,
+   1254
+  ],
+  "ratio": 1.0
+ },
+ {
+  "cle": "lame-trad-douglas",
+  "dossier": "bois",
+  "categorie": "lame-trad",
+  "alt": "Lames de terrasse neuves en douglas (visuel d'illustration)",
+  "largeurs": [
+   400,
+   600,
+   800,
+   1000,
+   1200,
+   1254
+  ],
+  "ratio": 1.0
+ },
+ {
+  "cle": "lame-trad-garapa",
+  "dossier": "bois",
+  "categorie": "lame-trad",
+  "alt": "Lames de terrasse neuves en garapa (visuel d'illustration)",
+  "largeurs": [
+   400,
+   600,
+   800,
+   1000,
+   1200,
+   1254
+  ],
+  "ratio": 1.0
+ },
+ {
+  "cle": "lame-trad-ipe",
+  "dossier": "bois",
+  "categorie": "lame-trad",
+  "alt": "Lames de terrasse neuves en ipé (visuel d'illustration)",
+  "largeurs": [
+   400,
+   600,
+   800,
+   1000,
+   1200,
+   1254
+  ],
+  "ratio": 1.0
+ },
+ {
+  "cle": "lame-trad-cumaru",
+  "dossier": "bois",
+  "categorie": "lame-trad",
+  "alt": "Lames de terrasse neuves en cumaru (visuel d'illustration)",
+  "largeurs": [
+   400,
+   600,
+   800,
+   1000,
+   1200,
+   1254
+  ],
+  "ratio": 1.0
+ },
+ {
+  "cle": "lame-trad-jatoba",
+  "dossier": "bois",
+  "categorie": "lame-trad",
+  "alt": "Lames de terrasse neuves en jatoba (visuel d'illustration)",
+  "largeurs": [
+   400,
+   600,
+   800,
+   1000,
+   1200,
+   1254
+  ],
+  "ratio": 1.0
  }
 ]

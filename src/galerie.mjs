@@ -61,7 +61,7 @@ export const galerie = (categorie, { titre, intro, legende = "Illustrations", gr
   if (nuances) liste.unshift(...PHOTOS.filter((p) => p.categorie === nuances && essences.includes(p.essence)).map((p) => ({ ...p, nuance: true })));
   // limite : nombre de photos montrées dans « Tout voir » ; les autres derrière « Voir plus de photos » (les filtres montrent tout).
   let n = 0;
-  liste.forEach((p) => { if (!p.nuance && limite && ++n > limite) p.plus = true; });
+  liste.forEach((p, i) => { if (!p.nuance && limite && ++n > limite) liste[i] = { ...p, plus: true }; });
   const enPlus = liste.filter((p) => p.plus).length;
   return `
 <div class="galerie-bloc" data-galerie>

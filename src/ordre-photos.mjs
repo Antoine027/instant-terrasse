@@ -104,6 +104,7 @@ export const RANG = {
  "alu-piscine-jardin-tropical": 0.065,
  "alu-piscine-haricot": 0.097,
  "composite-gris-piscine": 0.129,
+ "composite-brun-cour-table": 0.139,
  "composite-gris-piscine-jardin": 0.161,
  "alu-piscine-grise": 0.194,
  "composite-brun-passerelle-bassin": 0.226,

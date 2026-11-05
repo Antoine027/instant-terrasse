@@ -4283,5 +4283,22 @@
    2400
   ],
   "ratio": 1.0081
+ },
+ {
+  "cle": "composite-brun-cour-table",
+  "dossier": "composite",
+  "categorie": "terrasse-composite",
+  "alt": "Terrasse en lames composite brunes devant une maison aux murs blancs, table et chaises en bois",
+  "largeurs": [
+   400,
+   600,
+   800,
+   1000,
+   1200,
+   1400,
+   1600,
+   1837
+  ],
+  "ratio": 1.3312
  }
 ]

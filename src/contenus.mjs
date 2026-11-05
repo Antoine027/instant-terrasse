@@ -35,22 +35,22 @@ const cta = (titre = "Un projet de terrasse en bois ?", texte = "Laissez votre n
 const essencesAlu = [
   {
     nom: "Thermofrêne", evol: ["thermofrene", ["À la pose", "6 mois", "1 an"]], photo: ["thermofrene", "Lame de terrasse en thermofrêne, teinte brun chaud au veinage marqué", 358],
-    texte: "Le frêne, bois dur européen, traité thermiquement à cœur. Il prend une belle teinte brun chaud et garde un veinage très marqué, proche des bois exotiques.",
+    texte: "Le frêne, bois dur européen, chauffé à cœur à 215 °C. Il prend une belle teinte brun chaud et garde un veinage très marqué, proche des bois exotiques.",
     points: ["Bois thermo-traité", "Veinage prononcé", "Garantie 20 ans*"],
   },
   {
     nom: "Kebony", evol: ["kebony", ["À la pose", "6 mois", "1 an"]], photo: ["kebony", "Lame de terrasse en Kebony, teinte brune", 402],
-    texte: "Un bois résineux modifié par un procédé d'origine végétale qui renforce durablement ses fibres. Brun profond à la pose, il évolue vers un gris argenté homogène.",
+    texte: "Du pin radiata issu de plantations certifiées FSC, modifié par furfurylation : un procédé d'origine végétale qui renforce durablement ses fibres. Brun profond à la pose, il évolue vers un gris argenté homogène.",
     points: ["Traitement par injection d'origine végétale", "Patine gris argenté", "Garantie 30 ans*"],
   },
   {
     nom: "Thermopin", evol: ["thermopin", ["À la pose", "6 mois", "1 an"]], photo: ["thermopin", "Lame de terrasse en thermopin, teinte miel avec nœuds apparents", 378],
-    texte: "Un pin chauffé à haute température, sans produit chimique, pour le rendre plus stable et plus résistant. Teinte miel à la pose, nœuds apparents : le bois au naturel.",
+    texte: "Un pin chauffé à 215 °C, sans produit chimique, pour le rendre plus stable et plus résistant. Teinte miel à la pose, nœuds apparents : le bois au naturel.",
     points: ["Bois thermo-traité", "Aspect bois naturel", "Garantie 15 ans*"],
   },
   {
     nom: "Accoya naturel", evol: ["accoya-naturel", ["À la pose", "6 mois", "2 ans"]], photo: ["accoya-naturel-lame-3", "Lame de terrasse en accoya naturel, teinte claire", 266],
-    texte: "Un bois acétylé réputé pour sa stabilité : il bouge très peu avec l'humidité, ce qui limite les déformations. Teinte claire à la pose, qui grise naturellement avec le temps.",
+    texte: "Du pin radiata issu de plantations certifiées FSC, acétylé à cœur et réputé pour sa stabilité : il bouge très peu avec l'humidité, ce qui limite les déformations. Teinte claire à la pose, qui grise naturellement avec le temps.",
     points: ["Bois acétylé", "Très grande stabilité", "Garantie jusqu'à 50 ans*"],
   },
   {
@@ -166,6 +166,7 @@ ${heroPlein({ fil: "Terrasses", h1: ["Terrasse bois", "sur mesure à Lyon"], kic
     <div class="en-long"><p>Instant Terrasse est basée à Rillieux-la-Pape, au nord de Lyon. Nous venons chez vous, à Lyon et dans sa région, avec les échantillons de bois : vous les comparez à la lumière de votre extérieur, à côté de votre façade, et nous prenons les mesures pour votre plan 3D.</p>
     <p>Étés chauds, hivers humides, orages : une terrasse lyonnaise passe par tous les temps. C'est pour cela que nous sélectionnons des bois très stables, et que nous privilégions une structure aluminium qui laisse l'air circuler sous les lames.</p></div>
     <p class="en-court">Depuis Rillieux-la-Pape, nous venons chez vous, à Lyon et dans sa région, avec les échantillons. Face aux étés chauds et aux hivers humides, nous sélectionnons des bois très stables, posés sur une structure aluminium ventilée.</p>
+    <p class="lien-methode"><a href="/#methode">Découvrir notre méthode, du premier rendez-vous à la fin du chantier →</a></p>
   </div>
   <div class="faq-liste">
     <h2>Vos questions sur le bois</h2>

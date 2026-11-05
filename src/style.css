@@ -1670,3 +1670,5 @@ h3.h2{font-size:clamp(1.5rem,1rem + 1.2vw,2.1rem);margin:0 0 14px}
 @media (min-width:701px){.decouvrir h2{text-align:left}}
 /* Page Bois (téléphone) : « Tout voir » échange sa place avec le dernier filtre (demande d'Antoine, 05/11/2026) */
 @media (max-width:700px){.galerie-bois .filtre[data-filtre="tout"]{order:2}.galerie-bois .filtre:last-child{order:-1}}
+
+.lien-methode a{font:700 .95rem Montserrat,sans-serif;color:var(--accent-texte);text-decoration:underline;text-underline-offset:3px}

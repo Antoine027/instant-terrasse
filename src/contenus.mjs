@@ -157,17 +157,33 @@ ${heroPlein({ fil: "Terrasses", h1: ["Terrasse bois", "sur mesure à Lyon"], kic
   </div>
 </section>
 
-<section class="bloc">
-  <div class="conteneur deux-colonnes">
-    <div>
-      <h2>Bien choisir son bois</h2>
-      <p>Pour hésiter moins longtemps, posez-vous trois questions : quel aspect vous plaît (clair, miel, brun, exotique) ? Quel budget ? Combien de temps voulez-vous consacrer à l'entretien ? Nous faisons le reste lors de la visite.</p>
+<section id="choisir" class="bloc">
+  <div class="conteneur">
+    <h2>Quel bois choisir pour votre terrasse ?</h2>
+    <p class="chapo">Trois critères suffisent pour réduire le choix à deux ou trois essences. Nous comparons ensuite les échantillons avec vous, chez vous, à la lumière de votre extérieur.</p>
+    <div class="grille grille-3 choisir-grille">
+      <div class="carte">
+        <h3>Selon l'aspect</h3>
+        <p><strong>Clair</strong> : accoya naturel, garapa.</p>
+        <p><strong>Miel, nœuds apparents</strong> : thermopin.</p>
+        <p><strong>Brun</strong> : thermofrêne, kebony, bambou X-treme, ipé, cumaru.</p>
+        <p><strong>Brun-rouge, allure exotique</strong> : bambou N-Durance, jatoba, muiracatiara.</p>
+        <p><strong>Gris patiné dès la pose</strong> : accoya gris.</p>
+      </div>
+      <div class="carte">
+        <h3>Selon l'entretien</h3>
+        <p><strong>Sans saturateur obligatoire</strong> : thermofrêne, thermopin, kebony, accoya.</p>
+        <p><strong>Saturateur conseillé</strong> : bambou.</p>
+        <p><strong>Pour toutes les essences</strong> : un nettoyage au minimum deux fois par an. Sans saturateur, le bois prend une patine grise avec le temps.</p>
+      </div>
+      <div class="carte">
+        <h3>Selon la stabilité et la dureté</h3>
+        <p><strong>Très grande stabilité</strong> : accoya naturel et accoya gris, qui bougent très peu avec l'humidité ; itauba.</p>
+        <p><strong>Très dur et dense</strong> : bambou X-treme et N-Durance, ipé.</p>
+        <p><strong>Grande longévité</strong> : kebony, ipé.</p>
+      </div>
     </div>
-    <div>
-      <h2>Comment se passe votre projet</h2>
-      <p>${POSE}</p>
-      <p>Vous hésitez encore entre le bois et un autre matériau ? Consultez notre <a href="/nos-terrasses/">comparatif des matériaux</a> ou découvrez la <a href="/terrasse-composite-lyon/">terrasse composite</a>.</p>
-    </div>
+    <p class="note-choisir">Le prix dépend de l'essence, de la structure et de la surface : tout est détaillé ligne par ligne dans votre devis.</p>
   </div>
 </section>
 
@@ -179,6 +195,7 @@ ${heroPlein({ fil: "Terrasses", h1: ["Terrasse bois", "sur mesure à Lyon"], kic
     <details class="faq"><summary>Le bois va-t-il changer de couleur ?</summary><div><p>Oui : au soleil et à la pluie, le bois prend une patine grise. C'est naturel et ce n'est pas un défaut. Les pastilles de chaque essence, plus haut sur cette page, montrent cette évolution. Un saturateur limite ce changement et garde une teinte très proche de celle d'origine.</p></div></details>
     <details class="faq"><summary>Une terrasse en bois est-elle glissante ?</summary><div><p>Le bois offre naturellement une très bonne résistance à la glissance. Mais sur une terrasse mouillée, la fine couche noire de saleté qui se dépose avec le temps (pollution, végétation) peut rendre la surface glissante. D'où l'importance d'un nettoyage régulier.</p></div></details>
     <details class="faq"><summary>Vos bois font-ils des échardes ?</summary><div><p>Non. Avec le temps, des gerces (petites fentes dans le sens du bois) peuvent apparaître, car le bois reste un matériau naturel. Une gerce ne rend pas la lame impropre à l'utilisation. Seul un relevé de fibres impose de changer la lame concernée. C'est pour limiter ces phénomènes que nous sélectionnons des bois très stables.</p></div></details>
+    <details class="faq"><summary>Qui pose la terrasse ?</summary><div><p>${POSE}</p></div></details>
   </div></div>
 </section>
 ${cta()}`,

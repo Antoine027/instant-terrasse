@@ -646,6 +646,7 @@ const PROJETS_ALU = [
   ["/toit-terrasse-lyon/", "Toit-terrasse", "Une terrasse plane sur une toiture.", "alu-piscine-toit-terrasse"],
   ["/terrasse-restaurant-chr-lyon/", "Restaurant", "Une terrasse robuste pour l'accueil du public.", "alu-restaurant-vue-mer"],
   ["/terrasse-camping-hpa/", "Camping", "Decks et pontons qui ne craignent pas l'eau.", "alu-pontons-lac"],
+  ["/terrasse-sur-pilotis-lyon/", "Terrasse sur pilotis", "Une structure légère pour une terrasse suspendue.", "structure-lames-alu-balcon-dessous"],
 ];
 
 const terrasseAluminium = {
@@ -703,8 +704,8 @@ ${heroPlein({ fil: "Terrasses", h1: ['<span class="pc-nowrap">Terrasse aluminium
     <p class="sous-titre">Pour quels projets ?</p>
     <h2>Partout où l'on veut une terrasse facile à vivre</h2>
     <p class="chapo">Plages de piscine, balcons, toits-terrasses, escaliers extérieurs, terrasses de restaurants : la lame aluminium s'adapte à chaque projet.</p>
-    <div class="grille grille-5 trad-car">
-      ${PROJETS_ALU.map(([lien, titre, texte, cle]) => `<a class="carte carte-trad avec-photo carte-lien" href="${lien}"><div class="trad-photo">${imgPhoto(cle, { sizes: "(max-width:700px) 80vw, 240px" })}</div><h3>${titre}</h3><p>${texte}</p></a>`).join("")}
+    <div class="grille projets-alu trad-car">
+      ${PROJETS_ALU.map(([lien, titre, texte, cle]) => `<a class="carte carte-trad avec-photo carte-lien projet-alu" href="${lien}"><div class="trad-photo">${imgPhoto(cle, { sizes: "(max-width:700px) 80vw, 200px" })}</div><div><h3>${titre}</h3><p>${texte}</p></div></a>`).join("")}
     </div>
   </div>
 </section>

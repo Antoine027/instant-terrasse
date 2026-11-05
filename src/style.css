@@ -1712,5 +1712,13 @@ h3.h2{font-size:clamp(1.5rem,1rem + 1.2vw,2.1rem);margin:0 0 14px}
 
 /* Galerie limitée (« Tout voir » replié) : la dernière ligne s'étire, pas de trou à droite */
 @media (min-width:701px){.galerie-alu .galerie-bloc.plein .mosaique::after{display:none}}
-.grille-5{grid-template-columns:repeat(5,1fr);gap:14px}
-@media (max-width:1060px) and (min-width:701px){.grille-5{grid-template-columns:repeat(3,1fr)}}
+/* Page Aluminium : projets en petites cartes horizontales, 2 lignes de 3 (ordinateur) */
+@media (min-width:701px){
+  .projets-alu{grid-template-columns:repeat(3,1fr);gap:14px;margin-top:22px}
+  .projet-alu.avec-photo{display:grid;grid-template-columns:42% 1fr;align-items:center;gap:14px;padding:0 16px 0 0}
+  .projet-alu .trad-photo{margin:0;aspect-ratio:auto;height:110px;overflow:hidden}
+  .projet-alu .trad-photo img{width:100%;height:100%;object-fit:cover}
+  .projet-alu h3{font-size:1rem;margin:0 0 4px}
+  .projet-alu p{font-size:.88rem;line-height:1.4;margin:0}
+}
+@media (max-width:1060px) and (min-width:701px){.projets-alu{grid-template-columns:repeat(2,1fr)}}

@@ -844,7 +844,7 @@ ${cta("Un projet de bardage aluminium ?", "Devis gratuit et sans engagement. Nou
 };
 
 // ---------- Terrasse composite ----------
-// Lames composite (infos de l'ancien site, validées par Antoine le 05/11/2026). Évolution : visuels fabricant.
+// Lames composite (infos de l'ancien site, validées par Antoine le 05/11/2026 ; les deux gammes sont haut de gamme). Évolution : visuels fabricant.
 const LAMES_COMP = [
   { nom: "Nekko Brun", cle: "teinte-composite-brun", evol: ["brun", ["À la pose", "6 mois", "1 an"]],
     texte: "Lame co-extrudée : un cœur et une coque de deux matériaux différents. Une teinte brune aux nuances marquées, au veinage très proche du bois.",
@@ -878,7 +878,7 @@ ${heroPlein({ fil: "Terrasses", h1: ['<span class="pc-nowrap">Terrasse composite
   <div class="conteneur">
     <p class="sous-titre">Deux gammes, six teintes</p>
     <h2>Nos lames composite</h2>
-    <p class="chapo">Une gamme co-extrudée, notre haut de gamme, et une gamme pleine masse, riche en fibres de bois. Vous voyez les échantillons chez vous, lors du rendez-vous.</p>
+    <p class="chapo">Deux composites haut de gamme, sélectionnés pour leur durabilité et leur stabilité : une gamme co-extrudée et une gamme pleine masse. Vous voyez les échantillons chez vous, lors du rendez-vous.</p>
     <div class="grille grille-essences grille-comp">
       ${LAMES_COMP.map((e) => `
       <article class="essence">

@@ -8,6 +8,12 @@ import { carteProduit, VIGNETTES } from "./src/vignettes.mjs";
 import { SCRIPT_GALERIE, imgPhoto, photo, RECADRAGES } from "./src/galerie.mjs";
 import { cssPourPage } from "./src/purge-css.mjs";
 
+// Typographie française : espace insécable avant : ; ! ? » et après « (texte visible seulement)
+function insecables(html) {
+  return html.split(/(<script[\s\S]*?<\/script>|<style[\s\S]*?<\/style>|<[^>]+>)/).map((m, i) =>
+    i % 2 ? m : m.replace(/ ([:;!?»])/g, "\u00a0$1").replace(/« /g, "«\u00a0")).join("");
+}
+
 // Les pages rédigées remplacent leur version « en préparation ».
 for (const p of PAGES) if (CONTENUS[p.chemin]) Object.assign(p, CONTENUS[p.chemin], { statut: "redigee" });
 for (const c of Object.keys(CONTENUS)) if (!PAGES.some((p) => p.chemin === c)) throw new Error(`Contenu sans page dans le plan : ${c}`);
@@ -225,7 +231,7 @@ for (const p of PAGES) {
   mkdirSync(dossier, { recursive: true });
   const FLECHE = `<span class="fleche" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></span>`;
   const html = gabarit(p).replaceAll('<span class="fleche" aria-hidden="true">→</span>', FLECHE);
-  writeFileSync(join(dossier, "index.html"), html.replace("/*CSS*/", cssPourPage(css, html)));
+  writeFileSync(join(dossier, "index.html"), insecables(html.replace("/*CSS*/", cssPourPage(css, html))));
 }
 
 writeFileSync("outils/recadrages.json", JSON.stringify(Object.fromEntries(RECADRAGES), null, 1));

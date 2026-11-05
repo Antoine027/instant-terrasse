@@ -931,8 +931,8 @@ ${heroPlein({ fil: "Terrasses", h1: ['<span class="pc-nowrap">Terrasse composite
   <div id="lyon" class="lyon-texte">
     <h2>Votre terrasse composite à Lyon et dans sa région</h2>
     <div class="en-long"><p>Instant Terrasse est basée à Rillieux-la-Pape, au nord de Lyon. Nous venons chez vous, à Lyon et dans sa région, avec les échantillons de lames : vous comparez les teintes à la lumière de votre extérieur, et nous prenons les mesures pour votre plan 3D.</p>
-    <p>Étés chauds, hivers humides, orages : posées sur une structure aluminium ventilée, les lames composite restent droites et gardent leur teinte d'une saison à l'autre. Vous hésitez avec le bois ? Nous apportons aussi ses échantillons.</p></div>
-    <p class="en-court">Depuis Rillieux-la-Pape, nous venons chez vous, à Lyon et dans sa région, avec les échantillons. Sur structure aluminium ventilée, les lames restent droites saison après saison.</p>
+    <p>Étés chauds, hivers humides, orages : posées sur une structure aluminium ventilée, les lames composite restent droites et gardent leur teinte d'une saison à l'autre. Jardin, balcon, toit-terrasse ou tour de piscine : les plots réglables de la structure s'adaptent à votre support. Vous hésitez avec le bois ? Nous apportons aussi ses échantillons.</p></div>
+    <p class="en-court">Depuis Rillieux-la-Pape, nous venons chez vous, à Lyon et dans sa région, avec les échantillons. Jardin, balcon, toit-terrasse ou piscine : sur structure aluminium ventilée, les lames restent droites saison après saison.</p>
     <p class="lien-methode"><a href="/#methode">Découvrir notre méthode →</a></p>
   </div>
   <div class="faq-liste">

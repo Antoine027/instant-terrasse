@@ -35,7 +35,7 @@ const essencesAlu = [
   {
     nom: "Thermofrêne", evol: ["thermofrene", ["À la pose", "6 mois", "1 an"]], photo: ["thermofrene", "Lame de terrasse en thermofrêne, teinte brun chaud au veinage marqué", 358],
     texte: "Le frêne, bois dur européen, traité thermiquement à cœur. Il prend une belle teinte brun chaud et garde un veinage très marqué, proche des bois exotiques.",
-    points: ["Bois dur européen", "Bois thermo-traité", "Veinage prononcé", "Garantie fabricant 20 ans*"],
+    points: ["Bois thermo-traité", "Veinage prononcé", "Garantie fabricant 20 ans*"],
   },
   {
     nom: "Kebony", evol: ["kebony", ["À la pose", "6 mois", "1 an"]], photo: ["kebony", "Lame de terrasse en Kebony, teinte brune", 402],

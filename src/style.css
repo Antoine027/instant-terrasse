@@ -1642,3 +1642,6 @@ h3.h2{font-size:clamp(1.5rem,1rem + 1.2vw,2.1rem);margin:0 0 14px}
 .lyon-texte h2{margin-top:0}
 @media (min-width:901px){.lyon-faq{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}.lyon-faq .faq-liste{max-width:none}main .lyon-faq h2{font-size:clamp(1.6rem,1.9vw,2.2rem)}}
 @media (max-width:900px){.lyon-faq{gap:36px}}
+
+/* Page Bois (téléphone) : cartes d'essences sans description, 3 points seulement */
+@media (max-width:700px){.essence-texte>p{display:none}}

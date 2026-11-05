@@ -205,18 +205,18 @@ const tableau = (id, titre, intro, colonnes, lignes, verdicts) => `
 
 // Galerie de la page Structures : photo et filtres auxquels elle appartient.
 const GALERIE_STRUCTURES = [
-  ["structure-clips-lame-bois", ["Structure bois"]],
-  ["structure-lames-clipsees-vue-haut", ["Structure bois"]],
-  ["structure-clips-lame-brune", ["Structure bois"]],
-  ["structure-plot-rail-lame", ["Structure bois"]],
-  ["structure-plot-reglable", ["Structure bois"]],
-  ["structure-rails-vue-ensemble", ["Structure bois"]],
-  ["structure-rails-plots-detail", ["Structure bois"]],
-  ["structure-rails-dalle", ["Structure bois"]],
-  ["structure-lames-a-clipser", ["Structure bois"]],
-  ["structure-schema-bordure", ["Structure bois"]],
-  ["structure-rails-plots-entete", ["Structure bois"]],
-  ["structure-traditionnelle-plot-lambourde", ["Structure bois"]],
+  ["structure-clips-lame-bois", ["Structure bois et composite"]],
+  ["structure-lames-clipsees-vue-haut", ["Structure bois et composite"]],
+  ["structure-clips-lame-brune", ["Structure bois et composite"]],
+  ["structure-plot-rail-lame", ["Structure bois et composite"]],
+  ["structure-plot-reglable", ["Structure bois et composite"]],
+  ["structure-rails-vue-ensemble", ["Structure bois et composite"]],
+  ["structure-rails-plots-detail", ["Structure bois et composite"]],
+  ["structure-rails-dalle", ["Structure bois et composite"]],
+  ["structure-lames-a-clipser", ["Structure bois et composite"]],
+  ["structure-schema-bordure", ["Structure bois et composite"]],
+  ["structure-rails-plots-entete", ["Structure bois et composite"]],
+  ["structure-traditionnelle-plot-lambourde", ["Structure bois et composite"]],
   ["carrelage-structure-aluminium-schema", ["Structure carrelage"]],
   ["carrelage-plots-schema", ["Structure carrelage"]],
   ["rail-carrelage-alu-standard", ["Structure carrelage"]],
@@ -392,7 +392,7 @@ ${compCarrelage}
 
 <section id="galerie" class="bloc bloc-alt">
   <div class="conteneur">
-    ${galerie(GALERIE_STRUCTURES.map(([cle]) => cle), { titre: "Nos structures en images", intro: "Choisissez un type de structure pour n'afficher que celui qui vous intéresse.", legende: "Illustrations", types: ["Structure bois", "Structure carrelage", "Structure lames aluminium"], typesDe: (p) => GALERIE_STRUCTURES.find(([c]) => c === p.cle)[1] })}
+    ${galerie(GALERIE_STRUCTURES.map(([cle]) => cle), { titre: "Nos structures en images", intro: "Choisissez un type de structure pour n'afficher que celui qui vous intéresse.", legende: "Illustrations", types: ["Structure bois et composite", "Structure carrelage", "Structure lames aluminium"], typesDe: (p) => GALERIE_STRUCTURES.find(([c]) => c === p.cle)[1] })}
   </div>
 </section>
 ${cta("Quelle structure pour votre terrain ?")}`,

@@ -2,6 +2,12 @@
 
 Remplaçant du site WordPress/Elementor instantterrasse.com. Générateur Node sans dépendance : `node build.mjs` produit `dist/`. Déployé par Vercel à chaque push sur `main` (dépôt GitHub Antoine027/instant-terrasse). Même méthode que le site Horizon Fenêtre (Antoine027/horizon-fenetre).
 
+## Déploiements : limiter le nombre (demande d'Antoine, 05/11/2026)
+- Le compte Vercel gratuit est limité à 100 déploiements par jour (limite atteinte le 05/11/2026).
+- Travailler sur la branche `travail` : ses envois sont sauvegardés sur GitHub mais ne déclenchent aucun déploiement (`git.deploymentEnabled.travail = false` dans vercel.json).
+- Après chaque modification : l'enregistrer sur `travail` et dire à Antoine « je ne déploie pas tout de suite, j'attends pour limiter les déploiements ». Au bout de plusieurs modifications, lui proposer de déployer et attendre sa confirmation.
+- Déployer seulement quand Antoine le confirme ou dit « déploie tout de suite » : fusionner `travail` dans `main` et pousser `main` (un seul déploiement), puis vérifier que le déploiement a démarré.
+
 ## Règle n° 1 : ne pas court-circuiter le site actuel
 - Le WordPress reste en ligne sur instantterrasse.com tant qu'Antoine n'a pas décidé la bascule.
 - Ne jamais toucher au domaine, aux DNS ni au WordPress.

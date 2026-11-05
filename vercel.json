@@ -8,6 +8,11 @@
   "regions": [
     "cdg1"
   ],
+  "git": {
+    "deploymentEnabled": {
+      "travail": false
+    }
+  },
   "redirects": [
     {
       "source": "/nosterrasses/",

@@ -107,20 +107,6 @@ ${heroPlein({ fil: "Terrasses", h1: ["Terrasse bois", "sur mesure à Lyon"], kic
   chapo: "Nos essences phares sur structure aluminium, et d'autres essences sur structure traditionnelle : nous vous aidons à choisir l'essence qui correspond à votre maison, à votre budget et au temps que vous voulez consacrer à l'entretien.",
   actions: `<a class="bouton" href="/contact/">Demander une visite gratuite</a> <a class="bouton bouton-blanc" href="#essences-aluminium">Voir les essences</a>` })}
 
-<section id="points-forts" class="bloc bloc-alt">
-  <div class="conteneur">
-    <h2>Les points forts</h2>
-    <div class="grille grille-3">
-      <div class="carte"><h3>Un matériau naturel</h3><p>Le vrai bois, chaleureux, qui se patine avec le temps.</p></div>
-      <div class="carte"><h3>Agréable pieds nus</h3><p>Une très bonne résistance naturelle à la glissance, et des bois sélectionnés pour ne pas faire d'échardes.</p></div>
-      <div class="carte"><h3>Durable</h3><p>Jusqu'à 50 ans de garantie selon l'essence (garanties fabricants, sous conditions).</p></div>
-      <div class="carte"><h3>Sur structure aluminium</h3><p>Rails aluminium garantis 20 ans : une terrasse plane et ventilée.</p></div>
-      <div class="carte"><h3>Fixation invisible</h3><p>Aucune vis en surface, et chaque lame se démonte.</p></div>
-      <div class="carte"><h3>Un large choix d'essences</h3><p>Thermofrêne, kebony, accoya, bambou, ipé, cumaru…</p></div>
-    </div>
-  </div>
-</section>
-
 <section id="essences-aluminium" class="bloc">
   <div class="conteneur">
     <p class="sous-titre">Sur structure aluminium</p>

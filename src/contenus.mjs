@@ -70,14 +70,15 @@ const essencesAlu = [
   },
 ];
 
+// Ordre : du plus recherché au moins recherché (estimation, 05/11/2026).
 const essencesTrad = [
   ["Pin", "Résineux traité, économique, pour les projets simples."],
+  ["Ipé", "Bois exotique très dense, brun foncé, d'une grande longévité."],
   ["Douglas", "Résineux à la teinte rosée, naturellement plus durable que le pin."],
   ["Mélèze", "Résineux dense et chaleureux, apprécié pour sa tenue en extérieur."],
-  ["Ipé", "Bois exotique très dense, brun foncé, d'une grande longévité."],
   ["Cumaru", "Bois exotique dur, brun doré, alternative à l'ipé."],
-  ["Garapa", "Bois exotique clair, jaune doré, pour une terrasse lumineuse."],
   ["Itauba", "Bois exotique naturellement huileux, brun-vert, très stable."],
+  ["Garapa", "Bois exotique clair, jaune doré, pour une terrasse lumineuse."],
   ["Jatoba", "Bois exotique dur aux reflets brun-rouge."],
   ["Muiracatiara (tigerwood)", "Bois exotique dur, veiné de brun foncé sur fond doré : un aspect tigré très décoratif."],
 ];

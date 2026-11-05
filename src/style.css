@@ -1647,3 +1647,12 @@ h3.h2{font-size:clamp(1.5rem,1rem + 1.2vw,2.1rem);margin:0 0 14px}
 @media (max-width:700px){.essence-texte>p{display:none}}
 
 @media (max-width:700px){.pc-seul{display:none!important}}
+
+/* Autres essences : cartes plus compactes sur ordinateur */
+@media (min-width:701px){
+  .trad-car{gap:14px}
+  .trad-photo{aspect-ratio:5/2;margin-bottom:10px}
+  .carte-trad{padding-bottom:14px}
+  .carte-trad h3{font-size:1rem;margin:0 0 4px}
+  .carte-trad p{font-size:.9rem;line-height:1.45;margin:0}
+}

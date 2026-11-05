@@ -221,6 +221,7 @@ const GALERIE_STRUCTURES = [
   ["carrelage-structure-alu-calepinage", ["Structure pour carrelage"]],
   ["ambiance-dalles-sur-plots", ["Structure pour carrelage"]],
   ["structure-lames-alu-piscine", ["Structure pour lames aluminium"]],
+  ["structure-lames-alu-restaurant-chantier", ["Structure pour lames aluminium"]],
   ["structure-lames-alu-pose", ["Structure pour lames aluminium"]],
   ["structure-lames-alu-balcon-dessous", ["Structure pour lames aluminium"]],
   ["structure-lames-alu-assemblage", ["Structure pour lames aluminium"]],

@@ -4250,5 +4250,20 @@
    598
   ],
   "ratio": 1.031
+ },
+ {
+  "cle": "structure-lames-alu-restaurant-chantier",
+  "dossier": "structures",
+  "categorie": "structure-lame-alu",
+  "alt": "Ossature métallique d'une grande terrasse de restaurant en cours de pose, avant les lames aluminium",
+  "largeurs": [
+   400,
+   600,
+   800,
+   1000,
+   1200,
+   1304
+  ],
+  "ratio": 1.7766
  }
 ]

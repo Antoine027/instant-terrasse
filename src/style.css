@@ -1780,3 +1780,11 @@ h3.h2{font-size:clamp(1.5rem,1rem + 1.2vw,2.1rem);margin:0 0 14px}
 .grille-comp .essence-photo img{background:transparent!important}
 @media (min-width:1061px){.grille-comp .essence .evol-pastilles figcaption{font-size:.62rem;letter-spacing:-.02em}}
 @media (max-width:560px){#galerie.galerie-comp .mosaique figure{height:175px;scroll-snap-align:start}.galerie-comp .mosaique{scroll-padding:0 16px}}
+/* Pages matériaux (téléphone) : fond différent entre le bloc Lyon et la FAQ */
+@media (max-width:900px){
+  .lyon-faq{gap:0}
+  .lyon-faq .faq-liste{margin:36px -16px -72px;padding:36px 16px 48px;background:var(--fond2)}
+  .lyon-faq{margin-bottom:0}
+  .bloc-alt .lyon-faq .faq-liste{background:var(--fond)}
+}
+@media (max-width:899px){.lyon-faq .faq-liste{margin-bottom:-44px}}

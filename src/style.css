@@ -1663,3 +1663,8 @@ h3.h2{font-size:clamp(1.5rem,1rem + 1.2vw,2.1rem);margin:0 0 14px}
 
 /* Essences phares (ordinateur) : la description reste visible ; seule la garantie est gardée parmi les points (pas de doublon) */
 @media (min-width:701px){.essence .puces li:not(:last-child){display:none}}
+
+/* En-tête Bois (téléphone) : introduction courte */
+@media (max-width:700px){.hero-produit .chapo .en-long{display:none}.hero-produit .chapo .en-court{display:inline}}
+/* Ordinateur : « Découvrez aussi » aligné à gauche comme les autres titres de section */
+@media (min-width:701px){.decouvrir h2{text-align:left}}

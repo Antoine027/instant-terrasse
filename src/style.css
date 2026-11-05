@@ -1765,3 +1765,17 @@ h3.h2{font-size:clamp(1.5rem,1rem + 1.2vw,2.1rem);margin:0 0 14px}
 @media (min-width:561px){.galerie-comp .mosaique{flex-wrap:nowrap}.galerie-comp .mosaique figure{flex:var(--r) 1 0;min-width:0}}
 .ossature-sombre img{aspect-ratio:1!important;object-fit:contain;background:#fff}
 @media (min-width:701px){.ossature-sombre{max-width:300px}}
+
+/* Composite (ordinateur) : cartes de lames sans description, 3 points visibles */
+@media (min-width:701px){.grille-comp .essence-texte>p{display:none}.grille-comp .essence .puces li:not(:last-child){display:list-item}}
+@media (min-width:1061px){
+  .grille-comp{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .grille-comp .essence{--bande:210px}
+  .grille-comp .essence-photo{padding:22px 8px 22px 20px}
+  .grille-comp .essence>.evol-ligne{padding:20px 20px 16px 6px}
+  .grille-comp .essence .evol-pastilles img{max-height:130px}
+  .grille-comp .essence-texte{padding:16px 22px 18px}
+  .grille-comp .essence-texte .puces li{font-size:.92rem}
+}
+.grille-comp .essence-photo img{background:transparent!important}
+@media (min-width:1061px){.grille-comp .essence .evol-pastilles figcaption{font-size:.62rem;letter-spacing:-.02em}}

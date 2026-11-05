@@ -926,19 +926,13 @@ ${heroPlein({ fil: "Terrasses", h1: ['<span class="pc-nowrap">Terrasse composite
   </div>
 </section>
 
-<section id="comparer" class="bloc">
-  <div class="conteneur conteneur-etroit">
-    <h2>Composite ou bois ?</h2>
-    <p>Le composite vise la tranquillité : une teinte stable et quasiment aucun entretien. Le <a href="/terrasse-bois-lyon/">bois</a> apporte un matériau naturel, qui vit et se patine avec le temps. Les deux se posent sur la même structure aluminium, et nous apportons les échantillons des deux lors de la visite.</p>
-  </div>
-</section>
-
-<section id="faq-comp" class="bloc bloc-alt">
+<section id="faq-comp" class="bloc">
   <div class="conteneur lyon-faq">
   <div id="lyon" class="lyon-texte">
     <h2>Votre terrasse composite à Lyon et dans sa région</h2>
     <div class="en-long"><p>Instant Terrasse est basée à Rillieux-la-Pape, au nord de Lyon. Nous venons chez vous, à Lyon et dans sa région, avec les échantillons de lames : vous comparez les teintes à la lumière de votre extérieur, et nous prenons les mesures pour votre plan 3D.</p>
-    <p>Étés chauds, hivers humides, orages : posées sur une structure aluminium ventilée, les lames composite restent droites et gardent leur teinte d'une saison à l'autre.</p></div>
+    <p>Étés chauds, hivers humides, orages : posées sur une structure aluminium ventilée, les lames composite restent droites et gardent leur teinte d'une saison à l'autre.</p>
+    <p>Vous hésitez avec le bois ? Nous apportons les échantillons des deux lors de la visite pour les comparer chez vous.</p></div>
     <p class="en-court">Depuis Rillieux-la-Pape, nous venons chez vous, à Lyon et dans sa région, avec les échantillons. Sur structure aluminium ventilée, les lames restent droites saison après saison.</p>
     <p class="lien-methode"><a href="/#methode">Découvrir notre méthode →</a></p>
   </div>
@@ -950,7 +944,6 @@ ${heroPlein({ fil: "Terrasses", h1: ['<span class="pc-nowrap">Terrasse composite
     <details class="faq"><summary>Le composite est-il écologique ?</summary><div><p>Nos lames pleine masse contiennent 75 % de fibres de bois issues de forêts gérées durablement (PEFC), sans PVC ni plastifiant. Elles sont certifiées Cradle to Cradle niveau Gold, qui évalue la santé des matériaux et leur recyclage.</p></div></details>
     <details class="faq"><summary>Peut-on remplacer une lame abîmée ?</summary><div><p>Oui. Les lames sont clipsées sur la structure, sans vis en surface : une lame se change sans démonter toute la terrasse.</p></div></details>
     <details class="faq"><summary>Quelle garantie pour une terrasse composite ?</summary><div><p>Les lames sont garanties par le fabricant, sous conditions : 15 ans pour la gamme co-extrudée (Nekko), 10 ans pour la gamme pleine masse. La structure aluminium est garantie 20 ans.</p></div></details>
-    <details class="faq"><summary>Sur quelle structure les lames sont-elles posées ?</summary><div><p>Sur des rails aluminium posés sur plots réglables, pour une terrasse plane et ventilée. Nos structures aluminium sont garanties 20 ans.</p></div></details>
   </div>
   </div>
 </section>

@@ -655,7 +655,7 @@ ${heroPlein({ fil: "Terrasses", h1: ["Terrasse aluminium", "sur mesure à Lyon"]
     <h2>Nos teintes</h2>
     <p class="chapo">Des décors bois du plus clair au plus chaud, ou un gris uni pour un style épuré. Vous voyez les échantillons en vrai, chez vous, lors du rendez-vous.</p>
     <div class="nuancier">${PHOTOS.filter((p) => p.categorie === "teinte-alu").map((p) => `<figure>${imgPhoto(p.cle, { sizes: "(max-width:560px) 45vw, 230px" })}<figcaption>${p.essence}</figcaption></figure>`).join("")}</div>
-    <p class="evol-note">Teintes indicatives : le rendu varie selon l'écran et la lumière.</p>
+    <p class="evol-note">Lames garanties 20 ans*. D'autres teintes, comme le beige, sont possibles sur mesure. Teintes indicatives.<br>*Garantie fabricant, sous conditions.</p>
   </div>
 </section>
 
@@ -702,10 +702,11 @@ ${heroPlein({ fil: "Terrasses", h1: ["Terrasse aluminium", "sur mesure à Lyon"]
   <div class="faq-liste">
     <h2>Vos questions sur l'aluminium</h2>
     <details class="faq"><summary>Comment entretenir une terrasse aluminium ?</summary><div><p>Un nettoyage à l'eau suffit. Il n'y a aucun traitement à refaire : ni saturateur, ni ponçage, ni lasure.</p></div></details>
+    <details class="faq"><summary>Une terrasse aluminium chauffe-t-elle au soleil ?</summary><div><p>L'aluminium conduit très bien la chaleur : elle se dissipe au lieu de s'accumuler en surface. D'après le fabricant, la lame reste ainsi agréable sous le pied en plein soleil, et vous pouvez marcher dessus pieds nus l'été.</p></div></details>
     <details class="faq"><summary>Les lames peuvent-elles se déformer ?</summary><div><p>Non. L'aluminium ne gonfle pas avec l'humidité : pas de fente, pas de vrillage, pas d'écharde. Les lames restent droites dans le temps.</p></div></details>
     <details class="faq"><summary>Est-ce adapté autour d'une piscine ?</summary><div><p>Oui. L'aluminium ne craint ni l'eau, ni les champignons, ni les insectes, et la surface reste saine au contact de l'eau, sans risque d'écharde pieds nus.</p></div></details>
     <details class="faq"><summary>Peut-on garder l'accès sous la terrasse ?</summary><div><p>Oui. Des trappes de visite peuvent être intégrées pour accéder à un regard, à un local technique ou à une vanne, sans démonter la terrasse.</p></div></details>
-    <details class="faq"><summary>Sur quelle structure les lames sont-elles posées ?</summary><div><p>Sur une ossature en aluminium posée sur plots réglables, pour une terrasse parfaitement plane. Nos structures aluminium sont garanties 20 ans.</p></div></details>
+    <details class="faq"><summary>Quelle garantie pour une terrasse aluminium ?</summary><div><p>Les lames sont garanties 20 ans par le fabricant, sous conditions. Elles sont posées sur une ossature aluminium et plots réglables, elle aussi garantie 20 ans.</p></div></details>
   </div>
   </div>
 </section>

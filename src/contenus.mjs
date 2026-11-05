@@ -174,7 +174,6 @@ ${heroPlein({ fil: "Terrasses", h1: ["Terrasse bois", "sur mesure à Lyon"], kic
     <details class="faq"><summary>Le bois va-t-il changer de couleur ?</summary><div><p>Oui : au soleil et à la pluie, le bois prend une patine grise. C'est naturel et ce n'est pas un défaut. Les pastilles de chaque essence, plus haut sur cette page, montrent cette évolution. Un saturateur limite ce changement et garde une teinte très proche de celle d'origine.</p></div></details>
     <details class="faq"><summary>Une terrasse en bois est-elle glissante ?</summary><div><p>Le bois offre naturellement une très bonne résistance à la glissance. Mais sur une terrasse mouillée, la fine couche noire de saleté qui se dépose avec le temps (pollution, végétation) peut rendre la surface glissante. D'où l'importance d'un nettoyage régulier.</p></div></details>
     <details class="faq"><summary>Vos bois font-ils des échardes ?</summary><div><p>Non. Avec le temps, des gerces (petites fentes dans le sens du bois) peuvent apparaître, car le bois reste un matériau naturel. Une gerce ne rend pas la lame impropre à l'utilisation. Seul un relevé de fibres impose de changer la lame concernée. C'est pour limiter ces phénomènes que nous sélectionnons des bois très stables.</p></div></details>
-    <details class="faq"><summary>Qui pose la terrasse ?</summary><div><p>${POSE}</p></div></details>
   </div>
   </div>
 </section>

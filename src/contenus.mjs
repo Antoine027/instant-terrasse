@@ -633,8 +633,8 @@ const gardeCorps = {
 };
 
 // ---------- Terrasse en lames aluminium ----------
-// Galerie Lames aluminium : 9 premières photos de « Tout voir » = les plus belles, teintes mélangées, 3 lignes complètes (demande d'Antoine, 05/11/2026).
-const ORDRE_GALERIE_ALU = ["alu-piscine-aspect-teck", "alu-piscine-carbet", "alu-piscine-blanche-vue", "alu-piscine-jardin-tropical", "alu-piscine-debordement-mer", "alu-restaurant-vue-mer", "alu-piscine-haricot", "alu-terrasse-vue-mer", "alu-piscine-debordement-baie"];
+// Galerie Lames aluminium : 12 premières photos de « Tout voir » = les plus belles, teintes mélangées, disposition proche de la galerie Bois (demande d'Antoine, 05/11/2026).
+const ORDRE_GALERIE_ALU = ["alu-piscine-aspect-teck", "alu-piscine-carbet", "alu-piscine-blanche-vue", "alu-restaurant-canal-vignes", "alu-restaurant-vue-mer", "alu-piscine-haricot", "alu-piscine-maison-creole", "alu-pontons-lac", "alu-piscine-grise", "alu-terrasse-salon-parasol", "alu-piscine-debordement-mer", "alu-piscine-toit-terrasse"];
 
 // Ordre du nuancier de la page Lames aluminium (demande d'Antoine, 05/11/2026).
 const ORDRE_TEINTES_ALU = ["Simili bois", "Teck", "Teck vieilli", "Bois de grange", "Blanc veiné", "Gris uni"];
@@ -680,7 +680,7 @@ ${heroPlein({ fil: "Terrasses", h1: ['<span class="pc-nowrap">Terrasse aluminium
 
 <section id="galerie" class="bloc galerie-alu">
   <div class="conteneur">
-    ${galerie("terrasse-aluminium", { titre: "Nos terrasses aluminium en situation", intro: "Choisissez une teinte pour voir son rendu en terrasse.", legende: "Illustrations", nuances: "teinte-alu", limite: 9, ordre: ORDRE_GALERIE_ALU })}
+    ${galerie("terrasse-aluminium", { titre: "Nos terrasses aluminium en situation", intro: "Choisissez une teinte pour voir son rendu en terrasse.", legende: "Illustrations", nuances: "teinte-alu", limite: 12, ordre: ORDRE_GALERIE_ALU })}
   </div>
 </section>
 

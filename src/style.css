@@ -1761,3 +1761,5 @@ h3.h2{font-size:clamp(1.5rem,1rem + 1.2vw,2.1rem);margin:0 0 14px}
 @media (max-width:700px){.nuancier-comp{grid-template-columns:repeat(3,minmax(0,1fr))}.evol-comp small{font-size:.52rem;letter-spacing:-.01em}}
 .nuancier-comp figure img{object-fit:contain;background:#fff;padding:6px;box-sizing:border-box}
 .nuancier-comp figure img{aspect-ratio:4/3}
+/* Galerie composite : les 4 photos sur une seule ligne (photos peu définies, jamais en grand) */
+@media (min-width:561px){.galerie-comp .mosaique{flex-wrap:nowrap}.galerie-comp .mosaique figure{flex:var(--r) 1 0;min-width:0}}

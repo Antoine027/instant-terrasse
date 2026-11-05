@@ -56,7 +56,7 @@ const essencesAlu = [
   {
     nom: "Bambou X-treme", evol: ["bambou-xtreme", ["À la pose", "6 mois", "2 ans"]], photo: ["bambou-xtreme-lame-2", "Lame de terrasse en bambou X-treme brun foncé", 338],
     texte: "Des fibres de bambou densifiées et traitées pour en faire des lames très dures. Le X-treme est brun foncé, avec une surface finement texturée. Le bambou repousse en quelques années.",
-    points: ["Très dur et dense", "Brun foncé", "Ressource qui repousse vite", "Garantie fabricant 25 ans*"],
+    points: ["Bambou compressé et thermo-traité", "Très dur et dense", "Garantie fabricant 25 ans*"],
   },
   {
     nom: "Bambou N-Durance", evol: ["bambou-ndurance", ["À la pose", "3 ans"]], photo: ["bambou-ndurance-lame-2", "Lame de terrasse en bambou N-Durance brun-rouge", 267],

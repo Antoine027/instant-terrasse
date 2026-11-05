@@ -217,6 +217,8 @@ const GALERIE_STRUCTURES = [
   ["structure-traditionnelle-plot-lambourde", ["Structure pour bois et composite"]],
   ["carrelage-structure-aluminium-schema", ["Structure pour carrelage"]],
   ["carrelage-plots-schema", ["Structure pour carrelage"]],
+  ["carrelage-structure-alu-rails-plots", ["Structure pour carrelage"]],
+  ["carrelage-structure-alu-calepinage", ["Structure pour carrelage"]],
   ["rail-carrelage-alu-standard", ["Structure pour carrelage"]],
   ["rail-carrelage-alu-haut", ["Structure pour carrelage"]],
   ["rail-carrelage-alu-bas", ["Structure pour carrelage"]],

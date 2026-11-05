@@ -4270,5 +4270,33 @@
    1707
   ],
   "ratio": 0.6668
+ },
+ {
+  "cle": "carrelage-structure-alu-rails-plots",
+  "dossier": "structures",
+  "categorie": "structure-alu",
+  "alt": "Structure aluminium pour carrelage : rails sur plots réglables, dalle de grès cérame posée",
+  "largeurs": [
+   400,
+   600,
+   800,
+   1000,
+   1200,
+   1400,
+   1600,
+   1688
+  ],
+  "ratio": 1.8112
+ },
+ {
+  "cle": "carrelage-structure-alu-calepinage",
+  "dossier": "structures",
+  "categorie": "structure-alu",
+  "alt": "Vue de dessus d'une terrasse carrelage sur structure aluminium, dalles de plusieurs formats",
+  "largeurs": [
+   400,
+   598
+  ],
+  "ratio": 1.031
  }
 ]

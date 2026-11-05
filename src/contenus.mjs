@@ -468,7 +468,7 @@ ${cta("Un projet de bardage ?")}`,
 };
 
 // ---------- Gabarit de page produit (pergolas, etc.) ----------
-const pageProduit = ({ typesGalerie, extra = "", introGalerie = "", fil, h1, kicker, position, chapo, photo, atouts, galerieCat, titreGalerie, details, voisins, ctaTitre, complement = "Une pergola se pense avec la terrasse qu'elle couvre : hauteurs, fixations, écoulement des eaux. Nous pouvons étudier les deux ensemble.", titreVoisins = "Les autres solutions" }) => `
+const pageProduit = ({ typesGalerie, nuancesGalerie, extra = "", introGalerie = "", fil, h1, kicker, position, chapo, photo, atouts, galerieCat, titreGalerie, details, voisins, ctaTitre, complement = "Une pergola se pense avec la terrasse qu'elle couvre : hauteurs, fixations, écoulement des eaux. Nous pouvons étudier les deux ensemble.", titreVoisins = "Les autres solutions" }) => `
 ${heroPlein({ fil, h1, kicker, chapo, photo, position })}
 
 <section class="bloc bloc-alt">
@@ -480,7 +480,7 @@ ${heroPlein({ fil, h1, kicker, chapo, photo, position })}
 ${extra}
 ${galerieCat ? `<section id="galerie" class="bloc">
   <div class="conteneur">
-    ${galerie(galerieCat, { titre: titreGalerie, intro: introGalerie, legende: "Illustrations", types: typesGalerie })}
+    ${galerie(galerieCat, { titre: titreGalerie, intro: introGalerie, legende: "Illustrations", types: typesGalerie, nuances: nuancesGalerie })}
   </div>
 </section>` : ""}
 
@@ -653,6 +653,7 @@ const terrasseAluminium = {
 </section>`,
     galerieCat: "terrasse-aluminium",
     titreGalerie: "Terrasses en lames aluminium en situation",
+    nuancesGalerie: "teinte-alu",
     introGalerie: "Filtrez par teinte.",
     details: `<h2>Pour quels projets ?</h2>
       <p>Plages de piscine, balcons, toits-terrasses, escaliers extérieurs, terrasses de restaurants : la lame aluminium convient partout où l'on veut une terrasse durable et facile à vivre. Des trappes de visite peuvent être intégrées pour garder l'accès à un regard ou à un local technique.</p>

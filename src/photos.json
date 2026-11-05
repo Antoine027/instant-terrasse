@@ -2130,7 +2130,7 @@
   "cle": "alu-restaurant-vue-mer",
   "dossier": "aluminium",
   "categorie": "terrasse-aluminium",
-  "essence": "Blanc veiné",
+  "essence": "Beige",
   "alt": "Terrasse de restaurant en lames aluminium beige face à la mer",
   "largeurs": [
    400,
@@ -2147,7 +2147,7 @@
   "cle": "alu-restaurant-salle",
   "dossier": "aluminium",
   "categorie": "terrasse-aluminium",
-  "essence": "Blanc veiné",
+  "essence": "Teck vieilli",
   "alt": "Salle de restaurant en terrasse, plancher en lames aluminium gris",
   "largeurs": [
    400,
@@ -3703,7 +3703,7 @@
   "cle": "alu-piscine-blanche-vue",
   "dossier": "aluminium",
   "categorie": "terrasse-aluminium",
-  "essence": "Blanc veiné",
+  "essence": "Gris uni",
   "alt": "Plage de piscine à débordement en lames aluminium claires, vue sur la baie",
   "largeurs": [
    400,

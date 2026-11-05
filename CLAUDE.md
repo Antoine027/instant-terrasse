@@ -28,7 +28,7 @@ Remplaçant du site WordPress/Elementor instantterrasse.com. Générateur Node s
 - Essences de bois (liste d'Antoine, 21/10/2026) :
   - Sur structure aluminium : thermopin, bambou moso X-treme, bambou moso N-Durance, thermofrêne, accoya naturel, accoya gris, kebony.
   - Sur structure traditionnelle, selon disponibilité : pin, mélèze, garapa, ipé, cumaru, itauba, jatoba, douglas, muiracatiara (tigerwood, ajouté le 28/10/2026).
-- Teintes des lames aluminium (25/10/2026) : blanc veiné, teck vieilli, gris uni, simili bois (« simili bis » dans le message, à confirmer), bois de grange, teck.
+- Teintes des lames aluminium (25/10/2026) : blanc veiné, teck vieilli, gris uni, simili bois (« simili bis » dans le message, à confirmer), bois de grange, teck ; beige ajouté le 05/11/2026 (pas encore d'échantillon). Dans la galerie Lames aluminium, l'échantillon de chaque teinte (catégorie teinte-alu) s'affiche en tête de son filtre, pas dans « Tout voir ».
 - Vocabulaire des essences (04/11/2026) : produit phare = terrasse sur structure aluminium avec thermofrêne, kebony, thermopin, accoya, bambou (« nos essences phares ») ; ces essences sont aussi possibles sur structure traditionnelle, qui accueille en plus pin, mélèze, douglas, ipé, cumaru… (« d'autres essences »). Ne pas écrire « bois modifiés et bambou » ni « bois massifs et exotiques » comme catégories : toutes ces essences sont des bois massifs.
 - Bardage bois (21/10/2026) : accoya gris, accoya naturel, kebony, bambou moso X-treme, thermofrêne, thermopin clear (sans nœuds), thermo épicéa.
 - Les photos des essences en lames de terrasse ne doivent pas illustrer le bardage (produits différents) : attendre les photos de bardage.

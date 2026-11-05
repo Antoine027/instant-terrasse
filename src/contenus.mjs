@@ -157,16 +157,14 @@ ${heroPlein({ fil: "Terrasses", h1: ["Terrasse bois", "sur mesure à Lyon"], kic
   </div>
 </section>
 
-<section id="lyon" class="bloc">
-  <div class="conteneur conteneur-etroit">
+<section id="faq-bois" class="bloc">
+  <div class="conteneur lyon-faq">
+  <div id="lyon" class="lyon-texte">
     <h2>Votre terrasse bois à Lyon et dans sa région</h2>
     <p>Instant Terrasse est basée à Rillieux-la-Pape, au nord de Lyon. Nous venons chez vous, à Lyon et dans sa région, avec les échantillons de bois : vous les comparez à la lumière de votre extérieur, à côté de votre façade, et nous prenons les mesures pour votre plan 3D.</p>
     <p>Étés chauds, hivers humides, orages : une terrasse lyonnaise passe par tous les temps. C'est pour cela que nous sélectionnons des bois très stables, et que nous privilégions une structure aluminium qui laisse l'air circuler sous les lames.</p>
   </div>
-</section>
-
-<section id="faq-bois" class="bloc bloc-alt">
-  <div class="conteneur"><div class="faq-liste">
+  <div class="faq-liste">
     <h2>Vos questions sur le bois</h2>
     <details class="faq"><summary>Comment entretenir une terrasse en bois ?</summary><div><p>Nous conseillons un nettoyage au minimum deux fois par an, et plus souvent à l'ombre et sous les arbres, où la saleté s'accumule le plus. Il existe des nettoyeurs spécifiques pour terrasses, bien plus pratiques qu'un balai-brosse. Le nettoyeur haute pression est en revanche fortement déconseillé : il abîme les fibres du bois.</p></div></details>
     <details class="faq"><summary>Un saturateur est-il obligatoire ?</summary><div><p>Pas pour le thermofrêne, le thermopin, le kebony et l'accoya. Il est en revanche conseillé pour le bambou. Dans tous les cas, le saturateur aide le bois à garder une teinte proche de celle d'origine.</p></div></details>
@@ -174,7 +172,8 @@ ${heroPlein({ fil: "Terrasses", h1: ["Terrasse bois", "sur mesure à Lyon"], kic
     <details class="faq"><summary>Une terrasse en bois est-elle glissante ?</summary><div><p>Le bois offre naturellement une très bonne résistance à la glissance. Mais sur une terrasse mouillée, la fine couche noire de saleté qui se dépose avec le temps (pollution, végétation) peut rendre la surface glissante. D'où l'importance d'un nettoyage régulier.</p></div></details>
     <details class="faq"><summary>Vos bois font-ils des échardes ?</summary><div><p>Non. Avec le temps, des gerces (petites fentes dans le sens du bois) peuvent apparaître, car le bois reste un matériau naturel. Une gerce ne rend pas la lame impropre à l'utilisation. Seul un relevé de fibres impose de changer la lame concernée. C'est pour limiter ces phénomènes que nous sélectionnons des bois très stables.</p></div></details>
     <details class="faq"><summary>Qui pose la terrasse ?</summary><div><p>${POSE}</p></div></details>
-  </div></div>
+  </div>
+  </div>
 </section>
 ${cta()}`,
 };

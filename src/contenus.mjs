@@ -40,7 +40,7 @@ const essencesAlu = [
   {
     nom: "Kebony", evol: ["kebony", ["À la pose", "6 mois", "1 an"]], photo: ["kebony", "Lame de terrasse en Kebony, teinte brune", 402],
     texte: "Un bois résineux modifié par un procédé d'origine végétale qui renforce durablement ses fibres. Brun profond à la pose, il évolue vers un gris argenté homogène.",
-    points: ["Procédé d'origine végétale", "Bois très durable", "Patine gris argenté"],
+    points: ["Traitement par injection d'origine végétale", "Bois très durable", "Patine gris argenté"],
   },
   {
     nom: "Thermopin", evol: ["thermopin", ["À la pose", "6 mois", "1 an"]], photo: ["thermopin", "Lame de terrasse en thermopin, teinte miel avec nœuds apparents", 378],

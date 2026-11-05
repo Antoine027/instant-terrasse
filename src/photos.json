@@ -4300,5 +4300,22 @@
    1837
   ],
   "ratio": 1.3312
+ },
+ {
+  "cle": "composite-brun-deck-bassin",
+  "dossier": "composite",
+  "categorie": "terrasse-composite",
+  "alt": "Deck en lames composite brunes au bord d'un bassin, feuilles d'automne",
+  "largeurs": [
+   400,
+   600,
+   800,
+   1000,
+   1200,
+   1400,
+   1600,
+   1718
+  ],
+  "ratio": 1.3115
  }
 ]

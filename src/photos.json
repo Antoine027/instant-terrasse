@@ -4317,5 +4317,378 @@
    1718
   ],
   "ratio": 1.3115
+ },
+ {
+  "cle": "teinte-carrelage-pierre-01",
+  "dossier": "carrelage",
+  "categorie": "teinte-carrelage",
+  "essence": "Aspect pierre",
+  "alt": "Dalle de grès cérame aspect pierre, teinte crème",
+  "credit": "Rondine",
+  "largeurs": [
+   400,
+   600,
+   800
+  ],
+  "ratio": 0.5
+ },
+ {
+  "cle": "teinte-carrelage-pierre-02",
+  "dossier": "carrelage",
+  "categorie": "teinte-carrelage",
+  "essence": "Aspect pierre",
+  "alt": "Dalle de grès cérame aspect pierre, teinte blanc",
+  "credit": "Rondine",
+  "largeurs": [
+   400,
+   600,
+   800,
+   1000,
+   1200,
+   1400,
+   1600
+  ],
+  "ratio": 1.0
+ },
+ {
+  "cle": "teinte-carrelage-pierre-03",
+  "dossier": "carrelage",
+  "categorie": "teinte-carrelage",
+  "essence": "Aspect pierre",
+  "alt": "Dalle de grès cérame aspect pierre, teinte blanc cassé",
+  "credit": "Rondine",
+  "largeurs": [
+   400,
+   600,
+   800,
+   1000,
+   1200,
+   1400,
+   1600
+  ],
+  "ratio": 1.0
+ },
+ {
+  "cle": "teinte-carrelage-pierre-04",
+  "dossier": "carrelage",
+  "categorie": "teinte-carrelage",
+  "essence": "Aspect pierre",
+  "alt": "Dalle de grès cérame aspect pierre, teinte gris très clair",
+  "credit": "Rondine",
+  "largeurs": [
+   400,
+   600,
+   800
+  ],
+  "ratio": 0.5
+ },
+ {
+  "cle": "teinte-carrelage-pierre-05",
+  "dossier": "carrelage",
+  "categorie": "teinte-carrelage",
+  "essence": "Aspect pierre",
+  "alt": "Dalle de grès cérame aspect pierre, teinte travertin clair",
+  "credit": "Novoceram",
+  "largeurs": [
+   400,
+   600,
+   650
+  ],
+  "ratio": 1.0
+ },
+ {
+  "cle": "teinte-carrelage-pierre-06",
+  "dossier": "carrelage",
+  "categorie": "teinte-carrelage",
+  "essence": "Aspect pierre",
+  "alt": "Dalle de grès cérame aspect pierre, teinte sable",
+  "credit": "Novoceram",
+  "largeurs": [
+   400,
+   600,
+   650
+  ],
+  "ratio": 0.9954
+ },
+ {
+  "cle": "teinte-carrelage-pierre-07",
+  "dossier": "carrelage",
+  "categorie": "teinte-carrelage",
+  "essence": "Aspect pierre",
+  "alt": "Dalle de grès cérame aspect pierre, teinte beige",
+  "credit": "Rondine",
+  "largeurs": [
+   400
+  ],
+  "ratio": 0.3333
+ },
+ {
+  "cle": "teinte-carrelage-pierre-08",
+  "dossier": "carrelage",
+  "categorie": "teinte-carrelage",
+  "essence": "Aspect pierre",
+  "alt": "Dalle de grès cérame aspect pierre, teinte beige nuancé",
+  "credit": "Rondine",
+  "largeurs": [
+   400,
+   600,
+   800
+  ],
+  "ratio": 0.5
+ },
+ {
+  "cle": "teinte-carrelage-pierre-09",
+  "dossier": "carrelage",
+  "categorie": "teinte-carrelage",
+  "essence": "Aspect pierre",
+  "alt": "Dalle de grès cérame aspect pierre, teinte travertin noisette",
+  "credit": "Novoceram",
+  "largeurs": [
+   400,
+   600,
+   650
+  ],
+  "ratio": 1.0
+ },
+ {
+  "cle": "teinte-carrelage-pierre-10",
+  "dossier": "carrelage",
+  "categorie": "teinte-carrelage",
+  "essence": "Aspect pierre",
+  "alt": "Dalle de grès cérame aspect pierre, teinte gris clair",
+  "credit": "Rondine",
+  "largeurs": [
+   400,
+   600,
+   800
+  ],
+  "ratio": 0.5
+ },
+ {
+  "cle": "teinte-carrelage-pierre-11",
+  "dossier": "carrelage",
+  "categorie": "teinte-carrelage",
+  "essence": "Aspect pierre",
+  "alt": "Dalle de grès cérame aspect pierre, teinte grège",
+  "credit": "Rondine",
+  "largeurs": [
+   400,
+   600,
+   800,
+   1000,
+   1200,
+   1400,
+   1600
+  ],
+  "ratio": 1.0
+ },
+ {
+  "cle": "teinte-carrelage-pierre-12",
+  "dossier": "carrelage",
+  "categorie": "teinte-carrelage",
+  "essence": "Aspect pierre",
+  "alt": "Dalle de grès cérame aspect pierre, teinte gris",
+  "credit": "Rondine",
+  "largeurs": [
+   400,
+   600,
+   800,
+   1000,
+   1200,
+   1400,
+   1600
+  ],
+  "ratio": 1.0
+ },
+ {
+  "cle": "teinte-carrelage-pierre-13",
+  "dossier": "carrelage",
+  "categorie": "teinte-carrelage",
+  "essence": "Aspect pierre",
+  "alt": "Dalle de grès cérame aspect pierre, teinte gris perle",
+  "credit": "Rondine",
+  "largeurs": [
+   400
+  ],
+  "ratio": 0.3333
+ },
+ {
+  "cle": "teinte-carrelage-pierre-14",
+  "dossier": "carrelage",
+  "categorie": "teinte-carrelage",
+  "essence": "Aspect pierre",
+  "alt": "Dalle de grès cérame aspect pierre, teinte gris taupe",
+  "credit": "Novoceram",
+  "largeurs": [
+   400,
+   600,
+   650
+  ],
+  "ratio": 0.9954
+ },
+ {
+  "cle": "teinte-carrelage-pierre-15",
+  "dossier": "carrelage",
+  "categorie": "teinte-carrelage",
+  "essence": "Aspect pierre",
+  "alt": "Dalle de grès cérame aspect pierre, teinte taupe",
+  "credit": "Rondine",
+  "largeurs": [
+   400,
+   600,
+   800
+  ],
+  "ratio": 0.5
+ },
+ {
+  "cle": "teinte-carrelage-pierre-16",
+  "dossier": "carrelage",
+  "categorie": "teinte-carrelage",
+  "essence": "Aspect pierre",
+  "alt": "Dalle de grès cérame aspect pierre, teinte taupe ardoise",
+  "credit": "Rondine",
+  "largeurs": [
+   400,
+   600,
+   800,
+   1000,
+   1200,
+   1400,
+   1600
+  ],
+  "ratio": 1.0
+ },
+ {
+  "cle": "teinte-carrelage-pierre-17",
+  "dossier": "carrelage",
+  "categorie": "teinte-carrelage",
+  "essence": "Aspect pierre",
+  "alt": "Dalle de grès cérame aspect pierre, teinte brun rouille",
+  "credit": "Rondine",
+  "largeurs": [
+   400
+  ],
+  "ratio": 0.3333
+ },
+ {
+  "cle": "teinte-carrelage-pierre-18",
+  "dossier": "carrelage",
+  "categorie": "teinte-carrelage",
+  "essence": "Aspect pierre",
+  "alt": "Dalle de grès cérame aspect pierre, teinte gris nuancé",
+  "credit": "Rondine",
+  "largeurs": [
+   400
+  ],
+  "ratio": 0.3333
+ },
+ {
+  "cle": "teinte-carrelage-pierre-19",
+  "dossier": "carrelage",
+  "categorie": "teinte-carrelage",
+  "essence": "Aspect pierre",
+  "alt": "Dalle de grès cérame aspect pierre, teinte gris foncé",
+  "credit": "Rondine",
+  "largeurs": [
+   400,
+   600,
+   800,
+   1000,
+   1200,
+   1400,
+   1600
+  ],
+  "ratio": 1.0
+ },
+ {
+  "cle": "teinte-carrelage-pierre-20",
+  "dossier": "carrelage",
+  "categorie": "teinte-carrelage",
+  "essence": "Aspect pierre",
+  "alt": "Dalle de grès cérame aspect pierre, teinte gris ardoise",
+  "credit": "Novoceram",
+  "largeurs": [
+   400,
+   600,
+   650
+  ],
+  "ratio": 0.9954
+ },
+ {
+  "cle": "teinte-carrelage-pierre-21",
+  "dossier": "carrelage",
+  "categorie": "teinte-carrelage",
+  "essence": "Aspect pierre",
+  "alt": "Dalle de grès cérame aspect pierre, teinte anthracite",
+  "credit": "Rondine",
+  "largeurs": [
+   400
+  ],
+  "ratio": 0.3333
+ },
+ {
+  "cle": "teinte-carrelage-bois-01",
+  "dossier": "carrelage",
+  "categorie": "teinte-carrelage",
+  "essence": "Aspect bois",
+  "alt": "Dalle de grès cérame aspect bois, teinte gris clair",
+  "credit": "Rondine",
+  "largeurs": [
+   400,
+   533
+  ],
+  "ratio": 0.3331
+ },
+ {
+  "cle": "teinte-carrelage-bois-02",
+  "dossier": "carrelage",
+  "categorie": "teinte-carrelage",
+  "essence": "Aspect bois",
+  "alt": "Dalle de grès cérame aspect bois, teinte beige",
+  "credit": "Rondine",
+  "largeurs": [
+   400,
+   533
+  ],
+  "ratio": 0.3331
+ },
+ {
+  "cle": "teinte-carrelage-bois-03",
+  "dossier": "carrelage",
+  "categorie": "teinte-carrelage",
+  "essence": "Aspect bois",
+  "alt": "Dalle de grès cérame aspect bois, teinte miel",
+  "credit": "Rondine",
+  "largeurs": [
+   400,
+   533
+  ],
+  "ratio": 0.3331
+ },
+ {
+  "cle": "teinte-carrelage-bois-04",
+  "dossier": "carrelage",
+  "categorie": "teinte-carrelage",
+  "essence": "Aspect bois",
+  "alt": "Dalle de grès cérame aspect bois, teinte grège",
+  "credit": "Rondine",
+  "largeurs": [
+   400,
+   533
+  ],
+  "ratio": 0.3331
+ },
+ {
+  "cle": "teinte-carrelage-bois-05",
+  "dossier": "carrelage",
+  "categorie": "teinte-carrelage",
+  "essence": "Aspect bois",
+  "alt": "Dalle de grès cérame aspect bois, teinte brun",
+  "credit": "Rondine",
+  "largeurs": [
+   400,
+   533
+  ],
+  "ratio": 0.3331
  }
 ]

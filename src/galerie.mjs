@@ -15,7 +15,7 @@ const CREDITS = {
   "bardage-bois": "Grad", "bardage-aluminium": "Grad", "bardage-pose": "Grad", "lame-bardage": "Grad",
   "terrasse-bois": "Grad", "terrasse-composite": "Grad", "terrasse-aluminium": "Aludeck", "terrasse-carrelage": "Grad",
   "structure-alu": "Grad", schema: "Grad", "structure-trad": null, "lame-trad": null, // schéma créé par Antoine : pas de crédit
-  "teinte-alu": "Aludeck", "structure-lame-alu": "Aludeck", "teinte-composite": "Grad", ambiance: "Grad", pilotis: "Grad", "pilotis-hero": "Grad", restaurant: "Grad", accueil: "Grad",
+  "teinte-carrelage": "Rondine", "teinte-alu": "Aludeck", "structure-lame-alu": "Aludeck", "teinte-composite": "Grad", ambiance: "Grad", pilotis: "Grad", "pilotis-hero": "Grad", restaurant: "Grad", accueil: "Grad",
   portrait: null, // photo d'Antoine : pas de crédit fournisseur
 };
 // Une photo peut porter son propre crédit (champ « credit » du manifeste), qui remplace celui de sa catégorie.

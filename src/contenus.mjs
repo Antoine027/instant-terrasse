@@ -731,72 +731,87 @@ ${cta("Un projet de terrasse aluminium ?", "Laissez votre numéro : nous vous ra
 };
 
 // ---------- Terrasse carrelage ----------
+// Dalles de grès cérame (Antoine, 05/11/2026) : 2 cm, très large choix de références (exemples ci-dessous), pas de garantie affichée sur les dalles.
+// Visuels : ©Rondine, sauf 5 aspect pierre ©Novoceram (champ credit du manifeste).
+const FORMATS_CARR = [[60, 60], [80, 80], [90, 90], [100, 100], [120, 120], [60, 120], [40, 120]];
+const GALERIE_CARR = ["carrelage-toit-terrasse-montagnes", "carrelage-bh-aspect-bois-gris-vue", "carrelage-bh-pergola-cour", "carrelage-aspect-bois-garde-corps-feuilles", "carrelage-bh-aspect-bois-clair-pergola", "carrelage-gris-garde-corps-verre-depoli", "carrelage-bh-aspect-bois-gris-jardin", "carrelage-beige-pergola-toit-fixe", "carrelage-bh-aspect-bois-clair-transats", "carrelage-bh-sureleve-gazon", "carrelage-bh-aspect-bois-gris-table", "carrelage-bh-pergola-salon"];
+const nuancierCarr = (aspect, classe, sizes) => `<div class="nuancier nuancier-carr ${classe}" data-galerie>${PHOTOS.filter((p) => p.categorie === "teinte-carrelage" && p.essence === aspect).sort((a, b) => a.cle.localeCompare(b.cle)).map((p) => `<figure tabindex="0" aria-label="Agrandir : ${p.alt}">${imgPhoto(p.cle, { sizes })}</figure>`).join("")}</div>`;
+
 const terrasseCarrelage = {
-  title: "Terrasse carrelage Lyon : grès cérame sur plots | Instant Terrasse",
-  description: "Terrasse en carrelage grès cérame sur mesure à Lyon : pose sans colle sur plots ou sur structure aluminium, grands formats, mélange bois et carrelage. Devis gratuit.",
+  title: "Terrasse carrelage Lyon : grès cérame 2 cm sur plots | Instant Terrasse",
+  description: "Terrasse en carrelage sur mesure à Lyon : dalles de grès cérame 2 cm aspect pierre ou bois, posées à sec sur plots ou sur structure aluminium, du 60 × 60 au 120 × 120. Devis gratuit.",
   corps: `
-${heroPlein({ fil: "Terrasses", h1: ["Terrasse en carrelage", "grès cérame"], kicker: "Terrasses sur mesure à Lyon et dans sa région",
-  chapo: "Des dalles de grès cérame épaisses, posées à sec sur plots ou sur une structure aluminium : ni colle, ni joint, ni dalle béton à couler. Une terrasse minérale, facile à vivre et démontable dalle par dalle.",
-  photo: "carrelage-toit-terrasse-montagnes", position: "50% 60%",
-  actions: `<a class="bouton" href="/contact/">Demander une visite gratuite</a> <a class="bouton bouton-blanc" href="/structure-terrasse-lyon/#comparatif-carrelage">Plots ou structure ?</a>` })}
+${heroPlein({ fil: "Terrasses", h1: ['<span class="pc-nowrap">Terrasse carrelage</span>', 'sur mesure <span class="lyon-l">à Lyon</span>'], kicker: "Terrasses carrelage à Lyon et dans sa région", photo: "carrelage-bh-grand-format-baie", position: "60% 60%",
+  chapo: `<span class="en-long">Des dalles de grès cérame de 2 cm, posées à sec sur plots ou sur notre structure aluminium : ni colle, ni joint, ni dalle béton à couler. Aspect pierre ou bois, jusqu'au 120 × 120.</span><span class="en-court">Grès cérame de 2 cm posé à sec, sans colle ni dalle béton : aspect pierre ou bois, jusqu'au 120 × 120.</span>`,
+  actions: `<a class="bouton" href="/contact/">Demander une visite gratuite</a> <a class="bouton bouton-blanc" href="#teintes">Voir les teintes</a>` })}
 
-<section id="galerie" class="bloc">
+<section id="teintes" class="bloc">
   <div class="conteneur">
-    ${galerie("terrasse-carrelage", { titre: "Terrasses carrelage en situation", legende: "Illustrations" })}
+    <p class="sous-titre">Aspect pierre ou aspect bois</p>
+    <h2>Nos dalles en grès cérame</h2>
+    <p class="chapo">Quelques teintes parmi un très large choix de références : si vous cherchez un aspect ou une couleur précise, nous la trouvons. Vous voyez les échantillons chez vous, lors du rendez-vous.</p>
+    <h3 class="nuancier-titre">Aspect pierre</h3>
+    ${nuancierCarr("Aspect pierre", "nuancier-pierre", "(max-width:700px) 28vw, 150px")}
+    <h3 class="nuancier-titre">Aspect bois</h3>
+    ${nuancierCarr("Aspect bois", "nuancier-bois", "(max-width:700px) 18vw, 150px")}
+    <h3 class="nuancier-titre">7 formats, 2 cm d'épaisseur</h3>
+    <div class="formats-carr" role="list">${FORMATS_CARR.map(([l, h]) => `<div class="fmt" role="listitem"><span class="fmt-dalle" style="--l:${l};--h:${h}"></span><span class="fmt-nom">${l} × ${h}</span></div>`).join("")}</div>
+    <p class="evol-note">Teintes indicatives. Dessins des formats à l'échelle.</p>
   </div>
 </section>
 
-<section class="bloc bloc-alt">
+<section id="atouts" class="bloc bloc-alt">
   <div class="conteneur">
-    <h2>Pourquoi le grès cérame en extérieur</h2>
-    <div class="grille grille-3">
-      <div class="carte"><h3>Rien ne l'atteint</h3><p>Il résiste aux taches, à l'humidité et aux écarts de température. Un repas renversé ou un barbecue ne laissent pas de trace.</p></div>
-      <div class="carte"><h3>Entretien minimal</h3><p>Un coup de balai et de l'eau. Pas de saturateur, pas de ponçage, pas de traitement.</p></div>
-      <div class="carte"><h3>Tous les styles</h3><p>Aspect pierre, béton ou bois, du très clair au très foncé, pour suivre votre intérieur jusque dans le jardin.</p></div>
+    <h2>Les atouts du grès cérame</h2>
+    <div class="grille grille-3 atouts-car">
+      <div class="carte atout-carte"><span class="atout-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg></span><h3>Rien ne l'atteint</h3><p>Taches, humidité, écarts de température : un repas renversé ou un barbecue ne laissent pas de trace.</p></div>
+      <div class="carte atout-carte"><span class="atout-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11z"/></svg></span><h3>Entretien minimal</h3><p>Un coup de balai et de l'eau. Ni saturateur, ni ponçage, ni traitement.</p></div>
+      <div class="carte atout-carte"><span class="atout-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7h18v5H3z"/><path d="M6 12v6M18 12v6M4 18h4M16 18h4"/></svg></span><h3>Posé à sec</h3><p>Ni colle, ni joint, ni dalle béton à couler : les dalles reposent sur des plots ou sur la structure.</p></div>
+      <div class="carte atout-carte"><span class="atout-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 0 1 15-6.7L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-15 6.7L3 16"/><path d="M3 21v-5h5"/></svg></span><h3>Démontable dalle par dalle</h3><p>Une dalle se soulève pour accéder dessous, ou se remplace sans toucher au reste de la terrasse.</p></div>
+      <div class="carte atout-carte"><span class="atout-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21V10l9-6 9 6v11"/><path d="M3 21h18"/><path d="M9 21v-6h6v6"/></svg></span><h3>Dans la continuité de l'intérieur</h3><p>Aspect pierre ou bois, du très clair au très foncé : le sol de votre séjour se prolonge jusque dans le jardin.</p></div>
+      <div class="carte atout-carte"><span class="atout-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9h8v6H3zM13 9h8v6h-8z"/><path d="M4 9v6M7 9v6M10 9v6"/></svg></span><h3>Bois et carrelage au même niveau</h3><p>Sur structure aluminium, dalles et lames de bois se raccordent sans marche ni décalage.</p></div>
     </div>
   </div>
 </section>
 
-<section class="bloc">
-  <div class="conteneur deux-colonnes">
-    <div>
-      <h2>Deux façons de le poser</h2>
-      <p><strong>Sur plots simples</strong> : chaque dalle repose sur des plots réglables placés à ses angles. C'est la solution la plus rapide et la plus économique quand vous avez déjà une dalle béton ou un toit-terrasse en bon état.</p>
-      <p><strong>Sur structure aluminium</strong> : les dalles reposent sur un cadre de rails réglé une seule fois. La surface est parfaitement plane, les dalles ne bougent pas et ne claquent pas sous le pied grâce aux cales amortissantes, et il n'est pas nécessaire de couler une dalle béton sur un sol stabilisé.</p>
-      <p><a href="/structure-terrasse-lyon/#comparatif-carrelage">Voir le comparatif détaillé →</a></p>
-    </div>
-    <figure class="photo-produit schema">
-      ${imgPhoto("structure-aluminium-carrelage", { sizes: "(max-width:1060px) 90vw, 460px" })}
-      <figcaption>La structure aluminium : plots réglables, rails, supports de dalle et cales amortissantes.</figcaption>
-    </figure>
+<section id="galerie" class="bloc galerie-carr">
+  <div class="conteneur">
+    ${galerie(GALERIE_CARR, { titre: "Nos terrasses carrelage en situation", legende: "Illustrations" })}
   </div>
 </section>
 
-<section class="bloc bloc-alt">
-  <div class="conteneur conteneur-etroit">
+<section id="structure" class="bloc bloc-alt ossature">
+  <div class="conteneur ossature-grille">
+    <div class="ossature-photo">${imgPhoto("structure-aluminium-carrelage", { sizes: "(max-width:700px) 34vw, 360px" })}</div>
     <div>
-      <h2>Des formats pour chaque projet</h2>
-      <p>Sur structure aluminium, la pose accepte le 60 × 60 comme les grands formats : 30 × 120, 45 × 90, 90 × 90, 120 × 120. On peut aussi décaler les joints ou mélanger deux formats sur une même surface pour un rendu plus vivant.</p>
-      <p>Les bords se finissent proprement avec des bandeaux en grès ou en aluminium, et les découpes autour d'un arbre ou d'une piscine se traitent sans bricolage.</p>
+      <h2>Sur plots ou sur structure aluminium</h2>
+      <p>Sur une dalle béton ou un toit-terrasse en bon état, des plots réglables suffisent. Sur un sol stabilisé, la structure aluminium évite de couler une dalle : surface parfaitement plane, et des cales amortissantes pour que les dalles ne claquent pas. Structure garantie 20 ans.</p>
+      <p><a href="/structure-terrasse-lyon/#comparatif-carrelage">Comparer les deux poses →</a></p>
     </div>
   </div>
 </section>
 
-<section class="bloc">
-  <div class="conteneur deux-colonnes">
-    <div>
-      <h2>Bois et carrelage sur la même terrasse</h2>
-      <p>Le carrelage pour la zone repas et les passages, le bois pour le coin salon ou la plage de piscine : sur structure aluminium, les deux revêtements se raccordent au même niveau, sans marche ni décalage. C'est aussi une façon de maîtriser le budget en mettant chaque matériau là où il est le plus utile.</p>
-      <p>Découvrez nos <a href="/terrasse-bois-lyon/">essences de bois</a>.</p>
-    </div>
-    <div>
-      <h2>Votre projet</h2>
-      <p>${POSE}</p>
-      <p>Lors de la visite, nous venons avec des échantillons de dalles pour les voir chez vous, et nous vous remettons un plan 3D offert du projet.</p>
-    </div>
+<section id="faq-carr" class="bloc">
+  <div class="conteneur lyon-faq">
+  <div id="lyon" class="lyon-texte">
+    <h2>Votre terrasse carrelage à Lyon et dans sa région</h2>
+    <div class="en-long"><p>Instant Terrasse est basée à Rillieux-la-Pape, au nord de Lyon. Nous venons chez vous, à Lyon et dans sa région, avec les échantillons de dalles : vous comparez les teintes à la lumière de votre extérieur, et nous prenons les mesures pour votre plan 3D.</p>
+    <p>Jardin, toit-terrasse, balcon ou tour de piscine : nous regardons votre support pour choisir entre plots et structure aluminium. Vous hésitez avec le bois ? Les deux se combinent sur la même terrasse, la zone repas en carrelage et le coin salon en bois.</p></div>
+    <p class="en-court">Depuis Rillieux-la-Pape, nous venons chez vous, à Lyon et dans sa région, avec les échantillons. Jardin, toit-terrasse, balcon ou piscine : nous choisissons avec vous entre plots et structure aluminium.</p>
+    <p class="lien-methode"><a href="/#methode">Découvrir notre méthode →</a></p>
+  </div>
+  <div class="faq-liste">
+    <h2>Vos questions sur la terrasse carrelage</h2>
+    <details class="faq"><summary>Faut-il une dalle béton pour une terrasse carrelage ?</summary><div><p>Non. Sur une dalle béton ou un toit-terrasse existant, les dalles se posent sur des plots réglables. Sur un sol stabilisé, la structure aluminium remplace la dalle béton : il n'y a rien à couler.</p></div></details>
+    <details class="faq"><summary>Quelle épaisseur pour des dalles sur plots ?</summary><div><p>Nos dalles de grès cérame font 2 cm d'épaisseur : elles sont conçues pour l'extérieur et pour la pose à sec, sans colle.</p></div></details>
+    <details class="faq"><summary>Quels formats de dalles proposez-vous ?</summary><div><p>60 × 60, 80 × 80, 90 × 90, 100 × 100, 120 × 120, 60 × 120 et 40 × 120 cm. On peut aussi décaler les joints ou associer deux formats sur une même terrasse.</p></div></details>
+    <details class="faq"><summary>Les dalles bougent-elles sous le pied ?</summary><div><p>Non. Sur structure aluminium, chaque dalle repose sur des cales amortissantes : elle ne bouge pas et ne claque pas quand on marche dessus.</p></div></details>
+    <details class="faq"><summary>Comment entretenir une terrasse carrelage ?</summary><div><p>Un coup de balai et un lavage à l'eau suffisent. Le grès cérame ne demande ni saturateur, ni ponçage, ni traitement.</p></div></details>
+    <details class="faq"><summary>Peut-on mélanger bois et carrelage ?</summary><div><p>Oui. Sur structure aluminium, les dalles et les lames de bois se raccordent au même niveau, sans marche. Découvrez nos <a href="/terrasse-bois-lyon/">essences de bois</a>.</p></div></details>
+  </div>
   </div>
 </section>
-${cta("Un projet de terrasse en carrelage ?", "Devis gratuit et sans engagement. Nous venons voir votre support, avec les échantillons, et nous vous conseillons la pose la plus adaptée.")}`,
+${cta("Un projet de terrasse carrelage ?", "Laissez votre numéro : nous vous rappelons pour en parler et organiser la visite, gratuite et sans engagement.")}`,
 };
 
 // ---------- Bardage aluminium ----------

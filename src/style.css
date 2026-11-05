@@ -1668,3 +1668,5 @@ h3.h2{font-size:clamp(1.5rem,1rem + 1.2vw,2.1rem);margin:0 0 14px}
 @media (max-width:700px){.hero-produit .chapo .en-long{display:none}.hero-produit .chapo .en-court{display:inline}}
 /* Ordinateur : « Découvrez aussi » aligné à gauche comme les autres titres de section */
 @media (min-width:701px){.decouvrir h2{text-align:left}}
+/* Téléphone : « Tout voir » échange sa place avec le dernier filtre (demande d'Antoine, 05/11/2026) */
+@media (max-width:700px){.filtres .filtre[data-filtre="tout"]{order:2}.filtres .filtre:last-child{order:-1}}

@@ -31,6 +31,7 @@ const cta = (titre = "Un projet de terrasse en bois ?", texte = "Laissez votre n
   blocRappel(titre, texte.replace(/^Devis gratuit et sans engagement\. /, "Laissez votre numéro, nous vous rappelons. "), true);
 
 // ---------- Terrasse bois ----------
+// Point commençant par « ~ » : affiché sur ordinateur seulement.
 const essencesAlu = [
   {
     nom: "Thermofrêne", evol: ["thermofrene", ["À la pose", "6 mois", "1 an"]], photo: ["thermofrene", "Lame de terrasse en thermofrêne, teinte brun chaud au veinage marqué", 358],
@@ -40,7 +41,7 @@ const essencesAlu = [
   {
     nom: "Kebony", evol: ["kebony", ["À la pose", "6 mois", "1 an"]], photo: ["kebony", "Lame de terrasse en Kebony, teinte brune", 402],
     texte: "Un bois résineux modifié par un procédé d'origine végétale qui renforce durablement ses fibres. Brun profond à la pose, il évolue vers un gris argenté homogène.",
-    points: ["Traitement par injection d'origine végétale", "Bois très durable", "Patine gris argenté", "Garantie fabricant 30 ans*"],
+    points: ["Traitement par injection d'origine végétale", "~Bois très durable", "Patine gris argenté", "Garantie fabricant 30 ans*"],
   },
   {
     nom: "Thermopin", evol: ["thermopin", ["À la pose", "6 mois", "1 an"]], photo: ["thermopin", "Lame de terrasse en thermopin, teinte miel avec nœuds apparents", 378],
@@ -117,7 +118,7 @@ ${heroPlein({ fil: "Terrasses", h1: ["Terrasse bois", "sur mesure à Lyon"], kic
         <div class="essence-texte">
           <h3>${e.nom}</h3>
           <p>${e.texte}</p>
-          <ul class="puces">${e.points.map((p) => `<li>${p}</li>`).join("")}</ul>
+          <ul class="puces">${e.points.map((p) => (p.startsWith("~") ? `<li class="pc-seul">${p.slice(1)}</li>` : `<li>${p}</li>`)).join("")}</ul>
         </div>
         ${e.evol ? evolution(e.nom, ...e.evol) : ""}
       </article>`).join("")}

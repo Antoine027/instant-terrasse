@@ -1645,3 +1645,5 @@ h3.h2{font-size:clamp(1.5rem,1rem + 1.2vw,2.1rem);margin:0 0 14px}
 
 /* Page Bois (téléphone) : cartes d'essences sans description, 3 points seulement */
 @media (max-width:700px){.essence-texte>p{display:none}}
+
+@media (max-width:700px){.pc-seul{display:none!important}}

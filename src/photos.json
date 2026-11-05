@@ -3218,7 +3218,7 @@
   "ratio": 2.0592
  },
  {
-  "cle": "teinte-composite-gris",
+  "cle": "teinte-composite-gris-t",
   "dossier": "composite",
   "categorie": "teinte-composite",
   "essence": "Nekko Gris",
@@ -3235,7 +3235,7 @@
   "ratio": 1.1454
  },
  {
-  "cle": "teinte-composite-brun",
+  "cle": "teinte-composite-brun-t",
   "dossier": "composite",
   "categorie": "teinte-composite",
   "essence": "Nekko Brun",
@@ -3913,7 +3913,7 @@
   "essence": "Teck"
  },
  {
-  "cle": "teinte-composite-vert-olive",
+  "cle": "teinte-composite-vert-olive-t",
   "dossier": "composite",
   "categorie": "teinte-composite",
   "essence": "Mentha Nigra",
@@ -3930,7 +3930,7 @@
   "ratio": 1.5
  },
  {
-  "cle": "teinte-composite-miel",
+  "cle": "teinte-composite-miel-t",
   "dossier": "composite",
   "categorie": "teinte-composite",
   "essence": "Anise",
@@ -3947,7 +3947,7 @@
   "ratio": 1.5
  },
  {
-  "cle": "teinte-composite-gris-anthracite",
+  "cle": "teinte-composite-gris-anthracite-t",
   "dossier": "composite",
   "categorie": "teinte-composite",
   "essence": "Malui Gris",
@@ -3964,7 +3964,7 @@
   "ratio": 1.5
  },
  {
-  "cle": "teinte-composite-brun-fonce",
+  "cle": "teinte-composite-brun-fonce-t",
   "dossier": "composite",
   "categorie": "teinte-composite",
   "essence": "Varia Brun foncé",

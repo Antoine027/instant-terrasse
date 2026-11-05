@@ -3,6 +3,7 @@
 import { SITE, POSE, TRIO, BADGE_AVIS, blocRappel } from "./pages.mjs";
 import { galerie, imgPhoto, imgHero, PHOTOS, credit } from "./galerie.mjs";
 import { carteProduit } from "./vignettes.mjs";
+import { RANG } from "./ordre-photos.mjs";
 
 const img = (nom, alt, ratio) =>
   `<img src="/assets/img/bois/${nom}-400.webp" srcset="/assets/img/bois/${nom}-400.webp 400w, /assets/img/bois/${nom}-800.webp 800w" sizes="(max-width:700px) 82vw, 460px" alt="${alt}" width="400" height="${ratio}" loading="lazy" decoding="async"${credit("Grad")}>`;
@@ -230,6 +231,10 @@ const GALERIE_STRUCTURES = [
   ["structure-lames-alu-equerre", ["Structure lames aluminium"]],
 ];
 
+// « Tout voir » : structures bois et composite d'abord, puis carrelage, puis lames aluminium ; les plus belles en tête de chaque groupe.
+const GROUPES_STRUCTURES = ["Structure bois et composite", "Structure carrelage", "Structure lames aluminium"];
+const ORDRE_STRUCTURES = [...GALERIE_STRUCTURES].sort(([a, ta], [b, tb]) => GROUPES_STRUCTURES.indexOf(ta[0]) - GROUPES_STRUCTURES.indexOf(tb[0]) || (RANG[a] ?? 0.5) - (RANG[b] ?? 0.5)).map(([c]) => c);
+
 const compBois = tableau(
   "comparatif-bois",
   "Comparer en quelques critères",
@@ -392,7 +397,7 @@ ${compCarrelage}
 
 <section id="galerie" class="bloc bloc-alt">
   <div class="conteneur">
-    ${galerie(GALERIE_STRUCTURES.map(([cle]) => cle), { titre: "Nos structures en images", intro: "Choisissez un type de structure pour n'afficher que celui qui vous intéresse.", legende: "Illustrations", types: ["Structure bois et composite", "Structure carrelage", "Structure lames aluminium"], typesDe: (p) => GALERIE_STRUCTURES.find(([c]) => c === p.cle)[1] })}
+    ${galerie(GALERIE_STRUCTURES.map(([cle]) => cle), { titre: "Nos structures en images", intro: "Choisissez un type de structure pour n'afficher que celui qui vous intéresse.", legende: "Illustrations", types: ["Structure bois et composite", "Structure carrelage", "Structure lames aluminium"], typesDe: (p) => GALERIE_STRUCTURES.find(([c]) => c === p.cle)[1], ordre: ORDRE_STRUCTURES })}
   </div>
 </section>
 ${cta("Quelle structure pour votre terrain ?")}`,

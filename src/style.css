@@ -1788,3 +1788,17 @@ h3.h2{font-size:clamp(1.5rem,1rem + 1.2vw,2.1rem);margin:0 0 14px}
   .bloc-alt .lyon-faq .faq-liste{background:var(--fond)}
 }
 @media (max-width:899px){.lyon-faq .faq-liste{margin-bottom:-44px}}
+/* Composite (ordinateur) : échantillons et lame agrandis, échelle proche des cartes bois */
+@media (min-width:1061px){
+  .grille-comp{gap:22px}
+  .grille-comp .essence{--bande:240px;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr)}
+  .grille-comp .essence-photo{padding:18px 2px 18px 14px}
+  .grille-comp .essence>.evol-ligne{padding:20px 16px 18px 4px}
+  .grille-comp .essence .evol-pastilles{gap:6px}
+  .grille-comp .essence .evol-pastilles figure{flex:0 0 calc((100% - 12px) / 3)}
+  .grille-comp .essence .evol-pastilles figcaption{font-size:.72rem;letter-spacing:0}
+  .grille-comp .essence>.evol-ligne{justify-content:flex-start}
+  .grille-comp .essence .evol-pastilles{height:100%;align-items:stretch}
+  .grille-comp .essence .evol-pastilles figure{display:flex;flex-direction:column}
+  .grille-comp .essence .evol-pastilles img{max-height:none;flex:1;min-height:0;height:0;aspect-ratio:auto;object-fit:cover}
+}

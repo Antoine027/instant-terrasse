@@ -1712,3 +1712,5 @@ h3.h2{font-size:clamp(1.5rem,1rem + 1.2vw,2.1rem);margin:0 0 14px}
 
 /* Galerie limitée (« Tout voir » replié) : la dernière ligne s'étire, pas de trou à droite */
 @media (min-width:701px){.galerie-alu .galerie-bloc.plein .mosaique::after{display:none}}
+.grille-5{grid-template-columns:repeat(5,1fr);gap:14px}
+@media (max-width:1060px) and (min-width:701px){.grille-5{grid-template-columns:repeat(3,1fr)}}

@@ -850,12 +850,12 @@ const EVOL_COMP = {
   "Mentha Nigra": ["mentha-nigra", ["À la pose", "1-2 mois", "6-8 mois"]],
   "Malui Gris": ["malui-gris", ["À la pose", "1-2 mois", "6-8 mois"]],
   "Varia Brun foncé": ["varia-brun-fonce", ["À la pose", "1-2 mois", "6-8 mois"]],
-  "Brun": ["brun", ["À la pose", "6 mois", "1 an"]],
-  "Gris": ["gris", ["À la pose", "6 mois", "1 an"]],
+  "Nekko Brun": ["brun", ["À la pose", "6 mois", "1 an"]],
+  "Nekko Gris": ["gris", ["À la pose", "6 mois", "1 an"]],
 };
 
 // Ordre du nuancier composite (teintes chaudes vers froides ; noms fabricant donnés par Antoine le 05/11/2026).
-const ORDRE_TEINTES_COMP = ["Anise", "Brun", "Varia Brun foncé", "Mentha Nigra", "Gris", "Malui Gris"];
+const ORDRE_TEINTES_COMP = ["Anise", "Nekko Brun", "Varia Brun foncé", "Mentha Nigra", "Nekko Gris", "Malui Gris"];
 
 const terrasseComposite = {
   title: "Terrasse composite Lyon : sur structure aluminium | Instant Terrasse",

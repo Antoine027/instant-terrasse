@@ -220,7 +220,6 @@ const GALERIE_STRUCTURES = [
   ["carrelage-structure-aluminium-schema", ["Structure carrelage"]],
   ["carrelage-plots-schema", ["Structure carrelage"]],
   ["ambiance-dalles-sur-plots", ["Structure carrelage"]],
-  ["carrelage-bh-sureleve-gazon", ["Structure carrelage"]],
   ["structure-lames-alu-piscine", ["Structure lames aluminium"]],
   ["structure-lames-alu-pose", ["Structure lames aluminium"]],
   ["structure-lames-alu-balcon-dessous", ["Structure lames aluminium"]],

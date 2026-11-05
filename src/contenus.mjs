@@ -917,7 +917,7 @@ ${heroPlein({ fil: "Terrasses", h1: ['<span class="pc-nowrap">Terrasse composite
 
 <section id="structure" class="bloc bloc-alt ossature">
   <div class="conteneur ossature-grille">
-    <div class="ossature-photo ossature-sombre">${imgPhoto("structure-composite-eclate", { sizes: "(max-width:700px) 34vw, 360px" })}</div>
+    <div class="ossature-photo ossature-sombre">${imgPhoto("structure-composite-eclate-t", { sizes: "(max-width:700px) 34vw, 360px" })}</div>
     <div>
       <h2>Une ossature aluminium sous vos lames</h2>
       <p>Rails aluminium sur plots réglables : la terrasse reste plane et ventilée, et ne bouge pas. Structure garantie 20 ans.</p>
@@ -931,8 +931,7 @@ ${heroPlein({ fil: "Terrasses", h1: ['<span class="pc-nowrap">Terrasse composite
   <div id="lyon" class="lyon-texte">
     <h2>Votre terrasse composite à Lyon et dans sa région</h2>
     <div class="en-long"><p>Instant Terrasse est basée à Rillieux-la-Pape, au nord de Lyon. Nous venons chez vous, à Lyon et dans sa région, avec les échantillons de lames : vous comparez les teintes à la lumière de votre extérieur, et nous prenons les mesures pour votre plan 3D.</p>
-    <p>Étés chauds, hivers humides, orages : posées sur une structure aluminium ventilée, les lames composite restent droites et gardent leur teinte d'une saison à l'autre.</p>
-    <p>Vous hésitez avec le bois ? Nous apportons les échantillons des deux lors de la visite pour les comparer chez vous.</p></div>
+    <p>Étés chauds, hivers humides, orages : posées sur une structure aluminium ventilée, les lames composite restent droites et gardent leur teinte d'une saison à l'autre. Vous hésitez avec le bois ? Nous apportons aussi ses échantillons.</p></div>
     <p class="en-court">Depuis Rillieux-la-Pape, nous venons chez vous, à Lyon et dans sa région, avec les échantillons. Sur structure aluminium ventilée, les lames restent droites saison après saison.</p>
     <p class="lien-methode"><a href="/#methode">Découvrir notre méthode →</a></p>
   </div>

@@ -1763,7 +1763,7 @@ h3.h2{font-size:clamp(1.5rem,1rem + 1.2vw,2.1rem);margin:0 0 14px}
 .nuancier-comp figure img{aspect-ratio:4/3}
 /* Galerie composite : les 4 photos sur une seule ligne (photos peu définies, jamais en grand) */
 @media (min-width:561px){.galerie-comp .mosaique{flex-wrap:nowrap}.galerie-comp .mosaique figure{flex:var(--r) 1 0;min-width:0}}
-.ossature-sombre img{aspect-ratio:1!important;object-fit:contain;background:#fff}
+.ossature-sombre img{aspect-ratio:1!important;object-fit:contain;background:transparent}
 @media (min-width:701px){.ossature-sombre{max-width:300px}}
 
 /* Composite (ordinateur) : cartes de lames sans description, 3 points visibles */

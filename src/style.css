@@ -1624,3 +1624,13 @@ h3.h2{font-size:clamp(1.5rem,1rem + 1.2vw,2.1rem);margin:0 0 14px}
   .filtres{gap:6px}
   .filtre{font-size:.76rem;padding:7px 10px}
 }
+
+/* Page Bois : « D'autres essences » en carrousel sur téléphone ; photo de lame neuve quand elle existe (clé lame-trad-<essence>) */
+.carte-trad.avec-photo{padding-top:0;overflow:hidden}
+.trad-photo{margin:0 -26px 16px;aspect-ratio:3/2;background:var(--fond2)}
+.trad-photo img{display:block;width:100%;height:100%;object-fit:cover}
+@media (max-width:700px){
+  .trad-car{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:12px;margin:20px -16px 0;padding:4px 16px 14px;scrollbar-width:none}
+  .trad-car::-webkit-scrollbar{display:none}
+  .trad-car>.carte{flex:0 0 78%;scroll-snap-align:center}
+}

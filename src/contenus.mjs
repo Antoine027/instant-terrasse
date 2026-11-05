@@ -151,8 +151,8 @@ ${heroPlein({ fil: "Terrasses", h1: ["Terrasse bois", "sur mesure à Lyon"], kic
     <p class="sous-titre">Sur structure traditionnelle</p>
     <h2>D'autres essences</h2>
     <p class="chapo">Les grands classiques de la terrasse en bois, posés sur lambourdes. Selon disponibilité : nous vous confirmons les essences et les sections en stock au moment du devis.</p>
-    <div class="grille grille-3">
-      ${essencesTrad.map(([n, t]) => `<div class="carte"><h3>${n}</h3><p>${t}</p></div>`).join("")}
+    <div class="grille grille-3 trad-car">
+      ${essencesTrad.map(([n, t]) => { const cle = "lame-trad-" + n.split(" (")[0].normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase(); const ph = PHOTOS.some((x) => x.cle === cle); return `<div class="carte carte-trad${ph ? " avec-photo" : ""}">${ph ? `<div class="trad-photo">${imgPhoto(cle, { sizes: "(max-width:700px) 80vw, 360px" })}</div>` : ""}<h3>${n}</h3><p>${t}</p></div>`; }).join("")}
     </div>
   </div>
 </section>

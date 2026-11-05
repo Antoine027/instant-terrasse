@@ -1640,3 +1640,4 @@ h3.h2{font-size:clamp(1.5rem,1rem + 1.2vw,2.1rem);margin:0 0 14px}
   .grille-essences>.essence:last-child:nth-child(odd){grid-column:1/-1;grid-template-columns:minmax(0,1fr) minmax(0,1fr) minmax(0,1.2fr);grid-template-areas:"photo evol texte";background:linear-gradient(160deg,#fff 0%,var(--fond2) 100%)}
   .grille-essences>.essence:last-child:nth-child(odd) .essence-texte{display:flex;flex-direction:column;justify-content:center;padding:24px 32px 24px 12px}
 }
+.galerie-bloc{scroll-margin-top:100px}

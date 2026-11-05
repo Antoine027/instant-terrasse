@@ -633,47 +633,83 @@ const gardeCorps = {
 };
 
 // ---------- Terrasse en lames aluminium ----------
+// Types de projets mis en avant sur la page Lames aluminium : lien, titre, texte, photo.
+const PROJETS_ALU = [
+  ["/terrasse-piscine-lyon/", "Plage de piscine", "Une surface saine au contact de l'eau.", "alu-piscine-debordement-baie"],
+  ["/terrasse-balcon-lyon/", "Balcon", "Un sol neuf, stable et sans entretien.", "alu-salon-garde-corps"],
+  ["/toit-terrasse-lyon/", "Toit-terrasse", "Une terrasse plane sur une toiture.", "alu-piscine-toit-terrasse"],
+  ["/terrasse-restaurant-chr-lyon/", "Restaurant", "Une terrasse robuste pour l'accueil du public.", "alu-restaurant-vue-mer"],
+];
+
 const terrasseAluminium = {
   title: "Terrasse aluminium Lyon : lames alu aspect bois | Instant Terrasse",
-  description: "Terrasse en lames aluminium sur mesure à Lyon : imputrescible, stable, sans entretien, en coloris unis ou aspect bois. Piscines, balcons, restaurants. Devis gratuit.",
-  corps: pageProduit({
-    fil: "Terrasses",
-    h1: ["Terrasse en lames", "aluminium"], kicker: "Terrasses sur mesure à Lyon et dans sa région",
-    chapo: "L'aspect d'une terrasse bois, sans ses contraintes : des lames en aluminium qui ne pourrissent pas, ne se déforment pas et ne demandent ni saturateur ni ponçage. En coloris unis ou en décor bois.",
-    photo: "alu-piscine-blanche-vue", position: "62% 55%",
-    atouts: [
-      ["Imputrescible", "L'aluminium ne craint ni l'eau, ni les champignons, ni les insectes."],
-      ["Stable dans le temps", "Pas de fente, pas de vrillage, pas d'écharde : les lames restent droites."],
-      ["Sans entretien", "Un nettoyage à l'eau suffit, aucun traitement à refaire."],
-      ["Aspect bois ou uni", "Des décors bois réalistes ou des teintes unies, du clair au foncé."],
-      ["Idéal autour des piscines", "Une surface saine au contact de l'eau, sans risque d'écharde pieds nus."],
-      ["Sur structure aluminium", "Posées sur notre <a href=\"/structure-terrasse-lyon/\">ossature aluminium</a> et plots réglables, pour une terrasse parfaitement plane."],
-    ],
-    extra: `<section id="teintes" class="bloc">
+  description: "Terrasse en lames aluminium sur mesure à Lyon : imputrescible, stable, sans entretien, en décor bois ou teinte unie. Piscines, balcons, restaurants. Devis gratuit.",
+  corps: `
+${heroPlein({ fil: "Terrasses", h1: ["Terrasse aluminium", "sur mesure à Lyon"], kicker: "Terrasses aluminium à Lyon et dans sa région", photo: "alu-piscine-blanche-vue", position: "62% 55%",
+  chapo: `<span class="en-long">L'aspect d'une terrasse bois, sans ses contraintes : des lames en aluminium qui ne pourrissent pas, ne se déforment pas et ne demandent ni saturateur ni ponçage. En décor bois ou en teinte unie.</span><span class="en-court">Décor bois ou teinte unie : des lames qui ne pourrissent pas et ne demandent aucun traitement.</span>`,
+  actions: `<a class="bouton" href="/contact/">Demander une visite gratuite</a> <a class="bouton bouton-blanc" href="#teintes">Voir les teintes</a>` })}
+
+<section id="teintes" class="bloc">
   <div class="conteneur">
-    <h2>Les teintes</h2>
+    <p class="sous-titre">Décor bois ou teinte unie</p>
+    <h2>Nos teintes</h2>
     <p class="chapo">Des décors bois du plus clair au plus chaud, ou un gris uni pour un style épuré. Vous voyez les échantillons en vrai, chez vous, lors du rendez-vous.</p>
     <div class="nuancier">${PHOTOS.filter((p) => p.categorie === "teinte-alu").map((p) => `<figure>${imgPhoto(p.cle, { sizes: "(max-width:560px) 45vw, 230px" })}<figcaption>${p.essence}</figcaption></figure>`).join("")}</div>
+    <p class="evol-note">Teintes indicatives : le rendu varie selon l'écran et la lumière.</p>
   </div>
-</section>`,
-    galerieCat: "terrasse-aluminium",
-    titreGalerie: "Terrasses en lames aluminium en situation",
-    nuancesGalerie: "teinte-alu",
-    limiteGalerie: 12,
-    introGalerie: "Filtrez par teinte.",
-    details: `<h2>Pour quels projets ?</h2>
-      <p>Plages de piscine, balcons, toits-terrasses, escaliers extérieurs, terrasses de restaurants : la lame aluminium convient partout où l'on veut une terrasse durable et facile à vivre. Des trappes de visite peuvent être intégrées pour garder l'accès à un regard ou à un local technique.</p>
-      <p>Vous hésitez avec le bois ou le composite ? Consultez notre <a href="/nos-terrasses/">comparatif des matériaux</a>.</p>`,
-    complement: "Nous étudions avec vous la structure, les finitions (nez de marche, bordures, découpes) et les éventuels équipements : garde-corps, pergola, éclairage.",
-    titreVoisins: "Pour compléter votre terrasse",
-    voisins: [
-      ["/structure-terrasse-lyon/", "Nos structures", "La base qui fait durer une terrasse."],
-      ["/terrasse-piscine-lyon/", "Terrasse de piscine", "Une plage confortable et sûre autour du bassin."],
-      ["/garde-corps-aluminium-lyon/", "Garde-corps aluminium", "Sécuriser une terrasse surélevée sans fermer la vue."],
-      ["/pergola-bioclimatique-lyon/", "Pergola bioclimatique", "Soleil, ombre ou pluie, vous choisissez."],
-    ],
-    ctaTitre: "Un projet de terrasse aluminium ?",
-  }),
+</section>
+
+<section id="galerie" class="bloc bloc-alt">
+  <div class="conteneur">
+    ${galerie("terrasse-aluminium", { titre: "Nos terrasses aluminium en situation", intro: "Choisissez une teinte pour voir son rendu en terrasse.", legende: "Illustrations", nuances: "teinte-alu", limite: 11 })}
+  </div>
+</section>
+
+<section id="structure" class="bloc">
+  <div class="conteneur deux-colonnes">
+    <div>
+      <h2>Une ossature aluminium sous vos lames</h2>
+      <p>Sous les lames, une ossature en aluminium posée sur plots réglables : rien ne pourrit, et la terrasse reste parfaitement plane. Nos structures aluminium sont garanties 20 ans.</p>
+      <p><a href="/structure-terrasse-lyon/#galerie">Voir nos structures en images →</a></p>
+    </div>
+    <div class="grille">
+      <a class="carte carte-structure" href="/structure-terrasse-lyon/#galerie"><div><h3>Sur plots réglables</h3><p>Des profilés aluminium posés sur plots réglables, pour une terrasse plane même sur un sol irrégulier.</p></div><div class="cs-img cs-photo">${imgPhoto("structure-lames-alu-assemblage", { sizes: "260px" })}</div></a>
+      <a class="carte carte-structure" href="#faq-alu"><div><h3>Trappes de visite</h3><p>Des trappes peuvent être intégrées pour garder l'accès à un regard ou à un local technique.</p></div><div class="cs-img cs-photo">${imgPhoto("alu-trappe-visite", { sizes: "260px" })}</div></a>
+    </div>
+  </div>
+</section>
+
+<section id="projets" class="bloc bloc-alt">
+  <div class="conteneur">
+    <p class="sous-titre">Pour quels projets ?</p>
+    <h2>Partout où l'on veut une terrasse facile à vivre</h2>
+    <p class="chapo">Plages de piscine, balcons, toits-terrasses, escaliers extérieurs, terrasses de restaurants : la lame aluminium s'adapte à chaque projet.</p>
+    <div class="grille grille-4 trad-car">
+      ${PROJETS_ALU.map(([lien, titre, texte, cle]) => `<a class="carte carte-trad avec-photo carte-lien" href="${lien}"><div class="trad-photo">${imgPhoto(cle, { sizes: "(max-width:700px) 80vw, 280px" })}</div><h3>${titre}</h3><p>${texte}</p></a>`).join("")}
+    </div>
+  </div>
+</section>
+
+<section id="faq-alu" class="bloc">
+  <div class="conteneur lyon-faq">
+  <div id="lyon" class="lyon-texte">
+    <h2>Votre terrasse aluminium à Lyon et dans sa région</h2>
+    <div class="en-long"><p>Instant Terrasse est basée à Rillieux-la-Pape, au nord de Lyon. Nous venons chez vous, à Lyon et dans sa région, avec les échantillons de lames : vous comparez les teintes à la lumière de votre extérieur, et nous prenons les mesures pour votre plan 3D.</p>
+    <p>Étés chauds, hivers humides, orages : l'aluminium ne craint ni l'eau ni les écarts de saison. Les lames ne pourrissent pas, ne se fendent pas et restent droites.</p></div>
+    <p class="en-court">Depuis Rillieux-la-Pape, nous venons chez vous, à Lyon et dans sa région, avec les échantillons. Été comme hiver, les lames aluminium ne pourrissent pas et restent droites.</p>
+    <p class="lien-methode"><a href="/#methode">Découvrir notre méthode →</a></p>
+  </div>
+  <div class="faq-liste">
+    <h2>Vos questions sur l'aluminium</h2>
+    <details class="faq"><summary>Comment entretenir une terrasse aluminium ?</summary><div><p>Un nettoyage à l'eau suffit. Il n'y a aucun traitement à refaire : ni saturateur, ni ponçage, ni lasure.</p></div></details>
+    <details class="faq"><summary>Les lames peuvent-elles se déformer ?</summary><div><p>Non. L'aluminium ne gonfle pas avec l'humidité : pas de fente, pas de vrillage, pas d'écharde. Les lames restent droites dans le temps.</p></div></details>
+    <details class="faq"><summary>Est-ce adapté autour d'une piscine ?</summary><div><p>Oui. L'aluminium ne craint ni l'eau, ni les champignons, ni les insectes, et la surface reste saine au contact de l'eau, sans risque d'écharde pieds nus.</p></div></details>
+    <details class="faq"><summary>Peut-on garder l'accès sous la terrasse ?</summary><div><p>Oui. Des trappes de visite peuvent être intégrées pour accéder à un regard, à un local technique ou à une vanne, sans démonter la terrasse.</p></div></details>
+    <details class="faq"><summary>Sur quelle structure les lames sont-elles posées ?</summary><div><p>Sur une ossature en aluminium posée sur plots réglables, pour une terrasse parfaitement plane. Nos structures aluminium sont garanties 20 ans.</p></div></details>
+  </div>
+  </div>
+</section>
+${cta("Un projet de terrasse aluminium ?", "Laissez votre numéro : nous vous rappelons pour en parler et organiser la visite, gratuite et sans engagement.")}`,
 };
 
 // ---------- Terrasse carrelage ----------

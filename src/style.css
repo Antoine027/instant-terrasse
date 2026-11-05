@@ -1681,3 +1681,10 @@ h3.h2{font-size:clamp(1.5rem,1rem + 1.2vw,2.1rem);margin:0 0 14px}
 
 /* Note sous les essences phares : une seule ligne sur ordinateur */
 @media (min-width:1061px){.evol-note{max-width:none!important}}
+
+/* Cartes de structure avec photo (page Aluminium) : vignette recadrée */
+.cs-photo img{width:130px!important;height:130px;max-height:none;object-fit:cover;border-radius:10px;mix-blend-mode:normal}
+@media (max-width:700px){.cs-photo img{width:150px!important;height:110px}}
+@media (max-width:420px){.cs-photo img{width:92px!important;height:92px}}
+/* Téléphone : nuancier sur 3 colonnes */
+@media (max-width:700px){.nuancier:not(.nuancier-2){grid-template-columns:repeat(3,1fr);gap:8px}.nuancier figcaption{font-size:.74rem;margin-top:6px}.nuancier figure{padding:5px 5px 8px}}

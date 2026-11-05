@@ -1722,3 +1722,4 @@ h3.h2{font-size:clamp(1.5rem,1rem + 1.2vw,2.1rem);margin:0 0 14px}
   .projet-alu p{font-size:.88rem;line-height:1.4;margin:0}
 }
 @media (max-width:1060px) and (min-width:701px){.projets-alu{grid-template-columns:repeat(2,1fr)}}
+.hero-plein h1 .lyon-l{display:inline}@media (min-width:701px){.hero-plein h1 .lyon-l{display:block}}

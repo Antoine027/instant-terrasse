@@ -103,7 +103,7 @@ const terrasseBois = {
   title: "Terrasse bois Lyon : thermopin, kebony, accoya, ipé | Instant Terrasse",
   description: "Terrasse bois sur mesure à Lyon : thermopin, thermofrêne, kebony, accoya, bambou sur structure aluminium, ou ipé, cumaru, mélèze, douglas sur structure traditionnelle.",
   corps: `
-${heroPlein({ fil: "Terrasses", h1: ["Terrasse bois", "sur mesure à Lyon"], kicker: "Terrasses bois à Lyon et dans sa région", photo: "terrasse-kebony-piscine-debordement", position: "60% 55%",
+${heroPlein({ fil: "Terrasses", h1: ["Terrasse bois", 'sur mesure <span class="lyon-l">à Lyon</span>'], kicker: "Terrasses bois à Lyon et dans sa région", photo: "terrasse-kebony-piscine-debordement", position: "60% 55%",
   chapo: `<span class="en-long">Nos essences phares sur structure aluminium, et d'autres essences sur structure traditionnelle : nous vous aidons à choisir l'essence qui correspond à votre maison, à votre budget et au temps que vous voulez consacrer à l'entretien.</span><span class="en-court">Thermofrêne, kebony, accoya, ipé… Nous vous aidons à choisir le bois fait pour votre extérieur.</span>`,
   actions: `<a class="bouton" href="/contact/">Demander une visite gratuite</a> <a class="bouton bouton-blanc" href="#essences-aluminium">Voir les essences</a>` })}
 
@@ -653,7 +653,7 @@ const terrasseAluminium = {
   title: "Terrasse aluminium Lyon : lames alu aspect bois | Instant Terrasse",
   description: "Terrasse en lames aluminium sur mesure à Lyon : imputrescible, stable, sans entretien, en décor bois ou teinte unie. Piscines, balcons, restaurants. Devis gratuit.",
   corps: `
-${heroPlein({ fil: "Terrasses", h1: ['<span class="pc-nowrap">Terrasse aluminium</span>', "sur mesure à Lyon"], kicker: "Terrasses aluminium à Lyon et dans sa région", photo: "alu-piscine-jardin-tropical", position: "60% 55%",
+${heroPlein({ fil: "Terrasses", h1: ['<span class="pc-nowrap">Terrasse aluminium</span>', 'sur mesure <span class="lyon-l">à Lyon</span>'], kicker: "Terrasses aluminium à Lyon et dans sa région", photo: "alu-piscine-jardin-tropical", position: "60% 55%",
   chapo: `<span class="en-long">L'aspect d'une terrasse bois, sans ses contraintes : des lames en aluminium qui ne pourrissent pas, ne se déforment pas et ne demandent ni saturateur ni ponçage. En décor bois ou en teinte unie.</span><span class="en-court">Décor bois ou teinte unie : des lames qui ne pourrissent pas et ne demandent aucun traitement.</span>`,
   actions: `<a class="bouton" href="/contact/">Demander une visite gratuite</a> <a class="bouton bouton-blanc" href="#teintes">Voir les teintes</a>` })}
 

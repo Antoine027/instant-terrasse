@@ -1590,7 +1590,7 @@ h3.h2{font-size:clamp(1.5rem,1rem + 1.2vw,2.1rem);margin:0 0 14px}
 /* « Découvrez aussi » (pages revêtements) */
 .decouvrir h2{text-align:center}
 .decouvrir-grille{margin-top:22px}
-.decouvrir-comp{text-align:center;margin:22px 0 0}
+.decouvrir-comp{text-align:center;margin:22px auto 0!important;max-width:none!important}
 .decouvrir-comp a{font:700 .95rem Montserrat,sans-serif;color:var(--accent-texte);text-decoration:underline;text-underline-offset:3px}
 @media (max-width:700px){
   .decouvrir{padding:36px 0}

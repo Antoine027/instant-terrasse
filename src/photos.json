@@ -4158,21 +4158,6 @@
   "ratio": 1.0
  },
  {
-  "cle": "lame-trad-itauba",
-  "dossier": "bois",
-  "categorie": "lame-trad",
-  "alt": "Lames de terrasse neuves en itauba (visuel d'illustration)",
-  "largeurs": [
-   400,
-   600,
-   800,
-   1000,
-   1200,
-   1254
-  ],
-  "ratio": 1.0
- },
- {
   "cle": "lame-trad-douglas",
   "dossier": "bois",
   "categorie": "lame-trad",
@@ -4218,6 +4203,21 @@
   "ratio": 1.0
  },
  {
+  "cle": "lame-trad-jatoba",
+  "dossier": "bois",
+  "categorie": "lame-trad",
+  "alt": "Lames de terrasse neuves en jatoba (visuel d'illustration)",
+  "largeurs": [
+   400,
+   600,
+   800,
+   1000,
+   1200,
+   1254
+  ],
+  "ratio": 1.0
+ },
+ {
   "cle": "lame-trad-cumaru",
   "dossier": "bois",
   "categorie": "lame-trad",
@@ -4233,10 +4233,10 @@
   "ratio": 1.0
  },
  {
-  "cle": "lame-trad-jatoba",
+  "cle": "lame-trad-itauba",
   "dossier": "bois",
   "categorie": "lame-trad",
-  "alt": "Lames de terrasse neuves en jatoba (visuel d'illustration)",
+  "alt": "Lames de terrasse neuves en itauba (visuel d'illustration)",
   "largeurs": [
    400,
    600,

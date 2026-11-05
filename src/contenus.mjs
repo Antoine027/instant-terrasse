@@ -97,6 +97,27 @@ const decouvrir = (ici) => `
   </div>
 </section>`;
 
+// Guide « Quel bois choisir » (page Bois) : critère, icône, lignes [libellé, essences, teinte de la pastille], note.
+const ico = (d) => `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">${d}</svg>`;
+const CHOISIR = [
+  ["Selon l'aspect", ico('<circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 0 0 18"/>'), [
+    ["Clair", ["Accoya naturel", "Garapa"], "#E6D3AE"],
+    ["Miel, nœuds apparents", ["Thermopin"], "#D29A55"],
+    ["Brun", ["Thermofrêne", "Kebony", "Bambou X-treme", "Ipé", "Cumaru"], "#7A4B2C"],
+    ["Brun-rouge, allure exotique", ["Bambou N-Durance", "Jatoba", "Muiracatiara"], "#8C3E26"],
+    ["Gris patiné dès la pose", ["Accoya gris"], "#9C9A94"],
+  ]],
+  ["Selon l'entretien", ico('<path d="M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11z"/>'), [
+    ["Sans saturateur obligatoire", ["Thermofrêne", "Thermopin", "Kebony", "Accoya"]],
+    ["Saturateur conseillé", ["Bambou"]],
+  ], "Pour toutes les essences : un nettoyage au minimum deux fois par an. Sans saturateur, le bois prend une patine grise avec le temps."],
+  ["Selon la stabilité et la dureté", ico('<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>'), [
+    ["Très grande stabilité", ["Accoya naturel", "Accoya gris", "Itauba"]],
+    ["Très dur et dense", ["Bambou X-treme", "Bambou N-Durance", "Ipé"]],
+    ["Grande longévité", ["Kebony", "Ipé"]],
+  ], "L'accoya bouge très peu avec l'humidité : moins de déformations."],
+];
+
 const terrasseBois = {
   title: "Terrasse bois Lyon : thermopin, kebony, accoya, ipé | Instant Terrasse",
   description: "Terrasse bois sur mesure à Lyon : thermopin, thermofrêne, kebony, accoya, bambou sur structure aluminium, ou ipé, cumaru, mélèze, douglas sur structure traditionnelle.",
@@ -161,27 +182,12 @@ ${heroPlein({ fil: "Terrasses", h1: ["Terrasse bois", "sur mesure à Lyon"], kic
   <div class="conteneur">
     <h2>Quel bois choisir pour votre terrasse ?</h2>
     <p class="chapo">Trois critères suffisent pour réduire le choix à deux ou trois essences. Nous comparons ensuite les échantillons avec vous, chez vous, à la lumière de votre extérieur.</p>
-    <div class="grille grille-3 choisir-grille">
-      <div class="carte">
-        <h3>Selon l'aspect</h3>
-        <p><strong>Clair</strong> : accoya naturel, garapa.</p>
-        <p><strong>Miel, nœuds apparents</strong> : thermopin.</p>
-        <p><strong>Brun</strong> : thermofrêne, kebony, bambou X-treme, ipé, cumaru.</p>
-        <p><strong>Brun-rouge, allure exotique</strong> : bambou N-Durance, jatoba, muiracatiara.</p>
-        <p><strong>Gris patiné dès la pose</strong> : accoya gris.</p>
-      </div>
-      <div class="carte">
-        <h3>Selon l'entretien</h3>
-        <p><strong>Sans saturateur obligatoire</strong> : thermofrêne, thermopin, kebony, accoya.</p>
-        <p><strong>Saturateur conseillé</strong> : bambou.</p>
-        <p><strong>Pour toutes les essences</strong> : un nettoyage au minimum deux fois par an. Sans saturateur, le bois prend une patine grise avec le temps.</p>
-      </div>
-      <div class="carte">
-        <h3>Selon la stabilité et la dureté</h3>
-        <p><strong>Très grande stabilité</strong> : accoya naturel et accoya gris, qui bougent très peu avec l'humidité ; itauba.</p>
-        <p><strong>Très dur et dense</strong> : bambou X-treme et N-Durance, ipé.</p>
-        <p><strong>Grande longévité</strong> : kebony, ipé.</p>
-      </div>
+    <div class="grille grille-3 choisir-grille">${CHOISIR.map(([titre, icone, lignes, note]) => `
+      <div class="carte choisir-carte">
+        <h3><span class="choisir-ico" aria-hidden="true">${icone}</span>${titre}</h3>
+        ${lignes.map(([lab, ess, teinte]) => `<div class="crit"><p class="crit-lab">${teinte ? `<span class="pastille" style="background:${teinte}" aria-hidden="true"></span>` : ""}${lab}</p><ul class="crit-ess">${ess.map((e) => `<li>${e}</li>`).join("")}</ul></div>`).join("")}
+        ${note ? `<p class="crit-note">${note}</p>` : ""}
+      </div>`).join("")}
     </div>
     <p class="note-choisir">Le prix dépend de l'essence, de la structure et de la surface : tout est détaillé ligne par ligne dans votre devis.</p>
   </div>

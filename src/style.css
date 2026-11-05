@@ -1615,9 +1615,22 @@ h3.h2{font-size:clamp(1.5rem,1rem + 1.2vw,2.1rem);margin:0 0 14px}
 
 /* Page Bois : « Quel bois choisir » */
 .choisir-grille{margin-top:24px}
-.choisir-grille .carte p{margin:0 0 10px;line-height:1.5}
-.choisir-grille .carte p:last-child{margin-bottom:0}
-.choisir-grille strong{color:var(--texte)}
+.choisir-carte h3{display:flex;align-items:center;gap:10px;margin:0 0 14px;font-size:1.05rem}
+.choisir-ico{flex:none;display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:50%;background:var(--fond2);color:var(--accent-texte)}
+.choisir-ico svg{width:19px;height:19px}
+.crit{padding:11px 0;border-top:1px solid rgba(47,52,55,.08)}
+.crit-lab{display:flex;align-items:center;gap:8px;margin:0 0 7px!important;font:700 .74rem Montserrat,sans-serif;letter-spacing:.05em;text-transform:uppercase;color:var(--doux)}
+.pastille{flex:none;width:12px;height:12px;border-radius:50%;box-shadow:inset 0 0 0 1px rgba(0,0,0,.12)}
+.crit-ess{display:flex;flex-wrap:wrap;gap:6px;margin:0;padding:0;list-style:none}
+.crit-ess li{margin:0;padding:5px 11px;border-radius:999px;background:var(--fond2);font-size:.88rem;line-height:1.3;color:var(--texte)}
+.crit-note{margin:12px 0 0!important;padding-top:11px;border-top:1px solid rgba(47,52,55,.08);font-size:.86rem;line-height:1.5;color:var(--doux)}
+@media (max-width:700px){
+  main .choisir-carte,main .choisir-carte *{text-align:left}
+  .choisir-grille{gap:12px}
+  .choisir-carte{padding:18px 18px 16px}
+  .choisir-carte h3{font-size:1rem;margin-bottom:8px}
+  .crit-ess li{font-size:.84rem;padding:5px 10px}
+}
 .note-choisir{margin:22px auto 0!important;max-width:none!important;text-align:center;color:var(--doux);font-size:.95rem}
 /* Téléphone : filtres des galeries plus compacts (moins de lignes) */
 @media (max-width:700px){

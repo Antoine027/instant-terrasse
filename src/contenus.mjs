@@ -844,54 +844,84 @@ ${cta("Un projet de bardage aluminium ?", "Devis gratuit et sans engagement. Nou
 };
 
 // ---------- Terrasse composite ----------
+// Ordre du nuancier composite (teintes chaudes vers froides ; noms provisoires sauf Gris et Brun).
+const ORDRE_TEINTES_COMP = ["Miel", "Brun", "Brun foncé", "Vert olive", "Gris", "Gris anthracite"];
+
 const terrasseComposite = {
   title: "Terrasse composite Lyon : sur structure aluminium | Instant Terrasse",
-  description: "Terrasse composite sur mesure à Lyon, posée sur structure aluminium garantie 20 ans : lames sans écharde, sans saturateur, en plusieurs teintes. Devis gratuit.",
+  description: "Terrasse composite sur mesure à Lyon, posée sur structure aluminium garantie 20 ans : lames sans écharde, sans saturateur, en 6 teintes. Devis gratuit.",
   corps: `
-${heroPlein({ fil: "Terrasses", h1: ["Terrasse composite", "sur mesure"], kicker: "Terrasses sans entretien à Lyon et dans sa région", photo: "composite-gris-piscine", position: "50% 60%",
-  chapo: "Des lames qui gardent leur aspect sans saturateur ni ponçage, posées sur notre structure aluminium : la terrasse pour profiter de l'extérieur sans y passer ses week-ends.",
-  actions: `<a class="bouton" href="/contact/">Demander une visite gratuite</a> <a class="bouton bouton-blanc" href="/structure-terrasse-lyon/">Notre structure</a>` })}
+${heroPlein({ fil: "Terrasses", h1: ['<span class="pc-nowrap">Terrasse composite</span>', 'sur mesure <span class="lyon-l">à Lyon</span>'], kicker: "Terrasses composite à Lyon et dans sa région", photo: "composite-gris-piscine", position: "50% 60%",
+  chapo: `<span class="en-long">Des lames qui gardent leur aspect sans saturateur ni ponçage, posées sur notre structure aluminium : la terrasse pour profiter de l'extérieur sans y passer ses week-ends.</span><span class="en-court">Sans saturateur ni ponçage : la terrasse pour profiter de l'extérieur sans y passer ses week-ends.</span>`,
+  actions: `<a class="bouton" href="/contact/">Demander une visite gratuite</a> <a class="bouton bouton-blanc" href="#teintes">Voir les teintes</a>` })}
 
-<section class="bloc bloc-alt">
+<section id="teintes" class="bloc">
   <div class="conteneur">
-    <h2>Les points forts</h2>
-    <div class="grille grille-3">
-      <div class="carte"><h3>Pas d'entretien lourd</h3><p>Ni saturateur, ni ponçage, ni lasure : un nettoyage à l'eau savonneuse suffit.</p></div>
-      <div class="carte"><h3>Confortable pieds nus</h3><p>Pas d'écharde ni de fente : idéal autour d'une piscine et pour les enfants.</p></div>
-      <div class="carte"><h3>Une teinte qui tient</h3><p>Gris ou brun : la couleur se stabilise après quelques mois, sans virer au gris comme le bois.</p></div>
-      <div class="carte"><h3>Sur structure aluminium</h3><p>Rails aluminium sur plots réglables, garantis 20 ans : une terrasse plane et ventilée, qui ne bouge pas.</p></div>
-      <div class="carte"><h3>Fixation invisible</h3><p>Aucune vis en surface : des lignes nettes, et une lame se remplace sans tout démonter.</p></div>
-      <div class="carte"><h3>Pour tous les projets</h3><p>Plage de piscine, terrasse de plain-pied, balcon, toit-terrasse ou terrasse surélevée.</p></div>
+    <p class="sous-titre">L'aspect du bois</p>
+    <h2>Nos teintes</h2>
+    <p class="chapo">Six teintes veinées comme du bois. Vous voyez les échantillons chez vous, lors du rendez-vous.</p>
+    <div class="nuancier nuancier-comp" data-galerie>${PHOTOS.filter((p) => p.categorie === "teinte-composite").sort((a, b) => ORDRE_TEINTES_COMP.indexOf(a.essence) - ORDRE_TEINTES_COMP.indexOf(b.essence)).map((p) => `<figure tabindex="0" aria-label="Agrandir : ${p.essence}">${imgPhoto(p.cle, { sizes: "(max-width:560px) 45vw, 230px" })}<figcaption>${p.essence}</figcaption></figure>`).join("")}</div>
+  </div>
+</section>
+
+<section id="atouts" class="bloc bloc-alt">
+  <div class="conteneur">
+    <h2>Les atouts du composite</h2>
+    <div class="grille grille-3 atouts-car">
+      <div class="carte atout-carte"><span class="atout-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11z"/></svg></span><h3>Sans entretien lourd</h3><p>Ni saturateur, ni ponçage, ni lasure : un nettoyage à l'eau savonneuse suffit.</p></div>
+      <div class="carte atout-carte"><span class="atout-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 3c1.5 0 2.5 2 2.5 5S9.5 13 8 13s-2.5-2-2.5-5S6.5 3 8 3z"/><path d="M16 9c1.5 0 2.5 2 2.5 5s-1 5-2.5 5-2.5-2-2.5-5 1-5 2.5-5z"/></svg></span><h3>Confortable pieds nus</h3><p>Pas d'écharde ni de fente : idéal autour d'une piscine et pour les enfants.</p></div>
+      <div class="carte atout-carte"><span class="atout-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 0 0 18"/></svg></span><h3>Une teinte qui tient</h3><p>La couleur se stabilise après quelques mois, sans virer au gris comme le bois.</p></div>
+      <div class="carte atout-carte"><span class="atout-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/><path d="M8 6c1 2 1 4 0 6M15 12c1 2 1 4 0 6"/></svg></span><h3>L'aspect du bois</h3><p>Des lames veinées comme du bois, en 6 teintes, du gris anthracite au miel.</p></div>
+      <div class="carte atout-carte"><span class="atout-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9h18v6H3z"/><path d="M8 9v6M16 9v6"/></svg></span><h3>Fixation invisible</h3><p>Aucune vis en surface : les lames, rainurées sur les chants, se clipsent sur la structure.</p></div>
+      <div class="carte atout-carte"><span class="atout-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 0 1 15-6.7L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-15 6.7L3 16"/><path d="M3 21v-5h5"/></svg></span><h3>Une lame se remplace</h3><p>Une lame abîmée se change sans démonter toute la terrasse.</p></div>
     </div>
   </div>
 </section>
 
-<section class="bloc">
+<section id="galerie" class="bloc galerie-comp">
   <div class="conteneur">
-    <h2>Les teintes</h2>
-    <p class="chapo">Des lames veinées comme du bois, rainurées sur les chants pour une fixation invisible. Nous apportons les échantillons lors de la visite.</p>
-    <div class="nuancier nuancier-2">${PHOTOS.filter((p) => p.categorie === "teinte-composite").map((p) => `<figure>${imgPhoto(p.cle, { sizes: "(max-width:560px) 45vw, 260px" })}<figcaption>${p.essence}</figcaption></figure>`).join("")}</div>
+    ${galerie("terrasse-composite", { titre: "Nos terrasses composite en situation", legende: "Illustrations" })}
   </div>
 </section>
 
-<section class="bloc" id="galerie">
-  <div class="conteneur">
-    ${galerie("terrasse-composite", { titre: "Terrasses composite en situation", legende: "Illustrations" })}
-  </div>
-</section>
-
-<section class="bloc">
-  <div class="conteneur deux-colonnes deux-colonnes-image">
-    <div class="photo-produit">${imgPhoto("structure-plot-rail-lame", { sizes: "(max-width:1060px) 90vw, 460px" })}</div>
+<section id="structure" class="bloc bloc-alt ossature">
+  <div class="conteneur ossature-grille">
+    <div class="ossature-photo">${imgPhoto("structure-plot-rail-lame", { sizes: "(max-width:700px) 34vw, 360px" })}</div>
     <div>
-      <h2>Composite ou bois ?</h2>
-      <p>Le composite vise la tranquillité : une teinte stable et quasiment aucun entretien. Le <a href="/terrasse-bois-lyon/">bois</a> apporte un matériau naturel, qui vit et se patine avec le temps. Les deux se posent sur la même structure aluminium.</p>
-      <p>Lors de la visite, nous venons avec des échantillons des deux pour les comparer chez vous, à la lumière de votre jardin. Vous pouvez aussi consulter notre <a href="/nos-terrasses/">comparatif des matériaux</a>.</p>
-      <p>${POSE}</p>
+      <h2>Une ossature aluminium sous vos lames</h2>
+      <p>Rails aluminium sur plots réglables : la terrasse reste plane et ventilée, et ne bouge pas. Structure garantie 20 ans.</p>
+      <p><a href="/structure-terrasse-lyon/#galerie">Voir nos structures en images →</a></p>
     </div>
   </div>
 </section>
-${cta("Un projet de terrasse composite ?", "Devis gratuit et sans engagement. Nous venons chez vous avec les échantillons de teintes, et le plan 3D de votre projet est offert.")}`,
+
+<section id="comparer" class="bloc">
+  <div class="conteneur conteneur-etroit">
+    <h2>Composite ou bois ?</h2>
+    <p>Le composite vise la tranquillité : une teinte stable et quasiment aucun entretien. Le <a href="/terrasse-bois-lyon/">bois</a> apporte un matériau naturel, qui vit et se patine avec le temps. Les deux se posent sur la même structure aluminium, et nous apportons les échantillons des deux lors de la visite.</p>
+  </div>
+</section>
+
+<section id="faq-comp" class="bloc bloc-alt">
+  <div class="conteneur lyon-faq">
+  <div id="lyon" class="lyon-texte">
+    <h2>Votre terrasse composite à Lyon et dans sa région</h2>
+    <div class="en-long"><p>Instant Terrasse est basée à Rillieux-la-Pape, au nord de Lyon. Nous venons chez vous, à Lyon et dans sa région, avec les échantillons de lames : vous comparez les teintes à la lumière de votre extérieur, et nous prenons les mesures pour votre plan 3D.</p>
+    <p>Étés chauds, hivers humides, orages : posées sur une structure aluminium ventilée, les lames composite restent droites et gardent leur teinte d'une saison à l'autre.</p></div>
+    <p class="en-court">Depuis Rillieux-la-Pape, nous venons chez vous, à Lyon et dans sa région, avec les échantillons. Sur structure aluminium ventilée, les lames restent droites saison après saison.</p>
+    <p class="lien-methode"><a href="/#methode">Découvrir notre méthode →</a></p>
+  </div>
+  <div class="faq-liste">
+    <h2>Vos questions sur le composite</h2>
+    <details class="faq"><summary>Comment entretenir une terrasse composite ?</summary><div><p>Un nettoyage à l'eau savonneuse suffit. Il n'y a ni saturateur, ni ponçage, ni lasure à prévoir.</p></div></details>
+    <details class="faq"><summary>La couleur du composite change-t-elle ?</summary><div><p>La teinte se stabilise après quelques mois, puis ne bouge plus. Contrairement au bois, le composite ne vire pas au gris.</p></div></details>
+    <details class="faq"><summary>Le composite fait-il des échardes ?</summary><div><p>Non. Les lames ne font ni écharde ni fente : la terrasse reste agréable pieds nus, autour d'une piscine comme pour les enfants.</p></div></details>
+    <details class="faq"><summary>Peut-on remplacer une lame abîmée ?</summary><div><p>Oui. Les lames sont clipsées sur la structure, sans vis en surface : une lame se change sans démonter toute la terrasse.</p></div></details>
+    <details class="faq"><summary>Sur quelle structure les lames sont-elles posées ?</summary><div><p>Sur des rails aluminium posés sur plots réglables, pour une terrasse plane et ventilée. Nos structures aluminium sont garanties 20 ans.</p></div></details>
+  </div>
+  </div>
+</section>
+${cta("Un projet de terrasse composite ?", "Laissez votre numéro : nous vous rappelons pour en parler et organiser la visite, gratuite et sans engagement.")}`,
 };
 
 // ---------- Store banne ----------

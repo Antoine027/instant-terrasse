@@ -1737,3 +1737,10 @@ h3.h2{font-size:clamp(1.5rem,1rem + 1.2vw,2.1rem);margin:0 0 14px}
   .ossature h2{font-size:1.1rem;line-height:1.25;margin-bottom:6px}
   .ossature p{font-size:.88rem;line-height:1.45;margin-bottom:6px}
 }
+
+/* Page Composite : nuancier 6 colonnes, échantillons carrés */
+.nuancier-comp img{aspect-ratio:1;object-fit:cover}
+.nuancier[data-galerie] figure{cursor:zoom-in}
+@media (max-width:700px){.nuancier-comp{grid-template-columns:repeat(3,1fr);gap:8px}}
+#comparer p{margin:0}
+@media (min-width:701px){.galerie-comp .mosaique::after{display:none}}

@@ -690,7 +690,7 @@ ${heroPlein({ fil: "Terrasses", h1: ['<span class="pc-nowrap">Terrasse aluminium
     <div class="ossature-photo">${imgPhoto("structure-lames-alu-assemblage", { sizes: "(max-width:700px) 34vw, 360px" })}</div>
     <div>
       <h2>Une ossature aluminium sous vos lames</h2>
-      <p>Posée sur plots réglables : rien ne pourrit, la terrasse reste plane même sur un sol irrégulier. Structure garantie 20 ans.</p>
+      <p>Posée sur plots réglables : rien ne pourrit, la terrasse reste plane même sur un sol irrégulier.</p>
       <p><a href="/structure-terrasse-lyon/#galerie">Voir nos structures en images →</a></p>
     </div>
   </div>

@@ -61,7 +61,7 @@ const essencesAlu = [
   {
     nom: "Bambou N-Durance", evol: ["bambou-ndurance", ["À la pose", "3 ans"]], photo: ["bambou-ndurance-lame-2", "Lame de terrasse en bambou N-Durance brun-rouge", 267],
     texte: "Le même bambou densifié, en teinte brun-rouge à l'allure d'un bois exotique. Une alternative aux bois tropicaux, issue d'une ressource qui repousse vite.",
-    points: ["Très dur et dense", "Brun-rouge, aspect bois exotique", "Ressource qui repousse vite", "Garantie fabricant 25 ans*"],
+    points: ["Bambou compressé et thermo-traité", "Très dur et dense", "Garantie fabricant 25 ans*"],
   },
   {
     nom: "Accoya gris", evol: ["accoya-gris", ["À la pose", "3 ans"]], photo: ["accoya-gris-lame-3", "Lame de terrasse en accoya gris", 325],

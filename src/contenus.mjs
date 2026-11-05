@@ -634,7 +634,7 @@ const gardeCorps = {
 
 // ---------- Terrasse en lames aluminium ----------
 // Galerie Lames aluminium : 12 premières photos de « Tout voir » = les plus belles, teintes mélangées, disposition proche de la galerie Bois (demande d'Antoine, 05/11/2026).
-const ORDRE_GALERIE_ALU = ["alu-piscine-aspect-teck", "alu-piscine-carbet", "alu-piscine-blanche-vue", "alu-restaurant-canal-vignes", "alu-restaurant-vue-mer", "alu-piscine-haricot", "alu-piscine-maison-creole", "alu-pontons-lac", "alu-piscine-grise", "alu-terrasse-salon-parasol", "alu-piscine-debordement-mer", "alu-piscine-toit-terrasse"];
+const ORDRE_GALERIE_ALU = ["alu-piscine-carbet", "alu-pontons-lac", "alu-restaurant-vue-mer", "alu-piscine-haricot", "alu-piscine-cour", "alu-restaurant-canal-vignes", "alu-piscine-blanche-vue", "alu-piscine-debordement-baie", "alu-piscine-debordement-mer", "alu-piscine-jardin-tropical", "alu-piscine-grise", "alu-terrasse-banc-courbe"];
 
 // Ordre du nuancier de la page Lames aluminium (demande d'Antoine, 05/11/2026).
 const ORDRE_TEINTES_ALU = ["Simili bois", "Teck", "Teck vieilli", "Bois de grange", "Blanc veiné", "Gris uni"];
@@ -722,7 +722,6 @@ ${heroPlein({ fil: "Terrasses", h1: ['<span class="pc-nowrap">Terrasse aluminium
     <details class="faq"><summary>Comment entretenir une terrasse aluminium ?</summary><div><p>Un nettoyage à l'eau suffit. Il n'y a aucun traitement à refaire : ni saturateur, ni ponçage, ni lasure.</p></div></details>
     <details class="faq"><summary>Une terrasse aluminium chauffe-t-elle au soleil ?</summary><div><p>C'est le revêtement qui chauffe le moins, moins que le composite et moins que les bois durs. L'aluminium dissipe la chaleur au lieu de la stocker : la lame reste fraîche en plein soleil, et vous marchez dessus pieds nus l'été.</p></div></details>
     <details class="faq"><summary>Les lames peuvent-elles se déformer ?</summary><div><p>Non. L'aluminium ne gonfle pas avec l'humidité : pas de fente, pas de vrillage, pas d'écharde. Les lames restent droites dans le temps.</p></div></details>
-    <details class="faq"><summary>Est-ce adapté autour d'une piscine ?</summary><div><p>Oui. L'aluminium ne craint ni l'eau, ni les champignons, ni les insectes, et la surface reste saine au contact de l'eau, sans risque d'écharde pieds nus.</p></div></details>
     <details class="faq"><summary>Peut-on garder l'accès sous la terrasse ?</summary><div><p>Oui. Des trappes de visite peuvent être intégrées pour accéder à un regard, à un local technique ou à une vanne, sans démonter la terrasse.</p></div></details>
     <details class="faq"><summary>Quelle garantie pour une terrasse aluminium ?</summary><div><p>Les lames sont garanties 20 ans par le fabricant, sous conditions. Elles sont posées sur une ossature aluminium et plots réglables, elle aussi garantie 20 ans.</p></div></details>
   </div>

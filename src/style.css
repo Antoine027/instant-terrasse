@@ -1659,3 +1659,4 @@ h3.h2{font-size:clamp(1.5rem,1rem + 1.2vw,2.1rem);margin:0 0 14px}
 
 /* Téléphone : galeries en carrousel, pas de « Voir plus / Voir moins » */
 @media (max-width:700px){.voir-plus{display:none!important}}
+@media (max-width:700px){.lyon-texte .en-long{display:none}.lyon-texte .en-court{display:block}}

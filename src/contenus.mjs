@@ -75,10 +75,10 @@ const essencesTrad = [
   ["Pin", "Résineux traité, économique, pour les projets simples."],
   ["Ipé", "Bois exotique très dense, brun foncé, d'une grande longévité."],
   ["Douglas", "Résineux à la teinte rosée, naturellement plus durable que le pin."],
-  ["Cumaru", "Bois exotique dur, brun doré, alternative à l'ipé."],
+  ["Cumaru", "Bois exotique dur, brun-jaune à brun-rouge, alternative à l'ipé."],
   ["Mélèze", "Résineux dense et chaleureux, apprécié pour sa tenue en extérieur."],
   ["Garapa", "Bois exotique clair, jaune doré, pour une terrasse lumineuse."],
-  ["Itauba", "Bois exotique naturellement huileux, brun-vert, très stable."],
+  ["Itauba", "Bois exotique très stable, brun-jaune à brun olive, au toucher naturellement gras."],
   ["Jatoba", "Bois exotique dur aux reflets brun-rouge."],
   ["Muiracatiara (tigerwood)", "Bois exotique dur, veiné de brun foncé sur fond doré : un aspect tigré très décoratif."],
 ];

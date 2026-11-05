@@ -1690,3 +1690,16 @@ h3.h2{font-size:clamp(1.5rem,1rem + 1.2vw,2.1rem);margin:0 0 14px}
 @media (max-width:700px){.nuancier:not(.nuancier-2){grid-template-columns:repeat(3,1fr);gap:8px}.nuancier figcaption{font-size:.74rem;margin-top:6px}.nuancier figure{padding:5px 5px 8px}}
 @media (min-width:701px){.pc-nowrap{white-space:nowrap}}
 @media (max-width:700px){#teintes .evol-note{white-space:normal}}
+
+/* Page Aluminium : atouts en cartes à icône ; carrousel sur téléphone */
+.atouts-car{margin-top:24px;gap:16px}
+.atout-carte{padding:24px 24px 22px}
+.atout-ico{display:inline-flex;align-items:center;justify-content:center;width:46px;height:46px;border-radius:50%;background:var(--fond2);color:var(--accent-texte);margin-bottom:12px}
+.atout-ico svg{width:24px;height:24px}
+.atout-carte h3{font-size:1.08rem;margin:0 0 6px}
+.atout-carte p{margin:0;font-size:.95rem;line-height:1.5;color:var(--doux)}
+@media (max-width:700px){
+  .atouts-car{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:12px;margin:18px -16px 0;padding:4px 16px 14px;scrollbar-width:none}
+  .atouts-car::-webkit-scrollbar{display:none}
+  .atouts-car>.carte{flex:0 0 78%;scroll-snap-align:center;text-align:center}
+}

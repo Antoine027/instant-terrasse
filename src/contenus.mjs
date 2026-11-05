@@ -35,37 +35,37 @@ const essencesAlu = [
   {
     nom: "Thermofrêne", evol: ["thermofrene", ["À la pose", "6 mois", "1 an"]], photo: ["thermofrene", "Lame de terrasse en thermofrêne, teinte brun chaud au veinage marqué", 358],
     texte: "Le frêne, bois dur européen, traité thermiquement à cœur. Il prend une belle teinte brun chaud et garde un veinage très marqué, proche des bois exotiques.",
-    points: ["Bois dur européen", "Bois thermo-traité", "Veinage prononcé"],
+    points: ["Bois dur européen", "Bois thermo-traité", "Veinage prononcé", "Garantie fabricant 20 ans*"],
   },
   {
     nom: "Kebony", evol: ["kebony", ["À la pose", "6 mois", "1 an"]], photo: ["kebony", "Lame de terrasse en Kebony, teinte brune", 402],
     texte: "Un bois résineux modifié par un procédé d'origine végétale qui renforce durablement ses fibres. Brun profond à la pose, il évolue vers un gris argenté homogène.",
-    points: ["Traitement par injection d'origine végétale", "Bois très durable", "Patine gris argenté"],
+    points: ["Traitement par injection d'origine végétale", "Bois très durable", "Patine gris argenté", "Garantie fabricant 30 ans*"],
   },
   {
     nom: "Thermopin", evol: ["thermopin", ["À la pose", "6 mois", "1 an"]], photo: ["thermopin", "Lame de terrasse en thermopin, teinte miel avec nœuds apparents", 378],
     texte: "Un pin chauffé à haute température, sans produit chimique, pour le rendre plus stable et plus résistant. Teinte miel à la pose, nœuds apparents : le bois au naturel.",
-    points: ["Bois européen traité sans produit chimique", "Teinte miel", "Aspect bois naturel"],
+    points: ["Bois européen traité sans produit chimique", "Teinte miel", "Aspect bois naturel", "Garantie fabricant 15 ans*"],
   },
   {
     nom: "Accoya naturel", evol: ["accoya-naturel", ["À la pose", "6 mois", "2 ans"]], photo: ["accoya-naturel-lame-3", "Lame de terrasse en accoya naturel, teinte claire", 266],
     texte: "Un bois acétylé réputé pour sa stabilité : il bouge très peu avec l'humidité, ce qui limite les déformations. Teinte claire à la pose, qui grise naturellement avec le temps.",
-    points: ["Bois acétylé", "Très grande stabilité", "Teinte claire, sans nœuds"],
+    points: ["Bois acétylé", "Très grande stabilité", "Teinte claire, sans nœuds", "Garantie fabricant jusqu'à 50 ans*"],
   },
   {
     nom: "Bambou X-treme", evol: ["bambou-xtreme", ["À la pose", "6 mois", "2 ans"]], photo: ["bambou-xtreme-lame-2", "Lame de terrasse en bambou X-treme brun foncé", 338],
     texte: "Des fibres de bambou densifiées et traitées pour en faire des lames très dures. Le X-treme est brun foncé, avec une surface finement texturée. Le bambou repousse en quelques années.",
-    points: ["Très dur et dense", "Brun foncé", "Ressource qui repousse vite"],
+    points: ["Très dur et dense", "Brun foncé", "Ressource qui repousse vite", "Garantie fabricant 25 ans*"],
   },
   {
     nom: "Bambou N-Durance", evol: ["bambou-ndurance", ["À la pose", "3 ans"]], photo: ["bambou-ndurance-lame-2", "Lame de terrasse en bambou N-Durance brun-rouge", 267],
     texte: "Le même bambou densifié, en teinte brun-rouge à l'allure d'un bois exotique. Une alternative aux bois tropicaux, issue d'une ressource qui repousse vite.",
-    points: ["Très dur et dense", "Brun-rouge, aspect bois exotique", "Ressource qui repousse vite"],
+    points: ["Très dur et dense", "Brun-rouge, aspect bois exotique", "Ressource qui repousse vite", "Garantie fabricant 25 ans*"],
   },
   {
     nom: "Accoya gris", evol: ["accoya-gris", ["À la pose", "3 ans"]], photo: ["accoya-gris-lame-3", "Lame de terrasse en accoya gris", 325],
     texte: "Le même bois acétylé, teinté gris : la terrasse a son aspect patiné dès la pose, sans attendre que le bois grise.",
-    points: ["Bois acétylé", "Très grande stabilité", "Aspect patiné immédiat"],
+    points: ["Bois acétylé", "Très grande stabilité", "Aspect patiné immédiat", "Garantie fabricant jusqu'à 50 ans*"],
   },
 ];
 
@@ -122,7 +122,7 @@ ${heroPlein({ fil: "Terrasses", h1: ["Terrasse bois", "sur mesure à Lyon"], kic
         ${e.evol ? evolution(e.nom, ...e.evol) : ""}
       </article>`).join("")}
     </div>
-    <p class="evol-note"><span class="en-long">Teintes indicatives : le rendu dépend de l'exposition. Un saturateur prolonge la teinte d'origine.</span><span class="en-court">Teintes indicatives. Un saturateur prolonge la teinte d'origine.</span></p>
+    <p class="evol-note"><span class="en-long">Teintes indicatives : le rendu dépend de l'exposition. Un saturateur prolonge la teinte d'origine. *Garanties fabricants, sous conditions.</span><span class="en-court">Teintes indicatives. Un saturateur prolonge la teinte d'origine.<br>*Garanties fabricants, sous conditions.</span></p>
   </div>
 </section>
 

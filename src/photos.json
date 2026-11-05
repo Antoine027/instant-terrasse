@@ -3913,54 +3913,6 @@
   "essence": "Teck"
  },
  {
-  "cle": "rail-carrelage-alu-standard",
-  "dossier": "structures",
-  "categorie": "structure-alu",
-  "alt": "Rail aluminium double pour terrasse carrelage sur structure, vue en coupe",
-  "largeurs": [
-   400,
-   600,
-   800,
-   1000,
-   1200,
-   1400,
-   1440
-  ],
-  "ratio": 1.7778
- },
- {
-  "cle": "rail-carrelage-alu-haut",
-  "dossier": "structures",
-  "categorie": "structure-alu",
-  "alt": "Rail aluminium double de grande hauteur pour terrasse carrelage, vue en coupe",
-  "largeurs": [
-   400,
-   600,
-   800,
-   1000,
-   1200,
-   1400,
-   1440
-  ],
-  "ratio": 1.7778
- },
- {
-  "cle": "rail-carrelage-alu-bas",
-  "dossier": "structures",
-  "categorie": "structure-alu",
-  "alt": "Rail aluminium double extra-plat pour terrasse carrelage, vue en coupe",
-  "largeurs": [
-   400,
-   600,
-   800,
-   1000,
-   1200,
-   1400,
-   1440
-  ],
-  "ratio": 1.7778
- },
- {
   "cle": "teinte-composite-vert-olive",
   "dossier": "composite",
   "categorie": "teinte-composite",

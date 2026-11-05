@@ -46,7 +46,7 @@ const essencesAlu = [
   {
     nom: "Thermopin", evol: ["thermopin", ["À la pose", "6 mois", "1 an"]], photo: ["thermopin", "Lame de terrasse en thermopin, teinte miel avec nœuds apparents", 378],
     texte: "Un pin chauffé à haute température, sans produit chimique, pour le rendre plus stable et plus résistant. Teinte miel à la pose, nœuds apparents : le bois au naturel.",
-    points: ["Bois européen traité sans produit chimique", "Teinte miel", "Aspect bois naturel", "Garantie fabricant 15 ans*"],
+    points: ["Bois thermo-traité", "Aspect bois naturel", "Garantie fabricant 15 ans*"],
   },
   {
     nom: "Accoya naturel", evol: ["accoya-naturel", ["À la pose", "6 mois", "2 ans"]], photo: ["accoya-naturel-lame-3", "Lame de terrasse en accoya naturel, teinte claire", 266],

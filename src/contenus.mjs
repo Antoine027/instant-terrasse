@@ -35,37 +35,37 @@ const cta = (titre = "Un projet de terrasse en bois ?", texte = "Laissez votre n
 const essencesAlu = [
   {
     nom: "Thermofrêne", evol: ["thermofrene", ["À la pose", "6 mois", "1 an"]], photo: ["thermofrene", "Lame de terrasse en thermofrêne, teinte brun chaud au veinage marqué", 358],
-    texte: "Le frêne, bois dur européen, chauffé à cœur à 215 °C. Il prend une belle teinte brun chaud et garde un veinage très marqué, proche des bois exotiques.",
+    texte: "Le frêne, bois dur européen, chauffé à cœur à 215 °C sans produit chimique. Il prend une belle teinte brun chaud et garde un veinage très marqué, proche des bois exotiques.",
     points: ["Bois thermo-traité", "Veinage prononcé", "Garantie 20 ans*"],
   },
   {
     nom: "Kebony", evol: ["kebony", ["À la pose", "6 mois", "1 an"]], photo: ["kebony", "Lame de terrasse en Kebony, teinte brune", 402],
-    texte: "Du pin radiata issu de plantations certifiées FSC, modifié par furfurylation : un procédé d'origine végétale qui renforce durablement ses fibres. Brun profond à la pose, il évolue vers un gris argenté homogène.",
+    texte: "Du pin radiata certifié FSC, modifié par furfurylation : un procédé d'origine végétale qui renforce ses fibres. Brun profond à la pose, il évolue vers un gris argenté homogène.",
     points: ["Traitement par injection d'origine végétale", "Patine gris argenté", "Garantie 30 ans*"],
   },
   {
     nom: "Thermopin", evol: ["thermopin", ["À la pose", "6 mois", "1 an"]], photo: ["thermopin", "Lame de terrasse en thermopin, teinte miel avec nœuds apparents", 378],
-    texte: "Un pin chauffé à 215 °C, sans produit chimique, pour le rendre plus stable et plus résistant. Teinte miel à la pose, nœuds apparents : le bois au naturel.",
+    texte: "Un pin européen chauffé à 215 °C, sans produit chimique, pour le rendre plus stable et plus résistant. Teinte miel à la pose, nœuds apparents : le bois au naturel.",
     points: ["Bois thermo-traité", "Aspect bois naturel", "Garantie 15 ans*"],
   },
   {
     nom: "Accoya naturel", evol: ["accoya-naturel", ["À la pose", "6 mois", "2 ans"]], photo: ["accoya-naturel-lame-3", "Lame de terrasse en accoya naturel, teinte claire", 266],
-    texte: "Du pin radiata issu de plantations certifiées FSC, acétylé à cœur et réputé pour sa stabilité : il bouge très peu avec l'humidité, ce qui limite les déformations. Teinte claire à la pose, qui grise naturellement avec le temps.",
+    texte: "Du pin radiata certifié FSC, acétylé à cœur : il bouge très peu avec l'humidité, ce qui limite les déformations. Teinte claire à la pose, qui grise naturellement avec le temps.",
     points: ["Bois acétylé", "Très grande stabilité", "Garantie jusqu'à 50 ans*"],
   },
   {
     nom: "Bambou X-treme", evol: ["bambou-xtreme", ["À la pose", "6 mois", "2 ans"]], photo: ["bambou-xtreme-lame-2", "Lame de terrasse en bambou X-treme brun foncé", 338],
-    texte: "Des fibres de bambou densifiées et traitées pour en faire des lames très dures. Le X-treme est brun foncé, avec une surface finement texturée. Le bambou repousse en quelques années.",
+    texte: "Des fibres de bambou compressées et thermo-traitées pour en faire des lames très dures. Brun foncé, à la surface finement texturée. Le bambou repousse en quelques années.",
     points: ["Bambou compressé et thermo-traité", "Très dur et dense", "Garantie 25 ans*"],
   },
   {
     nom: "Bambou N-Durance", evol: ["bambou-ndurance", ["À la pose", "3 ans"]], photo: ["bambou-ndurance-lame-2", "Lame de terrasse en bambou N-Durance brun-rouge", 267],
-    texte: "Le même bambou densifié, en teinte brun-rouge à l'allure d'un bois exotique. Une alternative aux bois tropicaux, issue d'une ressource qui repousse vite.",
+    texte: "Le même bambou compressé, en teinte brun-rouge à l'allure d'un bois exotique. Une alternative aux bois tropicaux, issue d'une ressource qui repousse en quelques années.",
     points: ["Bambou compressé et thermo-traité", "Très dur et dense", "Garantie 25 ans*"],
   },
   {
     nom: "Accoya gris", evol: ["accoya-gris", ["À la pose", "3 ans"]], photo: ["accoya-gris-lame-3", "Lame de terrasse en accoya gris", 325],
-    texte: "Le même bois acétylé, teinté gris : la terrasse a son aspect patiné dès la pose, sans attendre que le bois grise.",
+    texte: "Le même pin radiata acétylé, teinté gris dans la masse : la terrasse a son aspect patiné dès la pose, sans attendre que le bois grise, et le garde en vieillissant.",
     points: ["Bois acétylé", "Très grande stabilité", "Garantie jusqu'à 50 ans*"],
   },
 ];

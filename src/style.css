@@ -1672,3 +1672,10 @@ h3.h2{font-size:clamp(1.5rem,1rem + 1.2vw,2.1rem);margin:0 0 14px}
 @media (max-width:700px){.galerie-bois .filtre[data-filtre="tout"]{order:2}.galerie-bois .filtre:last-child{order:-1}}
 
 .lien-methode a{font:700 .95rem Montserrat,sans-serif;color:var(--accent-texte);text-decoration:underline;text-underline-offset:3px}
+/* Ordinateur : la dernière carte d'essence (Accoya gris) occupe toute la largeur */
+@media (min-width:1061px){
+  .grille-essences>.essence:last-child:nth-child(odd){grid-column:1/-1;grid-template-columns:minmax(0,1fr) minmax(0,1fr) minmax(0,1.3fr);grid-template-areas:"photo evol texte";grid-template-rows:var(--bande);background:linear-gradient(160deg,#fff 0%,var(--fond2) 100%)}
+  .grille-essences>.essence:last-child:nth-child(odd) .evol-pastilles figure{flex:0 0 calc((100% - 16px) / 3)!important}
+  .grille-essences>.essence:last-child:nth-child(odd) .evol-pastilles img{max-height:150px!important;width:auto;max-width:100%;margin:0 auto;display:block}
+  .grille-essences>.essence:last-child:nth-child(odd) .essence-texte{justify-content:center;padding:24px 32px 24px 16px}
+}

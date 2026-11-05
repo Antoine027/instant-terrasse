@@ -1645,5 +1645,5 @@ h3.h2{font-size:clamp(1.5rem,1rem + 1.2vw,2.1rem);margin:0 0 14px}
 /* Page Bois : section Lyon et FAQ sur la même ligne (ordinateur) */
 .lyon-faq{display:grid;gap:56px;align-items:start}
 .lyon-texte h2{margin-top:0}
-@media (min-width:901px){.lyon-faq{grid-template-columns:minmax(0,1fr) minmax(0,1.25fr)}.lyon-faq .faq-liste{max-width:none}}
+@media (min-width:901px){.lyon-faq{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}.lyon-faq .faq-liste{max-width:none}main .lyon-faq h2{font-size:clamp(1.6rem,1.9vw,2.2rem)}}
 @media (max-width:900px){.lyon-faq{gap:36px}}

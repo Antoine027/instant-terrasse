@@ -4043,5 +4043,73 @@
    1440
   ],
   "ratio": 1.7778
+ },
+ {
+  "cle": "teinte-composite-vert-olive",
+  "dossier": "composite",
+  "categorie": "teinte-composite",
+  "essence": "Vert olive",
+  "alt": "Lame de terrasse composite teinte vert olive",
+  "largeurs": [
+   400,
+   600,
+   800,
+   1000,
+   1200,
+   1400,
+   1536
+  ],
+  "ratio": 1.5
+ },
+ {
+  "cle": "teinte-composite-miel",
+  "dossier": "composite",
+  "categorie": "teinte-composite",
+  "essence": "Miel",
+  "alt": "Lame de terrasse composite teinte miel",
+  "largeurs": [
+   400,
+   600,
+   800,
+   1000,
+   1200,
+   1400,
+   1536
+  ],
+  "ratio": 1.5
+ },
+ {
+  "cle": "teinte-composite-gris-anthracite",
+  "dossier": "composite",
+  "categorie": "teinte-composite",
+  "essence": "Gris anthracite",
+  "alt": "Lame de terrasse composite teinte gris anthracite",
+  "largeurs": [
+   400,
+   600,
+   800,
+   1000,
+   1200,
+   1400,
+   1536
+  ],
+  "ratio": 1.5
+ },
+ {
+  "cle": "teinte-composite-brun-fonce",
+  "dossier": "composite",
+  "categorie": "teinte-composite",
+  "essence": "Brun foncé",
+  "alt": "Lame de terrasse composite teinte brun foncé",
+  "largeurs": [
+   400,
+   600,
+   800,
+   1000,
+   1200,
+   1400,
+   1536
+  ],
+  "ratio": 1.5
  }
 ]

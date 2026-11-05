@@ -633,6 +633,9 @@ const gardeCorps = {
 };
 
 // ---------- Terrasse en lames aluminium ----------
+// Ordre du nuancier de la page Lames aluminium (demande d'Antoine, 05/11/2026).
+const ORDRE_TEINTES_ALU = ["Simili bois", "Teck vieilli", "Teck", "Blanc veiné", "Bois de grange", "Gris uni"];
+
 // Types de projets mis en avant sur la page Lames aluminium : lien, titre, texte, photo.
 const PROJETS_ALU = [
   ["/terrasse-piscine-lyon/", "Plage de piscine", "Une surface saine au contact de l'eau.", "alu-piscine-debordement-baie"],
@@ -654,7 +657,7 @@ ${heroPlein({ fil: "Terrasses", h1: ['<span class="pc-nowrap">Terrasse aluminium
     <p class="sous-titre">Décor bois ou teinte unie</p>
     <h2>Nos teintes</h2>
     <p class="chapo">Des décors bois du plus clair au plus chaud, ou un gris uni pour un style épuré. Vous voyez les échantillons en vrai, chez vous, lors du rendez-vous.</p>
-    <div class="nuancier">${PHOTOS.filter((p) => p.categorie === "teinte-alu").map((p) => `<figure>${imgPhoto(p.cle, { sizes: "(max-width:560px) 45vw, 230px" })}<figcaption>${p.essence}</figcaption></figure>`).join("")}</div>
+    <div class="nuancier">${PHOTOS.filter((p) => p.categorie === "teinte-alu").sort((a, b) => ORDRE_TEINTES_ALU.indexOf(a.essence) - ORDRE_TEINTES_ALU.indexOf(b.essence)).map((p) => `<figure>${imgPhoto(p.cle, { sizes: "(max-width:560px) 45vw, 230px" })}<figcaption>${p.essence}</figcaption></figure>`).join("")}</div>
     <p class="evol-note">Lames garanties 20 ans*. D'autres teintes, comme le beige, sont possibles sur mesure. Teintes indicatives.<br>*Garantie fabricant, sous conditions.</p>
   </div>
 </section>

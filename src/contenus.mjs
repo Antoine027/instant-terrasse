@@ -1243,7 +1243,7 @@ const toitTerrasse = {
     fil: "Projets",
     h1: ["Toit-terrasse", "aménagé"], kicker: "Toitures plates aménagées à Lyon et dans sa région",
     chapo: "Une toiture plate peut devenir la plus belle pièce de la maison. Le revêtement repose sur des plots réglables posés sur l'étanchéité, sans jamais la percer.",
-    photo: "ambiance-toit-terrasse", position: "40% 60%",
+    photo: "carrelage-toit-terrasse-montagnes", position: "55% 60%",
     atouts: [
       ["L'étanchéité intacte", "Les plots reposent sur la membrane, avec une protection adaptée : aucune fixation ne la traverse."],
       ["De niveau malgré la pente", "Les plots réglables rattrapent la pente d'écoulement de la toiture."],

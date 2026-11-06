@@ -75,9 +75,9 @@
   "dossier": "terrasses",
   "position": "45% 55%"
  },
- "ambiance-toit-terrasse": {
+ "carrelage-toit-terrasse-montagnes": {
   "dossier": "terrasses",
-  "position": "40% 60%"
+  "position": "55% 60%"
  },
  "terrasse-thermofrene-pool-house": {
   "dossier": "bois",

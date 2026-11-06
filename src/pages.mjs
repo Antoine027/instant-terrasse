@@ -270,7 +270,7 @@ const accueil = `
       <ul class="puces">
         <li><strong>Des produits sélectionnés pour leur qualité.</strong></li>
         <li><strong>Structure aluminium garantie 20 ans.</strong></li>
-        <li><strong>Pose assurée en garantie décennale.</strong></li>
+        <li><strong>Garantie décennale.</strong></li>
       </ul>
     </div>
     <ol class="etapes etapes-verticales">${etapes.map(([t, x, c], i) => `<li><span class="etape-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">${ICONES_ETAPES[i]}</svg><b>${i + 1}</b></span><h3>${t}</h3><p><span class="long">${x}</span><span class="court">${c}</span></p></li>`).join("")}</ol>

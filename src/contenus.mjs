@@ -27,7 +27,7 @@ const heroPlein = ({ fil, h1, kicker, chapo, photo, position = "65% 50%", action
 </section>`;
 
 // Bas de page produit : formulaire de rappel court (projet pré-coché selon la page).
-const cta = (titre = "Un projet de terrasse en bois ?", texte = "Laissez votre numéro : nous vous rappelons pour en parler et organiser la visite, gratuite et sans engagement.") =>
+const cta = (titre = "Un projet de terrasse en bois ?", texte = "Laissez votre numéro : nous vous rappelons pour en parler et organiser le rendez-vous, gratuit et sans engagement.") =>
   blocRappel(titre, texte.replace(/^Devis gratuit et sans engagement\. /, "Laissez votre numéro, nous vous rappelons. "), true);
 
 // ---------- Terrasse bois ----------
@@ -727,7 +727,7 @@ ${heroPlein({ fil: "Terrasses", h1: ['<span class="pc-nowrap">Terrasse aluminium
   </div>
   </div>
 </section>
-${cta("Un projet de terrasse aluminium ?", "Laissez votre numéro : nous vous rappelons pour en parler et organiser la visite, gratuite et sans engagement.")}`,
+${cta("Un projet de terrasse aluminium ?", "Laissez votre numéro : nous vous rappelons pour en parler et organiser le rendez-vous, gratuit et sans engagement.")}`,
 };
 
 // ---------- Terrasse carrelage ----------
@@ -815,7 +815,7 @@ ${heroPlein({ fil: "Terrasses", h1: ['<span class="pc-nowrap">Terrasse carrelage
   </div>
   </div>
 </section>
-${cta("Un projet de terrasse carrelage ?", "Laissez votre numéro : nous vous rappelons pour en parler et organiser la visite, gratuite et sans engagement.")}`,
+${cta("Un projet de terrasse carrelage ?", "Laissez votre numéro : nous vous rappelons pour en parler et organiser le rendez-vous, gratuit et sans engagement.")}`,
 };
 
 // ---------- Bardage aluminium ----------
@@ -965,7 +965,7 @@ ${heroPlein({ fil: "Terrasses", h1: ['<span class="pc-nowrap">Terrasse composite
   </div>
   </div>
 </section>
-${cta("Un projet de terrasse composite ?", "Laissez votre numéro : nous vous rappelons pour en parler et organiser la visite, gratuite et sans engagement.")}`,
+${cta("Un projet de terrasse composite ?", "Laissez votre numéro : nous vous rappelons pour en parler et organiser le rendez-vous, gratuit et sans engagement.")}`,
 };
 
 // ---------- Store banne ----------

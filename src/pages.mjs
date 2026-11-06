@@ -188,7 +188,7 @@ const CHOIX_PROJET = [
 ];
 
 // Bloc « rappel » (formulaire court + note Google) : accueil et bas des pages produit.
-export const blocRappel = (titre = "Parlons de votre projet", texte = "Laissez votre numéro : nous vous rappelons pour en parler et organiser la visite, gratuite et sans engagement.", cocher = false, balise = "h2") => `
+export const blocRappel = (titre = "Parlons de votre projet", texte = "Laissez votre numéro : nous vous rappelons pour en parler et organiser le rendez-vous, gratuit et sans engagement.", cocher = false, balise = "h2") => `
 <section id="rappel" class="bloc bloc-cta bloc-rappel${balise === "h1" ? " rappel-page" : ""}">
   <div class="conteneur deux-colonnes">
     <div>
@@ -306,7 +306,7 @@ ${blocRappel()}`;
 const projetsListe = [...UNIVERS.flatMap((u) => u.groupes.flatMap((g) => g.pages.map((p) => p[1]))), "Autre projet"];
 
 const contact = `
-${blocRappel("Parlez-nous de votre projet", "Laissez votre numéro : nous vous rappelons pour en parler et organiser la visite chez vous, avec les échantillons. Devis détaillé et plan 3D offerts.", true, "h1")}
+${blocRappel("Parlez-nous de votre projet", "Laissez votre numéro : nous vous rappelons pour en parler et organiser le rendez-vous chez vous, avec les échantillons. Devis détaillé et plan 3D offerts.", true, "h1")}
 <section class="bloc bloc-alt">
   <div class="conteneur conteneur-etroit">
     <h2>Avant votre demande</h2>

@@ -20,7 +20,7 @@ const heroPlein = ({ fil, h1, kicker, chapo, photo, position = "65% 50%", action
     <p class="kicker">${kicker}</p>
     <h1><span class="fin">${h1[0]}</span> <span class="fort">${h1[1]}</span></h1>
     <p class="chapo">${chapo}</p>
-    <p class="actions">${actions ?? `<a class="bouton" href="/contact/">Demander une visite gratuite</a> <a class="bouton bouton-blanc" href="#galerie">Voir les photos</a>`}</p>
+    <p class="actions">${actions ?? `<a class="bouton" href="/contact/">Demander un devis gratuit</a> <a class="bouton bouton-blanc" href="#galerie">Voir les photos</a>`}</p>
     <p class="hero-avis hero-avis-mobile">${BADGE_AVIS}</p>
     ${TRIO}
   </div>
@@ -105,7 +105,7 @@ const terrasseBois = {
   corps: `
 ${heroPlein({ fil: "Terrasses", h1: ["Terrasse bois", 'sur mesure <span class="lyon-l">à Lyon</span>'], kicker: "Terrasses bois à Lyon et dans sa région", photo: "terrasse-kebony-piscine-debordement", position: "60% 55%",
   chapo: `<span class="en-long">Nos essences phares sur structure aluminium, et d'autres essences sur structure traditionnelle : nous vous aidons à choisir l'essence qui correspond à votre maison, à votre budget et au temps que vous voulez consacrer à l'entretien.</span><span class="en-court">Thermofrêne, kebony, accoya, ipé… Nous vous aidons à choisir le bois fait pour votre extérieur.</span>`,
-  actions: `<a class="bouton" href="/contact/">Demander une visite gratuite</a> <a class="bouton bouton-blanc" href="#essences-aluminium">Voir les essences</a>` })}
+  actions: `<a class="bouton" href="/contact/">Demander un devis gratuit</a> <a class="bouton bouton-blanc" href="#essences-aluminium">Voir les essences</a>` })}
 
 <section id="essences-aluminium" class="bloc">
   <div class="conteneur">
@@ -417,7 +417,7 @@ const bardageBois = {
   corps: `
 ${heroPlein({ fil: "Aménagements", h1: ["Bardage bois", "sur mesure"], kicker: "Façades, murs et abris à Lyon et dans sa région", photo: "bardage-thermofrene-maison", position: "70% 45%",
   chapo: "Habiller une façade, une extension, un mur de clôture ou un abri avec des bois sélectionnés pour durer en extérieur, et assortis à votre terrasse si vous le souhaitez.",
-  actions: `<a class="bouton" href="/contact/">Demander une visite gratuite</a> <a class="bouton bouton-blanc" href="#essences-bardage">Voir les essences</a>` })}
+  actions: `<a class="bouton" href="/contact/">Demander un devis gratuit</a> <a class="bouton bouton-blanc" href="#essences-bardage">Voir les essences</a>` })}
 
 <section id="essences-bardage" class="bloc">
   <div class="conteneur">
@@ -655,7 +655,7 @@ const terrasseAluminium = {
   corps: `
 ${heroPlein({ fil: "Terrasses", h1: ['<span class="pc-nowrap">Terrasse aluminium</span>', 'sur mesure <span class="lyon-l">à Lyon</span>'], kicker: "Terrasses aluminium à Lyon et dans sa région", photo: "alu-piscine-aspect-teck", position: "60% 50%",
   chapo: `<span class="en-long">L'aspect du bois, sans ses contraintes : des lames aluminium qui ne pourrissent pas, ne se déforment pas et ne demandent aucun traitement.</span><span class="en-court">Décor bois ou teinte unie : des lames qui ne pourrissent pas et ne demandent aucun traitement.</span>`,
-  actions: `<a class="bouton" href="/contact/">Demander une visite gratuite</a> <a class="bouton bouton-blanc" href="#teintes">Voir les teintes</a>` })}
+  actions: `<a class="bouton" href="/contact/">Demander un devis gratuit</a> <a class="bouton bouton-blanc" href="#teintes">Voir les teintes</a>` })}
 
 <section id="teintes" class="bloc">
   <div class="conteneur">
@@ -743,7 +743,7 @@ const terrasseCarrelage = {
   corps: `
 ${heroPlein({ fil: "Terrasses", h1: ['<span class="pc-nowrap">Terrasse carrelage</span>', 'sur mesure <span class="lyon-l">à Lyon</span>'], kicker: "Terrasses carrelage à Lyon et dans sa région", photo: "carrelage-beige-pergola-toit-fixe", position: "60% 70%",
   chapo: `<span class="en-long">Des dalles de grès cérame de 2 cm, posées à sec sur plots ou sur notre structure aluminium : ni colle, ni joint, ni dalle béton à couler. Aspect pierre ou bois, jusqu'au 120 × 120.</span><span class="en-court">Grès cérame de 2 cm posé à sec, sans colle ni dalle béton : aspect pierre ou bois, jusqu'au 120 × 120.</span>`,
-  actions: `<a class="bouton" href="/contact/">Demander une visite gratuite</a> <a class="bouton bouton-blanc" href="#teintes">Voir les teintes</a>` })}
+  actions: `<a class="bouton" href="/contact/">Demander un devis gratuit</a> <a class="bouton bouton-blanc" href="#teintes">Voir les teintes</a>` })}
 
 <section id="teintes" class="bloc">
   <div class="conteneur">
@@ -891,7 +891,7 @@ const terrasseComposite = {
   corps: `
 ${heroPlein({ fil: "Terrasses", h1: ['<span class="pc-nowrap">Terrasse composite</span>', 'sur mesure <span class="lyon-l">à Lyon</span>'], kicker: "Terrasses composite à Lyon et dans sa région", photo: "composite-gris-piscine", position: "50% 60%",
   chapo: `<span class="en-long">Des lames qui gardent leur aspect sans saturateur ni ponçage, posées sur notre structure aluminium : la terrasse pour profiter de l'extérieur sans y passer ses week-ends.</span><span class="en-court">Sans saturateur ni ponçage : la terrasse pour profiter de l'extérieur sans y passer ses week-ends.</span>`,
-  actions: `<a class="bouton" href="/contact/">Demander une visite gratuite</a> <a class="bouton bouton-blanc" href="#teintes">Voir les teintes</a>` })}
+  actions: `<a class="bouton" href="/contact/">Demander un devis gratuit</a> <a class="bouton bouton-blanc" href="#teintes">Voir les teintes</a>` })}
 
 <section id="teintes" class="bloc">
   <div class="conteneur">
@@ -1093,7 +1093,7 @@ const nosTerrasses = {
 ${heroPlein({ fil: "Terrasses", h1: ["Bois, composite, aluminium", "ou carrelage ?"], kicker: "Comparatif des revêtements de terrasse",
   chapo: "Chaque matériau a ses qualités. Le bon choix dépend de l'usage, de l'exposition et du temps que vous voulez consacrer à l'entretien.",
   photo: "terrasse-accoya-naturel-piscine-vue-haut", position: "60% 50%",
-  actions: `<a class="bouton" href="/contact/">Demander une visite gratuite</a> <a class="bouton bouton-blanc" href="#comparatif">Voir le comparatif</a>` })}
+  actions: `<a class="bouton" href="/contact/">Demander un devis gratuit</a> <a class="bouton bouton-blanc" href="#comparatif">Voir le comparatif</a>` })}
 
 <section id="comparatif" class="bloc">
   <div class="conteneur">
@@ -1286,7 +1286,7 @@ const realisations = {
 ${heroPlein({ fil: "Galerie", h1: ["Galerie", "d'inspiration"], kicker: "Terrasses, pergolas, bardages et garde-corps",
   chapo: "Toute notre gamme en images, classée par produit. Ces photos sont des illustrations de nos fabricants ; les photos de nos propres chantiers viendront s'ajouter ici au fil des projets.",
   photo: "terrasse-thermofrene-pool-house", position: "60% 50%",
-  actions: `<a class="bouton" href="/contact/">Demander une visite gratuite</a> <a class="bouton bouton-blanc" href="#galerie">Voir les photos</a>` })}
+  actions: `<a class="bouton" href="/contact/">Demander un devis gratuit</a> <a class="bouton bouton-blanc" href="#galerie">Voir les photos</a>` })}
 <section id="galerie" class="bloc">
   <div class="conteneur">
     ${galerie(PHOTOS.filter((p) => libelleGalerie[p.categorie]).sort((a, b) => ordreGalerie.indexOf(a.categorie) - ordreGalerie.indexOf(b.categorie)).map((p) => p.cle), { titre: "Toutes les photos", intro: "Choisissez une catégorie, et cliquez sur une photo pour l'agrandir.", groupe: (p) => libelleGalerie[p.categorie] })}
@@ -1312,7 +1312,7 @@ const pergolas = {
 ${heroPlein({ fil: "Aménagements", h1: ["Quelle pergola", "pour votre terrasse ?"], kicker: "Pergolas sur mesure à Lyon et dans sa région",
   chapo: "Bioclimatique, à toile rétractable ou à toit fixe : trois façons de couvrir votre 5<sup>e</sup> pièce, selon ce que vous attendez de l'ombre, de la pluie et de la lumière.",
   photo: "pergola-bioclimatique-salon-piscine", position: "60% 50%",
-  actions: `<a class="bouton" href="/contact/">Demander une visite gratuite</a> <a class="bouton bouton-blanc" href="#comparatif">Voir le comparatif</a>` })}
+  actions: `<a class="bouton" href="/contact/">Demander un devis gratuit</a> <a class="bouton bouton-blanc" href="#comparatif">Voir le comparatif</a>` })}
 
 <section id="comparatif" class="bloc">
   <div class="conteneur">

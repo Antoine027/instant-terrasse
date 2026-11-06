@@ -230,7 +230,7 @@ const accueil = `
     <h1><span class="fin">Créez la 5<sup>e</sup> pièce</span> <span class="fort">de votre maison</span></h1>
     <p class="chapo">Une terrasse pensée comme une pièce à part entière&nbsp;: le lien entre l'intérieur et l'extérieur.</p>
     <p class="actions">
-      <a class="bouton" href="/contact/">Demander une visite gratuite</a>
+      <a class="bouton" href="/contact/">Demander un devis gratuit</a>
       <a class="bouton bouton-blanc" href="#piece">Découvrir</a>
     </p>
     <p class="hero-avis">${BADGE_AVIS}</p>

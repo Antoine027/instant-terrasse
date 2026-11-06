@@ -107,7 +107,7 @@ const entete = (actuel) => `
         <li class="menu-item"><a class="menu-lien${actuel === "/realisations/" ? " actif" : ""}" href="/realisations/">${ICONES_MENU.galerie}<span class="mm-nom">Galerie</span></a></li>
         <li class="menu-item"><a class="menu-lien" href="/#methode">${ICONES_MENU.methode}<span class="mm-nom">Notre méthode</span></a></li>
         ${menuUnivers(UNIVERS.find((u) => u.cle === "professionnels"), actuel)}
-        <li class="menu-cta"><a class="bouton" href="/contact/">Demander une visite gratuite</a><a class="menu-tel" href="tel:${SITE.telLien}">ou appelez le ${SITE.tel}</a></li>
+        <li class="menu-cta"><a class="bouton" href="/contact/">Demander un devis gratuit</a><a class="menu-tel" href="tel:${SITE.telLien}">ou appelez le ${SITE.tel}</a></li>
       </ul>
     </nav>
     <a class="bouton bouton-petit entete-cta" href="/contact/">Devis gratuit</a>

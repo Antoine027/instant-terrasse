@@ -320,8 +320,8 @@ ${heroPlein({ fil: "Terrasses", h1: ['<span class="pc-nowrap">Structure aluminiu
       <li><strong>Sol dur</strong><span>Dalle béton, ancienne terrasse : la structure se pose directement, sur cales, ou sur plots pour rattraper une hauteur.</span></li>
       <li><strong>Sol stabilisé</strong><span>Sur concassé : les plots réglables reprennent les écarts, sans couler de béton.</span></li>
       <li><strong>Toit-terrasse</strong><span>La structure repose sur l'étanchéité sans la percer. Voir le <a href="/toit-terrasse-lyon/">toit-terrasse</a>.</span></li>
-      <li><strong>Terrasse surélevée</strong><span>Avec des réhausses, les plots montent jusqu'à environ 40&nbsp;cm. Au-delà, poutres et poteaux.</span></li>
-      <li><strong>Terrain en pente</strong><span>Les plots permettent de régler la hauteur de la terrasse et de s'adapter au terrain en pente et aux différences de niveau. Forte pente : voir la <a href="/terrasse-sur-pilotis-lyon/">terrasse sur pilotis</a>.</span></li>
+      <li><strong>Terrasse surélevée</strong><span>Avec des réhausses, les plots montent jusqu'à environ 40&nbsp;cm. Au-delà, poutres et poteaux. C'est la <a href="/terrasse-sur-pilotis-lyon/">terrasse sur pilotis</a>.</span></li>
+      <li><strong>Terrain en pente</strong><span>Les plots permettent de régler la hauteur de la terrasse et de s'adapter au terrain en pente et aux différences de niveau.</span></li>
     </ul>
   </div>
 </section>

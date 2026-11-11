@@ -1880,3 +1880,9 @@ li.mm-sep{border-top:2px solid rgba(47,52,55,.22);margin-top:10px;padding-top:10
   .structure-bandeau.structure-duo .cs-img{order:-1;height:200px;justify-content:flex-start}
   .structure-bandeau.structure-duo .cs-img img{max-height:200px}
 }
+/* Aluminium (téléphone) : teintes en carrousel */
+@media (max-width:700px){
+  #teintes .nuancier-car{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:12px;margin:20px -16px 0;padding:4px 16px 14px;scrollbar-width:none}
+  #teintes .nuancier-car::-webkit-scrollbar{display:none}
+  #teintes .nuancier-car>figure{flex:0 0 44%;scroll-snap-align:center}
+}

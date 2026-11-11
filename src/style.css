@@ -1865,3 +1865,7 @@ li.mm-sep{border-top:2px solid rgba(47,52,55,.22);margin-top:10px;padding-top:10
 @media (max-width:1240px){li.mm-sep{border-top:0;margin-top:0;padding-top:0}}
 /* En-têtes produit : note Google aussi sur ordinateur, comme l'accueil */
 @media (min-width:701px){.hero-produit .hero-avis-mobile{display:block;margin:18px 0 0;text-align:left}}
+.structure-bandeau-suite{margin-top:16px}
+.cs-photo-grand img{mix-blend-mode:normal;object-fit:cover;border-radius:10px;width:100%!important;height:100%;max-height:none}
+@media (min-width:701px){.structure-bandeau .cs-photo-grand{height:220px}}
+@media (max-width:700px){.cs-photo-grand{height:100px}}

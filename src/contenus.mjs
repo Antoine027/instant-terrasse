@@ -651,6 +651,7 @@ ${heroPlein({ fil: "Terrasses", h1: ['<span class="pc-nowrap">Terrasse aluminium
     <h2>Nos teintes</h2>
     <p class="chapo">Décors bois ou gris uni, en lames garanties 20 ans par le fabricant. Vous voyez les échantillons chez vous, lors du rendez-vous.</p>
     <div class="nuancier" data-galerie>${PHOTOS.filter((p) => p.categorie === "teinte-alu").sort((a, b) => ORDRE_TEINTES_ALU.indexOf(a.essence) - ORDRE_TEINTES_ALU.indexOf(b.essence)).map((p) => `<figure tabindex="0" aria-label="Agrandir : ${p.essence}">${imgPhoto(p.cle, { sizes: "(max-width:560px) 45vw, 230px" })}<figcaption>${p.essence}</figcaption></figure>`).join("")}</div>
+    <div class="structure-bandeau"><a class="carte carte-structure" href="/structure-terrasse-lyon/"><div><span class="cs-kicker">Comment c'est posé</span><h3>Sur structure aluminium</h3><p><span class="cs-long">Les lames aluminium sont posées sur une ossature aluminium et des plots réglables : rien ne pourrit, et la terrasse reste plane même sur un sol irrégulier.</span><span class="cs-court">Ossature aluminium sur plots réglables : rien ne pourrit.</span><span class="cs-lien">Voir la structure&nbsp;→</span></p></div><span class="cs-img cs-photo-grand">${imgPhoto("structure-lames-alu-assemblage", { sizes: "(max-width:700px) 120px, 300px" })}</span></a></div>
   </div>
 </section>
 
@@ -674,18 +675,7 @@ ${heroPlein({ fil: "Terrasses", h1: ['<span class="pc-nowrap">Terrasse aluminium
   </div>
 </section>
 
-<section id="structure" class="bloc bloc-alt ossature">
-  <div class="conteneur ossature-grille">
-    <div class="ossature-photo">${imgPhoto("structure-lames-alu-assemblage", { sizes: "(max-width:700px) 34vw, 360px" })}</div>
-    <div>
-      <h2>Une ossature aluminium sous vos lames</h2>
-      <p>Posée sur plots réglables : rien ne pourrit, la terrasse reste plane même sur un sol irrégulier.</p>
-      <p><a href="/structure-terrasse-lyon/#galerie">Voir nos structures en images →</a></p>
-    </div>
-  </div>
-</section>
-
-<section id="projets" class="bloc">
+<section id="projets" class="bloc bloc-alt">
   <div class="conteneur">
     <p class="sous-titre">Pour quels projets ?</p>
     <h2>Partout où l'on veut une terrasse facile à vivre</h2>
@@ -696,7 +686,7 @@ ${heroPlein({ fil: "Terrasses", h1: ['<span class="pc-nowrap">Terrasse aluminium
   </div>
 </section>
 
-<section id="faq-alu" class="bloc bloc-alt">
+<section id="faq-alu" class="bloc">
   <div class="conteneur lyon-faq">
   <div id="lyon" class="lyon-texte">
     <h2>Votre terrasse aluminium à Lyon et dans sa région</h2>
@@ -745,6 +735,8 @@ ${heroPlein({ fil: "Terrasses", h1: ['<span class="pc-nowrap">Terrasse carrelage
     <h3 class="nuancier-titre">7 formats, 2 cm d'épaisseur</h3>
     <div class="formats-carr" role="list">${FORMATS_CARR.map(([l, h]) => `<div class="fmt" role="listitem"><span class="fmt-dalle" style="--l:${l};--h:${h}"></span><span class="fmt-nom">${l} × ${h}</span></div>`).join("")}</div>
     <p class="evol-note">Teintes indicatives. Dessins des formats à l'échelle.</p>
+    <div class="structure-bandeau"><a class="carte carte-structure" href="/terrasse-sur-plots-lyon/"><div><span class="cs-kicker">Comment c'est posé</span><h3>Sur plots</h3><p><span class="cs-long">Sur une dalle béton ou un toit-terrasse en bon état, les dalles reposent sur des plots réglables placés sous leurs angles : la solution la plus simple.</span><span class="cs-court">Sur une dalle béton ou un toit-terrasse existant.</span><span class="cs-lien">Voir la pose sur plots&nbsp;→</span></p></div><span class="cs-img">${imgPhoto("carrelage-plots-schema", { sizes: "(max-width:700px) 120px, 300px" })}</span></a></div>
+    <div class="structure-bandeau structure-bandeau-suite"><a class="carte carte-structure" href="/structure-terrasse-lyon/#comparatif-carrelage"><div><span class="cs-kicker">Comment c'est posé</span><h3>Sur structure aluminium</h3><p><span class="cs-long">Sur un sol stabilisé, des rails aluminium sur plots réglables et des cales amortissantes remplacent la dalle béton : surface parfaitement plane. Structure garantie 20 ans.</span><span class="cs-court">Sans dalle béton, surface parfaitement plane.</span><span class="cs-lien">Voir la structure&nbsp;→</span></p></div><span class="cs-img">${imgPhoto("structure-aluminium-carrelage", { sizes: "(max-width:700px) 120px, 300px" })}</span></a></div>
   </div>
 </section>
 
@@ -768,21 +760,7 @@ ${heroPlein({ fil: "Terrasses", h1: ['<span class="pc-nowrap">Terrasse carrelage
   </div>
 </section>
 
-<section id="structures" class="bloc bloc-alt">
-  <div class="conteneur deux-colonnes">
-    <div>
-      <h2>Deux façons de poser une terrasse carrelage</h2>
-      <p>Ni colle ni chape : les dalles sont posées à sec. Nous choisissons la pose selon votre support, lors de la visite.</p>
-      <p><a href="/structure-terrasse-lyon/#comparatif-carrelage">Comparer les deux poses en détail →</a></p>
-    </div>
-    <div class="grille">
-      <a class="carte carte-structure" href="/terrasse-sur-plots-lyon/"><div><h3>Sur plots</h3><p><span class="cs-long">Des plots réglables sous les angles de chaque dalle. La solution la plus simple sur une dalle béton ou un toit-terrasse en bon état.</span><span class="cs-court">Sur une dalle béton ou un toit-terrasse existant.</span></p></div><span class="cs-img">${imgPhoto("carrelage-plots-schema", { sizes: "160px" })}</span></a>
-      <a class="carte carte-structure" href="/structure-terrasse-lyon/#comparatif-carrelage"><div><h3>Sur structure aluminium</h3><p><span class="cs-long">Rails aluminium sur plots réglables et cales amortissantes : surface parfaitement plane, sans dalle béton à couler. Structure garantie 20 ans.</span><span class="cs-court">Sans dalle béton, surface parfaitement plane.</span></p></div><span class="cs-img">${imgPhoto("structure-aluminium-carrelage", { sizes: "160px" })}</span></a>
-    </div>
-  </div>
-</section>
-
-<section id="faq-carr" class="bloc">
+<section id="faq-carr" class="bloc bloc-alt">
   <div class="conteneur lyon-faq">
   <div id="lyon" class="lyon-texte">
     <h2>Votre terrasse carrelage à Lyon et dans sa région</h2>

@@ -1855,7 +1855,4 @@ li.mm-sep{border-top:1px solid rgba(47,52,55,.12);margin-top:6px;padding-top:6px
 li.mm-sep{border-top:2px solid rgba(47,52,55,.22);margin-top:10px;padding-top:10px}
 @media (min-width:1241px){
   .sous-menu ul.sm-2col li.mm-sep+li{border-top:2px solid rgba(47,52,55,.22);margin-top:10px;padding-top:10px}
-  .sm-rev li small{display:none}
-  .sm-rev li.mm-sep small,.sm-rev li.mm-sep+li small{display:block}
-  .sm-rev li a{align-items:center}
 }

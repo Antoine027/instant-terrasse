@@ -1049,7 +1049,7 @@ const QUIZ_RAISONS = {
   legerete: { aluminium: "Lames et structure tout aluminium : un ensemble léger." },
   chaleureux: { bois: "Une matière vivante et chaleureuse, qui évolue avec le temps.", composite: "Un aspect chaleureux, proche du bois." },
   durabilite: { aluminium: "Imputrescible et indéformable : il ne bouge pas.", carrelage: "Le grès cérame est l'un des revêtements les plus durables." },
-  rayures: { carrelage: "Le grès cérame est celui qui résiste le mieux aux rayures." },
+  rayures: { carrelage: "Le grès cérame est très résistant aux rayures." },
   taches: { composite: "Les taches ne pénètrent pas dans la lame.", aluminium: "Les taches ne marquent pas." },
 };
 // Questions : [id, intitulé, [[valeur, libellé, {critère: poids}]]]
@@ -1108,8 +1108,7 @@ const quizHtml = () => `
           <div class="quiz-texte">
             <p class="quiz-rang"></p>
             <h3>${nom}</h3>
-            <div class="quiz-score"><span class="quiz-jauge"><span></span></span><b class="quiz-pct"></b></div>
-            <p class="quiz-resume">${QUIZ_RESUME[k]}</p>
+                        <p class="quiz-resume">${QUIZ_RESUME[k]}</p>
             <ul class="puces quiz-raisons"></ul>
             <p class="quiz-actions"><a class="bouton" href="#rappel" data-devis="${nom}">Demander un devis</a> <a class="bouton bouton-blanc" href="${url}">Découvrir</a></p>
           </div>
@@ -1123,7 +1122,7 @@ const voir=i=>{n=i;E.forEach((e,j)=>e.hidden=j!==i);R.hidden=i<E.length;B.style.
 const calc=()=>{const w=Object.assign({},BASE);Q.forEach(([id,o])=>{const a=o[rep[id]]||{};for(const c in a)w[c]=(w[c]||0)+a[c]});const tot=Object.values(w).reduce((x,y)=>x+y,0)*4;
 const pct=M.map((m,i)=>Math.round(Object.keys(w).reduce((s,c)=>s+w[c]*N[c][i],0)/tot*100));
 const ordre=M.map((m,i)=>i).sort((a,b)=>pct[b]-pct[a]||a-b);
-ordre.forEach((m,rang)=>{const c=Z.querySelector('.quiz-carte[data-mat="'+M[m]+'"]');L.append(c);c.classList.toggle('quiz-top',rang===0);c.querySelector('.quiz-rang').textContent=rang?(rang+1)+'e':'Le plus adapté à votre projet';c.querySelector('.quiz-pct').textContent=pct[m]+' %';c.querySelector('.quiz-jauge span').style.width=pct[m]+'%';
+ordre.forEach((m,rang)=>{const c=Z.querySelector('.quiz-carte[data-mat="'+M[m]+'"]');L.append(c);c.classList.toggle('quiz-top',rang===0);c.querySelector('.quiz-rang').textContent=rang?(rang+1)+'e':'1er · Le plus adapté à votre projet';
 const ul=c.querySelector('.quiz-raisons');ul.innerHTML='';if(!rang){Object.keys(w).filter(k=>T[k]&&T[k][M[m]]&&N[k][m]>=3).sort((a,b)=>w[b]*N[b][m]-w[a]*N[a][m]).slice(0,3).forEach(k=>{const li=document.createElement('li');li.textContent=T[k][M[m]];ul.append(li)})}ul.hidden=!ul.children.length})};
 Z.addEventListener('click',e=>{const o=e.target.closest('.quiz-opt');if(o){rep[o.dataset.q]=o.dataset.v;o.parentNode.querySelectorAll('.quiz-opt').forEach(b=>b.classList.toggle('choisi',b===o));if(n===E.length-1){calc();voir(E.length);R.scrollIntoView({behavior:'smooth',block:'start'})}else voir(n+1);return}
 if(e.target.closest('.quiz-retour'))voir(n-1);if(e.target.closest('.quiz-recommencer')){rep={};Z.querySelectorAll('.choisi').forEach(b=>b.classList.remove('choisi'));voir(0);Z.scrollIntoView({behavior:'smooth',block:'start'})}

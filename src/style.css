@@ -2025,3 +2025,5 @@ li.mm-sep{border-top:2px solid rgba(47,52,55,.22);margin-top:10px;padding-top:10
   .quiz-carte:not(.quiz-top) .quiz-texte,.quiz-carte:not(.quiz-top) h3{text-align:left}
   .quiz-carte:not(.quiz-top) h3{font-size:1.05rem}
 }
+/* Comparateur : rang à la place du % */
+.quiz-carte:not(.quiz-top) .quiz-rang{font:800 1.5rem/1 Montserrat,sans-serif;color:var(--accent-texte);margin-bottom:4px}

@@ -919,21 +919,11 @@ ${heroPlein({ fil: "Terrasses", h1: ['<span class="pc-nowrap">Terrasse composite
 <section id="galerie" class="bloc galerie-comp">
   <div class="conteneur">
     ${galerie("terrasse-composite", { titre: "Nos terrasses composite en situation", legende: "Illustrations" })}
+    <div class="structure-bandeau"><a class="carte carte-structure" href="/structure-terrasse-lyon/"><div><span class="cs-kicker">Comment c'est posé</span><h3>Sur structure aluminium</h3><p><span class="cs-long">Nos lames composite sont posées sur plots réglables, rails aluminium et fixations invisibles. Rien ne pourrit sous les lames, l'air circule, la terrasse reste plane. Structure garantie 20 ans.</span><span class="cs-court">Rails alu et fixations invisibles. Structure garantie 20 ans.</span><span class="cs-lien">Voir la structure&nbsp;→</span></p></div><span class="cs-img">${img("structure-aluminium", "Structure aluminium : plot réglable, rail aluminium et clip sous une lame de terrasse", 404)}</span></a></div>
   </div>
 </section>
 
-<section id="structure" class="bloc bloc-alt ossature">
-  <div class="conteneur ossature-grille">
-    <div class="ossature-photo ossature-sombre">${imgPhoto("structure-composite-eclate-t", { sizes: "(max-width:700px) 34vw, 360px" })}</div>
-    <div>
-      <h2>Une ossature aluminium sous vos lames</h2>
-      <p>Rails aluminium sur plots réglables : la terrasse reste plane et ventilée, et ne bouge pas. Structure garantie 20 ans.</p>
-      <p><a href="/structure-terrasse-lyon/#galerie">Voir nos structures en images →</a></p>
-    </div>
-  </div>
-</section>
-
-<section id="faq-comp" class="bloc">
+<section id="faq-comp" class="bloc bloc-alt">
   <div class="conteneur lyon-faq">
   <div id="lyon" class="lyon-texte">
     <h2>Votre terrasse composite à Lyon et dans sa région</h2>

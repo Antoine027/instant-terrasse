@@ -240,7 +240,6 @@ const LIGNES_BOIS = [
   ["Ventilation", "6&nbsp;mm entre lames et rails", "Selon la hauteur disponible"],
   ["Essences", "Nos essences phares", "Toutes nos essences, dont l'ipé, le cumaru, le mélèze"],
   ["Garantie", "20 ans (plots, rails et clips)", "Pas de garantie"],
-  ["Budget", "Plus élevé, pensé pour durer", "Plus économique à l'achat"],
 ];
 const LIGNES_CARR = [
   ["Principe", "Dalles sur rails aluminium posés sur plots", "Chaque dalle sur des plots à ses angles"],
@@ -248,7 +247,6 @@ const LIGNES_CARR = [
   ["Sous le pied", "Cales amortissantes : rien ne bouge ni ne claque", "Une dalle peut bouger si un plot travaille"],
   ["Formats", "Grands formats, joints décalés, bois et carrelage mélangés", "Formats courants, joints alignés"],
   ["Garantie", "20 ans (plots, rails et clips)", "Pas de garantie"],
-  ["Budget", "Plus élevé", "Plus économique"],
 ];
 const REVETEMENTS_STRUCT = [
   ["/terrasse-bois-lyon/", "Bois", "structure-clips-lame-bois"],

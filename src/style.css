@@ -1856,3 +1856,9 @@ li.mm-sep{border-top:2px solid rgba(47,52,55,.22);margin-top:10px;padding-top:10
 @media (min-width:1241px){
   .sous-menu ul.sm-2col li.mm-sep+li{border-top:2px solid rgba(47,52,55,.22);margin-top:10px;padding-top:10px}
 }
+/* Menu Terrasses (ordinateur) : un seul trait continu sur les deux colonnes */
+@media (min-width:1241px){
+  .sous-menu ul.sm-2col li.mm-sep,.sous-menu ul.sm-2col li.mm-sep+li{border-top:0;margin-top:10px;padding-top:12px}
+  .sous-menu ul.sm-2col li.mm-sep{position:relative}
+  .sous-menu ul.sm-2col li.mm-sep::before{content:"";position:absolute;top:0;left:0;width:calc(200% + 8px);border-top:2px solid rgba(47,52,55,.22)}
+}

@@ -55,29 +55,29 @@
   "dossier": "pergolas",
   "position": "55% 45%"
  },
- "pilotis-garde-corps-verre-salon": {
-  "dossier": "terrasses",
-  "position": "65% 50%"
- },
  "terrasse-accoya-naturel-piscine-vue-haut": {
   "dossier": "bois",
   "position": "60% 50%"
- },
- "ambiance-dalles-sur-plots": {
-  "dossier": "terrasses",
-  "position": "55% 55%"
- },
- "ambiance-balcon-lames": {
-  "dossier": "terrasses",
-  "position": "55% 50%"
  },
  "ambiance-plage-piscine": {
   "dossier": "terrasses",
   "position": "45% 55%"
  },
+ "ambiance-balcon-lames": {
+  "dossier": "terrasses",
+  "position": "55% 50%"
+ },
  "carrelage-toit-terrasse-montagnes": {
   "dossier": "terrasses",
   "position": "55% 60%"
+ },
+ "pilotis-garde-corps-verre-salon": {
+  "dossier": "terrasses",
+  "position": "65% 50%"
+ },
+ "ambiance-dalles-sur-plots": {
+  "dossier": "terrasses",
+  "position": "55% 55%"
  },
  "terrasse-thermofrene-pool-house": {
   "dossier": "bois",

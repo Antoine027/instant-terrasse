@@ -88,7 +88,7 @@ const REVETEMENTS = [
   ["/terrasse-bois-lyon/", "Terrasse bois", "terrasse-kebony-piscine-debordement", "Accoya, kebony, bambou : la chaleur du vrai bois."],
   ["/terrasse-composite-lyon/", "Terrasse composite", "composite-gris-piscine", "L'aspect du bois, sans saturateur ni ponçage."],
   ["/terrasse-aluminium-lyon/", "Terrasse aluminium", "alu-piscine-aspect-teck", "Ne pourrit pas, ne bouge pas, en 6 teintes."],
-  ["/terrasse-carrelage-lyon/", "Terrasse carrelage", "carrelage-bh-grand-format-baie", "Grès cérame posé sans colle, sur plots."],
+  ["/terrasse-carrelage-lyon/", "Terrasse carrelage", "carrelage-bh-aspect-bois-gris-jardin", "Grès cérame posé sans colle, sur plots."],
 ];
 const decouvrir = (ici) => `
 <section class="bloc decouvrir">
@@ -926,37 +926,6 @@ const carport = {
 };
 
 // ---------- Terrasse sur pilotis ----------
-const terrassePilotis = {
-  title: "Terrasse sur pilotis Lyon : terrasse surélevée sur mesure | Instant Terrasse",
-  description: "Terrasse sur pilotis à Lyon : une terrasse surélevée de plain-pied avec la maison, pour terrain en pente ou rez-de-jardin en contrebas. Garde-corps aluminium, plan 3D offert.",
-  corps: pageProduit({
-    fil: "Projets",
-    h1: ["Terrasse sur pilotis", "surélevée"], kicker: "Terrains en pente et étages à Lyon et dans sa région",
-    chapo: "Jardin en contrebas ou en pente : la terrasse sur pilotis sort de plain-pied depuis le séjour et libère de l'espace dessous.",
-    photo: "pilotis-garde-corps-verre-salon", position: "65% 50%",
-    atouts: [
-      ["De plain-pied avec la maison", "On sort du séjour ou de la chambre sans marche, comme sur un balcon, mais avec la surface d'une vraie terrasse."],
-      ["Le terrain n'est plus un obstacle", "Pente, talus, sol irrégulier : les poteaux reprennent les différences de niveau, sans terrassement lourd."],
-      ["Un espace abrité dessous", "Le dessous de la terrasse protège une voiture, un salon de jardin ou le bois de chauffage."],
-      ["Sécurisée par un garde-corps", "Dès 1 m de hauteur de chute, un garde-corps est obligatoire : aluminium à lisses, à barreaux, vitré ou décoratif."],
-      ["Le revêtement de votre choix", "Bois, composite ou lames aluminium : le platelage se choisit comme pour une terrasse au sol."],
-      ["Étudiée dans son ensemble", "Poteaux, garde-corps, accès au jardin : tout est dessiné sur le plan 3D avant de commander."],
-    ],
-    galerieCat: "pilotis",
-    titreGalerie: "Terrasses sur pilotis en situation",
-    details: `<h2>Avant de se lancer</h2>
-      <p>Une terrasse surélevée est une construction à part entière : au-delà de 60 cm de hauteur, une déclaration préalable de travaux est en général nécessaire, et un permis de construire selon la surface. Nous regardons la règle de votre commune avec vous.</p>
-      <p>Les poteaux reposent sur des fondations adaptées au sol, et la hauteur de chute détermine le <a href="/garde-corps-aluminium-lyon/">garde-corps</a>. Pour comprendre les différentes ossatures, voyez notre page <a href="/structure-terrasse-lyon/">structures de terrasse</a>.</p>`,
-    complement: "Nous venons voir la hauteur, la pente et l'accès au jardin, et le plan 3D de votre terrasse est offert.",
-    titreVoisins: "Pour aller plus loin",
-    voisins: [
-      ["/garde-corps-aluminium-lyon/", "Garde-corps aluminium", "Obligatoire sur une terrasse surélevée, il peut aussi l'embellir."],
-      ["/structure-terrasse-lyon/", "Structures de terrasse", "Traditionnelle ou aluminium : ce qui porte votre terrasse."],
-      ["/terrasse-bois-lyon/", "Terrasse bois", "Les essences pour le platelage, du thermopin à l'ipé."],
-    ],
-    ctaTitre: "Un projet de terrasse surélevée ?",
-  }),
-};
 
 // ---------- Comparatif des matériaux ----------
 const MATERIAUX = ["Bois", "Composite", "Aluminium", "Carrelage"];
@@ -1148,134 +1117,308 @@ ${cta("Vous hésitez encore ?", "Nous venons chez vous avec les échantillons et
 };
 
 // ---------- Terrasse sur plots ----------
-const terrassePlots = {
-  title: "Terrasse sur plots Lyon : dalles et lames sur plots réglables | Instant Terrasse",
-  description: "Terrasse sur plots réglables à Lyon : dalles de grès cérame ou lames posées sans fondation sur une dalle, un sol stabilisé ou un toit-terrasse. Devis gratuit.",
-  corps: pageProduit({
-    fil: "Projets",
-    h1: ["Terrasse", "sur plots"], kicker: "Dalles et lames sur plots réglables à Lyon",
-    chapo: "Des plots réglables posés sur le support existant : une terrasse de niveau, sans béton, et l'eau s'écoule dessous.",
-    photo: "ambiance-dalles-sur-plots", position: "55% 55%",
-    atouts: [
-      ["Sans fondation", "Les plots se posent sur une dalle béton, un sol stabilisé ou une étanchéité de toit-terrasse."],
-      ["De niveau au millimètre", "Chaque plot se règle en hauteur pour rattraper les pentes et les défauts du support."],
-      ["L'eau s'écoule dessous", "Le revêtement est surélevé : pas de flaque, et la terrasse sèche vite."],
-      ["Démontable", "Une dalle se soulève pour atteindre un regard, un câble ou la descente d'eau."],
-      ["Dalles ou lames", "Grès cérame directement sur plots, ou lames sur une structure aluminium portée par les plots."],
-      ["De plain-pied", "Le niveau de la terrasse s'aligne sur le seuil de la porte-fenêtre."],
-    ],
-    galerieCat: ["structure-plot-reglable", "structure-rails-plots-detail", "structure-plot-rail-lame"],
-    titreGalerie: "Plots et structures en détail",
-    details: `<h2>Plots seuls ou structure aluminium ?</h2>
-      <p>Pour des dalles de grès cérame sur un support plan, les plots suffisent. Sur un sol moins régulier, ou pour des lames, une structure aluminium posée sur les plots rend la terrasse plus rigide et plus plane. Nous comparons les deux solutions sur notre page <a href="/structure-terrasse-lyon/#comparatif-carrelage">structures de terrasse</a>.</p>
-      <p>Voir aussi la <a href="/terrasse-carrelage-lyon/">terrasse en carrelage</a> et le <a href="/toit-terrasse-lyon/">toit-terrasse</a>, deux usages typiques des plots.</p>`,
-    complement: "Nous venons voir le support existant, les hauteurs et l'écoulement de l'eau, et le plan 3D de votre terrasse est offert.",
-    titreVoisins: "Pour aller plus loin",
-    voisins: [
-      ["/terrasse-carrelage-lyon/", "Terrasse carrelage", "Du grès cérame posé à sec, sans colle ni joint."],
-      ["/structure-terrasse-lyon/", "Structures de terrasse", "Plots, rails aluminium ou ossature bois."],
-      ["/nos-terrasses/", "Comparatif des matériaux", "Bois, composite, aluminium ou carrelage ?"],
-    ],
-    ctaTitre: "Un projet de terrasse sur plots ?",
-  }),
-};
 
 // ---------- Balcon ----------
-const terrasseBalcon = {
-  title: "Terrasse de balcon Lyon : lames bois, composite ou aluminium | Instant Terrasse",
-  description: "Rénover le sol d'un balcon à Lyon : lames bois, composite ou aluminium, ou dalles sur plots, posées sur l'existant sans percer l'étanchéité. Garde-corps aluminium. Devis gratuit.",
-  corps: pageProduit({
-    fil: "Projets",
-    h1: ["Un balcon", "comme une terrasse"], kicker: "Sols de balcon sur mesure à Lyon et dans sa région",
-    chapo: "Un carrelage fatigué ou une dalle béton grise : en quelques jours, le balcon devient une vraie pièce dehors.",
-    photo: "ambiance-balcon-lames", position: "55% 50%",
-    atouts: [
-      ["Posé sur l'existant", "Les lames ou les dalles se posent sur le sol actuel, sans le casser."],
-      ["L'étanchéité préservée", "Plots et lambourdes reposent sur le support : on ne perce pas l'étanchéité."],
-      ["Un sol de niveau", "Les plots réglables rattrapent la pente d'écoulement du balcon."],
-      ["Léger", "Des matériaux choisis pour ne pas surcharger la dalle du balcon."],
-      ["Le matériau de votre choix", "Bois, composite, lames aluminium ou grès cérame."],
-      ["Avec le garde-corps", "Un garde-corps aluminium neuf peut être prévu dans le même projet."],
-    ],
-    galerieCat: ["terrasse-thermofrene-balcon", "gc-maison-balcon-lisses", "gc-maison-verre-depoli-carrelage", "gc-collectif-verre-depoli-balcons"],
-    titreGalerie: "Balcons en situation",
-    details: `<h2>En copropriété</h2>
-      <p>Sur un balcon d'immeuble, le règlement de copropriété peut encadrer l'aspect, le garde-corps ou la nature du sol. Mieux vaut le consulter, ou interroger le syndic, avant de choisir le revêtement : nous vous aidons à préparer la demande si besoin.</p>
-      <p>Pour choisir le revêtement, consultez notre <a href="/nos-terrasses/">comparatif des matériaux</a>.</p>`,
-    complement: "Nous venons mesurer le balcon, vérifier le support et l'écoulement de l'eau, et le plan 3D est offert.",
-    titreVoisins: "Pour aller plus loin",
-    voisins: [
-      ["/garde-corps-aluminium-lyon/", "Garde-corps aluminium", "Sécuriser sans fermer la vue."],
-      ["/terrasse-aluminium-lyon/", "Terrasse aluminium", "Des lames stables et sans entretien."],
-      ["/terrasse-sur-plots-lyon/", "Terrasse sur plots", "Poser sans fondation, de niveau."],
-    ],
-    ctaTitre: "Un projet de balcon ?",
-  }),
+
+
+
+// ---------- Pages « Types de projets » (refonte 11/11/2026, modèle des pages matériaux) ----------
+const ICO = {
+  bouclier: '<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/>',
+  goutte: '<path d="M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11z"/>',
+  soleil: '<circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/>',
+  pied: '<path d="M8 20c-2 0-3-2-3-4 0-3 1-5 3-5s3 2 3 5c0 2-1 4-3 4z"/><path d="M16 14c-2 0-3-2-3-4 0-3 1-5 3-5s3 2 3 5c0 2-1 4-3 4z"/>',
+  trappe: '<rect x="4" y="4" width="16" height="16" rx="2"/><path d="M4 12h16M12 4v16"/>',
+  ombre: '<path d="M3 10 12 4l9 6"/><path d="M5 10v10M19 10v10"/><path d="M3 20h18"/>',
+  niveau: '<path d="M3 17h18"/><path d="M6 17v-5M12 17V8M18 17v-3"/>',
+  plume: '<path d="M20 4C10 4 5 9 5 19"/><path d="M5 19c5 0 10-2 12-8"/><path d="M9 15h5"/>',
+  couches: '<path d="M12 3 3 8l9 5 9-5z"/><path d="m3 13 9 5 9-5"/>',
+  garde: '<path d="M3 20h18M4 20V9M20 20V9M3 9h18"/><path d="M8 9v11M12 9v11M16 9v11"/>',
+  maison: '<path d="M3 21V10l9-6 9 6v11"/><path d="M3 21h18"/><path d="M9 21v-6h6v6"/>',
+  demonte: '<path d="M3 12a9 9 0 0 1 15-6.7L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-15 6.7L3 16"/><path d="M3 21v-5h5"/>',
+  plan: '<path d="M3 6l6-3 6 3 6-3v15l-6 3-6-3-6 3z"/><path d="M9 3v15M15 6v15"/>',
+  pente: '<path d="M3 20 21 8"/><path d="M6 18v-3M10 16v-5M14 13v-5M18 11V7"/>',
+  abri: '<path d="M3 10h18"/><path d="M5 10v10M19 10v10"/><path d="M8 20v-5h8v5"/>',
+  etanche: '<path d="M4 15h16"/><path d="M12 3s4 4.5 4 7.5a4 4 0 0 1-8 0C8 7.5 12 3 12 3z"/><path d="M4 19h16"/>',
 };
+const ico = (k) => `<span class="atout-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${ICO[k]}</svg></span>`;
+const NOM_MAT = { bois: ["/terrasse-bois-lyon/", "Bois"], composite: ["/terrasse-composite-lyon/", "Composite"], aluminium: ["/terrasse-aluminium-lyon/", "Lames aluminium"], carrelage: ["/terrasse-carrelage-lyon/", "Carrelage"] };
+const PROJETS = [
+  ["/terrasse-piscine-lyon/", "Terrasse de piscine", "alu-piscine-aspect-teck", "Une plage agréable pieds nus et sûre au bord de l'eau."],
+  ["/terrasse-balcon-lyon/", "Terrasse de balcon", "ambiance-balcon-lames", "Un vrai sol sur votre balcon, sans travaux lourds."],
+  ["/toit-terrasse-lyon/", "Toit-terrasse", "carrelage-toit-terrasse-montagnes", "Une toiture plate devenue pièce à vivre."],
+  ["/terrasse-sur-pilotis-lyon/", "Terrasse sur pilotis", "pilotis-garde-corps-verre-salon", "De plain-pied avec la maison, malgré la pente."],
+  ["/terrasse-sur-plots-lyon/", "Terrasse sur plots", "ambiance-dalles-sur-plots", "Une terrasse de niveau, sans couler de béton."],
+];
+const autresProjets = (ici) => `
+<section class="bloc decouvrir">
+  <div class="conteneur">
+    <h2>Découvrez aussi nos autres projets</h2>
+    <div class="grille grille-4 decouvrir-grille projets-grille">${PROJETS.filter(([c]) => c !== ici).map(([c, t, ph, x]) => `<a class="carte carte-lien carte-photo" href="${c}"><div class="vignette">${imgPhoto(ph, { sizes: "(max-width:700px) 40vw, (max-width:1060px) 23vw, 270px" })}</div><div class="carte-corps"><h3>${t}</h3><p>${x}</p><span class="fleche" aria-hidden="true">→</span></div></a>`).join("")}</div>
+  </div>
+</section>`;
+// Classement des revêtements par projet : notes du comparateur (QUIZ_NOTES) × poids propres au projet.
+const classer = (poids, mats) => mats.map((m) => [m, Object.entries(poids).reduce((s, [c, w]) => s + w * QUIZ_NOTES[c][["bois", "composite", "aluminium", "carrelage"].indexOf(m)], 0)])
+  .sort((a, b) => b[1] - a[1] || ["bois", "composite", "aluminium", "carrelage"].indexOf(a[0]) - ["bois", "composite", "aluminium", "carrelage"].indexOf(b[0])).map(([m]) => m);
+const pageProjet = ({ ici, h1, kicker, chapo, photo, position, actions, revTitre, revIntro, rev, poids, pose, atoutsTitre, atouts, galerieCat, titreGalerie, lyon, lyonCourt, faqTitre, faq, ctaTitre, ctaTexte }) => {
+  const ordre = classer(poids, Object.keys(rev));
+  return `
+${heroPlein({ fil: "Types de projets", h1, kicker, chapo, photo, position, actions: actions ?? `<a class="bouton" href="/contact/">Demander un devis gratuit</a> <a class="bouton bouton-blanc" href="#revetements">Quel revêtement ?</a>` })}
+
+<section id="revetements" class="bloc">
+  <div class="conteneur">
+    <h2>${revTitre}</h2>
+    <p class="chapo">${revIntro}</p>
+    <div class="grille rev-projet rev-${ordre.length}">${ordre.map((m, i) => { const [url, nom] = NOM_MAT[m]; const [ph, txt] = rev[m]; return `<a class="carte carte-lien carte-photo rev-carte${i ? "" : " rev-conseil"}" href="${url}"><div class="vignette">${imgPhoto(ph, { sizes: "(max-width:700px) 44vw, (max-width:1060px) 30vw, 280px" })}${i ? "" : `<span class="rev-badge">Notre conseil</span>`}</div><div class="carte-corps"><h3>${nom}</h3><p>${txt}</p><span class="fleche" aria-hidden="true">→</span></div></a>`; }).join("")}</div>
+    ${pose}
+    <p class="lien-comparateur"><a href="/nos-terrasses/#trouver">Trouver le revêtement idéal en 5 questions →</a></p>
+  </div>
+</section>
+
+<section id="atouts" class="bloc bloc-alt">
+  <div class="conteneur">
+    <h2>${atoutsTitre}</h2>
+    <div class="grille grille-3 atouts-car">${atouts.map(([i, t, x]) => `<div class="carte atout-carte">${ico(i)}<h3>${t}</h3><p>${x}</p></div>`).join("")}</div>
+  </div>
+</section>
+
+<section id="galerie" class="bloc">
+  <div class="conteneur">
+    ${galerie(galerieCat, { titre: titreGalerie, legende: "Illustrations", limite: 12 })}
+  </div>
+</section>
+
+<section id="faq-projet" class="bloc bloc-alt">
+  <div class="conteneur lyon-faq">
+  <div id="lyon" class="lyon-texte">
+    <h2>${lyon[0]}</h2>
+    <div class="en-long">${lyon.slice(1).map((p) => `<p>${p}</p>`).join("")}</div>
+    <p class="en-court">${lyonCourt}</p>
+    <p class="lien-methode"><a href="/#methode">Découvrir notre méthode →</a></p>
+  </div>
+  <div class="faq-liste">
+    <h2>${faqTitre}</h2>
+    ${faq.map(([q, r]) => `<details class="faq"><summary>${q}</summary><div><p>${r}</p></div></details>`).join("\n    ")}
+  </div>
+  </div>
+</section>
+${cta(ctaTitre, ctaTexte)}
+${autresProjets(ici)}`;
+};
+const bandeau = (titre, long, court, lien, href, image) => `<div class="structure-bandeau"><a class="carte carte-structure" href="${href}"><div><span class="cs-kicker">Comment c'est posé</span><h3>${titre}</h3><p><span class="cs-long">${long}</span><span class="cs-court">${court}</span><span class="cs-lien">${lien}&nbsp;→</span></p></div><span class="cs-img">${image}</span></a></div>`;
+const IMG_STRUCT_ALU = img("structure-aluminium", "Structure aluminium : plot réglable, rail aluminium et clip sous une lame de terrasse", 404);
+const COMMUNES = "Caluire-et-Cuire, Rillieux-la-Pape, Villeurbanne, Écully, Tassin-la-Demi-Lune, Dardilly, Bron, Décines, Meyzieu, Beynost et Miribel";
 
 // ---------- Terrasse de piscine ----------
 const terrassePiscine = {
-  title: "Terrasse de piscine Lyon : plage en bois, composite ou aluminium | Instant Terrasse",
-  description: "Plage de piscine sur mesure à Lyon : bois, composite, lames aluminium ou carrelage, agréables pieds nus et sûrs au bord de l'eau. Trappe d'accès, plan 3D offert. Devis gratuit.",
-  corps: pageProduit({
-    fil: "Projets",
-    h1: ["Terrasse", "de piscine"], kicker: "Plages de piscine sur mesure à Lyon et dans sa région",
-    chapo: "Autour d'un bassin, la terrasse se vit pieds nus : un revêtement agréable au soleil, qui accroche sous le pied et supporte l'eau.",
+  title: "Terrasse de piscine Lyon : plage en bois, composite, aluminium ou carrelage | Instant Terrasse",
+  description: "Plage de piscine sur mesure à Lyon : lames aluminium, bois, composite ou grès cérame, antidérapants et agréables pieds nus, sur structure aluminium garantie 20 ans. Devis gratuit.",
+  corps: pageProjet({
+    ici: "/terrasse-piscine-lyon/",
+    h1: ['<span class="pc-nowrap">Terrasse de piscine</span>', 'sur mesure <span class="lyon-l">à Lyon</span>'], kicker: "Plages de piscine à Lyon et dans sa région",
+    chapo: "Autour d'un bassin, la terrasse se vit pieds nus : un revêtement qui accroche sous le pied, chauffe peu et supporte l'eau.",
     photo: "ambiance-plage-piscine", position: "45% 55%",
+    revTitre: "Quel revêtement autour de la piscine ?", revIntro: "Au bord de l'eau, deux critères comptent plus que tout : ne pas glisser et ne pas se brûler les pieds.",
+    poids: { adherence: 2, chaleur: 2, entretien: 1 },
+    rev: {
+      aluminium: ["alu-piscine-aspect-teck", "Le revêtement qui chauffe le moins, antidérapant grâce à un revêtement spécial."],
+      carrelage: ["carrelage-bh-aspect-bois-gris-vue", "Des dalles antidérapantes, qui se prolongent jusqu'à la margelle."],
+      bois: ["terrasse-kebony-piscine-debordement", "Un bois tendre reste le plus agréable sous le pied en plein été."],
+      composite: ["composite-gris-piscine", "La gamme pleine masse chauffe peu et reste antidérapante, même mouillée."],
+    },
+    pose: bandeau("Sur structure aluminium", "Plots réglables et rails aluminium : rien ne pourrit sous la plage, l'eau s'écoule dessous et la terrasse reste plane au ras du bassin. Structure garantie 20 ans.", "Rails alu sur plots : rien ne pourrit. Structure garantie 20 ans.", "Voir la structure", "/structure-terrasse-lyon/", IMG_STRUCT_ALU),
+    atoutsTitre: "Une plage pensée pour le bord de l'eau",
     atouts: [
-      ["Agréable pieds nus", "Des matériaux sans écharde, choisis pour rester supportables au soleil."],
-      ["Sûr au bord de l'eau", "Des surfaces qui accrochent, même au sortir du bain."],
-      ["Fait pour l'eau", "Bois sélectionnés, composite, aluminium ou grès cérame : ni pourriture, ni gonflement."],
-      ["Accès au local technique", "Une trappe peut être intégrée pour garder l'accès à la pompe ou au volet."],
-      ["Finitions soignées", "Margelles, nez de marche et bordures dessinés autour du bassin."],
-      ["Avec la pergola", "Une pergola ou un store banne pour un coin d'ombre près de l'eau."],
+      ["soleil", "Agréable pieds nus", "Des matériaux sans écharde, choisis pour rester supportables au soleil."],
+      ["bouclier", "Sûre au sortir du bain", "Des surfaces antidérapantes, même mouillées."],
+      ["goutte", "Faite pour l'eau", "Sur structure aluminium : ni pourriture ni gonflement sous la plage."],
+      ["trappe", "Accès au local technique", "Une trappe peut être intégrée pour garder l'accès à la pompe ou au volet."],
+      ["niveau", "Au ras de la margelle", "Les plots réglables calent la terrasse au bon niveau, tout autour du bassin."],
+      ["ombre", "Avec un coin d'ombre", "Une pergola ou un store banne peut être étudié dans le même projet."],
     ],
-    galerieCat: ["terrasse-kebony-piscine-debordement", "alu-piscine-aspect-teck", "terrasse-accoya-gris-piscine", "composite-gris-piscine", "terrasse-thermofrene-piscine-mer", "alu-piscine-blanche-vue", "terrasse-bambou-ndurance-piscine-pierre", "alu-piscine-haricot", "terrasse-kebony-piscine-jardin", "terrasse-accoya-naturel-bord-piscine", "alu-piscine-grise", "terrasse-thermofrene-piscine-naturelle", "alu-piscine-jardin-tropical", "alu-piscine-debordement-baie", "alu-piscine-toit-terrasse", "alu-piscine-carbet", "alu-piscine-debordement-mer", "alu-piscine-maison-creole", "alu-piscine-cour"],
+    galerieCat: ["terrasse-kebony-piscine-debordement", "alu-piscine-aspect-teck", "terrasse-accoya-gris-piscine", "composite-gris-piscine", "terrasse-thermofrene-piscine-mer", "alu-piscine-blanche-vue", "terrasse-bambou-ndurance-piscine-pierre", "alu-piscine-haricot", "terrasse-kebony-piscine-jardin", "composite-gris-piscine-jardin", "alu-piscine-grise", "terrasse-thermofrene-piscine-naturelle", "alu-piscine-jardin-tropical", "terrasse-accoya-naturel-bord-piscine", "alu-piscine-debordement-baie", "alu-piscine-toit-terrasse", "alu-piscine-carbet", "alu-piscine-debordement-mer"],
     titreGalerie: "Plages de piscine en situation",
-    details: `<h2>Quel revêtement au bord de l'eau ?</h2>
-      <p>Un <a href="/terrasse-bois-lyon/">bois</a> tendre reste le plus agréable sous le pied en plein été. Les <a href="/terrasse-aluminium-lyon/">lames aluminium</a> et le <a href="/terrasse-composite-lyon/">composite</a> réduisent l'entretien au minimum, et le <a href="/terrasse-carrelage-lyon/">grès cérame</a> se prolonge jusqu'à la margelle.</p>
-      <p>Tous les critères sont dans notre <a href="/nos-terrasses/">comparatif des matériaux</a>.</p>`,
-    complement: "Nous venons voir le bassin, les niveaux et le local technique, et le plan 3D de votre plage est offert.",
-    titreVoisins: "Pour aller plus loin",
-    voisins: [
-      ["/nos-terrasses/", "Comparatif des matériaux", "Bois, composite, aluminium ou carrelage ?"],
-      ["/pergola-bioclimatique-lyon/", "Pergola bioclimatique", "Un coin d'ombre réglable près du bassin."],
-      ["/terrasse-aluminium-lyon/", "Terrasse aluminium", "Des lames stables et sans entretien."],
+    lyon: ["Votre terrasse de piscine à Lyon et dans sa région", `Nous venons chez vous, à Lyon et dans les communes voisines (${COMMUNES}), avec les échantillons : vous les touchez au soleil, au bord de votre bassin. Nous regardons les niveaux, la margelle, le local technique et l'écoulement de l'eau, puis nous dessinons votre plage en 3D.`, "Création ou rénovation d'une ancienne plage : le support existant est vérifié lors du rendez-vous, avant de choisir la structure."],
+    lyonCourt: "Nous venons chez vous, à Lyon et dans sa région, avec les échantillons : niveaux, margelle et local technique sont vérifiés, puis votre plage est dessinée en 3D.",
+    faqTitre: "Vos questions sur la terrasse de piscine",
+    faq: [
+      ["Quel revêtement chauffe le moins au bord de la piscine ?", "Les lames aluminium sont le revêtement qui chauffe le moins, moins que le composite et les bois durs. Un bois tendre reste aussi très agréable sous le pied en été."],
+      ["Quel revêtement est le moins glissant ?", "Nos dalles de grès cérame et nos lames aluminium sont antidérapantes. La gamme composite pleine masse reste antidérapante, même mouillée."],
+      ["Peut-on garder l'accès au local technique ?", "Oui. Une trappe peut être intégrée dans la plage pour accéder à la pompe, à la filtration ou au volet roulant."],
+      ["Peut-on rénover une ancienne plage de piscine ?", "Oui. Nous vérifions l'état du support existant lors du rendez-vous, puis nous choisissons la structure adaptée : directement sur une dalle saine, ou sur plots pour reprendre les niveaux."],
+      ["Quel entretien pour une plage de piscine ?", "Aucun traitement pour l'aluminium et le grès cérame, ni saturateur ni ponçage pour le composite. Pour le bois, deux nettoyages par an au minimum."],
     ],
-    ctaTitre: "Un projet de plage de piscine ?",
+    ctaTitre: "Un projet de plage de piscine ?", ctaTexte: "Laissez votre numéro : nous vous rappelons pour en parler et organiser le rendez-vous, gratuit et sans engagement.",
+  }),
+};
+
+// ---------- Terrasse de balcon ----------
+const terrasseBalcon = {
+  title: "Terrasse de balcon Lyon : lames aluminium, bois, composite ou dalles | Instant Terrasse",
+  description: "Habiller un balcon à Lyon : lames aluminium légères, composite, bois ou dalles sur plots, posés sur l'existant sans percer l'étanchéité. Garde-corps aluminium. Devis gratuit.",
+  corps: pageProjet({
+    ici: "/terrasse-balcon-lyon/",
+    h1: ['<span class="pc-nowrap">Terrasse de balcon</span>', 'sur mesure <span class="lyon-l">à Lyon</span>'], kicker: "Sols de balcon à Lyon et dans sa région",
+    chapo: "Un carrelage fatigué ou une dalle béton grise : le balcon devient une vraie pièce dehors, posé sur l'existant.",
+    photo: "ambiance-balcon-lames", position: "55% 50%",
+    revTitre: "Quel revêtement pour un balcon ?", revIntro: "Sur un balcon, on cherche un sol léger, facile à vivre et dans le style de la façade.",
+    poids: { legerete: 2, entretien: 1, taches: 1 },
+    rev: {
+      aluminium: ["alu-piscine-cour", "Lames et structure tout aluminium : l'ensemble le plus léger, sans entretien."],
+      composite: ["composite-gris-piscine-jardin", "L'aspect du bois, sans saturateur ni ponçage, et une bonne résistance aux taches."],
+      bois: ["terrasse-thermofrene-balcon", "La chaleur du vrai bois, pour adoucir un balcon en béton."],
+      carrelage: ["carrelage-gris-garde-corps-verre-depoli", "Des dalles de grès cérame, dans la continuité du sol intérieur."],
+    },
+    pose: bandeau("Posé sur l'existant", "Plots réglables, avec ou sans rails aluminium, posés sur le sol actuel : on ne casse rien et on ne perce pas l'étanchéité. Les plots rattrapent la pente d'écoulement du balcon.", "Sur plots, sans casser ni percer l'étanchéité.", "Voir les structures", "/structure-terrasse-lyon/", IMG_STRUCT_ALU),
+    atoutsTitre: "Un balcon transformé, sans gros travaux",
+    atouts: [
+      ["couches", "Posé sur l'existant", "Les lames ou les dalles se posent sur le sol actuel, sans le casser."],
+      ["etanche", "L'étanchéité préservée", "Les plots reposent sur le support : rien ne la traverse."],
+      ["niveau", "Un sol de niveau", "Les plots réglables rattrapent la pente du balcon, jusqu'au seuil de la porte-fenêtre."],
+      ["plume", "Léger", "Des matériaux choisis pour ne pas surcharger la dalle du balcon."],
+      ["garde", "Avec le garde-corps", "Un garde-corps aluminium neuf peut être prévu dans le même projet."],
+      ["plan", "Dessiné en 3D", "Vous voyez le revêtement et la teinte sur votre balcon avant de décider."],
+    ],
+    galerieCat: ["ambiance-balcon-lames", "terrasse-thermofrene-balcon", "terrasse-accoya-naturel-balcon", "gc-maison-balcon-lisses", "gc-maison-verre-depoli-carrelage", "gc-collectif-verre-depoli-balcons", "structure-lames-alu-balcon-dessous", "carrelage-gris-garde-corps-verre-depoli"],
+    titreGalerie: "Balcons en situation",
+    lyon: ["Votre terrasse de balcon à Lyon et dans sa région", `Appartement en ville, résidence récente ou maison : nous venons chez vous, à Lyon et dans les communes voisines (${COMMUNES}), avec les échantillons. Nous mesurons le balcon, vérifions le support, la hauteur du seuil et l'écoulement de l'eau.`, "En copropriété, le règlement peut encadrer l'aspect du sol ou du garde-corps : nous vous aidons à préparer la demande au syndic si besoin."],
+    lyonCourt: "Nous venons chez vous, à Lyon et dans sa région, avec les échantillons : mesures, support, seuil et écoulement de l'eau sont vérifiés.",
+    faqTitre: "Vos questions sur le balcon",
+    faq: [
+      ["Faut-il casser l'ancien carrelage du balcon ?", "Non, en général. Les plots se posent sur le sol existant, s'il est sain : le nouveau revêtement vient par-dessus."],
+      ["L'étanchéité du balcon est-elle percée ?", "Non. Les plots reposent sur le support, sans fixation qui traverse l'étanchéité."],
+      ["Quel revêtement est le plus léger ?", "Les lames aluminium sur structure aluminium forment l'ensemble le plus léger."],
+      ["Et si le seuil de la porte-fenêtre est bas ?", "La hauteur disponible est mesurée lors du rendez-vous : elle oriente le choix entre dalles sur plots et lames sur structure."],
+      ["Faut-il l'accord de la copropriété ?", "Selon le règlement de copropriété, l'aspect du sol ou du garde-corps peut être encadré. Mieux vaut interroger le syndic avant de commander."],
+    ],
+    ctaTitre: "Un projet de balcon ?", ctaTexte: "Laissez votre numéro : nous vous rappelons pour en parler et organiser le rendez-vous, gratuit et sans engagement.",
   }),
 };
 
 // ---------- Toit-terrasse ----------
 const toitTerrasse = {
   title: "Toit-terrasse Lyon : aménagement sur plots sans percer l'étanchéité | Instant Terrasse",
-  description: "Aménager un toit-terrasse à Lyon : lames ou dalles sur plots réglables posés sur l'étanchéité, garde-corps aluminium, pergola. Plan 3D offert, devis gratuit.",
-  corps: pageProduit({
-    fil: "Projets",
-    h1: ["Toit-terrasse", "aménagé"], kicker: "Toitures plates aménagées à Lyon et dans sa région",
+  description: "Aménager un toit-terrasse à Lyon : lames aluminium, bois, composite ou dalles sur plots posés sur l'étanchéité, garde-corps aluminium, pergola. Plan 3D offert, devis gratuit.",
+  corps: pageProjet({
+    ici: "/toit-terrasse-lyon/",
+    h1: ['<span class="pc-nowrap">Toit-terrasse</span>', 'aménagé <span class="lyon-l">à Lyon</span>'], kicker: "Toitures plates aménagées à Lyon et dans sa région",
     chapo: "Une toiture plate devient une pièce à vivre : le revêtement repose sur des plots posés sur l'étanchéité, sans la percer.",
     photo: "carrelage-toit-terrasse-montagnes", position: "55% 60%",
+    revTitre: "Quel revêtement pour un toit-terrasse ?", revIntro: "En hauteur, le poids compte, et le soleil tape plus fort qu'au jardin.",
+    poids: { legerete: 2, chaleur: 1, durabilite: 1 },
+    rev: {
+      aluminium: ["alu-piscine-toit-terrasse", "L'ensemble le plus léger, et le revêtement qui chauffe le moins."],
+      bois: ["terrasse-bambou-xtreme-toit", "Une ambiance chaleureuse, agréable sous le pied même en plein été."],
+      composite: ["composite-gris-piscine", "L'aspect du bois, sans saturateur ni ponçage."],
+      carrelage: ["carrelage-beige-pergola-toit-fixe", "Grès cérame de 2 cm sur plots : posé à sec, en grands formats."],
+    },
+    pose: bandeau("Sur plots, sans percer l'étanchéité", "Les plots reposent sur la membrane, avec une protection adaptée : aucune fixation ne la traverse. Ils rattrapent la pente de la toiture, et l'eau continue de s'écouler dessous.", "Plots posés sur l'étanchéité, sans la percer.", "Voir les structures", "/structure-terrasse-lyon/", IMG_STRUCT_ALU),
+    atoutsTitre: "Un espace en hauteur, pensé pour durer",
     atouts: [
-      ["L'étanchéité intacte", "Les plots reposent sur la membrane, avec une protection adaptée : aucune fixation ne la traverse."],
-      ["De niveau malgré la pente", "Les plots réglables rattrapent la pente d'écoulement de la toiture."],
-      ["L'eau s'évacue dessous", "Les évacuations restent accessibles et la terrasse sèche vite."],
-      ["Le revêtement de votre choix", "Bois, composite, lames aluminium ou dalles de grès cérame."],
-      ["Sécurisé", "Un garde-corps aluminium, vitré ou à lisses, pour profiter de la vue."],
-      ["Ombre et intimité", "Pergola, store banne ou pare-vue pour vivre le toit à toute heure."],
+      ["etanche", "L'étanchéité intacte", "Aucune fixation ne traverse la membrane."],
+      ["niveau", "De niveau malgré la pente", "Les plots réglables rattrapent la pente d'écoulement de la toiture."],
+      ["goutte", "L'eau s'évacue dessous", "Les évacuations restent accessibles et la terrasse sèche vite."],
+      ["plume", "Léger", "Des revêtements choisis selon ce que la toiture peut porter."],
+      ["garde", "Sécurisé", "Un garde-corps aluminium, vitré ou à lisses, pour profiter de la vue."],
+      ["ombre", "Ombre et intimité", "Pergola, store banne ou pare-vue pour vivre le toit à toute heure."],
     ],
-    galerieCat: ["terrasse-bambou-xtreme-toit", "store-banne-toit-terrasse"],
+    galerieCat: ["carrelage-toit-terrasse-montagnes", "terrasse-bambou-xtreme-toit", "alu-piscine-toit-terrasse", "carrelage-beige-pergola-toit-fixe", "store-banne-toit-terrasse", "ambiance-toit-terrasse", "gc-maison-terrasse-vue", "gc-collectif-verre-lisses-terrasse"],
     titreGalerie: "Toits-terrasses en situation",
-    details: `<h2>Avant de se lancer</h2>
-      <p>Une toiture n'est pas toujours prévue pour être accessible : sa structure doit pouvoir porter la terrasse et ses occupants. Nous vérifions ce point avec vous dès la première visite, ainsi que l'état de l'étanchéité.</p>
-      <p>Voir aussi la <a href="/terrasse-sur-plots-lyon/">terrasse sur plots</a> et le <a href="/garde-corps-aluminium-lyon/">garde-corps aluminium</a>.</p>`,
-    complement: "Nous venons voir la toiture, l'accès et les évacuations, et le plan 3D de votre toit-terrasse est offert.",
-    titreVoisins: "Pour aller plus loin",
-    voisins: [
-      ["/garde-corps-aluminium-lyon/", "Garde-corps aluminium", "Sécuriser sans fermer la vue."],
-      ["/terrasse-sur-plots-lyon/", "Terrasse sur plots", "Poser sans fondation, de niveau."],
-      ["/pergola-bioclimatique-lyon/", "Pergola bioclimatique", "Soleil, ombre ou pluie, vous choisissez."],
+    lyon: ["Votre toit-terrasse à Lyon et dans sa région", `Appartement, maison ou extension : nous venons chez vous, à Lyon et dans les communes voisines (${COMMUNES}). Nous regardons l'accès au toit, l'état de l'étanchéité et les évacuations, puis nous dessinons l'aménagement en 3D : coin repas, salon, plantations.`, "Une toiture n'est pas toujours prévue pour être accessible : sa capacité à porter une terrasse est vérifiée avant tout projet."],
+    lyonCourt: "Nous venons chez vous, à Lyon et dans sa région : accès, étanchéité et évacuations sont vérifiés, puis l'aménagement est dessiné en 3D.",
+    faqTitre: "Vos questions sur le toit-terrasse",
+    faq: [
+      ["Peut-on aménager n'importe quel toit plat ?", "Non : la toiture doit pouvoir porter la terrasse et ses occupants. Ce point est vérifié avant tout projet, avec l'état de l'étanchéité."],
+      ["L'étanchéité est-elle percée ?", "Non. Les plots reposent sur la membrane, avec une protection adaptée : aucune fixation ne la traverse."],
+      ["Quel revêtement est le plus léger ?", "Les lames aluminium sur structure aluminium forment l'ensemble le plus léger."],
+      ["Comment l'eau s'évacue-t-elle ?", "Sous le revêtement : les plots laissent l'eau rejoindre les évacuations existantes, qui restent accessibles."],
+      ["Faut-il un garde-corps ?", "Pour un toit accessible, un garde-corps est nécessaire. Nous proposons des garde-corps aluminium à lisses, à barreaux ou vitrés."],
     ],
-    ctaTitre: "Un projet de toit-terrasse ?",
+    ctaTitre: "Un projet de toit-terrasse ?", ctaTexte: "Laissez votre numéro : nous vous rappelons pour en parler et organiser le rendez-vous, gratuit et sans engagement.",
+  }),
+};
+
+// ---------- Terrasse sur pilotis ----------
+const terrassePilotis = {
+  title: "Terrasse sur pilotis Lyon : terrasse surélevée sur mesure | Instant Terrasse",
+  description: "Terrasse sur pilotis à Lyon : une terrasse surélevée de plain-pied avec la maison, pour terrain en pente ou jardin en contrebas. Lames aluminium, bois ou composite, garde-corps aluminium.",
+  corps: pageProjet({
+    ici: "/terrasse-sur-pilotis-lyon/",
+    h1: ['<span class="pc-nowrap">Terrasse sur pilotis</span>', 'sur mesure <span class="lyon-l">à Lyon</span>'], kicker: "Terrasses surélevées à Lyon et dans sa région",
+    chapo: "Jardin en contrebas ou en pente : la terrasse sur pilotis sort de plain-pied depuis le séjour et libère de l'espace dessous.",
+    photo: "pilotis-garde-corps-verre-salon", position: "65% 50%",
+    revTitre: "Quel revêtement pour une terrasse surélevée ?", revIntro: "En hauteur, on choisit un platelage léger et étanche, qui se voit aussi d'en dessous.",
+    poids: { legerete: 1, durabilite: 1, entretien: 1 },
+    rev: {
+      aluminium: ["structure-lames-alu-balcon-dessous", "Des lames étanches : idéal pour une terrasse surélevée, et l'espace dessous reste au sec."],
+      bois: ["terrasse-kebony-surelevee", "Le vrai bois, en essences phares sur structure aluminium."],
+      composite: ["composite-gris-piscine-jardin", "L'aspect du bois, sans saturateur ni ponçage."],
+    },
+    pose: bandeau("Sur poteaux et poutres", "Au-delà de la hauteur des plots, la terrasse repose sur des poteaux et des poutres, sur des fondations adaptées au sol. Le revêtement se pose ensuite comme sur une terrasse au sol.", "Poteaux et poutres sur fondations adaptées.", "Voir les structures", "/structure-terrasse-lyon/", imgPhoto("pilotis-poteaux-acier-escalier", { sizes: "(max-width:700px) 120px, 300px" })),
+    atoutsTitre: "Le terrain n'est plus un obstacle",
+    atouts: [
+      ["maison", "De plain-pied avec la maison", "On sort du séjour sans marche, avec la surface d'une vraie terrasse."],
+      ["pente", "Pente et talus rattrapés", "Les poteaux reprennent les différences de niveau, sans terrassement lourd."],
+      ["abri", "Un espace abrité dessous", "Le dessous protège une voiture, un salon de jardin ou le bois de chauffage."],
+      ["garde", "Sécurisée", "Un garde-corps aluminium à lisses, à barreaux, vitré ou décoratif."],
+      ["etanche", "Dessous au sec", "Avec des lames aluminium étanches, l'espace sous la terrasse reste protégé de la pluie."],
+      ["plan", "Étudiée dans son ensemble", "Poteaux, garde-corps, escalier vers le jardin : tout est dessiné en 3D."],
+    ],
+    galerieCat: "pilotis",
+    titreGalerie: "Terrasses sur pilotis en situation",
+    lyon: ["Votre terrasse sur pilotis à Lyon et dans sa région", `Maison sur un terrain en pente, rez-de-jardin en contrebas, habitation sur plusieurs niveaux : nous venons chez vous, à Lyon et dans les communes voisines (${COMMUNES}). Nous relevons les hauteurs, l'accès au jardin et l'implantation souhaitée.`, "Une terrasse surélevée est une construction à part entière : selon sa hauteur et sa surface, une déclaration préalable ou un permis peut être nécessaire. Nous regardons la règle de votre commune avec vous."],
+    lyonCourt: "Nous venons chez vous, à Lyon et dans sa région : hauteurs, accès au jardin et implantation sont relevés, puis la terrasse est dessinée en 3D.",
+    faqTitre: "Vos questions sur la terrasse sur pilotis",
+    faq: [
+      ["Faut-il une autorisation pour une terrasse surélevée ?", "Souvent, oui : selon la hauteur et la surface, une déclaration préalable de travaux ou un permis de construire peut être demandé. Nous vérifions la règle de votre commune avec vous."],
+      ["Un garde-corps est-il obligatoire ?", "Dès que la hauteur de chute devient importante, un garde-corps est indispensable. Nous proposons des garde-corps aluminium sur mesure."],
+      ["Peut-on utiliser l'espace sous la terrasse ?", "Oui : abri de voiture, rangement, coin salon. Avec des lames aluminium étanches, il reste au sec."],
+      ["Quel revêtement pour une terrasse sur pilotis ?", "Lames aluminium, bois ou composite. Les lames aluminium sont étanches et légères, idéales pour une terrasse surélevée."],
+    ],
+    ctaTitre: "Un projet de terrasse surélevée ?", ctaTexte: "Laissez votre numéro : nous vous rappelons pour en parler et organiser le rendez-vous, gratuit et sans engagement.",
+  }),
+};
+
+// ---------- Terrasse sur plots ----------
+const terrassePlots = {
+  title: "Terrasse sur plots Lyon : dalles et lames sur plots réglables | Instant Terrasse",
+  description: "Terrasse sur plots réglables à Lyon : grès cérame directement sur plots, ou lames sur structure aluminium, posés sans fondation sur une dalle, un sol stabilisé ou un toit-terrasse.",
+  corps: pageProjet({
+    ici: "/terrasse-sur-plots-lyon/",
+    h1: ['<span class="pc-nowrap">Terrasse sur plots</span>', 'sur mesure <span class="lyon-l">à Lyon</span>'], kicker: "Dalles et lames sur plots réglables à Lyon",
+    chapo: "Des plots réglables posés sur le support existant : une terrasse de niveau, sans couler de béton, et l'eau s'écoule dessous.",
+    photo: "ambiance-dalles-sur-plots", position: "55% 55%",
+    revTitre: "Quel revêtement sur plots ?", revIntro: "Tous nos revêtements se posent sur plots : directement pour le grès cérame, ou sur une structure aluminium pour les lames.",
+    poids: { durabilite: 1, entretien: 1 },
+    rev: {
+      carrelage: ["carrelage-bh-aspect-bois-gris-jardin", "Grès cérame de 2 cm, directement sur plots ou sur rails aluminium."],
+      aluminium: ["alu-piscine-cour", "Lames aluminium sur structure aluminium : ne pourrit pas, ne bouge pas."],
+      composite: ["composite-gris-piscine-jardin", "L'aspect du bois, sans saturateur ni ponçage."],
+      bois: ["terrasse-kebony-piscine-jardin", "Nos essences phares sur structure aluminium."],
+    },
+    pose: `<div class="structure-bandeau structure-duo"><p class="cs-kicker">Comment c'est posé</p><div class="duo-grille"><a class="carte carte-structure" href="/terrasse-carrelage-lyon/"><div><h3>Plots seuls</h3><p><span class="cs-long">Pour les dalles de grès cérame sur un support plan et stable : chaque dalle repose sur des plots placés à ses angles.</span><span class="cs-court">Dalles sur plots, sur un support stable.</span><span class="cs-lien">Voir le carrelage&nbsp;→</span></p></div><span class="cs-img">${imgPhoto("carrelage-plots-schema", { sizes: "(max-width:700px) 120px, 300px" })}</span></a><a class="carte carte-structure" href="/structure-terrasse-lyon/"><div><h3>Plots et rails aluminium</h3><p><span class="cs-long">Pour les lames, ou sur un sol moins régulier : des rails aluminium sur les plots rendent la terrasse plus rigide et parfaitement plane. Garantie 20 ans.</span><span class="cs-court">Rails alu sur plots. Garantie 20 ans.</span><span class="cs-lien">Voir la structure&nbsp;→</span></p></div><span class="cs-img">${imgPhoto("carrelage-structure-alu-rails-plots", { sizes: "(max-width:700px) 120px, 300px" })}</span></a></div></div>`,
+    atoutsTitre: "Pourquoi poser sur plots ?",
+    atouts: [
+      ["couches", "Sans fondation", "Les plots se posent sur une dalle béton, du concassé ou une étanchéité de toit-terrasse."],
+      ["niveau", "De niveau", "Chaque plot se règle en hauteur pour rattraper les pentes et les différences de niveau."],
+      ["goutte", "L'eau s'écoule dessous", "Le revêtement est surélevé : pas de flaque, et la terrasse sèche vite."],
+      ["demonte", "Démontable", "Une dalle ou une lame se retire pour atteindre un regard ou une descente d'eau."],
+      ["maison", "De plain-pied", "Le niveau de la terrasse s'aligne sur le seuil de la porte-fenêtre."],
+      ["plan", "Dessinée en 3D", "Vous voyez la terrasse et le revêtement en situation avant de décider."],
+    ],
+    galerieCat: ["ambiance-dalles-sur-plots", "carrelage-structure-alu-rails-plots", "structure-plot-rail-lame", "structure-rails-plots-detail", "carrelage-bh-sureleve-gazon", "carrelage-bh-pergola-cour", "structure-plot-reglable", "carrelage-structure-alu-calepinage"],
+    titreGalerie: "Terrasses et plots en situation",
+    lyon: ["Votre terrasse sur plots à Lyon et dans sa région", `Nous venons chez vous, à Lyon et dans les communes voisines (${COMMUNES}), pour voir le support existant, les hauteurs, les seuils et l'écoulement de l'eau. Selon le support et le revêtement, nous choisissons entre plots seuls et plots avec rails aluminium.`],
+    lyonCourt: "Nous venons chez vous, à Lyon et dans sa région : support, hauteurs et écoulement de l'eau sont vérifiés avant de choisir la pose.",
+    faqTitre: "Vos questions sur la terrasse sur plots",
+    faq: [
+      ["Peut-on poser une terrasse sur plots sur une dalle existante ?", "Oui, si la dalle est saine : son état et ses niveaux sont vérifiés lors du rendez-vous."],
+      ["Peut-on poser sur plots directement sur la terre ?", "Les plots se posent sur un sol stabilisé, par exemple du concassé, ou sur une dalle : pas sur de la terre meuble."],
+      ["Quelle hauteur peut-on rattraper ?", "Avec des réhausses, les plots montent jusqu'à environ 40 cm. Au-delà, la terrasse repose sur des poteaux et des poutres : c'est la terrasse sur pilotis."],
+      ["Plots seuls ou avec rails aluminium ?", "Les plots seuls conviennent aux dalles de grès cérame sur un support plan. Pour les lames, ou sur un sol moins régulier, les rails aluminium rendent la terrasse plus rigide et plus plane."],
+      ["L'eau s'évacue-t-elle sous la terrasse ?", "Oui : le revêtement est surélevé, l'eau s'écoule dessous vers les évacuations, et la terrasse sèche vite."],
+    ],
+    ctaTitre: "Un projet de terrasse sur plots ?", ctaTexte: "Laissez votre numéro : nous vous rappelons pour en parler et organiser le rendez-vous, gratuit et sans engagement.",
   }),
 };
 

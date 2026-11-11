@@ -1026,7 +1026,7 @@ const LIGNES_MATERIAUX = [
     "Décors bois ou teintes unies.",
     "Pierre, béton ou bois, en grands formats."],
 ];
-// Comparateur (Antoine, 11/11/2026) : notes de 0 à 4 par critère et par matériau, données par Antoine.
+// Comparateur (Antoine, 11/11/2026) : notes par critère et par matériau, données par Antoine (2e grille, 11/11/2026).
 // Chaque réponse donne un poids à des critères ; compatibilité = somme(poids × note) / (4 × somme des poids).
 const QUIZ_MAT = [
   ["bois", "Bois", "/terrasse-bois-lyon/", "terrasse-kebony-piscine-debordement"],
@@ -1036,8 +1036,8 @@ const QUIZ_MAT = [
 ];
 // [bois, composite, aluminium, carrelage]
 const QUIZ_NOTES = {
-  adherence: [2, 2, 3, 4], chaleur: [4, 3, 4, 2], entretien: [1, 3, 4, 4], aspectBois: [4, 3, 2, 2], aspectPierre: [0, 0, 0, 4],
-  legerete: [3, 2, 4, 1], chaleureux: [4, 3, 1, 2], durabilite: [3, 3, 4, 4], rayures: [2, 2, 3, 4], taches: [2, 4, 4, 3],
+  adherence: [1, 1, 2, 3], chaleur: [3, 2, 3, 1], entretien: [1, 2, 2, 2], aspectBois: [2, 1, 1, 1], aspectPierre: [0, 0, 0, 1],
+  legerete: [3, 2, 4, 1], chaleureux: [4, 3, 1, 2], durabilite: [1, 1, 2, 2], rayures: [1, 1, 2, 3], taches: [1, 3, 3, 2],
 };
 // Raisons affichées (faits validés) : critère → texte par matériau.
 const QUIZ_RAISONS = {
@@ -1056,7 +1056,7 @@ const QUIZ_RAISONS = {
 const QUIZ_Q = [
   ["aspect", "Quel aspect recherchez-vous ?", [
     ["bois", "Le bois, chaleureux", { aspectBois: 3, chaleureux: 3 }],
-    ["mineral", "La pierre, minéral", { aspectPierre: 3 }],
+    ["mineral", "La pierre, minéral", { aspectPierre: 8 }],
     ["egal", "Peu importe", {}],
   ]],
   ["lieu", "Où sera votre terrasse ?", [
@@ -1123,7 +1123,7 @@ const calc=()=>{const w=Object.assign({},BASE);Q.forEach(([id,o])=>{const a=o[re
 const pct=M.map((m,i)=>Math.round(Object.keys(w).reduce((s,c)=>s+w[c]*N[c][i],0)/tot*100));
 const ordre=M.map((m,i)=>i).sort((a,b)=>pct[b]-pct[a]||a-b);
 ordre.forEach((m,rang)=>{const c=Z.querySelector('.quiz-carte[data-mat="'+M[m]+'"]');L.append(c);c.classList.toggle('quiz-top',rang===0);const IC=[['#E0A82E','#B7801A'],['#C9CDD2','#8E949B'],['#C98A55','#94592C']],cup=(f,t)=>'<svg class="quiz-coupe" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3h10v4a5 5 0 0 1-10 0z" fill="'+f+'" stroke="'+t+'" stroke-width="1.2"/><path d="M7 4H4v1.5A3.5 3.5 0 0 0 7.5 9M17 4h3v1.5A3.5 3.5 0 0 1 16.5 9" fill="none" stroke="'+t+'" stroke-width="1.4"/><path d="M10.5 12h3l.5 4h-4z" fill="'+f+'" stroke="'+t+'" stroke-width="1.1"/><rect x="7.5" y="16" width="9" height="3.5" rx="1" fill="'+f+'" stroke="'+t+'" stroke-width="1.1"/></svg>',med='<svg class="quiz-coupe" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 2h3l1 6-3 1zM16 2h-3l-1 6 3 1z" fill="#D79A3A"/><circle cx="12" cy="15" r="6" fill="#E9E4DA" stroke="#A39C8F" stroke-width="1.3"/><circle cx="12" cy="15" r="3.4" fill="none" stroke="#A39C8F" stroke-width="1"/></svg>',lib=['1er · Le plus adapté à votre projet','2e','3e','4e'];c.querySelector('.quiz-rang').innerHTML=(rang<3?cup(IC[rang][0],IC[rang][1]):med)+'<span>'+lib[rang]+'</span>';
-const ul=c.querySelector('.quiz-raisons');ul.innerHTML='';if(!rang){Object.keys(w).filter(k=>T[k]&&T[k][M[m]]&&N[k][m]>=3).sort((a,b)=>w[b]*N[b][m]-w[a]*N[a][m]).slice(0,3).forEach(k=>{const li=document.createElement('li');li.textContent=T[k][M[m]];ul.append(li)})}ul.hidden=!ul.children.length})};
+const ul=c.querySelector('.quiz-raisons');ul.innerHTML='';if(!rang){Object.keys(w).filter(k=>T[k]&&T[k][M[m]]&&N[k][m]>0&&N[k][m]===Math.max(...N[k])).sort((a,b)=>w[b]*N[b][m]-w[a]*N[a][m]).slice(0,3).forEach(k=>{const li=document.createElement('li');li.textContent=T[k][M[m]];ul.append(li)})}ul.hidden=!ul.children.length})};
 Z.addEventListener('click',e=>{const o=e.target.closest('.quiz-opt');if(o){rep[o.dataset.q]=o.dataset.v;o.parentNode.querySelectorAll('.quiz-opt').forEach(b=>b.classList.toggle('choisi',b===o));if(n===E.length-1){calc();voir(E.length);R.scrollIntoView({behavior:'smooth',block:'start'})}else voir(n+1);return}
 if(e.target.closest('.quiz-retour'))voir(n-1);if(e.target.closest('.quiz-recommencer')){rep={};Z.querySelectorAll('.choisi').forEach(b=>b.classList.remove('choisi'));voir(0);Z.scrollIntoView({behavior:'smooth',block:'start'})}
 const d=e.target.closest('[data-devis]');if(d){const t=document.querySelector('#rappel textarea[name=message]');if(t&&!t.value)t.value='Bonjour, le comparateur m\\'oriente vers une terrasse en '+d.dataset.devis.toLowerCase()+'.';const c=document.querySelector('#rappel .choix input[value="Terrasse"]');if(c)c.checked=true}})})()</script>

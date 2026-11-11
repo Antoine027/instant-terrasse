@@ -1956,3 +1956,41 @@ li.mm-sep{border-top:2px solid rgba(47,52,55,.22);margin-top:10px;padding-top:10
 .comp-plie>summary{cursor:pointer}
 .comp-fermer{display:none;font-weight:700;color:var(--accent-texte);text-decoration:underline;text-underline-offset:3px}
 .comp-plie[open] .comp-fermer{display:inline}
+/* Comparateur de revêtements */
+.quiz{background:#fff;border-radius:var(--rayon);box-shadow:0 10px 30px -18px rgba(47,52,55,.45);padding:30px 34px 34px;margin-top:22px;max-width:980px}
+.quiz-barre{height:6px;border-radius:9px;background:var(--fond);overflow:hidden;margin-bottom:26px}
+.quiz-barre span{display:block;height:100%;width:0;background:var(--accent);transition:width .35s}
+.quiz-etape{border:0;margin:0;padding:0;min-width:0}
+.quiz-etape legend{font:700 1.35rem/1.3 Montserrat,sans-serif;margin-bottom:18px;padding:0}
+.quiz-num{display:block;font:600 .8rem Lato,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--doux);margin-bottom:6px}
+.quiz-choix{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.quiz-opt{font:600 1rem Montserrat,sans-serif;color:var(--texte);background:var(--fond2);border:2px solid transparent;border-radius:12px;padding:18px 20px;text-align:left;cursor:pointer;transition:border-color .2s,background .2s}
+.quiz-opt:hover{border-color:var(--accent)}
+.quiz-opt.choisi{border-color:var(--accent);background:#fdf4e6}
+.quiz-retour,.quiz-recommencer{margin-top:18px;background:none;border:0;padding:4px 0;font:700 .95rem Lato,sans-serif;color:var(--accent-texte);cursor:pointer;text-decoration:underline;text-underline-offset:3px}
+.quiz-carte{display:grid;grid-template-columns:380px 1fr;gap:28px;align-items:center;margin-top:12px}
+.quiz-photo img{display:block;width:100%!important;height:auto!important;aspect-ratio:4/3;object-fit:cover;border-radius:12px}
+.quiz-rang{margin:0 0 4px;font:700 .8rem Montserrat,sans-serif;letter-spacing:.06em;text-transform:uppercase;color:var(--accent-texte)}
+.quiz-texte h3{font-size:1.6rem;margin:0 0 6px}
+.quiz-resume{color:var(--doux);margin:0 0 10px}
+.quiz-raisons{margin:0 0 16px}
+.quiz-actions{margin:0}
+.quiz-carte.quiz-alt{grid-template-columns:180px 1fr;gap:20px;margin-top:22px;padding-top:22px;border-top:1px solid rgba(47,52,55,.1)}
+.quiz-carte.quiz-alt h3{font-size:1.2rem}
+.quiz-carte.quiz-alt .quiz-resume{display:none}
+.quiz-carte.quiz-alt .bouton:not(.bouton-blanc){display:none}
+.quiz-note{margin:22px 0 0;font-size:.9rem;color:var(--doux)}
+.comp-materiaux .comp-table,.comp-materiaux .tableau-defile{margin-top:16px}
+@media (max-width:700px){
+  .quiz{padding:22px 18px 24px;text-align:left}
+  .quiz-etape legend{font-size:1.15rem}
+  .quiz-choix{grid-template-columns:1fr;gap:10px}
+  .quiz-opt{padding:16px 18px}
+  .quiz-carte,.quiz-carte.quiz-alt{grid-template-columns:1fr;gap:14px}
+  .quiz-carte.quiz-alt{grid-template-columns:110px 1fr;align-items:start}
+  .quiz-texte h3{font-size:1.35rem}
+  .comp-materiaux .tableau-defile{display:none}
+}
+@media (min-width:701px){.comp-materiaux .comp-liste{display:none}}
+.quiz [hidden]{display:none!important}
+@media (max-width:700px){.quiz-recommencer{display:block;margin:18px auto 0}.quiz-actions .bouton{display:block;margin:0 auto 10px;max-width:260px}}

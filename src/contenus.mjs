@@ -1001,20 +1001,20 @@ const terrassePilotis = {
 const MATERIAUX = ["Bois", "Composite", "Aluminium", "Carrelage"];
 const LIGNES_MATERIAUX = [
   ["Entretien",
-    "Un nettoyage par an. Un saturateur pour garder la teinte d'origine ; sans lui, le bois grise naturellement.",
+    "Deux nettoyages par an au minimum. Pas de saturateur pour nos essences phares ; conseillé pour le bambou.",
     "De l'eau savonneuse, sans saturateur ni ponçage.",
     "Un nettoyage à l'eau, aucun traitement à refaire.",
     "Balai et eau : les taches ne pénètrent pas."],
   ["Résistance à la chaleur",
-    "Le plus agréable pieds nus en plein soleil : le bois chauffe peu.",
-    "Chauffe davantage au soleil, surtout en teinte foncée.",
-    "Chauffe au soleil mais refroidit vite à l'ombre ; les teintes claires restent les plus confortables.",
-    "Insensible à la chaleur ; une teinte claire reste supportable pieds nus."],
+    "Un bois tendre reste le plus agréable sous le pied en plein été.",
+    "La gamme pleine masse chauffe peu, proche du bois.",
+    "Le revêtement qui chauffe le moins : moins que le composite et les bois durs.",
+    "Insensible à la chaleur ; une teinte claire reste la plus confortable."],
   ["Adhérence",
     "Bonne sur une lame propre ; une lame verdie, faute d'entretien, devient glissante.",
-    "Surface brossée ou striée qui accroche bien.",
-    "Lames striées, pensées pour les plages de piscine.",
-    "À choisir en finition antidérapante pour l'extérieur (classement R11 conseillé)."],
+    "La gamme pleine masse reste antidérapante, même mouillée.",
+    "Antidérapantes grâce à un revêtement spécial, idéales autour d'une piscine.",
+    "Nos dalles de grès cérame sont antidérapantes."],
   ["Durabilité",
     "Selon l'essence : l'accoya, le kebony, les bois thermo-traités, l'ipé ou le cumaru durent plusieurs décennies, les résineux moins longtemps.",
     "Ne pourrit pas ; la teinte se stabilise après quelques mois.",
@@ -1026,45 +1026,127 @@ const LIGNES_MATERIAUX = [
     "Décors bois ou teintes unies.",
     "Pierre, béton ou bois, en grands formats."],
 ];
+// Comparateur (Antoine, 11/11/2026) : 4 questions, points par matériau [bois, composite, aluminium, carrelage], grille validée par Antoine.
+const QUIZ_MAT = [
+  ["bois", "Bois", "/terrasse-bois-lyon/", "terrasse-kebony-piscine-debordement"],
+  ["composite", "Composite", "/terrasse-composite-lyon/", "composite-gris-piscine"],
+  ["aluminium", "Lames aluminium", "/terrasse-aluminium-lyon/", "alu-piscine-aspect-teck"],
+  ["carrelage", "Carrelage", "/terrasse-carrelage-lyon/", "carrelage-bh-aspect-bois-gris-jardin"],
+];
+const QUIZ_Q = [
+  ["lieu", "Où sera votre terrasse ?", [
+    ["jardin", "Dans le jardin", [1, 1, 1, 1], {}],
+    ["piscine", "Autour d'une piscine", [1, 1, 2, 2], { composite: ["La gamme pleine masse reste antidérapante, même mouillée.", "adh"], aluminium: ["Autour d'une piscine, les lames aluminium sont antidérapantes grâce à un revêtement spécial.", "adh"], carrelage: ["Nos dalles de grès cérame sont antidérapantes : idéal autour d'un bassin.", "adh"] }],
+    ["balcon", "Sur un balcon ou un toit-terrasse", [1, 1, 2, 1], { aluminium: ["Lames et structure tout aluminium : un ensemble léger, idéal sur un balcon ou un toit-terrasse.", "leger"] }],
+    ["sureleve", "En hauteur, terrasse surélevée", [1, 1, 2, 1], { aluminium: ["Les lames aluminium sont étanches : idéal pour une terrasse surélevée.", "etanche"] }],
+  ]],
+  ["prio", "Ce qui compte le plus pour vous ?", [
+    ["bois", "Le vrai bois", [3, 0, 0, 0], { bois: ["Une matière naturelle, différente sur chaque lame, qui évolue avec le temps.", "aspect"] }],
+    ["entretien", "Aucun entretien", [0, 2, 2, 2], { composite: ["Ni saturateur ni ponçage : un simple nettoyage suffit.", "entretien"], aluminium: ["Inerte et inaltérable : rien à traiter, il ne moisit pas et ne bouge pas.", "entretien"], carrelage: ["Le grès cérame ne demande ni saturateur, ni ponçage, ni traitement.", "entretien"] }],
+    ["fraicheur", "La fraîcheur pieds nus", [2, 1, 3, 0], { bois: ["Un bois tendre reste le plus agréable sous le pied en plein été.", "chaleur"], composite: ["La gamme pleine masse chauffe peu, proche du bois.", "chaleur"], aluminium: ["Le revêtement qui chauffe le moins : moins que le composite et les bois durs.", "chaleur"] }],
+    ["mineral", "Un style minéral", [0, 0, 0, 3], { carrelage: ["Aspect pierre ou bois, du très clair au très foncé, dans la continuité de votre séjour.", "aspect"] }],
+  ]],
+  ["entretien", "L'entretien que vous acceptez ?", [
+    ["aucun", "Aucun", [0, 1, 2, 2], { aluminium: ["Aucun traitement à refaire, jamais.", "entretien"], carrelage: ["Un coup de balai et de l'eau suffisent.", "entretien"] }],
+    ["nettoyage", "Deux nettoyages par an", [1, 1, 1, 1], { bois: ["Nos essences phares (thermofrêne, kebony, accoya…) se passent de saturateur.", "entretien"] }],
+    ["saturateur", "Un saturateur de temps en temps", [2, 0, 0, 0], { bois: ["Avec un saturateur de temps en temps, toutes nos essences vous sont ouvertes.", "entretien"] }],
+  ]],
+  ["expo", "Votre terrasse est plutôt…", [
+    ["soleil", "En plein soleil", [1, 0, 2, 0], { aluminium: ["En plein soleil, l'aluminium reste le revêtement qui chauffe le moins.", "chaleur"] }],
+    ["ombre", "Plutôt à l'ombre", [0, 0, 0, 0], {}],
+  ]],
+];
+const QUIZ_RESUME = {
+  bois: "Une matière vivante, en essences phares sur structure aluminium ou en essences classiques sur lambourdes.",
+  composite: "L'aspect du bois, sans saturateur ni ponçage, sur structure aluminium.",
+  aluminium: "Imputrescible, léger et antidérapant, en 6 teintes, garanti 20 ans.",
+  carrelage: "Du grès cérame de 2 cm posé à sec, aspect pierre ou bois.",
+};
+const quizHtml = () => `
+<section id="trouver" class="bloc">
+  <div class="conteneur">
+    <p class="sous-titre">4 questions, 30 secondes</p>
+    <h2>Trouvez le revêtement qui vous correspond</h2>
+    <div class="quiz" data-quiz>
+      <div class="quiz-barre" aria-hidden="true"><span></span></div>
+      ${QUIZ_Q.map(([id, q, opts], n) => `<fieldset class="quiz-etape" data-etape="${n}"${n ? " hidden" : ""}>
+        <legend><span class="quiz-num">${n + 1} / ${QUIZ_Q.length}</span>${q}</legend>
+        <div class="quiz-choix">${opts.map(([v, l]) => `<button type="button" class="quiz-opt" data-q="${id}" data-v="${v}">${l}</button>`).join("")}</div>
+        ${n ? `<button type="button" class="quiz-retour">← Retour</button>` : ""}
+      </fieldset>`).join("")}
+      <div class="quiz-resultat" hidden>
+        <p class="sous-titre">Notre recommandation</p>
+        ${QUIZ_MAT.map(([k, nom, url, ph]) => `<article class="quiz-carte" data-mat="${k}" hidden>
+          <div class="quiz-photo">${imgPhoto(ph, { sizes: "(max-width:700px) 92vw, 420px" })}</div>
+          <div class="quiz-texte">
+            <p class="quiz-rang"></p>
+            <h3>${nom}</h3>
+            <p class="quiz-resume">${QUIZ_RESUME[k]}</p>
+            <ul class="puces quiz-raisons"></ul>
+            <p class="quiz-actions"><a class="bouton" href="#rappel" data-devis="${nom}">Demander un devis</a> <a class="bouton bouton-blanc" href="${url}">Découvrir</a></p>
+          </div>
+        </article>`).join("")}
+        <p class="quiz-note">Un conseil indicatif : lors du rendez-vous, nous vérifions votre support et apportons les échantillons.</p>
+        <button type="button" class="quiz-recommencer">↺ Recommencer</button>
+      </div>
+    </div>
+    <script>(()=>{const Q=${JSON.stringify(QUIZ_Q.map(([id, , o]) => [id, Object.fromEntries(o.map(([v, , pts, r]) => [v, [pts, r]]))]))},M=${JSON.stringify(QUIZ_MAT.map(([k]) => k))},Z=document.querySelector('[data-quiz]'),E=[...Z.querySelectorAll('.quiz-etape')],R=Z.querySelector('.quiz-resultat'),B=Z.querySelector('.quiz-barre span');let rep={},n=0;
+const voir=i=>{n=i;E.forEach((e,j)=>e.hidden=j!==i);R.hidden=i<E.length;B.style.width=Math.min(i,E.length)/E.length*100+'%'};
+const calc=()=>{const s=M.map(()=>0),pr=M.map(()=>0),rs=M.map(()=>[]);Q.forEach(([id,o],qi)=>{const a=o[rep[id]];if(!a)return;a[0].forEach((p,m)=>{s[m]+=p;if(qi===1)pr[m]+=p;const r=a[1][M[m]];if(r)rs[m].push([p,r[0],r[1]])})});
+const ordre=M.map((m,i)=>i).sort((a,b)=>s[b]-s[a]||pr[b]-pr[a]||[1,2,0,3].indexOf(a)-[1,2,0,3].indexOf(b));
+Z.querySelectorAll('.quiz-carte').forEach(c=>{c.hidden=true;c.classList.remove('quiz-alt')});
+ordre.slice(0,2).forEach((m,rang)=>{const c=Z.querySelector('.quiz-carte[data-mat="'+M[m]+'"]');c.hidden=false;if(rang)c.classList.add('quiz-alt');R.insertBefore(c,R.querySelector('.quiz-note'));c.querySelector('.quiz-rang').textContent=rang?'À envisager aussi':'Le plus adapté à votre projet';const ul=c.querySelector('.quiz-raisons'),vu=new Set();ul.innerHTML='';rs[m].sort((a,b)=>b[0]-a[0]).forEach(([,t,k])=>{if(vu.has(k)||vu.size>=(rang?2:3))return;vu.add(k);const li=document.createElement('li');li.textContent=t;ul.append(li)});ul.hidden=!ul.children.length})};
+Z.addEventListener('click',e=>{const o=e.target.closest('.quiz-opt');if(o){rep[o.dataset.q]=o.dataset.v;o.parentNode.querySelectorAll('.quiz-opt').forEach(b=>b.classList.toggle('choisi',b===o));if(n===E.length-1){calc();voir(E.length);R.scrollIntoView({behavior:'smooth',block:'start'})}else voir(n+1);return}
+if(e.target.closest('.quiz-retour'))voir(n-1);if(e.target.closest('.quiz-recommencer')){rep={};Z.querySelectorAll('.choisi').forEach(b=>b.classList.remove('choisi'));voir(0);Z.scrollIntoView({behavior:'smooth',block:'start'})}
+const d=e.target.closest('[data-devis]');if(d){const t=document.querySelector('#rappel textarea[name=message]');if(t&&!t.value)t.value='Bonjour, le comparateur m\\'oriente vers une terrasse en '+d.dataset.devis.toLowerCase()+'.';const c=document.querySelector('#rappel .choix input[value="Terrasse"]');if(c)c.checked=true}})})()</script>
+  </div>
+</section>`;
+
 const nosTerrasses = {
   title: "Terrasse bois, composite, aluminium ou carrelage : comparatif | Instant Terrasse",
-  description: "Bois, composite, aluminium ou carrelage : comparez l'entretien, la résistance à la chaleur, l'adhérence et la durabilité des revêtements de terrasse. Conseils à Lyon.",
+  description: "Bois, composite, aluminium ou carrelage : trouvez en 4 questions le revêtement de terrasse adapté à votre projet, puis comparez entretien, chaleur, adhérence et durabilité. Lyon.",
   corps: `
 ${heroPlein({ fil: "Terrasses", h1: ["Bois, composite, aluminium", "ou carrelage ?"], kicker: "Comparatif des revêtements de terrasse",
-  chapo: "Chaque matériau a ses qualités : le bon choix dépend de l'usage, de l'exposition et de l'entretien que vous acceptez.",
+  chapo: "Répondez à 4 questions : nous vous indiquons le revêtement le plus adapté à votre projet.",
   photo: "terrasse-accoya-naturel-piscine-vue-haut", position: "60% 50%",
-  actions: `<a class="bouton" href="/contact/">Demander un devis gratuit</a> <a class="bouton bouton-blanc" href="#comparatif">Voir le comparatif</a>` })}
-
-<section id="comparatif" class="bloc">
-  <div class="conteneur">
-    <h2>Le comparatif</h2>
-    <p class="chapo">Quatre critères pour se faire une idée. Lors du rendez-vous, nous apportons les échantillons pour les toucher, au soleil comme à l'ombre.</p>
-    <div class="tableau-defile">
-      <table class="comparatif comparatif-4">
-        <thead><tr><th scope="col"><span class="vh">Critère</span></th>${MATERIAUX.map((m) => `<th scope="col">${m}</th>`).join("")}</tr></thead>
-        <tbody>${LIGNES_MATERIAUX.map(([crit, ...v]) => `<tr><th scope="row">${crit}</th>${v.map((x) => `<td>${x}</td>`).join("")}</tr>`).join("")}</tbody>
-      </table>
-    </div>
-  </div>
-</section>
+  actions: `<a class="bouton" href="#trouver">Faire le test</a> <a class="bouton bouton-blanc" href="#comparatif">Voir le comparatif</a>` })}
+${quizHtml()}
 
 <section class="bloc bloc-alt">
   <div class="conteneur">
     <h2>En résumé</h2>
     <div class="grille grille-4">
-      ${carteProduit("/terrasse-bois-lyon/", "Bois", "Pour le charme d'une matière naturelle, agréable pieds nus.")}
+      ${carteProduit("/terrasse-bois-lyon/", "Bois", "Pour le charme d'une matière naturelle ; un bois tendre reste le plus agréable en été.")}
       ${carteProduit("/terrasse-composite-lyon/", "Composite", "Pour l'aspect bois avec un entretien réduit au minimum.")}
-      ${carteProduit("/terrasse-aluminium-lyon/", "Aluminium", "Pour une terrasse stable, imputrescible, idéale autour d'une piscine.")}
+      ${carteProduit("/terrasse-aluminium-lyon/", "Aluminium", "Le revêtement qui chauffe le moins, léger et antidérapant.")}
       ${carteProduit("/terrasse-carrelage-lyon/", "Carrelage", "Pour un style minéral, dans la continuité du sol intérieur.")}
     </div>
   </div>
 </section>
 
-<section class="bloc">
+<section id="comparatif" class="bloc">
+  <div class="conteneur">
+    <h2>Le comparatif complet</h2>
+    <p class="chapo">Cinq critères, matériau par matériau. Lors du rendez-vous, nous apportons les échantillons pour les toucher, au soleil comme à l'ombre.</p>
+    <details class="comp-plie comp-materiaux">
+      <summary><h3>Bois, composite, aluminium, carrelage</h3><span class="comp-ouvrir">Voir le comparatif</span><span class="comp-fermer">Masquer le comparatif</span></summary>
+      <div class="tableau-defile">
+        <table class="comparatif comparatif-4">
+          <thead><tr><th scope="col"><span class="vh">Critère</span></th>${MATERIAUX.map((m) => `<th scope="col">${m}</th>`).join("")}</tr></thead>
+          <tbody>${LIGNES_MATERIAUX.map(([crit, ...v]) => `<tr><th scope="row">${crit}</th>${v.map((x) => `<td>${x}</td>`).join("")}</tr>`).join("")}</tbody>
+        </table>
+      </div>
+      <dl class="comp-liste">${LIGNES_MATERIAUX.map(([crit, ...v]) => `<div><dt>${crit}</dt>${v.map((x, i) => `<dd><b>${MATERIAUX[i]} :</b> ${x}</dd>`).join("")}</div>`).join("")}</dl>
+    </details>
+    <script>if(location.hash==='#comparatif')document.querySelector('.comp-materiaux').open=true;addEventListener('hashchange',()=>{if(location.hash==='#comparatif')document.querySelector('.comp-materiaux').open=true})</script>
+  </div>
+</section>
+
+<section class="bloc bloc-alt">
   <div class="conteneur deux-colonnes">
     <div>
       <h2>Et ce qu'il y a dessous</h2>
-      <p>Le revêtement ne fait pas tout : c'est la structure qui fait durer une terrasse. Bois ou aluminium, sur plots ou sur pilotis, nous comparons aussi les ossatures sur notre page <a href="/structure-terrasse-lyon/">structures de terrasse</a>, avec un comparatif <a href="/structure-terrasse-lyon/#comparatif-bois">pour le bois</a> et un autre <a href="/structure-terrasse-lyon/#comparatif-carrelage">pour le carrelage</a>.</p>
+      <p>Le revêtement ne fait pas tout : c'est la structure qui fait durer une terrasse. Tous nos revêtements se posent sur notre <a href="/structure-terrasse-lyon/">structure aluminium</a>, garantie 20 ans ; pour le bois et le carrelage, d'autres poses sont possibles.</p>
     </div>
     <div>
       <h2>Votre projet</h2>
@@ -1162,7 +1244,7 @@ const terrassePiscine = {
     galerieCat: ["terrasse-kebony-piscine-debordement", "alu-piscine-aspect-teck", "terrasse-accoya-gris-piscine", "composite-gris-piscine", "terrasse-thermofrene-piscine-mer", "alu-piscine-blanche-vue", "terrasse-bambou-ndurance-piscine-pierre", "alu-piscine-haricot", "terrasse-kebony-piscine-jardin", "terrasse-accoya-naturel-bord-piscine", "alu-piscine-grise", "terrasse-thermofrene-piscine-naturelle", "alu-piscine-jardin-tropical", "alu-piscine-debordement-baie", "alu-piscine-toit-terrasse", "alu-piscine-carbet", "alu-piscine-debordement-mer", "alu-piscine-maison-creole", "alu-piscine-cour"],
     titreGalerie: "Plages de piscine en situation",
     details: `<h2>Quel revêtement au bord de l'eau ?</h2>
-      <p>Le <a href="/terrasse-bois-lyon/">bois</a> reste le plus agréable sous le pied en plein été, à condition de choisir une essence faite pour l'extérieur. Les <a href="/terrasse-aluminium-lyon/">lames aluminium</a> et le <a href="/terrasse-composite-lyon/">composite</a> réduisent l'entretien au minimum, et le <a href="/terrasse-carrelage-lyon/">grès cérame</a> se prolonge jusqu'à la margelle.</p>
+      <p>Un <a href="/terrasse-bois-lyon/">bois</a> tendre reste le plus agréable sous le pied en plein été. Les <a href="/terrasse-aluminium-lyon/">lames aluminium</a> et le <a href="/terrasse-composite-lyon/">composite</a> réduisent l'entretien au minimum, et le <a href="/terrasse-carrelage-lyon/">grès cérame</a> se prolonge jusqu'à la margelle.</p>
       <p>Tous les critères sont dans notre <a href="/nos-terrasses/">comparatif des matériaux</a>.</p>`,
     complement: "Nous venons voir le bassin, les niveaux et le local technique, et le plan 3D de votre plage est offert.",
     titreVoisins: "Pour aller plus loin",

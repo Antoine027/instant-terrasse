@@ -1072,17 +1072,17 @@ const QUIZ_Q = [
     ["calme", "Un usage tranquille", {}],
   ]],
   ["entretien", "L'entretien que vous acceptez ?", [
-    ["minimum", "Le moins possible", { entretien: 3 }],
-    ["un-peu", "Un peu, ça ne me dérange pas", { entretien: 1 }],
-    ["egal", "Peu importe", {}],
+    ["aucun", "Aucun nettoyage", { entretien: 3, _sans: ["bois"] }],
+    ["balai", "Un nettoyage au balai-brosse", { entretien: 1 }],
+    ["saturateur", "Balai-brosse et saturateur", {}],
   ]],
   ["expo", "Votre terrasse est plutôt…", [
     ["soleil", "En plein soleil", { chaleur: 2 }],
-    ["ombre", "À l'ombre ou humide", { adherence: 1 }],
+    ["ombre", "À l'ombre ou humide", { adherence: 1, entretien: 1, durabilite: 1 }],
     ["mixte", "Les deux selon l'heure", {}],
   ]],
 ];
-const QUIZ_BASE = { durabilite: 1 }; // tout le monde veut une terrasse qui dure
+const QUIZ_BASE = {}; // la durabilité ne compte que si une réponse la déclenche (Antoine, 11/11/2026)
 const QUIZ_RESUME = {
   bois: "Une matière vivante, en essences phares sur structure aluminium ou en essences classiques sur lambourdes.",
   composite: "L'aspect du bois, sans saturateur ni ponçage, sur structure aluminium.",
@@ -1119,9 +1119,9 @@ const quizHtml = () => `
     </div>
     <script>(()=>{const Q=${JSON.stringify(QUIZ_Q.map(([id, , o]) => [id, Object.fromEntries(o.map(([v, , w]) => [v, w]))]))},N=${JSON.stringify(QUIZ_NOTES)},T=${JSON.stringify(QUIZ_RAISONS)},BASE=${JSON.stringify(QUIZ_BASE)},M=${JSON.stringify(QUIZ_MAT.map(([k]) => k))},Z=document.querySelector('[data-quiz]'),E=[...Z.querySelectorAll('.quiz-etape')],R=Z.querySelector('.quiz-resultat'),L=Z.querySelector('.quiz-liste'),B=Z.querySelector('.quiz-barre span');let rep={},n=0;
 const voir=i=>{n=i;E.forEach((e,j)=>e.hidden=j!==i);R.hidden=i<E.length;B.style.width=Math.min(i,E.length)/E.length*100+'%'};
-const calc=()=>{const w=Object.assign({},BASE);Q.forEach(([id,o])=>{const a=o[rep[id]]||{};for(const c in a)w[c]=(w[c]||0)+a[c]});const tot=Object.values(w).reduce((x,y)=>x+y,0)*4;
+const calc=()=>{const w=Object.assign({},BASE),sans=[];Q.forEach(([id,o])=>{const a=o[rep[id]]||{};for(const c in a){if(c==='_sans')sans.push(...a[c]);else w[c]=(w[c]||0)+a[c]}});const tot=(Object.values(w).reduce((x,y)=>x+y,0)||1)*4;
 const pct=M.map((m,i)=>Math.round(Object.keys(w).reduce((s,c)=>s+w[c]*N[c][i],0)/tot*100));
-const ordre=M.map((m,i)=>i).sort((a,b)=>pct[b]-pct[a]||a-b);
+const ordre=M.map((m,i)=>i).sort((a,b)=>sans.includes(M[a])-sans.includes(M[b])||pct[b]-pct[a]||a-b);
 ordre.forEach((m,rang)=>{const c=Z.querySelector('.quiz-carte[data-mat="'+M[m]+'"]');L.append(c);c.classList.toggle('quiz-top',rang===0);const IC=[['#E0A82E','#B7801A'],['#C9CDD2','#8E949B'],['#C98A55','#94592C']],cup=(f,t)=>'<svg class="quiz-coupe" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3h10v4a5 5 0 0 1-10 0z" fill="'+f+'" stroke="'+t+'" stroke-width="1.2"/><path d="M7 4H4v1.5A3.5 3.5 0 0 0 7.5 9M17 4h3v1.5A3.5 3.5 0 0 1 16.5 9" fill="none" stroke="'+t+'" stroke-width="1.4"/><path d="M10.5 12h3l.5 4h-4z" fill="'+f+'" stroke="'+t+'" stroke-width="1.1"/><rect x="7.5" y="16" width="9" height="3.5" rx="1" fill="'+f+'" stroke="'+t+'" stroke-width="1.1"/></svg>',med='<svg class="quiz-coupe" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 2h3l1 6-3 1zM16 2h-3l-1 6 3 1z" fill="#D79A3A"/><circle cx="12" cy="15" r="6" fill="#E9E4DA" stroke="#A39C8F" stroke-width="1.3"/><circle cx="12" cy="15" r="3.4" fill="none" stroke="#A39C8F" stroke-width="1"/></svg>',lib=['1er · Le plus adapté à votre projet','2e','3e','4e'];c.querySelector('.quiz-rang').innerHTML=(rang<3?cup(IC[rang][0],IC[rang][1]):med)+'<span>'+lib[rang]+'</span>';
 const ul=c.querySelector('.quiz-raisons');ul.innerHTML='';if(!rang){Object.keys(w).filter(k=>T[k]&&T[k][M[m]]&&N[k][m]>0&&N[k][m]===Math.max(...N[k])).sort((a,b)=>w[b]*N[b][m]-w[a]*N[a][m]).slice(0,3).forEach(k=>{const li=document.createElement('li');li.textContent=T[k][M[m]];ul.append(li)})}ul.hidden=!ul.children.length})};
 Z.addEventListener('click',e=>{const o=e.target.closest('.quiz-opt');if(o){rep[o.dataset.q]=o.dataset.v;o.parentNode.querySelectorAll('.quiz-opt').forEach(b=>b.classList.toggle('choisi',b===o));if(n===E.length-1){calc();voir(E.length);R.scrollIntoView({behavior:'smooth',block:'start'})}else voir(n+1);return}

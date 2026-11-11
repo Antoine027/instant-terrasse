@@ -1026,36 +1026,63 @@ const LIGNES_MATERIAUX = [
     "Décors bois ou teintes unies.",
     "Pierre, béton ou bois, en grands formats."],
 ];
-// Comparateur (Antoine, 11/11/2026) : 4 questions, points par matériau [bois, composite, aluminium, carrelage], grille validée par Antoine.
+// Comparateur (Antoine, 11/11/2026) : notes de 0 à 4 par critère et par matériau, données par Antoine.
+// Chaque réponse donne un poids à des critères ; compatibilité = somme(poids × note) / (4 × somme des poids).
 const QUIZ_MAT = [
   ["bois", "Bois", "/terrasse-bois-lyon/", "terrasse-kebony-piscine-debordement"],
   ["composite", "Composite", "/terrasse-composite-lyon/", "composite-gris-piscine"],
   ["aluminium", "Lames aluminium", "/terrasse-aluminium-lyon/", "alu-piscine-aspect-teck"],
   ["carrelage", "Carrelage", "/terrasse-carrelage-lyon/", "carrelage-bh-aspect-bois-gris-jardin"],
 ];
+// [bois, composite, aluminium, carrelage]
+const QUIZ_NOTES = {
+  adherence: [2, 2, 3, 4], chaleur: [4, 3, 4, 2], entretien: [1, 3, 4, 4], aspectBois: [4, 3, 2, 2], aspectPierre: [0, 0, 0, 4],
+  legerete: [3, 2, 4, 1], chaleureux: [4, 3, 1, 2], durabilite: [3, 3, 4, 4], rayures: [2, 2, 3, 4], taches: [2, 4, 4, 3],
+};
+// Raisons affichées (faits validés) : critère → texte par matériau.
+const QUIZ_RAISONS = {
+  adherence: { aluminium: "Antidérapantes grâce à un revêtement spécial.", carrelage: "Nos dalles de grès cérame sont antidérapantes." },
+  chaleur: { bois: "Un bois tendre reste le plus agréable sous le pied en plein été.", composite: "La gamme pleine masse chauffe peu, proche du bois.", aluminium: "Le revêtement qui chauffe le moins." },
+  entretien: { composite: "Ni saturateur ni ponçage : un simple nettoyage suffit.", aluminium: "Inerte et inaltérable : rien à traiter, il ne moisit pas.", carrelage: "Ni saturateur, ni ponçage, ni traitement." },
+  aspectBois: { bois: "Une matière naturelle, différente sur chaque lame.", composite: "L'aspect du bois, sans ses contraintes." },
+  aspectPierre: { carrelage: "Aspect pierre ou béton, en grands formats jusqu'au 120 × 120." },
+  legerete: { aluminium: "Lames et structure tout aluminium : un ensemble léger." },
+  chaleureux: { bois: "Une matière vivante et chaleureuse, qui évolue avec le temps.", composite: "Un aspect chaleureux, proche du bois." },
+  durabilite: { aluminium: "Imputrescible et indéformable : il ne bouge pas.", carrelage: "Le grès cérame est l'un des revêtements les plus durables." },
+  rayures: { carrelage: "Le grès cérame est celui qui résiste le mieux aux rayures." },
+  taches: { composite: "Les taches ne pénètrent pas dans la lame.", aluminium: "Les taches ne marquent pas." },
+};
+// Questions : [id, intitulé, [[valeur, libellé, {critère: poids}]]]
 const QUIZ_Q = [
-  ["lieu", "Où sera votre terrasse ?", [
-    ["jardin", "Dans le jardin", [1, 1, 1, 1], {}],
-    ["piscine", "Autour d'une piscine", [1, 1, 2, 2], { composite: ["La gamme pleine masse reste antidérapante, même mouillée.", "adh"], aluminium: ["Autour d'une piscine, les lames aluminium sont antidérapantes grâce à un revêtement spécial.", "adh"], carrelage: ["Nos dalles de grès cérame sont antidérapantes : idéal autour d'un bassin.", "adh"] }],
-    ["balcon", "Sur un balcon ou un toit-terrasse", [1, 1, 2, 1], { aluminium: ["Lames et structure tout aluminium : un ensemble léger, idéal sur un balcon ou un toit-terrasse.", "leger"] }],
-    ["sureleve", "En hauteur, terrasse surélevée", [1, 1, 2, 1], { aluminium: ["Les lames aluminium sont étanches : idéal pour une terrasse surélevée.", "etanche"] }],
+  ["aspect", "Quel aspect recherchez-vous ?", [
+    ["bois", "Le bois, chaleureux", { aspectBois: 2, chaleureux: 2 }],
+    ["mineral", "La pierre, minéral", { aspectPierre: 3 }],
+    ["egal", "Peu importe", {}],
   ]],
-  ["prio", "Ce qui compte le plus pour vous ?", [
-    ["bois", "Le vrai bois", [3, 0, 0, 0], { bois: ["Une matière naturelle, différente sur chaque lame, qui évolue avec le temps.", "aspect"] }],
-    ["couleur", "Pas de changement de couleur", [0, 1, 2, 2], { composite: ["La teinte s'éclaircit les premiers mois, puis se stabilise.", "couleur"], aluminium: ["Les lames aluminium sont ce qui résiste le mieux au changement de couleur.", "couleur"], carrelage: ["Le grès cérame est ce qui résiste le mieux au changement de couleur.", "couleur"] }],
-    ["fraicheur", "La fraîcheur pieds nus", [2, 1, 3, 0], { bois: ["Un bois tendre reste le plus agréable sous le pied en plein été.", "chaleur"], composite: ["La gamme pleine masse chauffe peu, proche du bois.", "chaleur"], aluminium: ["Le revêtement qui chauffe le moins : moins que le composite et les bois durs.", "chaleur"] }],
-    ["mineral", "Un style minéral", [0, 0, 0, 3], { carrelage: ["Aspect pierre ou bois, du très clair au très foncé, dans la continuité de votre séjour.", "aspect"] }],
+  ["lieu", "Où sera votre terrasse ?", [
+    ["jardin", "Dans le jardin", {}],
+    ["piscine", "Autour d'une piscine", { adherence: 2, chaleur: 2 }],
+    ["balcon", "Sur un balcon ou un toit-terrasse", { legerete: 2 }],
+    ["sureleve", "En hauteur, terrasse surélevée", { legerete: 1 }],
+  ]],
+  ["usage", "Comment allez-vous la vivre ?", [
+    ["pieds", "Pieds nus, en été", { chaleur: 2, adherence: 1 }],
+    ["repas", "Repas, barbecue, enfants", { taches: 2, rayures: 1 }],
+    ["passage", "Beaucoup de passage, mobilier déplacé", { rayures: 2, durabilite: 1 }],
+    ["calme", "Un usage tranquille", {}],
   ]],
   ["entretien", "L'entretien que vous acceptez ?", [
-    ["aucun", "Aucun", [0, 2, 2, 2], { composite: ["Ni saturateur ni ponçage : un simple nettoyage suffit.", "entretien"], aluminium: ["Aucun traitement à refaire, jamais.", "entretien"], carrelage: ["Un coup de balai et de l'eau suffisent.", "entretien"] }],
-    ["nettoyage", "Deux nettoyages par an", [1, 1, 1, 1], { bois: ["Nos essences phares (thermofrêne, kebony, accoya…) se passent de saturateur.", "entretien"] }],
-    ["saturateur", "Un saturateur de temps en temps", [2, 0, 0, 0], { bois: ["Avec un saturateur de temps en temps, toutes nos essences vous sont ouvertes.", "entretien"] }],
+    ["minimum", "Le moins possible", { entretien: 3 }],
+    ["un-peu", "Un peu, ça ne me dérange pas", { entretien: 1 }],
+    ["egal", "Peu importe", {}],
   ]],
   ["expo", "Votre terrasse est plutôt…", [
-    ["soleil", "En plein soleil", [1, 0, 2, 0], { aluminium: ["En plein soleil, l'aluminium reste le revêtement qui chauffe le moins.", "chaleur"] }],
-    ["ombre", "Plutôt à l'ombre", [0, 0, 0, 0], {}],
+    ["soleil", "En plein soleil", { chaleur: 2 }],
+    ["ombre", "À l'ombre ou humide", { adherence: 1 }],
+    ["mixte", "Les deux selon l'heure", {}],
   ]],
 ];
+const QUIZ_BASE = { durabilite: 1 }; // tout le monde veut une terrasse qui dure
 const QUIZ_RESUME = {
   bois: "Une matière vivante, en essences phares sur structure aluminium ou en essences classiques sur lambourdes.",
   composite: "L'aspect du bois, sans saturateur ni ponçage, sur structure aluminium.",
@@ -1065,7 +1092,7 @@ const QUIZ_RESUME = {
 const quizHtml = () => `
 <section id="trouver" class="bloc">
   <div class="conteneur">
-    <p class="sous-titre">4 questions, 30 secondes</p>
+    <p class="sous-titre">${QUIZ_Q.length} questions, 30 secondes</p>
     <h2>Trouvez le revêtement qui vous correspond</h2>
     <div class="quiz" data-quiz>
       <div class="quiz-barre" aria-hidden="true"><span></span></div>
@@ -1075,27 +1102,29 @@ const quizHtml = () => `
         ${n ? `<button type="button" class="quiz-retour">← Retour</button>` : ""}
       </fieldset>`).join("")}
       <div class="quiz-resultat" hidden>
-        <p class="sous-titre">Notre recommandation</p>
-        ${QUIZ_MAT.map(([k, nom, url, ph]) => `<article class="quiz-carte" data-mat="${k}" hidden>
+        <p class="sous-titre">Votre résultat</p>
+        <div class="quiz-liste">${QUIZ_MAT.map(([k, nom, url, ph]) => `<article class="quiz-carte" data-mat="${k}">
           <div class="quiz-photo">${imgPhoto(ph, { sizes: "(max-width:700px) 92vw, 420px" })}</div>
           <div class="quiz-texte">
             <p class="quiz-rang"></p>
             <h3>${nom}</h3>
+            <div class="quiz-score"><span class="quiz-jauge"><span></span></span><b class="quiz-pct"></b></div>
             <p class="quiz-resume">${QUIZ_RESUME[k]}</p>
             <ul class="puces quiz-raisons"></ul>
             <p class="quiz-actions"><a class="bouton" href="#rappel" data-devis="${nom}">Demander un devis</a> <a class="bouton bouton-blanc" href="${url}">Découvrir</a></p>
           </div>
-        </article>`).join("")}
+        </article>`).join("")}</div>
         <p class="quiz-note">Un conseil indicatif : lors du rendez-vous, nous vérifions votre support et apportons les échantillons.</p>
         <button type="button" class="quiz-recommencer">↺ Recommencer</button>
       </div>
     </div>
-    <script>(()=>{const Q=${JSON.stringify(QUIZ_Q.map(([id, , o]) => [id, Object.fromEntries(o.map(([v, , pts, r]) => [v, [pts, r]]))]))},M=${JSON.stringify(QUIZ_MAT.map(([k]) => k))},Z=document.querySelector('[data-quiz]'),E=[...Z.querySelectorAll('.quiz-etape')],R=Z.querySelector('.quiz-resultat'),B=Z.querySelector('.quiz-barre span');let rep={},n=0;
+    <script>(()=>{const Q=${JSON.stringify(QUIZ_Q.map(([id, , o]) => [id, Object.fromEntries(o.map(([v, , w]) => [v, w]))]))},N=${JSON.stringify(QUIZ_NOTES)},T=${JSON.stringify(QUIZ_RAISONS)},BASE=${JSON.stringify(QUIZ_BASE)},M=${JSON.stringify(QUIZ_MAT.map(([k]) => k))},Z=document.querySelector('[data-quiz]'),E=[...Z.querySelectorAll('.quiz-etape')],R=Z.querySelector('.quiz-resultat'),L=Z.querySelector('.quiz-liste'),B=Z.querySelector('.quiz-barre span');let rep={},n=0;
 const voir=i=>{n=i;E.forEach((e,j)=>e.hidden=j!==i);R.hidden=i<E.length;B.style.width=Math.min(i,E.length)/E.length*100+'%'};
-const calc=()=>{const s=M.map(()=>0),pr=M.map(()=>0),rs=M.map(()=>[]);Q.forEach(([id,o],qi)=>{const a=o[rep[id]];if(!a)return;a[0].forEach((p,m)=>{s[m]+=p;if(qi===1)pr[m]+=p;const r=a[1][M[m]];if(r)rs[m].push([p,r[0],r[1]])})});
-const ordre=M.map((m,i)=>i).sort((a,b)=>s[b]-s[a]||pr[b]-pr[a]||[1,2,0,3].indexOf(a)-[1,2,0,3].indexOf(b));
-Z.querySelectorAll('.quiz-carte').forEach(c=>{c.hidden=true;c.classList.remove('quiz-alt')});
-ordre.slice(0,2).forEach((m,rang)=>{const c=Z.querySelector('.quiz-carte[data-mat="'+M[m]+'"]');c.hidden=false;if(rang)c.classList.add('quiz-alt');R.insertBefore(c,R.querySelector('.quiz-note'));c.querySelector('.quiz-rang').textContent=rang?'À envisager aussi':'Le plus adapté à votre projet';const ul=c.querySelector('.quiz-raisons'),vu=new Set();ul.innerHTML='';rs[m].sort((a,b)=>b[0]-a[0]).forEach(([,t,k])=>{if(vu.has(k)||vu.size>=(rang?2:3))return;vu.add(k);const li=document.createElement('li');li.textContent=t;ul.append(li)});ul.hidden=!ul.children.length})};
+const calc=()=>{const w=Object.assign({},BASE);Q.forEach(([id,o])=>{const a=o[rep[id]]||{};for(const c in a)w[c]=(w[c]||0)+a[c]});const tot=Object.values(w).reduce((x,y)=>x+y,0)*4;
+const pct=M.map((m,i)=>Math.round(Object.keys(w).reduce((s,c)=>s+w[c]*N[c][i],0)/tot*100));
+const ordre=M.map((m,i)=>i).sort((a,b)=>pct[b]-pct[a]||a-b);
+ordre.forEach((m,rang)=>{const c=Z.querySelector('.quiz-carte[data-mat="'+M[m]+'"]');L.append(c);c.classList.toggle('quiz-top',rang===0);c.querySelector('.quiz-rang').textContent=rang?(rang+1)+'e':'Le plus adapté à votre projet';c.querySelector('.quiz-pct').textContent=pct[m]+' %';c.querySelector('.quiz-jauge span').style.width=pct[m]+'%';
+const ul=c.querySelector('.quiz-raisons');ul.innerHTML='';if(!rang){Object.keys(w).filter(k=>T[k]&&T[k][M[m]]&&N[k][m]>=3).sort((a,b)=>w[b]*N[b][m]-w[a]*N[a][m]).slice(0,3).forEach(k=>{const li=document.createElement('li');li.textContent=T[k][M[m]];ul.append(li)})}ul.hidden=!ul.children.length})};
 Z.addEventListener('click',e=>{const o=e.target.closest('.quiz-opt');if(o){rep[o.dataset.q]=o.dataset.v;o.parentNode.querySelectorAll('.quiz-opt').forEach(b=>b.classList.toggle('choisi',b===o));if(n===E.length-1){calc();voir(E.length);R.scrollIntoView({behavior:'smooth',block:'start'})}else voir(n+1);return}
 if(e.target.closest('.quiz-retour'))voir(n-1);if(e.target.closest('.quiz-recommencer')){rep={};Z.querySelectorAll('.choisi').forEach(b=>b.classList.remove('choisi'));voir(0);Z.scrollIntoView({behavior:'smooth',block:'start'})}
 const d=e.target.closest('[data-devis]');if(d){const t=document.querySelector('#rappel textarea[name=message]');if(t&&!t.value)t.value='Bonjour, le comparateur m\\'oriente vers une terrasse en '+d.dataset.devis.toLowerCase()+'.';const c=document.querySelector('#rappel .choix input[value="Terrasse"]');if(c)c.checked=true}})})()</script>
@@ -1104,10 +1133,10 @@ const d=e.target.closest('[data-devis]');if(d){const t=document.querySelector('#
 
 const nosTerrasses = {
   title: "Terrasse bois, composite, aluminium ou carrelage : comparatif | Instant Terrasse",
-  description: "Bois, composite, aluminium ou carrelage : trouvez en 4 questions le revêtement de terrasse adapté à votre projet, puis comparez entretien, chaleur, adhérence et durabilité. Lyon.",
+  description: "Bois, composite, aluminium ou carrelage : trouvez en 5 questions le revêtement de terrasse adapté à votre projet, puis comparez entretien, chaleur, adhérence et durabilité. Lyon.",
   corps: `
 ${heroPlein({ fil: "Terrasses", h1: ["Bois, composite, aluminium", "ou carrelage ?"], kicker: "Comparatif des revêtements de terrasse",
-  chapo: "Répondez à 4 questions : nous vous indiquons le revêtement le plus adapté à votre projet.",
+  chapo: "Répondez à 5 questions : nous classons les quatre revêtements selon votre projet.",
   photo: "terrasse-accoya-naturel-piscine-vue-haut", position: "60% 50%",
   actions: `<a class="bouton" href="#trouver">Faire le test</a> <a class="bouton bouton-blanc" href="#comparatif">Voir le comparatif</a>` })}
 ${quizHtml()}

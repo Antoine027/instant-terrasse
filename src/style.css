@@ -1994,3 +1994,34 @@ li.mm-sep{border-top:2px solid rgba(47,52,55,.22);margin-top:10px;padding-top:10
 @media (min-width:701px){.comp-materiaux .comp-liste{display:none}}
 .quiz [hidden]{display:none!important}
 @media (max-width:700px){.quiz-recommencer{display:block;margin:18px auto 0}.quiz-actions .bouton{display:block;margin:0 auto 10px;max-width:260px}}
+/* Comparateur v2 : 4 matériaux classés avec compatibilité */
+.quiz-liste{display:grid;gap:14px;margin-top:10px}
+.quiz-carte{grid-template-columns:150px 1fr;gap:20px;margin-top:0;padding:14px;border-radius:12px;background:var(--fond2)}
+.quiz-carte .quiz-resume,.quiz-carte .quiz-actions .bouton:not(.bouton-blanc),.quiz-carte .quiz-raisons{display:none}
+.quiz-carte h3{font-size:1.15rem;margin:0 0 6px}
+.quiz-carte.quiz-top{grid-template-columns:380px 1fr;gap:28px;padding:0 0 18px;background:none;border-bottom:1px solid rgba(47,52,55,.1);border-radius:0}
+.quiz-carte.quiz-top h3{font-size:1.6rem}
+.quiz-carte.quiz-top .quiz-resume,.quiz-carte.quiz-top .quiz-raisons{display:block}
+.quiz-carte.quiz-top .quiz-actions .bouton:not(.bouton-blanc){display:inline-flex}
+.quiz-carte .quiz-actions{margin-top:8px}
+.quiz-carte:not(.quiz-top) .quiz-actions .bouton{padding:8px 16px;font-size:.88rem}
+.quiz-score{display:flex;align-items:center;gap:12px;margin:2px 0 10px}
+.quiz-jauge{flex:1;max-width:320px;height:8px;border-radius:9px;background:rgba(47,52,55,.1);overflow:hidden}
+.quiz-jauge span{display:block;height:100%;width:0;background:var(--accent);border-radius:9px;transition:width .6s}
+.quiz-pct{font:800 1.05rem Montserrat,sans-serif;min-width:52px}
+.quiz-top .quiz-pct{font-size:1.4rem;color:var(--accent-texte)}
+@media (max-width:700px){
+  .quiz-carte,.quiz-carte.quiz-alt{grid-template-columns:96px 1fr;gap:12px;align-items:center}
+  .quiz-carte.quiz-top{grid-template-columns:1fr;gap:12px}
+  .quiz-carte:not(.quiz-top) .quiz-actions .bouton{display:inline-block;max-width:none;margin:0}
+  .quiz-score{justify-content:center}
+  .quiz-carte:not(.quiz-top) .quiz-score{justify-content:flex-start}
+  .quiz-carte:not(.quiz-top) .quiz-texte{text-align:left}
+}
+.quiz-carte:not(.quiz-top) .quiz-rang{text-transform:none;letter-spacing:0}
+@media (max-width:700px){
+  .quiz-carte:not(.quiz-top) .quiz-actions .bouton:not(.bouton-blanc){display:none!important}
+  .quiz-carte:not(.quiz-top) .quiz-actions .bouton-blanc{display:inline-block!important;max-width:none;margin:0}
+  .quiz-carte:not(.quiz-top) .quiz-texte,.quiz-carte:not(.quiz-top) h3{text-align:left}
+  .quiz-carte:not(.quiz-top) h3{font-size:1.05rem}
+}

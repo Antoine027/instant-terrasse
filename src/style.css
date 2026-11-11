@@ -1888,3 +1888,41 @@ li.mm-sep{border-top:2px solid rgba(47,52,55,.22);margin-top:10px;padding-top:10
 }
 /* Composite : lames pleine masse retournées pour être dans le même sens que les Nekko */
 .grille-comp .essence:nth-child(n+3) .essence-photo img{transform:scaleX(-1)}
+/* Page Structures (refonte) */
+.struct-rev-titre{margin:44px 0 16px}
+.struct-rev{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.struct-rev-item{display:block;text-decoration:none;color:var(--texte);background:#fff;border-radius:var(--rayon);overflow:hidden;box-shadow:0 6px 18px -12px rgba(47,52,55,.35)}
+.struct-rev-item img{display:block;width:100%!important;height:auto!important;aspect-ratio:4/3;object-fit:cover}
+.struct-rev-item span{display:block;padding:12px 16px;font:700 1rem Montserrat,sans-serif}
+.struct-rev-item:hover span{color:var(--accent-texte)}
+.autre-pose{display:grid;grid-template-columns:200px 1fr;gap:24px;align-items:center}
+.ap-img{display:flex;align-items:center;justify-content:center}
+.ap-img img{max-width:100%;max-height:200px;width:auto!important;height:auto;mix-blend-mode:multiply}
+.ap-si{margin-top:10px}
+.comp-plie{background:#fff;border-radius:var(--rayon);padding:22px 26px;margin-top:20px;box-shadow:0 6px 18px -12px rgba(47,52,55,.35)}
+.comp-plie>summary{list-style:none;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.comp-plie>summary::-webkit-details-marker{display:none}
+.comp-plie>summary h3{margin:0}
+.comp-ouvrir{font-weight:700;color:var(--accent-texte);text-decoration:underline;text-underline-offset:3px}
+.comp-plie[open] .comp-ouvrir{display:none}
+.comp-table{width:100%;margin-top:16px}
+.comp-liste{display:none;margin:14px 0 0}
+.comp-liste>div{padding:12px 0;border-top:1px solid rgba(47,52,55,.1)}
+.comp-liste dt{font:700 .95rem Montserrat,sans-serif;margin-bottom:4px}
+.comp-liste dd{margin:2px 0;font-size:.95rem}
+.terrains-liste{list-style:none;padding:0;margin:20px 0 0;display:grid;grid-template-columns:1fr 1fr;gap:12px 28px}
+.terrains-liste li{background:#fff;border-radius:12px;padding:14px 18px}
+.terrains-liste strong{display:block;font-family:Montserrat,sans-serif;margin-bottom:2px}
+@media (min-width:701px){.comp-plie>summary{pointer-events:none}.comp-ouvrir{display:none}}
+@media (max-width:700px){
+  .struct-rev{grid-template-columns:1fr 1fr;gap:10px}
+  .struct-rev-item span{padding:10px 12px;font-size:.92rem}
+  .autre-pose{grid-template-columns:1fr;gap:12px;text-align:center}
+  .ap-img img{max-height:150px}
+  .comp-plie{padding:16px 18px;text-align:left}
+  .comp-plie>summary{flex-direction:column;align-items:flex-start;cursor:pointer}
+  .comp-table{display:none}
+  .comp-liste{display:block}
+  .terrains-liste{grid-template-columns:1fr;text-align:left}
+}
+@media (max-width:700px){.terrains-liste{gap:8px}.terrains-liste li{padding:10px 14px;font-size:.95rem}}

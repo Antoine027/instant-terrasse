@@ -263,129 +263,115 @@ const compCarrelage = tableau(
 );
 
 // ---------- Nos structures ----------
+// Comparatif replié : tableau sur ordinateur, liste critère par critère sur téléphone (fermé par défaut).
+const comparatifPlie = (id, titre, colonnes, lignes) => `
+    <details class="comp-plie" id="${id}" open>
+      <summary><h3>${titre}</h3><span class="comp-ouvrir">Voir le comparatif</span></summary>
+      <table class="comparatif comp-table">
+        <thead><tr><th scope="col"><span class="vh">Critère</span></th><th scope="col" class="col-accent">${colonnes[0]}</th><th scope="col">${colonnes[1]}</th></tr></thead>
+        <tbody>${lignes.map(([c, alu, autre]) => `<tr><th scope="row">${c}</th><td class="col-accent">${alu}</td><td>${autre}</td></tr>`).join("")}</tbody>
+      </table>
+      <dl class="comp-liste">${lignes.map(([c, alu, autre]) => `<div><dt>${c}</dt><dd><b>${colonnes[0]} :</b> ${alu}</dd><dd><b>${colonnes[1]} :</b> ${autre}</dd></div>`).join("")}</dl>
+    </details>`;
+const LIGNES_BOIS = [
+  ["Ossature", "Rails en aluminium sur plots réglables", "Lambourdes en bois sur plots réglables"],
+  ["Face à l'humidité", "Imputrescible : rien ne pourrit sous les lames", "Les lambourdes restent sensibles à l'eau stagnante avec les années"],
+  ["Stabilité", "Rails rectilignes qui ne se déforment pas : la planéité tient dans le temps", "Le bois de l'ossature peut travailler, se vriller"],
+  ["Fixation des lames", "Clips invisibles, testés à 1,5 à 2,5 fois la résistance demandée par la norme", "Vissées : chaque vis perce la lame"],
+  ["Ventilation", "Circulation d'air prévue entre ossature et lames", "Selon la hauteur disponible"],
+  ["Essences", "Nos essences phares", "Toutes nos essences, dont l'ipé, le cumaru, le mélèze"],
+  ["Budget", "Investissement plus élevé, pensé pour durer", "Généralement plus économique à l'achat"],
+];
+const LIGNES_CARR = [
+  ["Principe", "Les dalles reposent sur des rails aluminium posés sur plots", "Chaque dalle repose sur des plots placés à ses angles"],
+  ["Support", "Sols durs ou stabilisés, supports irréguliers, grandes hauteurs", "Support existant stable : dalle béton, toit-terrasse"],
+  ["Sous le pied", "Cales amortissantes : pas de dalle qui bouge ni qui claque", "Une dalle peut bouger si un plot travaille"],
+  ["Formats", "Grands formats, joints décalés, mélange bois et carrelage", "Formats courants, joints alignés"],
+  ["Budget", "Plus de matériel, budget plus élevé", "Pose rapide, solution la plus économique"],
+];
+const REVETEMENTS_STRUCT = [
+  ["/terrasse-bois-lyon/", "Bois", "structure-clips-lame-bois"],
+  ["/terrasse-composite-lyon/", "Composite", "structure-clips-lame-brune"],
+  ["/terrasse-aluminium-lyon/", "Lames aluminium", "structure-lames-alu-pose"],
+  ["/terrasse-carrelage-lyon/", "Carrelage", "carrelage-structure-alu-rails-plots"],
+];
+
 const structures = {
-  title: "Structure de terrasse aluminium ou traditionnelle à Lyon | Instant Terrasse",
-  description: "Structure aluminium sur plots réglables, structure traditionnelle sur lambourdes ou dalles sur plots : la base qui fait durer votre terrasse. Lyon et sa région.",
+  title: "Structure de terrasse aluminium à Lyon : bois, composite, carrelage | Instant Terrasse",
+  description: "Toutes nos terrasses se posent sur structure aluminium garantie 20 ans : bois, composite, lames aluminium, carrelage. Pour le bois et le carrelage, structure traditionnelle ou plots possibles. Lyon et sa région.",
   corps: `
-${heroPlein({ fil: "Terrasses", h1: ["Nos structures", "de terrasse"], kicker: "Structure aluminium garantie 20 ans", photo: "structure-rails-plots-entete", position: "50% 50%",
-  chapo: "La durée de vie d'une terrasse se joue sous les lames : nous adaptons la structure à votre terrain et à votre revêtement.",
-  actions: `<a class="bouton" href="#structures-bois">Structures bois</a> <a class="bouton bouton-blanc" href="#structures-carrelage">Structures carrelage</a>` })}
+${heroPlein({ fil: "Terrasses", h1: ['<span class="pc-nowrap">Structure aluminium</span>', "pour toutes nos terrasses"], kicker: "Structures de terrasse à Lyon et dans sa région", photo: "structure-rails-plots-entete", position: "50% 50%",
+  chapo: "Bois, composite, lames aluminium ou carrelage : tout se pose sur notre structure aluminium, garantie 20 ans.",
+  actions: `<a class="bouton" href="/contact/">Demander un devis gratuit</a> <a class="bouton bouton-blanc" href="#comparatif">Comparer</a>` })}
 
-<section id="terrains" class="bloc">
+<section id="structure-aluminium" class="bloc">
   <div class="conteneur">
-    <h2>Une structure adaptée à chaque terrain</h2>
-    <p class="chapo">Quelle que soit la nature du support, nous avons une structure adaptée. Nous le vérifions dès la visite.</p>
-    <div class="grille grille-3 terrains-car">
-      <div class="carte"><h3>Sol dur</h3><p>Dalle béton, ancienne terrasse : la structure se pose directement ou sur cales, pour une terrasse de faible épaisseur.</p></div>
-      <div class="carte"><h3>Sol stabilisé</h3><p>Gravier compacté : les plots réglables reprennent les écarts de niveau, sans couler de béton.</p></div>
-      <div class="carte"><h3>Toit-terrasse et sol étanche</h3><p>La structure repose sur l'étanchéité sans la percer. Voir notre page <a href="/toit-terrasse-lyon/">toit-terrasse</a>.</p></div>
-      <div class="carte"><h3>Terrasse surélevée</h3><p>Avec des réhausses, les plots montent jusqu'à environ 40 cm. Au-delà, la terrasse repose sur des poutres et des poteaux.</p></div>
-      <div class="carte"><h3>Terrain en pente ou instable</h3><p>La terrasse est portée par des fondations sur poteaux : c'est la <a href="/terrasse-sur-pilotis-lyon/">terrasse sur pilotis</a>.</p></div>
+    <div class="deux-colonnes deux-colonnes-image">
+      <div class="photo-produit">${img("structure-aluminium", "Système de structure aluminium : plot réglable, rail aluminium, clip et pattes de fixation sous une lame de terrasse", 404)}</div>
+      <div>
+        <p class="sous-titre">Notre solution</p>
+        <h2>Notre structure aluminium</h2>
+        <p>Des plots réglables posés sur le support, des rails en aluminium, et le revêtement fixé dessus. Rien ne pourrit sous la terrasse, et elle reste plane dans le temps.</p>
+        <ul class="puces">
+          <li><strong>Garantie 20 ans.</strong></li>
+          <li><strong>De niveau</strong> sur un sol irrégulier, grâce aux plots réglables.</li>
+          <li><strong>Imputrescible et ventilée :</strong> l'air circule sous le revêtement.</li>
+          <li><strong>Fixation invisible</strong> pour le bois et le composite : aucune vis en surface.</li>
+          <li><strong>Conforme au DTU 51-4,</strong> testée par le FCBA, fabriquée en France.</li>
+        </ul>
+      </div>
     </div>
+    <h3 class="struct-rev-titre">Pour tous nos revêtements</h3>
+    <div class="struct-rev">${REVETEMENTS_STRUCT.map(([h, n, c]) => `<a href="${h}" class="struct-rev-item">${imgPhoto(c, { sizes: "(max-width:700px) 45vw, 270px" })}<span>${n}&nbsp;→</span></a>`).join("")}</div>
   </div>
 </section>
 
-<section id="structures-bois" class="bloc partie bloc-alt">
+<section id="autres-poses" class="bloc bloc-alt">
   <div class="conteneur">
-    <h2 class="partie-titre">Terrasse bois</h2>
-    <p class="chapo">Deux techniques pour porter des lames de bois : la structure aluminium sur plots, ou la structure traditionnelle sur lambourdes.</p>
-  </div>
-</section>
-<div class="struct-car struct-car-bois">
-<section id="structure-aluminium" class="bloc bloc-alt sous-partie">
-  <div class="conteneur deux-colonnes deux-colonnes-image">
-    <div class="photo-produit">${img("structure-aluminium", "Système de structure aluminium : plot réglable, rail aluminium, clip et pattes de fixation sous une lame de terrasse", 404)}</div>
-    <div>
-      <p class="sous-titre">Notre solution phare</p>
-      <h3 class="h2">Structure aluminium sur plots</h3>
-      <p>Des plots réglables en hauteur posés sur le support, des rails en aluminium livrés avec leurs clips, et des lames qui viennent s'y clipser : aucune vis ne traverse la lame.</p>
-      <ul class="puces puces-longues">
-        <li><strong>Garantie 20 ans</strong><span class="li-det"> : nos structures aluminium sont garanties 20 ans.</span></li>
-        <li><strong>Fixation invisible</strong><span class="li-det"> : pas de vis en surface, donc pas de trou où l'eau s'infiltre, et des lignes de lames parfaitement droites.</span></li>
-        <li><strong>Des clips qui tiennent</strong><span class="li-det"> : ils suivent la dilatation du bois sans casser, et leur résistance à l'arrachement dépasse de 1,5 à 2,5 fois l'exigence de la norme.</span></li>
-        <li><strong>Démontable</strong><span class="li-det"> : une lame se déclipse et se remet en place sans rien abîmer, pour accéder dessous ou remplacer une lame.</span></li>
-        <li><strong>Imputrescible</strong><span class="li-det"> : l'aluminium ne pourrit pas, ne gonfle pas et résiste à la corrosion, y compris autour des piscines.</span></li>
-        <li><strong>Ventilée</strong><span class="li-det"> : les lames ne touchent pas directement l'ossature, l'air circule et le bois sèche plus vite.</span></li>
-        <li><strong>Conforme et testée</strong><span class="li-det"> : un système testé par le FCBA (l'institut technologique de la filière bois) et conforme au DTU 51-4, la norme des terrasses en bois.</span></li>
-        <li><strong>Fabriquée en France</strong><span class="li-det">, en aluminium majoritairement recyclé et entièrement recyclable.</span></li>
-      </ul>
-      <button class="voir-tout" type="button" onclick="this.closest('.sous-partie').classList.add('detail');this.remove()">Voir le détail</button>
+    <h2>Les autres possibilités</h2>
+    <p class="chapo">Pour le bois et le carrelage, une autre technique est possible selon votre projet.</p>
+    <div class="grille grille-2 autres-poses">
+      <article class="carte autre-pose" id="structure-traditionnelle">
+        <div class="ap-img">${imgPhoto("structure-traditionnelle-plot-lambourde", { sizes: "(max-width:700px) 40vw, 200px" })}</div>
+        <div><p class="sous-titre">Terrasse bois</p><h3>Structure traditionnelle</h3><p>Des lambourdes en bois sur plots réglables, et des lames vissées : la technique classique.</p><p class="ap-si"><strong>La choisir si…</strong> vous voulez une essence comme l'ipé, le cumaru ou le mélèze, avec un budget maîtrisé.</p></div>
+      </article>
+      <article class="carte autre-pose" id="carrelage-plots">
+        <div class="ap-img">${imgPhoto("carrelage-plots-schema", { sizes: "(max-width:700px) 40vw, 240px" })}</div>
+        <div><p class="sous-titre">Terrasse carrelage</p><h3>Carrelage sur plots</h3><p>Chaque dalle repose directement sur des plots réglables placés à ses angles, sans rail.</p><p class="ap-si"><strong>La choisir si…</strong> vous avez déjà une dalle béton ou un toit-terrasse en bon état.</p></div>
+      </article>
     </div>
   </div>
 </section>
 
-
-
-<section id="structure-traditionnelle" class="bloc sous-partie">
-  <div class="conteneur deux-colonnes deux-colonnes-image">
-    <div class="photo-produit photo-produit-trad">${imgPhoto("structure-traditionnelle-plot-lambourde", { sizes: "(max-width:1060px) 80vw, 420px" })}</div>
-    <div>
-      <p class="sous-titre">La technique classique</p>
-      <h3 class="h2">Structure traditionnelle</h3>
-      <p>La technique classique de la terrasse en bois : des lambourdes en bois posées sur des plots réglables, et des lames vissées sur les lambourdes.</p>
-      <ul class="puces">
-        <li><strong>Plots réglables</strong><span class="li-det"> : ils mettent la terrasse de niveau sur un sol irrégulier.</span></li>
-        <li><strong>Lambourdes en bois</strong><span class="li-det"> : l'ossature qui porte les lames.</span></li>
-        <li><strong>Lames vissées</strong><span class="li-det"> : pour toutes nos essences, dont l'ipé, le cumaru, le mélèze, le douglas…</span></li>
-      </ul>
-      <button class="voir-tout" type="button" onclick="this.closest('.sous-partie').classList.add('detail');this.remove()">Voir le détail</button>
-      <p>Généralement plus économique à l'achat que la structure aluminium. Le <a href="#comparatif-bois">comparatif ci-dessous</a> vous aide à choisir entre les deux.</p>
-    </div>
-  </div>
-</section>
-</div>
-${compBois.replace('class="bloc"', 'class="bloc bloc-alt"')}
-
-<section id="structures-carrelage" class="bloc partie bloc-alt">
+<section id="comparatif" class="bloc">
   <div class="conteneur">
-    <h2 class="partie-titre">Terrasse carrelage</h2>
-    <p class="chapo">Le carrelage extérieur se pose sans colle, en dalles épaisses : sur une structure aluminium, ou directement sur des plots.</p>
-  </div>
-</section>
-<div class="struct-car struct-car-carrelage">
-<section id="carrelage-structure-aluminium" class="bloc bloc-alt sous-partie">
-  <div class="conteneur deux-colonnes deux-colonnes-image">
-    <div class="photo-produit photo-produit-trad">${imgPhoto("carrelage-structure-aluminium-schema", { sizes: "(max-width:1060px) 90vw, 520px" })}</div>
-    <div>
-      <p class="sous-titre">Pour tous les supports</p>
-      <h3 class="h2">Carrelage sur structure aluminium</h3>
-      <p>Les dalles reposent sur des rails aluminium, eux-mêmes posés sur des plots réglables.</p>
-      <ul class="puces">
-        <li><strong>Supports irréguliers et grandes hauteurs</strong><span class="li-det"> : sols durs ou stabilisés, sans couler de dalle béton.</span></li>
-        <li><strong>Calepinage libre</strong><span class="li-det"> : grands formats, joints décalés, mélange de formats ou de bois et carrelage.</span></li>
-        <li><strong>La terrasse la plus stable possible</strong><span class="li-det">, pour un budget plus élevé.</span></li>
-      </ul>
-      <button class="voir-tout" type="button" onclick="this.closest('.sous-partie').classList.add('detail');this.remove()">Voir le détail</button>
-    </div>
+    <h2>Comparatif détaillé</h2>
+    ${comparatifPlie("comparatif-bois", "Terrasse bois", ["Structure aluminium", "Structure traditionnelle"], LIGNES_BOIS)}
+    ${comparatifPlie("comparatif-carrelage", "Terrasse carrelage", ["Structure aluminium", "Plots simples"], LIGNES_CARR)}
+    <script>if(matchMedia('(max-width:700px)').matches)document.querySelectorAll('.comp-plie').forEach(d=>{if(location.hash!=='#'+d.id)d.open=false})</script>
   </div>
 </section>
 
-<section id="carrelage-plots" class="bloc sous-partie">
-  <div class="conteneur deux-colonnes deux-colonnes-image">
-    <div class="photo-produit photo-produit-trad">${imgPhoto("carrelage-plots-schema", { sizes: "(max-width:1060px) 90vw, 520px" })}</div>
-    <div>
-      <p class="sous-titre">Sur support existant</p>
-      <h3 class="h2">Carrelage sur plots</h3>
-      <p>Chaque dalle repose directement sur des plots réglables placés à ses angles, sans rail : posé sans colle ni fondation.</p>
-      <ul class="puces">
-        <li><strong>Support existant stable</strong><span class="li-det"> : dalle béton, toit-terrasse, ancienne terrasse.</span></li>
-        <li><strong>Formats courants</strong><span class="li-det">, pose à joints alignés.</span></li>
-        <li><strong>Pose rapide</strong><span class="li-det">, solution la plus économique.</span></li>
-      </ul>
-      <button class="voir-tout" type="button" onclick="this.closest('.sous-partie').classList.add('detail');this.remove()">Voir le détail</button>
-      <p>Voir aussi la <a href="/terrasse-sur-plots-lyon/">terrasse sur plots</a> et la <a href="/terrasse-carrelage-lyon/">terrasse carrelage</a>.</p>
-    </div>
+<section id="terrains" class="bloc bloc-alt">
+  <div class="conteneur">
+    <h2>Quelle structure pour votre terrain&nbsp;?</h2>
+    <p class="chapo">Nous vérifions votre support dès le rendez-vous.</p>
+    <ul class="terrains-liste">
+      <li><strong>Sol dur</strong><span>Dalle béton, ancienne terrasse : la structure se pose directement ou sur cales.</span></li>
+      <li><strong>Sol stabilisé</strong><span>Gravier compacté : les plots réglables reprennent les écarts, sans couler de béton.</span></li>
+      <li><strong>Toit-terrasse</strong><span>La structure repose sur l'étanchéité sans la percer. Voir le <a href="/toit-terrasse-lyon/">toit-terrasse</a>.</span></li>
+      <li><strong>Terrasse surélevée</strong><span>Avec des réhausses, les plots montent jusqu'à environ 40 cm. Au-delà, poutres et poteaux.</span></li>
+      <li><strong>Terrain en pente</strong><span>La terrasse est portée par des poteaux : c'est la <a href="/terrasse-sur-pilotis-lyon/">terrasse sur pilotis</a>.</span></li>
+    </ul>
   </div>
 </section>
-</div>
-${compCarrelage}
 
-<section id="galerie" class="bloc bloc-alt">
+<section id="galerie" class="bloc">
   <div class="conteneur">
     ${galerie(GALERIE_STRUCTURES.map(([cle]) => cle), { titre: "Nos structures en images", intro: "Choisissez un type de structure pour n'afficher que celui qui vous intéresse.", legende: "Illustrations", types: ["Structure pour bois et composite", "Structure pour carrelage", "Structure pour lames aluminium"], typesDe: (p) => GALERIE_STRUCTURES.find(([c]) => c === p.cle)[1], ordre: ORDRE_STRUCTURES })}
   </div>
 </section>
-${cta("Quelle structure pour votre terrain ?")}`,
+${cta("Un projet de terrasse ?")}`,
 };
 
 // ---------- Bardage bois ----------

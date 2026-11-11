@@ -50,8 +50,8 @@ const vignetteMenu = (chemin) => {
   const p = photo(cle);
   return `<span class="mm-vig" aria-hidden="true"><img src="/assets/img/${p.dossier}/${p.cle}-400.webp" alt="" width="52" height="52" loading="lazy" decoding="async"></span>`;
 };
-const lienMenu = ([chemin, titre, desc, court], actuel) =>
-  `<li><a href="${chemin}"${chemin === actuel ? ' aria-current="page"' : ""}>${vignetteMenu(chemin)}<span class="mm-txt"><b>${court ?? titre}</b>${desc ? `<small>${desc}</small>` : ""}</span></a></li>`;
+const lienMenu = ([chemin, titre, desc, court, separe], actuel) =>
+  `<li${separe ? ' class="mm-sep"' : ""}><a href="${chemin}"${chemin === actuel ? ' aria-current="page"' : ""}>${vignetteMenu(chemin)}<span class="mm-txt"><b>${court ?? titre}</b>${desc ? `<small>${desc}</small>` : ""}</span></a></li>`;
 
 // Pictos des rubriques (menu mobile).
 const ic = (d) => `<svg class="mm-ic" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">${d}</svg>`;

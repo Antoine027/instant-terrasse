@@ -1848,3 +1848,6 @@ main .etapes .etape-ic b{display:flex;align-items:center;justify-content:center;
   .structure-bandeau .cs-img{order:-1}
   .cs-kicker{display:block;margin-bottom:6px;font:700 .78rem Montserrat,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--accent-texte)}
 }
+/* Menu Terrasses : trait entre les revêtements et Structures / Comparatif */
+li.mm-sep{border-top:1px solid rgba(47,52,55,.12);margin-top:6px;padding-top:6px}
+@media (min-width:1241px){.sous-menu ul.sm-2col li.mm-sep+li{border-top:1px solid rgba(47,52,55,.12);margin-top:6px;padding-top:6px}}

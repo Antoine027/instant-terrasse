@@ -1830,3 +1830,8 @@ h3.h2{font-size:clamp(1.5rem,1rem + 1.2vw,2.1rem);margin:0 0 14px}
 @media (min-width:701px){#teintes .nuancier-bois img{aspect-ratio:3/4}}
 /* Pastille numérotée des étapes : chiffre centré (la règle de centrage mobile ne s'applique pas ici) */
 main .etapes .etape-ic b{display:flex;align-items:center;justify-content:center;text-align:center;line-height:1;padding:0}
+/* Page Bois : la structure présentée sous chaque groupe d'essences */
+.structure-bandeau{max-width:780px;margin:32px auto 0}
+.structure-bandeau .carte-structure{grid-template-columns:1fr 150px}
+.cs-lien{display:block;margin-top:8px;font-weight:700;color:var(--accent-texte);text-decoration:underline;text-underline-offset:3px}
+@media (max-width:700px){.structure-bandeau{margin-top:24px}.structure-bandeau .carte-structure{grid-template-columns:1fr 120px}.cs-lien{font-size:.92rem}}

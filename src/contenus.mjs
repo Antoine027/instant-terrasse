@@ -125,7 +125,8 @@ ${heroPlein({ fil: "Terrasses", h1: ["Terrasse bois", 'sur mesure <span class="l
       </article>`).join("")}
     </div>
     <p class="evol-note"><span class="en-long">Teintes indicatives : le rendu dépend de l'exposition. Un saturateur prolonge la teinte d'origine. *Garanties fabricants, sous conditions.</span><span class="en-court">Teintes indicatives. Un saturateur prolonge la teinte d'origine.<br>*Garanties fabricants, sous conditions.</span></p>
-  </div>
+    <div class="structure-bandeau"><a class="carte carte-structure" href="/structure-terrasse-lyon/#comparatif-bois"><div><h3>Sur structure aluminium</h3><p><span class="cs-long">Nos essences phares sont posées sur plots réglables, rails aluminium et fixations invisibles. Rien ne pourrit sous les lames, l'air circule, la terrasse reste plane. Structure garantie 20 ans.</span><span class="cs-court">Rails alu et fixations invisibles. Structure garantie 20 ans.</span><span class="cs-lien">Comparer les deux structures&nbsp;→</span></p></div><span class="cs-img">${img("structure-aluminium", "Structure aluminium : plot réglable, rail aluminium et clip sous une lame de terrasse", 404)}</span></a></div>
+</div>
 </section>
 
 <section id="galerie" class="bloc bloc-alt galerie-bois">
@@ -134,21 +135,7 @@ ${heroPlein({ fil: "Terrasses", h1: ["Terrasse bois", 'sur mesure <span class="l
   </div>
 </section>
 
-<section id="structures" class="bloc">
-  <div class="conteneur deux-colonnes">
-    <div>
-      <h2>Deux façons de construire une terrasse bois</h2>
-      <p>La structure, c'est ce qu'on ne voit pas et ce qui décide de la durée de vie de la terrasse. Nous proposons deux approches, selon l'essence choisie et votre terrain.</p>
-      <p><a href="/structure-terrasse-lyon/#comparatif-bois">Comparer les deux structures en détail →</a></p>
-    </div>
-    <div class="grille">
-      <a class="carte carte-structure" href="/structure-terrasse-lyon/"><div><h3>Sur structure aluminium</h3><p><span class="cs-long">Plots réglables, rails aluminium et fixations invisibles. Rien ne pourrit sous les lames, l'air circule, la terrasse reste plane. Notre solution phare.</span><span class="cs-court">Rails alu, fixations invisibles. Notre solution phare.</span></p></div><span class="cs-img">${img("structure-aluminium", "Structure aluminium : plot réglable, rail aluminium et clip sous une lame de terrasse", 404)}</span></a>
-      <a class="carte carte-structure" href="/structure-terrasse-lyon/#structure-traditionnelle"><div><h3>Sur structure traditionnelle</h3><p><span class="cs-long">Des lambourdes en bois sur plots réglables : la technique classique et éprouvée, pour toutes nos essences.</span><span class="cs-court">Lambourdes en bois. Pour toutes nos essences.</span></p></div><span class="cs-img"><img src="/assets/img/structures/structure-traditionnelle-carte-300.webp" srcset="/assets/img/structures/structure-traditionnelle-carte-300.webp 300w, /assets/img/structures/structure-traditionnelle-carte-600.webp 600w" sizes="160px" alt="Structure traditionnelle : plot réglable, lambourde en bois et lame vissée" width="300" height="291" loading="lazy" decoding="async"></span></a>
-    </div>
-  </div>
-</section>
-
-<section id="essences-traditionnelles" class="bloc bloc-alt">
+<section id="essences-traditionnelles" class="bloc">
   <div class="conteneur">
     <p class="sous-titre">Sur structure traditionnelle</p>
     <h2>D'autres essences</h2>
@@ -156,10 +143,11 @@ ${heroPlein({ fil: "Terrasses", h1: ["Terrasse bois", 'sur mesure <span class="l
     <div class="grille grille-3 trad-car">
       ${essencesTrad.map(([n, t]) => { const cle = "lame-trad-v2-" + n.split(" (")[0].normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase(); const ph = PHOTOS.some((x) => x.cle === cle); return `<div class="carte carte-trad${ph ? " avec-photo" : ""}">${ph ? `<div class="trad-photo">${imgPhoto(cle, { sizes: "(max-width:700px) 80vw, 360px" })}</div>` : ""}<h3>${n}</h3><p>${t}</p></div>`; }).join("")}
     </div>
+    <div class="structure-bandeau"><a class="carte carte-structure" href="/structure-terrasse-lyon/#structure-traditionnelle"><div><h3>Sur structure traditionnelle</h3><p><span class="cs-long">Ces essences sont posées sur des lambourdes en bois et des plots réglables : la technique classique et éprouvée. Nos essences phares peuvent aussi être posées de cette façon.</span><span class="cs-court">Lambourdes en bois sur plots. Possible aussi pour nos essences phares.</span><span class="cs-lien">Comparer les deux structures&nbsp;→</span></p></div><span class="cs-img"><img src="/assets/img/structures/structure-traditionnelle-carte-300.webp" srcset="/assets/img/structures/structure-traditionnelle-carte-300.webp 300w, /assets/img/structures/structure-traditionnelle-carte-600.webp 600w" sizes="160px" alt="Structure traditionnelle : plot réglable, lambourde en bois et lame vissée" width="300" height="291" loading="lazy" decoding="async"></span></a></div>
   </div>
 </section>
 
-<section id="faq-bois" class="bloc">
+<section id="faq-bois" class="bloc bloc-alt">
   <div class="conteneur lyon-faq">
   <div id="lyon" class="lyon-texte">
     <h2>Votre terrasse bois à Lyon et dans sa région</h2>

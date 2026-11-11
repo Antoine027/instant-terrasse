@@ -201,7 +201,6 @@ const GALERIE_STRUCTURES = [
   ["structure-rails-dalle", ["Structure pour bois et composite"]],
   ["structure-lames-a-clipser", ["Structure pour bois et composite"]],
   ["structure-schema-bordure", ["Structure pour bois et composite"]],
-  ["structure-rails-plots-entete", ["Structure pour bois et composite"]],
   ["structure-traditionnelle-plot-lambourde", ["Structure pour bois et composite"]],
   ["carrelage-structure-aluminium-schema", ["Structure pour carrelage"]],
   ["carrelage-plots-schema", ["Structure pour carrelage"]],

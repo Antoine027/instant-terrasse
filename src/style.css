@@ -2031,3 +2031,7 @@ li.mm-sep{border-top:2px solid rgba(47,52,55,.22);margin-top:10px;padding-top:10
 .quiz-coupe{width:36px;height:36px;flex:none;filter:drop-shadow(0 2px 2px rgba(47,52,55,.18))}
 .quiz-top .quiz-coupe{width:48px;height:48px}
 @media (max-width:700px){.quiz-top .quiz-rang{justify-content:center}}
+/* Comparatif structures (téléphone) : pastilles courtes */
+.comp-liste dd{display:flex;gap:10px;align-items:baseline;margin:6px 0}
+.comp-tag{flex:none;min-width:48px;text-align:center;padding:2px 8px;border-radius:999px;font:700 .72rem Montserrat,sans-serif;background:rgba(47,52,55,.1);color:var(--texte)}
+.comp-tag-alu{background:var(--accent);color:#fff}

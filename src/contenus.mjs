@@ -264,30 +264,32 @@ const compCarrelage = tableau(
 
 // ---------- Nos structures ----------
 // Comparatif replié : tableau sur ordinateur, liste critère par critère sur téléphone (fermé par défaut).
-const comparatifPlie = (id, titre, colonnes, lignes) => `
+const comparatifPlie = (id, titre, colonnes, lignes, courts = ["Alu", "Trad."]) => `
     <details class="comp-plie" id="${id}">
       <summary><h3>${titre}</h3><span class="comp-ouvrir">Voir le comparatif</span><span class="comp-fermer">Masquer le comparatif</span></summary>
       <table class="comparatif comp-table">
         <thead><tr><th scope="col"><span class="vh">Critère</span></th><th scope="col" class="col-accent">${colonnes[0]}</th><th scope="col">${colonnes[1]}</th></tr></thead>
         <tbody>${lignes.map(([c, alu, autre]) => `<tr><th scope="row">${c}</th><td class="col-accent">${alu}</td><td>${autre}</td></tr>`).join("")}</tbody>
       </table>
-      <dl class="comp-liste">${lignes.map(([c, alu, autre]) => `<div><dt>${c}</dt><dd><b>${colonnes[0]} :</b> ${alu}</dd><dd><b>${colonnes[1]} :</b> ${autre}</dd></div>`).join("")}</dl>
+      <dl class="comp-liste">${lignes.map(([c, alu, autre]) => `<div><dt>${c}</dt><dd><span class="comp-tag comp-tag-alu">${courts[0]}</span>${alu}</dd><dd><span class="comp-tag">${courts[1]}</span>${autre}</dd></div>`).join("")}</dl>
     </details>`;
 const LIGNES_BOIS = [
-  ["Ossature", "Rails en aluminium sur plots réglables", "Lambourdes en bois sur plots réglables"],
-  ["Face à l'humidité", "Imputrescible : rien ne pourrit sous les lames", "Les lambourdes restent sensibles à l'eau stagnante avec les années"],
-  ["Stabilité", "Rails rectilignes qui ne se déforment pas : la planéité tient dans le temps", "Le bois de l'ossature peut travailler, se vriller"],
-  ["Fixation des lames", "Clips invisibles, testés à 1,5 à 2,5 fois la résistance demandée par la norme", "Vissées : chaque vis perce la lame"],
-  ["Ventilation", "Circulation d'air prévue entre ossature et lames", "Selon la hauteur disponible"],
+  ["Ossature", "Rails aluminium sur plots réglables", "Lambourdes bois sur plots réglables"],
+  ["Humidité", "Ne pourrit pas", "Lambourdes sensibles à l'eau stagnante"],
+  ["Stabilité", "Rails rectilignes : la terrasse reste plane", "Le bois de l'ossature peut travailler"],
+  ["Fixation", "Clips invisibles, aucune vis apparente", "Lames vissées"],
+  ["Ventilation", "6&nbsp;mm entre lames et rails", "Selon la hauteur disponible"],
   ["Essences", "Nos essences phares", "Toutes nos essences, dont l'ipé, le cumaru, le mélèze"],
-  ["Budget", "Investissement plus élevé, pensé pour durer", "Généralement plus économique à l'achat"],
+  ["Garantie", "20 ans (plots, rails et clips)", "Pas de garantie"],
+  ["Budget", "Plus élevé, pensé pour durer", "Plus économique à l'achat"],
 ];
 const LIGNES_CARR = [
-  ["Principe", "Les dalles reposent sur des rails aluminium posés sur plots", "Chaque dalle repose sur des plots placés à ses angles"],
-  ["Support", "Sols durs ou stabilisés, supports irréguliers, grandes hauteurs", "Support existant stable : dalle béton, toit-terrasse"],
-  ["Sous le pied", "Cales amortissantes : pas de dalle qui bouge ni qui claque", "Une dalle peut bouger si un plot travaille"],
-  ["Formats", "Grands formats, joints décalés, mélange bois et carrelage", "Formats courants, joints alignés"],
-  ["Budget", "Plus de matériel, budget plus élevé", "Pose rapide, solution la plus économique"],
+  ["Principe", "Dalles sur rails aluminium posés sur plots", "Chaque dalle sur des plots à ses angles"],
+  ["Support", "Sols durs ou stabilisés, supports irréguliers, grandes hauteurs", "Support stable existant : dalle béton, toit-terrasse"],
+  ["Sous le pied", "Cales amortissantes : rien ne bouge ni ne claque", "Une dalle peut bouger si un plot travaille"],
+  ["Formats", "Grands formats, joints décalés, bois et carrelage mélangés", "Formats courants, joints alignés"],
+  ["Garantie", "20 ans (plots, rails et clips)", "Pas de garantie"],
+  ["Budget", "Plus élevé", "Plus économique"],
 ];
 const REVETEMENTS_STRUCT = [
   ["/terrasse-bois-lyon/", "Bois", "structure-clips-lame-bois"],
@@ -348,7 +350,7 @@ ${heroPlein({ fil: "Terrasses", h1: ['<span class="pc-nowrap">Structure aluminiu
   <div class="conteneur">
     <h2>Comparatif détaillé</h2>
     ${comparatifPlie("comparatif-bois", "Terrasse bois", ["Structure aluminium", "Structure traditionnelle"], LIGNES_BOIS)}
-    ${comparatifPlie("comparatif-carrelage", "Terrasse carrelage", ["Structure aluminium", "Plots simples"], LIGNES_CARR)}
+    ${comparatifPlie("comparatif-carrelage", "Terrasse carrelage", ["Structure aluminium", "Plots simples"], LIGNES_CARR, ["Alu", "Plots"])}
     <script>const ouvreComp=()=>{const d=location.hash&&document.querySelector('.comp-plie'+location.hash);if(d)d.open=true};ouvreComp();addEventListener('hashchange',ouvreComp)</script>
   </div>
 </section>

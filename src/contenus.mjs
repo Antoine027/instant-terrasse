@@ -217,7 +217,8 @@ const GALERIE_STRUCTURES = [
 
 // « Tout voir » : structures bois et composite d'abord, puis carrelage, puis lames aluminium ; les plus belles en tête de chaque groupe.
 const GROUPES_STRUCTURES = ["Structure pour bois et composite", "Structure pour carrelage", "Structure pour lames aluminium"];
-const ORDRE_STRUCTURES = [...GALERIE_STRUCTURES].sort(([a, ta], [b, tb]) => GROUPES_STRUCTURES.indexOf(ta[0]) - GROUPES_STRUCTURES.indexOf(tb[0]) || (RANG[a] ?? 0.5) - (RANG[b] ?? 0.5)).map(([c]) => c);
+// Ordre (Antoine, 11/11/2026) : les plus belles structures aluminium d'abord, structure traditionnelle et plots simples à la fin.
+const ORDRE_STRUCTURES = ["structure-clips-lame-bois", "structure-lames-a-clipser", "structure-schema-bordure", "structure-plot-rail-lame", "carrelage-structure-alu-rails-plots", "structure-clips-lame-brune", "structure-lames-alu-balcon-dessous", "structure-rails-plots-detail", "structure-lames-alu-pose", "structure-rails-vue-ensemble", "structure-lames-clipsees-vue-haut", "carrelage-structure-aluminium-schema", "structure-plot-reglable", "structure-lames-alu-piscine", "structure-rails-dalle", "carrelage-structure-alu-calepinage", "structure-lames-alu-restaurant-chantier", "structure-lames-alu-assemblage", "structure-lames-alu-equerre", "structure-traditionnelle-plot-lambourde", "carrelage-plots-schema", "ambiance-dalles-sur-plots"];
 
 const compBois = tableau(
   "comparatif-bois",

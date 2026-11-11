@@ -1869,3 +1869,14 @@ li.mm-sep{border-top:2px solid rgba(47,52,55,.22);margin-top:10px;padding-top:10
 .cs-photo-grand img{mix-blend-mode:normal;object-fit:cover;border-radius:10px;width:100%!important;height:100%;max-height:none}
 @media (min-width:701px){.structure-bandeau .cs-photo-grand{height:220px}}
 @media (max-width:700px){.cs-photo-grand{height:100px}}
+/* Carrelage : deux poses côte à côte dans un seul encadré */
+.structure-duo>.cs-kicker{display:none}
+.duo-grille{display:grid;gap:16px}
+@media (min-width:701px){
+  .structure-duo{background:rgba(255,255,255,.5);border-top:2px solid var(--accent);border-radius:0 0 var(--rayon) var(--rayon);padding:28px 40px 32px}
+  .structure-duo>.cs-kicker{display:block;margin-bottom:14px}
+  .duo-grille{grid-template-columns:1fr 1fr;gap:48px}
+  .structure-bandeau.structure-duo .carte-structure{grid-template-columns:1fr;gap:16px;padding:0;background:none;border:0;border-radius:0}
+  .structure-bandeau.structure-duo .cs-img{order:-1;height:200px;justify-content:flex-start}
+  .structure-bandeau.structure-duo .cs-img img{max-height:200px}
+}

@@ -1011,7 +1011,7 @@ const QUIZ_RAISONS = {
   chaleureux: { bois: "Une matière vivante et chaleureuse, qui évolue avec le temps.", composite: "Un aspect chaleureux, proche du bois." },
   durabilite: { aluminium: "Imputrescible et indéformable : il ne bouge pas.", carrelage: "Le grès cérame est l'un des revêtements les plus durables." },
   rayures: { carrelage: "Le grès cérame est très résistant aux rayures." },
-  taches: { composite: "Les taches ne pénètrent pas dans la lame.", aluminium: "Les taches ne marquent pas." },
+  taches: { composite: "Le composite a une bonne résistance aux taches.", aluminium: "Les taches ne marquent pas." },
 };
 // Questions : [id, intitulé, [[valeur, libellé, {critère: poids}]]]
 const QUIZ_Q = [

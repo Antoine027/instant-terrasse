@@ -855,22 +855,22 @@ ${cta("Un projet de bardage aluminium ?", "Devis gratuit et sans engagement. Nou
 const LAMES_COMP = [
   { nom: "Nekko Brun", cle: "teinte-composite-brun-t", evol: ["brun", ["À la pose", "6 mois", "1 an"]],
     texte: "Lame co-extrudée : un cœur et une coque de deux matériaux différents. Une teinte brune aux nuances marquées, au veinage très proche du bois.",
-    points: ["Nuances et veinage proches du bois", "Composite co-extrudé", "Garantie 15 ans*"] },
+    points: ["Composite co-extrudé", "Nuances et veinage proches du bois", "Garantie 15 ans*"] },
   { nom: "Nekko Gris", cle: "teinte-composite-gris-t", evol: ["gris", ["À la pose", "6 mois", "1 an"]],
     texte: "Lame co-extrudée : un cœur et une coque de deux matériaux différents. Une teinte grise nuancée, au veinage très proche du bois.",
-    points: ["Nuances et veinage proches du bois", "Composite co-extrudé", "Garantie 15 ans*"] },
+    points: ["Composite co-extrudé", "Nuances et veinage proches du bois", "Garantie 15 ans*"] },
   { nom: "Anise", cle: "teinte-composite-miel-t", evol: ["anise", ["À la pose", "1-2 mois", "6-8 mois"]],
     texte: "Lame pleine à 75 % de fibres de bois PEFC, sans PVC ni plastifiant : ni l'eau ni les insectes n'y pénètrent. Teinte miel lumineuse, qui se patine avec le temps.",
-    points: ["75 % de fibres de bois PEFC", "Chauffe peu, proche du bois", "Garantie 10 ans*"] },
+    points: ["Pleine masse, 75 % de fibres de bois PEFC", "Chauffe peu, proche du bois", "Garantie 10 ans*"] },
   { nom: "Varia Brun foncé", cle: "teinte-composite-brun-fonce-t", evol: ["varia-brun-fonce", ["À la pose", "1-2 mois", "6-8 mois"]],
     texte: "Lame pleine à 75 % de fibres de bois PEFC, sans PVC ni plastifiant : ni l'eau ni les insectes n'y pénètrent. Teinte brun foncé, qui se patine avec le temps.",
-    points: ["75 % de fibres de bois PEFC", "Chauffe peu, proche du bois", "Garantie 10 ans*"] },
+    points: ["Pleine masse, 75 % de fibres de bois PEFC", "Chauffe peu, proche du bois", "Garantie 10 ans*"] },
   { nom: "Mentha Nigra", cle: "teinte-composite-vert-olive-t", evol: ["mentha-nigra", ["À la pose", "1-2 mois", "6-8 mois"]],
     texte: "Lame pleine à 75 % de fibres de bois PEFC, sans PVC ni plastifiant : ni l'eau ni les insectes n'y pénètrent. Teinte vert sombre originale, qui se patine avec le temps.",
-    points: ["75 % de fibres de bois PEFC", "Chauffe peu, proche du bois", "Garantie 10 ans*"] },
+    points: ["Pleine masse, 75 % de fibres de bois PEFC", "Chauffe peu, proche du bois", "Garantie 10 ans*"] },
   { nom: "Malui Gris", cle: "teinte-composite-gris-anthracite-t", evol: ["malui-gris", ["À la pose", "1-2 mois", "6-8 mois"]],
     texte: "Lame pleine à 75 % de fibres de bois PEFC, sans PVC ni plastifiant : ni l'eau ni les insectes n'y pénètrent. Teinte gris profond, qui se patine avec le temps.",
-    points: ["75 % de fibres de bois PEFC", "Chauffe peu, proche du bois", "Garantie 10 ans*"] },
+    points: ["Pleine masse, 75 % de fibres de bois PEFC", "Chauffe peu, proche du bois", "Garantie 10 ans*"] },
 ];
 
 const terrasseComposite = {

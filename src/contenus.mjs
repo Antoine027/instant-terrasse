@@ -238,7 +238,7 @@ const LIGNES_BOIS = [
   ["Stabilité", "Rails rectilignes : la terrasse reste plane", "Le bois de l'ossature peut travailler"],
   ["Fixation", "Clips invisibles, aucune vis apparente", "Lames vissées"],
   ["Ventilation", "6&nbsp;mm entre lames et rails", "Selon la hauteur disponible"],
-  ["Essences", "Nos essences phares", "Toutes nos essences, dont l'ipé, le cumaru, le mélèze"],
+  ["Essences", "Essences compatibles uniquement", "Toutes les essences"],
   ["Garantie", "20 ans (plots, rails et clips)", "Pas de garantie"],
 ];
 const LIGNES_CARR = [

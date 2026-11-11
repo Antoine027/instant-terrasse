@@ -1557,7 +1557,7 @@ h3.h2{font-size:clamp(1.5rem,1rem + 1.2vw,2.1rem);margin:0 0 14px}
 /* Page Structures (mobile), v4 : un fond par partie, 2e carte bien visible */
 @media (max-width:700px){
   #structures-bois,.struct-car-bois,.struct-car-bois+.points,#comparatif-bois{background:var(--fond2)!important}
-  #structures-carrelage,.struct-car-carrelage,.struct-car-carrelage+.points,#comparatif-carrelage{background:var(--fond)!important}
+  #structures-carrelage,.struct-car-carrelage,.struct-car-carrelage+.points{background:var(--fond)!important}#comparatif-carrelage{background:var(--fond2)!important}
   .struct-car{align-items:stretch;padding:8px 16px 6px;gap:12px}
   .struct-car>.sous-partie{flex-basis:78%;scroll-snap-align:start}
   .struct-car{scroll-padding:0 16px}

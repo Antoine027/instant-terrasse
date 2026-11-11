@@ -104,7 +104,7 @@ const terrasseBois = {
   description: "Terrasse bois sur mesure à Lyon : thermopin, thermofrêne, kebony, accoya, bambou sur structure aluminium, ou ipé, cumaru, mélèze, douglas sur structure traditionnelle.",
   corps: `
 ${heroPlein({ fil: "Terrasses", h1: ["Terrasse bois", 'sur mesure <span class="lyon-l">à Lyon</span>'], kicker: "Terrasses bois à Lyon et dans sa région", photo: "terrasse-kebony-piscine-debordement", position: "60% 55%",
-  chapo: `<span class="en-long">Nos essences phares sur structure aluminium, et d'autres essences sur structure traditionnelle : nous vous aidons à choisir l'essence qui correspond à votre maison, à votre budget et au temps que vous voulez consacrer à l'entretien.</span><span class="en-court">Thermofrêne, kebony, accoya, ipé… Nous vous aidons à choisir le bois fait pour votre extérieur.</span>`,
+  chapo: `<span class="en-long">Nos essences phares sur structure aluminium, et d'autres essences sur structure traditionnelle.</span><span class="en-court">Thermofrêne, kebony, accoya, ipé… Nous vous aidons à choisir le bois fait pour votre extérieur.</span>`,
   actions: `<a class="bouton" href="/contact/">Demander un devis gratuit</a> <a class="bouton bouton-blanc" href="#essences-aluminium">Voir les essences</a>` })}
 
 <section id="essences-aluminium" class="bloc">
@@ -268,7 +268,7 @@ const structures = {
   description: "Structure aluminium sur plots réglables, structure traditionnelle sur lambourdes ou dalles sur plots : la base qui fait durer votre terrasse. Lyon et sa région.",
   corps: `
 ${heroPlein({ fil: "Terrasses", h1: ["Nos structures", "de terrasse"], kicker: "Structure aluminium garantie 20 ans", photo: "structure-rails-plots-entete", position: "50% 50%",
-  chapo: "Une terrasse se juge sur la durée, et sa durée de vie se joue sous les lames. Nous adaptons la structure à votre terrain, à votre revêtement et à votre budget.",
+  chapo: "La durée de vie d'une terrasse se joue sous les lames : nous adaptons la structure à votre terrain et à votre revêtement.",
   actions: `<a class="bouton" href="#structures-bois">Structures bois</a> <a class="bouton bouton-blanc" href="#structures-carrelage">Structures carrelage</a>` })}
 
 <section id="terrains" class="bloc">
@@ -404,7 +404,7 @@ const bardageBois = {
   description: "Bardage bois sur mesure à Lyon : accoya gris ou naturel, kebony, bambou X-treme, thermofrêne, thermopin clear, thermo épicéa. Un bardage assorti à votre terrasse. Devis gratuit.",
   corps: `
 ${heroPlein({ fil: "Aménagements", h1: ["Bardage bois", "sur mesure"], kicker: "Façades, murs et abris à Lyon et dans sa région", photo: "bardage-thermofrene-maison", position: "70% 45%",
-  chapo: "Habiller une façade, une extension, un mur de clôture ou un abri avec des bois sélectionnés pour durer en extérieur, et assortis à votre terrasse si vous le souhaitez.",
+  chapo: "Habillez une façade, une extension ou une clôture avec des bois sélectionnés pour durer, assortis à votre terrasse.",
   actions: `<a class="bouton" href="/contact/">Demander un devis gratuit</a> <a class="bouton bouton-blanc" href="#essences-bardage">Voir les essences</a>` })}
 
 <section id="essences-bardage" class="bloc">
@@ -511,7 +511,7 @@ const pergolaBioclimatique = {
   corps: pageProduit({
     fil: "Aménagements",
     h1: ["Pergola bioclimatique", "sur mesure"], kicker: "Pergolas aluminium sur mesure à Lyon et dans sa région",
-    chapo: "Une structure en aluminium coiffée de lames orientables : ouvertes pour laisser passer le soleil et l'air, inclinées pour faire de l'ombre, fermées pour vous abriter de la pluie. Votre terrasse devient une vraie pièce à vivre.",
+    chapo: "Des lames orientables sur une structure aluminium : ouvertes pour le soleil, inclinées pour l'ombre, fermées contre la pluie.",
     photo: "pergola-bioclimatique-salon-piscine",
     atouts: [
       ["Lames orientables", "Vous réglez la lumière et la ventilation selon l'heure et la saison, d'un geste sur la télécommande."],
@@ -537,7 +537,7 @@ const pergolaToileRetractable = {
   corps: pageProduit({
     fil: "Aménagements",
     h1: ["Pergola à toile", "rétractable"], kicker: "Pergolas aluminium sur mesure à Lyon et dans sa région",
-    chapo: "Une structure aluminium et une toile qui se déploie ou se replie à la demande : de l'ombre aux heures chaudes, le ciel dégagé le reste du temps. Une solution souple et élégante pour profiter de votre terrasse.",
+    chapo: "Une toile qui se déploie ou se replie à la demande : de l'ombre aux heures chaudes, le ciel dégagé le reste du temps.",
     photo: "pergola-toile-retractable-facade",
     atouts: [
       ["Ombre à la demande", "La toile se déploie et se replie entièrement, en quelques secondes."],
@@ -563,7 +563,7 @@ const pergolaToitFixe = {
   corps: pageProduit({
     fil: "Aménagements",
     h1: ["Pergola", "à toit fixe"], kicker: "Pergolas aluminium sur mesure à Lyon et dans sa région",
-    chapo: "Une structure aluminium aux lignes épurées et une toiture pleine : un abri permanent pour votre terrasse, qui vous protège de la pluie comme du soleil, toute l'année.",
+    chapo: "Une structure aluminium épurée et une toiture pleine : un abri permanent, contre la pluie comme contre le soleil.",
     photo: "pergola-toit-fixe-piscine",
     atouts: [
       ["Abri permanent", "Une toiture pleine qui protège la terrasse en toute saison."],
@@ -590,7 +590,7 @@ const gardeCorps = {
   corps: pageProduit({
     fil: "Aménagements",
     h1: ["Garde-corps aluminium", "sur mesure"], kicker: "Maisons, logements et bâtiments professionnels, à Lyon", position: "60% 45%",
-    chapo: "Sécuriser une terrasse surélevée, un balcon, un escalier ou un toit-terrasse sans fermer la vue. Nos garde-corps aluminium sont fabriqués sur mesure, pour les maisons comme pour les bâtiments professionnels.",
+    chapo: "Sécuriser une terrasse, un balcon, un escalier ou un toit-terrasse sans fermer la vue : des garde-corps aluminium sur mesure.",
     photo: "gc-maison-lisses-noires",
     atouts: [
       ["Vitré", "Des panneaux de verre pour garder toute la vue et la lumière."],
@@ -642,7 +642,7 @@ const terrasseAluminium = {
   description: "Terrasse en lames aluminium sur mesure à Lyon : imputrescible, stable, sans entretien, en décor bois ou teinte unie. Piscines, balcons, restaurants. Devis gratuit.",
   corps: `
 ${heroPlein({ fil: "Terrasses", h1: ['<span class="pc-nowrap">Terrasse aluminium</span>', 'sur mesure <span class="lyon-l">à Lyon</span>'], kicker: "Terrasses aluminium à Lyon et dans sa région", photo: "alu-piscine-aspect-teck", position: "60% 50%",
-  chapo: `<span class="en-long">L'aspect du bois, sans ses contraintes : des lames aluminium qui ne pourrissent pas, ne se déforment pas et ne demandent aucun traitement.</span><span class="en-court">Décor bois ou teinte unie : des lames qui ne pourrissent pas et ne demandent aucun traitement.</span>`,
+  chapo: `<span class="en-long">L'aspect du bois, sans ses contraintes : des lames aluminium qui ne pourrissent pas, ne se déforment pas et ne se traitent pas.</span><span class="en-court">Décor bois ou teinte unie : des lames qui ne pourrissent pas et ne demandent aucun traitement.</span>`,
   actions: `<a class="bouton" href="/contact/">Demander un devis gratuit</a> <a class="bouton bouton-blanc" href="#teintes">Voir les teintes</a>` })}
 
 <section id="teintes" class="bloc">
@@ -730,7 +730,7 @@ const terrasseCarrelage = {
   description: "Terrasse en carrelage sur mesure à Lyon : dalles de grès cérame 2 cm aspect pierre ou bois, posées à sec sur plots ou sur structure aluminium, du 60 × 60 au 120 × 120. Devis gratuit.",
   corps: `
 ${heroPlein({ fil: "Terrasses", h1: ['<span class="pc-nowrap">Terrasse carrelage</span>', 'sur mesure <span class="lyon-l">à Lyon</span>'], kicker: "Terrasses carrelage à Lyon et dans sa région", photo: "carrelage-beige-pergola-toit-fixe", position: "60% 70%",
-  chapo: `<span class="en-long">Des dalles de grès cérame de 2 cm, posées à sec sur plots ou sur notre structure aluminium : ni colle, ni joint, ni dalle béton à couler. Aspect pierre ou bois, jusqu'au 120 × 120.</span><span class="en-court">Grès cérame de 2 cm posé à sec, sans colle ni dalle béton : aspect pierre ou bois, jusqu'au 120 × 120.</span>`,
+  chapo: `<span class="en-long">Grès cérame de 2 cm posé à sec, sur plots ou sur structure aluminium : ni colle, ni dalle béton. Aspect pierre ou bois.</span><span class="en-court">Grès cérame de 2 cm posé à sec, sans colle ni dalle béton : aspect pierre ou bois, jusqu'au 120 × 120.</span>`,
   actions: `<a class="bouton" href="/contact/">Demander un devis gratuit</a> <a class="bouton bouton-blanc" href="#teintes">Voir les teintes</a>` })}
 
 <section id="teintes" class="bloc">
@@ -812,7 +812,7 @@ const bardageAluminium = {
   description: "Bardage aluminium sur mesure à Lyon : lames thermolaquées dans de nombreuses teintes RAL, fixation invisible, sans entretien. Façades, murs, plafonds extérieurs. Devis gratuit.",
   corps: `
 ${heroPlein({ fil: "Aménagements", h1: ["Bardage aluminium", "sur mesure"], kicker: "Façades sans entretien à Lyon et dans sa région", photo: "bardage-alu-vertical-brun-escalier", position: "60% 50%",
-  chapo: "Des lames en aluminium thermolaqué, en teinte unie ou en décor bois très réaliste, clipsées sur une ossature aluminium : une façade qui ne se repeint pas, ne se traite pas et garde sa couleur." })}
+  chapo: "Des lames aluminium thermolaquées, unies ou aspect bois, sur ossature aluminium : une façade qui ne se repeint jamais." })}
 
 <section class="bloc bloc-alt">
   <div class="conteneur">
@@ -878,7 +878,7 @@ const terrasseComposite = {
   description: "Terrasse composite sur mesure à Lyon, posée sur structure aluminium garantie 20 ans : lames sans écharde, sans saturateur, en 6 teintes. Devis gratuit.",
   corps: `
 ${heroPlein({ fil: "Terrasses", h1: ['<span class="pc-nowrap">Terrasse composite</span>', 'sur mesure <span class="lyon-l">à Lyon</span>'], kicker: "Terrasses composite à Lyon et dans sa région", photo: "composite-gris-piscine", position: "50% 60%",
-  chapo: `<span class="en-long">Des lames qui gardent leur aspect sans saturateur ni ponçage, posées sur notre structure aluminium : la terrasse pour profiter de l'extérieur sans y passer ses week-ends.</span><span class="en-court">Sans saturateur ni ponçage : la terrasse pour profiter de l'extérieur sans y passer ses week-ends.</span>`,
+  chapo: `<span class="en-long">Des lames qui gardent leur aspect sans saturateur ni ponçage, posées sur notre structure aluminium.</span><span class="en-court">Sans saturateur ni ponçage : la terrasse pour profiter de l'extérieur sans y passer ses week-ends.</span>`,
   actions: `<a class="bouton" href="/contact/">Demander un devis gratuit</a> <a class="bouton bouton-blanc" href="#teintes">Voir les teintes</a>` })}
 
 <section id="teintes" class="bloc">
@@ -963,7 +963,7 @@ const storeBanne = {
   corps: pageProduit({
     fil: "Aménagements",
     h1: ["Store banne", "sur mesure"], kicker: "Protections solaires à Lyon et dans sa région",
-    chapo: "De l'ombre en quelques secondes, et une façade dégagée le reste du temps : le store banne est la protection solaire la plus simple pour profiter de votre terrasse aux heures chaudes.",
+    chapo: "De l'ombre en quelques secondes, et une façade dégagée le reste du temps : la protection solaire la plus simple.",
     photo: "store-banne-coffre-bardage", position: "45% 40%",
     atouts: [
       ["Coffre intégral", "Toile et bras sont rangés dans un coffre fermé : protégés de la pluie et de la poussière, ils durent plus longtemps."],
@@ -991,7 +991,7 @@ const carport = {
   corps: pageProduit({
     fil: "Aménagements",
     h1: ["Carport aluminium", "sur mesure"], kicker: "Abris voiture à Lyon et dans sa région",
-    chapo: "Un abri pour la voiture, aux lignes aussi soignées que votre maison : un carport aluminium à toit plat protège de la pluie, de la grêle et du soleil, sans les travaux d'un garage.",
+    chapo: "Un carport aluminium à toit plat, aux lignes soignées : votre voiture à l'abri de la pluie, de la grêle et du soleil.",
     photo: "carport-garage-gravier", position: "55% 45%",
     atouts: [
       ["Protection toute l'année", "Pluie, grêle, neige, soleil : la voiture reste à l'abri, et vous montez à pied sec."],
@@ -1019,7 +1019,7 @@ const terrassePilotis = {
   corps: pageProduit({
     fil: "Projets",
     h1: ["Terrasse sur pilotis", "surélevée"], kicker: "Terrains en pente et étages à Lyon et dans sa région",
-    chapo: "Quand le jardin est en contrebas ou en pente, la terrasse sur pilotis sort de plain-pied depuis le séjour ou l'étage. Et l'espace gagné dessous devient un abri pour la voiture, le bois ou le salon de jardin.",
+    chapo: "Jardin en contrebas ou en pente : la terrasse sur pilotis sort de plain-pied depuis le séjour et libère de l'espace dessous.",
     photo: "pilotis-garde-corps-verre-salon", position: "65% 50%",
     atouts: [
       ["De plain-pied avec la maison", "On sort du séjour ou de la chambre sans marche, comme sur un balcon, mais avec la surface d'une vraie terrasse."],
@@ -1079,7 +1079,7 @@ const nosTerrasses = {
   description: "Bois, composite, aluminium ou carrelage : comparez l'entretien, la résistance à la chaleur, l'adhérence et la durabilité des revêtements de terrasse. Conseils à Lyon.",
   corps: `
 ${heroPlein({ fil: "Terrasses", h1: ["Bois, composite, aluminium", "ou carrelage ?"], kicker: "Comparatif des revêtements de terrasse",
-  chapo: "Chaque matériau a ses qualités. Le bon choix dépend de l'usage, de l'exposition et du temps que vous voulez consacrer à l'entretien.",
+  chapo: "Chaque matériau a ses qualités : le bon choix dépend de l'usage, de l'exposition et de l'entretien que vous acceptez.",
   photo: "terrasse-accoya-naturel-piscine-vue-haut", position: "60% 50%",
   actions: `<a class="bouton" href="/contact/">Demander un devis gratuit</a> <a class="bouton bouton-blanc" href="#comparatif">Voir le comparatif</a>` })}
 
@@ -1131,7 +1131,7 @@ const terrassePlots = {
   corps: pageProduit({
     fil: "Projets",
     h1: ["Terrasse", "sur plots"], kicker: "Dalles et lames sur plots réglables à Lyon",
-    chapo: "Des plots réglables en hauteur, posés sur le support existant : la terrasse est de niveau sans couler de béton, l'eau s'écoule dessous, et chaque dalle se soulève pour accéder aux réseaux.",
+    chapo: "Des plots réglables posés sur le support existant : une terrasse de niveau, sans béton, et l'eau s'écoule dessous.",
     photo: "ambiance-dalles-sur-plots", position: "55% 55%",
     atouts: [
       ["Sans fondation", "Les plots se posent sur une dalle béton, un sol stabilisé ou une étanchéité de toit-terrasse."],
@@ -1164,7 +1164,7 @@ const terrasseBalcon = {
   corps: pageProduit({
     fil: "Projets",
     h1: ["Un balcon", "comme une terrasse"], kicker: "Sols de balcon sur mesure à Lyon et dans sa région",
-    chapo: "Un carrelage fatigué ou une dalle béton grise : en quelques jours, le balcon devient une vraie pièce dehors, avec un sol en lames ou en dalles posé sur l'existant.",
+    chapo: "Un carrelage fatigué ou une dalle béton grise : en quelques jours, le balcon devient une vraie pièce dehors.",
     photo: "ambiance-balcon-lames", position: "55% 50%",
     atouts: [
       ["Posé sur l'existant", "Les lames ou les dalles se posent sur le sol actuel, sans le casser."],
@@ -1197,7 +1197,7 @@ const terrassePiscine = {
   corps: pageProduit({
     fil: "Projets",
     h1: ["Terrasse", "de piscine"], kicker: "Plages de piscine sur mesure à Lyon et dans sa région",
-    chapo: "Autour d'un bassin, la terrasse se vit pieds nus et mouillés. Le revêtement doit rester agréable au soleil, accrocher sous le pied et supporter l'eau chlorée ou salée.",
+    chapo: "Autour d'un bassin, la terrasse se vit pieds nus : un revêtement agréable au soleil, qui accroche sous le pied et supporte l'eau.",
     photo: "ambiance-plage-piscine", position: "45% 55%",
     atouts: [
       ["Agréable pieds nus", "Des matériaux sans écharde, choisis pour rester supportables au soleil."],
@@ -1230,7 +1230,7 @@ const toitTerrasse = {
   corps: pageProduit({
     fil: "Projets",
     h1: ["Toit-terrasse", "aménagé"], kicker: "Toitures plates aménagées à Lyon et dans sa région",
-    chapo: "Une toiture plate peut devenir la plus belle pièce de la maison. Le revêtement repose sur des plots réglables posés sur l'étanchéité, sans jamais la percer.",
+    chapo: "Une toiture plate devient une pièce à vivre : le revêtement repose sur des plots posés sur l'étanchéité, sans la percer.",
     photo: "carrelage-toit-terrasse-montagnes", position: "55% 60%",
     atouts: [
       ["L'étanchéité intacte", "Les plots reposent sur la membrane, avec une protection adaptée : aucune fixation ne la traverse."],
@@ -1272,7 +1272,7 @@ const realisations = {
   description: "Photos de terrasses bois, aluminium et composite, pergolas, stores bannes, carports, bardages et garde-corps aluminium pour inspirer votre projet à Lyon.",
   corps: `
 ${heroPlein({ fil: "Galerie", h1: ["Galerie", "d'inspiration"], kicker: "Terrasses, pergolas, bardages et garde-corps",
-  chapo: "Toute notre gamme en images, classée par produit. Ces photos sont des illustrations de nos fabricants ; les photos de nos propres chantiers viendront s'ajouter ici au fil des projets.",
+  chapo: "Toute notre gamme en images, classée par produit. Ces photos sont des illustrations de nos fabricants.",
   photo: "terrasse-thermofrene-pool-house", position: "60% 50%",
   actions: `<a class="bouton" href="/contact/">Demander un devis gratuit</a> <a class="bouton bouton-blanc" href="#galerie">Voir les photos</a>` })}
 <section id="galerie" class="bloc">
@@ -1298,7 +1298,7 @@ const pergolas = {
   description: "Pergola bioclimatique, à toile rétractable ou à toit fixe à Lyon : comparez l'ombre, la protection contre la pluie et la lumière en hiver pour choisir la vôtre. Plan 3D offert.",
   corps: `
 ${heroPlein({ fil: "Aménagements", h1: ["Quelle pergola", "pour votre terrasse ?"], kicker: "Pergolas sur mesure à Lyon et dans sa région",
-  chapo: "Bioclimatique, à toile rétractable ou à toit fixe : trois façons de couvrir votre 5<sup>e</sup> pièce, selon ce que vous attendez de l'ombre, de la pluie et de la lumière.",
+  chapo: "Bioclimatique, à toile rétractable ou à toit fixe : trois façons de couvrir votre 5<sup>e</sup> pièce, selon l'ombre, la pluie et la lumière.",
   photo: "pergola-bioclimatique-salon-piscine", position: "60% 50%",
   actions: `<a class="bouton" href="/contact/">Demander un devis gratuit</a> <a class="bouton bouton-blanc" href="#comparatif">Voir le comparatif</a>` })}
 
@@ -1349,7 +1349,7 @@ const terrasseRestaurant = {
   corps: pageProduit({
     fil: "Professionnels",
     h1: ["Terrasse de restaurant", "et d'hôtel"], kicker: "Cafés, hôtels et restaurants à Lyon et dans sa région",
-    chapo: "Une terrasse accueillante fait venir les clients et les fait rester. Plancher, garde-corps, pare-vue, ombre : nous concevons l'ensemble pour qu'il encaisse le service, saison après saison.",
+    chapo: "Une terrasse accueillante fait venir les clients et les fait rester : plancher, garde-corps, pare-vue et ombre.",
     photo: "terrasse-kebony-restaurant", position: "50% 55%",
     atouts: [
       ["Pensée pour le service", "Un sol plan et sans marche inutile, pour circuler facilement entre les tables."],

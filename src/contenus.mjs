@@ -1042,12 +1042,12 @@ const QUIZ_Q = [
   ]],
   ["prio", "Ce qui compte le plus pour vous ?", [
     ["bois", "Le vrai bois", [3, 0, 0, 0], { bois: ["Une matière naturelle, différente sur chaque lame, qui évolue avec le temps.", "aspect"] }],
-    ["entretien", "Aucun entretien", [0, 2, 2, 2], { composite: ["Ni saturateur ni ponçage : un simple nettoyage suffit.", "entretien"], aluminium: ["Inerte et inaltérable : rien à traiter, il ne moisit pas et ne bouge pas.", "entretien"], carrelage: ["Le grès cérame ne demande ni saturateur, ni ponçage, ni traitement.", "entretien"] }],
+    ["couleur", "Pas de changement de couleur", [0, 1, 2, 2], { composite: ["La teinte s'éclaircit les premiers mois, puis se stabilise.", "couleur"], aluminium: ["Les lames aluminium sont ce qui résiste le mieux au changement de couleur.", "couleur"], carrelage: ["Le grès cérame est ce qui résiste le mieux au changement de couleur.", "couleur"] }],
     ["fraicheur", "La fraîcheur pieds nus", [2, 1, 3, 0], { bois: ["Un bois tendre reste le plus agréable sous le pied en plein été.", "chaleur"], composite: ["La gamme pleine masse chauffe peu, proche du bois.", "chaleur"], aluminium: ["Le revêtement qui chauffe le moins : moins que le composite et les bois durs.", "chaleur"] }],
     ["mineral", "Un style minéral", [0, 0, 0, 3], { carrelage: ["Aspect pierre ou bois, du très clair au très foncé, dans la continuité de votre séjour.", "aspect"] }],
   ]],
   ["entretien", "L'entretien que vous acceptez ?", [
-    ["aucun", "Aucun", [0, 1, 2, 2], { aluminium: ["Aucun traitement à refaire, jamais.", "entretien"], carrelage: ["Un coup de balai et de l'eau suffisent.", "entretien"] }],
+    ["aucun", "Aucun", [0, 2, 2, 2], { composite: ["Ni saturateur ni ponçage : un simple nettoyage suffit.", "entretien"], aluminium: ["Aucun traitement à refaire, jamais.", "entretien"], carrelage: ["Un coup de balai et de l'eau suffisent.", "entretien"] }],
     ["nettoyage", "Deux nettoyages par an", [1, 1, 1, 1], { bois: ["Nos essences phares (thermofrêne, kebony, accoya…) se passent de saturateur.", "entretien"] }],
     ["saturateur", "Un saturateur de temps en temps", [2, 0, 0, 0], { bois: ["Avec un saturateur de temps en temps, toutes nos essences vous sont ouvertes.", "entretien"] }],
   ]],

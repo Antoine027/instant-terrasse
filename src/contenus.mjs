@@ -698,14 +698,14 @@ ${cta("Un projet de terrasse aluminium ?", "Laissez votre numéro : nous vous ra
 // Dalles de grès cérame (Antoine, 05/11/2026) : 2 cm, très large choix de références (exemples ci-dessous), pas de garantie affichée sur les dalles.
 // Visuels : ©Rondine, sauf 5 aspect pierre ©Novoceram (champ credit du manifeste).
 const FORMATS_CARR = [[60, 60], [80, 80], [90, 90], [100, 100], [120, 120], [60, 120], [40, 120]];
-const GALERIE_CARR = ["carrelage-toit-terrasse-montagnes", "carrelage-bh-aspect-bois-gris-vue", "carrelage-bh-pergola-cour", "carrelage-aspect-bois-garde-corps-feuilles", "carrelage-bh-aspect-bois-clair-pergola", "carrelage-gris-garde-corps-verre-depoli", "carrelage-bh-aspect-bois-gris-jardin", "carrelage-bh-grand-format-baie", "carrelage-bh-aspect-bois-clair-transats", "carrelage-bh-sureleve-gazon", "carrelage-bh-aspect-bois-gris-table", "carrelage-bh-pergola-salon"];
+const GALERIE_CARR = ["carrelage-beige-pergola-toit-fixe", "carrelage-bh-aspect-bois-gris-vue", "carrelage-bh-pergola-cour", "carrelage-aspect-bois-garde-corps-feuilles", "carrelage-bh-aspect-bois-clair-pergola", "carrelage-gris-garde-corps-verre-depoli", "carrelage-bh-aspect-bois-gris-jardin", "carrelage-bh-grand-format-baie", "carrelage-bh-aspect-bois-clair-transats", "carrelage-bh-sureleve-gazon", "carrelage-bh-aspect-bois-gris-table", "carrelage-bh-pergola-salon"];
 const nuancierCarr = (aspect, classe, sizes) => `<div class="nuancier nuancier-carr ${classe}" data-galerie>${PHOTOS.filter((p) => p.categorie === "teinte-carrelage" && p.essence === aspect).sort((a, b) => a.cle.localeCompare(b.cle)).map((p) => `<figure tabindex="0" aria-label="Agrandir : ${p.alt}">${imgPhoto(p.cle, { sizes })}</figure>`).join("")}</div>`;
 
 const terrasseCarrelage = {
   title: "Terrasse carrelage Lyon : grès cérame 2 cm sur plots | Instant Terrasse",
   description: "Terrasse en carrelage sur mesure à Lyon : dalles de grès cérame 2 cm aspect pierre ou bois, posées à sec sur plots ou sur structure aluminium, du 60 × 60 au 120 × 120. Devis gratuit.",
   corps: `
-${heroPlein({ fil: "Terrasses", h1: ['<span class="pc-nowrap">Terrasse carrelage</span>', 'sur mesure <span class="lyon-l">à Lyon</span>'], kicker: "Terrasses carrelage à Lyon et dans sa région", photo: "carrelage-beige-pergola-toit-fixe", position: "60% 70%",
+${heroPlein({ fil: "Terrasses", h1: ['<span class="pc-nowrap">Terrasse carrelage</span>', 'sur mesure <span class="lyon-l">à Lyon</span>'], kicker: "Terrasses carrelage à Lyon et dans sa région", photo: "carrelage-toit-terrasse-montagnes", position: "55% 60%",
   chapo: `<span class="en-long">Grès cérame de 2 cm posé à sec, sur plots ou sur structure aluminium : ni colle, ni dalle béton. Aspect pierre ou bois.</span><span class="en-court">Grès cérame de 2 cm posé à sec, sans colle ni dalle béton : aspect pierre ou bois, jusqu'au 120 × 120.</span>`,
   actions: `<a class="bouton" href="/contact/">Demander un devis gratuit</a> <a class="bouton bouton-blanc" href="#teintes">Voir les teintes</a>` })}
 

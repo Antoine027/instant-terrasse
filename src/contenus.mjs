@@ -1055,7 +1055,7 @@ const QUIZ_RAISONS = {
 // Questions : [id, intitulé, [[valeur, libellé, {critère: poids}]]]
 const QUIZ_Q = [
   ["aspect", "Quel aspect recherchez-vous ?", [
-    ["bois", "Le bois, chaleureux", { aspectBois: 2, chaleureux: 2 }],
+    ["bois", "Le bois, chaleureux", { aspectBois: 3, chaleureux: 3 }],
     ["mineral", "La pierre, minéral", { aspectPierre: 3 }],
     ["egal", "Peu importe", {}],
   ]],

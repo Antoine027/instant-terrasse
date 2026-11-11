@@ -220,47 +220,6 @@ const GROUPES_STRUCTURES = ["Structure pour bois et composite", "Structure pour 
 // Ordre (Antoine, 11/11/2026) : les plus belles structures aluminium d'abord, structure traditionnelle et plots simples à la fin.
 const ORDRE_STRUCTURES = ["structure-clips-lame-bois", "structure-lames-a-clipser", "structure-schema-bordure", "structure-plot-rail-lame", "carrelage-structure-alu-rails-plots", "structure-clips-lame-brune", "structure-lames-alu-balcon-dessous", "structure-rails-plots-detail", "structure-lames-alu-pose", "structure-rails-vue-ensemble", "structure-lames-clipsees-vue-haut", "carrelage-structure-aluminium-schema", "structure-plot-reglable", "structure-lames-alu-piscine", "structure-rails-dalle", "carrelage-structure-alu-calepinage", "structure-lames-alu-restaurant-chantier", "structure-lames-alu-assemblage", "structure-lames-alu-equerre", "structure-traditionnelle-plot-lambourde", "carrelage-plots-schema", "ambiance-dalles-sur-plots"];
 
-const compBois = tableau(
-  "comparatif-bois",
-  "Comparer en quelques critères",
-  "Les deux techniques ont leur place. Voici ce qui les distingue, pour choisir en connaissance de cause.",
-  ["Structure traditionnelle", "Structure aluminium"],
-  [
-    ["Ossature", "Lambourdes en bois", "Rails en aluminium sur plots réglables"],
-    ["Face à l'humidité", "Les lambourdes restent sensibles à l'eau stagnante avec les années", "Imputrescible : rien ne pourrit sous les lames"],
-    ["Stabilité", "Le bois de l'ossature peut travailler, se vriller", "Rails rectilignes qui ne se déforment pas"],
-    ["Mise à niveau", "Plots réglables sous les lambourdes, en bois qui peut travailler avec le temps", "Plots réglables sous des rails aluminium rectilignes : la planéité tient dans le temps"],
-    ["Fixation des lames", "Vissées : chaque vis perce la lame, l'eau peut s'y infiltrer et la vis finir par s'arracher", "Clips invisibles, testés à 1,5 à 2,5 fois la résistance demandée par la norme"],
-    ["Écoulement de l'eau", "L'eau peut stagner sur les lambourdes, sous les lames", "Lames sans contact direct avec l'ossature, espacement constant entre les lames"],
-    ["Ventilation", "Selon la hauteur disponible", "Circulation d'air prévue entre ossature et lames"],
-    ["Revêtements possibles", "Toutes nos essences de bois", "Nos essences phares, composite, carrelage, lames aluminium"],
-    ["Budget", "Généralement plus économique à l'achat", "Investissement plus élevé, pensé pour durer"],
-  ],
-  [
-    ["La traditionnelle, si…", "vous voulez une essence comme l'ipé, le cumaru ou le mélèze, avec un budget maîtrisé."],
-    ["L'aluminium, si…", "vous cherchez la durabilité et la planéité dans le temps, avec nos essences phares ou du composite."],
-  ]
-);
-
-const compCarrelage = tableau(
-  "comparatif-carrelage",
-  "Comparer en quelques critères",
-  "Le carrelage extérieur se pose sans colle, en dalles épaisses sur des plots. La question est ce qu'il y a dessous.",
-  ["Sur plots simples", "Sur structure aluminium"],
-  [
-    ["Principe", "Chaque dalle repose directement sur des plots placés à ses angles", "Les dalles reposent sur des rails aluminium, eux-mêmes posés sur plots"],
-    ["Support idéal", "Support existant stable : dalle béton, toit-terrasse, ancienne terrasse", "Sols durs ou stabilisés, supports irréguliers, grandes hauteurs, sans couler de dalle béton"],
-    ["Rigidité", "Bonne, à condition que le support soit sain", "Ossature continue, très rigide, qui répartit les charges"],
-    ["Planéité", "Réglage plot par plot", "Rails réglés une fois, toute la surface suit"],
-    ["Sous le pied", "Une dalle peut bouger ou « pianoter » si un plot travaille", "Cadre continu et cales amortissantes : pas de dalle qui bouge ni qui claque"],
-    ["Formats et calepinage", "Formats courants, pose à joints alignés", "Grands formats, joints décalés, mélange de formats ou de bois et carrelage"],
-    ["Rapidité et budget", "Pose rapide, solution la plus économique", "Plus de matériel, budget plus élevé"],
-  ],
-  [
-    ["Les plots simples, si…", "vous avez déjà une dalle béton ou un toit-terrasse en bon état et une hauteur raisonnable à rattraper."],
-    ["La structure aluminium, si…", "le support est irrégulier, la hauteur importante, ou si vous voulez la terrasse la plus stable possible."],
-  ]
-);
 
 // ---------- Nos structures ----------
 // Comparatif replié : tableau sur ordinateur, liste critère par critère sur téléphone (fermé par défaut).

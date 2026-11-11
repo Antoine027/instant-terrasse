@@ -317,11 +317,11 @@ ${heroPlein({ fil: "Terrasses", h1: ['<span class="pc-nowrap">Structure aluminiu
     <h2>Quelle structure pour votre terrain&nbsp;?</h2>
     <p class="chapo">Nous vérifions votre support dès le rendez-vous.</p>
     <ul class="terrains-liste">
-      <li><strong>Sol dur</strong><span>Dalle béton, ancienne terrasse : la structure se pose directement ou sur cales.</span></li>
-      <li><strong>Sol stabilisé</strong><span>Gravier compacté : les plots réglables reprennent les écarts, sans couler de béton.</span></li>
+      <li><strong>Sol dur</strong><span>Dalle béton, ancienne terrasse : la structure se pose directement, sur cales, ou sur plots pour rattraper une hauteur.</span></li>
+      <li><strong>Sol stabilisé</strong><span>Sur concassé : les plots réglables reprennent les écarts, sans couler de béton.</span></li>
       <li><strong>Toit-terrasse</strong><span>La structure repose sur l'étanchéité sans la percer. Voir le <a href="/toit-terrasse-lyon/">toit-terrasse</a>.</span></li>
       <li><strong>Terrasse surélevée</strong><span>Avec des réhausses, les plots montent jusqu'à environ 40&nbsp;cm. Au-delà, poutres et poteaux.</span></li>
-      <li><strong>Terrain en pente</strong><span>La terrasse est portée par des poteaux : c'est la <a href="/terrasse-sur-pilotis-lyon/">terrasse sur pilotis</a>.</span></li>
+      <li><strong>Terrain en pente</strong><span>Les plots permettent de régler la hauteur de la terrasse et de s'adapter au terrain en pente et aux différences de niveau. Forte pente : voir la <a href="/terrasse-sur-pilotis-lyon/">terrasse sur pilotis</a>.</span></li>
     </ul>
   </div>
 </section>

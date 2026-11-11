@@ -1913,7 +1913,7 @@ li.mm-sep{border-top:2px solid rgba(47,52,55,.22);margin-top:10px;padding-top:10
 .terrains-liste{list-style:none;padding:0;margin:20px 0 0;display:grid;grid-template-columns:1fr 1fr;gap:12px 28px}
 .terrains-liste li{background:#fff;border-radius:12px;padding:14px 18px}
 .terrains-liste strong{display:block;font-family:Montserrat,sans-serif;margin-bottom:2px}
-@media (min-width:701px){.comp-plie>summary{pointer-events:none}.comp-ouvrir{display:none}}
+
 @media (max-width:700px){
   .struct-rev{grid-template-columns:1fr 1fr;gap:10px}
   .struct-rev-item span{padding:10px 12px;font-size:.92rem}
@@ -1951,3 +1951,8 @@ li.mm-sep{border-top:2px solid rgba(47,52,55,.22);margin-top:10px;padding-top:10
 /* Structures : 5 terrains en carrés sur ordinateur */
 @media (min-width:1061px){.terrains-liste{grid-template-columns:repeat(5,1fr);gap:16px}.terrains-liste li{aspect-ratio:1;display:flex;flex-direction:column;padding:22px 20px;border-radius:var(--rayon)}.terrains-liste strong{font-size:1.05rem;margin-bottom:10px}}
 @media (min-width:701px) and (max-width:1060px){.terrains-liste{grid-template-columns:repeat(3,1fr)}}
+
+/* Comparatifs repliables partout ; « Masquer » une fois ouverts */
+.comp-plie>summary{cursor:pointer}
+.comp-fermer{display:none;font-weight:700;color:var(--accent-texte);text-decoration:underline;text-underline-offset:3px}
+.comp-plie[open] .comp-fermer{display:inline}

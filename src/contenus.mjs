@@ -265,8 +265,8 @@ const compCarrelage = tableau(
 // ---------- Nos structures ----------
 // Comparatif replié : tableau sur ordinateur, liste critère par critère sur téléphone (fermé par défaut).
 const comparatifPlie = (id, titre, colonnes, lignes) => `
-    <details class="comp-plie" id="${id}" open>
-      <summary><h3>${titre}</h3><span class="comp-ouvrir">Voir le comparatif</span></summary>
+    <details class="comp-plie" id="${id}">
+      <summary><h3>${titre}</h3><span class="comp-ouvrir">Voir le comparatif</span><span class="comp-fermer">Masquer le comparatif</span></summary>
       <table class="comparatif comp-table">
         <thead><tr><th scope="col"><span class="vh">Critère</span></th><th scope="col" class="col-accent">${colonnes[0]}</th><th scope="col">${colonnes[1]}</th></tr></thead>
         <tbody>${lignes.map(([c, alu, autre]) => `<tr><th scope="row">${c}</th><td class="col-accent">${alu}</td><td>${autre}</td></tr>`).join("")}</tbody>
@@ -348,7 +348,7 @@ ${heroPlein({ fil: "Terrasses", h1: ['<span class="pc-nowrap">Structure aluminiu
     <h2>Comparatif détaillé</h2>
     ${comparatifPlie("comparatif-bois", "Terrasse bois", ["Structure aluminium", "Structure traditionnelle"], LIGNES_BOIS)}
     ${comparatifPlie("comparatif-carrelage", "Terrasse carrelage", ["Structure aluminium", "Plots simples"], LIGNES_CARR)}
-    <script>if(matchMedia('(max-width:700px)').matches)document.querySelectorAll('.comp-plie').forEach(d=>{if(location.hash!=='#'+d.id)d.open=false})</script>
+    <script>const ouvreComp=()=>{const d=location.hash&&document.querySelector('.comp-plie'+location.hash);if(d)d.open=true};ouvreComp();addEventListener('hashchange',ouvreComp)</script>
   </div>
 </section>
 

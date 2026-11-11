@@ -35,9 +35,9 @@
   "dossier": "aluminium",
   "position": "60% 50%"
  },
- "carrelage-toit-terrasse-montagnes": {
+ "carrelage-bh-aspect-bois-gris-vue": {
   "dossier": "terrasses",
-  "position": "55% 60%"
+  "position": "60% 60%"
  },
  "bardage-alu-vertical-brun-escalier": {
   "dossier": "bardage",
@@ -74,6 +74,10 @@
  "ambiance-plage-piscine": {
   "dossier": "terrasses",
   "position": "45% 55%"
+ },
+ "carrelage-toit-terrasse-montagnes": {
+  "dossier": "terrasses",
+  "position": "55% 60%"
  },
  "terrasse-thermofrene-pool-house": {
   "dossier": "bois",

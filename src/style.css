@@ -1886,3 +1886,5 @@ li.mm-sep{border-top:2px solid rgba(47,52,55,.22);margin-top:10px;padding-top:10
   #teintes .nuancier-car::-webkit-scrollbar{display:none}
   #teintes .nuancier-car>figure{flex:0 0 44%;scroll-snap-align:center}
 }
+/* Composite : lames pleine masse retournées pour être dans le même sens que les Nekko */
+.grille-comp .essence:nth-child(n+3) .essence-photo img{transform:scaleX(-1)}

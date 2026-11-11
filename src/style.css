@@ -1839,3 +1839,12 @@ main .etapes .etape-ic b{display:flex;align-items:center;justify-content:center;
 @media (min-width:701px){.structure-bandeau h3{font-size:1.35rem;margin-bottom:10px}}
 /* Accoya gris pleine largeur : fond dégradé à gauche (visuels), fond blanc à droite (texte), comme les autres cartes */
 @media (min-width:1061px){.grille-essences>.essence:last-child:nth-child(odd){background:linear-gradient(160deg,#fff 0%,var(--fond2) 100%) left top/calc((100% - var(--gap-ess)) / 2) 100% no-repeat,#fff}}
+/* Bois (ordinateur) : encadrés de structure alignés sur la grille des essences, style « explication » distinct des cartes */
+.cs-kicker{display:none}
+@media (min-width:701px){
+  .structure-bandeau{max-width:none;margin-top:36px}
+  .structure-bandeau .carte-structure{grid-template-columns:300px 1fr;gap:48px;padding:30px 40px;background:rgba(255,255,255,.5);box-shadow:none;border:0;border-top:2px solid var(--accent);border-radius:0 0 var(--rayon) var(--rayon)}
+  .structure-bandeau .carte-structure:hover{transform:none;box-shadow:none}
+  .structure-bandeau .cs-img{order:-1}
+  .cs-kicker{display:block;margin-bottom:6px;font:700 .78rem Montserrat,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--accent-texte)}
+}

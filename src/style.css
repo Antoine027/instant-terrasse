@@ -1948,3 +1948,6 @@ li.mm-sep{border-top:2px solid rgba(47,52,55,.22);margin-top:10px;padding-top:10
 .mm-vs b{position:absolute;font:900 1.45rem/1 Montserrat,sans-serif;background:repeating-linear-gradient(115deg,#fff 0 2px,#F6E6C8 2px 3px,#fff 3px 5px);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 1px 1px rgba(90,50,5,.45))}
 .mm-vs b:first-child{left:8px;top:6px}
 .mm-vs b:last-child{right:8px;bottom:6px}
+/* Structures : 5 terrains en carrés sur ordinateur */
+@media (min-width:1061px){.terrains-liste{grid-template-columns:repeat(5,1fr);gap:16px}.terrains-liste li{aspect-ratio:1;display:flex;flex-direction:column;padding:22px 20px;border-radius:var(--rayon)}.terrains-liste strong{font-size:1.05rem;margin-bottom:10px}}
+@media (min-width:701px) and (max-width:1060px){.terrains-liste{grid-template-columns:repeat(3,1fr)}}

@@ -1939,3 +1939,6 @@ li.mm-sep{border-top:2px solid rgba(47,52,55,.22);margin-top:10px;padding-top:10
   .v-compte{top:max(22px,env(safe-area-inset-top));left:max(16px,env(safe-area-inset-left));text-shadow:0 1px 4px #000}
   .visionneuse:fullscreen{background:#000}
 }
+/* Vignette « VS » du Comparatif (menu) */
+.mm-vs{display:none}
+@media (max-width:1240px),(min-width:1241px){.mm-vig.mm-vs{display:grid;place-items:center;background:var(--accent);color:#fff;font:800 1.15rem/1 Montserrat,sans-serif;letter-spacing:.02em}}

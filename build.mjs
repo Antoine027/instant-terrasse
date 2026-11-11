@@ -45,6 +45,7 @@ for (const p of PAGES) {
 // ---------- Menu ----------
 // Lien de sous-menu : vignette photo et description courte (visibles seulement dans le menu mobile).
 const vignetteMenu = (chemin) => {
+  if (chemin === "/nos-terrasses/") return `<span class="mm-vig mm-vs" aria-hidden="true">VS</span>`;
   const cle = VIGNETTES[chemin];
   if (!cle) return `<span class="mm-vig mm-vig-vide" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4 3 20h18L12 4z"/><path d="M12 4v16"/><path d="M12 20l-3.5-6M12 20l3.5-6"/><path d="M10 3.5l2 .5 2-.5"/></svg></span>`;
   const p = photo(cle);

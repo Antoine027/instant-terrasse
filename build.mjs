@@ -80,7 +80,7 @@ const menuUnivers = (u0, actuel) => {
         <ul class="cascade">${u.groupes.map((g) => `<li class="cascade-item${g.pages.some(([c]) => c === actuel) ? " cascade-actif" : ""}"><button type="button" class="cascade-titre">${g.nom}</button><div class="cascade-panneau"><div><p class="sous-menu-titre">${g.nom}</p><ul class="cascade-liste">${g.pages.map((p) => lienMenu(p, actuel)).join("")}</ul></div>${g.photo ? `<a class="cascade-photo" href="${g.pages[0][0]}" tabindex="-1" aria-hidden="true">${imgPhoto(g.photo, { sizes: "220px" })}</a>` : ""}</div></li>`).join("")}</ul>
       </div>` : `<div class="sous-menu${u.groupes.length > 2 ? " sous-menu-large" : ""}${u.cle === "professionnels" ? " sous-menu-droite" : ""}">
         ${(() => {
-          const groupe = (g) => `<div>${g.nom ? `<p class="sous-menu-titre">${g.nom}</p>` : ""}<ul${g.pages.length > 4 && u.groupes.length === 1 ? ' class="sm-2col"' : ""}>${g.pages.map((p) => lienMenu(p, actuel)).join("")}</ul></div>`;
+          const groupe = (g) => `<div>${g.nom ? `<p class="sous-menu-titre">${g.nom}</p>` : ""}<ul class="${g.pages.length > 4 && u.groupes.length === 1 ? "sm-2col" : ""}${g.pages.some((p) => p[4]) ? " sm-rev" : ""}">${g.pages.map((p) => lienMenu(p, actuel)).join("")}</ul></div>`;
           // Plus de deux groupes : le premier en colonne de gauche, les autres empilés à droite (ordinateur).
           return u.groupes.length > 2 ? `<div class="sm-col">${groupe(u.groupes[0])}</div><div class="sm-col">${u.groupes.slice(1).map(groupe).join("")}</div>` : u.groupes.map(groupe).join("");
         })()}

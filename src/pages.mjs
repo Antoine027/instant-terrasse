@@ -20,11 +20,11 @@ export const UNIVERS = [
     cle: "terrasses", nom: "Terrasses",
     accroche: "Bois, composite, aluminium ou carrelage, sur une structure qui dure.",
     groupes: [{ nom: "", pages: [
-      ["/terrasse-bois-lyon/", "Terrasse bois", "Nos essences phares sur structure aluminium, et d'autres essences sur structure traditionnelle.", "Bois"],
+      ["/terrasse-bois-lyon/", "Terrasse bois", "Sur structure aluminium ou traditionnelle.", "Bois"],
       ["/terrasse-composite-lyon/", "Terrasse composite", "Sans entretien, posée sur structure aluminium.", "Composite"],
       ["/terrasse-aluminium-lyon/", "Terrasse en lames aluminium", "Imputrescible, stable, en coloris unis ou aspect bois.", "Aluminium"],
       ["/terrasse-carrelage-lyon/", "Terrasse carrelage", "Grès cérame sur plots ou sur structure aluminium.", "Carrelage"],
-      ["/structure-terrasse-lyon/", "Nos structures", "Traditionnelle, aluminium ou sur plots : la base qui fait durer une terrasse.", "Structures", true],
+      ["/structure-terrasse-lyon/", "Nos structures", "Aluminium, traditionnelle ou sur plots.", "Structures", true],
       ["/nos-terrasses/", "Comparatif des matériaux", "Bois, composite, carrelage ou aluminium : lequel choisir ?", "Comparatif"],
     ] }],
   },  {

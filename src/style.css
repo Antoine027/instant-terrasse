@@ -2027,3 +2027,7 @@ li.mm-sep{border-top:2px solid rgba(47,52,55,.22);margin-top:10px;padding-top:10
 }
 /* Comparateur : rang à la place du % */
 .quiz-carte:not(.quiz-top) .quiz-rang{font:800 1.5rem/1 Montserrat,sans-serif;color:var(--accent-texte);margin-bottom:4px}
+.quiz-rang{display:flex;align-items:center;gap:8px}
+.quiz-coupe{width:30px;height:30px;flex:none}
+.quiz-top .quiz-coupe{width:38px;height:38px}
+@media (max-width:700px){.quiz-top .quiz-rang{justify-content:center}}

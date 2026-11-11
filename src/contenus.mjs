@@ -314,7 +314,7 @@ ${heroPlein({ fil: "Terrasses", h1: ['<span class="pc-nowrap">Structure aluminiu
         <ul class="puces">
           <li><strong>Garantie 20 ans</strong> (plots, rails et clips).</li>
           <li><strong>Ne pourrit pas,</strong> grâce à l'aluminium.</li>
-          <li><strong>Ventilation optimale :</strong> 6&nbsp;mm entre les lames et les rails.</li>
+          <li><strong>Ventilation optimale :</strong> 6&nbsp;mm entre lames et rails.</li>
           <li><strong>Fixation invisible :</strong> aucune vis apparente.</li>
           <li><strong>Conforme au DTU 51-4,</strong> testée par le FCBA.</li>
           <li><strong>Fabriquée en France.</strong></li>

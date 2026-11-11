@@ -312,11 +312,12 @@ ${heroPlein({ fil: "Terrasses", h1: ['<span class="pc-nowrap">Structure aluminiu
         <h2>Notre structure aluminium</h2>
         <p>Des plots réglables posés sur le support, des rails en aluminium, et le revêtement fixé dessus. Rien ne pourrit sous la terrasse, et elle reste plane dans le temps.</p>
         <ul class="puces">
-          <li><strong>Garantie 20 ans.</strong></li>
-          <li><strong>De niveau</strong> sur un sol irrégulier, grâce aux plots réglables.</li>
-          <li><strong>Imputrescible et ventilée :</strong> l'air circule sous le revêtement.</li>
-          <li><strong>Fixation invisible</strong> pour le bois et le composite : aucune vis en surface.</li>
-          <li><strong>Conforme au DTU 51-4,</strong> testée par le FCBA, fabriquée en France.</li>
+          <li><strong>Garantie 20 ans</strong> (plots, rails et clips).</li>
+          <li><strong>Ne pourrit pas,</strong> grâce à l'aluminium.</li>
+          <li><strong>Ventilation optimale,</strong> grâce à l'espace entre les lames et les rails.</li>
+          <li><strong>Fixation invisible :</strong> aucune vis apparente.</li>
+          <li><strong>Conforme au DTU 51-4,</strong> testée par le FCBA.</li>
+          <li><strong>Fabriquée en France.</strong></li>
         </ul>
       </div>
     </div>

@@ -1160,10 +1160,10 @@ const autresProjets = (ici) => `
 // Classement des revêtements par projet : notes du comparateur (QUIZ_NOTES) × poids propres au projet.
 const classer = (poids, mats) => mats.map((m) => [m, Object.entries(poids).reduce((s, [c, w]) => s + w * QUIZ_NOTES[c][["bois", "composite", "aluminium", "carrelage"].indexOf(m)], 0)])
   .sort((a, b) => b[1] - a[1] || ["bois", "composite", "aluminium", "carrelage"].indexOf(a[0]) - ["bois", "composite", "aluminium", "carrelage"].indexOf(b[0])).map(([m]) => m);
-const pageProjet = ({ ici, h1, kicker, chapo, photo, position, actions, revTitre, revIntro, rev, poids, pose, atoutsTitre, atouts, galerieCat, titreGalerie, lyon, lyonCourt, faqTitre, faq, ctaTitre, ctaTexte }) => {
+const pageProjet = ({ ici, fil = "Types de projets", extra = "", apres, h1, kicker, chapo, photo, position, actions, revTitre, revIntro, rev, poids, pose, atoutsTitre, atouts, galerieCat, titreGalerie, lyon, lyonCourt, faqTitre, faq, ctaTitre, ctaTexte }) => {
   const ordre = classer(poids, Object.keys(rev));
   return `
-${heroPlein({ fil: "Types de projets", h1, kicker, chapo, photo, position, actions: actions ?? `<a class="bouton" href="/contact/">Demander un devis gratuit</a> <a class="bouton bouton-blanc" href="#revetements">Quel revêtement ?</a>` })}
+${heroPlein({ fil, h1, kicker, chapo, photo, position, actions: actions ?? `<a class="bouton" href="/contact/">Demander un devis gratuit</a> <a class="bouton bouton-blanc" href="#revetements">Quel revêtement ?</a>` })}
 
 <section id="revetements" class="bloc">
   <div class="conteneur">
@@ -1181,7 +1181,7 @@ ${heroPlein({ fil: "Types de projets", h1, kicker, chapo, photo, position, actio
     <div class="grille grille-3 atouts-car">${atouts.map(([i, t, x]) => `<div class="carte atout-carte">${ico(i)}<h3>${t}</h3><p>${x}</p></div>`).join("")}</div>
   </div>
 </section>
-
+${extra}
 <section id="galerie" class="bloc">
   <div class="conteneur">
     ${galerie(galerieCat, { titre: titreGalerie, legende: "Illustrations", limite: 12 })}
@@ -1203,7 +1203,7 @@ ${heroPlein({ fil: "Types de projets", h1, kicker, chapo, photo, position, actio
   </div>
 </section>
 ${cta(ctaTitre, ctaTexte)}
-${autresProjets(ici)}`;
+${apres ?? autresProjets(ici)}`;
 };
 const bandeau = (titre, long, court, lien, href, image) => `<div class="structure-bandeau"><a class="carte carte-structure" href="${href}"><div><span class="cs-kicker">Comment c'est posé</span><h3>${titre}</h3><p><span class="cs-long">${long}</span><span class="cs-court">${court}</span><span class="cs-lien">${lien}&nbsp;→</span></p></div><span class="cs-img">${image}</span></a></div>`;
 const IMG_STRUCT_ALU = img("structure-aluminium", "Structure aluminium : plot réglable, rail aluminium et clip sous une lame de terrasse", 404);
@@ -1422,6 +1422,71 @@ const terrassePlots = {
   }),
 };
 
+// ---------- Terrasse de camping / HPA (Professionnels, reprise de l'ancien site, 14/11/2026) ----------
+const PROJETS_HPA = [
+  ["Équiper un nouveau parc", "Une identité visuelle homogène dès l'installation des nouveaux hébergements, avec une terrasse adaptée à chaque modèle."],
+  ["Rénover un parc existant", "Remplacer progressivement les terrasses vieillissantes et moderniser l'apparence des hébergements, en étudiant ce qui peut être conservé."],
+  ["Accompagner une montée en gamme", "Valoriser les mobil-homes, lodges et chalets premium avec des finitions soignées."],
+  ["Les configurations particulières", "Dimensions spécifiques, terrain en pente, hébergements différents : chaque cas est étudié."],
+];
+const terrasseCamping = {
+  title: "Terrasse camping et HPA : mobil-homes, chalets, lodges | Instant Terrasse",
+  description: "Terrasses pour campings et hôtellerie de plein air : lames aluminium sans entretien, bois, composite ou grès cérame pour mobil-homes, chalets et lodges. Basés à Lyon, livraison partout en France.",
+  corps: pageProjet({
+    ici: "/terrasse-camping-hpa/", fil: "Professionnels",
+    h1: ['<span class="pc-nowrap">Terrasses de camping</span>', "et hôtellerie de plein air"], kicker: "Mobil-homes, chalets et lodges",
+    chapo: "Des terrasses durables et homogènes pour équiper, rénover ou faire monter en gamme votre parc d'hébergements.",
+    photo: "alu-pontons-lac", position: "50% 50%",
+    revTitre: "Quel revêtement pour un camping ?", revIntro: "Pour un parc d'hébergements, le matériau se choisit sur plusieurs années : entretien, durabilité et homogénéité comptent autant que l'aspect.",
+    poids: { entretien: 2, durabilite: 2, legerete: 2 },
+    rev: {
+      aluminium: ["alu-terrasse-salon-parasol", "Ne pourrit pas, ne bouge pas, sans traitement : la même terrasse sur tout le parc."],
+      bois: ["terrasse-thermopin-jardin-pins", "L'aspect naturel et chaleureux, pour une ambiance authentique et intégrée au paysage."],
+      composite: ["composite-brun-transats", "L'aspect du bois, un entretien réduit et des teintes régulières d'un emplacement à l'autre."],
+      carrelage: ["carrelage-bh-pergola-cour", "Une esthétique minérale pour les lodges et quartiers premium contemporains."],
+    },
+    pose: bandeau("Sur structure aluminium", "Plots réglables et rails aluminium : la terrasse suit la pente de l'emplacement et s'aligne sur l'entrée de l'hébergement. Rien ne pourrit dessous. Structure garantie 20 ans.", "Rails alu sur plots réglables. Structure garantie 20 ans.", "Voir la structure", "/structure-terrasse-lyon/", IMG_STRUCT_ALU),
+    atoutsTitre: "Pourquoi l'aluminium pour un camping ?",
+    atouts: [
+      ["bouclier", "Ne pourrit pas, ne bouge pas", "L'aluminium est inerte : ni pourriture, ni insectes, ni champignons, et les lames restent stables d'une saison à l'autre."],
+      ["goutte", "Sans traitement", "Pas de saturateur à refaire chaque printemps sur tout le parc : pour un exploitant, l'entretien est réduit au minimum."],
+      ["plan", "Un parc homogène", "Les mêmes lames et la même teinte sur tous les emplacements : une identité visuelle cohérente, hébergement après hébergement."],
+      ["plume", "Léger", "Une structure légère, adaptée aux installations existantes et aux terrasses surélevées."],
+      ["pied", "Antidérapant", "Un revêtement spécial limite les glissades, appréciable au retour de la piscine ou après la pluie."],
+      ["demonte", "100 % recyclable", "Lames et structure en aluminium, recyclables en fin de vie."],
+    ],
+    extra: `
+<section id="projets-hpa" class="bloc">
+  <div class="conteneur">
+    <h2>Équiper, rénover, valoriser votre parc</h2>
+    <p class="chapo">Chaque camping a ses contraintes : nombre d'hébergements, configuration des emplacements, niveau de gamme et calendrier.</p>
+    <div class="grille grille-4">${PROJETS_HPA.map(([t, x]) => `<div class="carte"><h3>${t}</h3><p>${x}</p></div>`).join("")}</div>
+  </div>
+</section>`,
+    galerieCat: ["alu-pontons-lac", "alu-terrasse-salon-parasol", "alu-escalier-maison-bois", "alu-terrasse-couverte", "alu-salon-garde-corps", "alu-piscine-aspect-teck", "composite-brun-passerelle-bassin", "composite-brun-transats", "terrasse-thermopin-jardin-pins", "terrasse-thermopin-estrade", "carrelage-bh-pergola-cour", "structure-plot-rail-lame"],
+    titreGalerie: "Terrasses en situation",
+    lyon: ["Un projet étudié sur place", "Nous venons sur votre site pour regarder ce qui compte : le type d'hébergements (mobil-homes, chalets, lodges, bungalows), la configuration des emplacements (pente, niveaux, accès), le niveau de gamme, la fréquence d'utilisation, l'entretien et l'identité de votre camping.", "Vous recevez un plan 3D et un devis détaillé. Instant Terrasse est basé dans la région lyonnaise ; pour les projets d'hôtellerie de plein air, nous livrons partout en France."],
+    lyonCourt: "Nous étudions votre site sur place, puis vous recevez un plan 3D et un devis détaillé. Basés près de Lyon, nous livrons les campings partout en France.",
+    faqTitre: "Vos questions sur les terrasses de camping",
+    faq: [
+      ["Quelle est la meilleure terrasse pour un camping ?", "Il n'y a pas de matériau universel : tout dépend du niveau de gamme, de l'usage, de l'entretien souhaité et de l'environnement. Pour équiper un parc avec peu d'entretien, l'aluminium est souvent le plus adapté ; le bois apporte une ambiance plus naturelle."],
+      ["Peut-on installer une terrasse aluminium devant un mobil-home ?", "La faisabilité dépend de la hauteur du mobil-home, de son implantation et du terrain : chaque emplacement est étudié sur place."],
+      ["Bois ou aluminium pour un camping ?", "Le bois privilégie l'aspect naturel et chaleureux. L'aluminium se choisit pour sa stabilité, son entretien réduit et son allure contemporaine. Le choix dépend du positionnement de votre camping."],
+      ["Proposez-vous des terrasses pour les quartiers premium ?", "Oui : matériaux, teintes et finitions sont choisis pour accompagner la montée en gamme de vos lodges, chalets ou mobil-homes."],
+      ["Pouvez-vous remplacer des terrasses existantes ?", "Oui. L'état des terrasses et de leur structure est d'abord étudié, pour décider s'il vaut mieux rénover, remplacer certains éléments ou repartir sur une nouvelle terrasse."],
+      ["Intervenez-vous partout en France ?", "Instant Terrasse est basé dans la région lyonnaise. Pour les projets d'hôtellerie de plein air, nous livrons partout en France."],
+    ],
+    ctaTitre: "Un projet de terrasses pour votre camping ?", ctaTexte: "Indiquez-nous le type d'établissement, le nombre d'hébergements concernés, la localisation et votre calendrier : nous vous rappelons pour en parler.",
+    apres: `
+<section class="bloc decouvrir">
+  <div class="conteneur">
+    <h2>Voir aussi</h2>
+    <div class="grille grille-4 decouvrir-grille projets-grille">${[["/terrasse-restaurant-chr-lyon/", "Restaurants, cafés, hôtels", "terrasse-kebony-restaurant", "Des terrasses robustes pour l'accueil du public."], ["/terrasse-aluminium-lyon/", "Terrasse aluminium", "alu-piscine-aspect-teck", "Des lames stables et sans entretien."], ["/garde-corps-aluminium-lyon/", "Garde-corps aluminium", "pilotis-terrain-pente", "Sécuriser les terrasses surélevées."], ["/pergolas-lyon/", "Pergolas", "terrasse-bambou-ndurance-pergola", "De l'ombre sur la terrasse."]].map(([c, t, ph, x]) => `<a class="carte carte-lien carte-photo" href="${c}"><div class="vignette">${imgPhoto(ph, { sizes: "(max-width:700px) 40vw, (max-width:1060px) 23vw, 270px" })}</div><div class="carte-corps"><h3>${t}</h3><p>${x}</p><span class="fleche" aria-hidden="true">→</span></div></a>`).join("")}</div>
+  </div>
+</section>`,
+  }),
+};
+
 // ---------- Galerie (page /realisations/) ----------
 // Photos fournisseurs : présentées comme illustrations, jamais comme chantiers Instant Terrasse.
 const GROUPES_GALERIE = [
@@ -1543,6 +1608,7 @@ const terrasseRestaurant = {
 
 export const CONTENUS = {
   "/terrasse-restaurant-chr-lyon/": terrasseRestaurant,
+  "/terrasse-camping-hpa/": terrasseCamping,
   "/pergolas-lyon/": pergolas,
   "/realisations/": realisations,
   "/nos-terrasses/": nosTerrasses,

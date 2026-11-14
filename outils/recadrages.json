@@ -79,6 +79,10 @@
   "dossier": "terrasses",
   "position": "55% 55%"
  },
+ "alu-pontons-lac": {
+  "dossier": "aluminium",
+  "position": "50% 50%"
+ },
  "terrasse-thermofrene-pool-house": {
   "dossier": "bois",
   "position": "60% 50%"

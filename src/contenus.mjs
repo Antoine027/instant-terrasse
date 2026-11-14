@@ -1430,14 +1430,14 @@ const PROJETS_HPA = [
   ["Les configurations particulières", "Dimensions spécifiques, terrain en pente, hébergements différents : chaque cas est étudié."],
 ];
 const terrasseCamping = {
-  title: "Terrasse camping et HPA : mobil-homes, chalets, lodges | Instant Terrasse",
-  description: "Terrasses pour campings et hôtellerie de plein air : lames aluminium sans entretien, bois, composite ou grès cérame pour mobil-homes, chalets et lodges. Basés à Lyon, livraison partout en France.",
+  title: "Terrasse mobil-home et camping : aluminium, bois, composite | Instant Terrasse",
+  description: "Terrasses de mobil-homes, chalets et lodges pour campings et hôtellerie de plein air : lames aluminium sans entretien, bois, composite ou grès cérame. Basés à Lyon, livraison partout en France.",
   corps: pageProjet({
     ici: "/terrasse-camping-hpa/", fil: "Professionnels",
-    h1: ['<span class="pc-nowrap">Terrasses de camping</span>', "et hôtellerie de plein air"], kicker: "Mobil-homes, chalets et lodges",
+    h1: ['<span class="pc-nowrap">Terrasses de mobil-homes</span>', "pour campings et HPA"], kicker: "Campings, chalets et lodges",
     chapo: "Des terrasses durables et homogènes pour équiper, rénover ou faire monter en gamme votre parc d'hébergements.",
     photo: "alu-escalier-maison-bois", position: "50% 60%",
-    revTitre: "Quel revêtement pour un camping ?", revIntro: "Pour un parc d'hébergements, le matériau se choisit sur plusieurs années : entretien, durabilité et homogénéité comptent autant que l'aspect.",
+    revTitre: "Quel revêtement pour une terrasse de mobil-home ?", revIntro: "Pour un parc d'hébergements, le matériau se choisit sur plusieurs années : entretien, durabilité et homogénéité comptent autant que l'aspect.",
     poids: { entretien: 2, durabilite: 2, legerete: 2 },
     rev: {
       aluminium: ["alu-terrasse-salon-parasol", "Ne pourrit pas, ne bouge pas, sans traitement : la même terrasse sur tout le parc."],

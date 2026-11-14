@@ -1500,11 +1500,17 @@ ${heroPlein({ fil: "Aménagements", h1: ['<span class="pc-nowrap">Carport alumin
 
 <section id="options" class="bloc">
   <div class="conteneur">
-    <h2>Fermer un côté, éclairer</h2>
-    <div class="grille grille-deux">
-      <div class="carte"><h3>Fermetures latérales</h3><p>Pour couper le vent, la pluie battante ou le vis-à-vis, ou pour créer un box de rangement :</p><ul class="puces"><li>Claustra toile ou à lames</li><li>Panneau claire-voie aspect bois</li><li>Panneau plein</li><li>Vitrage coulissant</li><li>Store vertical enroulable</li></ul></div>
-      <div class="carte"><h3>Éclairage LED</h3><p>Un éclairage intégré à la structure, pour rentrer la voiture de nuit :</p><ul class="puces"><li>Blanc chaud ou blanc neutre, selon le modèle</li><li>Détecteur de mouvement</li><li>Interrupteur mural sans fil ou télécommande</li></ul></div>
-    </div>
+    <h2>Fermer un ou plusieurs côtés</h2>
+    <p class="chapo">Pour couper le vent et la pluie battante, cacher le vis-à-vis ou créer un box de rangement. Fermetures dans la teinte de l'ossature, autres teintes RAL en option.</p>
+    <div class="grille grille-3">${[
+      ["Claustra toile", "Fixe ou coulissante. Une toile technique qui bloque jusqu'à 96 % des UV, tout en laissant voir dehors depuis l'intérieur.", "Jusqu'à 7 m de long (6 m en coulissant), 2,6 m de haut"],
+      ["Claustra à lames", "Fixe ou coulissante, avec des lames aluminium inclinées : 85 % ou 100 % d'occultation au choix. Lames effet chêne clair en option.", "Jusqu'à 7 m de long (6 m en coulissant), 2,6 m de haut"],
+      ["Brise-vue grandes lames", "Fixe, en lames aluminium horizontales ou verticales, contre un mur ou entre deux poteaux. Lames effet chêne clair en option.", "Jusqu'à 3 m de haut"],
+      ["Panneau aspect bois", "Des lames effet chêne clair qui ferment complètement le côté. Une porte coulissante peut y être intégrée pour fermer un box.", "Jusqu'à 7 m de long, 3 m de haut"],
+      ["Panneau plein", "Des panneaux sandwich laqués, pour un côté entièrement fermé, dans l'une des six teintes standard.", "Jusqu'à 7 m de long, 3 m de haut"],
+      ["Vitrage ou store vertical", "Un vitrage coulissant coupe le vent en gardant la lumière ; un store vertical enroulable se baisse seulement quand il le faut.", "Selon les dimensions du carport"],
+    ].map(([t, x, d]) => `<div class="carte"><h3>${t}</h3><p>${x}</p><p class="dim-carport">${d}</p></div>`).join("")}</div>
+    <div class="carte carte-led"><h3>Éclairage LED</h3><p>Un éclairage intégré à la structure, en blanc chaud ou blanc neutre selon le modèle, avec détecteur de mouvement, interrupteur mural sans fil ou télécommande.</p></div>
   </div>
 </section>
 
@@ -1529,7 +1535,8 @@ ${heroPlein({ fil: "Aménagements", h1: ['<span class="pc-nowrap">Carport alumin
       ["Quelle charge de neige supporte un carport ?", "Selon la toiture et la largeur : jusqu'à 200 kg/m² pour les plus petites largeurs, moins pour les plus grandes. Nous vérifions la charge de neige de votre commune, selon sa zone et son altitude, avant de dimensionner le carport."],
       ["Comment le carport est-il fixé au sol ?", "Les poteaux sont ancrés dans un support en béton. Le sol est vérifié lors du rendez-vous, avec la tenue au vent selon l'emplacement."],
       ["Où va l'eau de pluie ?", "La toiture est légèrement inclinée vers une gouttière intégrée sur tout le pourtour ; l'eau descend dans les poteaux et s'évacue à leur pied."],
-      ["Peut-on fermer les côtés ?", "Oui : claustras, panneaux, vitrage coulissant ou store vertical, sur un ou plusieurs côtés. Avec des panneaux pleins, une partie du carport peut devenir un box de rangement."],
+      ["Peut-on fermer les côtés ?", "Oui : claustra toile ou à lames, brise-vue, panneaux aspect bois ou pleins, vitrage coulissant ou store vertical, sur un ou plusieurs côtés."],
+      ["Peut-on créer un box de rangement ?", "Oui : en fermant une partie du carport avec des panneaux aspect bois ou pleins. Une porte coulissante peut être intégrée aux panneaux aspect bois, pour ranger vélos, outils ou tondeuse à côté de la voiture."],
       ["Quelle différence avec une pergola à toit fixe ?", "C'est la même famille de produit : le carport est dimensionné pour abriter une voiture, la pergola à toit fixe pour couvrir une terrasse."],
     ].map(([q, r]) => `<details class="faq"><summary>${q}</summary><div><p>${r}</p></div></details>`).join("\n    ")}
   </div>

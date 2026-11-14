@@ -2064,3 +2064,5 @@ li.mm-sep{border-top:2px solid rgba(47,52,55,.22);margin-top:10px;padding-top:10
 @media (max-width:760px){.grille-deux{grid-template-columns:1fr}}
 main #options .puces,main #toitures .puces,main #autorisation .puces{text-align:left}
 .note-carport{font-size:.85rem;color:#6b6f72;margin-top:14px}
+.dim-carport{font-size:.85rem;font-weight:700;color:var(--accent-fonce,#9a6a1f);margin-top:auto}
+.carte-led{margin-top:22px}

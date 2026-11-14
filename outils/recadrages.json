@@ -51,10 +51,6 @@
   "dossier": "stores",
   "position": "45% 40%"
  },
- "carport-garage-gravier": {
-  "dossier": "pergolas",
-  "position": "55% 45%"
- },
  "terrasse-accoya-naturel-piscine-vue-haut": {
   "dossier": "bois",
   "position": "60% 50%"
@@ -82,6 +78,10 @@
  "alu-escalier-maison-bois": {
   "dossier": "aluminium",
   "position": "50% 60%"
+ },
+ "carport-garage-gravier": {
+  "dossier": "pergolas",
+  "position": "55% 45%"
  },
  "terrasse-thermofrene-pool-house": {
   "dossier": "bois",

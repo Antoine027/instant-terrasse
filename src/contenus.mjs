@@ -898,33 +898,6 @@ const storeBanne = {
 };
 
 // ---------- Carport ----------
-const carport = {
-  title: "Carport aluminium Lyon : abri voiture sur mesure | Instant Terrasse",
-  description: "Carport aluminium sur mesure à Lyon : abri voiture à toit plat, adossé ou autoporté, sans entretien et dans la teinte de vos menuiseries. Devis gratuit.",
-  corps: pageProduit({
-    fil: "Aménagements",
-    h1: ["Carport aluminium", "sur mesure"], kicker: "Abris voiture à Lyon et dans sa région",
-    chapo: "Un carport aluminium à toit plat, aux lignes soignées : votre voiture à l'abri de la pluie, de la grêle et du soleil.",
-    photo: "carport-garage-gravier", position: "55% 45%",
-    atouts: [
-      ["Protection toute l'année", "Pluie, grêle, neige, soleil : la voiture reste à l'abri, et vous montez à pied sec."],
-      ["Lignes épurées", "Un toit plat et des profils fins, dans l'esprit des pergolas contemporaines."],
-      ["Adossé ou autoporté", "Fixé contre la façade ou le garage, ou indépendant sur l'allée."],
-      ["Aluminium sans entretien", "Ni rouille, ni peinture à refaire, dans la teinte de vos menuiseries."],
-      ["Sur mesure", "Pour une ou deux voitures, un camping-car ou un abri de jardin, selon la place disponible."],
-      ["Moins de travaux qu'un garage", "Pas de maçonnerie lourde : une structure légère posée sur des fixations adaptées au sol."],
-    ],
-    galerieCat: "carport",
-    titreGalerie: "Carports en situation",
-    details: `<h2>Avant de se lancer</h2>
-      <p>Un carport est une construction : selon sa surface et votre commune, une déclaration préalable de travaux peut être nécessaire. Nous vous indiquons la démarche lors de la visite.</p>
-      <p>Le même système existe en <a href="/pergola-toit-fixe-lyon/">pergola à toit fixe</a> pour couvrir une terrasse.</p>`,
-    complement: "Nous venons voir l'emplacement, l'accès et le sol, et le plan 3D de votre projet est offert.",
-    voisins: autresPergolas("/carport-lyon/").slice(0, 3),
-    ctaTitre: "Un projet de carport ?",
-  }),
-};
-
 // ---------- Terrasse sur pilotis ----------
 
 // ---------- Comparatif des matériaux ----------
@@ -1485,6 +1458,91 @@ const terrasseCamping = {
   </div>
 </section>`,
   }),
+};
+
+// ---------- Carport (refonte 14/11/2026, fiches produit fournisseur fournies par Antoine) ----------
+const TOITURES_CARPORT = [
+  ["Panneaux sandwich", "Une toiture pleine et opaque : aluminium thermolaqué de part et d'autre d'un cœur en polystyrène extrudé, avec une sous-face lisse.", ["Jusqu'à 7 × 5 m (35 m²)", "Jusqu'à 3 m de hauteur", "Jusqu'à 200 kg/m² de neige*"]],
+  ["Bac acier", "Une tôle d'acier nervurée de 0,8 mm, avec un régulateur de condensation sous la tôle.", ["Jusqu'à 7 × 5 m (35 m²)", "Jusqu'à 3 m de hauteur", "Jusqu'à 200 kg/m² de neige*"]],
+  ["Toile fixe", "Une toile technique opaque et imperméable, tendue sur l'ossature : un aspect plus léger.", ["Jusqu'à 6 × 4 m (24 m²)", "Jusqu'à 2,6 m de hauteur", "Jusqu'à 130 kg/m² de neige*"]],
+];
+const carport = {
+  title: "Carport aluminium Lyon : abri voiture adossé ou autoporté | Instant Terrasse",
+  description: "Carport aluminium sur mesure à Lyon : toiture panneaux sandwich, bac acier ou toile, adossé ou autoporté, jusqu'à 35 m², gouttière intégrée, éclairage et côtés fermés en option. Devis gratuit.",
+  corps: `
+${heroPlein({ fil: "Aménagements", h1: ['<span class="pc-nowrap">Carport aluminium</span>', 'sur mesure <span class="lyon-l">à Lyon</span>'], kicker: "Abri voiture adossé ou autoporté",
+  chapo: "Une ossature aluminium sur mesure et la toiture de votre choix : votre voiture à l'abri de la pluie, de la grêle et du soleil, sans construire de garage.",
+  photo: "carport-garage-gravier", position: "55% 45%",
+  actions: `<a class="bouton" href="/contact/">Demander un devis gratuit</a> <a class="bouton bouton-blanc" href="#toitures">Les toitures</a>` })}
+
+<section id="toitures" class="bloc">
+  <div class="conteneur">
+    <h2>Trois toitures au choix</h2>
+    <p class="chapo">La même ossature en aluminium thermolaqué, trois façons de la couvrir.</p>
+    <div class="grille grille-3">${TOITURES_CARPORT.map(([t, x, pts]) => `<div class="carte"><h3>${t}</h3><p>${x}</p><ul class="puces">${pts.map((q) => `<li>${q}</li>`).join("")}</ul></div>`).join("")}</div>
+    <p class="note-carport">*Charge de neige maximale pour les plus petites largeurs ; elle diminue quand la largeur augmente. Données fabricant.</p>
+  </div>
+</section>
+
+<section id="atouts" class="bloc bloc-alt">
+  <div class="conteneur">
+    <h2>Pensé pour votre allée</h2>
+    <div class="grille grille-3 atouts-car">${[
+      ["maison", "Adossé ou autoporté", "Fixé contre la maison sur deux poteaux, ou indépendant sur quatre : en îlot, dans un angle ou entre deux murs."],
+      ["niveau", "Hauteurs sur mesure", "La hauteur de chaque poteau se règle, pour suivre la pente de l'allée ou passer sous un débord de toit."],
+      ["goutte", "L'eau part par les poteaux", "Une gouttière intégrée court tout autour de la toiture et l'eau s'évacue au pied des poteaux."],
+      ["plan", "Dimensions sur mesure", "Une ou deux voitures, un camping-car : le carport est dessiné pour votre emplacement, avec un débord de toiture possible jusqu'à 1,2 m."],
+      ["bouclier", "Aluminium thermolaqué", "Ni rouille, ni peinture à refaire : six teintes au choix, et toute autre teinte RAL en option."],
+      ["couches", "Fabriqué en France", "Conçu et fabriqué en France, sur mesure, à partir de vos dimensions."],
+    ].map(([i, t, x]) => `<div class="carte atout-carte">${ico(i)}<h3>${t}</h3><p>${x}</p></div>`).join("")}</div>
+  </div>
+</section>
+
+<section id="options" class="bloc">
+  <div class="conteneur">
+    <h2>Fermer un côté, éclairer</h2>
+    <div class="grille grille-deux">
+      <div class="carte"><h3>Fermetures latérales</h3><p>Pour couper le vent, la pluie battante ou le vis-à-vis, ou pour créer un box de rangement :</p><ul class="puces"><li>Claustra toile ou à lames</li><li>Panneau claire-voie aspect bois</li><li>Panneau plein</li><li>Vitrage coulissant</li><li>Store vertical enroulable</li></ul></div>
+      <div class="carte"><h3>Éclairage LED</h3><p>Un éclairage intégré à la structure, pour rentrer la voiture de nuit :</p><ul class="puces"><li>Blanc chaud ou blanc neutre, selon le modèle</li><li>Détecteur de mouvement</li><li>Interrupteur mural sans fil ou télécommande</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<section id="galerie" class="bloc bloc-alt">
+  <div class="conteneur">
+    ${galerie("carport", { titre: "Carports en situation", legende: "Illustrations" })}
+  </div>
+</section>
+
+<section id="faq-carport" class="bloc">
+  <div class="conteneur lyon-faq">
+  <div id="autorisation" class="lyon-texte">
+    <h2>Faut-il une autorisation ?</h2>
+    <p>Un carport crée de l'emprise au sol. Dans le cas général :</p>
+    <ul class="puces"><li>jusqu'à 5 m² : pas de formalité, s'il n'est pas accolé à la maison ;</li><li>de 5 à 20 m² : déclaration préalable ;</li><li>au-delà de 20 m² : permis de construire.</li></ul>
+    <p>En zone urbaine d'une commune couverte par un PLU, si celui-ci considère le carport comme une extension de la maison, la déclaration préalable suffit jusqu'à 40 m². Le PLU peut aussi imposer des règles d'aspect et de distance aux limites : renseignez-vous auprès du service urbanisme de votre mairie (source : <a href="https://www.service-public.gouv.fr/particuliers/vosdroits/F36773" rel="noopener">service-public.gouv.fr</a>).</p>
+    <p>Nous venons chez vous, à Lyon et dans sa région (${COMMUNES}), pour voir l'emplacement, l'accès, le sol et les hauteurs. Nous vous indiquons la démarche, et le plan 3D de votre carport est offert.</p>
+  </div>
+  <div class="faq-liste">
+    <h2>Vos questions sur le carport</h2>
+    ${[
+      ["Quelle charge de neige supporte un carport ?", "Selon la toiture et la largeur : jusqu'à 200 kg/m² pour les plus petites largeurs, moins pour les plus grandes. Nous vérifions la charge de neige de votre commune, selon sa zone et son altitude, avant de dimensionner le carport."],
+      ["Comment le carport est-il fixé au sol ?", "Les poteaux sont ancrés dans un support en béton. Le sol est vérifié lors du rendez-vous, avec la tenue au vent selon l'emplacement."],
+      ["Où va l'eau de pluie ?", "La toiture est légèrement inclinée vers une gouttière intégrée sur tout le pourtour ; l'eau descend dans les poteaux et s'évacue à leur pied."],
+      ["Peut-on fermer les côtés ?", "Oui : claustras, panneaux, vitrage coulissant ou store vertical, sur un ou plusieurs côtés. Avec des panneaux pleins, une partie du carport peut devenir un box de rangement."],
+      ["Quelle différence avec une pergola à toit fixe ?", "C'est la même famille de produit : le carport est dimensionné pour abriter une voiture, la pergola à toit fixe pour couvrir une terrasse."],
+    ].map(([q, r]) => `<details class="faq"><summary>${q}</summary><div><p>${r}</p></div></details>`).join("\n    ")}
+  </div>
+  </div>
+</section>
+
+<section class="bloc bloc-alt">
+  <div class="conteneur">
+    <h2>Les autres solutions</h2>
+    <div class="grille grille-3">${autresPergolas("/carport-lyon/").slice(0, 3).map(([c, t, x]) => carteProduit(c, t, x)).join("")}</div>
+  </div>
+</section>
+${cta("Un projet de carport ?", "Laissez votre numéro : nous vous rappelons pour en parler et organiser le rendez-vous, gratuit et sans engagement.")}`,
 };
 
 // ---------- Galerie (page /realisations/) ----------

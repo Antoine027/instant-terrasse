@@ -1436,7 +1436,7 @@ const terrasseCamping = {
     ici: "/terrasse-camping-hpa/", fil: "Professionnels",
     h1: ['<span class="pc-nowrap">Terrasses de camping</span>', "et hôtellerie de plein air"], kicker: "Mobil-homes, chalets et lodges",
     chapo: "Des terrasses durables et homogènes pour équiper, rénover ou faire monter en gamme votre parc d'hébergements.",
-    photo: "alu-pontons-lac", position: "50% 50%",
+    photo: "alu-escalier-maison-bois", position: "50% 60%",
     revTitre: "Quel revêtement pour un camping ?", revIntro: "Pour un parc d'hébergements, le matériau se choisit sur plusieurs années : entretien, durabilité et homogénéité comptent autant que l'aspect.",
     poids: { entretien: 2, durabilite: 2, legerete: 2 },
     rev: {
@@ -1463,7 +1463,7 @@ const terrasseCamping = {
     <div class="grille grille-4">${PROJETS_HPA.map(([t, x]) => `<div class="carte"><h3>${t}</h3><p>${x}</p></div>`).join("")}</div>
   </div>
 </section>`,
-    galerieCat: ["alu-pontons-lac", "alu-terrasse-salon-parasol", "alu-escalier-maison-bois", "alu-terrasse-couverte", "alu-salon-garde-corps", "alu-piscine-aspect-teck", "composite-brun-passerelle-bassin", "composite-brun-transats", "terrasse-thermopin-jardin-pins", "terrasse-thermopin-estrade", "carrelage-bh-pergola-cour", "structure-plot-rail-lame"],
+    galerieCat: ["alu-escalier-maison-bois", "alu-terrasse-salon-parasol", "terrasse-kebony-surelevee", "alu-terrasse-couverte", "alu-salon-garde-corps", "alu-piscine-aspect-teck", "alu-spa-jardin", "composite-brun-transats", "terrasse-thermopin-jardin-pins", "terrasse-thermopin-estrade", "carrelage-bh-pergola-cour", "structure-plot-rail-lame"],
     titreGalerie: "Terrasses en situation",
     lyon: ["Un projet étudié sur place", "Nous venons sur votre site pour regarder ce qui compte : le type d'hébergements (mobil-homes, chalets, lodges, bungalows), la configuration des emplacements (pente, niveaux, accès), le niveau de gamme, la fréquence d'utilisation, l'entretien et l'identité de votre camping.", "Vous recevez un plan 3D et un devis détaillé. Instant Terrasse est basé dans la région lyonnaise ; pour les projets d'hôtellerie de plein air, nous livrons partout en France."],
     lyonCourt: "Nous étudions votre site sur place, puis vous recevez un plan 3D et un devis détaillé. Basés près de Lyon, nous livrons les campings partout en France.",
@@ -1481,7 +1481,7 @@ const terrasseCamping = {
 <section class="bloc decouvrir">
   <div class="conteneur">
     <h2>Voir aussi</h2>
-    <div class="grille grille-4 decouvrir-grille projets-grille">${[["/terrasse-restaurant-chr-lyon/", "Restaurants, cafés, hôtels", "terrasse-kebony-restaurant", "Des terrasses robustes pour l'accueil du public."], ["/terrasse-aluminium-lyon/", "Terrasse aluminium", "alu-piscine-aspect-teck", "Des lames stables et sans entretien."], ["/garde-corps-aluminium-lyon/", "Garde-corps aluminium", "pilotis-terrain-pente", "Sécuriser les terrasses surélevées."], ["/pergolas-lyon/", "Pergolas", "terrasse-bambou-ndurance-pergola", "De l'ombre sur la terrasse."]].map(([c, t, ph, x]) => `<a class="carte carte-lien carte-photo" href="${c}"><div class="vignette">${imgPhoto(ph, { sizes: "(max-width:700px) 40vw, (max-width:1060px) 23vw, 270px" })}</div><div class="carte-corps"><h3>${t}</h3><p>${x}</p><span class="fleche" aria-hidden="true">→</span></div></a>`).join("")}</div>
+    <div class="grille grille-4 decouvrir-grille projets-grille">${[["/terrasse-restaurant-chr-lyon/", "Restaurants, cafés, hôtels", "terrasse-kebony-jardin", "Des terrasses robustes pour l'accueil du public."], ["/terrasse-aluminium-lyon/", "Terrasse aluminium", "alu-piscine-aspect-teck", "Des lames stables et sans entretien."], ["/garde-corps-aluminium-lyon/", "Garde-corps aluminium", "pilotis-terrain-pente", "Sécuriser les terrasses surélevées."], ["/pergolas-lyon/", "Pergolas", "terrasse-bambou-ndurance-pergola", "De l'ombre sur la terrasse."]].map(([c, t, ph, x]) => `<a class="carte carte-lien carte-photo" href="${c}"><div class="vignette">${imgPhoto(ph, { sizes: "(max-width:700px) 40vw, (max-width:1060px) 23vw, 270px" })}</div><div class="carte-corps"><h3>${t}</h3><p>${x}</p><span class="fleche" aria-hidden="true">→</span></div></a>`).join("")}</div>
   </div>
 </section>`,
   }),

@@ -15,10 +15,6 @@
   "dossier": "bardage",
   "position": "70% 45%"
  },
- "pergola-toit-fixe-piscine": {
-  "dossier": "pergolas",
-  "position": "65% 50%"
- },
  "gc-maison-lisses-noires": {
   "dossier": "garde-corps",
   "position": "60% 45%"
@@ -80,6 +76,10 @@
   "position": "60% 50%"
  },
  "pergola-toile-retractable-facade": {
+  "dossier": "pergolas",
+  "position": "65% 50%"
+ },
+ "pergola-toit-fixe-piscine": {
   "dossier": "pergolas",
   "position": "65% 50%"
  },

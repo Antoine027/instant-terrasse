@@ -451,31 +451,6 @@ const PERGOLAS = [
 ];
 const autresPergolas = (moi) => PERGOLAS.filter(([c]) => c !== moi);
 
-const pergolaToitFixe = {
-  title: "Pergola à toit fixe aluminium Lyon | Instant Terrasse",
-  description: "Pergola aluminium à toit fixe sur mesure à Lyon : un abri permanent contre la pluie et le soleil, adossé ou autoporté. Devis gratuit.",
-  corps: pageProduit({
-    fil: "Aménagements",
-    h1: ["Pergola", "à toit fixe"], kicker: "Pergolas aluminium sur mesure à Lyon et dans sa région",
-    chapo: "Une structure aluminium épurée et une toiture pleine : un abri permanent, contre la pluie comme contre le soleil.",
-    photo: "pergola-toit-fixe-piscine",
-    atouts: [
-      ["Abri permanent", "Une toiture pleine qui protège la terrasse en toute saison."],
-      ["Lignes épurées", "Un profil plat et contemporain, sans pièce mobile apparente."],
-      ["Simplicité", "Pas de mécanisme : une solution robuste et sans réglage."],
-      ["Adossée ou autoportée", "Contre la façade ou indépendante dans le jardin."],
-      ["Fermetures latérales", "Stores verticaux en option pour fermer les côtés."],
-      ["Aussi en carport", "La même structure peut abriter un véhicule : voir notre <a href=\"/carport-lyon/\">carport</a>."],
-    ],
-    galerieCat: "pergola-toit-fixe",
-    titreGalerie: "Pergolas à toit fixe en situation",
-    details: `<h2>Pour qui ?</h2>
-      <p>Le toit fixe convient si vous voulez avant tout un espace abrité, utilisable même par temps de pluie, sans vous soucier d'ouvrir ou de fermer quoi que ce soit.</p>
-      <p>Si vous voulez aussi pouvoir faire entrer le soleil, regardez la <a href="/pergola-bioclimatique-lyon/">pergola bioclimatique</a> et ses lames orientables.</p>`,
-    voisins: autresPergolas("/pergola-toit-fixe-lyon/"),
-    ctaTitre: "Un projet de pergola à toit fixe ?",
-  }),
-};
 
 // ---------- Garde-corps aluminium ----------
 const gardeCorps = {
@@ -1509,7 +1484,7 @@ const FERMETURES_PERGOLA = [
   ["Claustra à lames", "Fixe ou coulissante, avec 85 % ou 100 % d'occultation au choix, pour un espace semi-fermé.", "Jusqu'à 2,6 m de haut"],
   ["Brise-vue grandes lames", "Fixe, en lames aluminium horizontales ou verticales, effet chêne clair en option.", "Jusqu'à 3 m de haut"],
 ];
-const pagePergolaRiche = ({ h1, kicker, chapo, photo, position, ancre, titreModeles, introModeles, modeles, noteModeles, atoutsTitre, atouts, confort, galerieCat, titreGalerie, gauche, faqTitre, faq, ici, ctaTitre }) => `
+const pagePergolaRiche = ({ titreConfort = "Confort et automatismes", h1, kicker, chapo, photo, position, ancre, titreModeles, introModeles, modeles, noteModeles, atoutsTitre, atouts, confort, galerieCat, titreGalerie, gauche, faqTitre, faq, ici, ctaTitre }) => `
 ${heroPlein({ fil: "Aménagements", h1, kicker, chapo, photo, position,
   actions: `<a class="bouton" href="/contact/">Demander un devis gratuit</a> <a class="bouton bouton-blanc" href="#modeles">${ancre}</a>` })}
 
@@ -1534,7 +1509,7 @@ ${heroPlein({ fil: "Aménagements", h1, kicker, chapo, photo, position,
     <h2>Fermer les côtés</h2>
     <p class="chapo">Pour profiter de la terrasse au printemps et à l'automne, se protéger du vent ou des regards. Fermetures dans la teinte de la structure.</p>
     <div class="grille grille-3">${FERMETURES_PERGOLA.map(([t, x, d]) => `<div class="carte"><h3>${t}</h3><p>${x}</p><p class="dim-carport">${d}</p></div>`).join("")}</div>
-    <h2 class="titre-confort">Confort et automatismes</h2>
+    <h2 class="titre-confort">${titreConfort}</h2>
     <div class="grille grille-3">${confort.map(([t, x]) => `<div class="carte"><h3>${t}</h3><p>${x}</p></div>`).join("")}</div>
   </div>
 </section>
@@ -1655,6 +1630,96 @@ const pergolaToileRetractable = {
       ["Peut-on fermer les côtés ?", "Oui : stores zippés, vitrage coulissant, claustras toile ou à lames, sur un ou plusieurs côtés."],
     ],
     ctaTitre: "Un projet de pergola à toile ?",
+  }),
+};
+
+// Pergolas à toit fixe et à toile tendue = mêmes caractéristiques que les carports correspondants (Antoine, 15/11/2026)
+const CONFORT_FIXE = [
+  ["Éclairage LED", "Intégré à la structure, en blanc chaud ou blanc neutre selon le modèle, avec détecteur de mouvement, interrupteur sans fil ou télécommande."],
+  ["Gouttière intégrée", "Une gouttière court tout autour de la toiture ; l'eau descend dans les poteaux et s'évacue à leur pied."],
+  ["Hauteurs sur mesure", "La hauteur de chaque poteau se règle, pour suivre la pente de la terrasse ou passer sous un débord de toit."],
+];
+const pergolaToitFixe = {
+  title: "Pergola toit fixe aluminium Lyon : abri permanent sur mesure | Instant Terrasse",
+  description: "Pergola aluminium à toit fixe sur mesure à Lyon : toiture panneaux sandwich ou bac acier, jusqu'à 35 m², neige jusqu'à 200 kg/m², adossée ou autoportée, côtés fermés et LED en option.",
+  corps: pagePergolaRiche({
+    ici: "/pergola-toit-fixe-lyon/",
+    h1: ['<span class="pc-nowrap">Pergola à toit fixe</span>', 'sur mesure <span class="lyon-l">à Lyon</span>'], kicker: "Un abri permanent pour la terrasse",
+    chapo: "Une structure aluminium et une toiture pleine : la terrasse reste utilisable sous la pluie comme en plein soleil, sans rien à ouvrir ni à fermer.",
+    photo: "pergola-toit-fixe-piscine", ancre: "Les toitures",
+    titreModeles: "Deux toitures pleines",
+    introModeles: "La même ossature en aluminium thermolaqué que nos carports, pensée ici pour couvrir une terrasse.",
+    modeles: [
+      ["Panneaux sandwich", "Une toiture pleine et opaque : aluminium thermolaqué de part et d'autre d'un cœur en polystyrène extrudé, avec une sous-face lisse.", ["Jusqu'à 7 × 5 m (35 m²)", "Jusqu'à 3 m de hauteur", "Jusqu'à 200 kg/m² de neige*"]],
+      ["Bac acier", "Une tôle d'acier nervurée de 0,8 mm, avec un régulateur de condensation sous la tôle.", ["Jusqu'à 7 × 5 m (35 m²)", "Jusqu'à 3 m de hauteur", "Jusqu'à 200 kg/m² de neige*"]],
+      ["Et en toile ?", "Pour un aspect plus léger, la pergola à toile tendue reprend la même structure avec une toile opaque et imperméable.", ["Jusqu'à 6 × 4 m (24 m²)", "Jusqu'à 2,6 m de hauteur", "Jusqu'à 130 kg/m² de neige*"]],
+    ],
+    noteModeles: "*Charge de neige maximale pour les plus petites largeurs ; elle diminue quand la largeur augmente. Données fabricant.",
+    atoutsTitre: "Un abri sans entretien",
+    atouts: [
+      ["goutte", "Abri permanent", "Une toiture pleine contre la pluie, la grêle et le soleil, en toute saison."],
+      ["niveau", "Aucune pièce mobile", "Pas de moteur ni de mécanisme : rien à régler, rien à surveiller."],
+      ["maison", "Adossée ou autoportée", "Fixée contre la façade sur deux poteaux, ou indépendante sur quatre, avec un débord de toiture possible jusqu'à 1,2 m."],
+      ["plan", "Dimensions sur mesure", "Dessinée pour votre terrasse : coin repas, salon, cuisine d'été."],
+      ["bouclier", "Aluminium thermolaqué", "Ni rouille, ni peinture à refaire : six teintes au choix, et toute autre teinte RAL en option."],
+      ["couches", "Fabriquée en France", "Conçue et fabriquée en France, sur mesure."],
+    ],
+    confort: CONFORT_FIXE, titreConfort: "Confort",
+    galerieCat: "pergola-toit-fixe", titreGalerie: "Pergolas à toit fixe en situation",
+    gauche: `<h2>Pour qui ?</h2>
+    <p>Le toit fixe convient si vous voulez avant tout un espace abrité, utilisable même sous la pluie, sans vous soucier d'ouvrir ou de fermer quoi que ce soit. Si vous voulez aussi faire entrer le soleil, regardez la <a href="/pergola-bioclimatique-lyon/">pergola bioclimatique</a>.</p>
+    <p>La même structure abrite aussi une voiture : c'est notre <a href="/carport-lyon/">carport</a>. Une pergola peut nécessiter une déclaration préalable selon sa surface et votre commune : nous vous indiquons la démarche lors du rendez-vous.</p>`,
+    faqTitre: "Vos questions sur la pergola à toit fixe",
+    faq: [
+      ["Quelle charge de neige supporte-t-elle ?", "Jusqu'à 200 kg/m² pour les plus petites largeurs, moins pour les plus grandes. Nous vérifions la charge de neige de votre commune, selon sa zone et son altitude, avant de dimensionner."],
+      ["Où va l'eau de pluie ?", "La toiture est légèrement inclinée vers une gouttière intégrée sur tout le pourtour ; l'eau descend dans les poteaux et s'évacue à leur pied."],
+      ["Panneaux sandwich ou bac acier ?", "Les deux portent les mêmes charges. Les panneaux offrent une sous-face lisse en aluminium ; le bac acier, une tôle nervurée avec régulateur de condensation."],
+      ["Peut-on fermer les côtés ?", "Oui : store zippé, vitrage coulissant, claustras toile ou à lames, sur un ou plusieurs côtés."],
+      ["Quelle différence avec un carport ?", "Aucune sur la structure : c'est l'usage qui change. Le carport est dimensionné pour une voiture, la pergola pour votre terrasse."],
+    ],
+    ctaTitre: "Un projet de pergola à toit fixe ?",
+  }),
+};
+
+// Prête, mais pas encore publiée : aucune photo de pergola à toile tendue (à ajouter dans CONTENUS quand Antoine en fournit)
+const pergolaToileTendue = {
+  title: "Pergola toile tendue aluminium Lyon : sur mesure | Instant Terrasse",
+  description: "Pergola aluminium à toile tendue sur mesure à Lyon : toile opaque et imperméable, jusqu'à 24 m², adossée ou autoportée, côtés fermés et LED en option.",
+  corps: (photo) => pagePergolaRiche({
+    ici: "/pergola-toile-tendue-lyon/",
+    h1: ['<span class="pc-nowrap">Pergola à toile tendue</span>', 'sur mesure <span class="lyon-l">à Lyon</span>'], kicker: "Une toiture légère et imperméable",
+    chapo: "Une toile technique tendue sur une structure aluminium : l'ombre et l'abri d'un toit, avec un aspect plus léger.",
+    photo, ancre: "Les caractéristiques",
+    titreModeles: "Une toile tendue sur mesure",
+    introModeles: "La même structure que notre carport à toile, pensée ici pour couvrir une terrasse.",
+    modeles: [
+      ["La toile", "Une toile technique opaque et imperméable, tendue sur l'ossature.", ["Opaque", "Imperméable", "Plusieurs coloris"]],
+      ["Les dimensions", "Dessinée pour votre terrasse, adossée ou autoportée.", ["Jusqu'à 6 × 4 m (24 m²)", "Jusqu'à 2,6 m de hauteur", "Jusqu'à 130 kg/m² de neige*"]],
+      ["Et en toit plein ?", 'Pour plus de surface et de charge de neige, la <a href="/pergola-toit-fixe-lyon/">pergola à toit fixe</a> passe en panneaux sandwich ou en bac acier.', ["Jusqu'à 7 × 5 m (35 m²)", "Jusqu'à 3 m de hauteur", "Jusqu'à 200 kg/m² de neige*"]],
+    ],
+    noteModeles: "*Charge de neige maximale pour les plus petites largeurs ; elle diminue quand la largeur augmente. Données fabricant.",
+    atoutsTitre: "Pourquoi une toile tendue",
+    atouts: [
+      ["soleil", "Ombre franche", "Une toile opaque : le soleil reste au-dessus de la terrasse."],
+      ["goutte", "Abri contre la pluie", "Toile imperméable et gouttière intégrée : l'eau s'évacue au pied des poteaux."],
+      ["niveau", "Aucune pièce mobile", "Pas de moteur ni de mécanisme : rien à régler, rien à surveiller."],
+      ["maison", "Adossée ou autoportée", "Contre la façade sur deux poteaux, ou indépendante sur quatre."],
+      ["bouclier", "Aluminium thermolaqué", "Six teintes de structure, et toute autre teinte RAL en option."],
+      ["couches", "Fabriquée en France", "Conçue et fabriquée en France, sur mesure."],
+    ],
+    confort: CONFORT_FIXE, titreConfort: "Confort",
+    galerieCat: "pergola-toile-tendue", titreGalerie: "Pergolas à toile tendue en situation",
+    gauche: `<h2>Toile tendue ou rétractable ?</h2>
+    <p>La toile tendue reste en place toute l'année, sans mécanisme. La <a href="/pergola-toile-retractable-lyon/">toile rétractable</a> se replie quand vous voulez retrouver le ciel.</p>
+    <p>Une pergola peut nécessiter une déclaration préalable selon sa surface et votre commune : nous vous indiquons la démarche lors du rendez-vous.</p>`,
+    faqTitre: "Vos questions sur la pergola à toile tendue",
+    faq: [
+      ["La toile protège-t-elle de la pluie ?", "Oui : elle est imperméable, et l'eau rejoint la gouttière intégrée puis les poteaux."],
+      ["Quelle charge de neige supporte-t-elle ?", "Jusqu'à 130 kg/m² pour les plus petites largeurs, moins pour les plus grandes. Nous vérifions la charge de neige de votre commune avant de dimensionner."],
+      ["Peut-on fermer les côtés ?", "Oui : store zippé, vitrage coulissant, claustras toile ou à lames."],
+      ["Quelle différence avec un carport à toile ?", "Aucune sur la structure : c'est l'usage qui change."],
+    ],
+    ctaTitre: "Un projet de pergola à toile tendue ?",
   }),
 };
 

@@ -15,14 +15,6 @@
   "dossier": "bardage",
   "position": "70% 45%"
  },
- "pergola-bioclimatique-salon-piscine": {
-  "dossier": "pergolas",
-  "position": "60% 50%"
- },
- "pergola-toile-retractable-facade": {
-  "dossier": "pergolas",
-  "position": "65% 50%"
- },
  "pergola-toit-fixe-piscine": {
   "dossier": "pergolas",
   "position": "65% 50%"
@@ -82,6 +74,14 @@
  "carport-garage-gravier": {
   "dossier": "pergolas",
   "position": "55% 45%"
+ },
+ "pergola-bioclimatique-salon-piscine": {
+  "dossier": "pergolas",
+  "position": "60% 50%"
+ },
+ "pergola-toile-retractable-facade": {
+  "dossier": "pergolas",
+  "position": "65% 50%"
  },
  "terrasse-thermofrene-pool-house": {
   "dossier": "bois",

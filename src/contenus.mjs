@@ -451,58 +451,6 @@ const PERGOLAS = [
 ];
 const autresPergolas = (moi) => PERGOLAS.filter(([c]) => c !== moi);
 
-const pergolaBioclimatique = {
-  title: "Pergola bioclimatique Lyon : lames orientables | Instant Terrasse",
-  description: "Pergola bioclimatique aluminium sur mesure à Lyon : lames orientables motorisées, adossée ou autoportée, stores latéraux et éclairage en option. Devis gratuit.",
-  corps: pageProduit({
-    fil: "Aménagements",
-    h1: ["Pergola bioclimatique", "sur mesure"], kicker: "Pergolas aluminium sur mesure à Lyon et dans sa région",
-    chapo: "Des lames orientables sur une structure aluminium : ouvertes pour le soleil, inclinées pour l'ombre, fermées contre la pluie.",
-    photo: "pergola-bioclimatique-salon-piscine",
-    atouts: [
-      ["Lames orientables", "Vous réglez la lumière et la ventilation selon l'heure et la saison, d'un geste sur la télécommande."],
-      ["Abri contre la pluie", "Lames fermées, la toiture devient étanche et l'eau est évacuée par les poteaux."],
-      ["Adossée ou autoportée", "Fixée contre la façade ou indépendante au milieu du jardin, au bord de la piscine."],
-      ["Fermetures latérales", "Stores verticaux intégrés pour se protéger du vent, du soleil rasant ou des regards."],
-      ["Aluminium sans entretien", "Une structure qui ne rouille pas et ne se repeint pas, dans le coloris de votre choix."],
-      ["Options de confort", "Éclairage intégré, capteurs pluie et vent, pilotage connecté : à définir lors du devis."],
-    ],
-    galerieCat: "pergola-bioclimatique",
-    titreGalerie: "Pergolas bioclimatiques en situation",
-    details: `<h2>Bien choisir sa pergola bioclimatique</h2>
-      <p>Les dimensions, l'orientation de la terrasse et l'usage décident de tout : coin repas, salon, cuisine d'été ou abri de piscine. Nous venons sur place pour définir la taille, le sens des lames, la position des poteaux et les options utiles.</p>
-      <p>Avant toute installation, une pergola peut nécessiter une déclaration préalable en mairie selon sa surface et votre commune. Nous vous indiquons la démarche lors de la visite.</p>`,
-    voisins: autresPergolas("/pergola-bioclimatique-lyon/"),
-    ctaTitre: "Un projet de pergola bioclimatique ?",
-  }),
-};
-
-const pergolaToileRetractable = {
-  title: "Pergola à toile rétractable Lyon | Instant Terrasse",
-  description: "Pergola aluminium à toile rétractable sur mesure à Lyon : de l'ombre quand vous voulez, le ciel ouvert le reste du temps. Motorisation et stores latéraux. Devis gratuit.",
-  corps: pageProduit({
-    fil: "Aménagements",
-    h1: ["Pergola à toile", "rétractable"], kicker: "Pergolas aluminium sur mesure à Lyon et dans sa région",
-    chapo: "Une toile qui se déploie ou se replie à la demande : de l'ombre aux heures chaudes, le ciel dégagé le reste du temps.",
-    photo: "pergola-toile-retractable-facade",
-    atouts: [
-      ["Ombre à la demande", "La toile se déploie et se replie entièrement, en quelques secondes."],
-      ["Luminosité préservée", "Toile repliée, la terrasse et l'intérieur de la maison gardent toute leur lumière."],
-      ["Grandes dimensions", "Une bonne solution pour couvrir une large terrasse adossée à la façade."],
-      ["Motorisation", "Commande par télécommande, avec automatismes vent et soleil en option."],
-      ["Stores latéraux", "Des stores verticaux peuvent fermer les côtés exposés."],
-      ["Choix des coloris", "Structure et toile assorties à votre façade et à vos menuiseries."],
-    ],
-    galerieCat: "pergola-toile-retractable",
-    titreGalerie: "Pergolas à toile rétractable en situation",
-    details: `<h2>Toile rétractable ou bioclimatique ?</h2>
-      <p>La toile rétractable est idéale si vous cherchez surtout de l'ombre en été et la lumière le reste de l'année. La <a href="/pergola-bioclimatique-lyon/">pergola bioclimatique</a> va plus loin : ses lames orientables règlent finement la lumière et vous abritent de la pluie.</p>
-      <p>Nous vous aidons à trancher selon l'orientation de votre terrasse et l'usage que vous en faites.</p>`,
-    voisins: autresPergolas("/pergola-toile-retractable-lyon/"),
-    ctaTitre: "Un projet de pergola à toile ?",
-  }),
-};
-
 const pergolaToitFixe = {
   title: "Pergola à toit fixe aluminium Lyon | Instant Terrasse",
   description: "Pergola aluminium à toit fixe sur mesure à Lyon : un abri permanent contre la pluie et le soleil, adossé ou autoporté. Devis gratuit.",
@@ -1112,6 +1060,7 @@ const ICO = {
   plan: '<path d="M3 6l6-3 6 3 6-3v15l-6 3-6-3-6 3z"/><path d="M9 3v15M15 6v15"/>',
   pente: '<path d="M3 20 21 8"/><path d="M6 18v-3M10 16v-5M14 13v-5M18 11V7"/>',
   abri: '<path d="M3 10h18"/><path d="M5 10v10M19 10v10"/><path d="M8 20v-5h8v5"/>',
+  vent: '<path d="M3 8h11a3 3 0 1 0-3-3"/><path d="M3 12h16a3 3 0 1 1-3 3"/><path d="M3 16h7"/>',
   etanche: '<path d="M4 15h16"/><path d="M12 3s4 4.5 4 7.5a4 4 0 0 1-8 0C8 7.5 12 3 12 3z"/><path d="M4 19h16"/>',
 };
 const ico = (k) => `<span class="atout-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${ICO[k]}</svg></span>`;
@@ -1508,7 +1457,7 @@ ${heroPlein({ fil: "Aménagements", h1: ['<span class="pc-nowrap">Carport alumin
       ["Brise-vue grandes lames", "Fixe, en lames aluminium horizontales ou verticales, contre un mur ou entre deux poteaux. Lames effet chêne clair en option.", "Jusqu'à 3 m de haut"],
       ["Panneau aspect bois", "Des lames effet chêne clair qui ferment complètement le côté. Une porte coulissante peut y être intégrée pour fermer un box.", "Jusqu'à 7 m de long, 3 m de haut"],
       ["Panneau plein", "Des panneaux sandwich laqués, pour un côté entièrement fermé, dans l'une des six teintes standard.", "Jusqu'à 7 m de long, 3 m de haut"],
-      ["Vitrage ou store vertical", "Un vitrage coulissant coupe le vent en gardant la lumière ; un store vertical enroulable se baisse seulement quand il le faut.", "Selon les dimensions du carport"],
+      ["Vitrage ou store zippé", "Un vitrage coulissant en verre trempé de 10 mm coupe le vent en gardant la lumière ; un store vertical zippé se baisse seulement quand il le faut.", "Jusqu'à 6 m de large, 3 m de haut"],
     ].map(([t, x, d]) => `<div class="carte"><h3>${t}</h3><p>${x}</p><p class="dim-carport">${d}</p></div>`).join("")}</div>
     <div class="carte carte-led"><h3>Éclairage LED</h3><p>Un éclairage intégré à la structure, en blanc chaud ou blanc neutre selon le modèle, avec détecteur de mouvement, interrupteur mural sans fil ou télécommande.</p></div>
   </div>
@@ -1550,6 +1499,163 @@ ${heroPlein({ fil: "Aménagements", h1: ['<span class="pc-nowrap">Carport alumin
   </div>
 </section>
 ${cta("Un projet de carport ?", "Laissez votre numéro : nous vous rappelons pour en parler et organiser le rendez-vous, gratuit et sans engagement.")}`,
+};
+
+// ---------- Pergolas bioclimatique et toile rétractable (refonte 15/11/2026, fiches produit fournisseur) ----------
+const FERMETURES_PERGOLA = [
+  ["Store vertical zippé", "La toile est tenue dans des coulisses : elle reste tendue et rejette jusqu'à 96 % de l'énergie solaire, en gardant la vue vers l'extérieur. Bandeau transparent en option.", "Jusqu'à 6 m de large, 3 m de haut"],
+  ["Vitrage panoramique", "Du verre trempé de sécurité de 10 mm sur rails coulissants, sans montant entre les vantaux, avec un rail bas compatible avec un fauteuil roulant. Se pose contre un mur ou un poteau.", "Jusqu'à 6 m de large, 3 m de haut"],
+  ["Claustra toile", "Fixe ou coulissante : contre le soleil, le vent, les regards et les insectes, en gardant la vue.", "Jusqu'à 2,6 m de haut"],
+  ["Claustra à lames", "Fixe ou coulissante, avec 85 % ou 100 % d'occultation au choix, pour un espace semi-fermé.", "Jusqu'à 2,6 m de haut"],
+  ["Brise-vue grandes lames", "Fixe, en lames aluminium horizontales ou verticales, effet chêne clair en option.", "Jusqu'à 3 m de haut"],
+];
+const pagePergolaRiche = ({ h1, kicker, chapo, photo, position, ancre, titreModeles, introModeles, modeles, noteModeles, atoutsTitre, atouts, confort, galerieCat, titreGalerie, gauche, faqTitre, faq, ici, ctaTitre }) => `
+${heroPlein({ fil: "Aménagements", h1, kicker, chapo, photo, position,
+  actions: `<a class="bouton" href="/contact/">Demander un devis gratuit</a> <a class="bouton bouton-blanc" href="#modeles">${ancre}</a>` })}
+
+<section id="modeles" class="bloc">
+  <div class="conteneur">
+    <h2>${titreModeles}</h2>
+    <p class="chapo">${introModeles}</p>
+    <div class="grille grille-3">${modeles.map(([t, x, pts]) => `<div class="carte"><h3>${t}</h3><p>${x}</p><ul class="puces">${pts.map((q) => `<li>${q}</li>`).join("")}</ul></div>`).join("")}</div>
+    <p class="note-carport">${noteModeles}</p>
+  </div>
+</section>
+
+<section id="atouts" class="bloc bloc-alt">
+  <div class="conteneur">
+    <h2>${atoutsTitre}</h2>
+    <div class="grille grille-3 atouts-car">${atouts.map(([i, t, x]) => `<div class="carte atout-carte">${ico(i)}<h3>${t}</h3><p>${x}</p></div>`).join("")}</div>
+  </div>
+</section>
+
+<section id="options" class="bloc">
+  <div class="conteneur">
+    <h2>Fermer les côtés</h2>
+    <p class="chapo">Pour profiter de la terrasse au printemps et à l'automne, se protéger du vent ou des regards. Fermetures dans la teinte de la structure.</p>
+    <div class="grille grille-3">${FERMETURES_PERGOLA.map(([t, x, d]) => `<div class="carte"><h3>${t}</h3><p>${x}</p><p class="dim-carport">${d}</p></div>`).join("")}</div>
+    <h2 class="titre-confort">Confort et automatismes</h2>
+    <div class="grille grille-3">${confort.map(([t, x]) => `<div class="carte"><h3>${t}</h3><p>${x}</p></div>`).join("")}</div>
+  </div>
+</section>
+
+<section id="galerie" class="bloc bloc-alt">
+  <div class="conteneur">
+    ${galerie(galerieCat, { titre: titreGalerie, legende: "Illustrations" })}
+  </div>
+</section>
+
+<section id="faq-pergola" class="bloc">
+  <div class="conteneur lyon-faq">
+  <div class="lyon-texte">
+    ${gauche}
+    <p>Nous venons chez vous, à Lyon et dans sa région (${COMMUNES}), pour regarder l'orientation, la façade, les fixations et l'écoulement des eaux. Le plan 3D de votre pergola est offert.</p>
+  </div>
+  <div class="faq-liste">
+    <h2>${faqTitre}</h2>
+    ${faq.map(([q, r]) => `<details class="faq"><summary>${q}</summary><div><p>${r}</p></div></details>`).join("\n    ")}
+  </div>
+  </div>
+</section>
+
+<section class="bloc bloc-alt">
+  <div class="conteneur">
+    <h2>Les autres solutions</h2>
+    <div class="grille grille-3">${autresPergolas(ici).slice(0, 3).map(([c, t, x]) => carteProduit(c, t, x)).join("")}</div>
+  </div>
+</section>
+${cta(ctaTitre, "Laissez votre numéro : nous vous rappelons pour en parler et organiser le rendez-vous, gratuit et sans engagement.")}`;
+
+const AUTOMATISMES = ["Automatismes", "Capteurs de soleil, de pluie et de vent, et pilotage depuis une application, des boutons de scénario ou à la voix."];
+const pergolaBioclimatique = {
+  title: "Pergola bioclimatique Lyon : lames orientables sur mesure | Instant Terrasse",
+  description: "Pergola bioclimatique aluminium sur mesure à Lyon : lames orientables motorisées, jusqu'à 37 m², adossée ou autoportée, stores zippés, vitrage, LED et option solaire. Plan 3D offert.",
+  corps: pagePergolaRiche({
+    ici: "/pergola-bioclimatique-lyon/",
+    h1: ['<span class="pc-nowrap">Pergola bioclimatique</span>', 'sur mesure <span class="lyon-l">à Lyon</span>'], kicker: "Lames orientables motorisées",
+    chapo: "Des lames orientables sur une structure aluminium : ouvertes pour le soleil, inclinées pour l'ombre et la ventilation, fermées contre la pluie.",
+    photo: "pergola-bioclimatique-salon-piscine", ancre: "Les modèles",
+    titreModeles: "Trois modèles selon votre terrasse",
+    introModeles: "Même principe, mêmes lames orientables de 0 à 145° : ce qui change, c'est la taille, la pose et l'intégration des stores.",
+    modeles: [
+      ["L'essentielle", "Une pergola autoportée sur quatre poteaux, pour un coin repas ou un salon dans le jardin.", ["Jusqu'à 24 m²", "Jusqu'à 2,6 m de hauteur", "Stores verticaux rapportés en option"]],
+      ["La polyvalente", "Adossée à la façade ou autoportée, avec un débord de toiture possible et des lames plus longues en option.", ["Jusqu'à 33,4 m²", "Jusqu'à 3 m de hauteur (2,6 m autoportée)", "Débord jusqu'à 1,2 m", "Chauffage infrarouge en option"]],
+      ["La grande", "Les stores zippés sont intégrés dans la structure, invisibles une fois remontés. Pour les grandes terrasses.", ["Jusqu'à 37,4 m²", "Jusqu'à 3 m de hauteur (2,6 m autoportée)", "Débord jusqu'à 2 m", "Chauffage infrarouge en option"]],
+    ],
+    noteModeles: "Pergolas conformes aux règles professionnelles des pergolas à ossature aluminium. Données fabricant.",
+    atoutsTitre: "Ce que font les lames",
+    atouts: [
+      ["soleil", "Ombre ou soleil", "Lames fermées, aucun rayon ne passe ; inclinées, vous dosez la lumière au fil de la journée."],
+      ["goutte", "Abri contre la pluie", "Lames fermées, l'eau suit les lames jusqu'aux chéneaux intégrés et s'évacue au pied des poteaux."],
+      ["vent", "Ventilation naturelle", "Lames entrouvertes, l'air chaud monte et s'échappe : la chaleur ne stagne pas sous la pergola."],
+      ["maison", "Adossée ou autoportée", "Contre la façade ou indépendante au milieu du jardin, de 0 à 4 poteaux, à la hauteur voulue."],
+      ["bouclier", "Aluminium thermolaqué", "Pièces de jonction en inox, six teintes de structure, lames blanches ou grises et autres teintes RAL en option."],
+      ["couches", "Fabriquée en France", "Conçue et fabriquée en France, sur mesure, au millimètre près en largeur."],
+    ],
+    confort: [
+      ["Moteur silencieux", "Un vérin électrique 24 V, caché dans le cadre. Branchement 230 V, ou option solaire sans raccordement : panneau fixé sur la pergola ou déporté jusqu'à 10 m."],
+      ["Éclairage LED", "Direct ou indirect, blanc chaud ou blanc neutre à intensité variable, ou couleur en éclairage indirect."],
+      AUTOMATISMES,
+    ],
+    galerieCat: "pergola-bioclimatique", titreGalerie: "Pergolas bioclimatiques en situation",
+    gauche: `<h2>Bien la choisir</h2>
+    <p>La taille, l'orientation et l'usage décident de tout : coin repas, salon, cuisine d'été ou bord de piscine. Le sens des lames compte aussi : perpendiculaires à la façade, elles laissent passer davantage de lumière vers la maison.</p>
+    <p>Une pergola peut nécessiter une déclaration préalable selon sa surface et votre commune : nous vous indiquons la démarche lors du rendez-vous.</p>`,
+    faqTitre: "Vos questions sur la pergola bioclimatique",
+    faq: [
+      ["Une pergola bioclimatique protège-t-elle de la pluie ?", "Oui, lames fermées : l'eau s'écoule par les lames vers les chéneaux intégrés, puis par les poteaux. Pour être aussi protégé sur les côtés par temps de vent, on ajoute des stores zippés ou un vitrage."],
+      ["Résiste-t-elle à la neige ?", "Jusqu'à 130 kg/m² pour une largeur de 2 m, beaucoup moins pour les grandes largeurs ; les lames plus longues en option portent davantage. En cas de neige ou de gel, il faut ouvrir les lames à 90° et ne plus les manœuvrer. Nous vérifions la charge de neige de votre commune avant de dimensionner."],
+      ["Faut-il l'électricité ?", "Le moteur se branche en 230 V. Sans prise à proximité, l'option solaire alimente les lames, jusqu'à quatre stores et l'éclairage."],
+      ["Peut-elle s'ouvrir et se fermer seule ?", "Oui, avec les capteurs : ouverture au soleil pour aérer, fermeture à la pluie, réaction au vent selon l'implantation."],
+      ["Quelle différence avec une pergola à toile ?", "Les lames orientables dosent la lumière et la ventilation. La toile rétractable, elle, se replie entièrement pour retrouver le ciel dégagé."],
+    ],
+    ctaTitre: "Un projet de pergola bioclimatique ?",
+  }),
+};
+
+const pergolaToileRetractable = {
+  title: "Pergola toile rétractable Lyon : sur mesure, motorisée | Instant Terrasse",
+  description: "Pergola aluminium à toile rétractable sur mesure à Lyon : toile opaque motorisée, jusqu'à 37 m², adossée ou autoportée, stores zippés, vitrage et chauffage en option. Plan 3D offert.",
+  corps: pagePergolaRiche({
+    ici: "/pergola-toile-retractable-lyon/",
+    h1: ['<span class="pc-nowrap">Pergola à toile</span>', 'rétractable <span class="lyon-l">à Lyon</span>'], kicker: "Toile motorisée sur structure aluminium",
+    chapo: "Une toile qui se déploie ou se replie à la demande : de l'ombre aux heures chaudes, le ciel dégagé le reste du temps.",
+    photo: "pergola-toile-retractable-facade", ancre: "Les modèles",
+    titreModeles: "Trois modèles selon votre projet",
+    introModeles: "Deux pergolas à toile, adossées ou autoportées, et une solution entre store et pergola, fixée à la façade.",
+    modeles: [
+      ["La pergola à toile", "Adossée ou autoportée, avec des stores verticaux ajoutés sur les côtés si besoin.", ["Jusqu'à 34,8 m²", "Jusqu'à 3 m de hauteur (2,6 m autoportée)", "Débord jusqu'à 1,2 m"]],
+      ["La grande, stores intégrés", "Les stores zippés sont intégrés dans la structure, invisibles une fois remontés.", ["Jusqu'à 37,4 m²", "Jusqu'à 3 m de hauteur (2,6 m autoportée)", "Débord jusqu'à 2 m"]],
+      ["Entre store et pergola", "Une toile enroulable sur deux poteaux, fixée à la façade : une protection solaire avant tout, qui laisse s'écouler une pluie faible.", ["Jusqu'à 6 × 5 m (30 m²)", "Inclinaison de 8 à 30 %", "Débord jusqu'à 1 m"]],
+    ],
+    noteModeles: "Les deux pergolas sont conformes aux règles professionnelles des pergolas à ossature aluminium. Données fabricant.",
+    atoutsTitre: "Pourquoi une toile rétractable",
+    atouts: [
+      ["soleil", "Ombre à la demande", "Toile déployée aux heures chaudes, repliée le reste du temps : la terrasse et la maison gardent leur lumière."],
+      ["goutte", "Abri contre l'averse", "Toile opaque et imperméable, tendue en pente : l'eau rejoint les chéneaux et s'évacue par les poteaux."],
+      ["vent", "Repli automatique au vent", "Avec le capteur de vent, la toile se replie d'elle-même quand le vent se lève."],
+      ["maison", "Adossée ou autoportée", "Contre la façade ou indépendante dans le jardin, à la hauteur voulue."],
+      ["bouclier", "Aluminium thermolaqué", "Six teintes de structure, plusieurs coloris de toile, autres teintes RAL en option."],
+      ["couches", "Fabriquée en France", "Conçue et fabriquée en France, sur mesure."],
+    ],
+    confort: [
+      ["Moteur intégré", "Un moteur caché dans le cadre, commandé par télécommande."],
+      ["Éclairage et chauffage", "Éclairage LED intégré et chauffage infrarouge à variateur, pour les soirées de mi-saison."],
+      AUTOMATISMES,
+    ],
+    galerieCat: "pergola-toile-retractable", titreGalerie: "Pergolas à toile rétractable en situation",
+    gauche: `<h2>Toile ou lames ?</h2>
+    <p>La toile rétractable convient si vous cherchez surtout de l'ombre l'été et le ciel dégagé le reste de l'année. La <a href="/pergola-bioclimatique-lyon/">pergola bioclimatique</a> dose plus finement la lumière avec ses lames orientables.</p>
+    <p>Une pergola peut nécessiter une déclaration préalable selon sa surface et votre commune : nous vous indiquons la démarche lors du rendez-vous.</p>`,
+    faqTitre: "Vos questions sur la pergola à toile",
+    faq: [
+      ["La toile protège-t-elle de la pluie ?", "Oui pour les deux pergolas : la toile est opaque et imperméable, tendue en pente vers les chéneaux. La solution entre store et pergola, elle, ne laisse s'écouler qu'une pluie faible : c'est d'abord une protection solaire."],
+      ["Que faire quand il y a du vent ?", "Replier la toile. Le capteur de vent le fait automatiquement."],
+      ["Résiste-t-elle à la neige ?", "Jusqu'à 140 kg/m² pour une largeur de 2 m, moins pour les grandes largeurs. Nous vérifions la charge de neige de votre commune avant de dimensionner."],
+      ["Peut-on fermer les côtés ?", "Oui : stores zippés, vitrage coulissant, claustras toile ou à lames, sur un ou plusieurs côtés."],
+    ],
+    ctaTitre: "Un projet de pergola à toile ?",
+  }),
 };
 
 // ---------- Galerie (page /realisations/) ----------

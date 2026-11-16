@@ -15,6 +15,16 @@
   },
   "redirects": [
     {
+      "source": "/actualites/",
+      "destination": "/nos-terrasses/",
+      "statusCode": 301
+    },
+    {
+      "source": "/comment-amenager-son-balcon/",
+      "destination": "/terrasse-balcon-lyon/",
+      "statusCode": 301
+    },
+    {
       "source": "/terrasse-caluire-et-cuire/",
       "destination": "/terrasse-lyon/",
       "statusCode": 301

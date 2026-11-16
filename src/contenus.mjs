@@ -1530,6 +1530,24 @@ const pergolaToitFixe = {
 };
 
 // ---------- Store banne (refonte 16/11/2026, brochure gamme fournisseur fournie par Antoine : 6 modèles, sans références) ----------
+// Schémas des 3 cartes store banne (vue de côté, même style que le conseil exposition ouest)
+const SOL_MUR = `<line x1="10" y1="136" x2="232" y2="136" stroke="#c9bca5" stroke-width="2"/><rect x="18" y="12" width="14" height="124" fill="#ddd2bf"/>`;
+const SCHEMAS_STORE = [
+  `<svg class="schema-pergola" viewBox="0 0 240 150" aria-hidden="true">${SOL_MUR}<rect x="32" y="34" width="12" height="10" rx="3" fill="#2F3437"/><polygon points="44,36 204,58 204,66 44,44" fill="#D79A3A"/><line x1="44" y1="44" x2="204" y2="62" stroke="#2F3437" stroke-width="2"/>
+  <line x1="44" y1="92" x2="204" y2="92" stroke="#55595c" stroke-width="1.5"/><polyline points="50,88 44,92 50,96" fill="none" stroke="#55595c" stroke-width="1.5"/><polyline points="198,88 204,92 198,96" fill="none" stroke="#55595c" stroke-width="1.5"/>
+  <text x="124" y="86" text-anchor="middle" font-size="12" font-weight="700" fill="#2F3437" font-family="Lato,sans-serif">jusqu'à 4 m d'avancée</text>
+  <text x="124" y="112" text-anchor="middle" font-size="11" fill="#55595c" font-family="Lato,sans-serif">sans poteau, jusqu'à 7,16 m de large</text></svg>`,
+  `<svg class="schema-pergola" viewBox="0 0 240 150" aria-hidden="true">${SOL_MUR}<rect x="32" y="30" width="12" height="10" rx="3" fill="#2F3437"/>
+  <line x1="44" y1="36" x2="164" y2="36" stroke="#D79A3A" stroke-width="5" stroke-opacity=".3" stroke-linecap="round"/>
+  <line x1="44" y1="36" x2="148" y2="96" stroke="#D79A3A" stroke-width="5" stroke-linecap="round"/>
+  <line x1="44" y1="36" x2="104" y2="140" stroke="#D79A3A" stroke-width="5" stroke-opacity=".3" stroke-linecap="round"/>
+  <path d="M104,36 A60,60 0 0 1 74,88" fill="none" stroke="#55595c" stroke-width="1.5" stroke-dasharray="4 3"/>
+  <text x="170" y="40" font-size="12" font-weight="700" fill="#2F3437" font-family="Lato,sans-serif">0°</text><text x="154" y="104" font-size="12" font-weight="700" fill="#2F3437" font-family="Lato,sans-serif">30°</text><text x="112" y="132" font-size="12" font-weight="700" fill="#2F3437" font-family="Lato,sans-serif">jusqu'à 60°</text></svg>`,
+  `<svg class="schema-pergola" viewBox="0 0 240 150" aria-hidden="true">${SOL_MUR}
+  <rect x="32" y="40" width="64" height="30" rx="9" fill="#2F3437"/><circle cx="58" cy="55" r="9" fill="#D79A3A"/><rect x="74" y="51" width="16" height="8" rx="2" fill="#8f969a"/>
+  <polyline points="96,62 210,84" fill="none" stroke="#D79A3A" stroke-width="3" stroke-dasharray="6 5" stroke-opacity=".7"/>
+  <text x="64" y="96" text-anchor="middle" font-size="11" fill="#55595c" font-family="Lato,sans-serif">toile et bras</text><text x="64" y="110" text-anchor="middle" font-size="11" fill="#55595c" font-family="Lato,sans-serif">rangés dans le coffre</text></svg>`,
+];
 const storeBanne = {
   title: "Store banne sur mesure à Lyon | Instant Terrasse",
   description: "Store banne sur mesure à Lyon : jusqu'à 7 m de large et 4 m d'avancée, pose murale ou plafond, pare-soleil motorisé, LED et capteurs. Plan 3D offert.",
@@ -1547,13 +1565,8 @@ ${heroPlein({ fil: "Pergolas & extérieur", h1: ['<span class="pc-nowrap">Store 
       ["Grandes dimensions", "Pour ombrager une terrasse entière, sans poteau.", ["Jusqu'à 7,16 m de large", "Jusqu'à 4 m d'avancée", "Jusqu'à 11,88 m en deux parties"]],
       ["Inclinaison réglable", "Plus le store est incliné, mieux il coupe le soleil bas du matin ou du soir.", ["De 0 à 60° selon le modèle", "Pose murale ou au plafond", "Sous un balcon ou un avant-toit"]],
       ["Coffre compact", "Toile et bras se rangent dans le coffre une fois le store replié.", ["Plaqué contre le mur sur certains modèles", "Armature aluminium thermolaquée", "Six teintes, plus de 200 en option"]],
-    ].map(([t, x, pts]) => `<div class="carte"><h3>${t}</h3><p>${x}</p><ul class="puces">${pts.map((q) => `<li>${q}</li>`).join("")}</ul></div>`).join("")}</div>
+    ].map(([t, x, pts], i) => `<div class="carte">${SCHEMAS_STORE[i]}<h3>${t}</h3><p>${x}</p><ul class="puces">${pts.map((q) => `<li>${q}</li>`).join("")}</ul></div>`).join("")}</div>
     <p class="note-carport">Dimensions maximales selon le modèle. Données fabricant.</p>
-    <div class="conseil-encadre">
-      <p class="conseil-titre">Notre conseil</p>
-      <p><strong>Attention : un store banne n'est pas toujours la solution adaptée.</strong> Selon l'exposition de l'espace à protéger, il peut ne pas suffire et ne pas vous protéger au moment le plus important. C'est parfois le cas en fin de journée sur une terrasse exposée à l'ouest : le soleil, bas sur l'horizon, passe sous la toile.</p>
-      <p>Il faut alors une protection verticale, et non horizontale : un <a href="/pergola-bioclimatique-lyon/#options">store vertical</a>, un <a href="/garde-corps-aluminium-lyon/">brise-vue</a> ou une <a href="/pergolas-lyon/">pergola</a> équipée d'un store vertical. Lors du rendez-vous, nous regardons l'orientation de votre terrasse et les heures où vous l'utilisez. <a href="/store-banne-ou-store-vertical/">Lire notre article : store banne ou protection verticale ?</a></p>
-    </div>
   </div>
 </section>
 
@@ -1587,6 +1600,26 @@ ${heroPlein({ fil: "Pergolas & extérieur", h1: ['<span class="pc-nowrap">Store 
 
 <section id="galerie" class="bloc bloc-alt">
   <div class="conteneur">
+    <div class="conseil-encadre conseil-schema-bloc">
+      <svg class="conseil-schema" viewBox="0 0 240 150" role="img" aria-label="Schéma : en fin de journée, le soleil bas passe sous la toile du store banne">
+        <line x1="10" y1="136" x2="232" y2="136" stroke="#c9bca5" stroke-width="2"/>
+        <rect x="18" y="12" width="14" height="124" fill="#ddd2bf"/>
+        <polygon points="32,40 128,64 128,72 32,46" fill="#D79A3A"/>
+        <line x1="32" y1="40" x2="128" y2="64" stroke="#2F3437" stroke-width="2.5"/>
+        <line x1="32" y1="60" x2="128" y2="68" stroke="#2F3437" stroke-width="2"/>
+        <rect x="52" y="112" width="34" height="4" rx="2" fill="#2F3437"/><line x1="58" y1="116" x2="58" y2="136" stroke="#2F3437" stroke-width="3"/><line x1="80" y1="116" x2="80" y2="136" stroke="#2F3437" stroke-width="3"/>
+        <circle cx="212" cy="92" r="12" fill="#E3A94A"/>
+        <line x1="196" y1="96" x2="74" y2="110" stroke="#E3A94A" stroke-width="3" stroke-dasharray="7 6" stroke-linecap="round"/>
+        <text x="212" y="120" text-anchor="middle" font-size="11" fill="#55595c" font-family="Lato,sans-serif">Ouest, fin de journée</text>
+      </svg>
+      <div>
+        <p class="conseil-titre">Notre conseil</p>
+        <h3>Terrasse exposée à l'ouest ?</h3>
+        <p>En fin de journée, le soleil est bas : il passe sous la toile du store banne, au moment où vous profitez le plus de la terrasse.</p>
+        <p>La solution est alors verticale : un <a href="/pergola-bioclimatique-lyon/#options">store vertical</a>, un <a href="/garde-corps-aluminium-lyon/">brise-vue</a> ou une <a href="/pergolas-lyon/">pergola</a> équipée d'un store vertical. Au rendez-vous, nous regardons l'orientation de la terrasse et vos heures d'utilisation.</p>
+        <p><a href="/store-banne-ou-store-vertical/">Store banne ou protection verticale : notre article →</a></p>
+      </div>
+    </div>
     ${galerie("store-banne", { titre: "Stores bannes en situation", legende: "Illustrations" })}
   </div>
 </section>

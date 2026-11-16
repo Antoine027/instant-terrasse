@@ -2169,3 +2169,8 @@ main #options .puces,main #toitures .puces,main #autorisation .puces{text-align:
 @media (max-width:560px){#galerie.galerie-comp .mosaique figure,#galerie.galerie-carr .mosaique figure{width:min(calc(var(--r) * 175px),80vw)}}
 @media (min-width:561px){#galerie.galerie-comp .mosaique figure,#galerie.galerie-carr .mosaique figure{max-width:none;width:auto}#galerie.galerie-carr .mosaique figure{aspect-ratio:4/3}}
 .schema-pergola{display:block;width:100%;max-width:240px;height:auto;margin:0 auto 10px}
+/* Store banne : conseil exposition ouest avec schéma, juste avant la galerie (16/11/2026) */
+.conseil-schema-bloc{display:grid;grid-template-columns:240px 1fr;gap:26px;align-items:center;margin:0 auto 48px}
+.conseil-schema-bloc h3{margin:2px 0 8px;font-size:1.2rem}
+.conseil-schema{width:100%;height:auto;display:block}
+@media (max-width:700px){.conseil-schema-bloc{grid-template-columns:1fr;gap:10px}.conseil-schema{max-width:260px;margin:0 auto}}

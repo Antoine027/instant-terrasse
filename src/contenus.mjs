@@ -1609,7 +1609,7 @@ ${heroPlein({ fil: "Pergolas & extérieur", h1: ['<span class="pc-nowrap">Store 
         <rect x="52" y="112" width="34" height="4" rx="2" fill="#2F3437"/><line x1="58" y1="116" x2="58" y2="136" stroke="#2F3437" stroke-width="3"/><line x1="80" y1="116" x2="80" y2="136" stroke="#2F3437" stroke-width="3"/>
         <circle cx="212" cy="92" r="12" fill="#E3A94A"/>
         <line x1="196" y1="96" x2="74" y2="110" stroke="#E3A94A" stroke-width="3" stroke-dasharray="7 6" stroke-linecap="round"/>
-        <text x="212" y="120" text-anchor="middle" font-size="11" fill="#55595c" font-family="Lato,sans-serif">Ouest, fin de journée</text>
+        <text x="236" y="124" text-anchor="end" font-size="11" fill="#55595c" font-family="Lato,sans-serif">Ouest, fin de journée</text>
       </svg>
       <div>
         <p class="conseil-titre">Notre conseil</p>

@@ -1784,7 +1784,7 @@ ${heroPlein({ fil: "Pergolas & extérieur", h1: ['<span class="pc-nowrap">Garde-
   <div class="conteneur">
     <h2>Barreaux, verre, tôle ou bois</h2>
     <p class="chapo">La même structure aluminium, et le remplissage qui convient à votre façade et à votre vue.</p>
-    <div class="grille grille-3">${[
+    <div class="grille grille-3 atouts-car">${[
       ["Barreaux", "Des lisses aluminium horizontales ou verticales, sur toute la hauteur ou avec un vide sous la main courante."],
       ["Verre", "Du verre feuilleté de sécurité, transparent pour garder la vue, ou opale, fumé gris ou fumé bronze pour l'intimité."],
       ["Tôle découpée", "Une tôle aluminium perforée ou découpée : une vingtaine de motifs (organiques, végétaux, géométriques), ou le vôtre à partir d'un dessin ou d'une photo."],
@@ -1812,14 +1812,14 @@ ${heroPlein({ fil: "Pergolas & extérieur", h1: ['<span class="pc-nowrap">Garde-
 <section id="poses" class="bloc">
   <div class="conteneur">
     <h2>Quatre façons de le fixer</h2>
-    <div class="grille grille-4">${[
+    <div class="grille grille-4 atouts-car">${[
       ["À plat", "Fixé sur le dessus de la dalle ou de la terrasse."],
       ["En applique", "Fixé sur la tranche de la dalle : toute la surface de la terrasse reste libre. Le nez de dalle peut être habillé."],
       ["Déporté", "Écarté de la tranche de la dalle grâce à des pattes de fixation."],
       ["En tableau", "Entre deux murs, pour une fenêtre, une loggia ou un balcon encastré."],
     ].map(([t, x]) => `<div class="carte"><h3>${t}</h3><p>${x}</p></div>`).join("")}</div>
     <h2 class="titre-confort">Aussi pour les escaliers et les pare-vues</h2>
-    <div class="grille grille-3">${[
+    <div class="grille grille-3 atouts-car">${[
       ["Garde-corps d'escalier", "Les mêmes remplissages suivent la pente de l'escalier, avec des jonctions de rampant et d'angle."],
       ["Main courante murale", "En aluminium ou en bois, fixée au mur le long d'un escalier."],
       ["Claustras et pare-vues", "Les mêmes modèles, plus hauts, pour se protéger des regards sur une terrasse ou un balcon."],

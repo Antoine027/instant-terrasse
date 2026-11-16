@@ -547,49 +547,6 @@ ${cta("Un projet de terrasse carrelage ?", "Laissez votre numéro : nous vous ra
 };
 
 // ---------- Bardage aluminium ----------
-const bardageAluminium = {
-  title: "Bardage aluminium à Lyon, sans entretien | Instant Terrasse",
-  description: "Bardage aluminium sur mesure à Lyon : lames thermolaquées, nombreuses teintes RAL, fixation invisible, sans entretien. Façades, murs, plafonds. Devis gratuit.",
-  corps: `
-${heroPlein({ fil: "Pergolas & extérieur", h1: ["Bardage aluminium", "sur mesure"], kicker: "Façades sans entretien à Lyon et dans sa région", photo: "bardage-alu-vertical-brun-escalier", position: "60% 50%",
-  chapo: "Des lames aluminium thermolaquées, unies ou aspect bois, sur ossature aluminium : une façade qui ne se repeint jamais." })}
-
-<section class="bloc bloc-alt">
-  <div class="conteneur">
-    <h2>Les points forts</h2>
-    <div class="grille grille-3">
-      <div class="carte"><h3>Aucun entretien</h3><p>Pas de lasure, pas de saturateur : un nettoyage à l'eau de temps en temps suffit.</p></div>
-      <div class="carte"><h3>Unie ou aspect bois</h3><p>Des teintes RAL unies, ou des décors bois du gris clair au brun chaud, que l'on peut associer sur une même façade.</p></div>
-      <div class="carte"><h3>Léger et robuste</h3><p>Un ensemble léger, très stable, qui résiste aux environnements difficiles.</p></div>
-      <div class="carte"><h3>Fixation invisible</h3><p>Les lames se clipsent sur les rails : aucune vis en façade, des lignes parfaitement régulières.</p></div>
-      <div class="carte"><h3>Design libre</h3><p>Pose verticale ou horizontale, jointive ou à claire-voie, avec des largeurs et des espacements à composer.</p></div>
-      <div class="carte"><h3>Aussi en plafond</h3><p>Les mêmes profils habillent les sous-faces d'avancée de toit, de pergola ou de préau.</p></div>
-    </div>
-  </div>
-</section>
-
-<section id="galerie" class="bloc">
-  <div class="conteneur">
-    ${galerie("bardage-aluminium", { titre: "Bardages aluminium en situation", legende: "Illustrations" })}
-  </div>
-</section>
-
-<section class="bloc bloc-alt">
-  <div class="conteneur deux-colonnes">
-    <div>
-      <h2>Aluminium ou bois ?</h2>
-      <p>Le bardage aluminium vise le zéro entretien et une couleur qui ne bouge pas. Le <a href="/bardage-bois-lyon/">bardage bois</a> apporte la chaleur d'un matériau naturel qui évolue avec le temps. Les deux se posent sur la même ossature et peuvent se combiner sur une façade.</p>
-    </div>
-    <div>
-      <h2>Votre projet</h2>
-      <p>${POSE}</p>
-      <p>Nous venons chez vous avec des échantillons de teintes, et vous recevez un plan 3D offert de votre façade.</p>
-    </div>
-  </div>
-</section>
-${cta("Un projet de bardage aluminium ?", "Devis gratuit et sans engagement. Nous venons voir votre façade avec les échantillons de teintes.")}`,
-};
-
 // ---------- Terrasse composite ----------
 // Lames composite (infos de l'ancien site, validées par Antoine le 05/11/2026 ; les deux gammes sont haut de gamme). Évolution : visuels fabricant.
 const LAMES_COMP = [
@@ -1681,6 +1638,79 @@ ${heroPlein({ fil: "Pergolas & extérieur", h1: ['<span class="pc-nowrap">Store 
 ${cta("Un projet de store banne ?", "Laissez votre numéro : nous vous rappelons pour en parler et organiser le rendez-vous, gratuit et sans engagement.")}`,
 };
 
+// Bardage aluminium (refonte 16/11/2026) : même matériau et même fabricant que les lames de terrasse aluminium (Antoine).
+// Repris : propriétés du matériau seulement (inaltérable, stable, léger, recyclable). Pas les atouts liés à l'usage en terrasse.
+const autresBardage = (ici) => `
+<section class="bloc">
+  <div class="conteneur">
+    <h2>Les autres solutions</h2>
+    <div class="grille grille-3">${[["/bardage-bois-lyon/", "Bardage bois", "La chaleur d'un bois naturel, clipsé sur rails aluminium."], ["/bardage-aluminium-lyon/", "Bardage aluminium", "Une façade qui ne bouge pas et ne s'entretient presque pas."], ["/terrasse-aluminium-lyon/", "Terrasse aluminium", "Le même matériau, en lames de terrasse."], ["/pergolas-lyon/", "Pergolas", "Bioclimatique, toile ou toit fixe."]].filter(([c]) => c !== ici).slice(0, 3).map(([c, t, x]) => carteProduit(c, t, x)).join("")}</div>
+  </div>
+</section>`;
+const bardageAluminium = {
+  title: "Bardage aluminium sur mesure à Lyon | Instant Terrasse",
+  description: "Bardage aluminium sur mesure à Lyon pour façades et parements muraux : inaltérable, stable, léger et recyclable, en plusieurs finitions. Devis gratuit.",
+  corps: `
+${heroPlein({ fil: "Pergolas & extérieur", h1: ["Bardage aluminium", "sur mesure"], kicker: "Façades et parements muraux à Lyon et dans sa région", photo: "bardage-alu-vertical-brun-escalier", position: "60% 50%",
+  chapo: "Le même aluminium que nos lames de terrasse, en bardage : une façade qui ne moisit pas, ne bouge pas et s'entretient d'un simple nettoyage.",
+  actions: `<a class="bouton" href="/contact/">Demander un devis gratuit</a> <a class="bouton bouton-blanc" href="#finitions">Les finitions</a>` })}
+
+<section id="finitions" class="bloc">
+  <div class="conteneur deux-colonnes deux-colonnes-image">
+    <div>
+      <h2>Plusieurs finitions</h2>
+      <p class="chapo">Façade complète ou parement mural, le bardage est fabriqué sur mesure, avec un choix de finitions et de couleurs, dont plusieurs aspects bois.</p>
+      <p>Nous venons chez vous avec les échantillons : vous comparez les finitions à côté de votre façade, à la lumière du jour, avant de choisir.</p>
+      <p>Il est fabriqué par le même fabricant que nos <a href="/terrasse-aluminium-lyon/">lames de terrasse aluminium</a> : terrasse et façade peuvent s'accorder.</p>
+    </div>
+    <img class="img-finitions" src="/assets/img/bardage/bardage-alu-finitions.webp" alt="Quatre finitions de bardage aluminium : aspects bois roux, gris, brun et gris bleuté" width="347" height="500" loading="lazy" decoding="async" data-credit="©Aludeck">
+  </div>
+</section>
+
+<section id="atouts" class="bloc bloc-alt">
+  <div class="conteneur">
+    <h2>Les atouts de l'aluminium</h2>
+    <div class="grille grille-3 atouts-car">${[
+      ["bouclier", "Inerte et inaltérable", "L'aluminium ne pourrit pas et ne moisit pas : ni champignons, ni insectes."],
+      ["niveau", "Il ne bouge pas", "Pas de gonflement ni de retrait avec l'humidité : les lignes de la façade restent régulières."],
+      ["goutte", "Facile à entretenir", "Ni lasure, ni saturateur, ni peinture : un nettoyage de temps en temps suffit."],
+      ["plume", "Léger", "Un parement léger, qui charge peu le mur."],
+      ["demonte", "100 % recyclable", "L'aluminium se recycle en fin de vie."],
+      ["plan", "Sur mesure", "Fabriqué selon votre façade, et dessiné en 3D avant de décider."],
+    ].map(([i, t, x]) => `<div class="carte atout-carte">${ico(i)}<h3>${t}</h3><p>${x}</p></div>`).join("")}</div>
+  </div>
+</section>
+
+<section id="galerie" class="bloc">
+  <div class="conteneur">
+    ${galerie("bardage-aluminium", { titre: "Bardages aluminium en situation", legende: "Illustrations" })}
+  </div>
+</section>
+
+<section id="faq-bardage-alu" class="bloc bloc-alt">
+  <div class="conteneur lyon-faq">
+  <div class="lyon-texte">
+    <h2>Aluminium ou bois ?</h2>
+    <p>Le bardage aluminium se choisit pour une façade qui ne bouge pas et un entretien minimal. Le <a href="/bardage-bois-lyon/">bardage bois</a> apporte la chaleur d'un matériau naturel, qui évolue avec le temps.</p>
+    <p>${POSE}</p>
+    <p>Nous venons chez vous, à Lyon et dans sa région (${COMMUNES}), avec les échantillons, et vous recevez un plan 3D de votre façade.</p>
+  </div>
+  <div class="faq-liste">
+    <h2>Vos questions sur le bardage aluminium</h2>
+    ${[
+      ["Faut-il entretenir un bardage aluminium ?", "Très peu : ni lasure, ni saturateur, ni peinture. Un nettoyage de temps en temps suffit."],
+      ["Le bardage aluminium peut-il moisir ou se déformer ?", "Non : l'aluminium est inerte. Il ne moisit pas, ne pourrit pas et ne bouge pas avec l'humidité."],
+      ["Quelles finitions sont disponibles ?", "Plusieurs finitions et couleurs, dont des aspects bois. Nous apportons les échantillons au rendez-vous."],
+      ["Où peut-on poser un bardage aluminium ?", "Sur une façade complète ou en parement mural, sur une partie du mur. La faisabilité dépend du support, vérifié lors du rendez-vous."],
+      ["Peut-on assortir le bardage à une terrasse aluminium ?", `Oui : il vient du même fabricant que nos <a href="/terrasse-aluminium-lyon/">lames de terrasse aluminium</a>.`],
+    ].map(([q, r]) => `<details class="faq"><summary>${q}</summary><div><p>${r}</p></div></details>`).join("\n    ")}
+  </div>
+  </div>
+</section>
+${autresBardage("/bardage-aluminium-lyon/")}
+${cta("Un projet de bardage aluminium ?", "Laissez votre numéro : nous vous rappelons pour en parler et organiser le rendez-vous, gratuit et sans engagement.")}`,
+};
+
 // ---------- Bardage bois (enrichi 16/11/2026, catalogue bardage fournisseur) ----------
 const bardageEssences = [
   ["Accoya naturel", "Bois acétylé à cœur : il ne prend presque plus l'eau, d'où une stabilité remarquable. Teinte claire, sans nœuds, qui grise avec le temps.", "Jusqu'à 50 ans"],
@@ -1770,6 +1800,7 @@ ${heroPlein({ fil: "Pergolas & extérieur", h1: ["Bardage bois", "sur mesure"], 
   </div>
   </div>
 </section>
+${autresBardage("/bardage-bois-lyon/")}
 ${cta("Un projet de bardage ?")}`,
 };
 
@@ -1889,13 +1920,13 @@ ${heroPlein({ fil: "Pergolas & extérieur", h1: ['<span class="pc-nowrap">Garde-
   </div>
   </div>
 </section>
-${cta("Un projet de garde-corps ?", "Laissez votre numéro : nous vous rappelons pour en parler et organiser le rendez-vous, gratuit et sans engagement.")}
-<section class="bloc">
+<section class="bloc bloc-alt">
   <div class="conteneur">
     <h2>Pour aller avec votre garde-corps</h2>
     <div class="grille grille-3">${[["/terrasse-sur-pilotis-lyon/", "Terrasse sur pilotis", "La solution pour les terrains en pente."], ["/toit-terrasse-lyon/", "Toit-terrasse", "Créer un espace de vie sur une toiture plate."], ["/terrasse-balcon-lyon/", "Balcon", "Rénover le sol d'un balcon, sans travaux lourds."]].map(([c, t, x]) => carteProduit(c, t, x)).join("")}</div>
   </div>
-</section>`,
+</section>
+${cta("Un projet de garde-corps ?", "Laissez votre numéro : nous vous rappelons pour en parler et organiser le rendez-vous, gratuit et sans engagement.")}`,
 };
 
 // ---------- Galerie (page /realisations/) ----------
@@ -1985,35 +2016,66 @@ ${cta("Vous hésitez entre deux pergolas ?", "Nous venons chez vous, nous regard
 };
 
 // ---------- Terrasses de restaurants (CHR) ----------
+// ---------- Terrasse café, hôtel, restaurant (refonte 16/11/2026, modèle pageProjet, contenu repris de l'ancien site) ----------
+const ETABLISSEMENTS_CHR = [
+  ["Restaurants", "La terrasse prolonge la salle : capacité d'accueil, disposition des tables, circulation du personnel et accès depuis l'intérieur sont étudiés ensemble."],
+  ["Cafés, bars et brasseries", "La terrasse sert tous les jours : résistance, entretien rapide et surface optimisée passent en premier."],
+  ["Hôtels", "Petit-déjeuner, restaurant, rooftop, lounge ou prolongement d'une suite : la terrasse suit l'architecture et le standing de l'établissement."],
+];
 const terrasseRestaurant = {
-  title: "Terrasse de restaurant à Lyon | Instant Terrasse",
-  description: "Terrasse de restaurant, café ou hôtel à Lyon : plancher sans entretien, garde-corps, pare-vue, pergola ou store. Plan 3D offert.",
-  corps: pageProduit({
-    fil: "Professionnels",
-    h1: ["Terrasse de restaurant", "et d'hôtel"], kicker: "Cafés, hôtels et restaurants à Lyon et dans sa région",
-    chapo: "Une terrasse accueillante fait venir les clients et les fait rester : plancher, garde-corps, pare-vue et ombre.",
+  title: "Terrasse de restaurant et d'hôtel à Lyon | Instant Terrasse",
+  description: "Terrasse pour restaurant, café ou hôtel à Lyon : revêtement robuste et facile à entretenir, sur structure aluminium, garde-corps, pergola. Plan 3D offert.",
+  corps: pageProjet({
+    ici: "/terrasse-restaurant-chr-lyon/", fil: "Professionnels",
+    h1: ['<span class="pc-nowrap">Terrasses de restaurants</span>', "cafés et hôtels"], kicker: "Cafés, hôtels et restaurants à Lyon et dans sa région",
+    chapo: "Une terrasse accueillante fait venir les clients et les fait rester. Elle doit aussi tenir le rythme du service, saison après saison.",
     photo: "terrasse-kebony-restaurant", position: "50% 55%",
+    revTitre: "Quel revêtement pour une terrasse professionnelle ?", revIntro: "Il n'existe pas de matériau universel pour un établissement : usage, exposition, support, image recherchée et entretien décident ensemble.",
+    poids: { entretien: 2, taches: 2, rayures: 1, adherence: 1 },
+    rev: {
+      aluminium: ["alu-restaurant-vue-mer", "Stable et sans traitement, avec un revêtement antidérapant : une allure contemporaine qui dure."],
+      composite: ["composite-brun-passerelle-bassin", "L'aspect du bois avec un entretien réduit, et une bonne résistance aux taches."],
+      carrelage: ["carrelage-bh-pergola-salon", "Une esthétique minérale, des dalles antidérapantes très résistantes aux rayures."],
+      bois: ["terrasse-thermopin-restaurant", "Une ambiance chaleureuse et naturelle, pour les établissements authentiques ou haut de gamme."],
+    },
+    pose: bandeau("Sur structure aluminium ou sur plots", "Sur un sol existant, les plots réglables rattrapent les écarts de niveau et la pente : la surface est plane, l'eau s'écoule dessous et les réseaux restent accessibles, sans couler de dalle. Structure aluminium garantie 20 ans.", "Plots réglables sur l'existant, sans dalle béton. Structure garantie 20 ans.", "Voir les structures", "/structure-terrasse-lyon/", IMG_STRUCT_ALU),
+    atoutsTitre: "Pensée pour un usage professionnel",
     atouts: [
-      ["Pensée pour le service", "Un sol plan et sans marche inutile, pour circuler facilement entre les tables."],
-      ["Sans entretien", "Lames aluminium, composite ou essences sélectionnées : pas de saturateur à refaire chaque saison."],
-      ["Délimitée et protégée", "Garde-corps, pare-vue bois ou vitré : la terrasse se distingue de la rue et protège du vent."],
-      ["De l'ombre et un abri", "Pergola ou store banne pour ouvrir la terrasse plus tôt au printemps et plus tard en automne."],
-      ["Sur un sol existant", "Plots réglables ou structure aluminium pour rattraper la pente d'un trottoir ou d'une cour."],
-      ["Un interlocuteur principal", "Nous coordonnons la pose avec notre installateur partenaire, pour limiter la gêne pendant les travaux."],
+      ["niveau", "Pensée pour le service", "Un sol plan, des seuils et des accès étudiés, pour circuler facilement entre les tables."],
+      ["goutte", "Facile à entretenir", "Des revêtements choisis pour un nettoyage rapide et un usage intensif."],
+      ["garde", "Délimitée et protégée", `<a href="/garde-corps-aluminium-lyon/">Garde-corps</a>, claustras ou pare-vues : la terrasse se distingue de la rue et protège du vent.`],
+      ["ombre", "De l'ombre et un abri", `Une <a href="/pergolas-lyon/">pergola</a> ou un <a href="/store-banne-lyon/">store banne</a> pour ouvrir plus tôt au printemps et plus tard en automne.`],
+      ["plan", "Plan 3D offert", "Vous voyez l'implantation des tables et le rendu avant de décider."],
+      ["maison", "Un interlocuteur principal", "Nous coordonnons la pose avec notre installateur partenaire, pour limiter la gêne pendant les travaux."],
     ],
-    galerieCat: ["restaurant-terrasse-gabions", "alu-restaurant-canal-vignes", "terrasse-kebony-restaurant", "terrasse-thermopin-restaurant", "alu-restaurant-vue-mer", "alu-restaurant-salle"],
+    extra: `
+<section id="etablissements" class="bloc">
+  <div class="conteneur">
+    <h2>Une terrasse adaptée à chaque établissement</h2>
+    <p class="chapo">Création, rénovation, terrasse sur plots ou rooftop : chaque activité a ses usages et ses contraintes.</p>
+    <div class="grille grille-3 atouts-car">${ETABLISSEMENTS_CHR.map(([t, x]) => `<div class="carte"><h3>${t}</h3><p>${x}</p></div>`).join("")}</div>
+  </div>
+</section>`,
+    galerieCat: ["terrasse-kebony-restaurant", "restaurant-terrasse-gabions", "alu-restaurant-canal-vignes", "terrasse-thermopin-restaurant", "alu-restaurant-vue-mer", "alu-restaurant-salle", "composite-brun-passerelle-bassin", "carrelage-bh-pergola-salon"],
     titreGalerie: "Terrasses de restaurants en situation",
-    details: `<h2>Avant de se lancer</h2>
-      <p>Une terrasse posée sur le domaine public demande une autorisation d'occupation de la mairie. Sur une cour ou un terrain privé, les règles d'urbanisme et d'accessibilité s'appliquent aussi. Nous regardons ces points avec vous dès la première visite.</p>
-      <p>Pour l'ombre, voyez nos <a href="/pergolas-lyon/">pergolas</a> et le <a href="/store-banne-lyon/">store banne</a> ; pour délimiter, le <a href="/garde-corps-aluminium-lyon/">garde-corps aluminium</a>.</p>`,
-    complement: "Nous venons voir les lieux, les accès et vos horaires de service, et le plan 3D de votre terrasse est offert.",
-    titreVoisins: "Voir aussi",
-    voisins: [
-      ["/terrasse-aluminium-lyon/", "Terrasse aluminium", "Des lames stables et sans entretien."],
-      ["/pergolas-lyon/", "Pergolas", "Bioclimatique, toile ou toit fixe."],
-      ["/garde-corps-aluminium-lyon/", "Garde-corps aluminium", "Délimiter et sécuriser la terrasse."],
+    lyon: ["Avant de se lancer", "Une terrasse sur le domaine public demande une autorisation de la mairie. À Lyon, selon le projet, la Ville peut demander les dimensions, les matériaux, les couleurs et, pour une terrasse sur stationnement, un croquis ou un photomontage. Ces démarches restent à faire auprès des services compétents.", "Nous venons voir les lieux, les accès, le support et vos horaires de service. Pour une première étude, quelques photos, la surface approximative et un croquis suffisent. Vous recevez ensuite un plan 3D et un devis détaillé."],
+    lyonCourt: "Nous venons voir les lieux, les accès et le support ; vous recevez un plan 3D et un devis détaillé. Sur le domaine public, une autorisation de la mairie est nécessaire.",
+    faqTitre: "Vos questions sur la terrasse de restaurant",
+    faq: [
+      ["Faut-il une autorisation pour une terrasse de restaurant ?", "Sur le domaine public, oui : une autorisation d'occupation est demandée à la mairie. Sur une cour ou un terrain privé, les règles d'urbanisme et d'accessibilité s'appliquent aussi."],
+      ["Quel revêtement résiste le mieux à un usage intensif ?", "Le grès cérame est très résistant aux rayures ; les lames aluminium sont stables et sans traitement. Le bon choix dépend aussi de l'image de votre établissement."],
+      ["Peut-on poser la terrasse sur un sol existant ?", "Souvent, oui : les plots réglables se posent sur le support existant et rattrapent les écarts de niveau, sans couler de dalle. La faisabilité est vérifiée sur place."],
+      ["Combien coûte une terrasse de restaurant ?", "Le prix dépend de la surface, du matériau, de la structure, de la hauteur, de l'état du support et des accès. Après la visite, vous recevez un devis détaillé ligne par ligne."],
+      ["Pouvez-vous ajouter une pergola ou des pare-vues ?", "Oui : pergola, store banne, garde-corps ou claustras peuvent être étudiés dans le même projet."],
     ],
-    ctaTitre: "Un projet de terrasse pour votre établissement ?",
+    ctaTitre: "Un projet de terrasse pour votre établissement ?", ctaTexte: "Indiquez-nous le type d'établissement, la surface approximative et votre calendrier : nous vous rappelons pour en parler.",
+    apres: `
+<section class="bloc decouvrir">
+  <div class="conteneur">
+    <h2>Voir aussi</h2>
+    <div class="grille grille-4 decouvrir-grille projets-grille">${[["/terrasse-camping-hpa/", "Campings et HPA", "alu-escalier-maison-bois", "Des terrasses durables pour les mobil-homes et chalets."], ["/pergolas-lyon/", "Pergolas", "pergola-bioclimatique-salon-piscine", "Ouvrir la terrasse plus longtemps dans l'année."], ["/garde-corps-aluminium-lyon/", "Garde-corps", "gc-maison-terrasse-vue", "Délimiter et sécuriser la terrasse."], ["/store-banne-lyon/", "Store banne", "store-banne-beige-maison", "Une ombre repliable, contre la façade."]].map(([c, t, ph, x]) => `<a class="carte carte-lien carte-photo" href="${c}"><div class="vignette">${imgPhoto(ph, { sizes: "(max-width:700px) 40vw, (max-width:1060px) 23vw, 270px" })}</div><div class="carte-corps"><h3>${t}</h3><p>${x}</p><span class="fleche" aria-hidden="true">→</span></div></a>`).join("")}</div>
+  </div>
+</section>`,
   }),
 };
 

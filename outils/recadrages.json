@@ -19,10 +19,6 @@
   "dossier": "terrasses",
   "position": "55% 70%"
  },
- "bardage-alu-vertical-brun-escalier": {
-  "dossier": "bardage",
-  "position": "60% 50%"
- },
  "composite-gris-piscine": {
   "dossier": "composite",
   "position": "50% 60%"
@@ -74,6 +70,10 @@
  "store-banne-coffre-bardage": {
   "dossier": "stores",
   "position": "45% 40%"
+ },
+ "bardage-alu-vertical-brun-escalier": {
+  "dossier": "bardage",
+  "position": "60% 50%"
  },
  "bardage-thermofrene-maison": {
   "dossier": "bardage",

@@ -51,7 +51,7 @@
     },
     {
       "source": "/amenagement-terrasse-lyon/",
-      "destination": "/",
+      "destination": "/terrasse-lyon/",
       "statusCode": 301
     },
     {

@@ -2129,3 +2129,4 @@ main #options .puces,main #toitures .puces,main #autorisation .puces{text-align:
 @media (max-width:700px){.mc-essences{grid-template-columns:repeat(3,1fr);gap:8px}.mc-essences li{grid-template-columns:1fr;text-align:center;font-size:.8rem}.mc-essences img{grid-row:auto;width:100%;margin-bottom:4px}.mc-essences small{font-size:.72rem}}
 .communes-note{margin-top:24px;padding:14px 18px;background:#F8F3EB;border-radius:15px;max-width:760px}
 @media (max-width:700px){.communes-note{text-align:center}}
+.img-finitions{width:100%;max-width:300px;height:auto;border-radius:15px;justify-self:center;box-shadow:0 10px 30px -18px rgba(47,52,55,.45)}

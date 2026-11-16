@@ -1840,13 +1840,6 @@ ${heroPlein({ fil: "Pergolas & extérieur", h1: ['<span class="pc-nowrap">Garde-
     <p class="chapo">Barreaux, verre, tôle découpée ou bois, sur la même structure aluminium, fabriquée sur mesure.</p>
     <div class="modeles-gc">${[["Barreaux", "Barreaux"], ["Verre", "Verre"], ["Tôle découpée", "Tôle découpée"], ["Bois", "Bois"], ["Sans poteaux", "Sans poteaux"]].flatMap(([k, fam]) => VIGNETTES_GC[k].map(([f, l, a, h = 300]) => `<figure><img src="/assets/img/claustra/${f}.webp" alt="${a}" width="300" height="${h}" loading="lazy" decoding="async" data-credit="©Kordo"><figcaption><b>${fam}${k === "Sans poteaux" ? ' <span class="badge-nouveau">Nouveau</span>' : ""}</b>${l}</figcaption></figure>`)).join("")}</div>
     <p class="note-carport">Verre feuilleté transparent, opale, fumé gris ou fumé bronze ; tôle en 20 motifs (voir plus bas) ; bois en pin ou frêne thermo-traités, ou douglas.</p>
-    <div class="option-gc">
-      <p><strong>En option, main courante en bois :</strong> à la place de l'aluminium, sur les modèles à poteaux, pour un toucher plus chaleureux.</p>
-      <div class="mc-grille">
-        <img class="mc-profils" src="/assets/img/claustra/main-courante-profils.webp" alt="Profils de main courante : aluminium 60 × 23 mm, bois 90 × 45 mm" width="550" height="320" loading="lazy" decoding="async" data-credit="©Kordo">
-        <ul class="mc-essences">${[["pin", "Pin thermo-traité", "Finlande, PEFC"], ["frene", "Frêne thermo-traité", "Autriche, FSC Mixte 70 %"], ["douglas", "Douglas", "France, PEFC"]].map(([f, n, o]) => `<li><img src="/assets/img/claustra/essence-${f}.webp" alt="${n}" width="183" height="41" loading="lazy" decoding="async" data-credit="©Kordo"><b>${n}</b><small>${o}</small></li>`).join("")}</ul>
-      </div>
-    </div>
   </div>
 </section>
 
@@ -1879,6 +1872,13 @@ ${heroPlein({ fil: "Pergolas & extérieur", h1: ['<span class="pc-nowrap">Garde-
       ["Déporté", "Écarté de la tranche de la dalle grâce à des pattes de fixation."],
       ["En tableau", "Entre deux murs, pour une fenêtre, une loggia ou un balcon encastré."],
     ].map(([t, x]) => `<div class="carte carte-pose"><img src="/assets/img/claustra/${SCHEMAS_POSE[t]}" width="220" height="160" alt="Schéma de pose ${t.toLowerCase()}" loading="lazy" decoding="async"><h3>${t}</h3><p>${x}</p></div>`).join("")}</div>
+    <div class="option-gc">
+      <p><strong>En option, main courante en bois :</strong> à la place de l'aluminium, sur les modèles à poteaux, pour un toucher plus chaleureux.</p>
+      <div class="mc-grille">
+        <img class="mc-profils" src="/assets/img/claustra/main-courante-profils.webp" alt="Profils de main courante : aluminium 60 × 23 mm, bois 90 × 45 mm" width="550" height="320" loading="lazy" decoding="async" data-credit="©Kordo">
+        <ul class="mc-essences">${[["pin", "Pin thermo-traité", "Finlande, PEFC"], ["frene", "Frêne thermo-traité", "Autriche, FSC Mixte 70 %"], ["douglas", "Douglas", "France, PEFC"]].map(([f, n, o]) => `<li><img src="/assets/img/claustra/essence-${f}.webp" alt="${n}" width="183" height="41" loading="lazy" decoding="async" data-credit="©Kordo"><b>${n}</b><small>${o}</small></li>`).join("")}</ul>
+      </div>
+    </div>
   </div>
 </section>
 

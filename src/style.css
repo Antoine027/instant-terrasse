@@ -2048,11 +2048,11 @@ li.mm-sep{border-top:2px solid rgba(47,52,55,.22);margin-top:10px;padding-top:10
 @media (max-width:1060px){.rev-projet{grid-template-columns:repeat(2,1fr)}.rev-projet.rev-3{grid-template-columns:repeat(3,1fr)}.projets-grille{grid-template-columns:repeat(2,1fr)}}
 @media (max-width:700px){.rev-projet,.rev-projet.rev-3{grid-template-columns:1fr 1fr;gap:10px}.rev-projet.rev-3 .rev-carte:first-child{grid-column:1/-1}.rev-badge{font-size:.68rem;padding:4px 9px;left:8px;top:8px}}
 @media (max-width:700px){
-  .rev-projet,.rev-projet.rev-3{grid-template-columns:1fr;gap:10px}
+  .rev-projet,.rev-projet.rev-3{grid-template-columns:1fr;grid-auto-rows:1fr;gap:10px}
   .rev-projet.rev-3 .rev-carte:first-child{grid-column:auto}
   .rev-carte{display:grid!important;grid-template-columns:120px 1fr;align-items:stretch;text-align:left}
   .rev-carte .vignette{height:100%;min-height:110px;aspect-ratio:auto}
-  .rev-carte .vignette img{width:100%!important;height:100%!important;object-fit:cover}
+  .rev-carte .vignette img{position:absolute;inset:0;width:100%!important;height:100%!important;object-fit:cover}
   .rev-carte .carte-corps{padding:12px 14px;text-align:left}
   .rev-carte .carte-corps h3{margin:0 0 4px;font-size:1.05rem}
   .rev-carte .carte-corps p{font-size:.92rem;margin:0}

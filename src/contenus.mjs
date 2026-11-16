@@ -1610,6 +1610,11 @@ ${heroPlein({ fil: "Pergolas & extérieur", h1: ['<span class="pc-nowrap">Store 
       ["Coffre compact", "Toile et bras se rangent dans le coffre une fois le store replié.", ["Plaqué contre le mur sur certains modèles", "Armature aluminium thermolaquée", "Six teintes, plus de 200 en option"]],
     ].map(([t, x, pts]) => `<div class="carte"><h3>${t}</h3><p>${x}</p><ul class="puces">${pts.map((q) => `<li>${q}</li>`).join("")}</ul></div>`).join("")}</div>
     <p class="note-carport">Dimensions maximales selon le modèle. Données fabricant.</p>
+    <div class="conseil-encadre">
+      <p class="conseil-titre">Notre conseil</p>
+      <p><strong>Attention : un store banne n'est pas toujours la solution adaptée.</strong> Selon l'exposition de l'espace à protéger, il peut ne pas suffire et ne pas vous protéger au moment le plus important. C'est parfois le cas en fin de journée sur une terrasse exposée à l'ouest : le soleil, bas sur l'horizon, passe sous la toile.</p>
+      <p>Il faut alors une protection verticale, et non horizontale : un <a href="/pergola-bioclimatique-lyon/#options">store vertical</a>, un <a href="/garde-corps-aluminium-lyon/">brise-vue</a> ou une <a href="/pergolas-lyon/">pergola</a> équipée d'un store vertical. Lors du rendez-vous, nous regardons l'orientation de votre terrasse et les heures où vous l'utilisez.</p>
+    </div>
   </div>
 </section>
 

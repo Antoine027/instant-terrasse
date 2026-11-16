@@ -1854,7 +1854,7 @@ ${heroPlein({ fil: "Pergolas & extérieur", h1: ['<span class="pc-nowrap">Garde-
 <section id="motifs" class="bloc">
   <div class="conteneur">
     <h2>Les motifs de tôle découpée</h2>
-    <p class="chapo">Vingt motifs au choix, ou le vôtre : il suffit d'un dessin (fichier DXF ou STEP), de la référence d'une tôle existante ou d'une photo.</p>
+    <p class="chapo">Vingt motifs au choix, pour un garde-corps, une claustra ou un pare-vue.</p>
     <div class="motifs-tous">${MOTIFS_GC.flatMap(([fam, liste]) => liste.map(([f, n]) => `<figure><img src="/assets/img/claustra/motifs/${f}.webp" alt="Motif de tôle ${n}" width="200" height="200" loading="lazy" decoding="async" data-credit="©Kordo"><figcaption>${n}</figcaption></figure>`)).join("")}</div>
   </div>
 </section>

@@ -317,11 +317,11 @@ ${heroPlein({ fil: "Terrasses", h1: ['<span class="pc-nowrap">Structure aluminiu
     <h2>Quelle structure pour votre terrain&nbsp;?</h2>
     <p class="chapo">Nous vérifions votre support dès le rendez-vous.</p>
     <ul class="terrains-liste">
-      <li><strong>Sol dur</strong><span>Dalle béton, ancienne terrasse : la structure se pose directement, sur cales, ou sur plots pour rattraper une hauteur.</span></li>
-      <li><strong>Sol stabilisé</strong><span>Sur concassé : les plots réglables reprennent les écarts, sans couler de béton.</span></li>
-      <li><strong>Toit-terrasse</strong><span>La structure repose sur l'étanchéité sans la percer. Voir le <a href="/toit-terrasse-lyon/">toit-terrasse</a>.</span></li>
-      <li><strong>Terrasse surélevée</strong><span>Avec des réhausses, les plots montent jusqu'à environ 40&nbsp;cm. Au-delà, poutres et poteaux. C'est la <a href="/terrasse-sur-pilotis-lyon/">terrasse sur pilotis</a>.</span></li>
-      <li><strong>Terrain en pente</strong><span>Les plots permettent de régler la hauteur de la terrasse et de s'adapter au terrain en pente et aux différences de niveau.</span></li>
+      <li><svg class="schema-terrain" viewBox="0 0 120 64" aria-hidden="true"><rect x="6" y="40" width="108" height="18" fill="#c3c7ca"/><rect x="20" y="26" width="6" height="14" fill="#2F3437"/><rect x="57" y="26" width="6" height="14" fill="#2F3437"/><rect x="94" y="26" width="6" height="14" fill="#2F3437"/><rect x="12" y="20" width="96" height="6" rx="1" fill="#a4744a"/></svg><strong>Sol dur</strong><span>Dalle béton, ancienne terrasse : la structure se pose directement, sur cales, ou sur plots pour rattraper une hauteur.</span></li>
+      <li><svg class="schema-terrain" viewBox="0 0 120 64" aria-hidden="true"><rect x="6" y="40" width="108" height="18" fill="#ddd2bf"/><circle cx="14" cy="46" r="2" fill="#b3a68e"/><circle cx="30" cy="52" r="2" fill="#b3a68e"/><circle cx="46" cy="47" r="2" fill="#b3a68e"/><circle cx="62" cy="53" r="2" fill="#b3a68e"/><circle cx="78" cy="46" r="2" fill="#b3a68e"/><circle cx="94" cy="51" r="2" fill="#b3a68e"/><circle cx="108" cy="47" r="2" fill="#b3a68e"/><rect x="20" y="26" width="6" height="14" fill="#2F3437"/><rect x="57" y="26" width="6" height="14" fill="#2F3437"/><rect x="94" y="26" width="6" height="14" fill="#2F3437"/><rect x="12" y="20" width="96" height="6" rx="1" fill="#a4744a"/></svg><strong>Sol stabilisé</strong><span>Sur concassé : les plots réglables reprennent les écarts, sans couler de béton.</span></li>
+      <li><svg class="schema-terrain" viewBox="0 0 120 64" aria-hidden="true"><rect x="6" y="40" width="108" height="18" fill="#8f969a"/><rect x="6" y="38" width="108" height="3" fill="#2F3437"/><rect x="20" y="26" width="6" height="12" fill="#2F3437"/><rect x="57" y="26" width="6" height="12" fill="#2F3437"/><rect x="94" y="26" width="6" height="12" fill="#2F3437"/><rect x="12" y="20" width="96" height="6" rx="1" fill="#a4744a"/></svg><strong>Toit-terrasse</strong><span>La structure repose sur l'étanchéité sans la percer. Voir le <a href="/toit-terrasse-lyon/">toit-terrasse</a>.</span></li>
+      <li><svg class="schema-terrain" viewBox="0 0 120 64" aria-hidden="true"><rect x="6" y="56" width="108" height="4" fill="#c9bca5"/><rect x="20" y="26" width="6" height="30" fill="#2F3437"/><rect x="57" y="26" width="6" height="30" fill="#2F3437"/><rect x="94" y="26" width="6" height="30" fill="#2F3437"/><rect x="12" y="20" width="96" height="6" rx="1" fill="#a4744a"/></svg><strong>Terrasse surélevée</strong><span>Avec des réhausses, les plots montent jusqu'à environ 40&nbsp;cm. Au-delà, poutres et poteaux. C'est la <a href="/terrasse-sur-pilotis-lyon/">terrasse sur pilotis</a>.</span></li>
+      <li><svg class="schema-terrain" viewBox="0 0 120 64" aria-hidden="true"><polygon points="6,60 114,36 114,62 6,62" fill="#ddd2bf"/><rect x="20" y="26" width="6" height="32" fill="#2F3437"/><rect x="57" y="26" width="6" height="24" fill="#2F3437"/><rect x="94" y="26" width="6" height="15" fill="#2F3437"/><rect x="12" y="20" width="96" height="6" rx="1" fill="#a4744a"/></svg><strong>Terrain en pente</strong><span>Les plots permettent de régler la hauteur de la terrasse et de s'adapter au terrain en pente et aux différences de niveau.</span></li>
     </ul>
   </div>
 </section>
@@ -1207,6 +1207,39 @@ const terrasseCamping = {
 };
 
 // ---------- Carport (refonte 14/11/2026, fiches produit fournisseur fournies par Antoine) ----------
+// Schéma isométrique d'une pergola, à l'échelle relative des modèles (W = largeur ; stores = store zippé baissé ; toile = toit en toile ; facade = fixée au mur, 2 poteaux, toit en pente)
+const schemaPergola = (W, { stores = false, toile = false, facade = false, toit: typeToit = toile ? "toile" : "lames", voiture = false } = {}) => {
+  const D = 55, H = 50, c = Math.cos(Math.PI / 6), s = 0.5, ox = 130 - (W - D) * c / 2, oy = 166 - (W + D + 24) * s;
+  const P = (x, y, z) => `${(ox + (x - y) * c).toFixed(1)},${(oy + (x + y) * s - z).toFixed(1)}`;
+  const z = (y) => (facade ? H + 20 - (20 * y) / (D + 4) : H); // hauteur du dessous du toit
+  const poteau = (x, y) => `<polygon points="${P(x, y, 0)} ${P(x + 4, y, 0)} ${P(x + 4, y, z(y))} ${P(x, y, z(y))}" fill="#3d4246"/><polygon points="${P(x + 4, y, 0)} ${P(x + 4, y + 4, 0)} ${P(x + 4, y + 4, z(y))} ${P(x + 4, y, z(y))}" fill="#2F3437"/>`;
+  const sol = `<polygon points="${P(-8, -8, 0)} ${P(W + 12, -8, 0)} ${P(W + 12, D + 12, 0)} ${P(-8, D + 12, 0)}" fill="#F0E8DA"/>`;
+  const mur = facade ? `<polygon points="${P(-8, 0, 0)} ${P(W + 12, 0, 0)} ${P(W + 12, 0, H + 40)} ${P(-8, 0, H + 40)}" fill="#ddd2bf" stroke="#c9bca5" stroke-width="1"/>` : "";
+  let toit;
+  if (typeToit === "panneaux" || typeToit === "bac") {
+    const fond = typeToit === "bac" ? "#6f767a" : "#c3c7ca", pas = typeToit === "bac" ? 5 : 16, trait = typeToit === "bac" ? "#4d5458" : "#e6e8e9";
+    toit = `<polygon points="${P(2, 2, z(2) + 6)} ${P(W + 2, 2, z(2) + 6)} ${P(W + 2, D + 2, z(D + 2) + 6)} ${P(2, D + 2, z(D + 2) + 6)}" fill="${fond}"/>`;
+    for (let x = pas; x < W; x += pas) toit += `<polyline points="${P(x, 2, z(2) + 6)} ${P(x, D + 2, z(D + 2) + 6)}" fill="none" stroke="${trait}" stroke-width="1.2"/>`;
+  } else if (typeToit === "toile") {
+    toit = `<polygon points="${P(2, 2, z(2) + 6)} ${P(W + 2, 2, z(2) + 6)} ${P(W + 2, D + 2, z(D + 2) + 6)} ${P(2, D + 2, z(D + 2) + 6)}" fill="#efe3cc"/>`;
+    for (let y = 9; y < D; y += 9) toit += `<polyline points="${P(2, y, z(y) + 6)} ${P(W + 2, y, z(y) + 6)}" fill="none" stroke="#d2c2a4" stroke-width="1.2"/>`;
+  } else {
+    toit = `<polygon points="${P(2, 2, H + 6)} ${P(W + 2, 2, H + 6)} ${P(W + 2, D + 2, H + 6)} ${P(2, D + 2, H + 6)}" fill="#8f969a"/>`;
+    for (let x = 6; x < W - 4; x += 7) toit += `<polygon points="${P(x, 2, H + 6)} ${P(x + 4.5, 2, H + 6)} ${P(x + 4.5, D + 2, H + 6)} ${P(x, D + 2, H + 6)}" fill="#c9ccce"/>`;
+  }
+  const yb = D + 4;
+  const cadre = `<polygon points="${P(0, 0, z(0) + 10)} ${P(W + 4, 0, z(0) + 10)} ${P(W + 4, yb, z(yb) + 10)} ${P(0, yb, z(yb) + 10)}" fill="none" stroke="#2F3437" stroke-width="3" stroke-linejoin="round"/>
+  <polygon points="${P(0, yb, z(yb) + 10)} ${P(W + 4, yb, z(yb) + 10)} ${P(W + 4, yb, z(yb))} ${P(0, yb, z(yb))}" fill="#3d4246"/><polygon points="${P(W + 4, 0, z(0) + 10)} ${P(W + 4, yb, z(yb) + 10)} ${P(W + 4, yb, z(yb))} ${P(W + 4, 0, z(0))}" fill="#2F3437"/>`;
+  const store = stores ? `<polygon points="${P(4, yb, z(yb))} ${P(W, yb, z(yb))} ${P(W, yb, z(yb) * 0.45)} ${P(4, yb, z(yb) * 0.45)}" fill="#D79A3A" fill-opacity=".55"/>` : "";
+  const arriere = facade ? "" : poteau(0, 0) + poteau(W, 0);
+  const boite = (x0, x1, y0, y1, z0, z1, c1, c2, c3) => `<polygon points="${P(x0, y1, z0)} ${P(x1, y1, z0)} ${P(x1, y1, z1)} ${P(x0, y1, z1)}" fill="${c1}"/><polygon points="${P(x1, y0, z0)} ${P(x1, y1, z0)} ${P(x1, y1, z1)} ${P(x1, y0, z1)}" fill="${c2}"/><polygon points="${P(x0, y0, z1)} ${P(x1, y0, z1)} ${P(x1, y1, z1)} ${P(x0, y1, z1)}" fill="${c3}"/>`;
+  const auto = voiture ? boite(W * 0.12, W * 0.88, 14, D - 10, 3, 15, "#D79A3A", "#b97f2a", "#e8b866") + boite(W * 0.3, W * 0.7, 17, D - 13, 15, 24, "#9fb3bf", "#7f95a2", "#c5d3db") : "";
+  return `<svg class="schema-pergola" viewBox="0 -12 260 180" role="img" aria-hidden="true">${sol}${mur}${arriere}${poteau(0, D)}${auto}${toit}${cadre}${store}${poteau(W, D)}</svg>`;
+};
+const SCHEMAS_BIOCLIM = [schemaPergola(72), schemaPergola(102), schemaPergola(130, { stores: true })];
+const SCHEMAS_TOIT_FIXE = [schemaPergola(130, { toit: "panneaux" }), schemaPergola(130, { toit: "bac" }), schemaPergola(105, { toit: "toile" })];
+const SCHEMAS_CARPORT = [schemaPergola(130, { toit: "panneaux", voiture: true }), schemaPergola(130, { toit: "bac", voiture: true }), schemaPergola(110, { toit: "toile", voiture: true })];
+const SCHEMAS_TOILE = [schemaPergola(100, { toile: true }), schemaPergola(130, { toile: true, stores: true }), schemaPergola(88, { toile: true, facade: true })];
 const TOITURES_CARPORT = [
   ["Panneaux sandwich", "Une toiture pleine et opaque : aluminium thermolaqué de part et d'autre d'un cœur en polystyrène extrudé, avec une sous-face lisse.", ["Jusqu'à 7 × 5 m (35 m²)", "Jusqu'à 3 m de hauteur", "Jusqu'à 200 kg/m² de neige*"]],
   ["Bac acier", "Une tôle d'acier nervurée de 0,8 mm, avec un régulateur de condensation sous la tôle.", ["Jusqu'à 7 × 5 m (35 m²)", "Jusqu'à 3 m de hauteur", "Jusqu'à 200 kg/m² de neige*"]],
@@ -1225,7 +1258,7 @@ ${heroPlein({ fil: "Pergolas & extérieur", h1: ['<span class="pc-nowrap">Carpor
   <div class="conteneur">
     <h2>Trois toitures au choix</h2>
     <p class="chapo">La même ossature en aluminium thermolaqué, trois façons de la couvrir.</p>
-    <div class="grille grille-3 atouts-car">${TOITURES_CARPORT.map(([t, x, pts]) => `<div class="carte"><h3>${t}</h3><p>${x}</p><ul class="puces">${pts.map((q) => `<li>${q}</li>`).join("")}</ul></div>`).join("")}</div>
+    <div class="grille grille-3 atouts-car">${TOITURES_CARPORT.map(([t, x, pts], i) => `<div class="carte">${SCHEMAS_CARPORT[i] ?? ""}<h3>${t}</h3><p>${x}</p><ul class="puces">${pts.map((q) => `<li>${q}</li>`).join("")}</ul></div>`).join("")}</div>
     <p class="note-carport">*Charge de neige maximale pour les plus petites largeurs ; elle diminue quand la largeur augmente. Données fabricant.</p>
   </div>
 </section>
@@ -1306,31 +1339,6 @@ const FERMETURES_PERGOLA = [
   ["Claustra à lames", "Fixe ou coulissante, avec 85 % ou 100 % d'occultation au choix, pour un espace semi-fermé.", "Jusqu'à 2,6 m de haut"],
   ["Brise-vue grandes lames", "Fixe, en lames aluminium horizontales ou verticales, effet chêne clair en option.", "Jusqu'à 3 m de haut"],
 ];
-// Schéma isométrique d'une pergola, à l'échelle relative des modèles (W = largeur ; stores = store zippé baissé ; toile = toit en toile ; facade = fixée au mur, 2 poteaux, toit en pente)
-const schemaPergola = (W, { stores = false, toile = false, facade = false } = {}) => {
-  const D = 55, H = 50, c = Math.cos(Math.PI / 6), s = 0.5, ox = 130 - (W - D) * c / 2, oy = 166 - (W + D + 24) * s;
-  const P = (x, y, z) => `${(ox + (x - y) * c).toFixed(1)},${(oy + (x + y) * s - z).toFixed(1)}`;
-  const z = (y) => (facade ? H + 20 - (20 * y) / (D + 4) : H); // hauteur du dessous du toit
-  const poteau = (x, y) => `<polygon points="${P(x, y, 0)} ${P(x + 4, y, 0)} ${P(x + 4, y, z(y))} ${P(x, y, z(y))}" fill="#3d4246"/><polygon points="${P(x + 4, y, 0)} ${P(x + 4, y + 4, 0)} ${P(x + 4, y + 4, z(y))} ${P(x + 4, y, z(y))}" fill="#2F3437"/>`;
-  const sol = `<polygon points="${P(-8, -8, 0)} ${P(W + 12, -8, 0)} ${P(W + 12, D + 12, 0)} ${P(-8, D + 12, 0)}" fill="#F0E8DA"/>`;
-  const mur = facade ? `<polygon points="${P(-8, 0, 0)} ${P(W + 12, 0, 0)} ${P(W + 12, 0, H + 40)} ${P(-8, 0, H + 40)}" fill="#ddd2bf" stroke="#c9bca5" stroke-width="1"/>` : "";
-  let toit;
-  if (toile) {
-    toit = `<polygon points="${P(2, 2, z(2) + 6)} ${P(W + 2, 2, z(2) + 6)} ${P(W + 2, D + 2, z(D + 2) + 6)} ${P(2, D + 2, z(D + 2) + 6)}" fill="#efe3cc"/>`;
-    for (let y = 9; y < D; y += 9) toit += `<polyline points="${P(2, y, z(y) + 6)} ${P(W + 2, y, z(y) + 6)}" fill="none" stroke="#d2c2a4" stroke-width="1.2"/>`;
-  } else {
-    toit = `<polygon points="${P(2, 2, H + 6)} ${P(W + 2, 2, H + 6)} ${P(W + 2, D + 2, H + 6)} ${P(2, D + 2, H + 6)}" fill="#8f969a"/>`;
-    for (let x = 6; x < W - 4; x += 7) toit += `<polygon points="${P(x, 2, H + 6)} ${P(x + 4.5, 2, H + 6)} ${P(x + 4.5, D + 2, H + 6)} ${P(x, D + 2, H + 6)}" fill="#c9ccce"/>`;
-  }
-  const yb = D + 4;
-  const cadre = `<polygon points="${P(0, 0, z(0) + 10)} ${P(W + 4, 0, z(0) + 10)} ${P(W + 4, yb, z(yb) + 10)} ${P(0, yb, z(yb) + 10)}" fill="none" stroke="#2F3437" stroke-width="3" stroke-linejoin="round"/>
-  <polygon points="${P(0, yb, z(yb) + 10)} ${P(W + 4, yb, z(yb) + 10)} ${P(W + 4, yb, z(yb))} ${P(0, yb, z(yb))}" fill="#3d4246"/><polygon points="${P(W + 4, 0, z(0) + 10)} ${P(W + 4, yb, z(yb) + 10)} ${P(W + 4, yb, z(yb))} ${P(W + 4, 0, z(0))}" fill="#2F3437"/>`;
-  const store = stores ? `<polygon points="${P(4, yb, z(yb))} ${P(W, yb, z(yb))} ${P(W, yb, z(yb) * 0.45)} ${P(4, yb, z(yb) * 0.45)}" fill="#D79A3A" fill-opacity=".55"/>` : "";
-  const arriere = facade ? "" : poteau(0, 0) + poteau(W, 0);
-  return `<svg class="schema-pergola" viewBox="0 -12 260 180" role="img" aria-hidden="true">${sol}${mur}${arriere}${poteau(0, D)}${toit}${cadre}${store}${poteau(W, D)}</svg>`;
-};
-const SCHEMAS_BIOCLIM = [schemaPergola(72), schemaPergola(102), schemaPergola(130, { stores: true })];
-const SCHEMAS_TOILE = [schemaPergola(100, { toile: true }), schemaPergola(130, { toile: true, stores: true }), schemaPergola(88, { toile: true, facade: true })];
 const pagePergolaRiche = ({ titreConfort = "Confort et automatismes", h1, kicker, chapo, photo, position, ancre, titreModeles, introModeles, modeles, schemas, noteModeles, atoutsTitre, atouts, confort, galerieCat, titreGalerie, gauche, faqTitre, faq, ici, ctaTitre }) => `
 ${heroPlein({ fil: "Pergolas & extérieur", h1, kicker, chapo, photo, position,
   actions: `<a class="bouton" href="/contact/">Demander un devis gratuit</a> <a class="bouton bouton-blanc" href="#modeles">${ancre}</a>` })}
@@ -1502,6 +1510,7 @@ const pergolaToitFixe = {
       ["Et en toile ?", "Pour un aspect plus léger, la pergola à toile tendue reprend la même structure avec une toile opaque et imperméable.", ["Jusqu'à 6 × 4 m (24 m²)", "Jusqu'à 2,6 m de hauteur", "Jusqu'à 130 kg/m² de neige*"]],
     ],
     noteModeles: "*Charge de neige maximale pour les plus petites largeurs ; elle diminue quand la largeur augmente. Données fabricant.",
+    schemas: SCHEMAS_TOIT_FIXE,
     atoutsTitre: "Un abri sans entretien",
     atouts: [
       ["goutte", "Abri permanent", "Une toiture pleine contre la pluie, la grêle et le soleil, en toute saison."],
@@ -1992,6 +2001,7 @@ ${heroPlein({ fil: "Pergolas & extérieur", h1: ["Quelle pergola", "pour votre t
 <section id="comparatif" class="bloc">
   <div class="conteneur">
     <h2>Le comparatif</h2>
+    <div class="schemas-trio">${[["Bioclimatique", schemaPergola(110)], ["Toile rétractable", schemaPergola(110, { toile: true })], ["Toit fixe", schemaPergola(110, { toit: "panneaux" })]].map(([n, s]) => `<figure>${s}<figcaption>${n}</figcaption></figure>`).join("")}</div>
     <p class="chapo">Les trois se font sur mesure, en aluminium, dans la teinte de vos menuiseries. Ce qui les distingue, c'est la toiture.</p>
     <div class="tableau-defile comp-table">
       <table class="comparatif comparatif-4">
@@ -2267,6 +2277,8 @@ const articleBoisComposite = {
     <p>Le <a href="/terrasse-bois-lyon/">bois</a> que nous proposons est du bois massif : thermofrêne, kebony, thermopin, accoya et bambou pour nos essences phares, et d'autres essences comme le pin, le mélèze, le douglas, l'ipé ou le cumaru sur structure traditionnelle. Chaque lame est différente, et la teinte évolue avec le soleil et la pluie.</p>
     <p>Le <a href="/terrasse-composite-lyon/">composite</a> associe des fibres de bois et des polymères. Nous en proposons deux gammes haut de gamme : une lame <strong>co-extrudée</strong> (un cœur et une coque de deux matériaux différents) et une lame <strong>pleine masse</strong>, composée à 75 % de fibres de bois PEFC, sans PVC ni plastifiant.</p>
 
+    <figure class="fig-article"><div class="fig-duo">${imgPhoto("terrasse-kebony-vue-jardin", { sizes: "(max-width:760px) 48vw, 380px" })}${imgPhoto("composite-brun-cour-table", { sizes: "(max-width:760px) 48vw, 380px" })}</div><figcaption>À gauche, une terrasse en bois (kebony) ; à droite, en composite. Illustrations.</figcaption></figure>
+
     <h2>Le comparatif point par point</h2>
     <div class="tableau-defile"><table class="comparatif">
       <thead><tr><th scope="col">Critère</th><th scope="col">Bois</th><th scope="col">Composite</th></tr></thead>
@@ -2345,6 +2357,8 @@ const articleAmenagement = {
     </ul>
     <p>Attention à l'ouest : en fin de journée, le soleil est bas et passe sous une toile horizontale. Il faut alors une protection verticale (store vertical, brise-vue ou pergola équipée d'un store), et non horizontale.</p>
 
+    <figure class="fig-article">${imgPhoto("pergola-bioclimatique-salon-piscine", { sizes: "(max-width:760px) 100vw, 760px" })}<figcaption>Une pergola pensée en même temps que la terrasse. Illustration.</figcaption></figure>
+
     <h2>4. Se protéger des regards et sécuriser</h2>
     <p>Des claustras ou des pare-vues créent de l'intimité face aux voisins. Dès que la terrasse est surélevée, un <a href="/garde-corps-aluminium-lyon/">garde-corps</a> devient nécessaire : en verre pour garder la vue, en barreaux, en tôle découpée ou en bois pour plus d'intimité.</p>
 
@@ -2416,6 +2430,7 @@ const articleNettoyage = {
     </table></div>
 
     <h2>Ce qui compte autant que l'entretien : la structure</h2>
+    <figure class="fig-article">${imgPhoto("structure-plot-rail-lame", { sizes: "(max-width:760px) 100vw, 760px" })}<figcaption>Sur structure aluminium, la lame ne touche pas le rail : l'air circule dessous. Illustration.</figcaption></figure>
     <p>Sur notre <a href="/structure-terrasse-lyon/">structure aluminium</a>, les lames ne touchent pas le sol et 6 mm d'espace entre les lames et les rails laissent l'air circuler : rien ne pourrit sous la terrasse. La structure (plots, rails et clips) est garantie 20 ans.</p>
 
     <h2>Et si vous ne voulez pas d'entretien ?</h2>
@@ -2498,6 +2513,14 @@ const articleAutorisation = {
     <h2>La notion clé : l'emprise au sol</h2>
     <p>L'emprise au sol, c'est la surface couverte par la construction, vue du dessus. Une pergola de 4 × 5 m crée 20 m² d'emprise au sol, même si elle n'a pas de murs. C'est cette surface qui détermine la démarche.</p>
 
+    <figure class="fig-article"><svg class="schema-article" viewBox="0 0 330 190" role="img" aria-label="Schéma vu du dessus : une pergola de 4 × 5 m crée 20 m² d'emprise au sol">
+      <rect x="20" y="20" width="120" height="150" fill="#ddd2bf"/><text x="80" y="100" text-anchor="middle" font-size="13" fill="#55595c" font-family="Lato,sans-serif">Maison</text>
+      <rect x="140" y="40" width="150" height="120" fill="#D79A3A" fill-opacity=".25" stroke="#D79A3A" stroke-width="2" stroke-dasharray="6 4"/>
+      ${[[140, 40], [282, 40], [140, 152], [282, 152]].map(([x, y]) => `<rect x="${x}" y="${y}" width="8" height="8" fill="#2F3437"/>`).join("")}
+      <text x="215" y="96" text-anchor="middle" font-size="14" font-weight="700" fill="#2F3437" font-family="Lato,sans-serif">20 m²</text><text x="215" y="114" text-anchor="middle" font-size="11" fill="#55595c" font-family="Lato,sans-serif">d'emprise au sol</text>
+      <text x="215" y="180" text-anchor="middle" font-size="12" fill="#2F3437" font-family="Lato,sans-serif">5 m</text><text x="306" y="104" font-size="12" fill="#2F3437" font-family="Lato,sans-serif">4 m</text>
+    </svg><figcaption>Vue du dessus : même sans murs, une pergola de 4 × 5 m crée 20 m² d'emprise au sol.</figcaption></figure>
+
     <h2>Terrasse</h2>
     <ul>
       <li><strong>De plain-pied</strong> (non surélevée ou très faiblement surélevée) : dispensée de formalité, sauf en secteur protégé (site patrimonial remarquable, abords d'un monument historique, site classé), où une déclaration préalable est demandée. Une terrasse au niveau du terrain naturel, sans fondations profondes, ne compte pas dans l'emprise au sol.</li>
@@ -2557,6 +2580,19 @@ const articleGardeCorps = {
     <h2>Quelle hauteur pour le garde-corps ?</h2>
     <p>Dans les bâtiments d'habitation, aux étages autres que le rez-de-chaussée, le Code de la construction et de l'habitation impose que les garde-corps des balcons, terrasses, galeries et loggias aient une hauteur d'au moins <strong>1 mètre</strong>. Cette hauteur peut être abaissée à 0,80 m si le garde-corps a plus de 50 cm d'épaisseur (<a href="https://www.legifrance.gouv.fr/jorf/article_jo/JORFARTI000043809536" rel="noopener">article R134-59</a>).</p>
     <p>Attention : la hauteur se mesure depuis l'endroit où l'on peut poser les pieds. Un muret, une jardinière, ou même un revêtement de sol rajouté après coup réduisent la hauteur de protection : il faut en tenir compte.</p>
+
+    <figure class="fig-article"><svg class="schema-article" viewBox="0 0 330 200" role="img" aria-label="Schéma : garde-corps d'au moins 1 m de haut, 11 cm maximum entre barreaux, obligatoire dès 1 m de hauteur de chute">
+      <line x1="10" y1="186" x2="320" y2="186" stroke="#c9bca5" stroke-width="2"/>
+      <rect x="20" y="96" width="190" height="12" fill="#a4744a"/><rect x="40" y="108" width="10" height="78" fill="#8f969a"/><rect x="170" y="108" width="10" height="78" fill="#8f969a"/>
+      <line x1="200" y1="96" x2="200" y2="36" stroke="#2F3437" stroke-width="4"/><line x1="120" y1="96" x2="120" y2="36" stroke="#2F3437" stroke-width="4"/>
+      <line x1="116" y1="36" x2="204" y2="36" stroke="#2F3437" stroke-width="5" stroke-linecap="round"/>
+      ${[134, 148, 162, 176, 190].map((x) => `<line x1="${x}" y1="40" x2="${x}" y2="96" stroke="#2F3437" stroke-width="2"/>`).join("")}
+      <line x1="100" y1="36" x2="100" y2="96" stroke="#D79A3A" stroke-width="1.6"/><line x1="94" y1="36" x2="106" y2="36" stroke="#D79A3A" stroke-width="1.6"/><line x1="94" y1="96" x2="106" y2="96" stroke="#D79A3A" stroke-width="1.6"/>
+      <text x="90" y="64" text-anchor="end" font-size="13" font-weight="700" fill="#2F3437" font-family="Lato,sans-serif">au moins</text><text x="90" y="79" text-anchor="end" font-size="13" font-weight="700" fill="#2F3437" font-family="Lato,sans-serif">1 m</text>
+      <line x1="148" y1="24" x2="162" y2="24" stroke="#D79A3A" stroke-width="1.6"/><text x="155" y="16" text-anchor="middle" font-size="11" fill="#2F3437" font-family="Lato,sans-serif">11 cm max</text>
+      <line x1="232" y1="96" x2="232" y2="186" stroke="#D79A3A" stroke-width="1.6" stroke-dasharray="5 4"/><line x1="226" y1="96" x2="238" y2="96" stroke="#D79A3A" stroke-width="1.6"/><line x1="226" y1="186" x2="238" y2="186" stroke="#D79A3A" stroke-width="1.6"/>
+      <text x="244" y="132" font-size="12" font-weight="700" fill="#2F3437" font-family="Lato,sans-serif">Chute de plus</text><text x="244" y="147" font-size="12" font-weight="700" fill="#2F3437" font-family="Lato,sans-serif">de 1 m :</text><text x="244" y="162" font-size="11" fill="#55595c" font-family="Lato,sans-serif">protection</text><text x="244" y="175" font-size="11" fill="#55595c" font-family="Lato,sans-serif">obligatoire</text>
+    </svg><figcaption>Les cotes à retenir. La hauteur se mesure depuis l'endroit où l'on peut poser les pieds ; 0,80 m suffit si le garde-corps fait plus de 50 cm d'épaisseur.</figcaption></figure>
 
     <h2>Quel remplissage ?</h2>
     <p>Le remplissage doit être assez dense pour qu'un enfant ne puisse pas passer au travers : les écarts entre barreaux verticaux ne doivent pas dépasser <strong>11 cm</strong>. Il doit aussi éviter l'« effet échelle » : des barreaux horizontaux mal disposés permettent d'escalader le garde-corps. Ces points font partie des contrôles des règles de construction menés par les services de l'État.</p>

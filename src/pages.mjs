@@ -382,6 +382,17 @@ const aPropos = `
   <div class="conteneur conteneur-etroit mot-texte">
     <div class="portrait-antoine">${imgPhoto("antoine-escolle-2", { sizes: "150px" })}<p><strong>Antoine Escolle</strong><br>Fondateur d'Instant Terrasse</p></div>
     <h2>Mon parcours</h2>
+    <svg class="frise-parcours" viewBox="0 0 400 150" role="img" aria-label="Parcours d'Antoine : bâtiment en 2016, menuiseries extérieures depuis 2017, terrasse depuis 2021, création d'Instant Terrasse en 2026">
+      <line x1="10" y1="32" x2="390" y2="32" stroke="#ddd2bf" stroke-width="3"/>
+      <g font-family="Lato,sans-serif" font-size="13" font-weight="700" fill="#2F3437"><text x="8" y="18">2016</text><text x="110" y="18" text-anchor="middle">2017</text><text x="230" y="18" text-anchor="middle">2021</text><text x="340" y="18" text-anchor="middle">2026</text></g>
+      <circle cx="22" cy="32" r="6" fill="#2F3437"/><circle cx="110" cy="32" r="6" fill="#D79A3A"/><circle cx="230" cy="32" r="6" fill="#D79A3A"/><circle cx="340" cy="32" r="8" fill="#2F3437"/>
+      <line x1="110" y1="38" x2="110" y2="70" stroke="#D79A3A" stroke-width="1.2" stroke-dasharray="3 3"/><line x1="230" y1="38" x2="230" y2="104" stroke="#D79A3A" stroke-width="1.2" stroke-dasharray="3 3"/><line x1="340" y1="40" x2="340" y2="124" stroke="#2F3437" stroke-width="1.2" stroke-dasharray="3 3"/>
+      <g font-family="Lato,sans-serif" font-size="12" fill="#2F3437"><text x="8" y="56">Bâtiment,</text><text x="8" y="70">aide-maçon</text>
+      <text x="114" y="64">Menuiseries extérieures</text><text x="234" y="98">Terrasse</text></g>
+      <rect x="110" y="70" width="268" height="9" rx="4.5" fill="#D79A3A" fill-opacity=".45"/><polygon points="376,66 392,74.5 376,83" fill="#D79A3A" fill-opacity=".45"/>
+      <rect x="230" y="104" width="148" height="9" rx="4.5" fill="#D79A3A"/><polygon points="376,100 392,108.5 376,117" fill="#D79A3A"/>
+      <text x="340" y="140" text-anchor="middle" font-family="Lato,sans-serif" font-size="12" font-weight="700" fill="#2F3437">Instant Terrasse</text>
+    </svg>
     ${MOT_ANTOINE}
   </div>
 </section>

@@ -122,7 +122,7 @@ export const FAQ = [
   ["Proposez-vous un plan 3D&nbsp;?", "Oui, le plan 3D de votre projet est offert. Vous voyez votre future terrasse, sa hauteur et son matériau avant de vous engager."],
   ["Faut-il une autorisation pour une terrasse ou une pergola&nbsp;?", "Selon la surface, la hauteur et votre commune, une déclaration préalable de travaux peut être nécessaire, notamment pour une pergola ou une terrasse surélevée. Nous vous indiquons la démarche à suivre lors de la visite."],
   ["Pouvez-vous réaliser la terrasse, la pergola et le garde-corps en même temps&nbsp;?", "Oui, et c'est même recommandé : hauteurs, fixations et écoulement des eaux se pensent ensemble. Vous gardez un interlocuteur principal pour tout le projet."],
-  ["Dans quelle zone intervenez-vous&nbsp;?", "À Lyon et dans sa région. Indiquez votre code postal dans la demande de devis, nous vous répondons rapidement."],
+  ["Dans quelle zone intervenez-vous&nbsp;?", "À <a href=\"/terrasse-lyon/\">Lyon et dans sa région</a>, depuis notre siège de <a href=\"/terrasse-rillieux-la-pape/\">Rillieux-la-Pape</a>. Indiquez votre code postal dans la demande de devis, nous vous répondons rapidement."],
 ];
 
 const carteLien = ([chemin, titre, texte]) =>
@@ -309,7 +309,7 @@ ${blocRappel("Parlez-nous de votre projet", "Laissez votre numéro : nous vous r
 <section class="bloc bloc-alt">
   <div class="conteneur conteneur-etroit">
     <h2>Avant votre demande</h2>
-    ${[5, 4, 3, 7].map((i) => FAQ[i]).map(([q, r]) => `<details class="faq"><summary>${q}</summary><div>${r}</div></details>`).join("")}
+    ${[8, 5, 4, 3, 7].map((i) => FAQ[i]).map(([q, r]) => `<details class="faq"><summary>${q}</summary><div>${r}</div></details>`).join("")}
   </div>
 </section>`;
 
@@ -366,7 +366,7 @@ const aPropos = `
   <div class="conteneur conteneur-etroit">
     <p class="fil"><a href="/">Accueil</a> › À propos</p>
     <h1>Instant Terrasse, c'est d'abord une façon de travailler</h1>
-    <p class="chapo">Une entreprise de Rillieux-la-Pape qui conçoit et fournit des terrasses, pergolas, garde-corps, stores bannes et bardages sur mesure, à Lyon et dans sa région.</p>
+    <p class="chapo">Une entreprise de <a href="/terrasse-rillieux-la-pape/">Rillieux-la-Pape</a> qui conçoit et fournit des terrasses, pergolas, garde-corps, stores bannes et bardages sur mesure, à <a href="/terrasse-lyon/">Lyon et dans sa région</a>.</p>
   </div>
 </section>
 <section class="bloc bloc-alt">

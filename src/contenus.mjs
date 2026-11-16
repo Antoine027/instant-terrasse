@@ -2443,6 +2443,7 @@ const articleNettoyage = {
       ["Le saturateur est-il obligatoire ?", "Pas pour le thermofrêne, le thermopin, le kebony et l'accoya. Il est conseillé pour le bambou."],
       ["À quelle fréquence nettoyer ?", "Au minimum deux fois par an, plus souvent à l'ombre et sous les arbres."],
     ],
+    bouton2: ["/terrasse-bois-lyon/", "Voir nos terrasses bois"],
     ctaTitre: "Un projet de terrasse en bois ?",
     suite: [["/terrasse-bois-lyon/", "Terrasse bois", "Nos essences phares et leurs garanties."], ["/terrasse-bois-ou-composite/", "Bois ou composite ?", "La comparaison honnête des deux matériaux."], ["/structure-terrasse-lyon/", "Structures", "Ce qui fait durer une terrasse."]],
   }),

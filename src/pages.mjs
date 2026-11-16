@@ -79,7 +79,6 @@ export const AUTRES = [
   ["/partenaires/", "Partenaires", "Horizon Fenêtre et ESCOM HABITAT."],
   ["/terrasse-lyon/", "Terrasse à Lyon", "Nos projets à Lyon."],
   ["/terrasse-rillieux-la-pape/", "Terrasse à Rillieux-la-Pape", "Nos projets à Rillieux-la-Pape."],
-  ["/terrasse-caluire-et-cuire/", "Terrasse à Caluire-et-Cuire", "Nos projets à Caluire-et-Cuire."],
 ];
 
 export const ENGAGEMENTS = [

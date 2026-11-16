@@ -15,6 +15,11 @@
   },
   "redirects": [
     {
+      "source": "/terrasse-caluire-et-cuire/",
+      "destination": "/terrasse-lyon/",
+      "statusCode": 301
+    },
+    {
       "source": "/nosterrasses/",
       "destination": "/nos-terrasses/",
       "statusCode": 301

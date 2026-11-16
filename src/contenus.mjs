@@ -928,7 +928,6 @@ ${apres ?? autresProjets(ici)}`;
 };
 const bandeau = (titre, long, court, lien, href, image) => `<div class="structure-bandeau"><a class="carte carte-structure" href="${href}"><div><span class="cs-kicker">Comment c'est posé</span><h3>${titre}</h3><p><span class="cs-long">${long}</span><span class="cs-court">${court}</span><span class="cs-lien">${lien}&nbsp;→</span></p></div><span class="cs-img">${image}</span></a></div>`;
 const IMG_STRUCT_ALU = img("structure-aluminium", "Structure aluminium : plot réglable, rail aluminium et clip sous une lame de terrasse", 404);
-const COMMUNES = "Caluire-et-Cuire, Rillieux-la-Pape, Villeurbanne, Écully, Tassin-la-Demi-Lune, Dardilly, Bron, Décines, Meyzieu, Beynost et Miribel";
 
 // ---------- Terrasse de piscine ----------
 const terrassePiscine = {
@@ -959,7 +958,7 @@ const terrassePiscine = {
     ],
     galerieCat: ["terrasse-kebony-piscine-debordement", "alu-piscine-aspect-teck", "terrasse-accoya-gris-piscine", "composite-gris-piscine", "terrasse-thermofrene-piscine-mer", "alu-piscine-blanche-vue", "terrasse-bambou-ndurance-piscine-pierre", "alu-piscine-haricot", "terrasse-kebony-piscine-jardin", "composite-gris-piscine-jardin", "alu-piscine-grise", "terrasse-thermofrene-piscine-naturelle", "alu-piscine-jardin-tropical", "terrasse-accoya-naturel-bord-piscine", "alu-piscine-debordement-baie", "alu-piscine-toit-terrasse", "alu-piscine-carbet", "alu-piscine-debordement-mer"],
     titreGalerie: "Plages de piscine en situation",
-    lyon: ["Votre terrasse de piscine à Lyon et dans sa région", `Nous venons chez vous, à Lyon et dans les communes voisines (${COMMUNES}), avec les échantillons : vous les touchez au soleil, au bord de votre bassin. Nous regardons les niveaux, la margelle, le local technique et l'écoulement de l'eau, puis nous dessinons votre plage en 3D.`, "Création ou rénovation d'une ancienne plage : le support existant est vérifié lors du rendez-vous, avant de choisir la structure."],
+    lyon: ["Votre terrasse de piscine à Lyon et dans sa région", `Nous venons chez vous, à Lyon et dans sa région (voir notre <a href="/terrasse-lyon/">zone d'intervention</a>), avec les échantillons : vous les touchez au soleil, au bord de votre bassin. Nous regardons les niveaux, la margelle, le local technique et l'écoulement de l'eau, puis nous dessinons votre plage en 3D.`, "Création ou rénovation d'une ancienne plage : le support existant est vérifié lors du rendez-vous, avant de choisir la structure."],
     lyonCourt: "Nous venons chez vous, à Lyon et dans sa région, avec les échantillons : niveaux, margelle et local technique sont vérifiés, puis votre plage est dessinée en 3D.",
     faqTitre: "Vos questions sur la terrasse de piscine",
     faq: [
@@ -1002,7 +1001,7 @@ const terrasseBalcon = {
     ],
     galerieCat: ["ambiance-balcon-lames", "terrasse-thermofrene-balcon", "terrasse-accoya-naturel-balcon", "gc-maison-balcon-lisses", "gc-maison-verre-depoli-carrelage", "gc-collectif-verre-depoli-balcons", "structure-lames-alu-balcon-dessous", "carrelage-gris-garde-corps-verre-depoli"],
     titreGalerie: "Balcons en situation",
-    lyon: ["Votre terrasse de balcon à Lyon et dans sa région", `Appartement en ville, résidence récente ou maison : nous venons chez vous, à Lyon et dans les communes voisines (${COMMUNES}), avec les échantillons. Nous mesurons le balcon, vérifions le support, la hauteur du seuil et l'écoulement de l'eau.`, "En copropriété, le règlement peut encadrer l'aspect du sol ou du garde-corps : nous vous aidons à préparer la demande au syndic si besoin."],
+    lyon: ["Votre terrasse de balcon à Lyon et dans sa région", `Appartement en ville, résidence récente ou maison : nous venons chez vous, à Lyon et dans sa région (voir notre <a href="/terrasse-lyon/">zone d'intervention</a>), avec les échantillons. Nous mesurons le balcon, vérifions le support, la hauteur du seuil et l'écoulement de l'eau.`, "En copropriété, le règlement peut encadrer l'aspect du sol ou du garde-corps : nous vous aidons à préparer la demande au syndic si besoin."],
     lyonCourt: "Nous venons chez vous, à Lyon et dans sa région, avec les échantillons : mesures, support, seuil et écoulement de l'eau sont vérifiés.",
     faqTitre: "Vos questions sur le balcon",
     faq: [
@@ -1045,7 +1044,7 @@ const toitTerrasse = {
     ],
     galerieCat: ["carrelage-toit-terrasse-montagnes", "terrasse-bambou-xtreme-toit", "alu-piscine-toit-terrasse", "carrelage-beige-pergola-toit-fixe", "store-banne-toit-terrasse", "ambiance-toit-terrasse", "gc-maison-terrasse-vue", "gc-collectif-verre-lisses-terrasse"],
     titreGalerie: "Toits-terrasses en situation",
-    lyon: ["Votre toit-terrasse à Lyon et dans sa région", `Appartement, maison ou extension : nous venons chez vous, à Lyon et dans les communes voisines (${COMMUNES}). Nous regardons l'accès au toit, l'état de l'étanchéité et les évacuations, puis nous dessinons l'aménagement en 3D : coin repas, salon, plantations.`, "Une toiture n'est pas toujours prévue pour être accessible : sa capacité à porter une terrasse est vérifiée avant tout projet."],
+    lyon: ["Votre toit-terrasse à Lyon et dans sa région", `Appartement, maison ou extension : nous venons chez vous, à Lyon et dans sa région (voir notre <a href="/terrasse-lyon/">zone d'intervention</a>). Nous regardons l'accès au toit, l'état de l'étanchéité et les évacuations, puis nous dessinons l'aménagement en 3D : coin repas, salon, plantations.`, "Une toiture n'est pas toujours prévue pour être accessible : sa capacité à porter une terrasse est vérifiée avant tout projet."],
     lyonCourt: "Nous venons chez vous, à Lyon et dans sa région : accès, étanchéité et évacuations sont vérifiés, puis l'aménagement est dessiné en 3D.",
     faqTitre: "Vos questions sur le toit-terrasse",
     faq: [
@@ -1087,7 +1086,7 @@ const terrassePilotis = {
     ],
     galerieCat: "pilotis",
     titreGalerie: "Terrasses sur pilotis en situation",
-    lyon: ["Votre terrasse sur pilotis à Lyon et dans sa région", `Maison sur un terrain en pente, rez-de-jardin en contrebas, habitation sur plusieurs niveaux : nous venons chez vous, à Lyon et dans les communes voisines (${COMMUNES}). Nous relevons les hauteurs, l'accès au jardin et l'implantation souhaitée.`, "Une terrasse surélevée est une construction à part entière : selon sa hauteur et sa surface, une déclaration préalable ou un permis peut être nécessaire. Nous regardons la règle de votre commune avec vous."],
+    lyon: ["Votre terrasse sur pilotis à Lyon et dans sa région", `Maison sur un terrain en pente, rez-de-jardin en contrebas, habitation sur plusieurs niveaux : nous venons chez vous, à Lyon et dans sa région (voir notre <a href="/terrasse-lyon/">zone d'intervention</a>). Nous relevons les hauteurs, l'accès au jardin et l'implantation souhaitée.`, "Une terrasse surélevée est une construction à part entière : selon sa hauteur et sa surface, une déclaration préalable ou un permis peut être nécessaire. Nous regardons la règle de votre commune avec vous."],
     lyonCourt: "Nous venons chez vous, à Lyon et dans sa région : hauteurs, accès au jardin et implantation sont relevés, puis la terrasse est dessinée en 3D.",
     faqTitre: "Vos questions sur la terrasse sur pilotis",
     faq: [
@@ -1129,7 +1128,7 @@ const terrassePlots = {
     ],
     galerieCat: ["ambiance-dalles-sur-plots", "carrelage-structure-alu-rails-plots", "structure-plot-rail-lame", "structure-rails-plots-detail", "carrelage-bh-sureleve-gazon", "carrelage-bh-pergola-cour", "structure-plot-reglable", "carrelage-structure-alu-calepinage"],
     titreGalerie: "Terrasses et plots en situation",
-    lyon: ["Votre terrasse sur plots à Lyon et dans sa région", `Nous venons chez vous, à Lyon et dans les communes voisines (${COMMUNES}), pour voir le support existant, les hauteurs, les seuils et l'écoulement de l'eau. Selon le support et le revêtement, nous choisissons entre plots seuls et plots avec rails aluminium.`],
+    lyon: ["Votre terrasse sur plots à Lyon et dans sa région", `Nous venons chez vous, à Lyon et dans sa région (voir notre <a href="/terrasse-lyon/">zone d'intervention</a>), pour voir le support existant, les hauteurs, les seuils et l'écoulement de l'eau. Selon le support et le revêtement, nous choisissons entre plots seuls et plots avec rails aluminium.`],
     lyonCourt: "Nous venons chez vous, à Lyon et dans sa région : support, hauteurs et écoulement de l'eau sont vérifiés avant de choisir la pose.",
     faqTitre: "Vos questions sur la terrasse sur plots",
     faq: [
@@ -1275,7 +1274,7 @@ ${heroPlein({ fil: "Pergolas & extérieur", h1: ['<span class="pc-nowrap">Carpor
     <p>Un carport crée de l'emprise au sol. Dans le cas général :</p>
     <ul class="puces"><li>jusqu'à 5 m² : pas de formalité, s'il n'est pas accolé à la maison ;</li><li>de 5 à 20 m² : déclaration préalable ;</li><li>au-delà de 20 m² : permis de construire.</li></ul>
     <p>En zone urbaine d'une commune couverte par un PLU, si celui-ci considère le carport comme une extension de la maison, la déclaration préalable suffit jusqu'à 40 m². Le PLU peut aussi imposer des règles d'aspect et de distance aux limites : renseignez-vous auprès du service urbanisme de votre mairie (source : <a href="https://www.service-public.gouv.fr/particuliers/vosdroits/F36773" rel="noopener">service-public.gouv.fr</a>). Le détail des seuils est dans notre article <a href="/autorisation-terrasse-pergola-carport/">terrasse, pergola, carport : quelle autorisation ?</a></p>
-    <p>Nous venons chez vous, à Lyon et dans sa région (${COMMUNES}), pour voir l'emplacement, l'accès, le sol et les hauteurs. Nous vous indiquons la démarche, et le plan 3D de votre carport est offert.</p>
+    <p>Nous venons chez vous, à Lyon et dans sa région (voir notre <a href="/terrasse-lyon/">zone d'intervention</a>), pour voir l'emplacement, l'accès, le sol et les hauteurs. Nous vous indiquons la démarche, et le plan 3D de votre carport est offert.</p>
   </div>
   <div class="faq-liste">
     <h2>Vos questions sur le carport</h2>
@@ -1373,7 +1372,7 @@ ${heroPlein({ fil: "Pergolas & extérieur", h1, kicker, chapo, photo, position,
   <div class="conteneur lyon-faq">
   <div class="lyon-texte">
     ${gauche}
-    <p>Nous venons chez vous, à Lyon et dans sa région (${COMMUNES}), pour regarder l'orientation, la façade, les fixations et l'écoulement des eaux. Le plan 3D de votre pergola est offert.</p>
+    <p>Nous venons chez vous, à Lyon et dans sa région (voir notre <a href="/terrasse-lyon/">zone d'intervention</a>), pour regarder l'orientation, la façade, les fixations et l'écoulement des eaux. Le plan 3D de votre pergola est offert.</p>
   </div>
   <div class="faq-liste">
     <h2>${faqTitre}</h2>
@@ -1424,7 +1423,7 @@ const pergolaBioclimatique = {
     galerieCat: "pergola-bioclimatique", titreGalerie: "Pergolas bioclimatiques en situation",
     gauche: `<h2>Bien la choisir</h2>
     <p>La taille, l'orientation et l'usage décident de tout : coin repas, salon, cuisine d'été ou bord de piscine. Le sens des lames compte aussi : perpendiculaires à la façade, elles laissent passer davantage de lumière vers la maison.</p>
-    <p>Une pergola peut nécessiter une déclaration préalable selon sa surface et votre commune : nous vous indiquons la démarche lors du rendez-vous.</p>`,
+    <p>Une pergola peut nécessiter une <a href="/autorisation-terrasse-pergola-carport/">déclaration préalable</a> selon sa surface et votre commune : nous vous indiquons la démarche lors du rendez-vous.</p>`,
     faqTitre: "Vos questions sur la pergola bioclimatique",
     faq: [
       ["Une pergola bioclimatique protège-t-elle de la pluie ?", "Oui, lames fermées : l'eau s'écoule par les lames vers les chéneaux intégrés, puis par les poteaux. Pour être aussi protégé sur les côtés par temps de vent, on ajoute des stores zippés ou un vitrage."],
@@ -1471,7 +1470,7 @@ const pergolaToileRetractable = {
     galerieCat: "pergola-toile-retractable", titreGalerie: "Pergolas à toile rétractable en situation",
     gauche: `<h2>Toile ou lames ?</h2>
     <p>La toile rétractable convient si vous cherchez surtout de l'ombre l'été et le ciel dégagé le reste de l'année. La <a href="/pergola-bioclimatique-lyon/">pergola bioclimatique</a> dose plus finement la lumière avec ses lames orientables.</p>
-    <p>Une pergola peut nécessiter une déclaration préalable selon sa surface et votre commune : nous vous indiquons la démarche lors du rendez-vous.</p>`,
+    <p>Une pergola peut nécessiter une <a href="/autorisation-terrasse-pergola-carport/">déclaration préalable</a> selon sa surface et votre commune : nous vous indiquons la démarche lors du rendez-vous.</p>`,
     faqTitre: "Vos questions sur la pergola à toile",
     faq: [
       ["La toile protège-t-elle de la pluie ?", "Oui pour les deux pergolas : la toile est opaque et imperméable, tendue en pente vers les chéneaux. La solution entre store et pergola, elle, ne laisse s'écouler qu'une pluie faible : c'est d'abord une protection solaire."],
@@ -1518,7 +1517,7 @@ const pergolaToitFixe = {
     galerieCat: "pergola-toit-fixe", titreGalerie: "Pergolas à toit fixe en situation",
     gauche: `<h2>Pour qui ?</h2>
     <p>Le toit fixe convient si vous voulez avant tout un espace abrité, utilisable même sous la pluie, sans vous soucier d'ouvrir ou de fermer quoi que ce soit. Si vous voulez aussi faire entrer le soleil, regardez la <a href="/pergola-bioclimatique-lyon/">pergola bioclimatique</a>.</p>
-    <p>La même structure abrite aussi une voiture : c'est notre <a href="/carport-lyon/">carport</a>. Une pergola peut nécessiter une déclaration préalable selon sa surface et votre commune : nous vous indiquons la démarche lors du rendez-vous.</p>`,
+    <p>La même structure abrite aussi une voiture : c'est notre <a href="/carport-lyon/">carport</a>. Une pergola peut nécessiter une <a href="/autorisation-terrasse-pergola-carport/">déclaration préalable</a> selon sa surface et votre commune : nous vous indiquons la démarche lors du rendez-vous.</p>`,
     faqTitre: "Vos questions sur la pergola à toit fixe",
     faq: [
       ["Quelle charge de neige supporte-t-elle ?", "Jusqu'à 200 kg/m² pour les plus petites largeurs, moins pour les plus grandes. Nous vérifions la charge de neige de votre commune, selon sa zone et son altitude, avant de dimensionner."],
@@ -1561,7 +1560,7 @@ const pergolaToileTendue = {
     galerieCat: "pergola-toile-tendue", titreGalerie: "Pergolas à toile tendue en situation",
     gauche: `<h2>Toile tendue ou rétractable ?</h2>
     <p>La toile tendue reste en place toute l'année, sans mécanisme. La <a href="/pergola-toile-retractable-lyon/">toile rétractable</a> se replie quand vous voulez retrouver le ciel.</p>
-    <p>Une pergola peut nécessiter une déclaration préalable selon sa surface et votre commune : nous vous indiquons la démarche lors du rendez-vous.</p>`,
+    <p>Une pergola peut nécessiter une <a href="/autorisation-terrasse-pergola-carport/">déclaration préalable</a> selon sa surface et votre commune : nous vous indiquons la démarche lors du rendez-vous.</p>`,
     faqTitre: "Vos questions sur la pergola à toile tendue",
     faq: [
       ["La toile protège-t-elle de la pluie ?", "Oui : elle est imperméable, et l'eau rejoint la gouttière intégrée puis les poteaux."],
@@ -1640,7 +1639,7 @@ ${heroPlein({ fil: "Pergolas & extérieur", h1: ['<span class="pc-nowrap">Store 
   <div class="lyon-texte">
     <h2>Store banne ou pergola ?</h2>
     <p>Le store banne donne de l'ombre à la demande, sans poteau. Une <a href="/pergola-bioclimatique-lyon/">pergola bioclimatique</a> ou à <a href="/pergola-toit-fixe-lyon/">toit fixe</a> vous abrite aussi de la pluie, et se ferme sur les côtés.</p>
-    <p>La largeur, l'avancée, l'inclinaison et la hauteur de pose dépendent de votre façade : nous venons chez vous, à Lyon et dans sa région (${COMMUNES}), avec les échantillons de toiles. Le plan 3D de votre projet est offert.</p>
+    <p>La largeur, l'avancée, l'inclinaison et la hauteur de pose dépendent de votre façade : nous venons chez vous, à Lyon et dans sa région (voir notre <a href="/terrasse-lyon/">zone d'intervention</a>), avec les échantillons de toiles. Le plan 3D de votre projet est offert.</p>
   </div>
   <div class="faq-liste">
     <h2>Vos questions sur le store banne</h2>
@@ -1719,7 +1718,7 @@ ${heroPlein({ fil: "Pergolas & extérieur", h1: ["Bardage aluminium", "sur mesur
     <h2>Aluminium ou bois ?</h2>
     <p>Le bardage aluminium se choisit pour une façade qui ne bouge pas et un entretien minimal. Le <a href="/bardage-bois-lyon/">bardage bois</a> apporte la chaleur d'un matériau naturel, qui évolue avec le temps.</p>
     <p>${POSE}</p>
-    <p>Nous venons chez vous, à Lyon et dans sa région (${COMMUNES}), avec les échantillons, et vous recevez un plan 3D de votre façade.</p>
+    <p>Nous venons chez vous, à Lyon et dans sa région (voir notre <a href="/terrasse-lyon/">zone d'intervention</a>), avec les échantillons, et vous recevez un plan 3D de votre façade.</p>
   </div>
   <div class="faq-liste">
     <h2>Vos questions sur le bardage aluminium</h2>
@@ -1812,7 +1811,7 @@ ${heroPlein({ fil: "Pergolas & extérieur", h1: ["Bardage bois", "sur mesure"], 
     <h2>Votre projet de bardage</h2>
     <p>Façade, extension, mur de clôture, abri ou sous-face de toiture : la même essence que votre <a href="/terrasse-bois-lyon/">terrasse</a> donne un extérieur cohérent.</p>
     <p>${POSE}</p>
-    <p>Nous venons chez vous, à Lyon et dans sa région (${COMMUNES}), avec les échantillons. Vous préférez une façade sans aucune évolution de teinte ? Découvrez le <a href="/bardage-aluminium-lyon/">bardage aluminium</a>.</p>
+    <p>Nous venons chez vous, à Lyon et dans sa région (voir notre <a href="/terrasse-lyon/">zone d'intervention</a>), avec les échantillons. Vous préférez une façade sans aucune évolution de teinte ? Découvrez le <a href="/bardage-aluminium-lyon/">bardage aluminium</a>.</p>
   </div>
   <div class="faq-liste">
     <h2>Vos questions sur le bardage bois</h2>
@@ -1932,7 +1931,7 @@ ${heroPlein({ fil: "Pergolas & extérieur", h1: ['<span class="pc-nowrap">Garde-
   <div class="lyon-texte">
     <h2>Un garde-corps, c'est d'abord de la sécurité</h2>
     <p>Hauteur, espacement des éléments, résistance du support : un garde-corps répond à des normes précises, plus exigeantes dans les bâtiments recevant du public. Nous définissons le modèle et les fixations selon votre support lors du rendez-vous. Les règles essentielles sont résumées dans notre article <a href="/garde-corps-terrasse-normes/">garde-corps de terrasse : quand est-il obligatoire ?</a></p>
-    <p>Pour une terrasse neuve, surélevée, sur <a href="/terrasse-sur-pilotis-lyon/">pilotis</a> ou un <a href="/toit-terrasse-lyon/">toit-terrasse</a>, le plus simple est de prévoir le garde-corps dès la conception. Nous venons chez vous, à Lyon et dans sa région (${COMMUNES}).</p>
+    <p>Pour une terrasse neuve, surélevée, sur <a href="/terrasse-sur-pilotis-lyon/">pilotis</a> ou un <a href="/toit-terrasse-lyon/">toit-terrasse</a>, le plus simple est de prévoir le garde-corps dès la conception. Nous venons chez vous, à Lyon et dans sa région (voir notre <a href="/terrasse-lyon/">zone d'intervention</a>).</p>
   </div>
   <div class="faq-liste">
     <h2>Vos questions sur le garde-corps</h2>

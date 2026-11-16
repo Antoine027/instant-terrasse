@@ -933,7 +933,7 @@ ${heroPlein({ fil, h1, kicker, chapo, photo, position, actions: actions ?? `<a c
   <div class="conteneur">
     <h2>${revTitre}</h2>
     <p class="chapo">${revIntro}</p>
-    <div class="grille rev-projet rev-${ordre.length}">${ordre.map((m, i) => { const [url, nom] = NOM_MAT[m]; const [ph, txt] = rev[m]; return `<a class="carte carte-lien carte-photo rev-carte${i ? "" : " rev-conseil"}" href="${url}"><div class="vignette">${imgPhoto(ph, { sizes: "(max-width:700px) 44vw, (max-width:1060px) 30vw, 280px" })}${i ? "" : `<span class="rev-badge">Notre conseil</span>`}</div><div class="carte-corps"><h3>${nom}</h3><p>${txt}</p><span class="fleche" aria-hidden="true">→</span></div></a>`; }).join("")}</div>
+    <div class="grille rev-projet rev-${ordre.length}">${ordre.map((m, i) => { const [url, nom] = NOM_MAT[m]; const [ph, txt] = rev[m]; return `<a class="carte carte-lien carte-photo rev-carte" href="${url}"><div class="vignette">${imgPhoto(ph, { sizes: "(max-width:700px) 44vw, (max-width:1060px) 30vw, 280px" })}</div><div class="carte-corps"><h3>${nom}</h3><p>${txt}</p><span class="fleche" aria-hidden="true">→</span></div></a>`; }).join("")}</div>
     ${pose}
     <p class="lien-comparateur"><a href="/nos-terrasses/#trouver">Trouver le revêtement idéal en 5 questions →</a></p>
   </div>
@@ -1792,6 +1792,7 @@ const MOTIFS_GC = [
   ["Linéaire", [["diagonale", "Diagonale"], ["bambou", "Bambou"], ["hexagone", "Hexagone"], ["carre-perfore", "Carré perforé"], ["ligne-perforee", "Ligne perforée"]]],
   ["Géométrique", [["qr-code-perfore", "QR code perforé"], ["faience", "Faïence"], ["losange", "Losange"], ["mosaique", "Mosaïque"], ["triangle", "Triangle"]]],
 ];
+const SCHEMAS_POSE = { "À plat": "pose-a-plat.svg", "En applique": "pose-applique.svg", "Déporté": "pose-deportee.svg", "En tableau": "pose-tableau.svg" };
 const GALERIE_GC = [...PHOTOS.filter((p) => p.categorie === "garde-corps").map((p) => p.cle), "carrelage-gris-garde-corps-verre-depoli", "carrelage-beige-pergola-toit-fixe", "restaurant-terrasse-gabions"];
 const gardeCorps = {
   title: "Garde-corps aluminium Lyon : verre, barreaux, tôle, bois | Instant Terrasse",
@@ -1848,7 +1849,7 @@ ${heroPlein({ fil: "Pergolas & extérieur", h1: ['<span class="pc-nowrap">Garde-
       ["En applique", "Fixé sur la tranche de la dalle : toute la surface de la terrasse reste libre. Le nez de dalle peut être habillé."],
       ["Déporté", "Écarté de la tranche de la dalle grâce à des pattes de fixation."],
       ["En tableau", "Entre deux murs, pour une fenêtre, une loggia ou un balcon encastré."],
-    ].map(([t, x]) => `<div class="carte"><h3>${t}</h3><p>${x}</p></div>`).join("")}</div>
+    ].map(([t, x]) => `<div class="carte carte-pose"><img src="/assets/img/claustra/${SCHEMAS_POSE[t]}" alt="Schéma de pose ${t.toLowerCase()}" loading="lazy" decoding="async"><h3>${t}</h3><p>${x}</p></div>`).join("")}</div>
     <h2 class="titre-confort">Aussi pour les escaliers et les pare-vues</h2>
     <div class="grille grille-3 atouts-car">${[
       ["Garde-corps d'escalier", "Les mêmes remplissages suivent la pente de l'escalier, avec des jonctions de rampant et d'angle."],

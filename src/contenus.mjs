@@ -1663,7 +1663,7 @@ ${heroPlein({ fil: "Pergolas & extérieur", h1: ["Bardage aluminium", "sur mesur
       <p>Nous venons chez vous avec les échantillons : vous comparez les finitions à côté de votre façade, à la lumière du jour, avant de choisir.</p>
       <p>Il est fabriqué par le même fabricant que nos <a href="/terrasse-aluminium-lyon/">lames de terrasse aluminium</a> : terrasse et façade peuvent s'accorder.</p>
     </div>
-    <img class="img-finitions" src="/assets/img/bardage/bardage-alu-finitions.webp" alt="Quatre finitions de bardage aluminium : aspects bois roux, gris, brun et gris bleuté" width="347" height="500" loading="lazy" decoding="async" data-credit="©Aludeck">
+    <div class="lames-alu">${[["1", "aspect bois roux", 109], ["2", "aspect bois gris", 108], ["3", "aspect bois brun", 110], ["4", "aspect bois gris bleuté", 120]].map(([n, a, w]) => `<figure><img src="/assets/img/bardage/bardage-alu-lame-${n}.webp" srcset="/assets/img/bardage/bardage-alu-lame-${n}.webp 1x, /assets/img/bardage/bardage-alu-lame-${n}-2x.webp 2x" alt="Lame de bardage aluminium, ${a}" width="${w}" height="339" loading="lazy" decoding="async" data-credit="©Aludeck"></figure>`).join("")}</div>
   </div>
 </section>
 

@@ -2158,3 +2158,9 @@ main #options .puces,main #toitures .puces,main #autorisation .puces{text-align:
 @media (max-width:700px){.comp-pergola{background:#fff;border-radius:var(--rayon);padding:2px 16px 8px;margin-top:18px}.comp-pergola>div:first-child{border-top:0}}
 @media (min-width:701px){.comp-pergola{display:none}}
 @media (max-width:700px){img[src*="bardage-lame-kebony-"]{transform:scaleY(-1)}}
+
+/* Bardage aluminium : 4 lames verticales (16/11/2026) */
+.lames-alu{display:flex;justify-content:center;gap:14px}
+.lames-alu figure{margin:0;flex:0 0 auto}
+.lames-alu img{display:block;width:96px;height:300px;object-fit:cover;border-radius:10px;box-shadow:0 10px 24px -14px rgba(47,52,55,.5)}
+@media (max-width:700px){.lames-alu{justify-content:flex-start;overflow-x:auto;scroll-snap-type:x mandatory;margin:8px 0 0;padding:4px 0 12px;gap:12px;scrollbar-width:none}.lames-alu::-webkit-scrollbar{display:none}.lames-alu figure{flex:0 0 28%;scroll-snap-align:start}.lames-alu img{width:100%;height:auto;aspect-ratio:96/300}}

@@ -1771,6 +1771,10 @@ ${cta("Un projet de bardage ?")}`,
 
 // ---------- Garde-corps (refonte 16/11/2026, catalogue garde-corps fournisseur fourni par Antoine) ----------
 const VIGNETTES_GC = {
+  "Barreaux": [["gc-lisses-horizontales", "Lisses horizontales", "Garde-corps à lisses horizontales", 169], ["gc-barreaux-verticaux", "Barreaux verticaux", "Garde-corps à barreaux verticaux", 169], ["gc-barreaux-vide", "Vide sous main courante", "Garde-corps à barreaux avec vide sous la main courante", 169]],
+  "Verre": [["gc-verre-integral", "Intégral", "Garde-corps en verre intégral", 169], ["gc-verre-vide", "Vide sous main courante", "Garde-corps en verre avec vide sous la main courante", 169], ["gc-verre-lisses", "Avec lisses", "Garde-corps en verre surmonté de lisses", 169]],
+  "Tôle découpée": [["gc-tole-feuille", "Motif feuille", "Garde-corps en tôle découpée, motif feuille", 169], ["gc-tole-rond", "Rond perforé", "Garde-corps en tôle perforée ronde", 169], ["gc-tole-lisses", "Avec lisses", "Garde-corps en tôle découpée surmontée de lisses", 169]],
+  "Bois": [["gc-bois-vertical", "Vertical", "Garde-corps à lames bois verticales", 169], ["gc-bois-horizontal", "Horizontal", "Garde-corps à lames bois horizontales", 169]],
   "Sans poteaux": [["sans-poteaux-applique", "En applique", "Garde-corps sans poteaux posé en applique", 169], ["sans-poteaux-a-plat", "À plat", "Garde-corps sans poteaux posé à plat", 169]],
   "Garde-corps d'escalier": [["rampant-verre", "Verre", "Garde-corps d'escalier en verre"], ["rampant-lisses", "Lisses", "Garde-corps d'escalier à lisses horizontales"], ["rampant-barreaux", "Barreaux", "Garde-corps d'escalier à barreaux verticaux"]],
   "Claustras et pare-vues": [["claustra-barreaux", "Barreaux", "Claustra aluminium à barreaux"], ["claustra-verre", "Verre", "Claustra aluminium en verre"], ["claustra-tole", "Tôle", "Claustra aluminium en tôle découpée"], ["claustra-bois", "Bois", "Claustra aluminium à lames bois"]],

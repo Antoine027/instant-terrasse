@@ -1729,14 +1729,7 @@ ${heroPlein({ fil: "Pergolas & extérieur", h1: ["Bardage bois", "sur mesure"], 
       ["Largeurs mêlées", "Trois largeurs de bambou posées selon un rythme, pour une façade unique."],
       ["En relief", "Deux épaisseurs de lames combinées donnent du relief à la façade."],
     ].map(([t, x]) => `<div class="carte"><h3>${t}</h3><p>${x}</p></div>`).join("")}</div>
-    <h2 class="titre-confort">Naturel, gris ou brûlé</h2>
-    <div class="grille grille-4">${[
-      ["Naturel", "Le bois évolue et prend une patine grise avec le temps, plus ou moins vite selon l'exposition."],
-      ["Saturateur gris", "Une teinte grise homogène dès la pose, qui anticipe le grisaillement naturel en laissant voir le veinage."],
-      ["Saturateur châtaigne", "Une teinte légèrement brune, proche de celle du bois neuf, qui vieillit de façon plus régulière."],
-      ["Bois brûlé", "Accoya carbonisé en surface selon la technique japonaise du shou sugi ban : un noir profond."],
-    ].map(([t, x]) => `<div class="carte"><h3>${t}</h3><p>${x}</p></div>`).join("")}</div>
-    <p class="note-carport">Saturateurs en phase aqueuse sur thermo épicéa, thermofrêne et thermopin clear, sur commande ; bois brûlé sur commande. *Garanties fabricants, sous conditions.</p>
+    <p class="note-carport">*Garanties fabricants, sous conditions.</p>
   </div>
 </section>
 

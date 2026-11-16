@@ -1880,7 +1880,6 @@ ${heroPlein({ fil: "Pergolas & extérieur", h1: ['<span class="pc-nowrap">Garde-
     <h2>Nos modèles de garde-corps</h2>
     <p class="chapo">Barreaux, verre, tôle découpée ou bois, sur la même structure aluminium, fabriquée sur mesure.</p>
     <div class="modeles-gc">${[["Barreaux", "Barreaux"], ["Verre", "Verre"], ["Tôle découpée", "Tôle découpée"], ["Bois", "Bois"], ["Sans poteaux", "Sans poteaux"]].flatMap(([k, fam]) => VIGNETTES_GC[k].map(([f, l, a, h = 300]) => `<figure><img src="/assets/img/claustra/${f}.webp" alt="${a}" width="300" height="${h}" loading="lazy" decoding="async" data-credit="©Kordo"><figcaption><b>${fam}${k === "Sans poteaux" ? ' <span class="badge-nouveau">Nouveau</span>' : ""}</b>${l}</figcaption></figure>`)).join("")}</div>
-    <p class="note-carport">Verre feuilleté transparent, opale, fumé gris ou fumé bronze ; tôle en 20 motifs (voir plus bas) ; bois en pin ou frêne thermo-traités, ou douglas.</p>
   </div>
 </section>
 

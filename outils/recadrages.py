@@ -16,5 +16,5 @@ for cle, r in json.load(open(os.path.join(RACINE, "outils", "recadrages.json")))
     c = im.crop((x, y, x + cw, y + ch))
     for w in (400, 600, 800, 1000, 1200, 1400):
         if w > cw: continue
-        c.resize((w, round(ch * w / cw)), Image.LANCZOS).save(os.path.join(d, f"{cle}-p-{w}.webp"), "WEBP", quality=80, method=6)
+        c.resize((w, round(ch * w / cw)), Image.LANCZOS).save(os.path.join(d, f"{cle}-p-{w}.webp"), "WEBP", quality=52, method=6)
     print(cle, c.size)

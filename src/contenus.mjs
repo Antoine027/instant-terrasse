@@ -1227,7 +1227,7 @@ ${heroPlein({ fil: "Pergolas & extérieur", h1: ['<span class="pc-nowrap">Carpor
   <div class="conteneur">
     <h2>Trois toitures au choix</h2>
     <p class="chapo">La même ossature en aluminium thermolaqué, trois façons de la couvrir.</p>
-    <div class="grille grille-3">${TOITURES_CARPORT.map(([t, x, pts]) => `<div class="carte"><h3>${t}</h3><p>${x}</p><ul class="puces">${pts.map((q) => `<li>${q}</li>`).join("")}</ul></div>`).join("")}</div>
+    <div class="grille grille-3 atouts-car">${TOITURES_CARPORT.map(([t, x, pts]) => `<div class="carte"><h3>${t}</h3><p>${x}</p><ul class="puces">${pts.map((q) => `<li>${q}</li>`).join("")}</ul></div>`).join("")}</div>
     <p class="note-carport">*Charge de neige maximale pour les plus petites largeurs ; elle diminue quand la largeur augmente. Données fabricant.</p>
   </div>
 </section>
@@ -1250,7 +1250,7 @@ ${heroPlein({ fil: "Pergolas & extérieur", h1: ['<span class="pc-nowrap">Carpor
   <div class="conteneur">
     <h2>Fermer un ou plusieurs côtés</h2>
     <p class="chapo">Pour couper le vent et la pluie battante, cacher le vis-à-vis ou créer un box de rangement. Fermetures dans la teinte de l'ossature, autres teintes RAL en option.</p>
-    <div class="grille grille-3">${[
+    <div class="grille grille-3 atouts-car">${[
       ["Claustra toile", "Fixe ou coulissante. Une toile technique qui bloque jusqu'à 96 % des UV, tout en laissant voir dehors depuis l'intérieur.", "Jusqu'à 7 m de long (6 m en coulissant), 2,6 m de haut"],
       ["Claustra à lames", "Fixe ou coulissante, avec des lames aluminium inclinées : 85 % ou 100 % d'occultation au choix. Lames effet chêne clair en option.", "Jusqu'à 7 m de long (6 m en coulissant), 2,6 m de haut"],
       ["Brise-vue grandes lames", "Fixe, en lames aluminium horizontales ou verticales, contre un mur ou entre deux poteaux. Lames effet chêne clair en option.", "Jusqu'à 3 m de haut"],
@@ -1294,7 +1294,7 @@ ${heroPlein({ fil: "Pergolas & extérieur", h1: ['<span class="pc-nowrap">Carpor
 <section class="bloc bloc-alt">
   <div class="conteneur">
     <h2>Les autres solutions</h2>
-    <div class="grille grille-3">${autresPergolas("/carport-lyon/").slice(0, 3).map(([c, t, x]) => carteProduit(c, t, x)).join("")}</div>
+    <div class="grille grille-3 atouts-car">${autresPergolas("/carport-lyon/").slice(0, 3).map(([c, t, x]) => carteProduit(c, t, x)).join("")}</div>
   </div>
 </section>
 ${cta("Un projet de carport ?", "Laissez votre numéro : nous vous rappelons pour en parler et organiser le rendez-vous, gratuit et sans engagement.")}`,
@@ -1316,7 +1316,7 @@ ${heroPlein({ fil: "Pergolas & extérieur", h1, kicker, chapo, photo, position,
   <div class="conteneur">
     <h2>${titreModeles}</h2>
     <p class="chapo">${introModeles}</p>
-    <div class="grille grille-3">${modeles.map(([t, x, pts]) => `<div class="carte"><h3>${t}</h3><p>${x}</p><ul class="puces">${pts.map((q) => `<li>${q}</li>`).join("")}</ul></div>`).join("")}</div>
+    <div class="grille grille-3 atouts-car">${modeles.map(([t, x, pts]) => `<div class="carte"><h3>${t}</h3><p>${x}</p><ul class="puces">${pts.map((q) => `<li>${q}</li>`).join("")}</ul></div>`).join("")}</div>
     <p class="note-carport">${noteModeles}</p>
   </div>
 </section>
@@ -1332,9 +1332,9 @@ ${heroPlein({ fil: "Pergolas & extérieur", h1, kicker, chapo, photo, position,
   <div class="conteneur">
     <h2>Fermer les côtés</h2>
     <p class="chapo">Pour profiter de la terrasse au printemps et à l'automne, se protéger du vent ou des regards. Fermetures dans la teinte de la structure.</p>
-    <div class="grille grille-3">${FERMETURES_PERGOLA.map(([t, x, d]) => `<div class="carte"><h3>${t}</h3><p>${x}</p><p class="dim-carport">${d}</p></div>`).join("")}</div>
+    <div class="grille grille-3 atouts-car">${FERMETURES_PERGOLA.map(([t, x, d]) => `<div class="carte"><h3>${t}</h3><p>${x}</p><p class="dim-carport">${d}</p></div>`).join("")}</div>
     <h2 class="titre-confort">${titreConfort}</h2>
-    <div class="grille grille-3">${confort.map(([t, x]) => `<div class="carte"><h3>${t}</h3><p>${x}</p></div>`).join("")}</div>
+    <div class="grille grille-3 atouts-car">${confort.map(([t, x]) => `<div class="carte"><h3>${t}</h3><p>${x}</p></div>`).join("")}</div>
   </div>
 </section>
 
@@ -1360,7 +1360,7 @@ ${heroPlein({ fil: "Pergolas & extérieur", h1, kicker, chapo, photo, position,
 <section class="bloc bloc-alt">
   <div class="conteneur">
     <h2>Les autres solutions</h2>
-    <div class="grille grille-3">${autresPergolas(ici).slice(0, 3).map(([c, t, x]) => carteProduit(c, t, x)).join("")}</div>
+    <div class="grille grille-3 atouts-car">${autresPergolas(ici).slice(0, 3).map(([c, t, x]) => carteProduit(c, t, x)).join("")}</div>
   </div>
 </section>
 ${cta(ctaTitre, "Laissez votre numéro : nous vous rappelons pour en parler et organiser le rendez-vous, gratuit et sans engagement.")}`;
@@ -1561,7 +1561,7 @@ ${heroPlein({ fil: "Pergolas & extérieur", h1: ['<span class="pc-nowrap">Store 
   <div class="conteneur">
     <h2>Le store adapté à votre façade</h2>
     <p class="chapo">Six modèles, tous avec coffre : nous choisissons ensemble celui qui convient à la largeur, à la hauteur de pose et à l'exposition.</p>
-    <div class="grille grille-3">${[
+    <div class="grille grille-3 atouts-car">${[
       ["Grandes dimensions", "Pour ombrager une terrasse entière, sans poteau.", ["Jusqu'à 7,16 m de large", "Jusqu'à 4 m d'avancée", "Jusqu'à 11,88 m en deux parties"]],
       ["Inclinaison réglable", "Plus le store est incliné, mieux il coupe le soleil bas du matin ou du soir.", ["De 0 à 60° selon le modèle", "Pose murale ou au plafond", "Sous un balcon ou un avant-toit"]],
       ["Coffre compact", "Toile et bras se rangent dans le coffre une fois le store replié.", ["Plaqué contre le mur sur certains modèles", "Armature aluminium thermolaquée", "Six teintes, plus de 200 en option"]],
@@ -1592,7 +1592,7 @@ ${heroPlein({ fil: "Pergolas & extérieur", h1: ['<span class="pc-nowrap">Store 
 <section id="options" class="bloc">
   <div class="conteneur">
     <h2>Options et confort</h2>
-    <div class="grille grille-3">${[
+    <div class="grille grille-3 atouts-car">${[
       ["Pare-soleil motorisé", "Une toile verticale de 1,5 m de haut, déroulée à la télécommande sous la barre avant : contre le soleil couchant et les regards.", "Motorisé sur 3 modèles, manuel sur un 4e"],
       ["Lambrequin", "Une bande de toile fixe à l'avant du store, pour la finition et un peu d'ombre en plus.", "Jusqu'à 30 cm de haut"],
       ["Éclairage LED", "Intégré aux bras, au coffre ou à la barre avant selon le modèle, blanc chaud ou blanc neutre, à intensité variable.", "Selon le modèle"],
@@ -1632,7 +1632,7 @@ ${heroPlein({ fil: "Pergolas & extérieur", h1: ['<span class="pc-nowrap">Store 
 <section class="bloc bloc-alt">
   <div class="conteneur">
     <h2>Les autres solutions</h2>
-    <div class="grille grille-3">${autresPergolas("/store-banne-lyon/").slice(0, 3).map(([c, t, x]) => carteProduit(c, t, x)).join("")}</div>
+    <div class="grille grille-3 atouts-car">${autresPergolas("/store-banne-lyon/").slice(0, 3).map(([c, t, x]) => carteProduit(c, t, x)).join("")}</div>
   </div>
 </section>
 ${cta("Un projet de store banne ?", "Laissez votre numéro : nous vous rappelons pour en parler et organiser le rendez-vous, gratuit et sans engagement.")}`,
@@ -1992,7 +1992,7 @@ ${heroPlein({ fil: "Pergolas & extérieur", h1: ["Quelle pergola", "pour votre t
 <section class="bloc bloc-alt">
   <div class="conteneur">
     <h2>Découvrir chaque pergola</h2>
-    <div class="grille grille-3">
+    <div class="grille grille-3 atouts-car">
       ${carteProduit("/pergola-bioclimatique-lyon/", "Pergola bioclimatique", "Lames orientables : soleil, ombre ou pluie, vous choisissez.")}
       ${carteProduit("/pergola-toile-retractable-lyon/", "Pergola à toile rétractable", "Une toile qui se déploie et se replie à la demande.")}
       ${carteProduit("/pergola-toit-fixe-lyon/", "Pergola à toit fixe", "Un abri permanent, à l'épreuve de la pluie.")}

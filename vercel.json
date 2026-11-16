@@ -122,7 +122,7 @@
     {
       "source": "/pergola-toile-tendue-lyon/",
       "destination": "/pergola-toit-fixe-lyon/",
-      "permanent": true
+      "statusCode": 301
     }
   ],
   "headers": [

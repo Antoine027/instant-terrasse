@@ -2161,7 +2161,7 @@ const terrasseRillieux = {
   corps: pageProjet({
     ici: "/terrasse-rillieux-la-pape/", fil: "Terrasse à Rillieux-la-Pape",
     h1: ['<span class="pc-nowrap">Terrasse sur mesure</span>', "à Rillieux-la-Pape"], kicker: "Notre siège est à Rillieux-la-Pape",
-    chapo: "Instant Terrasse est née à Rillieux-la-Pape. Pour un projet dans la commune ou les communes voisines, le rendez-vous se cale facilement, échantillons en main.",
+    chapo: "Instant Terrasse est née à Rillieux-la-Pape. Pour un projet dans la commune ou les communes voisines, le rendez-vous se programme facilement, échantillons en main.",
     photo: "terrasse-thermopin-salon-jardin", position: "45% 60%",
     revTitre: "Quel revêtement pour votre terrasse ?", revIntro: "Bois, composite, lames aluminium ou carrelage : nous vous montrons les quatre chez vous, à côté de votre façade.",
     poids: {},

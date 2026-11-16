@@ -2149,3 +2149,5 @@ main #options .puces,main #toitures .puces,main #autorisation .puces{text-align:
   .comp-liste dd{display:block;margin:0 0 8px;padding:10px 14px;background:var(--fond2,#F8F3EB);border-radius:12px;font-size:.92rem;line-height:1.45;text-align:left}
   .comp-liste dd b{display:block;font:700 .7rem Montserrat,sans-serif;letter-spacing:.07em;text-transform:uppercase;color:var(--accent-texte);margin-bottom:3px}
 }
+.mm-vig-struct{background:#fff}
+.mm-vig.mm-vig-struct img{object-fit:contain;padding:3px}

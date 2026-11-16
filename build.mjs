@@ -66,6 +66,8 @@ const ICONES_MENU = {
   professionnels: ic('<rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/><path d="M3 13h18"/>'),
 };
 
+// Menu « Terrasses » : revêtements + types de projets en deuxième colonne (16/11/2026, l'onglet « Types de projets » est supprimé du menu).
+const menuTerrasses = (u) => ({ ...u, groupes: [{ ...u.groupes[0], nom: "Par revêtement" }, { nom: "Par projet", compact: true, pages: UNIVERS.find((x) => x.cle === "projets").groupes.flatMap((g) => g.pages) }] });
 const menuUnivers = (u0, actuel) => {
   const u = { ...u0, groupes: u0.groupes.map((g) => ({ ...g, pages: u0.menuToujours ? g.pages : g.pages.filter(visible) })).filter((g) => g.pages.length) };
   if (!u.groupes.length) return "";
@@ -81,7 +83,7 @@ const menuUnivers = (u0, actuel) => {
         <ul class="cascade">${u.groupes.map((g) => `<li class="cascade-item${g.pages.some(([c]) => c === actuel) ? " cascade-actif" : ""}"><button type="button" class="cascade-titre">${g.nom}</button><div class="cascade-panneau"><div><p class="sous-menu-titre">${g.nom}</p><ul class="cascade-liste">${g.pages.map((p) => lienMenu(p, actuel)).join("")}</ul></div>${g.photo ? `<a class="cascade-photo" href="${g.pages[0][0]}" tabindex="-1" aria-hidden="true">${imgPhoto(g.photo, { sizes: "220px" })}</a>` : ""}</div></li>`).join("")}</ul>
       </div>` : `<div class="sous-menu${u.groupes.length > 2 ? " sous-menu-large" : ""}${u.cle === "professionnels" ? " sous-menu-droite" : ""}">
         ${(() => {
-          const groupe = (g) => `<div>${g.nom ? `<p class="sous-menu-titre">${g.nom}</p>` : ""}<ul class="${g.pages.length > 4 && u.groupes.length === 1 ? "sm-2col" : ""}${g.pages.some((p) => p[4]) ? " sm-rev" : ""}">${g.pages.map((p) => lienMenu(p, actuel)).join("")}</ul></div>`;
+          const groupe = (g) => `<div>${g.nom ? `<p class="sous-menu-titre">${g.nom}</p>` : ""}<ul class="${g.pages.length > 4 && u.groupes.length === 1 ? "sm-2col" : ""}${g.pages.some((p) => p[4]) ? " sm-rev" : ""}${g.compact ? " sm-compact" : ""}">${g.pages.map((p) => lienMenu(p, actuel)).join("")}</ul></div>`;
           // Plus de deux groupes : le premier en colonne de gauche, les autres empilés à droite (ordinateur).
           return u.groupes.length > 2 ? `<div class="sm-col">${groupe(u.groupes[0])}</div><div class="sm-col">${u.groupes.slice(1).map(groupe).join("")}</div>` : u.groupes.map(groupe).join("");
         })()}
@@ -104,7 +106,7 @@ const entete = (actuel) => `
     </details>
     <nav class="menu" aria-label="Navigation principale">
       <ul class="menu-liste">
-        ${UNIVERS.filter((u) => u.cle !== "professionnels").map((u) => menuUnivers(u, actuel)).join("")}
+        ${UNIVERS.filter((u) => !["professionnels", "projets"].includes(u.cle)).map((u) => menuUnivers(u.cle === "terrasses" ? menuTerrasses(u) : u, actuel)).join("")}
         <li class="menu-item"><a class="menu-lien${actuel === "/realisations/" ? " actif" : ""}" href="/realisations/">${ICONES_MENU.galerie}<span class="mm-nom">Galerie</span></a></li>
         <li class="menu-item"><a class="menu-lien" href="/#methode">${ICONES_MENU.methode}<span class="mm-nom">Notre méthode</span></a></li>
         ${menuUnivers(UNIVERS.find((u) => u.cle === "professionnels"), actuel)}

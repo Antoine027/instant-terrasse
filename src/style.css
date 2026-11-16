@@ -2067,3 +2067,5 @@ main #options .puces,main #toitures .puces,main #autorisation .puces{text-align:
 .dim-carport{font-size:.85rem;font-weight:700;color:var(--accent-fonce,#9a6a1f);margin-top:auto}
 .carte-led{margin-top:22px}
 .titre-confort{margin-top:48px}
+/* Menu Terrasses : colonne « Par projet » compacte sur téléphone (16/11/2026) */
+@media (max-width:1240px){.sm-compact .mm-vig,.sm-compact small{display:none}.sm-compact li a{padding-top:10px;padding-bottom:10px}}

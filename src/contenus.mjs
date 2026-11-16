@@ -383,42 +383,6 @@ const autresPergolas = (moi) => PERGOLAS.filter(([c]) => c !== moi);
 
 
 // ---------- Garde-corps aluminium ----------
-const gardeCorps = {
-  title: "Garde-corps aluminium Lyon : verre, barreaudage | Instant Terrasse",
-  description: "Garde-corps aluminium sur mesure à Lyon pour terrasses, balcons, escaliers et bâtiments professionnels : vitré, barreaudage, lames. Devis gratuit.",
-  corps: pageProduit({
-    fil: "Aménagements",
-    h1: ["Garde-corps aluminium", "sur mesure"], kicker: "Maisons, logements et bâtiments professionnels, à Lyon", position: "60% 45%",
-    chapo: "Sécuriser une terrasse, un balcon, un escalier ou un toit-terrasse sans fermer la vue : des garde-corps aluminium sur mesure.",
-    photo: "gc-maison-lisses-noires",
-    atouts: [
-      ["Vitré", "Des panneaux de verre pour garder toute la vue et la lumière."],
-      ["Barreaudage", "Des barreaux verticaux ou des lisses horizontales, pour un style classique ou contemporain."],
-      ["Remplissage bois ou lames", "Des lames pour préserver l'intimité, assorties à votre terrasse ou à votre bardage."],
-      ["Aluminium sans entretien", "Pas de rouille, pas de peinture à refaire, dans le coloris de votre choix."],
-      ["Toutes les configurations", "Terrasses, balcons, escaliers, rampants, toits-terrasses, coursives."],
-      ["Particuliers et professionnels", "Maisons, immeubles de logements, bureaux, commerces et établissements recevant du public."],
-    ],
-    galerieCat: [...PHOTOS.filter((p) => p.categorie === "garde-corps").map((p) => p.cle), "carrelage-gris-garde-corps-verre-depoli", "carrelage-beige-pergola-toit-fixe", "restaurant-terrasse-gabions"],
-    typesGalerie: ["Vitré", "Barreaudage", "Découpe laser", "Remplissage bois", "Main courante bois"],
-    limiteGalerie: 12,
-    titreGalerie: "Garde-corps en situation",
-    introGalerie: "Choisissez un type de garde-corps.",
-    details: `<h2>Un garde-corps, c'est d'abord de la sécurité</h2>
-      <p>Hauteur, espacement des barreaux, résistance du support : un garde-corps doit respecter des règles précises, plus exigeantes encore dans les bâtiments recevant du public. Nous définissons le modèle et les fixations adaptés à votre support lors de la visite.</p>
-      <p>Pour une terrasse neuve, le plus simple est de prévoir le garde-corps dès la conception : les fixations s'intègrent proprement à la structure.</p>`,
-    complement: "Vous construisez une terrasse surélevée, sur pilotis ou un toit-terrasse ? Nous pouvons étudier la terrasse et son garde-corps ensemble.",
-    titreVoisins: "Pour aller avec votre garde-corps",
-    voisins: [
-      ["/terrasse-sur-pilotis-lyon/", "Terrasse sur pilotis", "La solution pour les terrains en pente."],
-      ["/toit-terrasse-lyon/", "Toit-terrasse", "Créer un espace de vie sur une toiture plate."],
-      ["/terrasse-balcon-lyon/", "Balcon", "Rénover le sol d'un balcon, sans travaux lourds."],
-      ["/terrasse-restaurant-chr-lyon/", "Professionnels", "Terrasses de restaurants, cafés et hôtels."],
-    ],
-    ctaTitre: "Un projet de garde-corps ?",
-  }),
-};
-
 // ---------- Terrasse en lames aluminium ----------
 // Galerie Lames aluminium : 12 premières photos de « Tout voir » = les plus belles, teintes mélangées, disposition proche de la galerie Bois (demande d'Antoine, 05/11/2026).
 const ORDRE_GALERIE_ALU = ["alu-piscine-carbet", "alu-pontons-lac", "alu-restaurant-vue-mer", "alu-piscine-haricot", "alu-piscine-cour", "alu-restaurant-canal-vignes", "alu-piscine-blanche-vue", "alu-piscine-debordement-baie", "alu-piscine-debordement-mer", "alu-piscine-jardin-tropical", "alu-piscine-grise", "alu-terrasse-banc-courbe"];
@@ -1811,6 +1775,99 @@ ${heroPlein({ fil: "Aménagements", h1: ["Bardage bois", "sur mesure"], kicker: 
 ${cta("Un projet de bardage ?")}`,
 };
 
+
+// ---------- Garde-corps (refonte 16/11/2026, catalogue garde-corps fournisseur fourni par Antoine) ----------
+const GALERIE_GC = [...PHOTOS.filter((p) => p.categorie === "garde-corps").map((p) => p.cle), "carrelage-gris-garde-corps-verre-depoli", "carrelage-beige-pergola-toit-fixe", "restaurant-terrasse-gabions"];
+const gardeCorps = {
+  title: "Garde-corps aluminium Lyon : verre, barreaux, tôle, bois | Instant Terrasse",
+  description: "Garde-corps aluminium sur mesure à Lyon : barreaux, verre, tôle découpée ou bois, conforme aux normes NF P01-012 et 013, fabriqué en France. Terrasses, balcons, escaliers, pare-vues. Devis gratuit.",
+  corps: `
+${heroPlein({ fil: "Aménagements", h1: ['<span class="pc-nowrap">Garde-corps aluminium</span>', 'sur mesure <span class="lyon-l">à Lyon</span>'], kicker: "Terrasses, balcons, escaliers et pare-vues",
+  chapo: "Sécuriser une terrasse, un balcon ou un escalier sans fermer la vue : des garde-corps aluminium fabriqués sur mesure, conformes aux normes.",
+  photo: "gc-maison-lisses-noires", position: "60% 45%",
+  actions: `<a class="bouton" href="/contact/">Demander un devis gratuit</a> <a class="bouton bouton-blanc" href="#remplissages">Les modèles</a>` })}
+
+<section id="remplissages" class="bloc">
+  <div class="conteneur">
+    <h2>Barreaux, verre, tôle ou bois</h2>
+    <p class="chapo">La même structure aluminium, et le remplissage qui convient à votre façade et à votre vue.</p>
+    <div class="grille grille-3">${[
+      ["Barreaux", "Des lisses aluminium horizontales ou verticales, sur toute la hauteur ou avec un vide sous la main courante."],
+      ["Verre", "Du verre feuilleté de sécurité, transparent pour garder la vue, ou opale, fumé gris ou fumé bronze pour l'intimité."],
+      ["Tôle découpée", "Une tôle aluminium perforée ou découpée : une vingtaine de motifs (organiques, végétaux, géométriques), ou le vôtre à partir d'un dessin ou d'une photo."],
+      ["Bois", "Des lames de pin ou de frêne thermo-traités, ou de douglas, horizontales ou verticales, qui prennent une patine naturelle."],
+      ["Sans poteaux", "Nouveauté : une trame continue de barreaux verticaux, sans poteau, pour un linéaire filant et régulier."],
+      ["Main courante bois", "Une main courante aluminium, ou en bois pour un toucher plus chaleureux, dans les mêmes essences que le remplissage."],
+    ].map(([t, x]) => `<div class="carte"><h3>${t}</h3><p>${x}</p></div>`).join("")}</div>
+  </div>
+</section>
+
+<section id="atouts" class="bloc bloc-alt">
+  <div class="conteneur">
+    <h2>Conçu pour la sécurité</h2>
+    <div class="grille grille-3 atouts-car">${[
+      ["bouclier", "Conforme aux normes", "Garde-corps conformes aux normes NF P01-012 et NF P01-013 ; chaque conception est vérifiée sur banc d'essai."],
+      ["plan", "100 % sur mesure", "Dessiné pour votre terrasse : longueurs, angles, hauteurs et remplissage."],
+      ["niveau", "Sans vis apparente", "Les travées et les capots de main courante se clipsent entre eux : un rendu net, sans fixation visible."],
+      ["couches", "Fabriqué en France", "Conçu et fabriqué en Alsace, livré prémonté."],
+      ["demonte", "Aluminium recyclé", "Un aluminium recyclé à 80 % et des bois certifiés, sans entretien pour l'aluminium."],
+      ["maison", "Particuliers et professionnels", "Maisons, logements collectifs et bâtiments tertiaires, avec des règles plus strictes pour les lieux recevant du public."],
+    ].map(([i, t, x]) => `<div class="carte atout-carte">${ico(i)}<h3>${t}</h3><p>${x}</p></div>`).join("")}</div>
+  </div>
+</section>
+
+<section id="poses" class="bloc">
+  <div class="conteneur">
+    <h2>Quatre façons de le fixer</h2>
+    <div class="grille grille-4">${[
+      ["À plat", "Fixé sur le dessus de la dalle ou de la terrasse."],
+      ["En applique", "Fixé sur la tranche de la dalle : toute la surface de la terrasse reste libre. Le nez de dalle peut être habillé."],
+      ["Déporté", "Écarté de la tranche de la dalle grâce à des pattes de fixation."],
+      ["En tableau", "Entre deux murs, pour une fenêtre, une loggia ou un balcon encastré."],
+    ].map(([t, x]) => `<div class="carte"><h3>${t}</h3><p>${x}</p></div>`).join("")}</div>
+    <h2 class="titre-confort">Aussi pour les escaliers et les pare-vues</h2>
+    <div class="grille grille-3">${[
+      ["Garde-corps d'escalier", "Les mêmes remplissages suivent la pente de l'escalier, avec des jonctions de rampant et d'angle."],
+      ["Main courante murale", "En aluminium ou en bois, fixée au mur le long d'un escalier."],
+      ["Claustras et pare-vues", "Les mêmes modèles, plus hauts, pour se protéger des regards sur une terrasse ou un balcon."],
+    ].map(([t, x]) => `<div class="carte"><h3>${t}</h3><p>${x}</p></div>`).join("")}</div>
+  </div>
+</section>
+
+<section id="galerie" class="bloc bloc-alt">
+  <div class="conteneur">
+    ${galerie(GALERIE_GC, { titre: "Garde-corps en situation", intro: "Choisissez un type de garde-corps.", legende: "Illustrations", types: ["Vitré", "Barreaudage", "Découpe laser", "Remplissage bois", "Main courante bois"], limite: 12 })}
+  </div>
+</section>
+
+<section id="faq-gc" class="bloc">
+  <div class="conteneur lyon-faq">
+  <div class="lyon-texte">
+    <h2>Un garde-corps, c'est d'abord de la sécurité</h2>
+    <p>Hauteur, espacement des éléments, résistance du support : un garde-corps répond à des normes précises, plus exigeantes dans les bâtiments recevant du public. Nous définissons le modèle et les fixations selon votre support lors du rendez-vous.</p>
+    <p>Pour une terrasse neuve, surélevée, sur <a href="/terrasse-sur-pilotis-lyon/">pilotis</a> ou un <a href="/toit-terrasse-lyon/">toit-terrasse</a>, le plus simple est de prévoir le garde-corps dès la conception. Nous venons chez vous, à Lyon et dans sa région (${COMMUNES}).</p>
+  </div>
+  <div class="faq-liste">
+    <h2>Vos questions sur le garde-corps</h2>
+    ${[
+      ["Quel garde-corps pour garder la vue ?", "Le verre transparent, ou des barreaux fins. Pour préserver l'intimité, choisissez le verre opale ou fumé, la tôle ou le bois."],
+      ["Peut-on le fixer sans réduire la terrasse ?", "Oui : en applique, il se fixe sur la tranche de la dalle et laisse toute la surface libre."],
+      ["Faut-il l'entretenir ?", "L'aluminium ne demande pas d'entretien. Le bois, laissé naturel, change de teinte avec le soleil."],
+      ["Est-il conforme pour un lieu recevant du public ?", "Oui, les modèles sont conçus selon les normes NF P01-012 et NF P01-013 ; en lieu public, les poteaux sont plus rapprochés."],
+      ["Faites-vous les garde-corps d'escalier ?", "Oui, avec les mêmes remplissages, ainsi que les mains courantes murales."],
+    ].map(([q, r]) => `<details class="faq"><summary>${q}</summary><div><p>${r}</p></div></details>`).join("\n    ")}
+  </div>
+  </div>
+</section>
+
+<section class="bloc bloc-alt">
+  <div class="conteneur">
+    <h2>Pour aller avec votre garde-corps</h2>
+    <div class="grille grille-3">${[["/terrasse-sur-pilotis-lyon/", "Terrasse sur pilotis", "La solution pour les terrains en pente."], ["/toit-terrasse-lyon/", "Toit-terrasse", "Créer un espace de vie sur une toiture plate."], ["/terrasse-balcon-lyon/", "Balcon", "Rénover le sol d'un balcon, sans travaux lourds."]].map(([c, t, x]) => carteProduit(c, t, x)).join("")}</div>
+  </div>
+</section>
+${cta("Un projet de garde-corps ?", "Laissez votre numéro : nous vous rappelons pour en parler et organiser le rendez-vous, gratuit et sans engagement.")}`,
+};
 
 // ---------- Galerie (page /realisations/) ----------
 // Photos fournisseurs : présentées comme illustrations, jamais comme chantiers Instant Terrasse.

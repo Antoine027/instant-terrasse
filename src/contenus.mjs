@@ -924,7 +924,7 @@ const autresProjets = (ici) => `
 // Classement des revêtements par projet : notes du comparateur (QUIZ_NOTES) × poids propres au projet.
 const classer = (poids, mats) => mats.map((m) => [m, Object.entries(poids).reduce((s, [c, w]) => s + w * QUIZ_NOTES[c][["bois", "composite", "aluminium", "carrelage"].indexOf(m)], 0)])
   .sort((a, b) => b[1] - a[1] || ["bois", "composite", "aluminium", "carrelage"].indexOf(a[0]) - ["bois", "composite", "aluminium", "carrelage"].indexOf(b[0])).map(([m]) => m);
-const pageProjet = ({ ici, fil = "Projets", extra = "", apres, h1, kicker, chapo, photo, position, actions, revTitre, revIntro, rev, poids, pose, atoutsTitre, atouts, galerieCat, titreGalerie, lyon, lyonCourt, faqTitre, faq, ctaTitre, ctaTexte }) => {
+const pageProjet = ({ ici, fil = "Types de projets", extra = "", apres, h1, kicker, chapo, photo, position, actions, revTitre, revIntro, rev, poids, pose, atoutsTitre, atouts, galerieCat, titreGalerie, lyon, lyonCourt, faqTitre, faq, ctaTitre, ctaTexte }) => {
   const ordre = classer(poids, Object.keys(rev));
   return `
 ${heroPlein({ fil, h1, kicker, chapo, photo, position, actions: actions ?? `<a class="bouton" href="/contact/">Demander un devis gratuit</a> <a class="bouton bouton-blanc" href="#revetements">Quel revêtement ?</a>` })}

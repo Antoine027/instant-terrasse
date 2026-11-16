@@ -129,7 +129,7 @@ const pied = (corps = "") => {
     </div>
     ${[
       ["Terrasses", univ("terrasses")],
-      ["Projets", [...univ("projets"), ...univ("professionnels")]],
+      ["Types de projets", [...univ("projets"), ...univ("professionnels")]],
       ["Pergolas & extérieur", univ("amenagements")],
       ["Instant Terrasse", AUTRES],
     ].map(([nom, pages]) => `<details class="pied-groupe" open><summary class="pied-titre">${nom}</summary><ul>${pages.filter(visible).map(([c, t, , court]) => `<li><a href="${c}">${court ?? t}</a></li>`).join("")}</ul></details>`).join("")}

@@ -1646,7 +1646,7 @@ ${heroPlein({ fil: "Pergolas & extérieur", h1: ['<span class="pc-nowrap">Store 
         <p><a href="/store-banne-ou-store-vertical/">Store banne ou protection verticale : notre article →</a></p>
       </div>
     </div>
-    ${galerie("store-banne", { titre: "Stores bannes en situation", legende: "Illustrations" })}
+    ${galerie("store-banne", { titre: "Stores bannes en situation", legende: "Illustrations", ordre: ["store-banne-beige-maison", "store-banne-orange", "store-banne-coffre-bardage", "store-banne-blanc-terrasse", "store-banne-gris-bardage", "store-banne-toit-terrasse"] })}
   </div>
 </section>
 

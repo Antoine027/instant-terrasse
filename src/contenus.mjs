@@ -1339,6 +1339,19 @@ const FERMETURES_PERGOLA = [
   ["Claustra à lames", "Fixe ou coulissante, avec 85 % ou 100 % d'occultation au choix, pour un espace semi-fermé.", "Jusqu'à 2,6 m de haut"],
   ["Brise-vue grandes lames", "Fixe, en lames aluminium horizontales ou verticales, effet chêne clair en option.", "Jusqu'à 3 m de haut"],
 ];
+// « Points clés » des pages pergola : liste courte à pictogrammes (16/11/2026)
+const ICO_PC = {
+  taille: '<path d="M3 17 17 3l4 4L7 21z"/><path d="m7 13 2 2M10 10l2 2M13 7l2 2"/>',
+  soleil: '<circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/>',
+  papier: '<path d="M6 3h9l4 4v14H6z"/><path d="M15 3v4h4M9 12h7M9 16h7"/>',
+  maison: '<path d="M3 11 12 4l9 7"/><path d="M5 10v10h14V10M10 20v-6h4v6"/>',
+  pluie: '<path d="M7 15a4 4 0 1 1 1-7.9A5 5 0 0 1 18 9a3 3 0 0 1 0 6z"/><path d="M9 18l-1 2M13 18l-1 2M17 18l-1 2"/>',
+  voiture: '<path d="M4 16V12l2-5h12l2 5v4z"/><circle cx="8" cy="16" r="2"/><circle cx="16" cy="16" r="2"/>',
+};
+const pointsCles = (titre, items) => `<h2>${titre}</h2>
+    <ul class="points-cles">${items.map(([ico, t, x]) => `<li><span class="pc-ico"><svg viewBox="0 0 24 24" aria-hidden="true">${ICO_PC[ico]}</svg></span><div><strong>${t}</strong><p>${x}</p></div></li>`).join("")}</ul>`;
+const PC_RDV = ["maison", "Rendez-vous chez vous", "À Lyon et dans sa région (voir notre <a href=\"/terrasse-lyon/\">zone d'intervention</a>) : orientation, façade, fixations, écoulement des eaux. Plan 3D offert."];
+const PC_AUTORISATION = ["papier", "Autorisation", "Une <a href=\"/autorisation-terrasse-pergola-carport/\">déclaration préalable</a> peut être nécessaire selon la surface et la commune : nous vous indiquons la démarche."];
 const pagePergolaRiche = ({ titreConfort = "Confort et automatismes", h1, kicker, chapo, photo, position, ancre, titreModeles, introModeles, modeles, schemas, noteModeles, atoutsTitre, atouts, confort, galerieCat, titreGalerie, gauche, faqTitre, faq, ici, ctaTitre }) => `
 ${heroPlein({ fil: "Pergolas & extérieur", h1, kicker, chapo, photo, position,
   actions: `<a class="bouton" href="/contact/">Demander un devis gratuit</a> <a class="bouton bouton-blanc" href="#modeles">${ancre}</a>` })}
@@ -1379,7 +1392,6 @@ ${heroPlein({ fil: "Pergolas & extérieur", h1, kicker, chapo, photo, position,
   <div class="conteneur lyon-faq">
   <div class="lyon-texte">
     ${gauche}
-    <p>Nous venons chez vous, à Lyon et dans sa région (voir notre <a href="/terrasse-lyon/">zone d'intervention</a>), pour regarder l'orientation, la façade, les fixations et l'écoulement des eaux. Le plan 3D de votre pergola est offert.</p>
   </div>
   <div class="faq-liste">
     <h2>${faqTitre}</h2>
@@ -1428,9 +1440,11 @@ const pergolaBioclimatique = {
       AUTOMATISMES,
     ],
     galerieCat: "pergola-bioclimatique", titreGalerie: "Pergolas bioclimatiques en situation",
-    gauche: `<h2>Bien la choisir</h2>
-    <p>La taille, l'orientation et l'usage décident de tout : coin repas, salon, cuisine d'été ou bord de piscine. Le sens des lames compte aussi : perpendiculaires à la façade, elles laissent passer davantage de lumière vers la maison.</p>
-    <p>Une pergola peut nécessiter une <a href="/autorisation-terrasse-pergola-carport/">déclaration préalable</a> selon sa surface et votre commune : nous vous indiquons la démarche lors du rendez-vous.</p>`,
+    gauche: pointsCles("Bien la choisir", [
+      ["taille", "Taille et usage", "Coin repas, salon, cuisine d'été ou bord de piscine : l'usage fixe les dimensions."],
+      ["soleil", "Sens des lames", "Perpendiculaires à la façade, elles laissent passer plus de lumière vers la maison."],
+      PC_AUTORISATION, PC_RDV,
+    ]),
     faqTitre: "Vos questions sur la pergola bioclimatique",
     faq: [
       ["Une pergola bioclimatique protège-t-elle de la pluie ?", "Oui, lames fermées : l'eau s'écoule par les lames vers les chéneaux intégrés, puis par les poteaux. Pour être aussi protégé sur les côtés par temps de vent, on ajoute des stores zippés ou un vitrage."],
@@ -1474,9 +1488,11 @@ const pergolaToileRetractable = {
       AUTOMATISMES,
     ],
     galerieCat: "pergola-toile-retractable", titreGalerie: "Pergolas à toile rétractable en situation",
-    gauche: `<h2>Toile ou lames ?</h2>
-    <p>La toile rétractable convient si vous cherchez surtout de l'ombre l'été et le ciel dégagé le reste de l'année. La <a href="/pergola-bioclimatique-lyon/">pergola bioclimatique</a> dose plus finement la lumière avec ses lames orientables.</p>
-    <p>Une pergola peut nécessiter une <a href="/autorisation-terrasse-pergola-carport/">déclaration préalable</a> selon sa surface et votre commune : nous vous indiquons la démarche lors du rendez-vous.</p>`,
+    gauche: pointsCles("Toile ou lames ?", [
+      ["soleil", "La toile", "De l'ombre l'été, le ciel dégagé le reste de l'année."],
+      ["taille", "Les lames", "La <a href=\"/pergola-bioclimatique-lyon/\">pergola bioclimatique</a> dose plus finement la lumière."],
+      PC_AUTORISATION, PC_RDV,
+    ]),
     faqTitre: "Vos questions sur la pergola à toile",
     faq: [
       ["La toile protège-t-elle de la pluie ?", "Oui pour les deux pergolas : la toile est opaque et imperméable, tendue en pente vers les chéneaux. La solution entre store et pergola, elle, ne laisse s'écouler qu'une pluie faible : c'est d'abord une protection solaire."],
@@ -1522,9 +1538,11 @@ const pergolaToitFixe = {
     ],
     confort: CONFORT_FIXE, titreConfort: "Confort",
     galerieCat: "pergola-toit-fixe", titreGalerie: "Pergolas à toit fixe en situation",
-    gauche: `<h2>Pour qui ?</h2>
-    <p>Le toit fixe convient si vous voulez avant tout un espace abrité, utilisable même sous la pluie, sans vous soucier d'ouvrir ou de fermer quoi que ce soit. Si vous voulez aussi faire entrer le soleil, regardez la <a href="/pergola-bioclimatique-lyon/">pergola bioclimatique</a>.</p>
-    <p>La même structure abrite aussi une voiture : c'est notre <a href="/carport-lyon/">carport</a>. Une pergola peut nécessiter une <a href="/autorisation-terrasse-pergola-carport/">déclaration préalable</a> selon sa surface et votre commune : nous vous indiquons la démarche lors du rendez-vous.</p>`,
+    gauche: pointsCles("Pour qui ?", [
+      ["pluie", "Un abri permanent", "Utilisable même sous la pluie, sans rien ouvrir ni fermer. Pour faire entrer le soleil : la <a href=\"/pergola-bioclimatique-lyon/\">pergola bioclimatique</a>."],
+      ["voiture", "Aussi pour la voiture", "La même structure devient notre <a href=\"/carport-lyon/\">carport</a>."],
+      PC_AUTORISATION, PC_RDV,
+    ]),
     faqTitre: "Vos questions sur la pergola à toit fixe",
     faq: [
       ["Quelle charge de neige supporte-t-elle ?", "Jusqu'à 200 kg/m² pour les plus petites largeurs, moins pour les plus grandes. Nous vérifions la charge de neige de votre commune, selon sa zone et son altitude, avant de dimensionner."],

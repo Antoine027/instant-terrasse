@@ -2189,3 +2189,11 @@ main #options .puces,main #toitures .puces,main #autorisation .puces{text-align:
 @media (min-width:1061px){.terrains-liste li{aspect-ratio:auto}}
 .frise-parcours{display:block;width:100%;height:auto;margin:6px 0 22px}
 @media (max-width:700px){.schemas-trio{gap:6px}.schemas-trio figcaption{font-size:.72rem}.frise-parcours{margin-bottom:14px}}
+/* Pages pergola : points clés à pictogrammes (16/11/2026) */
+.points-cles{list-style:none;margin:14px 0 0;padding:0;display:grid;gap:12px}
+.points-cles li{display:flex;gap:14px;align-items:flex-start;background:#fff;border-radius:15px;padding:14px 16px;text-align:left}
+.pc-ico{flex:0 0 40px;height:40px;border-radius:50%;background:#F0E8DA;display:flex;align-items:center;justify-content:center}
+.pc-ico svg{width:22px;height:22px;fill:none;stroke:#8a5a1c;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.points-cles strong{font-family:Montserrat,sans-serif;font-size:1rem;display:block;margin-bottom:2px}
+.points-cles p{margin:0;font-size:.95rem;line-height:1.5}
+@media (max-width:700px){main .points-cles li,main .points-cles p{text-align:left}}

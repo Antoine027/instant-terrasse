@@ -2141,3 +2141,11 @@ main #options .puces,main #toitures .puces,main #autorisation .puces{text-align:
 .grille-2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;max-width:860px;margin:0 auto}@media (max-width:700px){.grille-2{grid-template-columns:1fr}}
 @media (max-width:700px){main .article p,main .article h2,main .article h3,main .article li,main .article .chapo{text-align:left}.article .comparatif{min-width:0;font-size:.82rem}.article .comparatif th,.article .comparatif td{padding:9px 8px}.article .comparatif tbody th{width:26%}}
 @media (max-width:700px){main .terrains-liste li,main .terrains-liste li span,main .terrains-liste li strong{text-align:center}}
+
+/* Comparatif complet sur téléphone : une carte par matériau, étiquette au-dessus (16/11/2026) */
+@media (max-width:700px){
+  .comp-liste>div{padding:16px 0 10px}
+  .comp-liste dt{font-size:1.02rem;margin-bottom:8px;text-align:center}
+  .comp-liste dd{display:block;margin:0 0 8px;padding:10px 14px;background:var(--fond2,#F8F3EB);border-radius:12px;font-size:.92rem;line-height:1.45;text-align:left}
+  .comp-liste dd b{display:block;font:700 .7rem Montserrat,sans-serif;letter-spacing:.07em;text-transform:uppercase;color:var(--accent-texte);margin-bottom:3px}
+}

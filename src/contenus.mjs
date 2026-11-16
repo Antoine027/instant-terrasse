@@ -422,7 +422,7 @@ ${heroPlein({ fil: "Terrasses", h1: ['<span class="pc-nowrap">Terrasse aluminium
   <div class="conteneur">
     <h2>Les atouts de l'aluminium</h2>
     <div class="grille grille-3 atouts-car">
-      <div class="carte atout-carte"><span class="atout-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></span><h3>Le revêtement qui chauffe le moins</h3><p>Moins que le composite et moins que les bois durs : l'aluminium dissipe la chaleur au lieu de la stocker. Agréable pieds nus, même en été.</p></div>
+      <div class="carte atout-carte"><span class="atout-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></span><h3>Chauffe moins au soleil</h3><p>Une lame aluminium chauffe 30 % de moins qu'un composite co-extrudé et 20 % de moins qu'un bois exotique : l'aluminium dissipe la chaleur au lieu de la stocker. Plus agréable pieds nus en été.</p></div>
       <div class="carte atout-carte"><span class="atout-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg></span><h3>Inerte et inaltérable</h3><p>Il ne pourrit pas, ne moisit pas et ne bouge pas : pas de fente, pas de vrillage, pas d'écharde. Un nettoyage à l'eau suffit.</p></div>
       <div class="carte atout-carte"><span class="atout-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 0 1 15-6.7L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-15 6.7L3 16"/><path d="M3 21v-5h5"/></svg></span><h3>Durable et 100 % recyclable</h3><p>Lames et structure en aluminium : une terrasse faite pour durer, entièrement recyclable en fin de vie.</p></div>
       <div class="carte atout-carte"><span class="atout-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v18"/><path d="M5 8h14"/><path d="m5 8-3 7a3 3 0 0 0 6 0z"/><path d="m19 8-3 7a3 3 0 0 0 6 0z"/></svg></span><h3>Léger</h3><p>Lames et structure tout aluminium : un ensemble léger, idéal pour un balcon, une terrasse suspendue ou un toit-terrasse sur étanchéité.</p></div>
@@ -461,7 +461,7 @@ ${heroPlein({ fil: "Terrasses", h1: ['<span class="pc-nowrap">Terrasse aluminium
   <div class="faq-liste">
     <h2>Vos questions sur l'aluminium</h2>
     <details class="faq"><summary>Comment entretenir une terrasse aluminium ?</summary><div><p>Un nettoyage à l'eau suffit. Il n'y a aucun traitement à refaire : ni saturateur, ni ponçage, ni lasure.</p></div></details>
-    <details class="faq"><summary>Une terrasse aluminium chauffe-t-elle au soleil ?</summary><div><p>C'est le revêtement qui chauffe le moins, moins que le composite et moins que les bois durs. L'aluminium dissipe la chaleur au lieu de la stocker : la lame reste fraîche en plein soleil, et vous marchez dessus pieds nus l'été.</p></div></details>
+    <details class="faq"><summary>Une terrasse aluminium chauffe-t-elle au soleil ?</summary><div><p>Elle chauffe 30 % de moins qu'un composite co-extrudé et 20 % de moins qu'un bois exotique. L'aluminium dissipe la chaleur au lieu de la stocker : la lame reste plus agréable pieds nus en été.</p></div></details>
     <details class="faq"><summary>Les lames peuvent-elles se déformer ?</summary><div><p>Non. L'aluminium ne gonfle pas avec l'humidité : pas de fente, pas de vrillage, pas d'écharde. Les lames restent droites dans le temps.</p></div></details>
     <details class="faq"><summary>Peut-on garder l'accès sous la terrasse ?</summary><div><p>Oui. Des trappes de visite peuvent être intégrées pour accéder à un regard, à un local technique ou à une vanne, sans démonter la terrasse.</p></div></details>
     <details class="faq"><summary>Quelle garantie pour une terrasse aluminium ?</summary><div><p>Les lames sont garanties 20 ans par le fabricant, sous conditions. Elles sont posées sur une ossature aluminium et plots réglables, elle aussi garantie 20 ans.</p></div></details>
@@ -658,15 +658,15 @@ const LIGNES_MATERIAUX = [
   ["Résistance à la chaleur",
     "Un bois tendre reste le plus agréable sous le pied en plein été.",
     "La gamme pleine masse chauffe peu, proche du bois.",
-    "Le revêtement qui chauffe le moins : moins que le composite et les bois durs.",
-    "Insensible à la chaleur ; une teinte claire reste la plus confortable."],
+    "Chauffe 30 % de moins qu'un composite co-extrudé et 20 % de moins qu'un bois exotique.",
+    "Chauffe au soleil, comme tout revêtement minéral : une teinte claire limite le phénomène."],
   ["Adhérence",
     "Bonne sur une lame propre ; une lame verdie, faute d'entretien, devient glissante.",
     "La gamme pleine masse reste antidérapante, même mouillée.",
     "Antidérapantes grâce à un revêtement spécial, idéales autour d'une piscine.",
     "Nos dalles de grès cérame sont antidérapantes."],
   ["Durabilité",
-    "Selon l'essence : l'accoya, le kebony, les bois thermo-traités, l'ipé ou le cumaru durent plusieurs décennies, les résineux moins longtemps.",
+    "Selon l'essence et la pose : l'accoya, le kebony, les bois thermo-traités, l'ipé ou le cumaru durent plusieurs décennies. La configuration à éviter : un résineux vissé sur une structure bois.",
     "Ne pourrit pas ; la teinte se stabilise après quelques mois.",
     "Imputrescible et indéformable : ni fente, ni vrillage.",
     "Le grès cérame ne vieillit pour ainsi dire pas, et une dalle abîmée se remplace seule."],
@@ -692,7 +692,7 @@ const QUIZ_NOTES = {
 // Raisons affichées (faits validés) : critère → texte par matériau.
 const QUIZ_RAISONS = {
   adherence: { aluminium: "Antidérapantes grâce à un revêtement spécial.", carrelage: "Nos dalles de grès cérame sont antidérapantes." },
-  chaleur: { bois: "Un bois tendre reste le plus agréable sous le pied en plein été.", composite: "La gamme pleine masse chauffe peu, proche du bois.", aluminium: "Le revêtement qui chauffe le moins." },
+  chaleur: { bois: "Un bois tendre reste le plus agréable sous le pied en plein été.", composite: "La gamme pleine masse chauffe peu, proche du bois.", aluminium: "Chauffe 30 % de moins qu'un composite co-extrudé et 20 % de moins qu'un bois exotique." },
   entretien: { composite: "Ni saturateur ni ponçage : un simple nettoyage suffit.", aluminium: "Inerte et inaltérable : rien à traiter, il ne moisit pas.", carrelage: "Ni saturateur, ni ponçage, ni traitement." },
   aspectBois: { bois: "Une matière naturelle, différente sur chaque lame.", composite: "L'aspect du bois, sans ses contraintes." },
   aspectPierre: { carrelage: "Aspect pierre ou béton, en grands formats jusqu'au 120 × 120." },
@@ -796,7 +796,7 @@ ${quizHtml()}
     <div class="grille grille-4">
       ${carteProduit("/terrasse-bois-lyon/", "Bois", "Pour le charme d'une matière naturelle ; un bois tendre reste le plus agréable en été.")}
       ${carteProduit("/terrasse-composite-lyon/", "Composite", "Pour l'aspect bois avec un entretien réduit au minimum.")}
-      ${carteProduit("/terrasse-aluminium-lyon/", "Aluminium", "Le revêtement qui chauffe le moins, léger et antidérapant.")}
+      ${carteProduit("/terrasse-aluminium-lyon/", "Aluminium", "Chauffe moins que le composite co-extrudé et le bois exotique, léger et antidérapant.")}
       ${carteProduit("/terrasse-carrelage-lyon/", "Carrelage", "Pour un style minéral, dans la continuité du sol intérieur.")}
     </div>
   </div>
@@ -814,7 +814,7 @@ ${quizHtml()}
           <tbody>${LIGNES_MATERIAUX.map(([crit, ...v]) => `<tr><th scope="row">${crit}</th>${v.map((x) => `<td>${x}</td>`).join("")}</tr>`).join("")}</tbody>
         </table>
       </div>
-      <dl class="comp-liste">${LIGNES_MATERIAUX.map(([crit, ...v]) => `<div><dt>${crit}</dt>${v.map((x, i) => `<dd><b>${MATERIAUX[i]} :</b> ${x}</dd>`).join("")}</div>`).join("")}</dl>
+      <dl class="comp-liste">${LIGNES_MATERIAUX.map(([crit, ...v]) => `<div><dt>${crit}</dt>${v.map((x, i) => `<dd><b>${MATERIAUX[i]}</b>${x}</dd>`).join("")}</div>`).join("")}</dl>
     </details>
     <script>if(location.hash==='#comparatif')document.querySelector('.comp-materiaux').open=true;addEventListener('hashchange',()=>{if(location.hash==='#comparatif')document.querySelector('.comp-materiaux').open=true})</script>
   </div>
@@ -942,7 +942,7 @@ const terrassePiscine = {
     revTitre: "Quel revêtement autour de la piscine ?", revIntro: "Au bord de l'eau, deux critères comptent plus que tout : ne pas glisser et ne pas se brûler les pieds.",
     poids: { adherence: 2, chaleur: 2, entretien: 1 },
     rev: {
-      aluminium: ["alu-piscine-aspect-teck", "Le revêtement qui chauffe le moins, antidérapant grâce à un revêtement spécial."],
+      aluminium: ["alu-piscine-aspect-teck", "Chauffe 30 % de moins qu'un composite co-extrudé et 20 % de moins qu'un bois exotique, antidérapant grâce à un revêtement spécial."],
       carrelage: ["carrelage-bh-aspect-bois-gris-vue", "Des dalles antidérapantes, qui se prolongent jusqu'à la margelle."],
       bois: ["terrasse-kebony-piscine-debordement", "Un bois tendre reste le plus agréable sous le pied en plein été."],
       composite: ["composite-gris-piscine", "La gamme pleine masse chauffe peu et reste antidérapante, même mouillée."],
@@ -963,7 +963,7 @@ const terrassePiscine = {
     lyonCourt: "Nous venons chez vous, à Lyon et dans sa région, avec les échantillons : niveaux, margelle et local technique sont vérifiés, puis votre plage est dessinée en 3D.",
     faqTitre: "Vos questions sur la terrasse de piscine",
     faq: [
-      ["Quel revêtement chauffe le moins au bord de la piscine ?", "Les lames aluminium sont le revêtement qui chauffe le moins, moins que le composite et les bois durs. Un bois tendre reste aussi très agréable sous le pied en été."],
+      ["Quel revêtement chauffe le moins au bord de la piscine ?", "Les lames aluminium chauffent 30 % de moins qu'un composite co-extrudé et 20 % de moins qu'un bois exotique. Un bois tendre reste aussi très agréable sous le pied en été. Le carrelage chauffe au soleil : une teinte claire limite le phénomène."],
       ["Quel revêtement est le moins glissant ?", "Nos dalles de grès cérame et nos lames aluminium sont antidérapantes. La gamme composite pleine masse reste antidérapante, même mouillée."],
       ["Peut-on garder l'accès au local technique ?", "Oui. Une trappe peut être intégrée dans la plage pour accéder à la pompe, à la filtration ou au volet roulant."],
       ["Peut-on rénover une ancienne plage de piscine ?", "Oui. Nous vérifions l'état du support existant lors du rendez-vous, puis nous choisissons la structure adaptée : directement sur une dalle saine, ou sur plots pour reprendre les niveaux."],
@@ -1028,7 +1028,7 @@ const toitTerrasse = {
     revTitre: "Quel revêtement pour un toit-terrasse ?", revIntro: "En hauteur, le poids compte, et le soleil tape plus fort qu'au jardin.",
     poids: { legerete: 2, chaleur: 1, durabilite: 1 },
     rev: {
-      aluminium: ["alu-piscine-toit-terrasse", "L'ensemble le plus léger, et le revêtement qui chauffe le moins."],
+      aluminium: ["alu-piscine-toit-terrasse", "L'ensemble le plus léger, qui chauffe moins que le composite co-extrudé et le bois exotique."],
       bois: ["terrasse-bambou-xtreme-toit", "Une ambiance chaleureuse, agréable sous le pied même en plein été."],
       composite: ["composite-gris-piscine", "L'aspect du bois, sans saturateur ni ponçage."],
       carrelage: ["carrelage-beige-pergola-toit-fixe", "Grès cérame de 2 cm sur plots : posé à sec, en grands formats."],
@@ -2117,7 +2117,7 @@ const terrasseLyon = {
     rev: {
       bois: ["terrasse-kebony-vue-jardin", "Thermofrêne, kebony, accoya, bambou… des bois massifs, sur structure aluminium ou traditionnelle."],
       composite: ["composite-brun-cour-table", "L'aspect du bois sans saturateur ni ponçage, en deux gammes haut de gamme."],
-      aluminium: ["alu-terrasse-salon-parasol", "Le revêtement qui chauffe le moins, léger et 100 % recyclable, en 6 teintes."],
+      aluminium: ["alu-terrasse-salon-parasol", "Chauffe moins que le composite co-extrudé et le bois exotique, léger et 100 % recyclable, en 6 teintes."],
       carrelage: ["carrelage-bh-aspect-bois-gris-table", "Des dalles de grès cérame de 2 cm, aspect pierre ou bois, jusqu'au 120 × 120."],
     },
     pose: bandeau("Sur structure aluminium", "Tous nos revêtements se posent sur une structure aluminium conforme au DTU 51-4, testée par le FCBA et fabriquée en France. Plots, rails et clips sont garantis 20 ans.", "Structure aluminium fabriquée en France, garantie 20 ans.", "Voir la structure", "/structure-terrasse-lyon/", IMG_STRUCT_ALU),
@@ -2338,7 +2338,7 @@ const articleAmenagement = {
     <ul>
       <li><a href="/terrasse-bois-lyon/">bois</a> : une matière naturelle et chaleureuse ;</li>
       <li><a href="/terrasse-composite-lyon/">composite</a> : l'aspect du bois avec un entretien réduit ;</li>
-      <li><a href="/terrasse-aluminium-lyon/">lames aluminium</a> : le revêtement qui chauffe le moins, sans traitement ;</li>
+      <li><a href="/terrasse-aluminium-lyon/">lames aluminium</a> : elles chauffent moins que le composite co-extrudé et le bois exotique, sans traitement ;</li>
       <li><a href="/terrasse-carrelage-lyon/">carrelage</a> : une esthétique minérale, très résistante aux rayures.</li>
     </ul>
     <p>Pour comparer, lisez <a href="/terrasse-bois-ou-composite/">bois ou composite : lequel choisir ?</a> ou utilisez notre <a href="/nos-terrasses/#trouver">comparateur en 5 questions</a>.</p>

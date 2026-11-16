@@ -100,8 +100,8 @@ const decouvrir = (ici) => `
 </section>`;
 
 const terrasseBois = {
-  title: "Terrasse bois Lyon : thermopin, kebony, accoya, ipé | Instant Terrasse",
-  description: "Terrasse bois sur mesure à Lyon : thermopin, thermofrêne, kebony, accoya, bambou sur structure aluminium, ou ipé, cumaru, mélèze, douglas sur structure traditionnelle.",
+  title: "Terrasse bois sur mesure à Lyon | Instant Terrasse",
+  description: "Terrasse bois à Lyon : thermopin, thermofrêne, kebony, accoya, bambou sur structure aluminium, ou ipé, mélèze, douglas sur structure traditionnelle.",
   corps: `
 ${heroPlein({ fil: "Terrasses", h1: ["Terrasse bois", 'sur mesure <span class="lyon-l">à Lyon</span>'], kicker: "Terrasses bois à Lyon et dans sa région", photo: "terrasse-kebony-piscine-debordement", position: "60% 55%",
   chapo: `<span class="en-long">Nos essences phares sur structure aluminium, et d'autres essences sur structure traditionnelle.</span><span class="en-court">Thermofrêne, kebony, accoya, ipé… Nous vous aidons à choisir le bois fait pour votre extérieur.</span>`,
@@ -256,8 +256,8 @@ const REVETEMENTS_STRUCT = [
 ];
 
 const structures = {
-  title: "Structure de terrasse aluminium à Lyon : bois, composite, carrelage | Instant Terrasse",
-  description: "Toutes nos terrasses se posent sur structure aluminium garantie 20 ans : bois, composite, lames aluminium, carrelage. Pour le bois et le carrelage, structure traditionnelle ou plots possibles. Lyon et sa région.",
+  title: "Structure de terrasse aluminium | Instant Terrasse",
+  description: "Nos terrasses se posent sur structure aluminium garantie 20 ans : bois, composite, lames alu, carrelage. Structure traditionnelle ou plots possibles.",
   corps: `
 ${heroPlein({ fil: "Terrasses", h1: ['<span class="pc-nowrap">Structure aluminium</span>', "pour toutes nos terrasses"], kicker: "Structures de terrasse à Lyon et dans sa région", photo: "structure-rails-plots-entete", position: "50% 50%",
   chapo: "Bois, composite, lames aluminium ou carrelage : tout se pose sur notre structure aluminium, garantie 20 ans.",
@@ -401,8 +401,8 @@ const PROJETS_ALU = [
 ];
 
 const terrasseAluminium = {
-  title: "Terrasse aluminium Lyon : lames alu aspect bois | Instant Terrasse",
-  description: "Terrasse en lames aluminium sur mesure à Lyon : imputrescible, stable, sans entretien, en décor bois ou teinte unie. Piscines, balcons, restaurants. Devis gratuit.",
+  title: "Terrasse en lames aluminium à Lyon | Instant Terrasse",
+  description: "Terrasse en lames aluminium à Lyon : imputrescible, stable, sans entretien, décor bois ou teinte unie. Piscines, balcons, restaurants. Devis gratuit.",
   corps: `
 ${heroPlein({ fil: "Terrasses", h1: ['<span class="pc-nowrap">Terrasse aluminium</span>', 'sur mesure <span class="lyon-l">à Lyon</span>'], kicker: "Terrasses aluminium à Lyon et dans sa région", photo: "alu-piscine-aspect-teck", position: "60% 50%",
   chapo: `<span class="en-long">L'aspect du bois, sans ses contraintes : des lames aluminium qui ne pourrissent pas, ne se déforment pas et ne se traitent pas.</span><span class="en-court">Décor bois ou teinte unie : des lames qui ne pourrissent pas et ne demandent aucun traitement.</span>`,
@@ -479,8 +479,8 @@ const GALERIE_CARR = ["carrelage-beige-pergola-toit-fixe", "carrelage-toit-terra
 const nuancierCarr = (aspect, classe, sizes) => `<div class="nuancier nuancier-carr ${classe}" data-galerie>${PHOTOS.filter((p) => p.categorie === "teinte-carrelage" && p.essence === aspect).sort((a, b) => a.cle.localeCompare(b.cle)).map((p) => `<figure tabindex="0" aria-label="Agrandir : ${p.alt}">${imgPhoto(p.cle, { sizes })}</figure>`).join("")}</div>`;
 
 const terrasseCarrelage = {
-  title: "Terrasse carrelage Lyon : grès cérame 2 cm sur plots | Instant Terrasse",
-  description: "Terrasse en carrelage sur mesure à Lyon : dalles de grès cérame 2 cm aspect pierre ou bois, posées à sec sur plots ou sur structure aluminium, du 60 × 60 au 120 × 120. Devis gratuit.",
+  title: "Terrasse carrelage sur plots à Lyon | Instant Terrasse",
+  description: "Terrasse carrelage à Lyon : dalles de grès cérame 2 cm aspect pierre ou bois, posées sur plots ou sur structure aluminium. Devis gratuit.",
   corps: `
 ${heroPlein({ fil: "Terrasses", h1: ['<span class="pc-nowrap">Terrasse carrelage</span>', 'sur mesure <span class="lyon-l">à Lyon</span>'], kicker: "Terrasses carrelage à Lyon et dans sa région", photo: "carrelage-bh-aspect-bois-gris-jardin", position: "55% 70%",
   chapo: `<span class="en-long">Grès cérame de 2 cm posé à sec, sur plots ou sur structure aluminium : ni colle, ni dalle béton. Aspect pierre ou bois.</span><span class="en-court">Grès cérame de 2 cm posé à sec, sans colle ni dalle béton : aspect pierre ou bois, jusqu'au 120 × 120.</span>`,
@@ -548,8 +548,8 @@ ${cta("Un projet de terrasse carrelage ?", "Laissez votre numéro : nous vous ra
 
 // ---------- Bardage aluminium ----------
 const bardageAluminium = {
-  title: "Bardage aluminium Lyon : façade sans entretien | Instant Terrasse",
-  description: "Bardage aluminium sur mesure à Lyon : lames thermolaquées dans de nombreuses teintes RAL, fixation invisible, sans entretien. Façades, murs, plafonds extérieurs. Devis gratuit.",
+  title: "Bardage aluminium à Lyon, sans entretien | Instant Terrasse",
+  description: "Bardage aluminium sur mesure à Lyon : lames thermolaquées, nombreuses teintes RAL, fixation invisible, sans entretien. Façades, murs, plafonds. Devis gratuit.",
   corps: `
 ${heroPlein({ fil: "Pergolas & extérieur", h1: ["Bardage aluminium", "sur mesure"], kicker: "Façades sans entretien à Lyon et dans sa région", photo: "bardage-alu-vertical-brun-escalier", position: "60% 50%",
   chapo: "Des lames aluminium thermolaquées, unies ou aspect bois, sur ossature aluminium : une façade qui ne se repeint jamais." })}
@@ -614,7 +614,7 @@ const LAMES_COMP = [
 ];
 
 const terrasseComposite = {
-  title: "Terrasse composite Lyon : sur structure aluminium | Instant Terrasse",
+  title: "Terrasse composite à Lyon | Instant Terrasse",
   description: "Terrasse composite sur mesure à Lyon, posée sur structure aluminium garantie 20 ans : lames sans écharde, sans saturateur, en 6 teintes. Devis gratuit.",
   corps: `
 ${heroPlein({ fil: "Terrasses", h1: ['<span class="pc-nowrap">Terrasse composite</span>', 'sur mesure <span class="lyon-l">à Lyon</span>'], kicker: "Terrasses composite à Lyon et dans sa région", photo: "composite-gris-piscine", position: "50% 60%",
@@ -824,8 +824,8 @@ const d=e.target.closest('[data-devis]');if(d){const t=document.querySelector('#
 </section>`;
 
 const nosTerrasses = {
-  title: "Terrasse bois, composite, aluminium ou carrelage : comparatif | Instant Terrasse",
-  description: "Bois, composite, aluminium ou carrelage : trouvez en 5 questions le revêtement de terrasse adapté à votre projet, puis comparez entretien, chaleur, adhérence et durabilité. Lyon.",
+  title: "Quel revêtement de terrasse choisir ? | Instant Terrasse",
+  description: "Bois, composite, aluminium ou carrelage : trouvez en 5 questions le revêtement de terrasse adapté à votre projet et comparez entretien, chaleur, adhérence.",
   corps: `
 ${heroPlein({ fil: "Terrasses", h1: ["Bois, composite, aluminium", "ou carrelage ?"], kicker: "Comparatif des revêtements de terrasse",
   chapo: "Répondez à 5 questions : nous classons les quatre revêtements selon votre projet.",
@@ -975,8 +975,8 @@ const COMMUNES = "Caluire-et-Cuire, Rillieux-la-Pape, Villeurbanne, Écully, Tas
 
 // ---------- Terrasse de piscine ----------
 const terrassePiscine = {
-  title: "Terrasse de piscine Lyon : plage en bois, composite, aluminium ou carrelage | Instant Terrasse",
-  description: "Plage de piscine sur mesure à Lyon : lames aluminium, bois, composite ou grès cérame, antidérapants et agréables pieds nus, sur structure aluminium garantie 20 ans. Devis gratuit.",
+  title: "Terrasse de piscine à Lyon | Instant Terrasse",
+  description: "Terrasse de piscine à Lyon : lames aluminium, bois, composite ou grès cérame, antidérapants, sur structure aluminium garantie 20 ans. Devis gratuit.",
   corps: pageProjet({
     ici: "/terrasse-piscine-lyon/",
     h1: ['<span class="pc-nowrap">Terrasse de piscine</span>', 'sur mesure <span class="lyon-l">à Lyon</span>'], kicker: "Plages de piscine à Lyon et dans sa région",
@@ -1018,8 +1018,8 @@ const terrassePiscine = {
 
 // ---------- Terrasse de balcon ----------
 const terrasseBalcon = {
-  title: "Terrasse de balcon Lyon : lames aluminium, bois, composite ou dalles | Instant Terrasse",
-  description: "Habiller un balcon à Lyon : lames aluminium légères, composite, bois ou dalles sur plots, posés sur l'existant sans percer l'étanchéité. Garde-corps aluminium. Devis gratuit.",
+  title: "Terrasse de balcon à Lyon | Instant Terrasse",
+  description: "Habiller un balcon à Lyon : lames aluminium légères, composite, bois ou dalles sur plots, posés sans percer l'étanchéité. Devis gratuit.",
   corps: pageProjet({
     ici: "/terrasse-balcon-lyon/",
     h1: ['<span class="pc-nowrap">Terrasse de balcon</span>', 'sur mesure <span class="lyon-l">à Lyon</span>'], kicker: "Sols de balcon à Lyon et dans sa région",
@@ -1061,8 +1061,8 @@ const terrasseBalcon = {
 
 // ---------- Toit-terrasse ----------
 const toitTerrasse = {
-  title: "Toit-terrasse Lyon : aménagement sur plots sans percer l'étanchéité | Instant Terrasse",
-  description: "Aménager un toit-terrasse à Lyon : lames aluminium, bois, composite ou dalles sur plots posés sur l'étanchéité, garde-corps aluminium, pergola. Plan 3D offert, devis gratuit.",
+  title: "Aménager un toit-terrasse à Lyon | Instant Terrasse",
+  description: "Aménager un toit-terrasse à Lyon : lames aluminium, bois, composite ou dalles sur plots posés sur l'étanchéité, garde-corps, pergola. Plan 3D offert.",
   corps: pageProjet({
     ici: "/toit-terrasse-lyon/",
     h1: ['<span class="pc-nowrap">Toit-terrasse</span>', 'aménagé <span class="lyon-l">à Lyon</span>'], kicker: "Toitures plates aménagées à Lyon et dans sa région",
@@ -1104,8 +1104,8 @@ const toitTerrasse = {
 
 // ---------- Terrasse sur pilotis ----------
 const terrassePilotis = {
-  title: "Terrasse sur pilotis Lyon : terrasse surélevée sur mesure | Instant Terrasse",
-  description: "Terrasse sur pilotis à Lyon : une terrasse surélevée de plain-pied avec la maison, pour terrain en pente ou jardin en contrebas. Lames aluminium, bois ou composite, garde-corps aluminium.",
+  title: "Terrasse sur pilotis à Lyon | Instant Terrasse",
+  description: "Terrasse sur pilotis à Lyon : de plain-pied avec la maison sur un terrain en pente. Lames aluminium, bois ou composite, garde-corps aluminium.",
   corps: pageProjet({
     ici: "/terrasse-sur-pilotis-lyon/",
     h1: ['<span class="pc-nowrap">Terrasse sur pilotis</span>', 'sur mesure <span class="lyon-l">à Lyon</span>'], kicker: "Terrasses surélevées à Lyon et dans sa région",
@@ -1145,8 +1145,8 @@ const terrassePilotis = {
 
 // ---------- Terrasse sur plots ----------
 const terrassePlots = {
-  title: "Terrasse sur plots Lyon : dalles et lames sur plots réglables | Instant Terrasse",
-  description: "Terrasse sur plots réglables à Lyon : grès cérame directement sur plots, ou lames sur structure aluminium, posés sans fondation sur une dalle, un sol stabilisé ou un toit-terrasse.",
+  title: "Terrasse sur plots à Lyon | Instant Terrasse",
+  description: "Terrasse sur plots réglables à Lyon : dalles de grès cérame ou lames sur structure aluminium, sans fondation, sur dalle, sol stabilisé ou toit-terrasse.",
   corps: pageProjet({
     ici: "/terrasse-sur-plots-lyon/",
     h1: ['<span class="pc-nowrap">Terrasse sur plots</span>', 'sur mesure <span class="lyon-l">à Lyon</span>'], kicker: "Dalles et lames sur plots réglables à Lyon",
@@ -1194,8 +1194,8 @@ const PROJETS_HPA = [
   ["Les configurations particulières", "Dimensions spécifiques, terrain en pente, hébergements différents : chaque cas est étudié."],
 ];
 const terrasseCamping = {
-  title: "Terrasse mobil-home et camping : aluminium, bois, composite | Instant Terrasse",
-  description: "Terrasses de mobil-homes, chalets et lodges pour campings et hôtellerie de plein air : lames aluminium sans entretien, bois, composite ou grès cérame. Basés à Lyon, livraison partout en France.",
+  title: "Terrasse de mobil-home et camping | Instant Terrasse",
+  description: "Terrasses de mobil-homes, chalets et lodges pour campings : lames aluminium sans entretien, bois ou composite. Basés à Lyon, livraison partout en France.",
   corps: pageProjet({
     ici: "/terrasse-camping-hpa/", fil: "Professionnels",
     h1: ['<span class="pc-nowrap">Terrasses de mobil-homes</span>', "pour campings et HPA"], kicker: "Campings, chalets et lodges",
@@ -1258,8 +1258,8 @@ const TOITURES_CARPORT = [
   ["Toile fixe", "Une toile technique opaque et imperméable, tendue sur l'ossature : un aspect plus léger.", ["Jusqu'à 6 × 4 m (24 m²)", "Jusqu'à 2,6 m de hauteur", "Jusqu'à 130 kg/m² de neige*"]],
 ];
 const carport = {
-  title: "Carport aluminium Lyon : abri voiture adossé ou autoporté | Instant Terrasse",
-  description: "Carport aluminium sur mesure à Lyon : toiture panneaux sandwich, bac acier ou toile, adossé ou autoporté, jusqu'à 35 m², gouttière intégrée, éclairage et côtés fermés en option. Devis gratuit.",
+  title: "Carport aluminium sur mesure à Lyon | Instant Terrasse",
+  description: "Carport aluminium à Lyon : panneaux sandwich, bac acier ou toile, adossé ou autoporté, jusqu'à 35 m², côtés fermés et LED en option. Devis gratuit.",
   corps: `
 ${heroPlein({ fil: "Pergolas & extérieur", h1: ['<span class="pc-nowrap">Carport aluminium</span>', 'sur mesure <span class="lyon-l">à Lyon</span>'], kicker: "Abri voiture adossé ou autoporté",
   chapo: "Une ossature aluminium sur mesure et la toiture de votre choix : votre voiture à l'abri de la pluie, de la grêle et du soleil, sans construire de garage.",
@@ -1410,8 +1410,8 @@ ${cta(ctaTitre, "Laissez votre numéro : nous vous rappelons pour en parler et o
 
 const AUTOMATISMES = ["Automatismes", "Capteurs de soleil, de pluie et de vent, et pilotage depuis une application, des boutons de scénario ou à la voix."];
 const pergolaBioclimatique = {
-  title: "Pergola bioclimatique Lyon : lames orientables sur mesure | Instant Terrasse",
-  description: "Pergola bioclimatique aluminium sur mesure à Lyon : lames orientables motorisées, jusqu'à 37 m², adossée ou autoportée, stores zippés, vitrage, LED et option solaire. Plan 3D offert.",
+  title: "Pergola bioclimatique à Lyon | Instant Terrasse",
+  description: "Pergola bioclimatique à Lyon : lames orientables motorisées, jusqu'à 37 m², adossée ou autoportée, stores zippés, LED, option solaire. Plan 3D offert.",
   corps: pagePergolaRiche({
     ici: "/pergola-bioclimatique-lyon/",
     h1: ['<span class="pc-nowrap">Pergola bioclimatique</span>', 'sur mesure <span class="lyon-l">à Lyon</span>'], kicker: "Lames orientables motorisées",
@@ -1456,8 +1456,8 @@ const pergolaBioclimatique = {
 };
 
 const pergolaToileRetractable = {
-  title: "Pergola toile rétractable Lyon : sur mesure, motorisée | Instant Terrasse",
-  description: "Pergola aluminium à toile rétractable sur mesure à Lyon : toile opaque motorisée, jusqu'à 37 m², adossée ou autoportée, stores zippés, vitrage et chauffage en option. Plan 3D offert.",
+  title: "Pergola à toile rétractable à Lyon | Instant Terrasse",
+  description: "Pergola à toile rétractable à Lyon : toile opaque motorisée, jusqu'à 37 m², adossée ou autoportée, stores zippés et chauffage en option. Plan 3D offert.",
   corps: pagePergolaRiche({
     ici: "/pergola-toile-retractable-lyon/",
     h1: ['<span class="pc-nowrap">Pergola à toile</span>', 'rétractable <span class="lyon-l">à Lyon</span>'], kicker: "Toile motorisée sur structure aluminium",
@@ -1507,8 +1507,8 @@ const CONFORT_FIXE = [
   ["Hauteurs sur mesure", "La hauteur de chaque poteau se règle, pour suivre la pente de la terrasse ou passer sous un débord de toit."],
 ];
 const pergolaToitFixe = {
-  title: "Pergola toit fixe aluminium Lyon : abri permanent sur mesure | Instant Terrasse",
-  description: "Pergola aluminium à toit fixe sur mesure à Lyon : toiture panneaux sandwich ou bac acier, jusqu'à 35 m², neige jusqu'à 200 kg/m², adossée ou autoportée, côtés fermés et LED en option.",
+  title: "Pergola à toit fixe aluminium à Lyon | Instant Terrasse",
+  description: "Pergola à toit fixe à Lyon : panneaux sandwich ou bac acier, jusqu'à 35 m², adossée ou autoportée, côtés fermés et LED en option. Plan 3D offert.",
   corps: pagePergolaRiche({
     ici: "/pergola-toit-fixe-lyon/",
     h1: ['<span class="pc-nowrap">Pergola à toit fixe</span>', 'sur mesure <span class="lyon-l">à Lyon</span>'], kicker: "Un abri permanent pour la terrasse",
@@ -1592,8 +1592,8 @@ const pergolaToileTendue = {
 
 // ---------- Store banne (refonte 16/11/2026, brochure gamme fournisseur fournie par Antoine : 6 modèles, sans références) ----------
 const storeBanne = {
-  title: "Store banne Lyon : sur mesure, motorisé, jusqu'à 7 m | Instant Terrasse",
-  description: "Store banne sur mesure à Lyon : jusqu'à 7,16 m de large et 4 m d'avancée, coffre, pose murale ou plafond, pare-soleil motorisé, LED et capteurs vent, soleil et pluie. Plan 3D offert.",
+  title: "Store banne sur mesure à Lyon | Instant Terrasse",
+  description: "Store banne sur mesure à Lyon : jusqu'à 7 m de large et 4 m d'avancée, pose murale ou plafond, pare-soleil motorisé, LED et capteurs. Plan 3D offert.",
   corps: `
 ${heroPlein({ fil: "Pergolas & extérieur", h1: ['<span class="pc-nowrap">Store banne</span>', 'sur mesure <span class="lyon-l">à Lyon</span>'], kicker: "Six modèles fabriqués en France",
   chapo: "De l'ombre en quelques secondes, et une façade dégagée le reste du temps : la protection solaire la plus simple, sans poteau sur la terrasse.",
@@ -1693,8 +1693,8 @@ const bardageEssences = [
 ];
 
 const bardageBois = {
-  title: "Bardage bois Lyon : accoya, kebony, thermofrêne | Instant Terrasse",
-  description: "Bardage bois sur mesure à Lyon : accoya gris ou naturel, kebony, bambou X-treme, thermofrêne, thermopin clear, thermo épicéa. Un bardage assorti à votre terrasse. Devis gratuit.",
+  title: "Bardage bois sur mesure à Lyon | Instant Terrasse",
+  description: "Bardage bois à Lyon : accoya, kebony, bambou, thermofrêne, thermopin ou thermo épicéa, clipsé sur rails aluminium, sans vis apparente. Devis gratuit.",
   corps: `
 ${heroPlein({ fil: "Pergolas & extérieur", h1: ["Bardage bois", "sur mesure"], kicker: "Façades, murs et abris à Lyon et dans sa région", photo: "bardage-thermofrene-maison", position: "70% 45%",
   chapo: "Habillez une façade, une extension ou une clôture avec des bois sélectionnés pour durer, assortis à votre terrasse.",
@@ -1795,8 +1795,8 @@ const MOTIFS_GC = [
 const SCHEMAS_POSE = { "À plat": "pose-a-plat.svg", "En applique": "pose-applique.svg", "Déporté": "pose-deportee.svg", "En tableau": "pose-tableau.svg" };
 const GALERIE_GC = [...PHOTOS.filter((p) => p.categorie === "garde-corps").map((p) => p.cle), "carrelage-gris-garde-corps-verre-depoli", "carrelage-beige-pergola-toit-fixe", "restaurant-terrasse-gabions"];
 const gardeCorps = {
-  title: "Garde-corps aluminium Lyon : verre, barreaux, tôle, bois | Instant Terrasse",
-  description: "Garde-corps aluminium sur mesure à Lyon : barreaux, verre, tôle découpée ou bois, conforme aux normes NF P01-012 et 013, fabriqué en France. Terrasses, balcons, escaliers, pare-vues. Devis gratuit.",
+  title: "Garde-corps aluminium à Lyon | Instant Terrasse",
+  description: "Garde-corps aluminium sur mesure à Lyon : barreaux, verre, tôle découpée ou bois, conforme aux normes, fabriqué en France. Terrasses, balcons, escaliers.",
   corps: `
 ${heroPlein({ fil: "Pergolas & extérieur", h1: ['<span class="pc-nowrap">Garde-corps aluminium</span>', 'sur mesure <span class="lyon-l">à Lyon</span>'], kicker: "Terrasses, balcons, escaliers et pare-vues",
   chapo: "Sécuriser une terrasse, un balcon ou un escalier sans fermer la vue : des garde-corps aluminium fabriqués sur mesure, conformes aux normes.",
@@ -1849,7 +1849,7 @@ ${heroPlein({ fil: "Pergolas & extérieur", h1: ['<span class="pc-nowrap">Garde-
       ["En applique", "Fixé sur la tranche de la dalle : toute la surface de la terrasse reste libre. Le nez de dalle peut être habillé."],
       ["Déporté", "Écarté de la tranche de la dalle grâce à des pattes de fixation."],
       ["En tableau", "Entre deux murs, pour une fenêtre, une loggia ou un balcon encastré."],
-    ].map(([t, x]) => `<div class="carte carte-pose"><img src="/assets/img/claustra/${SCHEMAS_POSE[t]}" alt="Schéma de pose ${t.toLowerCase()}" loading="lazy" decoding="async"><h3>${t}</h3><p>${x}</p></div>`).join("")}</div>
+    ].map(([t, x]) => `<div class="carte carte-pose"><img src="/assets/img/claustra/${SCHEMAS_POSE[t]}" width="220" height="160" alt="Schéma de pose ${t.toLowerCase()}" loading="lazy" decoding="async"><h3>${t}</h3><p>${x}</p></div>`).join("")}</div>
     <h2 class="titre-confort">Aussi pour les escaliers et les pare-vues</h2>
     <div class="grille grille-3 atouts-car">${[
       ["Garde-corps d'escalier", "Les mêmes remplissages suivent la pente de l'escalier, avec des jonctions de rampant et d'angle."],
@@ -1906,7 +1906,7 @@ const GROUPES_GALERIE = [
 const libelleGalerie = Object.fromEntries(GROUPES_GALERIE);
 const ordreGalerie = GROUPES_GALERIE.map(([c]) => c);
 const realisations = {
-  title: "Galerie photos : terrasses, pergolas, garde-corps | Instant Terrasse",
+  title: "Galerie : terrasses, pergolas, garde-corps",
   description: "Photos de terrasses bois, aluminium et composite, pergolas, stores bannes, carports, bardages et garde-corps aluminium pour inspirer votre projet à Lyon.",
   corps: `
 ${heroPlein({ fil: "Galerie", h1: ["Galerie", "d'inspiration"], kicker: "Terrasses, pergolas, bardages et garde-corps",
@@ -1932,8 +1932,8 @@ const LIGNES_PERGOLA = [
   ["Pour qui ?", "Ceux qui vivent dehors du printemps à l'automne et veulent tout régler.", "Ceux qui veulent de l'ombre l'été et du ciel le reste de l'année.", "Ceux qui veulent un abri fixe : coin repas, cuisine d'été, voiture."],
 ];
 const pergolas = {
-  title: "Pergola sur mesure Lyon : bioclimatique, toile ou toit fixe | Instant Terrasse",
-  description: "Pergola bioclimatique, à toile rétractable ou à toit fixe à Lyon : comparez l'ombre, la protection contre la pluie et la lumière en hiver pour choisir la vôtre. Plan 3D offert.",
+  title: "Pergola sur mesure à Lyon : laquelle choisir ?",
+  description: "Pergola bioclimatique, à toile rétractable ou à toit fixe : comparez l'ombre, la protection contre la pluie et la lumière en hiver. Lyon, plan 3D offert.",
   corps: `
 ${heroPlein({ fil: "Pergolas & extérieur", h1: ["Quelle pergola", "pour votre terrasse ?"], kicker: "Pergolas sur mesure à Lyon et dans sa région",
   chapo: "Bioclimatique, à toile rétractable ou à toit fixe : trois façons de couvrir votre 5<sup>e</sup> pièce, selon l'ombre, la pluie et la lumière.",
@@ -1982,8 +1982,8 @@ ${cta("Vous hésitez entre deux pergolas ?", "Nous venons chez vous, nous regard
 
 // ---------- Terrasses de restaurants (CHR) ----------
 const terrasseRestaurant = {
-  title: "Terrasse de restaurant Lyon : café, hôtel, CHR sur mesure | Instant Terrasse",
-  description: "Terrasse de restaurant, café ou hôtel à Lyon : plancher sans entretien, garde-corps et pare-vue, pergola ou store pour l'ombre. Un interlocuteur principal, plan 3D offert.",
+  title: "Terrasse de restaurant à Lyon | Instant Terrasse",
+  description: "Terrasse de restaurant, café ou hôtel à Lyon : plancher sans entretien, garde-corps, pare-vue, pergola ou store. Plan 3D offert.",
   corps: pageProduit({
     fil: "Professionnels",
     h1: ["Terrasse de restaurant", "et d'hôtel"], kicker: "Cafés, hôtels et restaurants à Lyon et dans sa région",

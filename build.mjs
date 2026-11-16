@@ -163,6 +163,9 @@ ${voisines.length ? `<section class="bloc bloc-alt"><div class="conteneur"><h2>�
 };
 
 // Précharge l'image prioritaire de la page (LCP) dès le <head>.
+// Image de partage (réseaux sociaux) : la photo d'en-tête, en 1200 px.
+const ogImage = (corps = "") => { const m = corps.match(/<img[^>]*fetchpriority="high"[^>]*>/); const ss = m?.[0].match(/srcset="([^"]+)"/)?.[1]; if (!ss) return ""; const l = ss.split(",").map((x) => x.trim().split(" ")).map(([u, w]) => [u, parseInt(w)]).filter(([, w]) => w <= 1400).sort((x, y) => y[1] - x[1]); return l[0]?.[0] ?? ""; };
+const OG_DEFAUT = "/assets/img/aluminium/alu-piscine-blanche-vue-1200.webp";
 const preloadLcp = (corps = "") => {
   const m = corps.match(/<img[^>]*fetchpriority="high"[^>]*>/);
   if (!m) return "";
@@ -189,6 +192,10 @@ ${!EN_LIGNE ? `<meta name="robots" content="noindex, nofollow">` : horsSitemap(p
 <meta property="og:title" content="${esc(p.title)}">
 <meta property="og:description" content="${esc(p.description)}">
 <meta property="og:locale" content="fr_FR">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Instant Terrasse">
+${EN_LIGNE && !horsSitemap(p) ? `<meta property="og:url" content="${SITE.url}${p.chemin}">` : ""}
+${`<meta property="og:image" content="${SITE.url}${ogImage(p.corps) || OG_DEFAUT}">\n<meta name="twitter:card" content="summary_large_image">`}
 <meta name="theme-color" content="#F8F3EB">
 <link rel="preload" href="/assets/fonts/montserrat-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="icon" href="/favicon.ico" sizes="any">
@@ -227,6 +234,18 @@ for (const p of PAGES) {
   if (p.statut === "preparation") p.corps = corpsPreparation(p);
   if (p.h1 && p.corps && p.chemin !== "/contact/") p.corps = p.corps.replaceAll('href="/contact/"', `href="/contact/?projet=${encodeURIComponent(p.nomProjet ?? p.h1)}"`);
 }
+// Fil d'Ariane (16/11/2026) : la page courante termine le fil visible ; données structurées BreadcrumbList (Accueil → page).
+const NOMS_FIL = Object.fromEntries([...UNIVERS.flatMap((u) => u.groupes.flatMap((g) => g.pages.map(([c, t, d, court]) => [c, u.cle === "terrasses" && !["/structure-terrasse-lyon/", "/nos-terrasses/"].includes(c) ? t : court ?? t]))), ...AUTRES.map(([c, t]) => [c, t])]);
+for (const p of PAGES) {
+  if (p.chemin === "/" || !p.corps) continue;
+  const nom = NOMS_FIL[p.chemin] ?? (p.h1 ?? "").replace(/<[^>]+>/g, "") ?? "";
+  const nomF = nom || (p.title ?? "").split(" | ")[0];
+  if (!nomF || ["/merci/", "/erreur-envoi/"].includes(p.chemin)) continue;
+  const courant = `<span aria-current="page">${nomF}</span>`;
+  if (p.corps.includes('<p class="fil">')) p.corps = p.corps.replace(/<p class="fil">([\s\S]*?)<\/p>/, (m, x) => `<nav class="fil" aria-label="Fil d'Ariane">${x.trim().endsWith(nomF) ? x.replace(new RegExp(`${nomF.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}\\s*$`), courant) : `${x} › ${courant}`}</nav>`);
+  const bc = { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [{ "@type": "ListItem", position: 1, name: "Accueil", item: `${SITE.url}/` }, { "@type": "ListItem", position: 2, name: nomF }] };
+  p.jsonld = p.jsonld ? [].concat(p.jsonld, bc) : bc;
+}
 for (const p of PAGES) {
   const dossier = join(DIST, p.chemin);
   mkdirSync(dossier, { recursive: true });
@@ -235,6 +254,13 @@ for (const p of PAGES) {
   writeFileSync(join(dossier, "index.html"), insecables(html.replace("/*CSS*/", cssPourPage(css, html))));
 }
 
+// Page 404 (servie automatiquement par Vercel), non indexée.
+{
+  const p404 = { chemin: "/404/", title: "Page introuvable | Instant Terrasse", description: "Cette page n'existe pas ou a été déplacée.", statut: "preparation",
+    corps: `<section class="hero hero-page"><div class="conteneur conteneur-etroit"><h1>Page introuvable</h1><p class="chapo">Cette page n'existe pas ou a été déplacée. Voici les pages les plus consultées :</p><p><a class="bouton" href="/">Accueil</a> <a class="bouton bouton-blanc" href="/terrasse-bois-lyon/">Terrasse bois</a> <a class="bouton bouton-blanc" href="/pergolas-lyon/">Pergolas</a> <a class="bouton bouton-blanc" href="/contact/">Contact et devis</a></p></div></section>` };
+  const h = gabarit(p404).replace('<link rel="canonical"', '<meta name="robots" content="noindex"><link rel="x"');
+  writeFileSync(join(DIST, "404.html"), insecables(h.replace("/*CSS*/", cssPourPage(css, h))));
+}
 writeFileSync("outils/recadrages.json", JSON.stringify(Object.fromEntries(RECADRAGES), null, 1));
 writeFileSync(join(DIST, "robots.txt"), EN_LIGNE
   ? `User-agent: *\nAllow: /\nSitemap: ${SITE.url}/sitemap.xml\n`

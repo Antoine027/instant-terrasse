@@ -2100,3 +2100,4 @@ main #options .puces,main #toitures .puces,main #autorisation .puces{text-align:
 .conseil-encadre p{margin:0 0 10px}.conseil-encadre p:last-child{margin:0}
 .conseil-titre{font-family:Montserrat,sans-serif;font-weight:700;text-transform:uppercase;letter-spacing:.06em;font-size:.85rem;color:var(--accent-texte)}
 @media (max-width:700px){main .conseil-encadre{text-align:left}}
+@media (max-width:700px){.claustras{display:flex;gap:6px;margin-top:10px}.claustras figure{flex:1 1 0;min-width:0}.claustras figcaption{font-size:.72rem}#poses .atouts-car>.carte{flex-basis:88%;padding:16px 14px 14px}#poses .atouts-car>.carte p{margin-bottom:6px}}

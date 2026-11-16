@@ -2155,3 +2155,5 @@ main #options .puces,main #toitures .puces,main #autorisation .puces{text-align:
 /* Menu : « Comment choisir », point d'interrogation (16/11/2026) */
 .mm-vig.mm-vq{display:grid!important;place-items:center;background:linear-gradient(135deg,#E3A94A 0%,#C8862C 100%)}
 .mm-vq b{font:900 1.9rem/1 Montserrat,sans-serif;color:#fff;filter:drop-shadow(0 1px 1px rgba(90,50,5,.45))}
+@media (max-width:700px){.comp-pergola{background:#fff;border-radius:var(--rayon);padding:2px 16px 8px;margin-top:18px}.comp-pergola>div:first-child{border-top:0}}
+@media (min-width:701px){.comp-pergola{display:none}}

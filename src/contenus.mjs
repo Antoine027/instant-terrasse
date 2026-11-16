@@ -1979,12 +1979,13 @@ ${heroPlein({ fil: "Pergolas & extérieur", h1: ["Quelle pergola", "pour votre t
   <div class="conteneur">
     <h2>Le comparatif</h2>
     <p class="chapo">Les trois se font sur mesure, en aluminium, dans la teinte de vos menuiseries. Ce qui les distingue, c'est la toiture.</p>
-    <div class="tableau-defile">
+    <div class="tableau-defile comp-table">
       <table class="comparatif comparatif-4">
         <thead><tr><th scope="col"><span class="vh">Critère</span></th>${TYPES_PERGOLA.map((m) => `<th scope="col">${m}</th>`).join("")}</tr></thead>
         <tbody>${LIGNES_PERGOLA.map(([crit, ...v]) => `<tr><th scope="row">${crit}</th>${v.map((x) => `<td>${x}</td>`).join("")}</tr>`).join("")}</tbody>
       </table>
     </div>
+    <dl class="comp-liste comp-pergola">${LIGNES_PERGOLA.map(([crit, ...v]) => `<div><dt>${crit}</dt>${v.map((x, i) => `<dd><b>${TYPES_PERGOLA[i]}</b>${x}</dd>`).join("")}</div>`).join("")}</dl>
   </div>
 </section>
 

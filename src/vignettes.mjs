@@ -24,7 +24,7 @@ export const VIGNETTES = {
   "/garde-corps-aluminium-lyon/": "gc-maison-terrasse-vue",
   "/store-banne-lyon/": "store-banne-beige-maison",
   "/bardage-bois-lyon/": "bardage-thermofrene-maison",
-  "/bardage-aluminium-lyon/": "bardage-alu-horizontal-gris",
+  "/bardage-aluminium-lyon/": "bardage-alu-vertical-brun-escalier",
   "/terrasse-lyon/": "terrasse-kebony-maison",
   "/terrasse-bois-ou-composite/": "terrasse-accoya-naturel-salle-a-manger",
   "/amenagement-terrasse-lyon/": "terrasse-bambou-ndurance-pergola",

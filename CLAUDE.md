@@ -55,7 +55,7 @@ Remplaçant du site WordPress/Elementor instantterrasse.com. Générateur Node s
 - Écrire « interlocuteur principal », jamais « un seul interlocuteur » (demande d'Antoine, 27/10/2026).
 
 ## Faits validés par Antoine (21/10/2026) — base des textes personnalisés
-- Antoine Escolle travaille depuis 2017 dans les pergolas, stores bannes et garde-corps, et dans la terrasse depuis début 2022 : 4 ans commercial dans une entreprise de terrasses (ne pas la nommer), puis création d'Instant Terrasse (ESCOM HABITAT, 2026). Écrire « depuis 2017 » / « depuis début 2022 », pas un nombre d'années qui vieillit.
+- Parcours d'Antoine (corrigé le 16/11/2026) : bâtiment depuis 2016 (aide-maçon) ; 2017 commercial en menuiseries extérieures (pergolas, stores bannes, garde-corps) ; 2021 commercial puis directeur commercial dans une entreprise spécialisée dans la terrasse (ne pas la nommer) ; puis création d'Instant Terrasse (ESCOM HABITAT, 2026). Écrire des années, pas un nombre d'années qui vieillit.
 - Positionnement : le meilleur produit au meilleur tarif, transparence (devis détaillé). Sur le site, ne jamais écrire « meilleur tarif » ni rien qui suggère « pas cher » (demande d'Antoine, 27/10/2026) : parler de « produits sélectionnés pour leur qualité » et de devis détaillé, pas de prix.
 - Installateur partenaire assuré en garantie décennale.
 - Plan 3D offert.

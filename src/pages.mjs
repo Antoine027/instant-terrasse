@@ -28,7 +28,7 @@ export const UNIVERS = [
       ["/nos-terrasses/", "Comparatif des matériaux", "Bois, composite, carrelage ou aluminium : lequel choisir ?", "Comparatif"],
     ] }],
   },  {
-    cle: "projets", nom: "Types de projets",
+    cle: "projets", nom: "Projets",
     accroche: "Piscine, balcon, toit-terrasse ou terrain en pente.",
     groupes: [{ nom: "", pages: [
       ["/terrasse-piscine-lyon/", "Terrasse de piscine", "Une plage confortable et sûre autour du bassin."],

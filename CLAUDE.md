@@ -25,7 +25,7 @@ Remplaçant du site WordPress/Elementor instantterrasse.com. Générateur Node s
 - Pages légales : /mentions-legales/ et /confidentialite/ (site sans cookie). Capital social : 1 000 € (constante SOCIETE dans src/pages.mjs).
 
 ## Contenu
-- Menu : onglet « Pergolas & extérieur » (ex-« Aménagements », choix d'Antoine 16/11/2026), aussi dans le fil d'Ariane des pages concernées.
+- Menu : onglet « Pergolas & extérieur » (ex-« Aménagements », choix d'Antoine 16/11/2026), aussi dans le fil d'Ariane des pages concernées. Ordre du menu (Antoine, 16/11/2026) : Terrasses · Pergolas & extérieur · Projets (ex-« Types de projets ») · Galerie · Notre méthode · Professionnels.
 - Gamme (validée par Antoine le 21/10/2026) :
   1. Terrasses : bois sur structure traditionnelle ou sur structure aluminium ; composite sur structure aluminium ; carrelage sur plots ou sur structure aluminium ; lames aluminium. Ni béton ni résine.
   2. Pergolas (fournisseur MSB) : bioclimatique, toile rétractable, toile tendue, toit fixe ; carports.

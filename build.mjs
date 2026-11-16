@@ -104,7 +104,7 @@ const entete = (actuel) => `
     </details>
     <nav class="menu" aria-label="Navigation principale">
       <ul class="menu-liste">
-        ${UNIVERS.filter((u) => u.cle !== "professionnels").map((u) => menuUnivers(u, actuel)).join("")}
+        ${["terrasses", "amenagements", "projets"].map((c) => menuUnivers(UNIVERS.find((u) => u.cle === c), actuel)).join("")}
         <li class="menu-item"><a class="menu-lien${actuel === "/realisations/" ? " actif" : ""}" href="/realisations/">${ICONES_MENU.galerie}<span class="mm-nom">Galerie</span></a></li>
         <li class="menu-item"><a class="menu-lien" href="/#methode">${ICONES_MENU.methode}<span class="mm-nom">Notre méthode</span></a></li>
         ${menuUnivers(UNIVERS.find((u) => u.cle === "professionnels"), actuel)}
@@ -129,7 +129,7 @@ const pied = (corps = "") => {
     </div>
     ${[
       ["Terrasses", univ("terrasses")],
-      ["Types de projets", [...univ("projets"), ...univ("professionnels")]],
+      ["Projets", [...univ("projets"), ...univ("professionnels")]],
       ["Pergolas & extérieur", univ("amenagements")],
       ["Instant Terrasse", AUTRES],
     ].map(([nom, pages]) => `<details class="pied-groupe" open><summary class="pied-titre">${nom}</summary><ul>${pages.filter(visible).map(([c, t, , court]) => `<li><a href="${c}">${court ?? t}</a></li>`).join("")}</ul></details>`).join("")}

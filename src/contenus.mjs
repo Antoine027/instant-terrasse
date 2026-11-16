@@ -2025,6 +2025,7 @@ const communes = (titre, intro, groupes) => `
     <h2>${titre}</h2>
     <p class="chapo">${intro}</p>
     ${groupes.map(([t, l]) => `<h3 class="communes-titre">${t}</h3><ul class="communes">${l.map((c) => `<li>${c}</li>`).join("")}</ul>`).join("")}
+    <p class="communes-note"><strong>Votre commune n'est pas dans la liste&nbsp;?</strong> Ce n'est qu'un aperçu : nous nous déplaçons aussi plus loin quand le projet s'y prête. <a href="/contact/">Parlez-nous de votre projet</a> ou appelez le <a href="tel:${SITE.telLien}">${SITE.tel}</a>.</p>
   </div>
 </section>`;
 const COMPLEMENTS = [
@@ -2067,7 +2068,7 @@ const terrasseLyon = {
       ["bouclier", "Pose assurée en décennale", "La pose est confiée à notre installateur partenaire, assuré en garantie décennale."],
       ["garde", "Un interlocuteur principal", "Antoine vous suit du premier rendez-vous à la fin du chantier."],
     ],
-    extra: communes("Notre zone d'intervention", "Nous nous déplaçons à Lyon et dans les communes de la métropole et des environs, notamment :", [
+    extra: communes("Notre zone d'intervention", "Nous nous déplaçons à Lyon, dans la métropole et bien au-delà. Quelques communes où nous intervenons :", [
       ["Lyon et l'est lyonnais", ["Lyon", "Villeurbanne", "Bron", "Décines", "Meyzieu", "Genas"]],
       ["Nord et nord-est", ["Caluire-et-Cuire", "Rillieux-la-Pape", "Sathonay", "Miribel", "Beynost"]],
       ["Monts d'Or", ["Saint-Didier-au-Mont-d'Or", "Saint-Cyr-au-Mont-d'Or", "Collonges-au-Mont-d'Or", "Champagne-au-Mont-d'Or", "Poleymieux-au-Mont-d'Or", "Limonest", "Lissieu"]],
@@ -2117,7 +2118,7 @@ const terrasseRillieux = {
       ["etanche", "Toit-terrasse", `Sans percer l'étanchéité : voir le <a href="/toit-terrasse-lyon/">toit-terrasse</a>.`],
       ["niveau", "Sur plots", `Sur une dalle ou un sol existant, sans couler de béton : voir la <a href="/terrasse-sur-plots-lyon/">terrasse sur plots</a>.`],
     ],
-    extra: communes("Partout à Rillieux-la-Pape et autour", "Nous intervenons dans tous les quartiers de la commune et dans les communes voisines.", [
+    extra: communes("Partout à Rillieux-la-Pape et autour", "Nous intervenons dans tous les quartiers de la commune, dans les communes voisines et plus loin.", [
       ["Rillieux-la-Pape", ["Rillieux centre", "Vancia", "Crépieux", "Les Alagniers", "Les Semailles", "La Velette"]],
       ["Communes voisines", ["Caluire-et-Cuire", "Sathonay", "Miribel", "Neyron", "Beynost"]],
     ]),

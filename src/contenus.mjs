@@ -2557,6 +2557,7 @@ const articleAutorisation = {
       ["Qu'est-ce que la règle des 40 m² ?", "En zone urbaine d'une commune couverte par un PLU, si celui-ci considère la construction comme une extension de la maison, la déclaration préalable suffit jusqu'à 40 m²."],
       ["Qui fait la démarche ?", "Le propriétaire, auprès de sa mairie. Nous vous aidons à identifier la démarche et le plan 3D facilite la préparation du dossier."],
     ],
+    bouton2: ["/pergolas-lyon/", "Quelle pergola choisir ?"],
     ctaTitre: "Un projet de pergola ou de carport ?",
     suite: [["/pergolas-lyon/", "Choisir sa pergola", "Bioclimatique, toile ou toit fixe."], ["/carport-lyon/", "Carport", "Adossé ou autoporté, jusqu'à 35 m²."], ["/terrasse-sur-pilotis-lyon/", "Terrasse sur pilotis", "Pour les terrains en pente."]],
   }),

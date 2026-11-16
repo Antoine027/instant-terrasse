@@ -75,11 +75,6 @@
       "statusCode": 301
     },
     {
-      "source": "/category/:slug*",
-      "destination": "/conseils/",
-      "statusCode": 301
-    },
-    {
       "source": "/form/:slug*",
       "destination": "/contact/",
       "statusCode": 301
@@ -87,6 +82,56 @@
     {
       "source": "/politique-de-cookies-ue/",
       "destination": "/confidentialite/",
+      "statusCode": 301
+    },
+    {
+      "source": "/terrasses-a-lyon-conception-et-pose/",
+      "destination": "/terrasse-lyon/",
+      "statusCode": 301
+    },
+    {
+      "source": "/terrasse-bois/",
+      "destination": "/terrasse-bois-lyon/",
+      "statusCode": 301
+    },
+    {
+      "source": "/terrasse-carrelage/",
+      "destination": "/terrasse-carrelage-lyon/",
+      "statusCode": 301
+    },
+    {
+      "source": "/category/bois/",
+      "destination": "/terrasse-bois-lyon/",
+      "statusCode": 301
+    },
+    {
+      "source": "/category/aluminium/",
+      "destination": "/terrasse-aluminium-lyon/",
+      "statusCode": 301
+    },
+    {
+      "source": "/category/composite/",
+      "destination": "/terrasse-composite-lyon/",
+      "statusCode": 301
+    },
+    {
+      "source": "/category/carrelage/",
+      "destination": "/terrasse-carrelage-lyon/",
+      "statusCode": 301
+    },
+    {
+      "source": "/category/entretien/",
+      "destination": "/terrasse-bois-lyon/",
+      "statusCode": 301
+    },
+    {
+      "source": "/category/terrasse/",
+      "destination": "/nos-terrasses/",
+      "statusCode": 301
+    },
+    {
+      "source": "/category/:slug*",
+      "destination": "/nos-terrasses/",
       "statusCode": 301
     }
   ],

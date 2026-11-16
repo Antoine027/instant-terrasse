@@ -2103,3 +2103,9 @@ main #options .puces,main #toitures .puces,main #autorisation .puces{text-align:
 @media (max-width:700px){.claustras{display:flex;gap:6px;margin-top:10px}.claustras figure{flex:1 1 0;min-width:0}.claustras figcaption{font-size:.72rem}#poses .atouts-car>.carte{flex-basis:88%;padding:16px 14px 14px}#poses .atouts-car>.carte p{margin-bottom:6px}}
 .carte-pose img{display:block;height:150px;width:auto;max-width:100%;margin:0 auto 12px;object-fit:contain}
 @media (max-width:700px){.carte-pose img{height:120px}}
+
+/* Pages locales : communes desservies (16/11/2026) */
+.communes-titre{font-size:1.05rem;margin:22px 0 10px}
+.communes{list-style:none;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:8px}
+.communes li{background:#F8F3EB;border-radius:15px;padding:6px 14px;font-size:.95rem}
+@media (max-width:700px){.communes{justify-content:center}.communes-titre{text-align:center}}

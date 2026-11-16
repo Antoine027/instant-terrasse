@@ -90,5 +90,13 @@
  "terrasse-kebony-restaurant": {
   "dossier": "bois",
   "position": "50% 55%"
+ },
+ "terrasse-kebony-maison": {
+  "dossier": "bois",
+  "position": "60% 60%"
+ },
+ "terrasse-thermopin-salon-jardin": {
+  "dossier": "bois",
+  "position": "45% 60%"
  }
 }

@@ -2013,7 +2013,128 @@ const terrasseRestaurant = {
   }),
 };
 
+// ---------- Pages locales (16/11/2026) : Lyon = page d'ensemble, Rillieux = siège et nord-est lyonnais ----------
+// Pas de photo de chantier local : illustrations produit, jamais présentées comme des réalisations sur place.
+const communes = (titre, intro, groupes) => `
+<section id="zone" class="bloc">
+  <div class="conteneur">
+    <h2>${titre}</h2>
+    <p class="chapo">${intro}</p>
+    ${groupes.map(([t, l]) => `<h3 class="communes-titre">${t}</h3><ul class="communes">${l.map((c) => `<li>${c}</li>`).join("")}</ul>`).join("")}
+  </div>
+</section>`;
+const COMPLEMENTS = [
+  ["/pergolas-lyon/", "Pergolas", "pergola-bioclimatique-salon-piscine", "De l'ombre sur la terrasse, en toile ou à lames orientables."],
+  ["/garde-corps-aluminium-lyon/", "Garde-corps", "gc-maison-terrasse-vue", "Indispensable dès que la terrasse est surélevée."],
+  ["/store-banne-lyon/", "Store banne", "store-banne-beige-maison", "Une protection solaire repliable, contre la façade."],
+  ["/carport-lyon/", "Carport", "carport-garage-gravier", "Abriter la voiture, dans le même style que la pergola."],
+];
+const complements = `
+<section class="bloc decouvrir">
+  <div class="conteneur">
+    <h2>Pour compléter votre terrasse</h2>
+    <div class="grille grille-4 decouvrir-grille projets-grille">${COMPLEMENTS.map(([c, t, ph, x]) => `<a class="carte carte-lien carte-photo" href="${c}"><div class="vignette">${imgPhoto(ph, { sizes: "(max-width:700px) 40vw, (max-width:1060px) 23vw, 270px" })}</div><div class="carte-corps"><h3>${t}</h3><p>${x}</p><span class="fleche" aria-hidden="true">→</span></div></a>`).join("")}</div>
+  </div>
+</section>`;
+
+const terrasseLyon = {
+  title: "Terrasse sur mesure à Lyon | Instant Terrasse",
+  description: "Terrasse sur mesure à Lyon : bois, composite, carrelage ou lames aluminium sur structure aluminium garantie 20 ans. Échantillons à domicile, plan 3D offert.",
+  corps: pageProjet({
+    ici: "/terrasse-lyon/", fil: "Terrasse à Lyon",
+    h1: ['<span class="pc-nowrap">Terrasse sur mesure</span>', '<span class="lyon-l">à Lyon</span>'], kicker: "Lyon et sa région",
+    chapo: "Bois, composite, carrelage ou lames aluminium : nous concevons votre terrasse chez vous, échantillons en main, et nous la dessinons en 3D avant le devis.",
+    photo: "terrasse-kebony-maison", position: "60% 60%",
+    revTitre: "Quatre revêtements, une même structure", revIntro: "Chaque matériau a ses qualités. Nous les comparons avec vous, sur place, selon l'exposition, l'usage et l'entretien que vous acceptez.",
+    poids: {},
+    rev: {
+      bois: ["terrasse-kebony-vue-jardin", "Thermofrêne, kebony, accoya, bambou… des bois massifs, sur structure aluminium ou traditionnelle."],
+      composite: ["composite-brun-cour-table", "L'aspect du bois sans saturateur ni ponçage, en deux gammes haut de gamme."],
+      aluminium: ["alu-terrasse-salon-parasol", "Le revêtement qui chauffe le moins, léger et 100 % recyclable, en 6 teintes."],
+      carrelage: ["carrelage-bh-aspect-bois-gris-table", "Des dalles de grès cérame de 2 cm, aspect pierre ou bois, jusqu'au 120 × 120."],
+    },
+    pose: bandeau("Sur structure aluminium", "Tous nos revêtements se posent sur une structure aluminium conforme au DTU 51-4, testée par le FCBA et fabriquée en France. Plots, rails et clips sont garantis 20 ans.", "Structure aluminium fabriquée en France, garantie 20 ans.", "Voir la structure", "/structure-terrasse-lyon/", IMG_STRUCT_ALU),
+    atoutsTitre: "Comment nous travaillons",
+    atouts: [
+      ["maison", "Les échantillons chez vous", "Pas de showroom : nous venons avec les échantillons, pour les voir à la lumière de votre jardin et à côté de votre façade."],
+      ["plan", "Plan 3D offert", "Avant de signer, vous voyez votre terrasse en 3D : implantation, hauteurs, matériau."],
+      ["niveau", "Un projet étudié sur place", "Niveaux, seuils, écoulement de l'eau, accès et exposition sont relevés lors du rendez-vous."],
+      ["couches", "Un devis détaillé", "Chaque poste est détaillé ligne par ligne : vous savez ce que vous payez."],
+      ["bouclier", "Pose assurée en décennale", "La pose est confiée à notre installateur partenaire, assuré en garantie décennale."],
+      ["garde", "Un interlocuteur principal", "Antoine vous suit du premier rendez-vous à la fin du chantier."],
+    ],
+    extra: communes("Notre zone d'intervention", "Nous nous déplaçons à Lyon et dans les communes de la métropole et des environs, notamment :", [
+      ["Lyon et l'est lyonnais", ["Lyon", "Villeurbanne", "Bron", "Décines", "Meyzieu", "Genas"]],
+      ["Nord et nord-est", ["Caluire-et-Cuire", "Rillieux-la-Pape", "Sathonay", "Miribel", "Beynost"]],
+      ["Ouest lyonnais et Monts d'Or", ["Écully", "Dardilly", "Tassin-la-Demi-Lune", "Champagne-au-Mont-d'Or", "Limonest", "Saint-Didier-au-Mont-d'Or"]],
+      ["Plus au nord", ["Villefranche-sur-Saône"]],
+    ]),
+    galerieCat: ["terrasse-kebony-maison", "carrelage-bh-aspect-bois-gris-jardin", "alu-terrasse-salon-parasol", "composite-brun-cour-table", "terrasse-thermopin-jardin-pins", "carrelage-bh-pergola-cour", "terrasse-kebony-facade-brique", "alu-terrasse-fauteuils-rouges", "terrasse-bambou-ndurance-pergola", "carrelage-bh-grand-format-baie", "composite-brun-transats", "terrasse-accoya-naturel-salle-a-manger"],
+    titreGalerie: "Des terrasses pour s'inspirer",
+    lyon: ["Une terrasse adaptée à votre maison", "Maison avec jardin, appartement avec balcon, toit-terrasse en ville ou terrain en pente : chaque emplacement a ses contraintes. Nous les regardons sur place avant de vous conseiller un revêtement et une structure.", "Instant Terrasse conçoit votre projet et fournit les matériaux. La pose est confiée à notre installateur partenaire, assuré en garantie décennale, et nous restons votre interlocuteur du premier rendez-vous à la fin du chantier."],
+    lyonCourt: "Jardin, balcon, toit-terrasse ou terrain en pente : nous regardons les contraintes sur place avant de conseiller un revêtement et une structure.",
+    faqTitre: "Vos questions sur votre terrasse à Lyon",
+    faq: [
+      ["Quel matériau choisir pour sa terrasse ?", `Tout dépend de l'aspect recherché, de l'exposition et de l'entretien que vous acceptez. Notre <a href="/nos-terrasses/#trouver">comparateur en 5 questions</a> classe les quatre revêtements selon vos réponses, et nous en parlons lors du rendez-vous.`],
+      ["Faut-il une autorisation pour construire une terrasse ?", "Une terrasse de plain-pied, non couverte, est en principe dispensée d'autorisation. Surélevée ou couverte, elle peut demander une déclaration préalable ou un permis de construire selon sa surface, et un secteur protégé ou le PLU peuvent ajouter des règles. Nous vérifions avec vous la règle de votre commune."],
+      ["Combien de temps dure une terrasse composite ?", "Nos deux gammes de composite sont garanties 15 ans pour la co-extrudée et 10 ans pour la pleine masse (garanties fabricants, sous conditions). La structure aluminium est garantie 20 ans."],
+      ["Réalisez-vous des terrasses sur un terrain en pente ?", `Oui. Les plots réglables rattrapent les faibles dénivelés ; au-delà, la terrasse peut reposer sur des <a href="/terrasse-sur-pilotis-lyon/">poteaux et poutres</a>.`],
+      ["Pouvez-vous ajouter une pergola ou un garde-corps ?", `Oui. <a href="/pergolas-lyon/">Pergola</a>, <a href="/store-banne-lyon/">store banne</a> ou <a href="/garde-corps-aluminium-lyon/">garde-corps</a> peuvent être étudiés dans le même projet et dessinés sur le même plan 3D.`],
+    ],
+    ctaTitre: "Un projet de terrasse à Lyon ?", ctaTexte: "Laissez votre numéro : nous vous rappelons pour en parler et organiser le rendez-vous, gratuit et sans engagement.",
+  }),
+};
+
+const terrasseRillieux = {
+  title: "Terrasse sur mesure à Rillieux-la-Pape | Instant Terrasse",
+  description: "Instant Terrasse a son siège à Rillieux-la-Pape : terrasses bois, composite, carrelage ou aluminium pour Vancia, Crépieux et le nord-est lyonnais.",
+  corps: pageProjet({
+    ici: "/terrasse-rillieux-la-pape/", fil: "Terrasse à Rillieux-la-Pape",
+    h1: ['<span class="pc-nowrap">Terrasse sur mesure</span>', "à Rillieux-la-Pape"], kicker: "Notre siège est à Rillieux-la-Pape",
+    chapo: "Instant Terrasse est née à Rillieux-la-Pape. Pour un projet dans la commune ou les communes voisines, le rendez-vous se cale facilement, échantillons en main.",
+    photo: "terrasse-thermopin-salon-jardin", position: "45% 60%",
+    revTitre: "Quel revêtement pour votre terrasse ?", revIntro: "Bois, composite, lames aluminium ou carrelage : nous vous montrons les quatre chez vous, à côté de votre façade.",
+    poids: {},
+    rev: {
+      bois: ["terrasse-thermofrene-marches", "Une matière vivante, différente sur chaque lame, qui se patine avec le temps."],
+      composite: ["composite-gris-piscine-jardin", "Ni saturateur ni ponçage : un simple nettoyage suffit."],
+      aluminium: ["alu-marches-aspect-teck", "Inerte et inaltérable : il ne moisit pas et ne bouge pas."],
+      carrelage: ["carrelage-bh-sureleve-gazon", "Des dalles de grès cérame antidérapantes, très résistantes aux rayures."],
+    },
+    pose: bandeau("Une structure adaptée au terrain", "Sur structure aluminium, sur lambourdes bois ou sur plots : la structure se choisit selon le sol, la hauteur et le revêtement. La structure aluminium est garantie 20 ans.", "Aluminium, bois ou plots, selon le sol et la hauteur.", "Voir les structures", "/structure-terrasse-lyon/", IMG_STRUCT_ALU),
+    atoutsTitre: "Les projets que nous étudions",
+    atouts: [
+      ["maison", "Terrasse de jardin", "Le prolongement du séjour, de plain-pied avec la maison."],
+      ["goutte", "Plage de piscine", `Antidérapante et agréable pieds nus : voir la <a href="/terrasse-piscine-lyon/">terrasse de piscine</a>.`],
+      ["pente", "Terrain en pente", `Une terrasse de niveau avec la maison, sur <a href="/terrasse-sur-pilotis-lyon/">pilotis</a>.`],
+      ["couches", "Balcon", `Un vrai sol posé sur l'existant : voir le <a href="/terrasse-balcon-lyon/">balcon</a>.`],
+      ["etanche", "Toit-terrasse", `Sans percer l'étanchéité : voir le <a href="/toit-terrasse-lyon/">toit-terrasse</a>.`],
+      ["niveau", "Sur plots", `Sur une dalle ou un sol existant, sans couler de béton : voir la <a href="/terrasse-sur-plots-lyon/">terrasse sur plots</a>.`],
+    ],
+    extra: communes("Partout à Rillieux-la-Pape et autour", "Nous intervenons dans tous les quartiers de la commune et dans les communes voisines.", [
+      ["Rillieux-la-Pape", ["Rillieux centre", "Vancia", "Crépieux", "Les Alagniers", "Les Semailles", "La Velette"]],
+      ["Communes voisines", ["Caluire-et-Cuire", "Sathonay", "Miribel", "Neyron", "Beynost"]],
+    ]),
+    galerieCat: ["terrasse-thermopin-salon-jardin", "terrasse-thermofrene-marches", "composite-gris-piscine-jardin", "alu-marches-aspect-teck", "carrelage-bh-sureleve-gazon", "terrasse-kebony-jardin", "carrelage-bh-aspect-bois-clair-pergola", "terrasse-thermopin-estrade", "composite-brun-deck-bassin", "terrasse-kebony-surelevee", "carrelage-aspect-bois-garde-corps-feuilles", "terrasse-bambou-xtreme-spa"],
+    titreGalerie: "Des terrasses pour s'inspirer",
+    lyon: ["Votre terrasse à Rillieux-la-Pape", "Le rendez-vous a lieu chez vous : nous relevons les niveaux, l'accès au jardin, l'écoulement de l'eau et l'exposition, et vous comparez les échantillons sur place. Vous recevez ensuite le plan 3D et un devis détaillé.", "Instant Terrasse conçoit votre projet et fournit les matériaux. La pose est confiée à notre installateur partenaire, assuré en garantie décennale, et nous restons votre interlocuteur du premier rendez-vous à la fin du chantier."],
+    lyonCourt: "Rendez-vous chez vous : niveaux, accès et exposition sont relevés, puis vous recevez le plan 3D et un devis détaillé.",
+    faqTitre: "Vos questions sur votre terrasse à Rillieux",
+    faq: [
+      ["Quel est le prix d'une terrasse à Rillieux-la-Pape ?", "Il dépend de la surface, du revêtement, de la structure et des contraintes du terrain. Après le rendez-vous, gratuit, vous recevez un devis détaillé ligne par ligne."],
+      ["Avez-vous un showroom ?", "Non : nous venons chez vous avec les échantillons. Vous les voyez à la lumière de votre jardin et à côté de votre façade, ce qu'un showroom ne permet pas."],
+      ["Faut-il une autorisation ?", "Une terrasse de plain-pied, non couverte, est en principe dispensée d'autorisation. Surélevée ou couverte, elle peut demander une déclaration préalable ou un permis de construire selon sa surface. Nous vérifions avec vous les règles du PLU."],
+      ["Combien de temps dure une terrasse en bois ?", "Cela dépend de l'essence, de la structure et de l'entretien. Nos essences phares sont garanties de 15 ans (thermopin) à 50 ans (accoya), garanties fabricants, sous conditions ; sur structure aluminium, rien ne pourrit sous les lames."],
+      ["Réalisez-vous des terrasses autour de piscine ?", `Oui, avec des revêtements antidérapants et qui chauffent peu. Voir la <a href="/terrasse-piscine-lyon/">terrasse de piscine</a>.`],
+    ],
+    ctaTitre: "Un projet de terrasse à Rillieux ?", ctaTexte: "Laissez votre numéro : nous vous rappelons pour en parler et organiser le rendez-vous, gratuit et sans engagement.",
+    apres: complements,
+  }),
+};
+
 export const CONTENUS = {
+  "/terrasse-lyon/": terrasseLyon,
+  "/terrasse-rillieux-la-pape/": terrasseRillieux,
   "/terrasse-restaurant-chr-lyon/": terrasseRestaurant,
   "/terrasse-camping-hpa/": terrasseCamping,
   "/pergolas-lyon/": pergolas,

@@ -26,6 +26,8 @@ export const VIGNETTES = {
   "/store-banne-lyon/": "store-banne-beige-maison",
   "/bardage-bois-lyon/": "bardage-thermofrene-maison",
   "/bardage-aluminium-lyon/": "bardage-alu-horizontal-gris",
+  "/terrasse-lyon/": "terrasse-kebony-maison",
+  "/terrasse-rillieux-la-pape/": "terrasse-thermopin-salon-jardin",
   // cartes « univers » de l'accueil
   "#terrasses": "terrasse-thermofrene-bord-de-loire",
   "#pergolas": "pergola-bioclimatique-salon-piscine",

@@ -2035,8 +2035,8 @@ const terrasseRestaurant = {
     poids: { entretien: 2, taches: 2, rayures: 1, adherence: 1 },
     rev: {
       aluminium: ["alu-restaurant-vue-mer", "Stable et sans traitement, avec un revêtement antidérapant : une allure contemporaine qui dure."],
-      composite: ["composite-brun-passerelle-bassin", "L'aspect du bois avec un entretien réduit, et une bonne résistance aux taches."],
-      carrelage: ["carrelage-bh-pergola-salon", "Une esthétique minérale, des dalles antidérapantes très résistantes aux rayures."],
+      composite: ["composite-brun-transats", "L'aspect du bois avec un entretien réduit, et une bonne résistance aux taches."],
+      carrelage: ["carrelage-bh-aspect-bois-gris-table", "Une esthétique minérale, des dalles antidérapantes très résistantes aux rayures."],
       bois: ["terrasse-thermopin-restaurant", "Une ambiance chaleureuse et naturelle, pour les établissements authentiques ou haut de gamme."],
     },
     pose: bandeau("Sur structure aluminium ou sur plots", "Sur un sol existant, les plots réglables rattrapent les écarts de niveau et la pente : la surface est plane, l'eau s'écoule dessous et les réseaux restent accessibles, sans couler de dalle. Structure aluminium garantie 20 ans.", "Plots réglables sur l'existant, sans dalle béton. Structure garantie 20 ans.", "Voir les structures", "/structure-terrasse-lyon/", IMG_STRUCT_ALU),
@@ -2057,7 +2057,7 @@ const terrasseRestaurant = {
     <div class="grille grille-3 atouts-car">${ETABLISSEMENTS_CHR.map(([t, x]) => `<div class="carte"><h3>${t}</h3><p>${x}</p></div>`).join("")}</div>
   </div>
 </section>`,
-    galerieCat: ["terrasse-kebony-restaurant", "restaurant-terrasse-gabions", "alu-restaurant-canal-vignes", "terrasse-thermopin-restaurant", "alu-restaurant-vue-mer", "alu-restaurant-salle", "composite-brun-passerelle-bassin", "carrelage-bh-pergola-salon"],
+    galerieCat: ["terrasse-kebony-restaurant", "restaurant-terrasse-gabions", "alu-restaurant-canal-vignes", "terrasse-thermopin-restaurant", "alu-restaurant-vue-mer", "alu-restaurant-salle"],
     titreGalerie: "Terrasses de restaurants en situation",
     lyon: ["Avant de se lancer", "Une terrasse sur le domaine public demande une autorisation de la mairie. À Lyon, selon le projet, la Ville peut demander les dimensions, les matériaux, les couleurs et, pour une terrasse sur stationnement, un croquis ou un photomontage. Ces démarches restent à faire auprès des services compétents.", "Nous venons voir les lieux, les accès, le support et vos horaires de service. Pour une première étude, quelques photos, la surface approximative et un croquis suffisent. Vous recevez ensuite un plan 3D et un devis détaillé."],
     lyonCourt: "Nous venons voir les lieux, les accès et le support ; vous recevez un plan 3D et un devis détaillé. Sur le domaine public, une autorisation de la mairie est nécessaire.",

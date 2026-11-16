@@ -1800,8 +1800,8 @@ ${heroPlein({ fil: "Pergolas & extérieur", h1: ['<span class="pc-nowrap">Garde-
       ["Tôle découpée", "Une tôle aluminium perforée ou découpée : une vingtaine de motifs (organiques, végétaux, géométriques), ou le vôtre à partir d'un dessin ou d'une photo."],
       ["Bois", "Des lames de pin ou de frêne thermo-traités, ou de douglas, horizontales ou verticales, qui prennent une patine naturelle."],
       ["Sans poteaux", "Nouveauté : une trame continue de barreaux verticaux, sans poteau, pour un linéaire filant et régulier."],
-      ["Main courante bois", "Une main courante aluminium, ou en bois pour un toucher plus chaleureux, dans les mêmes essences que le remplissage."],
     ].map(([t, x]) => `<div class="carte"><h3>${t}</h3><p>${x}</p>${vignettesGc(t)}</div>`).join("")}</div>
+    <p class="option-gc"><strong>En option :</strong> une main courante en bois à la place de l'aluminium (pin ou frêne thermo-traités, douglas), sur les modèles à poteaux, pour un toucher plus chaleureux.</p>
   </div>
 </section>
 

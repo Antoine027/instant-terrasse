@@ -2072,3 +2072,4 @@ main #options .puces,main #toitures .puces,main #autorisation .puces{text-align:
 .claustras figure{margin:0;text-align:center}
 .claustras img{width:100%;height:auto;display:block}
 .claustras figcaption{font-size:.8rem;font-weight:700;margin-top:4px}
+.option-gc{margin:22px auto 0;max-width:760px;text-align:center;background:rgba(255,255,255,.6);border-left:3px solid var(--accent);border-radius:10px;padding:14px 18px}

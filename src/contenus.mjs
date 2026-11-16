@@ -1450,7 +1450,6 @@ const pergolaToileRetractable = {
       ["La grande, stores intégrés", "Les stores zippés sont intégrés dans la structure, invisibles une fois remontés.", ["Jusqu'à 37,4 m²", "Jusqu'à 3 m de hauteur (2,6 m autoportée)", "Débord jusqu'à 2 m"]],
       ["Entre store et pergola", "Une toile enroulable sur deux poteaux, fixée à la façade : une protection solaire avant tout, qui laisse s'écouler une pluie faible.", ["Jusqu'à 6 × 5 m (30 m²)", "Inclinaison de 8 à 30 %", "Débord jusqu'à 1 m"]],
     ],
-    noteModeles: "Les deux pergolas sont conformes aux règles professionnelles des pergolas à ossature aluminium. Données fabricant.",
     schemas: SCHEMAS_TOILE,
     atoutsTitre: "Pourquoi une toile rétractable",
     atouts: [

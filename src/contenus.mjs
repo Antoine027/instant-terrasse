@@ -1770,6 +1770,10 @@ ${cta("Un projet de bardage ?")}`,
 
 
 // ---------- Garde-corps (refonte 16/11/2026, catalogue garde-corps fournisseur fourni par Antoine) ----------
+const VIGNETTES_GC = {
+  "Garde-corps d'escalier": [["rampant-verre", "Verre", "Garde-corps d'escalier en verre"], ["rampant-lisses", "Lisses", "Garde-corps d'escalier à lisses horizontales"], ["rampant-barreaux", "Barreaux", "Garde-corps d'escalier à barreaux verticaux"]],
+  "Claustras et pare-vues": [["claustra-barreaux", "Barreaux", "Claustra aluminium à barreaux"], ["claustra-verre", "Verre", "Claustra aluminium en verre"], ["claustra-tole", "Tôle", "Claustra aluminium en tôle découpée"], ["claustra-bois", "Bois", "Claustra aluminium à lames bois"]],
+};
 const GALERIE_GC = [...PHOTOS.filter((p) => p.categorie === "garde-corps").map((p) => p.cle), "carrelage-gris-garde-corps-verre-depoli", "carrelage-beige-pergola-toit-fixe", "restaurant-terrasse-gabions"];
 const gardeCorps = {
   title: "Garde-corps aluminium Lyon : verre, barreaux, tôle, bois | Instant Terrasse",
@@ -1823,7 +1827,7 @@ ${heroPlein({ fil: "Pergolas & extérieur", h1: ['<span class="pc-nowrap">Garde-
       ["Garde-corps d'escalier", "Les mêmes remplissages suivent la pente de l'escalier, avec des jonctions de rampant et d'angle."],
       ["Main courante murale", "En aluminium ou en bois, fixée au mur le long d'un escalier."],
       ["Claustras et pare-vues", "Les mêmes modèles, plus hauts, pour se protéger des regards sur une terrasse ou un balcon."],
-    ].map(([t, x]) => `<div class="carte"><h3>${t}</h3><p>${x}</p></div>`).join("")}</div>
+    ].map(([t, x]) => `<div class="carte"><h3>${t}</h3><p>${x}</p>${VIGNETTES_GC[t] ? `<div class="claustras">${VIGNETTES_GC[t].map(([f, l, a]) => `<figure><img src="/assets/img/claustra/${f}.webp" alt="${a}" width="300" height="300" loading="lazy" decoding="async" data-credit="©Kordo"><figcaption>${l}</figcaption></figure>`).join("")}</div>` : ""}</div>`).join("")}</div>
   </div>
 </section>
 

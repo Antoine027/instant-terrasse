@@ -2067,3 +2067,8 @@ main #options .puces,main #toitures .puces,main #autorisation .puces{text-align:
 .dim-carport{font-size:.85rem;font-weight:700;color:var(--accent-fonce,#9a6a1f);margin-top:auto}
 .carte-led{margin-top:22px}
 .titre-confort{margin-top:48px}
+/* Garde-corps : vignettes des claustras (16/11/2026) */
+.claustras{display:grid;grid-template-columns:repeat(auto-fit,minmax(60px,1fr));gap:8px;margin-top:14px}
+.claustras figure{margin:0;text-align:center}
+.claustras img{width:100%;height:auto;display:block}
+.claustras figcaption{font-size:.8rem;font-weight:700;margin-top:4px}

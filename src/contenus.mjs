@@ -1771,6 +1771,7 @@ ${cta("Un projet de bardage ?")}`,
 
 // ---------- Garde-corps (refonte 16/11/2026, catalogue garde-corps fournisseur fourni par Antoine) ----------
 const VIGNETTES_GC = {
+  "Main courante murale": [["murale-alu", "Aluminium", "Main courante murale en aluminium", 110], ["murale-bois", "Bois", "Main courante murale en bois", 110]],
   "Barreaux": [["gc-lisses-horizontales", "Lisses horizontales", "Garde-corps à lisses horizontales", 169], ["gc-barreaux-verticaux", "Barreaux verticaux", "Garde-corps à barreaux verticaux", 169], ["gc-barreaux-vide", "Vide sous main courante", "Garde-corps à barreaux avec vide sous la main courante", 169]],
   "Verre": [["gc-verre-integral", "Intégral", "Garde-corps en verre intégral", 169], ["gc-verre-vide", "Vide sous main courante", "Garde-corps en verre avec vide sous la main courante", 169], ["gc-verre-lisses", "Avec lisses", "Garde-corps en verre surmonté de lisses", 169]],
   "Tôle découpée": [["gc-tole-feuille", "Motif feuille", "Garde-corps en tôle découpée, motif feuille", 169], ["gc-tole-rond", "Rond perforé", "Garde-corps en tôle perforée ronde", 169], ["gc-tole-lisses", "Avec lisses", "Garde-corps en tôle découpée surmontée de lisses", 169]],
@@ -1780,6 +1781,12 @@ const VIGNETTES_GC = {
   "Claustras et pare-vues": [["claustra-barreaux", "Barreaux", "Claustra aluminium à barreaux"], ["claustra-verre", "Verre", "Claustra aluminium en verre"], ["claustra-tole", "Tôle", "Claustra aluminium en tôle découpée"], ["claustra-bois", "Bois", "Claustra aluminium à lames bois"]],
 };
 const vignettesGc = (t) => VIGNETTES_GC[t] ? `<div class="claustras">${VIGNETTES_GC[t].map(([f, l, a, h = 300]) => `<figure><img src="/assets/img/claustra/${f}.webp" alt="${a}" width="300" height="${h}" loading="lazy" decoding="async" data-credit="©Kordo"><figcaption>${l}</figcaption></figure>`).join("")}</div>` : "";
+const MOTIFS_GC = [
+  ["Organique", [["rond-perfore", "Rond perforé"], ["galet", "Galet"], ["eclaboussure", "Éclaboussure"], ["bulle", "Bulle"], ["vague", "Vague"]]],
+  ["Botanique", [["feuille", "Feuille"], ["herbe", "Herbe"], ["petale", "Pétale"], ["foret", "Forêt"], ["fleurs", "Fleurs"]]],
+  ["Linéaire", [["diagonale", "Diagonale"], ["bambou", "Bambou"], ["hexagone", "Hexagone"], ["carre-perfore", "Carré perforé"], ["ligne-perforee", "Ligne perforée"]]],
+  ["Géométrique", [["qr-code-perfore", "QR code perforé"], ["faience", "Faïence"], ["losange", "Losange"], ["mosaique", "Mosaïque"], ["triangle", "Triangle"]]],
+];
 const GALERIE_GC = [...PHOTOS.filter((p) => p.categorie === "garde-corps").map((p) => p.cle), "carrelage-gris-garde-corps-verre-depoli", "carrelage-beige-pergola-toit-fixe", "restaurant-terrasse-gabions"];
 const gardeCorps = {
   title: "Garde-corps aluminium Lyon : verre, barreaux, tôle, bois | Instant Terrasse",
@@ -1801,7 +1808,21 @@ ${heroPlein({ fil: "Pergolas & extérieur", h1: ['<span class="pc-nowrap">Garde-
       ["Bois", "Des lames de pin ou de frêne thermo-traités, ou de douglas, horizontales ou verticales, qui prennent une patine naturelle."],
       ["Sans poteaux", "Nouveauté : une trame continue de barreaux verticaux, sans poteau, pour un linéaire filant et régulier."],
     ].map(([t, x]) => `<div class="carte"><h3>${t}</h3><p>${x}</p>${vignettesGc(t)}</div>`).join("")}</div>
-    <p class="option-gc"><strong>En option :</strong> une main courante en bois à la place de l'aluminium (pin ou frêne thermo-traités, douglas), sur les modèles à poteaux, pour un toucher plus chaleureux.</p>
+    <div class="option-gc">
+      <p><strong>En option, main courante en bois :</strong> à la place de l'aluminium, sur les modèles à poteaux, pour un toucher plus chaleureux.</p>
+      <div class="mc-grille">
+        <img class="mc-profils" src="/assets/img/claustra/main-courante-profils.webp" alt="Profils de main courante : aluminium 60 × 23 mm, bois 90 × 45 mm" width="550" height="320" loading="lazy" decoding="async" data-credit="©Kordo">
+        <ul class="mc-essences">${[["pin", "Pin thermo-traité", "Finlande, PEFC"], ["frene", "Frêne thermo-traité", "Autriche, FSC Mixte 70 %"], ["douglas", "Douglas", "France, PEFC"]].map(([f, n, o]) => `<li><img src="/assets/img/claustra/essence-${f}.webp" alt="${n}" width="183" height="41" loading="lazy" decoding="async" data-credit="©Kordo"><b>${n}</b><small>${o}</small></li>`).join("")}</ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="motifs" class="bloc bloc-alt">
+  <div class="conteneur">
+    <h2>Les motifs de tôle découpée</h2>
+    <p class="chapo">Vingt motifs au choix, ou le vôtre : il suffit d'un dessin (fichier DXF ou STEP), de la référence d'une tôle existante ou d'une photo.</p>
+    ${MOTIFS_GC.map(([fam, liste]) => `<h3 class="motifs-titre">${fam}</h3><div class="motifs">${liste.map(([f, n]) => `<figure><img src="/assets/img/claustra/motifs/${f}.webp" alt="Motif de tôle ${n}" width="200" height="200" loading="lazy" decoding="async" data-credit="©Kordo"><figcaption>${n}</figcaption></figure>`).join("")}</div>`).join("")}
   </div>
 </section>
 

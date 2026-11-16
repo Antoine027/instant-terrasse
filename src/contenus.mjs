@@ -1308,20 +1308,31 @@ const FERMETURES_PERGOLA = [
   ["Claustra à lames", "Fixe ou coulissante, avec 85 % ou 100 % d'occultation au choix, pour un espace semi-fermé.", "Jusqu'à 2,6 m de haut"],
   ["Brise-vue grandes lames", "Fixe, en lames aluminium horizontales ou verticales, effet chêne clair en option.", "Jusqu'à 3 m de haut"],
 ];
-// Schéma isométrique d'une pergola bioclimatique, à l'échelle relative des 3 modèles (W = largeur, stores = store zippé baissé en façade)
-const schemaPergola = (W, stores = false) => {
+// Schéma isométrique d'une pergola, à l'échelle relative des modèles (W = largeur ; stores = store zippé baissé ; toile = toit en toile ; facade = fixée au mur, 2 poteaux, toit en pente)
+const schemaPergola = (W, { stores = false, toile = false, facade = false } = {}) => {
   const D = 55, H = 50, c = Math.cos(Math.PI / 6), s = 0.5, ox = 130 - (W - D) * c / 2, oy = 166 - (W + D + 24) * s;
   const P = (x, y, z) => `${(ox + (x - y) * c).toFixed(1)},${(oy + (x + y) * s - z).toFixed(1)}`;
-  const poteau = (x, y) => `<polygon points="${P(x, y, 0)} ${P(x + 4, y, 0)} ${P(x + 4, y, H)} ${P(x, y, H)}" fill="#3d4246"/><polygon points="${P(x + 4, y, 0)} ${P(x + 4, y + 4, 0)} ${P(x + 4, y + 4, H)} ${P(x + 4, y, H)}" fill="#2F3437"/>`;
-  let lames = `<polygon points="${P(2, 2, H + 6)} ${P(W + 2, 2, H + 6)} ${P(W + 2, D + 2, H + 6)} ${P(2, D + 2, H + 6)}" fill="#8f969a"/>`;
-  for (let x = 6; x < W - 4; x += 7) lames += `<polygon points="${P(x, 2, H + 6)} ${P(x + 4.5, 2, H + 6)} ${P(x + 4.5, D + 2, H + 6)} ${P(x, D + 2, H + 6)}" fill="#c9ccce"/>`;
-  const cadre = `<polygon points="${P(0, 0, H + 10)} ${P(W + 4, 0, H + 10)} ${P(W + 4, D + 4, H + 10)} ${P(0, D + 4, H + 10)}" fill="none" stroke="#2F3437" stroke-width="3" stroke-linejoin="round"/>
-  <polygon points="${P(0, D + 4, H + 10)} ${P(W + 4, D + 4, H + 10)} ${P(W + 4, D + 4, H)} ${P(0, D + 4, H)}" fill="#3d4246"/><polygon points="${P(W + 4, 0, H + 10)} ${P(W + 4, D + 4, H + 10)} ${P(W + 4, D + 4, H)} ${P(W + 4, 0, H)}" fill="#2F3437"/>`;
-  const store = stores ? `<polygon points="${P(4, D + 4, H)} ${P(W, D + 4, H)} ${P(W, D + 4, H * 0.45)} ${P(4, D + 4, H * 0.45)}" fill="#D79A3A" fill-opacity=".55"/>` : "";
+  const z = (y) => (facade ? H + 20 - (20 * y) / (D + 4) : H); // hauteur du dessous du toit
+  const poteau = (x, y) => `<polygon points="${P(x, y, 0)} ${P(x + 4, y, 0)} ${P(x + 4, y, z(y))} ${P(x, y, z(y))}" fill="#3d4246"/><polygon points="${P(x + 4, y, 0)} ${P(x + 4, y + 4, 0)} ${P(x + 4, y + 4, z(y))} ${P(x + 4, y, z(y))}" fill="#2F3437"/>`;
   const sol = `<polygon points="${P(-8, -8, 0)} ${P(W + 12, -8, 0)} ${P(W + 12, D + 12, 0)} ${P(-8, D + 12, 0)}" fill="#F0E8DA"/>`;
-  return `<svg class="schema-pergola" viewBox="0 0 260 168" role="img" aria-hidden="true">${sol}${poteau(0, 0)}${poteau(W, 0)}${poteau(0, D)}${lames}${cadre}${store}${poteau(W, D)}</svg>`;
+  const mur = facade ? `<polygon points="${P(-8, 0, 0)} ${P(W + 12, 0, 0)} ${P(W + 12, 0, H + 40)} ${P(-8, 0, H + 40)}" fill="#ddd2bf" stroke="#c9bca5" stroke-width="1"/>` : "";
+  let toit;
+  if (toile) {
+    toit = `<polygon points="${P(2, 2, z(2) + 6)} ${P(W + 2, 2, z(2) + 6)} ${P(W + 2, D + 2, z(D + 2) + 6)} ${P(2, D + 2, z(D + 2) + 6)}" fill="#efe3cc"/>`;
+    for (let y = 9; y < D; y += 9) toit += `<polyline points="${P(2, y, z(y) + 6)} ${P(W + 2, y, z(y) + 6)}" fill="none" stroke="#d2c2a4" stroke-width="1.2"/>`;
+  } else {
+    toit = `<polygon points="${P(2, 2, H + 6)} ${P(W + 2, 2, H + 6)} ${P(W + 2, D + 2, H + 6)} ${P(2, D + 2, H + 6)}" fill="#8f969a"/>`;
+    for (let x = 6; x < W - 4; x += 7) toit += `<polygon points="${P(x, 2, H + 6)} ${P(x + 4.5, 2, H + 6)} ${P(x + 4.5, D + 2, H + 6)} ${P(x, D + 2, H + 6)}" fill="#c9ccce"/>`;
+  }
+  const yb = D + 4;
+  const cadre = `<polygon points="${P(0, 0, z(0) + 10)} ${P(W + 4, 0, z(0) + 10)} ${P(W + 4, yb, z(yb) + 10)} ${P(0, yb, z(yb) + 10)}" fill="none" stroke="#2F3437" stroke-width="3" stroke-linejoin="round"/>
+  <polygon points="${P(0, yb, z(yb) + 10)} ${P(W + 4, yb, z(yb) + 10)} ${P(W + 4, yb, z(yb))} ${P(0, yb, z(yb))}" fill="#3d4246"/><polygon points="${P(W + 4, 0, z(0) + 10)} ${P(W + 4, yb, z(yb) + 10)} ${P(W + 4, yb, z(yb))} ${P(W + 4, 0, z(0))}" fill="#2F3437"/>`;
+  const store = stores ? `<polygon points="${P(4, yb, z(yb))} ${P(W, yb, z(yb))} ${P(W, yb, z(yb) * 0.45)} ${P(4, yb, z(yb) * 0.45)}" fill="#D79A3A" fill-opacity=".55"/>` : "";
+  const arriere = facade ? "" : poteau(0, 0) + poteau(W, 0);
+  return `<svg class="schema-pergola" viewBox="0 -12 260 180" role="img" aria-hidden="true">${sol}${mur}${arriere}${poteau(0, D)}${toit}${cadre}${store}${poteau(W, D)}</svg>`;
 };
-const SCHEMAS_BIOCLIM = [schemaPergola(72), schemaPergola(102), schemaPergola(130, true)];
+const SCHEMAS_BIOCLIM = [schemaPergola(72), schemaPergola(102), schemaPergola(130, { stores: true })];
+const SCHEMAS_TOILE = [schemaPergola(100, { toile: true }), schemaPergola(130, { toile: true, stores: true }), schemaPergola(88, { toile: true, facade: true })];
 const pagePergolaRiche = ({ titreConfort = "Confort et automatismes", h1, kicker, chapo, photo, position, ancre, titreModeles, introModeles, modeles, schemas, noteModeles, atoutsTitre, atouts, confort, galerieCat, titreGalerie, gauche, faqTitre, faq, ici, ctaTitre }) => `
 ${heroPlein({ fil: "Pergolas & extérieur", h1, kicker, chapo, photo, position,
   actions: `<a class="bouton" href="/contact/">Demander un devis gratuit</a> <a class="bouton bouton-blanc" href="#modeles">${ancre}</a>` })}
@@ -1442,6 +1453,7 @@ const pergolaToileRetractable = {
       ["Entre store et pergola", "Une toile enroulable sur deux poteaux, fixée à la façade : une protection solaire avant tout, qui laisse s'écouler une pluie faible.", ["Jusqu'à 6 × 5 m (30 m²)", "Inclinaison de 8 à 30 %", "Débord jusqu'à 1 m"]],
     ],
     noteModeles: "Les deux pergolas sont conformes aux règles professionnelles des pergolas à ossature aluminium. Données fabricant.",
+    schemas: SCHEMAS_TOILE,
     atoutsTitre: "Pourquoi une toile rétractable",
     atouts: [
       ["soleil", "Ombre à la demande", "Toile déployée aux heures chaudes, repliée le reste du temps : la terrasse et la maison gardent leur lumière."],

@@ -13,6 +13,9 @@ Remplaçant du site WordPress/Elementor instantterrasse.com. Générateur Node s
 - Ne jamais toucher au domaine, aux DNS ni au WordPress.
 - Le site de test est non indexé : `EN_LIGNE = false` dans build.mjs (meta robots + robots.txt) et en-tête `X-Robots-Tag: noindex` dans vercel.json. Ces trois verrous ne sont retirés que le jour de la bascule.
 
+## Formulaire de contact (testé OK le 16/11/2026)
+- api/contact.js envoie par l'API Brevo (compte Brevo commun avec Horizon Fenêtre). Variables Vercel (Production, type Secret) : BREVO_API_KEY (clé « Site Instant Terrasse », accès restreint emails transactionnels, sans date d'expiration mais expire après 90 jours sans utilisation), CONTACT_TO = contact@instantterrasse.com, CONTACT_FROM = contact@horizonfenetre.com (expéditeur Brevo entièrement authentifié). À la bascule : authentifier instantterrasse.com dans Brevo (DNS, avec Antoine) puis passer CONTACT_FROM sur une adresse instantterrasse.com. L'expéditeur contact@escomhabitat.com n'a ni DKIM propre ni DMARC complet.
+
 ## Bascule (plus tard)
 - Garder les URL existantes qui apportent du trafic (à vérifier dans la Search Console), même si leur contenu change.
 - Toute ancienne URL supprimée ou renommée reçoit une redirection 301 dans vercel.json.

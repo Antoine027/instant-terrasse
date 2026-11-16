@@ -1,6 +1,6 @@
 // Contenus rédigés des pages. Une page présente ici remplace sa version « en préparation ».
 // Règles : pas de chiffre, garantie, certification ou chantier inventé ; pas de nom de fournisseur.
-import { SITE, POSE, TRIO, BADGE_AVIS, blocRappel } from "./pages.mjs";
+import { SITE, POSE, TRIO, BADGE_AVIS, blocRappel, ARTICLES } from "./pages.mjs";
 import { galerie, imgPhoto, imgHero, PHOTOS, credit } from "./galerie.mjs";
 import { carteProduit } from "./vignettes.mjs";
 import { RANG } from "./ordre-photos.mjs";
@@ -2201,7 +2201,187 @@ const terrasseRillieux = {
   }),
 };
 
+// ---------- Rubrique Conseils (16/11/2026) ----------
+// Articles aux adresses des anciens contenus les plus vus (Search Console) : faits validés uniquement, aucun prix.
+const AUTEUR = { "@type": "Person", name: "Antoine Escolle", url: `${SITE.url}/quisommesnous/` };
+const jsonArticle = (chemin, titre, description, photo) => ({
+  "@context": "https://schema.org", "@type": "Article", headline: titre, description,
+  author: AUTEUR, publisher: { "@id": `${SITE.url}/#entreprise` },
+  datePublished: "2026-11-16", dateModified: "2026-11-16", mainEntityOfPage: `${SITE.url}${chemin}`,
+  image: `${SITE.url}/assets/img/${PHOTOS.find((x) => x.cle === photo).dossier}/${photo}-1200.webp`,
+});
+const signature = `<p class="article-auteur">Par <a href="/quisommesnous/">Antoine Escolle</a>, fondateur d'Instant Terrasse · 16 novembre 2026</p>`;
+const pageArticle = ({ h1, kicker, chapo, photo, position, corps, faqTitre, faq, ctaTitre, suite }) => `
+${heroPlein({ fil: '<a href="/conseils/">Conseils</a>', h1, kicker, chapo, photo, position, actions: `<a class="bouton" href="/contact/">Demander un devis gratuit</a> <a class="bouton bouton-blanc" href="/nos-terrasses/#trouver">Le comparateur</a>` })}
+
+<article class="bloc">
+  <div class="conteneur conteneur-etroit article">
+    ${signature}
+    ${corps}
+  </div>
+</article>
+
+<section class="bloc bloc-alt">
+  <div class="conteneur conteneur-etroit">
+    <h2>${faqTitre}</h2>
+    ${faq.map(([q, r]) => `<details class="faq"><summary>${q}</summary><div><p>${r}</p></div></details>`).join("\n    ")}
+  </div>
+</section>
+
+<section class="bloc">
+  <div class="conteneur">
+    <h2>Pour aller plus loin</h2>
+    <div class="grille grille-3">${suite.map(([c, t, x]) => carteProduit(c, t, x)).join("")}</div>
+  </div>
+</section>
+${cta(ctaTitre, "Laissez votre numéro : nous vous rappelons pour en parler et organiser le rendez-vous chez vous, avec les échantillons.")}`;
+
+const ligne = (critere, bois, composite) => `<tr><th scope="row">${critere}</th><td>${bois}</td><td>${composite}</td></tr>`;
+const articleBoisComposite = {
+  title: "Terrasse bois ou composite : lequel choisir ?",
+  description: "Bois ou composite pour votre terrasse ? Aspect, chaleur en été, entretien, taches, garanties : la comparaison honnête d'un spécialiste lyonnais.",
+  jsonld: jsonArticle("/terrasse-bois-ou-composite/", "Terrasse bois ou composite : lequel choisir ?", "Aspect, chaleur en été, entretien, taches, garanties : la comparaison des deux matériaux.", "terrasse-accoya-naturel-salle-a-manger"),
+  corps: pageArticle({
+    h1: ["Terrasse bois ou composite :", "lequel choisir ?"], kicker: "Conseils",
+    chapo: "C'est la question qu'on me pose le plus souvent au premier rendez-vous. Il n'y a pas de bon choix dans l'absolu : il y a celui qui correspond à votre façon de vivre la terrasse.",
+    photo: "terrasse-accoya-naturel-salle-a-manger", position: "50% 60%",
+    corps: `
+    <p class="chapo">En résumé : le <strong>bois</strong> pour une matière vraiment naturelle, agréable pieds nus, qui accepte un peu d'entretien ; le <strong>composite</strong> pour l'aspect du bois avec le moins d'entretien possible et une meilleure résistance aux taches.</p>
+
+    <h2>Deux matériaux différents</h2>
+    <p>Le <a href="/terrasse-bois-lyon/">bois</a> que nous proposons est du bois massif : thermofrêne, kebony, thermopin, accoya et bambou pour nos essences phares, et d'autres essences comme le pin, le mélèze, le douglas, l'ipé ou le cumaru sur structure traditionnelle. Chaque lame est différente, et la teinte évolue avec le soleil et la pluie.</p>
+    <p>Le <a href="/terrasse-composite-lyon/">composite</a> associe des fibres de bois et des polymères. Nous en proposons deux gammes haut de gamme : une lame <strong>co-extrudée</strong> (un cœur et une coque de deux matériaux différents) et une lame <strong>pleine masse</strong>, composée à 75 % de fibres de bois PEFC, sans PVC ni plastifiant.</p>
+
+    <h2>Le comparatif point par point</h2>
+    <div class="tableau-defile"><table class="comparatif">
+      <thead><tr><th scope="col">Critère</th><th scope="col">Bois</th><th scope="col">Composite</th></tr></thead>
+      <tbody>
+        ${ligne("Aspect", "Une matière naturelle, différente sur chaque lame.", "L'aspect du bois, avec des teintes régulières.")}
+        ${ligne("Pieds nus en été", "Un bois tendre reste le plus agréable sous le pied en plein été.", "La gamme pleine masse chauffe peu, proche du bois.")}
+        ${ligne("Entretien", "Un nettoyage au minimum deux fois par an ; un saturateur si vous voulez garder la teinte d'origine.", "Ni saturateur, ni ponçage, ni lasure : un nettoyage à l'eau savonneuse suffit.")}
+        ${ligne("Taches (repas, barbecue)", "Plus sensible : mieux vaut nettoyer rapidement.", "Meilleure résistance aux taches.")}
+        ${ligne("Évolution de la teinte", "Grise naturellement s'il n'est pas traité.", "Se patine avec le temps, selon la gamme.")}
+        ${ligne("Structure", "Sur structure aluminium ou sur structure traditionnelle (lambourdes bois).", "Uniquement sur structure aluminium.")}
+        ${ligne("Garanties fabricants*", "De 15 ans (thermopin) à 50 ans (accoya), selon l'essence.", "15 ans (co-extrudée), 10 ans (pleine masse).")}
+      </tbody>
+    </table></div>
+    <p class="note-carport">* Garanties fabricants, sous conditions. La structure aluminium (plots, rails et clips) est garantie 20 ans, quel que soit le revêtement.</p>
+
+    <h2>Notre avis selon votre projet</h2>
+    <h3>Vous voulez une terrasse qui demande le moins de temps possible</h3>
+    <p>Le composite. Pas de saturateur à refaire, pas de ponçage : un nettoyage à l'eau savonneuse suffit. Si vous ne voulez même pas de nettoyage régulier, regardez aussi les <a href="/terrasse-aluminium-lyon/">lames aluminium</a> ou le <a href="/terrasse-carrelage-lyon/">carrelage</a>.</p>
+    <h3>Vous voulez du vrai bois, et l'entretien ne vous fait pas peur</h3>
+    <p>Le bois. C'est une matière vivante : chaque lame a son veinage, et la terrasse prend une patine grise avec le temps si vous la laissez naturelle. Un saturateur garde une teinte proche de celle d'origine. À l'ombre et sous les arbres, prévoyez des nettoyages plus fréquents.</p>
+    <h3>Autour d'une piscine</h3>
+    <p>Les deux conviennent. Un bois tendre est très agréable pieds nus en plein été ; la gamme composite pleine masse chauffe peu et reste antidérapante, même mouillée. Voir notre page <a href="/terrasse-piscine-lyon/">terrasse de piscine</a>.</p>
+    <h3>Une terrasse où l'on mange souvent</h3>
+    <p>Le composite résiste mieux aux taches de repas et de barbecue. Le bois convient aussi, à condition de nettoyer rapidement.</p>
+    <h3>Une terrasse surélevée ou sur un terrain en pente</h3>
+    <p>Ce n'est pas le revêtement qui décide, mais la structure : sur <a href="/terrasse-sur-pilotis-lyon/">pilotis</a> ou sur plots réglables. Bois et composite se posent tous les deux sur notre <a href="/structure-terrasse-lyon/">structure aluminium</a>.</p>
+
+    <h2>Et le budget ?</h2>
+    <p>Il dépend de l'essence ou de la gamme, de la surface, de la structure et de la configuration du terrain. Plutôt qu'un prix moyen qui ne vous dirait rien, nous chiffrons les deux options dans un devis détaillé, ligne par ligne, après le rendez-vous.</p>
+
+    <h2>Le mieux : les voir chez vous</h2>
+    <p>Pas de showroom : je viens chez vous avec les échantillons de bois et de composite. Vous les touchez, vous les voyez à la lumière de votre jardin et à côté de votre façade, puis vous recevez le plan 3D de votre terrasse. Vous hésitez encore entre plus de deux matériaux ? Notre <a href="/nos-terrasses/#trouver">comparateur en 5 questions</a> classe les quatre revêtements selon vos réponses.</p>`,
+    faqTitre: "Vos questions sur le bois et le composite",
+    faq: [
+      ["Le composite chauffe-t-il plus que le bois ?", "Cela dépend de la lame. Un bois tendre reste le plus agréable sous le pied en plein été ; notre gamme composite pleine masse chauffe peu, proche du bois."],
+      ["Le composite est-il glissant ?", "Notre gamme pleine masse est antidérapante, même mouillée."],
+      ["Le bois devient-il gris ?", "Oui, s'il est laissé naturel : il prend une patine grise au soleil et à la pluie. Un saturateur garde une teinte proche de celle d'origine. L'accoya gris a cet aspect patiné dès la pose."],
+      ["Quel entretien pour une terrasse composite ?", "Ni saturateur, ni ponçage, ni lasure : un nettoyage à l'eau savonneuse suffit."],
+      ["Peut-on poser du composite sur des lambourdes en bois ?", "Chez nous, non : le composite se pose uniquement sur notre structure aluminium. Le bois, lui, peut aussi se poser sur structure traditionnelle."],
+    ],
+    ctaTitre: "Vous hésitez entre bois et composite ?",
+    suite: [["/terrasse-bois-lyon/", "Terrasse bois", "Nos essences phares et leurs garanties."], ["/terrasse-composite-lyon/", "Terrasse composite", "Nos deux gammes et leurs teintes."], ["/nos-terrasses/", "Comparateur", "Les quatre revêtements classés selon vos réponses."]],
+  }),
+};
+
+const articleAmenagement = {
+  title: "Aménager sa terrasse à Lyon : nos conseils",
+  description: "Comment aménager sa terrasse : usages, circulation, ombre, intimité, niveaux et sécurité. Les points à regarder avant de choisir un revêtement.",
+  jsonld: jsonArticle("/amenagement-terrasse-lyon/", "Aménager sa terrasse : nos conseils", "Usages, circulation, ombre, intimité, niveaux et sécurité : les points à regarder avant de choisir un revêtement.", "terrasse-bambou-ndurance-pergola"),
+  corps: pageArticle({
+    h1: ["Aménager sa terrasse :", "nos conseils"], kicker: "Conseils",
+    chapo: "Une terrasse réussie, c'est d'abord une terrasse dont on se sert. Avant de parler de bois ou de carrelage, il faut savoir comment vous allez la vivre.",
+    photo: "terrasse-bambou-ndurance-pergola", position: "50% 55%",
+    corps: `
+    <p class="chapo">Voici, dans l'ordre, les questions que je me pose avec vous lors du rendez-vous : l'usage, la place, le soleil, les regards, les niveaux, puis seulement le matériau.</p>
+
+    <h2>1. Partir des usages</h2>
+    <p>Une terrasse peut être une salle à manger d'été, un salon pour recevoir, un coin détente au bord de la piscine ou simplement le prolongement du séjour. Chaque usage demande une surface et une implantation différentes :</p>
+    <ul>
+      <li><strong>Pour les repas</strong> : une zone dégagée pour la table et les chaises, au plus près de la cuisine.</li>
+      <li><strong>Pour se détendre</strong> : un coin salon ou des bains de soleil, à l'écart du passage.</li>
+      <li><strong>Pour recevoir</strong> : de la place pour circuler autour du mobilier, sans se gêner.</li>
+      <li><strong>Autour d'une piscine</strong> : un revêtement agréable pieds nus et antidérapant, voir la <a href="/terrasse-piscine-lyon/">terrasse de piscine</a>.</li>
+    </ul>
+
+    <h2>2. Regarder la maison et le terrain</h2>
+    <p>Sur place, je relève ce qui conditionne le projet : les dimensions disponibles, l'accès depuis la maison, la hauteur du seuil de la porte-fenêtre, le niveau du terrain, l'écoulement de l'eau et l'environnement (arbres, murs, vue). Une terrasse réussie ne doit pas avoir l'air ajoutée après coup : elle s'accorde avec la façade et le jardin.</p>
+    <p>Terrain en pente ? La terrasse peut rester de plain-pied avec la maison, sur <a href="/terrasse-sur-pilotis-lyon/">pilotis</a>. Sol existant ou dalle à recouvrir ? La <a href="/terrasse-sur-plots-lyon/">terrasse sur plots</a> évite de couler du béton.</p>
+
+    <h2>3. Prévoir l'ombre dès le départ</h2>
+    <p>Une terrasse plein sud sans ombre est souvent inutilisable l'après-midi en été. Selon l'orientation et l'usage :</p>
+    <ul>
+      <li>une <a href="/pergola-bioclimatique-lyon/">pergola bioclimatique</a>, dont les lames orientables règlent la lumière et protègent de la pluie ;</li>
+      <li>une <a href="/pergola-toile-retractable-lyon/">pergola à toile rétractable</a>, pour une ombre légère que l'on replie ;</li>
+      <li>un <a href="/store-banne-lyon/">store banne</a>, contre la façade.</li>
+    </ul>
+    <p>Attention à l'ouest : en fin de journée, le soleil est bas et passe sous une toile horizontale. Il faut alors une protection verticale (store vertical, brise-vue ou pergola équipée d'un store), et non horizontale.</p>
+
+    <h2>4. Se protéger des regards et sécuriser</h2>
+    <p>Des claustras ou des pare-vues créent de l'intimité face aux voisins. Dès que la terrasse est surélevée, un <a href="/garde-corps-aluminium-lyon/">garde-corps</a> devient nécessaire : en verre pour garder la vue, en barreaux, en tôle découpée ou en bois pour plus d'intimité.</p>
+
+    <h2>5. Choisir le matériau en dernier</h2>
+    <p>Une fois l'usage, l'exposition et l'entretien que vous acceptez connus, le choix du revêtement devient simple :</p>
+    <ul>
+      <li><a href="/terrasse-bois-lyon/">bois</a> : une matière naturelle et chaleureuse ;</li>
+      <li><a href="/terrasse-composite-lyon/">composite</a> : l'aspect du bois avec un entretien réduit ;</li>
+      <li><a href="/terrasse-aluminium-lyon/">lames aluminium</a> : le revêtement qui chauffe le moins, sans traitement ;</li>
+      <li><a href="/terrasse-carrelage-lyon/">carrelage</a> : une esthétique minérale, très résistante aux rayures.</li>
+    </ul>
+    <p>Pour comparer, lisez <a href="/terrasse-bois-ou-composite/">bois ou composite : lequel choisir ?</a> ou utilisez notre <a href="/nos-terrasses/#trouver">comparateur en 5 questions</a>.</p>
+
+    <h2>Comment se déroule le projet</h2>
+    <p>Je viens chez vous avec les échantillons pour regarder tout cela sur place. Vous recevez ensuite un plan 3D de votre terrasse, avec les éventuels pergola, store ou garde-corps, et un devis détaillé ligne par ligne. ${POSE}</p>`,
+    faqTitre: "Vos questions sur l'aménagement de terrasse",
+    faq: [
+      ["Par quoi commencer pour aménager sa terrasse ?", "Par l'usage : repas, détente, réception ou bord de piscine. La surface, l'emplacement et le matériau en découlent."],
+      ["Faut-il prévoir la pergola en même temps que la terrasse ?", "C'est préférable : hauteurs, fixations et écoulement de l'eau se pensent ensemble, et tout figure sur le même plan 3D."],
+      ["Comment se protéger du soleil couchant ?", "À l'ouest, le soleil bas passe sous une toile horizontale : il faut une protection verticale, comme un store vertical, un brise-vue ou une pergola équipée d'un store."],
+      ["Faut-il une autorisation ?", "Une terrasse de plain-pied, non couverte, est en principe dispensée d'autorisation. Surélevée ou couverte, elle peut demander une déclaration préalable ou un permis de construire selon sa surface. Nous vérifions avec vous la règle de votre commune."],
+      ["Le plan 3D est-il payant ?", "Non, le plan 3D de votre projet est offert."],
+    ],
+    ctaTitre: "Un projet d'aménagement de terrasse ?",
+    suite: [["/terrasse-lyon/", "Terrasse à Lyon", "Notre façon de travailler et notre zone."], ["/pergolas-lyon/", "Choisir sa pergola", "Bioclimatique, toile ou toit fixe."], ["/nos-terrasses/", "Comparateur", "Les quatre revêtements classés selon vos réponses."]],
+  }),
+};
+
+const conseils = {
+  title: "Conseils terrasse : choisir, aménager | Instant Terrasse",
+  description: "Nos conseils pour choisir le revêtement de votre terrasse et bien l'aménager : bois ou composite, ombre, intimité, niveaux. Par Instant Terrasse, Lyon.",
+  corps: `
+<section class="hero hero-page">
+  <div class="conteneur conteneur-etroit">
+    <p class="fil"><a href="/">Accueil</a> › Conseils</p>
+    <h1>Nos conseils</h1>
+    <p class="chapo">Les questions qu'on me pose le plus souvent au rendez-vous, avec des réponses franches.</p>
+  </div>
+</section>
+<section class="bloc">
+  <div class="conteneur">
+    <div class="grille grille-2">${ARTICLES.map(([c, t, x]) => carteProduit(c, t, x)).join("")}</div>
+    <p class="lien-comparateur"><a href="/nos-terrasses/#trouver">Trouver le revêtement idéal en 5 questions →</a></p>
+  </div>
+</section>
+${cta("Une question sur votre projet ?", "Laissez votre numéro : nous vous rappelons pour en parler.")}`,
+};
+
 export const CONTENUS = {
+  "/conseils/": conseils,
+  "/terrasse-bois-ou-composite/": articleBoisComposite,
+  "/amenagement-terrasse-lyon/": articleAmenagement,
   "/terrasse-lyon/": terrasseLyon,
   "/terrasse-rillieux-la-pape/": terrasseRillieux,
   "/terrasse-restaurant-chr-lyon/": terrasseRestaurant,

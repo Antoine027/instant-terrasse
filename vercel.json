@@ -40,18 +40,8 @@
       "statusCode": 301
     },
     {
-      "source": "/terrasse-bois-ou-composite/",
-      "destination": "/nos-terrasses/",
-      "statusCode": 301
-    },
-    {
       "source": "/prix-terrasse-lyon/",
       "destination": "/nos-terrasses/",
-      "statusCode": 301
-    },
-    {
-      "source": "/amenagement-terrasse-lyon/",
-      "destination": "/terrasse-lyon/",
       "statusCode": 301
     },
     {

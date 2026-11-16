@@ -2130,3 +2130,13 @@ main #options .puces,main #toitures .puces,main #autorisation .puces{text-align:
 .communes-note{margin-top:24px;padding:14px 18px;background:#F8F3EB;border-radius:15px;max-width:760px}
 @media (max-width:700px){.communes-note{text-align:center}}
 .img-finitions{width:100%;max-width:300px;height:auto;border-radius:15px;justify-self:center;box-shadow:0 10px 30px -18px rgba(47,52,55,.45)}
+
+/* Articles Conseils (16/11/2026) */
+.article h2{margin-top:44px}
+.article h3{margin:26px 0 8px;font-size:1.1rem}
+.article ul{padding-left:22px;margin:10px 0 16px}
+.article li{margin-bottom:6px}
+.article-auteur{font-size:.9rem;color:#55595c;margin:0 0 24px}
+@media (max-width:700px){main .article,main .article .chapo{text-align:left}}
+.grille-2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;max-width:860px;margin:0 auto}@media (max-width:700px){.grille-2{grid-template-columns:1fr}}
+@media (max-width:700px){main .article p,main .article h2,main .article h3,main .article li,main .article .chapo{text-align:left}.article .comparatif{min-width:0;font-size:.82rem}.article .comparatif th,.article .comparatif td{padding:9px 8px}.article .comparatif tbody th{width:26%}}

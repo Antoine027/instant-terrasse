@@ -81,6 +81,12 @@ export const AUTRES = [
   ["/terrasse-rillieux-la-pape/", "Terrasse à Rillieux-la-Pape", "Nos projets à Rillieux-la-Pape."],
 ];
 
+// Articles de la rubrique Conseils (16/11/2026) : hors menu et hors pied de page, listés sur /conseils/.
+export const ARTICLES = [
+  ["/terrasse-bois-ou-composite/", "Terrasse bois ou composite : lequel choisir ?", "Aspect, chaleur, entretien, taches : la comparaison honnête des deux matériaux."],
+  ["/amenagement-terrasse-lyon/", "Aménager sa terrasse : nos conseils", "Usages, ombre, intimité, niveaux : penser la terrasse avant de choisir le matériau."],
+];
+
 export const ENGAGEMENTS = [
   ["Des produits sélectionnés pour leur qualité", "Des matériaux choisis pour durer, et un devis détaillé ligne par ligne."],
   ["Les échantillons chez vous", "Pas de showroom : nous venons avec les échantillons, pour les voir à la lumière de votre jardin et à côté de votre façade."],
@@ -445,6 +451,7 @@ const confidentialite = pageTexte("Confidentialité et cookies", `
 const pagesPlan = [
   ...UNIVERS.flatMap((u) => u.groupes.flatMap((g) => g.pages.map((p) => ({ p, u })))),
   ...AUTRES.map((p) => ({ p, u: null })),
+  ...ARTICLES.map((p) => ({ p, u: null })),
 ].map(({ p: [chemin, nom, resume], u }) => ({
   chemin,
   title: `${nom} | Instant Terrasse`,

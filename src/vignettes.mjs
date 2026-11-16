@@ -27,6 +27,9 @@ export const VIGNETTES = {
   "/bardage-bois-lyon/": "bardage-thermofrene-maison",
   "/bardage-aluminium-lyon/": "bardage-alu-horizontal-gris",
   "/terrasse-lyon/": "terrasse-kebony-maison",
+  "/terrasse-bois-ou-composite/": "terrasse-accoya-naturel-salle-a-manger",
+  "/amenagement-terrasse-lyon/": "terrasse-bambou-ndurance-pergola",
+  "/conseils/": "terrasse-accoya-naturel-salle-a-manger",
   "/terrasse-rillieux-la-pape/": "terrasse-thermopin-salon-jardin",
   // cartes « univers » de l'accueil
   "#terrasses": "terrasse-thermofrene-bord-de-loire",

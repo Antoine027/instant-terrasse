@@ -98,5 +98,13 @@
  "terrasse-thermopin-salon-jardin": {
   "dossier": "bois",
   "position": "45% 60%"
+ },
+ "terrasse-accoya-naturel-salle-a-manger": {
+  "dossier": "bois",
+  "position": "50% 60%"
+ },
+ "terrasse-bambou-ndurance-pergola": {
+  "dossier": "bois",
+  "position": "50% 55%"
  }
 }

@@ -793,33 +793,6 @@ ${cta("Un projet de terrasse composite ?", "Laissez votre numéro : nous vous ra
 };
 
 // ---------- Store banne ----------
-const storeBanne = {
-  title: "Store banne Lyon : coffre, motorisation, sur mesure | Instant Terrasse",
-  description: "Store banne sur mesure à Lyon : coffre intégral, toile au choix, motorisation et automatismes vent et soleil, lambrequin déroulant. De l'ombre à la demande sur votre terrasse. Devis gratuit.",
-  corps: pageProduit({
-    fil: "Aménagements",
-    h1: ["Store banne", "sur mesure"], kicker: "Protections solaires à Lyon et dans sa région",
-    chapo: "De l'ombre en quelques secondes, et une façade dégagée le reste du temps : la protection solaire la plus simple.",
-    photo: "store-banne-coffre-bardage", position: "45% 40%",
-    atouts: [
-      ["Coffre intégral", "Toile et bras sont rangés dans un coffre fermé : protégés de la pluie et de la poussière, ils durent plus longtemps."],
-      ["Motorisation", "Ouverture et fermeture à la télécommande, sans manivelle."],
-      ["Automatismes", "Capteurs vent et soleil en option : le store se replie seul quand le vent se lève."],
-      ["Lambrequin déroulant", "Une toile verticale à l'avant pour couper le soleil rasant du soir ou les regards."],
-      ["La toile de votre choix", "Unie, claire ou foncée, vive ou discrète : choisie avec vous sur échantillons, en accord avec la façade."],
-      ["Sans structure au sol", "Fixé à la façade, il libère entièrement la terrasse, sans poteau."],
-    ],
-    galerieCat: "store-banne",
-    titreGalerie: "Stores bannes en situation",
-    details: `<h2>Store banne ou pergola ?</h2>
-      <p>Le store banne offre de l'ombre à la demande, sans poteau et pour un budget plus léger. La <a href="/pergola-bioclimatique-lyon/">pergola bioclimatique</a> va plus loin : elle vous abrite aussi de la pluie et devient une vraie pièce couverte.</p>
-      <p>La largeur, l'avancée et la hauteur de pose dépendent de votre façade et de l'orientation de la terrasse : nous les définissons ensemble lors de la visite.</p>`,
-    complement: "Nous venons chez vous avec les échantillons de toiles, et le plan 3D de votre projet est offert.",
-    voisins: autresPergolas("/store-banne-lyon/").slice(0, 3),
-    ctaTitre: "Un projet de store banne ?",
-  }),
-};
-
 // ---------- Carport ----------
 // ---------- Terrasse sur pilotis ----------
 
@@ -1555,7 +1528,7 @@ const pergolaBioclimatique = {
     modeles: [
       ["L'essentielle", "Une pergola autoportée sur quatre poteaux, pour un coin repas ou un salon dans le jardin.", ["Jusqu'à 24 m²", "Jusqu'à 2,6 m de hauteur", "Stores verticaux rapportés en option"]],
       ["La polyvalente", "Adossée à la façade ou autoportée, avec un débord de toiture possible et des lames plus longues en option.", ["Jusqu'à 33,4 m²", "Jusqu'à 3 m de hauteur (2,6 m autoportée)", "Débord jusqu'à 1,2 m", "Chauffage infrarouge en option"]],
-      ["La grande", "Les stores zippés sont intégrés dans la structure, invisibles une fois remontés. Pour les grandes terrasses.", ["Jusqu'à 37,4 m²", "Jusqu'à 3 m de hauteur (2,6 m autoportée)", "Débord jusqu'à 2 m", "Chauffage infrarouge en option"]],
+      ["La grande", "Les stores zippés sont intégrés dans la structure, invisibles une fois remontés. La toiture peut aussi mêler lames orientables, brise-soleil fixe et panneaux pleins.", ["Jusqu'à 37,4 m²", "Jusqu'à 3 m de hauteur (2,6 m autoportée)", "Débord jusqu'à 2 m", "Chauffage infrarouge en option"]],
     ],
     noteModeles: "Pergolas conformes aux règles professionnelles des pergolas à ossature aluminium. Données fabricant.",
     atoutsTitre: "Ce que font les lames",
@@ -1721,6 +1694,92 @@ const pergolaToileTendue = {
     ],
     ctaTitre: "Un projet de pergola à toile tendue ?",
   }),
+};
+
+// ---------- Store banne (refonte 16/11/2026, brochure gamme fournisseur fournie par Antoine : 6 modèles, sans références) ----------
+const storeBanne = {
+  title: "Store banne Lyon : sur mesure, motorisé, jusqu'à 7 m | Instant Terrasse",
+  description: "Store banne sur mesure à Lyon : jusqu'à 7,16 m de large et 4 m d'avancée, coffre, pose murale ou plafond, pare-soleil motorisé, LED et capteurs vent, soleil et pluie. Plan 3D offert.",
+  corps: `
+${heroPlein({ fil: "Aménagements", h1: ['<span class="pc-nowrap">Store banne</span>', 'sur mesure <span class="lyon-l">à Lyon</span>'], kicker: "Six modèles fabriqués en France",
+  chapo: "De l'ombre en quelques secondes, et une façade dégagée le reste du temps : la protection solaire la plus simple, sans poteau sur la terrasse.",
+  photo: "store-banne-coffre-bardage", position: "45% 40%",
+  actions: `<a class="bouton" href="/contact/">Demander un devis gratuit</a> <a class="bouton bouton-blanc" href="#modeles">Les modèles</a>` })}
+
+<section id="modeles" class="bloc">
+  <div class="conteneur">
+    <h2>Le store adapté à votre façade</h2>
+    <p class="chapo">Six modèles, tous avec coffre : nous choisissons ensemble celui qui convient à la largeur, à la hauteur de pose et à l'exposition.</p>
+    <div class="grille grille-3">${[
+      ["Grandes dimensions", "Pour ombrager une terrasse entière, sans poteau.", ["Jusqu'à 7,16 m de large", "Jusqu'à 4 m d'avancée", "Jusqu'à 11,88 m en deux parties"]],
+      ["Inclinaison réglable", "Plus le store est incliné, mieux il coupe le soleil bas du matin ou du soir.", ["De 0 à 60° selon le modèle", "Pose murale ou au plafond", "Sous un balcon ou un avant-toit"]],
+      ["Coffre compact", "Toile et bras se rangent dans le coffre une fois le store replié.", ["Plaqué contre le mur sur certains modèles", "Armature aluminium thermolaquée", "Six teintes, plus de 200 en option"]],
+    ].map(([t, x, pts]) => `<div class="carte"><h3>${t}</h3><p>${x}</p><ul class="puces">${pts.map((q) => `<li>${q}</li>`).join("")}</ul></div>`).join("")}</div>
+    <p class="note-carport">Dimensions maximales selon le modèle. Données fabricant.</p>
+  </div>
+</section>
+
+<section id="atouts" class="bloc bloc-alt">
+  <div class="conteneur">
+    <h2>Pourquoi un store banne</h2>
+    <div class="grille grille-3 atouts-car">${[
+      ["soleil", "De l'ombre à la demande", "Déployé aux heures chaudes, replié le reste du temps : la maison garde sa lumière."],
+      ["maison", "Sans poteau", "Fixé à la façade ou au plafond, il laisse la terrasse entièrement libre."],
+      ["vent", "Repli automatique", "Le capteur de vent replie le store de lui-même quand le vent se lève."],
+      ["ombre", "Pare-soleil déroulant", "Une toile verticale de 1,5 m se déroule sous l'avant du store contre le soleil rasant."],
+      ["bouclier", "Aluminium thermolaqué", "Une armature en aluminium, dans la teinte de vos menuiseries."],
+      ["couches", "Fabriqué en France", "Conçu et fabriqué en France, sur mesure."],
+    ].map(([i, t, x]) => `<div class="carte atout-carte">${ico(i)}<h3>${t}</h3><p>${x}</p></div>`).join("")}</div>
+  </div>
+</section>
+
+<section id="options" class="bloc">
+  <div class="conteneur">
+    <h2>Options et confort</h2>
+    <div class="grille grille-3">${[
+      ["Pare-soleil motorisé", "Une toile verticale de 1,5 m de haut, déroulée à la télécommande sous la barre avant : contre le soleil couchant et les regards.", "Motorisé sur 3 modèles, manuel sur un 4e"],
+      ["Lambrequin", "Une bande de toile fixe à l'avant du store, pour la finition et un peu d'ombre en plus.", "Jusqu'à 30 cm de haut"],
+      ["Éclairage LED", "Intégré aux bras, au coffre ou à la barre avant selon le modèle, blanc chaud ou blanc neutre, à intensité variable.", "Selon le modèle"],
+      ["Motorisation radio", "Commande à la télécommande, avec dépannage manuel en option. Manœuvre manuelle possible sur deux modèles.", "Tous les modèles"],
+      ["Capteurs", "Vent pour replier le store, soleil pour le déployer quand il fait chaud, pluie en complément du capteur de vent.", "En option"],
+      ["La toile de votre choix", "Toiles acryliques ou toiles techniques, choisies avec vous sur échantillons, en accord avec la façade.", "Large choix de coloris"],
+    ].map(([t, x, d]) => `<div class="carte"><h3>${t}</h3><p>${x}</p><p class="dim-carport">${d}</p></div>`).join("")}</div>
+  </div>
+</section>
+
+<section id="galerie" class="bloc bloc-alt">
+  <div class="conteneur">
+    ${galerie("store-banne", { titre: "Stores bannes en situation", legende: "Illustrations" })}
+  </div>
+</section>
+
+<section id="faq-store" class="bloc">
+  <div class="conteneur lyon-faq">
+  <div class="lyon-texte">
+    <h2>Store banne ou pergola ?</h2>
+    <p>Le store banne donne de l'ombre à la demande, sans poteau. Une <a href="/pergola-bioclimatique-lyon/">pergola bioclimatique</a> ou à <a href="/pergola-toit-fixe-lyon/">toit fixe</a> vous abrite aussi de la pluie, et se ferme sur les côtés.</p>
+    <p>La largeur, l'avancée, l'inclinaison et la hauteur de pose dépendent de votre façade : nous venons chez vous, à Lyon et dans sa région (${COMMUNES}), avec les échantillons de toiles. Le plan 3D de votre projet est offert.</p>
+  </div>
+  <div class="faq-liste">
+    <h2>Vos questions sur le store banne</h2>
+    ${[
+      ["Peut-on laisser le store ouvert sous la pluie ou par vent fort ?", "Non : un store banne protège du soleil. Il se replie en cas de vent ou de pluie ; avec les capteurs, il le fait tout seul."],
+      ["Quelle taille maximale ?", "Jusqu'à 7,16 m de large et 4 m d'avancée en une seule pièce, et jusqu'à 11,88 m de large en deux parties, selon le modèle."],
+      ["Peut-on le poser sous un balcon ?", "Oui : plusieurs modèles se posent au plafond, sous un balcon ou un avant-toit."],
+      ["Comment couper le soleil du soir ?", "En inclinant davantage le store, jusqu'à 60° selon le modèle, et avec le pare-soleil motorisé qui se déroule à l'avant."],
+      ["Peut-on l'éclairer ?", "Oui : LED intégrées aux bras, au coffre ou à la barre avant selon le modèle, à intensité variable."],
+    ].map(([q, r]) => `<details class="faq"><summary>${q}</summary><div><p>${r}</p></div></details>`).join("\n    ")}
+  </div>
+  </div>
+</section>
+
+<section class="bloc bloc-alt">
+  <div class="conteneur">
+    <h2>Les autres solutions</h2>
+    <div class="grille grille-3">${autresPergolas("/store-banne-lyon/").slice(0, 3).map(([c, t, x]) => carteProduit(c, t, x)).join("")}</div>
+  </div>
+</section>
+${cta("Un projet de store banne ?", "Laissez votre numéro : nous vous rappelons pour en parler et organiser le rendez-vous, gratuit et sans engagement.")}`,
 };
 
 // ---------- Galerie (page /realisations/) ----------

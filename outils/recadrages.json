@@ -35,10 +35,6 @@
   "dossier": "composite",
   "position": "50% 60%"
  },
- "store-banne-coffre-bardage": {
-  "dossier": "stores",
-  "position": "45% 40%"
- },
  "terrasse-accoya-naturel-piscine-vue-haut": {
   "dossier": "bois",
   "position": "60% 50%"
@@ -82,6 +78,10 @@
  "pergola-toit-fixe-piscine": {
   "dossier": "pergolas",
   "position": "65% 50%"
+ },
+ "store-banne-coffre-bardage": {
+  "dossier": "stores",
+  "position": "45% 40%"
  },
  "terrasse-thermofrene-pool-house": {
   "dossier": "bois",

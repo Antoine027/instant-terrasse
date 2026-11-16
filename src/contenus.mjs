@@ -1819,15 +1819,13 @@ ${heroPlein({ fil: "Pergolas & extérieur", h1: ['<span class="pc-nowrap">Garde-
   </div>
 </section>
 
-<section id="motifs" class="bloc bloc-alt">
+<section id="galerie" class="bloc bloc-alt">
   <div class="conteneur">
-    <h2>Les motifs de tôle découpée</h2>
-    <p class="chapo">Vingt motifs au choix, ou le vôtre : il suffit d'un dessin (fichier DXF ou STEP), de la référence d'une tôle existante ou d'une photo.</p>
-    <div class="motifs-tous">${MOTIFS_GC.map(([fam, liste]) => `<h3 class="motifs-titre">${fam}</h3><div class="motifs">${liste.map(([f, n]) => `<figure><img src="/assets/img/claustra/motifs/${f}.webp" alt="Motif de tôle ${n}" width="200" height="200" loading="lazy" decoding="async" data-credit="©Kordo"><figcaption>${n}</figcaption></figure>`).join("")}</div>`).join("")}</div>
+    ${galerie(GALERIE_GC, { titre: "Garde-corps en situation", intro: "Choisissez un type de garde-corps.", legende: "Illustrations", types: ["Vitré", "Barreaudage", "Découpe laser", "Remplissage bois", "Main courante bois"], limite: 12 })}
   </div>
 </section>
 
-<section id="atouts" class="bloc bloc-alt">
+<section id="atouts" class="bloc">
   <div class="conteneur">
     <h2>Conçu pour la sécurité</h2>
     <div class="grille grille-3 atouts-car">${[
@@ -1841,7 +1839,7 @@ ${heroPlein({ fil: "Pergolas & extérieur", h1: ['<span class="pc-nowrap">Garde-
   </div>
 </section>
 
-<section id="poses" class="bloc">
+<section id="poses" class="bloc bloc-alt">
   <div class="conteneur">
     <h2>Quatre façons de le fixer</h2>
     <div class="grille grille-4 atouts-car">${[
@@ -1850,18 +1848,25 @@ ${heroPlein({ fil: "Pergolas & extérieur", h1: ['<span class="pc-nowrap">Garde-
       ["Déporté", "Écarté de la tranche de la dalle grâce à des pattes de fixation."],
       ["En tableau", "Entre deux murs, pour une fenêtre, une loggia ou un balcon encastré."],
     ].map(([t, x]) => `<div class="carte carte-pose"><img src="/assets/img/claustra/${SCHEMAS_POSE[t]}" width="220" height="160" alt="Schéma de pose ${t.toLowerCase()}" loading="lazy" decoding="async"><h3>${t}</h3><p>${x}</p></div>`).join("")}</div>
-    <h2 class="titre-confort">Aussi pour les escaliers et les pare-vues</h2>
+  </div>
+</section>
+
+<section id="motifs" class="bloc">
+  <div class="conteneur">
+    <h2>Les motifs de tôle découpée</h2>
+    <p class="chapo">Vingt motifs au choix, ou le vôtre : il suffit d'un dessin (fichier DXF ou STEP), de la référence d'une tôle existante ou d'une photo.</p>
+    <div class="motifs-tous">${MOTIFS_GC.flatMap(([fam, liste]) => liste.map(([f, n]) => `<figure><img src="/assets/img/claustra/motifs/${f}.webp" alt="Motif de tôle ${n}" width="200" height="200" loading="lazy" decoding="async" data-credit="©Kordo"><figcaption>${n}</figcaption></figure>`)).join("")}</div>
+  </div>
+</section>
+
+<section id="escaliers" class="bloc bloc-alt">
+  <div class="conteneur">
+    <h2>Aussi pour les escaliers et les pare-vues</h2>
     <div class="grille grille-3 atouts-car">${[
       ["Garde-corps d'escalier", "Les mêmes remplissages suivent la pente de l'escalier, avec des jonctions de rampant et d'angle."],
       ["Main courante murale", "En aluminium ou en bois, fixée au mur le long d'un escalier."],
       ["Claustras et pare-vues", "Les mêmes modèles, plus hauts, pour se protéger des regards sur une terrasse ou un balcon."],
     ].map(([t, x]) => `<div class="carte"><h3>${t}</h3><p>${x}</p>${vignettesGc(t)}</div>`).join("")}</div>
-  </div>
-</section>
-
-<section id="galerie" class="bloc bloc-alt">
-  <div class="conteneur">
-    ${galerie(GALERIE_GC, { titre: "Garde-corps en situation", intro: "Choisissez un type de garde-corps.", legende: "Illustrations", types: ["Vitré", "Barreaudage", "Découpe laser", "Remplissage bois", "Main courante bois"], limite: 12 })}
   </div>
 </section>
 
@@ -1884,14 +1889,13 @@ ${heroPlein({ fil: "Pergolas & extérieur", h1: ['<span class="pc-nowrap">Garde-
   </div>
   </div>
 </section>
-
-<section class="bloc bloc-alt">
+${cta("Un projet de garde-corps ?", "Laissez votre numéro : nous vous rappelons pour en parler et organiser le rendez-vous, gratuit et sans engagement.")}
+<section class="bloc">
   <div class="conteneur">
     <h2>Pour aller avec votre garde-corps</h2>
     <div class="grille grille-3">${[["/terrasse-sur-pilotis-lyon/", "Terrasse sur pilotis", "La solution pour les terrains en pente."], ["/toit-terrasse-lyon/", "Toit-terrasse", "Créer un espace de vie sur une toiture plate."], ["/terrasse-balcon-lyon/", "Balcon", "Rénover le sol d'un balcon, sans travaux lourds."]].map(([c, t, x]) => carteProduit(c, t, x)).join("")}</div>
   </div>
-</section>
-${cta("Un projet de garde-corps ?", "Laissez votre numéro : nous vous rappelons pour en parler et organiser le rendez-vous, gratuit et sans engagement.")}`,
+</section>`,
 };
 
 // ---------- Galerie (page /realisations/) ----------

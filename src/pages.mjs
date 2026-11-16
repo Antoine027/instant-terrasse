@@ -42,11 +42,11 @@ export const UNIVERS = [
     accroche: "Pergolas, stores, carports, garde-corps et bardages autour de la terrasse.",
     groupes: [
       { nom: "Protections solaires", pages: [
-        ["/pergolas-lyon/", "Pergolas : comparatif", "Bioclimatique, toile ou toit fixe : laquelle choisir ?", "Choisir sa pergola"],
         ["/pergola-bioclimatique-lyon/", "Pergola bioclimatique", "Lames orientables : soleil, ombre ou pluie, vous choisissez."],
         ["/pergola-toile-retractable-lyon/", "Pergola à toile rétractable", "Une toile qui se déploie et se replie à la demande."],
         ["/pergola-toit-fixe-lyon/", "Pergola à toit fixe", "Un abri permanent, à l'épreuve de la pluie."],
         ["/store-banne-lyon/", "Store banne", "Coffre intégral, motorisation, capteurs vent et soleil."],
+        ["/pergolas-lyon/", "Pergolas : comparatif", "Bioclimatique, toile ou toit fixe : laquelle choisir ?", "Choisir sa pergola"],
       ] },
       { nom: "Bardage", pages: [
         ["/bardage-bois-lyon/", "Bardage bois", "Accoya, kebony, bambou, thermofrêne, thermopin ou thermo épicéa : un bardage assorti à votre terrasse."],

@@ -25,7 +25,7 @@ export const UNIVERS = [
       ["/terrasse-aluminium-lyon/", "Terrasse en lames aluminium", "Imputrescible, stable, en coloris unis ou aspect bois.", "Aluminium"],
       ["/terrasse-carrelage-lyon/", "Terrasse carrelage", "Grès cérame sur plots ou sur structure aluminium.", "Carrelage"],
       ["/structure-terrasse-lyon/", "Nos structures", "Aluminium, traditionnelle ou sur plots.", "Structures", true],
-      ["/nos-terrasses/", "Comparatif des matériaux", "Bois, composite, carrelage ou aluminium : lequel choisir ?", "Comparatif"],
+      ["/nos-terrasses/", "Comment choisir sa terrasse", "Le bon revêtement en 5 questions.", "Comment choisir"],
     ] }],
   },  {
     cle: "projets", nom: "Types de projets",

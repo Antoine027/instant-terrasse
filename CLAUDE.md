@@ -29,6 +29,7 @@ Remplaçant du site WordPress/Elementor instantterrasse.com. Générateur Node s
 - Pages légales : /mentions-legales/ et /confidentialite/ (site sans cookie). Capital social : 1 000 € (constante SOCIETE dans src/pages.mjs).
 
 ## Contenu
+- Menu (16/11/2026) : « Comparatif » renommé « Comment choisir » (menu, pied de page, fil d'Ariane ; adresse /nos-terrasses/ inchangée), icône point d'interrogation ; vignette Structures = vue éclatée structure-aluminium.
 - Menu : onglet « Pergolas & extérieur » (ex-« Aménagements », choix d'Antoine 16/11/2026), aussi dans le fil d'Ariane des pages concernées. Ordre du menu (Antoine, 16/11/2026) : Terrasses · Pergolas & extérieur · Types de projets · Galerie · Notre méthode · Professionnels.
 - Gamme (validée par Antoine le 21/10/2026) :
   1. Terrasses : bois sur structure traditionnelle ou sur structure aluminium ; composite sur structure aluminium ; carrelage sur plots ou sur structure aluminium ; lames aluminium. Ni béton ni résine.

@@ -45,7 +45,7 @@ for (const p of PAGES) {
 // ---------- Menu ----------
 // Lien de sous-menu : vignette photo et description courte (visibles seulement dans le menu mobile).
 const vignetteMenu = (chemin) => {
-  if (chemin === "/nos-terrasses/") return `<span class="mm-vig mm-vs" aria-hidden="true"><b>V</b><b>S</b></span>`;
+  if (chemin === "/nos-terrasses/") return `<span class="mm-vig mm-vq" aria-hidden="true"><b>?</b></span>`;
   // Structures : vue éclatée de la structure aluminium (Antoine, 16/11/2026).
   if (chemin === "/structure-terrasse-lyon/") return `<span class="mm-vig mm-vig-struct" aria-hidden="true"><img src="/assets/img/bois/structure-aluminium-400.webp" alt="" width="52" height="52" loading="lazy" decoding="async"></span>`;
   const cle = VIGNETTES[chemin];

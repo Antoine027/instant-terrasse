@@ -11,10 +11,6 @@
   "dossier": "structures",
   "position": "50% 50%"
  },
- "bardage-thermofrene-maison": {
-  "dossier": "bardage",
-  "position": "70% 45%"
- },
  "gc-maison-lisses-noires": {
   "dossier": "garde-corps",
   "position": "60% 45%"
@@ -82,6 +78,10 @@
  "store-banne-coffre-bardage": {
   "dossier": "stores",
   "position": "45% 40%"
+ },
+ "bardage-thermofrene-maison": {
+  "dossier": "bardage",
+  "position": "70% 45%"
  },
  "terrasse-thermofrene-pool-house": {
   "dossier": "bois",

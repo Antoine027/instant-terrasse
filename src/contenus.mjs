@@ -335,76 +335,6 @@ ${cta("Un projet de terrasse ?")}`,
 };
 
 // ---------- Bardage bois ----------
-const bardageEssences = [
-  ["Accoya naturel", "Bois acétylé à cœur : il ne prend presque plus l'eau, d'où une stabilité remarquable. Teinte claire, sans nœuds, qui grise avec le temps.", "Jusqu'à 50 ans"],
-  ["Accoya gris", "Le même bois, teinté gris dans la masse : la façade a son aspect patiné dès la pose et garde sa teinte grise en vieillissant.", "Jusqu'à 50 ans"],
-  ["Kebony", "Pin modifié par un procédé d'origine végétale, plus dense et très résistant aux intempéries. Brun proche des bois exotiques, puis patine gris cendre.", "Jusqu'à 30 ans"],
-  ["Bambou X-treme", "Lamelles de bambou chauffées puis compressées : un parement très dur, sans nœuds, brun foncé. Une alternative aux bois tropicaux.", "Jusqu'à 25 ans"],
-  ["Thermofrêne", "Frêne chauffé à haute température, sans produit chimique : brun foncé, veinage très marqué, patine gris argenté.", "Jusqu'à 20 ans"],
-  ["Thermopin clear", "Pin sélectionné quasiment sans nœuds puis traité à la chaleur : teinte miel proche des bois exotiques, longueurs jusqu'à 4,80 m.", "Jusqu'à 15 ans"],
-  ["Thermo épicéa", "Épicéa traité à la chaleur, sans produit chimique : teinte miel avec quelques nœuds, au caractère plus rustique. Finitions grise ou châtaigne sur commande.", "Jusqu'à 15 ans"],
-];
-
-const bardageBois = {
-  title: "Bardage bois Lyon : accoya, kebony, thermofrêne | Instant Terrasse",
-  description: "Bardage bois sur mesure à Lyon : accoya gris ou naturel, kebony, bambou X-treme, thermofrêne, thermopin clear, thermo épicéa. Un bardage assorti à votre terrasse. Devis gratuit.",
-  corps: `
-${heroPlein({ fil: "Aménagements", h1: ["Bardage bois", "sur mesure"], kicker: "Façades, murs et abris à Lyon et dans sa région", photo: "bardage-thermofrene-maison", position: "70% 45%",
-  chapo: "Habillez une façade, une extension ou une clôture avec des bois sélectionnés pour durer, assortis à votre terrasse.",
-  actions: `<a class="bouton" href="/contact/">Demander un devis gratuit</a> <a class="bouton bouton-blanc" href="#essences-bardage">Voir les essences</a>` })}
-
-<section id="essences-bardage" class="bloc">
-  <div class="conteneur">
-    <h2>Nos essences de bardage</h2>
-    <p class="chapo">Des bois sélectionnés pour leur stabilité : un bardage doit rester droit et beau malgré le soleil et la pluie.</p>
-    <div class="grille grille-3">
-      ${bardageEssences.map(([n, t, g]) => `<div class="carte carte-lame"><div class="lames">${PHOTOS.filter((p) => p.categorie === "lame-bardage" && p.essence === n).map((p) => imgPhoto(p.cle, { sizes: "276px" })).join("")}</div><h3>${n}</h3><p>${t}</p><p class="garantie">Garantie fabricant : ${g.toLowerCase()}, selon conditions</p></div>`).join("")}
-    </div>
-  </div>
-</section>
-
-<section class="bloc bloc-alt">
-  <div class="conteneur">
-    ${galerie("bardage-bois", { titre: "Nos bardages en situation", legende: "Illustrations de bardages dans nos essences" })}
-  </div>
-</section>
-
-<section class="bloc">
-  <div class="conteneur deux-colonnes">
-    <div>
-      <h2>Posé sur rails aluminium, sans une vis apparente</h2>
-      <p>Comme nos terrasses, nos bardages se clipsent sur des rails en aluminium fixés au mur. Rien ne traverse la lame : la façade reste nette, et le bois n'est pas fragilisé.</p>
-      <ul class="puces">
-        <li><strong>Bardage ventilé</strong> : un système conforme au DTU 41-2, la règle de l'art des bardages bois.</li>
-        <li><strong>Pose verticale ou horizontale</strong>, jointive ou à claire-voie, avec des espacements réguliers.</li>
-        <li><strong>Sur tous les murs</strong> : béton, ossature bois ou structure métallique.</li>
-        <li><strong>Démontable</strong> : une lame abîmée se remplace sans toucher aux autres.</li>
-        <li><strong>Structure garantie 20 ans</strong>, en aluminium majoritairement recyclé.</li>
-      </ul>
-    </div>
-    <div>
-      <h2>Pourquoi un bardage bois ?</h2>
-      <ul class="puces">
-        <li><strong>Esthétique</strong> : il réchauffe une façade et s'accorde avec le jardin.</li>
-        <li><strong>Protection</strong> : il habille et protège le mur des intempéries.</li>
-        <li><strong>Cohérence</strong> : la même essence que votre <a href="/terrasse-bois-lyon/">terrasse</a> pour un extérieur harmonieux.</li>
-        <li><strong>Évolution naturelle</strong> : le bois grise avec le temps, ou d'emblée avec l'accoya gris.</li>
-      </ul>
-      <h2>Votre projet</h2>
-      <p>${POSE}</p>
-      <p>Vous préférez une façade sans aucun entretien ? Découvrez le <a href="/bardage-aluminium-lyon/">bardage aluminium</a>.</p>
-    </div>
-  </div>
-</section>
-
-<section id="pose-bardage" class="bloc bloc-alt">
-  <div class="conteneur">
-    ${galerie("bardage-pose", { titre: "La pose à clipser en images", intro: "Les rails sont fixés au mur, puis chaque lame vient s'y clipser.", legende: "Illustrations du système de pose" })}
-  </div>
-</section>
-${cta("Un projet de bardage ?")}`,
-};
-
 // ---------- Gabarit de page produit (pergolas, etc.) ----------
 const pageProduit = ({ typesGalerie, nuancesGalerie, limiteGalerie, extra = "", introGalerie = "", fil, h1, kicker, position, chapo, photo, atouts, galerieCat, titreGalerie, details, voisins, ctaTitre, complement = "Une pergola se pense avec la terrasse qu'elle couvre : hauteurs, fixations, écoulement des eaux. Nous pouvons étudier les deux ensemble.", titreVoisins = "Les autres solutions" }) => `
 ${heroPlein({ fil, h1, kicker, chapo, photo, position })}
@@ -1781,6 +1711,106 @@ ${heroPlein({ fil: "Aménagements", h1: ['<span class="pc-nowrap">Store banne</s
 </section>
 ${cta("Un projet de store banne ?", "Laissez votre numéro : nous vous rappelons pour en parler et organiser le rendez-vous, gratuit et sans engagement.")}`,
 };
+
+// ---------- Bardage bois (enrichi 16/11/2026, catalogue bardage fournisseur) ----------
+const bardageEssences = [
+  ["Accoya naturel", "Bois acétylé à cœur : il ne prend presque plus l'eau, d'où une stabilité remarquable. Teinte claire, sans nœuds, qui grise avec le temps.", "Jusqu'à 50 ans"],
+  ["Accoya gris", "Le même bois, teinté gris dans la masse : la façade a son aspect patiné dès la pose et garde sa teinte grise en vieillissant.", "Jusqu'à 50 ans"],
+  ["Kebony", "Pin modifié par un procédé d'origine végétale, plus dense et très résistant aux intempéries. Brun proche des bois exotiques, puis patine gris cendre.", "Jusqu'à 30 ans"],
+  ["Bambou X-treme", "Lamelles de bambou chauffées puis compressées : un parement très dur, sans nœuds, brun foncé. Une alternative aux bois tropicaux.", "Jusqu'à 25 ans"],
+  ["Thermofrêne", "Frêne chauffé à haute température, sans produit chimique : brun foncé, veinage très marqué, patine gris argenté.", "Jusqu'à 20 ans"],
+  ["Thermopin clear", "Pin sélectionné quasiment sans nœuds puis traité à la chaleur : teinte miel proche des bois exotiques, longueurs jusqu'à 4,80 m.", "Jusqu'à 15 ans"],
+  ["Thermo épicéa", "Épicéa traité à la chaleur, sans produit chimique : teinte miel avec quelques nœuds, au caractère plus rustique. Finitions grise ou châtaigne sur commande.", "Jusqu'à 15 ans"],
+];
+
+const bardageBois = {
+  title: "Bardage bois Lyon : accoya, kebony, thermofrêne | Instant Terrasse",
+  description: "Bardage bois sur mesure à Lyon : accoya gris ou naturel, kebony, bambou X-treme, thermofrêne, thermopin clear, thermo épicéa. Un bardage assorti à votre terrasse. Devis gratuit.",
+  corps: `
+${heroPlein({ fil: "Aménagements", h1: ["Bardage bois", "sur mesure"], kicker: "Façades, murs et abris à Lyon et dans sa région", photo: "bardage-thermofrene-maison", position: "70% 45%",
+  chapo: "Habillez une façade, une extension ou une clôture avec des bois sélectionnés pour durer, assortis à votre terrasse.",
+  actions: `<a class="bouton" href="/contact/">Demander un devis gratuit</a> <a class="bouton bouton-blanc" href="#essences-bardage">Voir les essences</a>` })}
+
+<section id="essences-bardage" class="bloc">
+  <div class="conteneur">
+    <h2>Nos essences de bardage</h2>
+    <p class="chapo">Des bois sélectionnés pour leur stabilité : un bardage doit rester droit et beau malgré le soleil et la pluie.</p>
+    <div class="grille grille-3">
+      ${bardageEssences.map(([n, t, g]) => `<div class="carte carte-lame"><div class="lames">${PHOTOS.filter((p) => p.categorie === "lame-bardage" && p.essence === n).map((p) => imgPhoto(p.cle, { sizes: "276px" })).join("")}</div><h3>${n}</h3><p>${t}</p><p class="garantie">Garantie fabricant : ${g.toLowerCase()}, selon conditions</p></div>`).join("")}
+    </div>
+  </div>
+</section>
+
+<section id="systeme" class="bloc bloc-alt">
+  <div class="conteneur">
+    <h2>Posé sur rails aluminium, sans une vis apparente</h2>
+    <p class="chapo">Comme nos terrasses, nos bardages se clipsent sur des rails en aluminium fixés au mur : rien ne traverse la lame.</p>
+    <div class="grille grille-3 atouts-car">${[
+      ["vent", "Bardage ventilé", "La lame ne touche jamais le rail : l'air circule derrière le parement. Système conforme au DTU 41-2."],
+      ["niveau", "Lignes parfaites", "Les clips sont montés en usine : l'écart entre les lames reste régulier sur toute la façade."],
+      ["demonte", "Démontable", "En claire-voie, chaque lame se déclipse avec une clé, sans abîmer ni la lame ni le rail."],
+      ["maison", "Sur tous les murs", "Béton, ossature bois ou structure métallique, en façade, en sous-face ou au plafond."],
+      ["bouclier", "Structure garantie 20 ans*", "Rails en aluminium, fabriqués en France, majoritairement recyclé et recyclable."],
+      ["plan", "Sur mesure", "L'espacement des clips peut varier pour mêler plusieurs largeurs de lames."],
+    ].map(([i, t, x]) => `<div class="carte atout-carte">${ico(i)}<h3>${t}</h3><p>${x}</p></div>`).join("")}</div>
+  </div>
+</section>
+
+<section id="poses" class="bloc">
+  <div class="conteneur">
+    <h2>Horizontal, vertical ou en relief</h2>
+    <div class="grille grille-4">${[
+      ["Horizontal", "Des lames étroites aux bords taillés à 30°, pour que l'eau de pluie s'écoule vers l'extérieur."],
+      ["Vertical", "Des lames aux bords droits, pour une façade élancée."],
+      ["Largeurs mêlées", "Trois largeurs de bambou posées selon un rythme, pour une façade unique."],
+      ["En relief", "Deux épaisseurs de lames combinées donnent du relief à la façade."],
+    ].map(([t, x]) => `<div class="carte"><h3>${t}</h3><p>${x}</p></div>`).join("")}</div>
+    <h2 class="titre-confort">Naturel, gris ou brûlé</h2>
+    <div class="grille grille-4">${[
+      ["Naturel", "Le bois évolue et prend une patine grise avec le temps, plus ou moins vite selon l'exposition."],
+      ["Saturateur gris", "Une teinte grise homogène dès la pose, qui anticipe le grisaillement naturel en laissant voir le veinage."],
+      ["Saturateur châtaigne", "Une teinte légèrement brune, proche de celle du bois neuf, qui vieillit de façon plus régulière."],
+      ["Bois brûlé", "Accoya carbonisé en surface selon la technique japonaise du shou sugi ban : un noir profond."],
+    ].map(([t, x]) => `<div class="carte"><h3>${t}</h3><p>${x}</p></div>`).join("")}</div>
+    <p class="note-carport">Saturateurs en phase aqueuse sur thermo épicéa, thermofrêne et thermopin clear, sur commande ; bois brûlé sur commande. *Garanties fabricants, sous conditions.</p>
+  </div>
+</section>
+
+<section class="bloc bloc-alt">
+  <div class="conteneur">
+    ${galerie("bardage-bois", { titre: "Bardages en situation", legende: "Illustrations de bardages dans nos essences" })}
+  </div>
+</section>
+
+<section id="pose-bardage" class="bloc">
+  <div class="conteneur">
+    ${galerie("bardage-pose", { titre: "La pose à clipser en images", intro: "Les rails sont fixés au mur, puis chaque lame vient s'y clipser. Larmiers, profils d'arrêt et cornières d'angle en aluminium soignent les finitions autour des fenêtres et dans les angles.", legende: "Illustrations du système de pose" })}
+  </div>
+</section>
+
+<section id="faq-bardage" class="bloc bloc-alt">
+  <div class="conteneur lyon-faq">
+  <div class="lyon-texte">
+    <h2>Votre projet de bardage</h2>
+    <p>Façade, extension, mur de clôture, abri ou sous-face de toiture : la même essence que votre <a href="/terrasse-bois-lyon/">terrasse</a> donne un extérieur cohérent.</p>
+    <p>${POSE}</p>
+    <p>Nous venons chez vous, à Lyon et dans sa région (${COMMUNES}), avec les échantillons. Vous préférez une façade sans aucune évolution de teinte ? Découvrez le <a href="/bardage-aluminium-lyon/">bardage aluminium</a>.</p>
+  </div>
+  <div class="faq-liste">
+    <h2>Vos questions sur le bardage bois</h2>
+    ${[
+      ["Le bardage bois grise-t-il ?", "Oui, s'il est laissé naturel : il prend une patine grise avec le temps. Pour une teinte grise dès la pose, choisissez l'accoya gris ou un saturateur gris ; pour rester proche du bois neuf, un saturateur châtaigne."],
+      ["Faut-il l'entretenir ?", "Laissé naturel, il ne demande pas de traitement. Une finition au saturateur ne s'écaille pas : elle se renouvelle sans décapage ni ponçage."],
+      ["Pose horizontale ou verticale ?", "Les deux sont possibles. En horizontal, les lames ont des bords taillés en biais pour évacuer l'eau ; en vertical, des bords droits."],
+      ["Peut-on remplacer une lame abîmée ?", "Oui, en claire-voie : la lame se déclipse avec une clé, sans toucher aux autres."],
+      ["Quelle essence choisir ?", "Selon la teinte voulue et son évolution : accoya pour une stabilité maximale, kebony ou thermofrêne pour un brun foncé, thermo épicéa ou thermopin clear pour une teinte miel, bambou pour un parement très dur."],
+    ].map(([q, r]) => `<details class="faq"><summary>${q}</summary><div><p>${r}</p></div></details>`).join("\n    ")}
+  </div>
+  </div>
+</section>
+${cta("Un projet de bardage ?")}`,
+};
+
 
 // ---------- Galerie (page /realisations/) ----------
 // Photos fournisseurs : présentées comme illustrations, jamais comme chantiers Instant Terrasse.

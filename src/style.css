@@ -2174,3 +2174,4 @@ main #options .puces,main #toitures .puces,main #autorisation .puces{text-align:
 .conseil-schema-bloc h3{margin:2px 0 8px;font-size:1.2rem}
 .conseil-schema{width:100%;height:auto;display:block}
 @media (max-width:700px){.conseil-schema-bloc{grid-template-columns:1fr;gap:10px}.conseil-schema{max-width:260px;margin:0 auto}}
+@media (max-width:700px){.schema-pergola{max-width:190px;margin:-8px auto 2px}.atouts-car .carte:has(.schema-pergola){padding-top:14px;padding-bottom:16px}.atouts-car .carte:has(.schema-pergola) h3{margin-bottom:4px}.atouts-car .carte:has(.schema-pergola) .puces{margin-top:8px}}

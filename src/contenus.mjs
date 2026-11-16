@@ -1402,7 +1402,7 @@ const pergolaBioclimatique = {
     modeles: [
       ["L'essentielle", "Une pergola autoportée sur quatre poteaux, pour un coin repas ou un salon dans le jardin.", ["Jusqu'à 24 m²", "Jusqu'à 2,6 m de hauteur", "Stores verticaux rapportés en option"]],
       ["La polyvalente", "Adossée à la façade ou autoportée, avec un débord de toiture possible et des lames plus longues en option.", ["Jusqu'à 33,4 m²", "Jusqu'à 3 m de hauteur (2,6 m autoportée)", "Débord jusqu'à 1,2 m", "Chauffage infrarouge en option"]],
-      ["La grande", "Les stores zippés sont intégrés dans la structure, invisibles une fois remontés. La toiture peut aussi mêler lames orientables, brise-soleil fixe et panneaux pleins.", ["Jusqu'à 37,4 m²", "Jusqu'à 3 m de hauteur (2,6 m autoportée)", "Débord jusqu'à 2 m", "Chauffage infrarouge en option"]],
+      ["La grande", "Stores zippés intégrés, invisibles une fois remontés. Toiture mixte possible : lames, brise-soleil fixe ou panneaux pleins.", ["Jusqu'à 37,4 m²", "Jusqu'à 3 m de hauteur (2,6 m autoportée)", "Débord jusqu'à 2 m", "Chauffage infrarouge en option"]],
     ],
     schemas: SCHEMAS_BIOCLIM,
     atoutsTitre: "Ce que font les lames",

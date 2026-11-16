@@ -2070,7 +2070,9 @@ const terrasseLyon = {
     extra: communes("Notre zone d'intervention", "Nous nous déplaçons à Lyon et dans les communes de la métropole et des environs, notamment :", [
       ["Lyon et l'est lyonnais", ["Lyon", "Villeurbanne", "Bron", "Décines", "Meyzieu", "Genas"]],
       ["Nord et nord-est", ["Caluire-et-Cuire", "Rillieux-la-Pape", "Sathonay", "Miribel", "Beynost"]],
-      ["Ouest lyonnais et Monts d'Or", ["Écully", "Dardilly", "Tassin-la-Demi-Lune", "Champagne-au-Mont-d'Or", "Limonest", "Saint-Didier-au-Mont-d'Or"]],
+      ["Monts d'Or", ["Saint-Didier-au-Mont-d'Or", "Saint-Cyr-au-Mont-d'Or", "Collonges-au-Mont-d'Or", "Champagne-au-Mont-d'Or", "Poleymieux-au-Mont-d'Or", "Limonest", "Lissieu"]],
+      ["Ouest lyonnais", ["Écully", "Dardilly", "Tassin-la-Demi-Lune", "Charbonnières-les-Bains", "Dommartin"]],
+      ["Sud-ouest lyonnais", ["Charly"]],
       ["Plus au nord", ["Villefranche-sur-Saône"]],
     ]),
     galerieCat: ["terrasse-kebony-maison", "carrelage-bh-aspect-bois-gris-jardin", "alu-terrasse-salon-parasol", "composite-brun-cour-table", "terrasse-thermopin-jardin-pins", "carrelage-bh-pergola-cour", "terrasse-kebony-facade-brique", "alu-terrasse-fauteuils-rouges", "terrasse-bambou-ndurance-pergola", "carrelage-bh-grand-format-baie", "composite-brun-transats", "terrasse-accoya-naturel-salle-a-manger"],

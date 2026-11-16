@@ -2168,3 +2168,4 @@ main #options .puces,main #toitures .puces,main #autorisation .puces{text-align:
 @media (max-width:700px){#galerie .mosaique figure{max-width:80vw;aspect-ratio:auto;width:min(calc(var(--r) * 230px),80vw)}}
 @media (max-width:560px){#galerie.galerie-comp .mosaique figure,#galerie.galerie-carr .mosaique figure{width:min(calc(var(--r) * 175px),80vw)}}
 @media (min-width:561px){#galerie.galerie-comp .mosaique figure,#galerie.galerie-carr .mosaique figure{max-width:none;width:auto}#galerie.galerie-carr .mosaique figure{aspect-ratio:4/3}}
+.schema-pergola{display:block;width:100%;max-width:240px;height:auto;margin:0 auto 10px}

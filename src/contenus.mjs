@@ -1308,7 +1308,21 @@ const FERMETURES_PERGOLA = [
   ["Claustra à lames", "Fixe ou coulissante, avec 85 % ou 100 % d'occultation au choix, pour un espace semi-fermé.", "Jusqu'à 2,6 m de haut"],
   ["Brise-vue grandes lames", "Fixe, en lames aluminium horizontales ou verticales, effet chêne clair en option.", "Jusqu'à 3 m de haut"],
 ];
-const pagePergolaRiche = ({ titreConfort = "Confort et automatismes", h1, kicker, chapo, photo, position, ancre, titreModeles, introModeles, modeles, noteModeles, atoutsTitre, atouts, confort, galerieCat, titreGalerie, gauche, faqTitre, faq, ici, ctaTitre }) => `
+// Schéma isométrique d'une pergola bioclimatique, à l'échelle relative des 3 modèles (W = largeur, stores = store zippé baissé en façade)
+const schemaPergola = (W, stores = false) => {
+  const D = 55, H = 50, c = Math.cos(Math.PI / 6), s = 0.5, ox = 130 - (W - D) * c / 2, oy = 166 - (W + D + 24) * s;
+  const P = (x, y, z) => `${(ox + (x - y) * c).toFixed(1)},${(oy + (x + y) * s - z).toFixed(1)}`;
+  const poteau = (x, y) => `<polygon points="${P(x, y, 0)} ${P(x + 4, y, 0)} ${P(x + 4, y, H)} ${P(x, y, H)}" fill="#3d4246"/><polygon points="${P(x + 4, y, 0)} ${P(x + 4, y + 4, 0)} ${P(x + 4, y + 4, H)} ${P(x + 4, y, H)}" fill="#2F3437"/>`;
+  let lames = `<polygon points="${P(2, 2, H + 6)} ${P(W + 2, 2, H + 6)} ${P(W + 2, D + 2, H + 6)} ${P(2, D + 2, H + 6)}" fill="#8f969a"/>`;
+  for (let x = 6; x < W - 4; x += 7) lames += `<polygon points="${P(x, 2, H + 6)} ${P(x + 4.5, 2, H + 6)} ${P(x + 4.5, D + 2, H + 6)} ${P(x, D + 2, H + 6)}" fill="#c9ccce"/>`;
+  const cadre = `<polygon points="${P(0, 0, H + 10)} ${P(W + 4, 0, H + 10)} ${P(W + 4, D + 4, H + 10)} ${P(0, D + 4, H + 10)}" fill="none" stroke="#2F3437" stroke-width="3" stroke-linejoin="round"/>
+  <polygon points="${P(0, D + 4, H + 10)} ${P(W + 4, D + 4, H + 10)} ${P(W + 4, D + 4, H)} ${P(0, D + 4, H)}" fill="#3d4246"/><polygon points="${P(W + 4, 0, H + 10)} ${P(W + 4, D + 4, H + 10)} ${P(W + 4, D + 4, H)} ${P(W + 4, 0, H)}" fill="#2F3437"/>`;
+  const store = stores ? `<polygon points="${P(4, D + 4, H)} ${P(W, D + 4, H)} ${P(W, D + 4, H * 0.45)} ${P(4, D + 4, H * 0.45)}" fill="#D79A3A" fill-opacity=".55"/>` : "";
+  const sol = `<polygon points="${P(-8, -8, 0)} ${P(W + 12, -8, 0)} ${P(W + 12, D + 12, 0)} ${P(-8, D + 12, 0)}" fill="#F0E8DA"/>`;
+  return `<svg class="schema-pergola" viewBox="0 0 260 168" role="img" aria-hidden="true">${sol}${poteau(0, 0)}${poteau(W, 0)}${poteau(0, D)}${lames}${cadre}${store}${poteau(W, D)}</svg>`;
+};
+const SCHEMAS_BIOCLIM = [schemaPergola(72), schemaPergola(102), schemaPergola(130, true)];
+const pagePergolaRiche = ({ titreConfort = "Confort et automatismes", h1, kicker, chapo, photo, position, ancre, titreModeles, introModeles, modeles, schemas, noteModeles, atoutsTitre, atouts, confort, galerieCat, titreGalerie, gauche, faqTitre, faq, ici, ctaTitre }) => `
 ${heroPlein({ fil: "Pergolas & extérieur", h1, kicker, chapo, photo, position,
   actions: `<a class="bouton" href="/contact/">Demander un devis gratuit</a> <a class="bouton bouton-blanc" href="#modeles">${ancre}</a>` })}
 
@@ -1316,8 +1330,8 @@ ${heroPlein({ fil: "Pergolas & extérieur", h1, kicker, chapo, photo, position,
   <div class="conteneur">
     <h2>${titreModeles}</h2>
     <p class="chapo">${introModeles}</p>
-    <div class="grille grille-3 atouts-car">${modeles.map(([t, x, pts]) => `<div class="carte"><h3>${t}</h3><p>${x}</p><ul class="puces">${pts.map((q) => `<li>${q}</li>`).join("")}</ul></div>`).join("")}</div>
-    <p class="note-carport">${noteModeles}</p>
+    <div class="grille grille-3 atouts-car">${modeles.map(([t, x, pts], i) => `<div class="carte">${schemas ? schemas[i] : ""}<h3>${t}</h3><p>${x}</p><ul class="puces">${pts.map((q) => `<li>${q}</li>`).join("")}</ul></div>`).join("")}</div>
+    ${noteModeles ? `<p class="note-carport">${noteModeles}</p>` : ""}
   </div>
 </section>
 
@@ -1381,7 +1395,7 @@ const pergolaBioclimatique = {
       ["La polyvalente", "Adossée à la façade ou autoportée, avec un débord de toiture possible et des lames plus longues en option.", ["Jusqu'à 33,4 m²", "Jusqu'à 3 m de hauteur (2,6 m autoportée)", "Débord jusqu'à 1,2 m", "Chauffage infrarouge en option"]],
       ["La grande", "Les stores zippés sont intégrés dans la structure, invisibles une fois remontés. La toiture peut aussi mêler lames orientables, brise-soleil fixe et panneaux pleins.", ["Jusqu'à 37,4 m²", "Jusqu'à 3 m de hauteur (2,6 m autoportée)", "Débord jusqu'à 2 m", "Chauffage infrarouge en option"]],
     ],
-    noteModeles: "Pergolas conformes aux règles professionnelles des pergolas à ossature aluminium. Données fabricant.",
+    schemas: SCHEMAS_BIOCLIM,
     atoutsTitre: "Ce que font les lames",
     atouts: [
       ["soleil", "Ombre ou soleil", "Lames fermées, aucun rayon ne passe ; inclinées, vous dosez la lumière au fil de la journée."],

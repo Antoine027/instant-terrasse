@@ -375,7 +375,6 @@ const PERGOLAS = [
   ["/pergolas-lyon/", "Comparer les pergolas", "Bioclimatique, toile ou toit fixe : laquelle choisir ?"],
   ["/pergola-bioclimatique-lyon/", "Pergola bioclimatique", "Lames orientables : soleil, ombre ou pluie, vous choisissez."],
   ["/pergola-toile-retractable-lyon/", "Pergola à toile rétractable", "Une toile qui se déploie et se replie à la demande."],
-  ["/pergola-toile-tendue-lyon/", "Pergola à toile tendue", "Une ombre légère et un style contemporain."],
   ["/pergola-toit-fixe-lyon/", "Pergola à toit fixe", "Un abri permanent, à l'épreuve de la pluie."],
   ["/carport-lyon/", "Carport", "Un abri voiture élégant, sans construire de garage."],
 ];
@@ -1527,48 +1526,6 @@ const pergolaToitFixe = {
       ["Quelle différence avec un carport ?", "Aucune sur la structure : c'est l'usage qui change. Le carport est dimensionné pour une voiture, la pergola pour votre terrasse."],
     ],
     ctaTitre: "Un projet de pergola à toit fixe ?",
-  }),
-};
-
-// Prête, mais pas encore publiée : aucune photo de pergola à toile tendue (à ajouter dans CONTENUS quand Antoine en fournit)
-const pergolaToileTendue = {
-  title: "Pergola toile tendue aluminium Lyon : sur mesure | Instant Terrasse",
-  description: "Pergola aluminium à toile tendue sur mesure à Lyon : toile opaque et imperméable, jusqu'à 24 m², adossée ou autoportée, côtés fermés et LED en option.",
-  corps: (photo) => pagePergolaRiche({
-    ici: "/pergola-toile-tendue-lyon/",
-    h1: ['<span class="pc-nowrap">Pergola à toile tendue</span>', 'sur mesure <span class="lyon-l">à Lyon</span>'], kicker: "Une toiture légère et imperméable",
-    chapo: "Une toile technique tendue sur une structure aluminium : l'ombre et l'abri d'un toit, avec un aspect plus léger.",
-    photo, ancre: "Les caractéristiques",
-    titreModeles: "Une toile tendue sur mesure",
-    introModeles: "La même structure que notre carport à toile, pensée ici pour couvrir une terrasse.",
-    modeles: [
-      ["La toile", "Une toile technique opaque et imperméable, tendue sur l'ossature.", ["Opaque", "Imperméable", "Plusieurs coloris"]],
-      ["Les dimensions", "Dessinée pour votre terrasse, adossée ou autoportée.", ["Jusqu'à 6 × 4 m (24 m²)", "Jusqu'à 2,6 m de hauteur", "Jusqu'à 130 kg/m² de neige*"]],
-      ["Et en toit plein ?", 'Pour plus de surface et de charge de neige, la <a href="/pergola-toit-fixe-lyon/">pergola à toit fixe</a> passe en panneaux sandwich ou en bac acier.', ["Jusqu'à 7 × 5 m (35 m²)", "Jusqu'à 3 m de hauteur", "Jusqu'à 200 kg/m² de neige*"]],
-    ],
-    noteModeles: "*Charge de neige maximale pour les plus petites largeurs ; elle diminue quand la largeur augmente. Données fabricant.",
-    atoutsTitre: "Pourquoi une toile tendue",
-    atouts: [
-      ["soleil", "Ombre franche", "Une toile opaque : le soleil reste au-dessus de la terrasse."],
-      ["goutte", "Abri contre la pluie", "Toile imperméable et gouttière intégrée : l'eau s'évacue au pied des poteaux."],
-      ["niveau", "Aucune pièce mobile", "Pas de moteur ni de mécanisme : rien à régler, rien à surveiller."],
-      ["maison", "Adossée ou autoportée", "Contre la façade sur deux poteaux, ou indépendante sur quatre."],
-      ["bouclier", "Aluminium thermolaqué", "Six teintes de structure, et toute autre teinte RAL en option."],
-      ["couches", "Fabriquée en France", "Conçue et fabriquée en France, sur mesure."],
-    ],
-    confort: CONFORT_FIXE, titreConfort: "Confort",
-    galerieCat: "pergola-toile-tendue", titreGalerie: "Pergolas à toile tendue en situation",
-    gauche: `<h2>Toile tendue ou rétractable ?</h2>
-    <p>La toile tendue reste en place toute l'année, sans mécanisme. La <a href="/pergola-toile-retractable-lyon/">toile rétractable</a> se replie quand vous voulez retrouver le ciel.</p>
-    <p>Une pergola peut nécessiter une <a href="/autorisation-terrasse-pergola-carport/">déclaration préalable</a> selon sa surface et votre commune : nous vous indiquons la démarche lors du rendez-vous.</p>`,
-    faqTitre: "Vos questions sur la pergola à toile tendue",
-    faq: [
-      ["La toile protège-t-elle de la pluie ?", "Oui : elle est imperméable, et l'eau rejoint la gouttière intégrée puis les poteaux."],
-      ["Quelle charge de neige supporte-t-elle ?", "Jusqu'à 130 kg/m² pour les plus petites largeurs, moins pour les plus grandes. Nous vérifions la charge de neige de votre commune avant de dimensionner."],
-      ["Peut-on fermer les côtés ?", "Oui : store zippé, vitrage coulissant, claustras toile ou à lames."],
-      ["Quelle différence avec un carport à toile ?", "Aucune sur la structure : c'est l'usage qui change."],
-    ],
-    ctaTitre: "Un projet de pergola à toile tendue ?",
   }),
 };
 

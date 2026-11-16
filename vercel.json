@@ -118,6 +118,11 @@
       "source": "/category/:slug*",
       "destination": "/nos-terrasses/",
       "statusCode": 301
+    },
+    {
+      "source": "/pergola-toile-tendue-lyon/",
+      "destination": "/pergola-toit-fixe-lyon/",
+      "permanent": true
     }
   ],
   "headers": [

@@ -45,7 +45,6 @@ export const UNIVERS = [
         ["/pergolas-lyon/", "Pergolas : comparatif", "Bioclimatique, toile ou toit fixe : laquelle choisir ?", "Choisir sa pergola"],
         ["/pergola-bioclimatique-lyon/", "Pergola bioclimatique", "Lames orientables : soleil, ombre ou pluie, vous choisissez."],
         ["/pergola-toile-retractable-lyon/", "Pergola à toile rétractable", "Une toile qui se déploie et se replie à la demande."],
-        ["/pergola-toile-tendue-lyon/", "Pergola à toile tendue", "Une ombre légère et un style contemporain."],
         ["/pergola-toit-fixe-lyon/", "Pergola à toit fixe", "Un abri permanent, à l'épreuve de la pluie."],
         ["/store-banne-lyon/", "Store banne", "Coffre intégral, motorisation, capteurs vent et soleil."],
       ] },

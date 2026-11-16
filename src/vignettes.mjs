@@ -18,7 +18,6 @@ export const VIGNETTES = {
   "/terrasse-camping-hpa/": "alu-escalier-maison-bois",
   "/pergola-bioclimatique-lyon/": "pergola-bioclimatique-autoportee",
   "/pergola-toile-retractable-lyon/": "pergola-toile-retractable-facade",
-  "/pergola-toile-tendue-lyon/": null,
   "/pergola-toit-fixe-lyon/": "pergola-toit-fixe-piscine",
   "/pergolas-lyon/": "pergola-bioclimatique-salon-piscine",
   "/carport-lyon/": "carport-garage-gravier",

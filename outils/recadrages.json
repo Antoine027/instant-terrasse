@@ -106,5 +106,21 @@
  "terrasse-bambou-ndurance-pergola": {
   "dossier": "bois",
   "position": "50% 55%"
+ },
+ "terrasse-kebony-piscine-pool-house": {
+  "dossier": "bois",
+  "position": "50% 60%"
+ },
+ "store-banne-beige-maison": {
+  "dossier": "stores",
+  "position": "50% 50%"
+ },
+ "pergola-bioclimatique-autoportee": {
+  "dossier": "pergolas",
+  "position": "50% 55%"
+ },
+ "gc-maison-terrasse-vue": {
+  "dossier": "garde-corps",
+  "position": "50% 55%"
  }
 }

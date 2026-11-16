@@ -60,11 +60,6 @@
       "statusCode": 301
     },
     {
-      "source": "/comment-nettoyer-une-terrasse-en-bois/",
-      "destination": "/terrasse-bois-lyon/",
-      "statusCode": 301
-    },
-    {
       "source": "/form/:slug*",
       "destination": "/contact/",
       "statusCode": 301

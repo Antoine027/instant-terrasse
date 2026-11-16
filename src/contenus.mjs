@@ -2358,6 +2358,217 @@ const articleAmenagement = {
   }),
 };
 
+const articleNettoyage = {
+  title: "Comment nettoyer une terrasse en bois | Instant Terrasse",
+  description: "Nettoyer une terrasse en bois : fréquence, matériel, saturateur, et pourquoi éviter le nettoyeur haute pression. Nos conseils essence par essence.",
+  jsonld: jsonArticle("/comment-nettoyer-une-terrasse-en-bois/", "Comment nettoyer une terrasse en bois", "Fréquence, matériel, saturateur et patine grise : l'entretien d'une terrasse en bois.", "terrasse-kebony-piscine-pool-house"),
+  corps: pageArticle({
+    h1: ["Comment nettoyer", "une terrasse en bois"], kicker: "Conseils",
+    chapo: "Une terrasse en bois bien posée dure longtemps. Ce qui fait la différence ensuite, c'est un nettoyage régulier, pas des produits compliqués.",
+    photo: "terrasse-kebony-piscine-pool-house", position: "50% 60%",
+    corps: `
+    <p class="chapo">En résumé : un nettoyage au minimum deux fois par an, plus souvent à l'ombre ; un nettoyeur spécifique pour terrasses plutôt qu'un balai-brosse ; jamais de nettoyeur haute pression ; un saturateur seulement si vous voulez garder la teinte d'origine.</p>
+
+    <h2>Pourquoi nettoyer, même un bois durable</h2>
+    <p>Le bois résiste naturellement bien à la glissance. Mais avec le temps, une fine couche noire de saleté se dépose (pollution, végétation, feuilles). Sur une terrasse mouillée, c'est elle qui rend la surface glissante, pas le bois. Le nettoyage sert donc d'abord à la sécurité, ensuite à l'aspect.</p>
+
+    <h2>À quelle fréquence ?</h2>
+    <ul>
+      <li><strong>Au minimum deux fois par an</strong>, par exemple au printemps et à l'automne.</li>
+      <li><strong>Plus souvent à l'ombre et sous les arbres</strong>, là où la saleté et l'humidité s'accumulent le plus.</li>
+      <li><strong>Rapidement après une tache</strong> (repas, barbecue) : plus elle sèche, plus elle marque.</li>
+    </ul>
+
+    <h2>Avec quel matériel ?</h2>
+    <p>Il existe des nettoyeurs spécifiques pour terrasses, bien plus pratiques qu'un balai-brosse. En revanche, <strong>le nettoyeur haute pression est fortement déconseillé</strong> : il abîme les fibres du bois.</p>
+
+    <h2>Faut-il un saturateur ?</h2>
+    <p>Pas pour toutes les essences. Pour le thermofrêne, le thermopin, le kebony et l'accoya, il n'est pas nécessaire. Il est en revanche conseillé pour le bambou.</p>
+    <p>Dans tous les cas, le saturateur a surtout un rôle esthétique : il aide le bois à garder une teinte proche de celle d'origine.</p>
+
+    <h2>La patine grise : défaut ou choix ?</h2>
+    <p>Au soleil et à la pluie, un bois laissé naturel prend une patine grise. C'est naturel et ce n'est pas un défaut. Chaque essence évolue à sa façon : le kebony, brun profond à la pose, devient gris argenté ; l'accoya naturel, clair, grise avec le temps. Si vous aimez cet aspect dès le départ, l'accoya gris est teinté gris dans la masse : la terrasse est patinée dès la pose.</p>
+
+    <div class="tableau-defile"><table class="comparatif">
+      <thead><tr><th scope="col">Essence</th><th scope="col">Saturateur</th><th scope="col">Évolution sans saturateur</th></tr></thead>
+      <tbody>
+        <tr><th scope="row">Thermofrêne, thermopin</th><td>Pas nécessaire</td><td>Grisent naturellement</td></tr>
+        <tr><th scope="row">Kebony</th><td>Pas nécessaire</td><td>Du brun profond au gris argenté</td></tr>
+        <tr><th scope="row">Accoya naturel</th><td>Pas nécessaire</td><td>Clair à la pose, grise avec le temps</td></tr>
+        <tr><th scope="row">Accoya gris</th><td>Pas nécessaire</td><td>Gris dès la pose</td></tr>
+        <tr><th scope="row">Bambou</th><td>Conseillé</td><td>Un saturateur prolonge la teinte d'origine</td></tr>
+      </tbody>
+    </table></div>
+
+    <h2>Ce qui compte autant que l'entretien : la structure</h2>
+    <p>Sur notre <a href="/structure-terrasse-lyon/">structure aluminium</a>, les lames ne touchent pas le sol et 6 mm d'espace entre les lames et les rails laissent l'air circuler : rien ne pourrit sous la terrasse. La structure (plots, rails et clips) est garantie 20 ans.</p>
+
+    <h2>Et si vous ne voulez pas d'entretien ?</h2>
+    <p>Alors le bois n'est peut-être pas le bon choix. Le <a href="/terrasse-composite-lyon/">composite</a> se nettoie à l'eau savonneuse, sans saturateur ni ponçage ; les <a href="/terrasse-aluminium-lyon/">lames aluminium</a> et le <a href="/terrasse-carrelage-lyon/">carrelage</a> ne demandent aucun traitement. Voir aussi <a href="/terrasse-bois-ou-composite/">bois ou composite : lequel choisir ?</a></p>`,
+    faqTitre: "Vos questions sur l'entretien du bois",
+    faq: [
+      ["Peut-on utiliser un nettoyeur haute pression ?", "C'est fortement déconseillé : il abîme les fibres du bois. Préférez un nettoyeur spécifique pour terrasses."],
+      ["Pourquoi ma terrasse en bois glisse-t-elle ?", "Le plus souvent à cause de la fine couche noire de saleté qui se dépose avec le temps. Un nettoyage régulier règle le problème."],
+      ["Mon bois devient gris, est-il abîmé ?", "Non : c'est une patine naturelle, pas un défaut. Un saturateur limite ce changement si vous préférez garder la teinte d'origine."],
+      ["Le saturateur est-il obligatoire ?", "Pas pour le thermofrêne, le thermopin, le kebony et l'accoya. Il est conseillé pour le bambou."],
+      ["À quelle fréquence nettoyer ?", "Au minimum deux fois par an, plus souvent à l'ombre et sous les arbres."],
+    ],
+    ctaTitre: "Un projet de terrasse en bois ?",
+    suite: [["/terrasse-bois-lyon/", "Terrasse bois", "Nos essences phares et leurs garanties."], ["/terrasse-bois-ou-composite/", "Bois ou composite ?", "La comparaison honnête des deux matériaux."], ["/structure-terrasse-lyon/", "Structures", "Ce qui fait durer une terrasse."]],
+  }),
+};
+
+const articleStore = {
+  title: "Store banne ou protection verticale ? | Instant Terrasse",
+  description: "En fin de journée à l'ouest, le soleil passe sous le store banne. Quand préférer un store vertical, un brise-vue ou une pergola : nos conseils.",
+  jsonld: jsonArticle("/store-banne-ou-store-vertical/", "Store banne ou protection verticale ?", "Quand un store banne suffit, et quand il faut une protection verticale.", "store-banne-beige-maison"),
+  corps: pageArticle({
+    h1: ["Store banne", "ou protection verticale ?"], kicker: "Conseils",
+    chapo: "On me demande souvent un store banne pour une terrasse trop ensoleillée. C'est parfois la bonne réponse, parfois non : tout dépend de l'heure où le soleil vous gêne.",
+    photo: "store-banne-beige-maison", position: "50% 50%",
+    corps: `
+    <p class="chapo">En résumé : un store banne fait de l'ombre quand le soleil est haut. Quand il est bas, en fin de journée sur une terrasse exposée à l'ouest, il passe sous la toile : il faut alors une protection verticale.</p>
+
+    <h2>Ce qu'un store banne fait bien</h2>
+    <p>Fixé à la façade, le <a href="/store-banne-lyon/">store banne</a> déploie une toile horizontale ou légèrement inclinée. Il protège efficacement quand le soleil est haut dans le ciel, autour du midi, et se replie quand on n'en a pas besoin. Nos modèles vont jusqu'à 7,16 m de large et 4 m d'avancée, avec une inclinaison de 0 à 60° selon le modèle.</p>
+
+    <h2>Quand il ne suffit pas</h2>
+    <p>En fin de journée, le soleil est bas sur l'horizon. Sur une terrasse exposée à l'ouest, ses rayons arrivent presque à l'horizontale et passent sous la toile : vous êtes à l'ombre… sauf là où vous êtes assis. Augmenter l'inclinaison aide un peu, mais ne règle pas le problème.</p>
+    <p>Dans ce cas, il faut une protection <strong>verticale</strong>, et non horizontale.</p>
+
+    <h2>Les solutions verticales</h2>
+    <ul>
+      <li><strong>Le pare-soleil intégré au store</strong> : sur certains modèles, une toile verticale de 1,5 m descend de la barre avant (motorisée sur trois modèles, manuelle sur un).</li>
+      <li><strong>Le store vertical ou le store zippé</strong> : sur une pergola, il ferme un côté et rejette jusqu'à 96 % de l'énergie solaire.</li>
+      <li><strong>Le brise-vue ou la claustra</strong> : une protection fixe, en lames ou en toile, qui coupe aussi les regards.</li>
+      <li><strong>La pergola équipée d'un store vertical</strong> : de l'ombre au-dessus et sur le côté, pour une terrasse utilisable du midi au coucher du soleil. Voir <a href="/pergolas-lyon/">choisir sa pergola</a>.</li>
+    </ul>
+
+    <h2>Comment savoir ce qu'il vous faut</h2>
+    <p>Posez-vous une question simple : <strong>à quelle heure le soleil vous gêne-t-il ?</strong></p>
+    <div class="tableau-defile"><table class="comparatif">
+      <thead><tr><th scope="col">Le soleil vous gêne…</th><th scope="col">Solution adaptée</th></tr></thead>
+      <tbody>
+        <tr><th scope="row">En milieu de journée</th><td>Un store banne suffit.</td></tr>
+        <tr><th scope="row">En fin de journée (ouest)</th><td>Une protection verticale : pare-soleil, store vertical, brise-vue.</td></tr>
+        <tr><th scope="row">Toute la journée</th><td>Une pergola, avec un store vertical sur le côté exposé.</td></tr>
+        <tr><th scope="row">Aussi par temps de pluie</th><td>Une pergola bioclimatique ou à toit fixe plutôt qu'un store.</td></tr>
+      </tbody>
+    </table></div>
+    <p>Lors du rendez-vous, je regarde l'orientation de votre terrasse et les heures où vous l'utilisez, avant de vous proposer une solution.</p>`,
+    faqTitre: "Vos questions sur la protection solaire",
+    faq: [
+      ["Un store banne protège-t-il du soleil couchant ?", "Mal : le soleil bas passe sous la toile. Il faut une protection verticale, comme un pare-soleil, un store vertical ou un brise-vue."],
+      ["Qu'est-ce qu'un pare-soleil de store banne ?", "Une toile verticale qui descend de la barre avant du store, jusqu'à 1,5 m, motorisée ou manuelle selon le modèle."],
+      ["Un store banne résiste-t-il au vent ?", "Il doit être replié en cas de vent fort. Un capteur de vent peut le faire automatiquement."],
+      ["Store banne ou pergola ?", "Le store banne est une ombre légère et repliable. La pergola protège aussi de la pluie et accueille des stores sur les côtés."],
+      ["Peut-on ajouter un store vertical plus tard ?", "Sur une pergola, oui : les côtés peuvent être fermés après coup. Le plus simple reste de le prévoir dès le départ."],
+    ],
+    ctaTitre: "Un problème de soleil sur votre terrasse ?",
+    suite: [["/store-banne-lyon/", "Store banne", "Nos six modèles et leurs options."], ["/pergolas-lyon/", "Choisir sa pergola", "Bioclimatique, toile ou toit fixe."], ["/amenagement-terrasse-lyon/", "Aménager sa terrasse", "Penser l'ombre dès le départ."]],
+  }),
+};
+
+const articleAutorisation = {
+  title: "Terrasse, pergola, carport : quelle autorisation ?",
+  description: "Faut-il une déclaration préalable ou un permis pour une terrasse, une pergola ou un carport ? Les seuils de 5, 20 et 40 m², et les cas particuliers.",
+  jsonld: jsonArticle("/autorisation-terrasse-pergola-carport/", "Terrasse, pergola, carport : quelle autorisation ?", "Déclaration préalable ou permis de construire : les seuils à connaître.", "pergola-bioclimatique-autoportee"),
+  corps: pageArticle({
+    h1: ["Terrasse, pergola, carport :", "quelle autorisation ?"], kicker: "Conseils",
+    chapo: "C'est une question à se poser avant de commander, pas après. La bonne nouvelle : les règles sont assez simples, une fois qu'on a compris la notion d'emprise au sol.",
+    photo: "pergola-bioclimatique-autoportee", position: "50% 55%",
+    corps: `
+    <p class="chapo">En résumé : une terrasse de plain-pied non couverte est en principe dispensée d'autorisation. Une pergola, un carport ou une terrasse surélevée créent de l'emprise au sol : déclaration préalable de 5 à 20 m², permis de construire au-delà, avec un seuil porté à 40 m² dans certains cas en zone urbaine.</p>
+
+    <h2>La notion clé : l'emprise au sol</h2>
+    <p>L'emprise au sol, c'est la surface couverte par la construction, vue du dessus. Une pergola de 4 × 5 m crée 20 m² d'emprise au sol, même si elle n'a pas de murs. C'est cette surface qui détermine la démarche.</p>
+
+    <h2>Terrasse</h2>
+    <ul>
+      <li><strong>De plain-pied, non couverte</strong> : en principe, aucune autorisation.</li>
+      <li><strong>Surélevée ou couverte</strong> : elle crée de l'emprise au sol et suit les seuils ci-dessous. C'est souvent le cas d'une <a href="/terrasse-sur-pilotis-lyon/">terrasse sur pilotis</a>.</li>
+    </ul>
+
+    <h2>Pergola et carport</h2>
+    <div class="tableau-defile"><table class="comparatif">
+      <thead><tr><th scope="col">Emprise au sol</th><th scope="col">Démarche (cas général)</th></tr></thead>
+      <tbody>
+        <tr><th scope="row">Jusqu'à 5 m²</th><td>Pas de formalité, si la construction n'est pas accolée à la maison.</td></tr>
+        <tr><th scope="row">De 5 à 20 m²</th><td>Déclaration préalable.</td></tr>
+        <tr><th scope="row">Au-delà de 20 m²</th><td>Permis de construire.</td></tr>
+      </tbody>
+    </table></div>
+    <p>En zone urbaine d'une commune couverte par un PLU, si celui-ci considère la pergola ou le carport comme une extension de la maison, la déclaration préalable suffit jusqu'à 40 m² (source : <a href="https://www.service-public.gouv.fr/particuliers/vosdroits/F36773" rel="noopener">service-public.gouv.fr</a>).</p>
+
+    <h2>Les cas qui changent la donne</h2>
+    <ul>
+      <li><strong>Secteur protégé</strong> (abords d'un monument historique, site classé) : les règles sont plus strictes et l'avis de l'architecte des Bâtiments de France peut être demandé.</li>
+      <li><strong>Le PLU de votre commune</strong> : il peut imposer des règles d'aspect (couleurs, matériaux) et des distances par rapport aux limites du terrain.</li>
+      <li><strong>Copropriété</strong> : pour un balcon ou une façade, le règlement de copropriété peut encadrer l'aspect ; interrogez le syndic avant de commander.</li>
+    </ul>
+
+    <h2>Comment s'y prendre</h2>
+    <p>Renseignez-vous auprès du service urbanisme de votre mairie, qui connaît le PLU applicable à votre terrain. Lors du rendez-vous, je regarde avec vous l'emprise au sol de votre projet et la démarche qui en découle ; le plan 3D aide aussi à préparer le dossier. La démarche reste à faire par le propriétaire, auprès de la mairie.</p>
+    <p class="note-carport">Ces informations sont données à titre indicatif ; seule la mairie peut confirmer les règles applicables à votre terrain.</p>`,
+    faqTitre: "Vos questions sur les autorisations",
+    faq: [
+      ["Faut-il une autorisation pour une terrasse en bois ?", "De plain-pied et non couverte, en principe non. Surélevée ou couverte, elle peut demander une déclaration préalable ou un permis selon sa surface."],
+      ["Une pergola ouverte crée-t-elle de l'emprise au sol ?", "Oui : c'est la surface couverte vue du dessus qui compte, même sans murs."],
+      ["Quelle démarche pour un carport de 15 m² ?", "Dans le cas général, une déclaration préalable."],
+      ["Qu'est-ce que la règle des 40 m² ?", "En zone urbaine d'une commune couverte par un PLU, si celui-ci considère la construction comme une extension de la maison, la déclaration préalable suffit jusqu'à 40 m²."],
+      ["Qui fait la démarche ?", "Le propriétaire, auprès de sa mairie. Nous vous aidons à identifier la démarche et le plan 3D facilite la préparation du dossier."],
+    ],
+    ctaTitre: "Un projet de pergola ou de carport ?",
+    suite: [["/pergolas-lyon/", "Choisir sa pergola", "Bioclimatique, toile ou toit fixe."], ["/carport-lyon/", "Carport", "Adossé ou autoporté, jusqu'à 35 m²."], ["/terrasse-sur-pilotis-lyon/", "Terrasse sur pilotis", "Pour les terrains en pente."]],
+  }),
+};
+
+const articleGardeCorps = {
+  title: "Garde-corps de terrasse : quand est-il obligatoire ?",
+  description: "Garde-corps de terrasse : à partir de quelle hauteur est-il obligatoire, quelle hauteur doit-il faire, quel remplissage choisir. Les règles essentielles.",
+  jsonld: jsonArticle("/garde-corps-terrasse-normes/", "Garde-corps de terrasse : quand est-il obligatoire ?", "Hauteur de chute, hauteur du garde-corps et remplissage : les règles essentielles.", "gc-maison-terrasse-vue"),
+  corps: pageArticle({
+    h1: ["Garde-corps de terrasse :", "quand est-il obligatoire ?"], kicker: "Conseils",
+    chapo: "Dès qu'une terrasse est surélevée, la question du garde-corps se pose. C'est d'abord une question de sécurité, encadrée par des normes précises.",
+    photo: "gc-maison-terrasse-vue", position: "50% 55%",
+    corps: `
+    <p class="chapo">En résumé : un garde-corps est nécessaire dès que la hauteur de chute atteint 1 mètre. Il doit mesurer au moins 1 mètre de haut, et son remplissage doit empêcher le passage d'un enfant et limiter l'escalade.</p>
+
+    <h2>À partir de quelle hauteur ?</h2>
+    <p>La norme NF P01-012, qui fixe les dimensions des garde-corps, considère qu'un garde-corps est nécessaire lorsque la hauteur de chute est d'au moins 1 mètre, ou lorsque le terrain en contrebas est en forte pente. C'est fréquent pour une <a href="/terrasse-sur-pilotis-lyon/">terrasse sur pilotis</a>, un <a href="/toit-terrasse-lyon/">toit-terrasse</a> ou un balcon.</p>
+    <p>En dessous de cette hauteur, il n'est pas imposé par la norme, mais il reste utile par prudence, par exemple avec de jeunes enfants.</p>
+
+    <h2>Quelle hauteur pour le garde-corps ?</h2>
+    <p>Pour une terrasse ou un balcon, le garde-corps doit mesurer au moins <strong>1 mètre</strong>. Attention : la hauteur se mesure depuis l'endroit où l'on peut poser les pieds. Un muret ou une jardinière au pied du garde-corps peuvent servir de marchepied ; il faut alors en tenir compte.</p>
+
+    <h2>Quel remplissage ?</h2>
+    <p>Le remplissage doit être assez dense pour qu'un enfant ne puisse pas passer au travers : dans la partie basse, les vides ne doivent pas dépasser <strong>11 cm</strong>. Il doit aussi limiter l'escalade, ce qui encadre l'usage de lisses horizontales dans le bas du garde-corps.</p>
+    <p>La norme NF P01-012 a été révisée fin 2024, avec des exigences renforcées contre les chutes d'enfants. Nos garde-corps sont conçus selon les normes NF P01-012 et NF P01-013 et testés sur banc d'essai.</p>
+
+    <h2>Maison ou lieu recevant du public</h2>
+    <p>Les exigences de résistance sont plus élevées dans les lieux recevant du public. Sur nos modèles, l'entraxe maximal entre poteaux est de 1,5 m pour un usage privé et de 0,9 m pour un lieu public.</p>
+
+    <h2>Garder la vue, ou l'intimité</h2>
+    <ul>
+      <li><strong>Pour garder la vue</strong> : le verre transparent, ou des barreaux fins.</li>
+      <li><strong>Pour l'intimité</strong> : le verre opale ou fumé, la tôle découpée ou le bois.</li>
+      <li><strong>Pour ne pas réduire la terrasse</strong> : la pose en applique, fixée sur la tranche de la dalle.</li>
+    </ul>
+    <p>Tous ces modèles sont présentés sur notre page <a href="/garde-corps-aluminium-lyon/">garde-corps aluminium</a>.</p>
+    <p class="note-carport">Ces informations sont un résumé. Lors du rendez-vous, nous définissons le modèle et les fixations selon votre support et la configuration des lieux.</p>`,
+    faqTitre: "Vos questions sur le garde-corps",
+    faq: [
+      ["À partir de quelle hauteur faut-il un garde-corps ?", "La norme NF P01-012 le prévoit à partir d'une hauteur de chute de 1 mètre."],
+      ["Quelle hauteur doit faire un garde-corps de terrasse ?", "Au moins 1 mètre, mesuré depuis l'endroit où l'on peut poser les pieds."],
+      ["Quel écart maximum entre les barreaux ?", "Dans la partie basse, les vides ne doivent pas dépasser 11 cm."],
+      ["Les lisses horizontales sont-elles autorisées ?", "Elles sont encadrées, car elles peuvent servir d'échelle dans le bas du garde-corps. Le modèle est choisi pour respecter la norme."],
+      ["Vos garde-corps sont-ils conformes ?", "Oui : ils sont conçus selon les normes NF P01-012 et NF P01-013 et testés sur banc d'essai."],
+    ],
+    ctaTitre: "Un projet de garde-corps ?",
+    suite: [["/garde-corps-aluminium-lyon/", "Garde-corps aluminium", "Barreaux, verre, tôle ou bois."], ["/terrasse-sur-pilotis-lyon/", "Terrasse sur pilotis", "Pour les terrains en pente."], ["/toit-terrasse-lyon/", "Toit-terrasse", "Une toiture plate devenue pièce à vivre."]],
+  }),
+};
+
 const conseils = {
   title: "Conseils terrasse : choisir, aménager | Instant Terrasse",
   description: "Nos conseils pour choisir le revêtement de votre terrasse et bien l'aménager : bois ou composite, ombre, intimité, niveaux. Par Instant Terrasse, Lyon.",
@@ -2371,7 +2582,7 @@ const conseils = {
 </section>
 <section class="bloc">
   <div class="conteneur">
-    <div class="grille grille-2">${ARTICLES.map(([c, t, x]) => carteProduit(c, t, x)).join("")}</div>
+    <div class="grille grille-3">${ARTICLES.map(([c, t, x]) => carteProduit(c, t, x)).join("")}</div>
     <p class="lien-comparateur"><a href="/nos-terrasses/#trouver">Trouver le revêtement idéal en 5 questions →</a></p>
   </div>
 </section>
@@ -2382,6 +2593,10 @@ export const CONTENUS = {
   "/conseils/": conseils,
   "/terrasse-bois-ou-composite/": articleBoisComposite,
   "/amenagement-terrasse-lyon/": articleAmenagement,
+  "/comment-nettoyer-une-terrasse-en-bois/": articleNettoyage,
+  "/store-banne-ou-store-vertical/": articleStore,
+  "/autorisation-terrasse-pergola-carport/": articleAutorisation,
+  "/garde-corps-terrasse-normes/": articleGardeCorps,
   "/terrasse-lyon/": terrasseLyon,
   "/terrasse-rillieux-la-pape/": terrasseRillieux,
   "/terrasse-restaurant-chr-lyon/": terrasseRestaurant,

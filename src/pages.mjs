@@ -85,6 +85,10 @@ export const AUTRES = [
 export const ARTICLES = [
   ["/terrasse-bois-ou-composite/", "Terrasse bois ou composite : lequel choisir ?", "Aspect, chaleur, entretien, taches : la comparaison honnête des deux matériaux."],
   ["/amenagement-terrasse-lyon/", "Aménager sa terrasse : nos conseils", "Usages, ombre, intimité, niveaux : penser la terrasse avant de choisir le matériau."],
+  ["/comment-nettoyer-une-terrasse-en-bois/", "Comment nettoyer une terrasse en bois", "Fréquence, matériel, saturateur, patine grise : l'entretien essence par essence."],
+  ["/store-banne-ou-store-vertical/", "Store banne ou protection verticale ?", "Pourquoi un store banne ne suffit pas toujours, surtout à l'ouest en fin de journée."],
+  ["/autorisation-terrasse-pergola-carport/", "Terrasse, pergola, carport : quelle autorisation ?", "Déclaration préalable ou permis : les seuils à connaître avant de commander."],
+  ["/garde-corps-terrasse-normes/", "Garde-corps de terrasse : quand est-il obligatoire ?", "Hauteur de chute, hauteur du garde-corps, remplissage : les règles essentielles."],
 ];
 
 export const ENGAGEMENTS = [

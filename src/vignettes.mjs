@@ -30,6 +30,10 @@ export const VIGNETTES = {
   "/terrasse-bois-ou-composite/": "terrasse-accoya-naturel-salle-a-manger",
   "/amenagement-terrasse-lyon/": "terrasse-bambou-ndurance-pergola",
   "/conseils/": "terrasse-accoya-naturel-salle-a-manger",
+  "/comment-nettoyer-une-terrasse-en-bois/": "terrasse-kebony-piscine-pool-house",
+  "/store-banne-ou-store-vertical/": "store-banne-beige-maison",
+  "/autorisation-terrasse-pergola-carport/": "pergola-bioclimatique-autoportee",
+  "/garde-corps-terrasse-normes/": "gc-maison-terrasse-vue",
   "/terrasse-rillieux-la-pape/": "terrasse-thermopin-salon-jardin",
   // cartes « univers » de l'accueil
   "#terrasses": "terrasse-thermofrene-bord-de-loire",

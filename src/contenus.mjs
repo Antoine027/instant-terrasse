@@ -2236,8 +2236,8 @@ const jsonArticle = (chemin, titre, description, photo) => ({
   image: `${SITE.url}/assets/img/${PHOTOS.find((x) => x.cle === photo).dossier}/${photo}-1200.webp`,
 });
 const signature = `<p class="article-auteur">Par <a href="/quisommesnous/">Antoine Escolle</a>, fondateur d'Instant Terrasse · 16 novembre 2026</p>`;
-const pageArticle = ({ h1, kicker, chapo, photo, position, corps, faqTitre, faq, ctaTitre, suite }) => `
-${heroPlein({ fil: '<a href="/conseils/">Conseils</a>', h1, kicker, chapo, photo, position, actions: `<a class="bouton" href="/contact/">Demander un devis gratuit</a> <a class="bouton bouton-blanc" href="/nos-terrasses/#trouver">Le comparateur</a>` })}
+const pageArticle = ({ h1, kicker, chapo, photo, position, corps, faqTitre, faq, ctaTitre, suite, bouton2 = ['/nos-terrasses/#trouver', 'Le comparateur'] }) => `
+${heroPlein({ fil: '<a href="/conseils/">Conseils</a>', h1, kicker, chapo, photo, position, actions: `<a class="bouton" href="/contact/">Demander un devis gratuit</a> <a class="bouton bouton-blanc" href="${bouton2[0]}">${bouton2[1]}</a>` })}
 
 <article class="bloc">
   <div class="conteneur conteneur-etroit article">
@@ -2617,6 +2617,7 @@ const articleGardeCorps = {
       ["Les lisses horizontales sont-elles autorisées ?", "Oui, à condition d'éviter l'effet échelle : leur disposition ne doit pas permettre d'escalader le garde-corps. Le modèle est choisi pour respecter la norme."],
       ["Vos garde-corps sont-ils conformes ?", "Oui : ils sont conçus selon les normes NF P01-012 et NF P01-013 et testés sur banc d'essai."],
     ],
+    bouton2: ["/garde-corps-aluminium-lyon/", "Nos modèles"],
     ctaTitre: "Un projet de garde-corps ?",
     suite: [["/garde-corps-aluminium-lyon/", "Garde-corps aluminium", "Barreaux, verre, tôle ou bois."], ["/terrasse-sur-pilotis-lyon/", "Terrasse sur pilotis", "Pour les terrains en pente."], ["/toit-terrasse-lyon/", "Toit-terrasse", "Une toiture plate devenue pièce à vivre."]],
   }),

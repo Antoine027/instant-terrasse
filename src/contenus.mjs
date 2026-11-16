@@ -2494,6 +2494,7 @@ const articleStore = {
       ["Store banne ou pergola ?", "Le store banne est une ombre légère et repliable. La pergola protège aussi de la pluie et accueille des stores sur les côtés."],
       ["Peut-on ajouter un store vertical plus tard ?", "Sur une pergola, oui : les côtés peuvent être fermés après coup. Le plus simple reste de le prévoir dès le départ."],
     ],
+    bouton2: ["/store-banne-lyon/", "Voir nos stores"],
     ctaTitre: "Un problème de soleil sur votre terrasse ?",
     suite: [["/store-banne-lyon/", "Store banne", "Nos six modèles et leurs options."], ["/pergolas-lyon/", "Choisir sa pergola", "Bioclimatique, toile ou toit fixe."], ["/amenagement-terrasse-lyon/", "Aménager sa terrasse", "Penser l'ombre dès le départ."]],
   }),

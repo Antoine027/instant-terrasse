@@ -551,7 +551,7 @@ const bardageAluminium = {
   title: "Bardage aluminium Lyon : façade sans entretien | Instant Terrasse",
   description: "Bardage aluminium sur mesure à Lyon : lames thermolaquées dans de nombreuses teintes RAL, fixation invisible, sans entretien. Façades, murs, plafonds extérieurs. Devis gratuit.",
   corps: `
-${heroPlein({ fil: "Aménagements", h1: ["Bardage aluminium", "sur mesure"], kicker: "Façades sans entretien à Lyon et dans sa région", photo: "bardage-alu-vertical-brun-escalier", position: "60% 50%",
+${heroPlein({ fil: "Pergolas & extérieur", h1: ["Bardage aluminium", "sur mesure"], kicker: "Façades sans entretien à Lyon et dans sa région", photo: "bardage-alu-vertical-brun-escalier", position: "60% 50%",
   chapo: "Des lames aluminium thermolaquées, unies ou aspect bois, sur ossature aluminium : une façade qui ne se repeint jamais." })}
 
 <section class="bloc bloc-alt">
@@ -1261,7 +1261,7 @@ const carport = {
   title: "Carport aluminium Lyon : abri voiture adossé ou autoporté | Instant Terrasse",
   description: "Carport aluminium sur mesure à Lyon : toiture panneaux sandwich, bac acier ou toile, adossé ou autoporté, jusqu'à 35 m², gouttière intégrée, éclairage et côtés fermés en option. Devis gratuit.",
   corps: `
-${heroPlein({ fil: "Aménagements", h1: ['<span class="pc-nowrap">Carport aluminium</span>', 'sur mesure <span class="lyon-l">à Lyon</span>'], kicker: "Abri voiture adossé ou autoporté",
+${heroPlein({ fil: "Pergolas & extérieur", h1: ['<span class="pc-nowrap">Carport aluminium</span>', 'sur mesure <span class="lyon-l">à Lyon</span>'], kicker: "Abri voiture adossé ou autoporté",
   chapo: "Une ossature aluminium sur mesure et la toiture de votre choix : votre voiture à l'abri de la pluie, de la grêle et du soleil, sans construire de garage.",
   photo: "carport-garage-gravier", position: "55% 45%",
   actions: `<a class="bouton" href="/contact/">Demander un devis gratuit</a> <a class="bouton bouton-blanc" href="#toitures">Les toitures</a>` })}
@@ -1352,7 +1352,7 @@ const FERMETURES_PERGOLA = [
   ["Brise-vue grandes lames", "Fixe, en lames aluminium horizontales ou verticales, effet chêne clair en option.", "Jusqu'à 3 m de haut"],
 ];
 const pagePergolaRiche = ({ titreConfort = "Confort et automatismes", h1, kicker, chapo, photo, position, ancre, titreModeles, introModeles, modeles, noteModeles, atoutsTitre, atouts, confort, galerieCat, titreGalerie, gauche, faqTitre, faq, ici, ctaTitre }) => `
-${heroPlein({ fil: "Aménagements", h1, kicker, chapo, photo, position,
+${heroPlein({ fil: "Pergolas & extérieur", h1, kicker, chapo, photo, position,
   actions: `<a class="bouton" href="/contact/">Demander un devis gratuit</a> <a class="bouton bouton-blanc" href="#modeles">${ancre}</a>` })}
 
 <section id="modeles" class="bloc">
@@ -1595,7 +1595,7 @@ const storeBanne = {
   title: "Store banne Lyon : sur mesure, motorisé, jusqu'à 7 m | Instant Terrasse",
   description: "Store banne sur mesure à Lyon : jusqu'à 7,16 m de large et 4 m d'avancée, coffre, pose murale ou plafond, pare-soleil motorisé, LED et capteurs vent, soleil et pluie. Plan 3D offert.",
   corps: `
-${heroPlein({ fil: "Aménagements", h1: ['<span class="pc-nowrap">Store banne</span>', 'sur mesure <span class="lyon-l">à Lyon</span>'], kicker: "Six modèles fabriqués en France",
+${heroPlein({ fil: "Pergolas & extérieur", h1: ['<span class="pc-nowrap">Store banne</span>', 'sur mesure <span class="lyon-l">à Lyon</span>'], kicker: "Six modèles fabriqués en France",
   chapo: "De l'ombre en quelques secondes, et une façade dégagée le reste du temps : la protection solaire la plus simple, sans poteau sur la terrasse.",
   photo: "store-banne-coffre-bardage", position: "45% 40%",
   actions: `<a class="bouton" href="/contact/">Demander un devis gratuit</a> <a class="bouton bouton-blanc" href="#modeles">Les modèles</a>` })}
@@ -1691,7 +1691,7 @@ const bardageBois = {
   title: "Bardage bois Lyon : accoya, kebony, thermofrêne | Instant Terrasse",
   description: "Bardage bois sur mesure à Lyon : accoya gris ou naturel, kebony, bambou X-treme, thermofrêne, thermopin clear, thermo épicéa. Un bardage assorti à votre terrasse. Devis gratuit.",
   corps: `
-${heroPlein({ fil: "Aménagements", h1: ["Bardage bois", "sur mesure"], kicker: "Façades, murs et abris à Lyon et dans sa région", photo: "bardage-thermofrene-maison", position: "70% 45%",
+${heroPlein({ fil: "Pergolas & extérieur", h1: ["Bardage bois", "sur mesure"], kicker: "Façades, murs et abris à Lyon et dans sa région", photo: "bardage-thermofrene-maison", position: "70% 45%",
   chapo: "Habillez une façade, une extension ou une clôture avec des bois sélectionnés pour durer, assortis à votre terrasse.",
   actions: `<a class="bouton" href="/contact/">Demander un devis gratuit</a> <a class="bouton bouton-blanc" href="#essences-bardage">Voir les essences</a>` })}
 
@@ -1782,7 +1782,7 @@ const gardeCorps = {
   title: "Garde-corps aluminium Lyon : verre, barreaux, tôle, bois | Instant Terrasse",
   description: "Garde-corps aluminium sur mesure à Lyon : barreaux, verre, tôle découpée ou bois, conforme aux normes NF P01-012 et 013, fabriqué en France. Terrasses, balcons, escaliers, pare-vues. Devis gratuit.",
   corps: `
-${heroPlein({ fil: "Aménagements", h1: ['<span class="pc-nowrap">Garde-corps aluminium</span>', 'sur mesure <span class="lyon-l">à Lyon</span>'], kicker: "Terrasses, balcons, escaliers et pare-vues",
+${heroPlein({ fil: "Pergolas & extérieur", h1: ['<span class="pc-nowrap">Garde-corps aluminium</span>', 'sur mesure <span class="lyon-l">à Lyon</span>'], kicker: "Terrasses, balcons, escaliers et pare-vues",
   chapo: "Sécuriser une terrasse, un balcon ou un escalier sans fermer la vue : des garde-corps aluminium fabriqués sur mesure, conformes aux normes.",
   photo: "gc-maison-lisses-noires", position: "60% 45%",
   actions: `<a class="bouton" href="/contact/">Demander un devis gratuit</a> <a class="bouton bouton-blanc" href="#remplissages">Les modèles</a>` })}
@@ -1910,7 +1910,7 @@ const pergolas = {
   title: "Pergola sur mesure Lyon : bioclimatique, toile ou toit fixe | Instant Terrasse",
   description: "Pergola bioclimatique, à toile rétractable ou à toit fixe à Lyon : comparez l'ombre, la protection contre la pluie et la lumière en hiver pour choisir la vôtre. Plan 3D offert.",
   corps: `
-${heroPlein({ fil: "Aménagements", h1: ["Quelle pergola", "pour votre terrasse ?"], kicker: "Pergolas sur mesure à Lyon et dans sa région",
+${heroPlein({ fil: "Pergolas & extérieur", h1: ["Quelle pergola", "pour votre terrasse ?"], kicker: "Pergolas sur mesure à Lyon et dans sa région",
   chapo: "Bioclimatique, à toile rétractable ou à toit fixe : trois façons de couvrir votre 5<sup>e</sup> pièce, selon l'ombre, la pluie et la lumière.",
   photo: "pergola-bioclimatique-salon-piscine", position: "60% 50%",
   actions: `<a class="bouton" href="/contact/">Demander un devis gratuit</a> <a class="bouton bouton-blanc" href="#comparatif">Voir le comparatif</a>` })}

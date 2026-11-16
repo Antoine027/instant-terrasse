@@ -38,7 +38,7 @@ export const UNIVERS = [
       ["/toit-terrasse-lyon/", "Toit-terrasse", "Créer un espace de vie sur une toiture plate."],
     ] }],
   },  {
-    cle: "amenagements", nom: "Aménagements",
+    cle: "amenagements", nom: "Pergolas & extérieur",
     accroche: "Pergolas, stores, carports, garde-corps et bardages autour de la terrasse.",
     groupes: [
       { nom: "Protections solaires", pages: [
@@ -54,7 +54,7 @@ export const UNIVERS = [
         ["/bardage-aluminium-lyon/", "Bardage aluminium", "Une façade moderne, sans entretien."],
       ] },
       { nom: "Garde-corps", pages: [
-        ["/garde-corps-aluminium-lyon/", "Garde-corps aluminium", "Barreaudage, verre ou tôle : sécurité et style, sans entretien."],
+        ["/garde-corps-aluminium-lyon/", "Garde-corps aluminium", "Barreaux, verre, tôle ou bois, sur mesure."],
       ] },
       { nom: "Carport", pages: [
         ["/carport-lyon/", "Carport", "Un abri voiture élégant, sans construire de garage."],

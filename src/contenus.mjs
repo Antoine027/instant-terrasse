@@ -158,7 +158,7 @@ ${heroPlein({ fil: "Terrasses", h1: ["Terrasse bois", 'sur mesure <span class="l
   </div>
   <div class="faq-liste">
     <h2>Vos questions sur le bois</h2>
-    <details class="faq"><summary>Comment entretenir une terrasse en bois ?</summary><div><p>Nous conseillons un nettoyage au minimum deux fois par an, et plus souvent à l'ombre et sous les arbres, où la saleté s'accumule le plus. Il existe des nettoyeurs spécifiques pour terrasses, bien plus pratiques qu'un balai-brosse. Le nettoyeur haute pression est en revanche fortement déconseillé : il abîme les fibres du bois.</p></div></details>
+    <details class="faq"><summary>Comment entretenir une terrasse en bois ?</summary><div><p>Nous conseillons un nettoyage au minimum deux fois par an, et plus souvent à l'ombre et sous les arbres, où la saleté s'accumule le plus. Il existe des nettoyeurs spécifiques pour terrasses, bien plus pratiques qu'un balai-brosse. Le nettoyeur haute pression est en revanche fortement déconseillé : il abîme les fibres du bois. <a href="/comment-nettoyer-une-terrasse-en-bois/">Tous nos conseils d'entretien</a>.</p></div></details>
     <details class="faq"><summary>Un saturateur est-il obligatoire ?</summary><div><p>Pas pour le thermofrêne, le thermopin, le kebony et l'accoya. Il est en revanche conseillé pour le bambou. Dans tous les cas, le saturateur aide le bois à garder une teinte proche de celle d'origine.</p></div></details>
     <details class="faq"><summary>Le bois va-t-il changer de couleur ?</summary><div><p>Oui : au soleil et à la pluie, le bois prend une patine grise. C'est naturel et ce n'est pas un défaut. Les pastilles de chaque essence, plus haut sur cette page, montrent cette évolution. Un saturateur limite ce changement et garde une teinte très proche de celle d'origine.</p></div></details>
     <details class="faq"><summary>Une terrasse en bois est-elle glissante ?</summary><div><p>Le bois offre naturellement une très bonne résistance à la glissance. Mais sur une terrasse mouillée, la fine couche noire de saleté qui se dépose avec le temps (pollution, végétation) peut rendre la surface glissante. D'où l'importance d'un nettoyage régulier.</p></div></details>
@@ -631,7 +631,7 @@ ${heroPlein({ fil: "Terrasses", h1: ['<span class="pc-nowrap">Terrasse composite
   </div>
   <div class="faq-liste">
     <h2>Vos questions sur le composite</h2>
-    <details class="faq"><summary>Comment entretenir une terrasse composite ?</summary><div><p>Un nettoyage à l'eau savonneuse suffit. Il n'y a ni saturateur, ni ponçage, ni lasure à prévoir.</p></div></details>
+    <details class="faq"><summary>Comment entretenir une terrasse composite ?</summary><div><p>Un nettoyage à l'eau savonneuse suffit. Il n'y a ni saturateur, ni ponçage, ni lasure à prévoir. Vous hésitez avec le bois ? Lisez <a href="/terrasse-bois-ou-composite/">bois ou composite : lequel choisir ?</a></p></div></details>
     <details class="faq"><summary>La couleur du composite change-t-elle ?</summary><div><p>La teinte s'éclaircit légèrement pendant les premiers mois, puis se stabilise, selon les teintes entre 6 mois et 1 an. Les pastilles sous chaque teinte, plus haut sur cette page, montrent cette évolution. Contrairement au bois, le composite ne vire pas au gris.</p></div></details>
     <details class="faq"><summary>Le composite fait-il des échardes ?</summary><div><p>Non. Les lames ne font ni écharde ni fente : la terrasse reste agréable pieds nus, autour d'une piscine comme pour les enfants.</p></div></details>
     <details class="faq"><summary>Le composite est-il écologique ?</summary><div><p>Nos lames pleine masse contiennent 75 % de fibres de bois issues de forêts gérées durablement (PEFC), sans PVC ni plastifiant. Elles sont certifiées Cradle to Cradle niveau Gold, qui évalue la santé des matériaux et leur recyclage.</p></div></details>
@@ -1091,7 +1091,7 @@ const terrassePilotis = {
     lyonCourt: "Nous venons chez vous, à Lyon et dans sa région : hauteurs, accès au jardin et implantation sont relevés, puis la terrasse est dessinée en 3D.",
     faqTitre: "Vos questions sur la terrasse sur pilotis",
     faq: [
-      ["Faut-il une autorisation pour une terrasse surélevée ?", "Souvent, oui : selon la hauteur et la surface, une déclaration préalable de travaux ou un permis de construire peut être demandé. Nous vérifions la règle de votre commune avec vous."],
+      ["Faut-il une autorisation pour une terrasse surélevée ?", "Oui : selon sa surface et la situation du terrain, une déclaration préalable de travaux ou un permis de construire est demandé. Nous vérifions la règle de votre commune avec vous. Voir aussi notre article <a href=\"/autorisation-terrasse-pergola-carport/\">quelle autorisation ?</a>"],
       ["Un garde-corps est-il obligatoire ?", "Dès que la hauteur de chute devient importante, un garde-corps est indispensable. Nous proposons des garde-corps aluminium sur mesure."],
       ["Peut-on utiliser l'espace sous la terrasse ?", "Oui : abri de voiture, rangement, coin salon. Avec des lames aluminium étanches, il reste au sec."],
       ["Quel revêtement pour une terrasse sur pilotis ?", "Lames aluminium, bois ou composite. Les lames aluminium sont étanches et légères, idéales pour une terrasse surélevée."],
@@ -1274,7 +1274,7 @@ ${heroPlein({ fil: "Pergolas & extérieur", h1: ['<span class="pc-nowrap">Carpor
     <h2>Faut-il une autorisation ?</h2>
     <p>Un carport crée de l'emprise au sol. Dans le cas général :</p>
     <ul class="puces"><li>jusqu'à 5 m² : pas de formalité, s'il n'est pas accolé à la maison ;</li><li>de 5 à 20 m² : déclaration préalable ;</li><li>au-delà de 20 m² : permis de construire.</li></ul>
-    <p>En zone urbaine d'une commune couverte par un PLU, si celui-ci considère le carport comme une extension de la maison, la déclaration préalable suffit jusqu'à 40 m². Le PLU peut aussi imposer des règles d'aspect et de distance aux limites : renseignez-vous auprès du service urbanisme de votre mairie (source : <a href="https://www.service-public.gouv.fr/particuliers/vosdroits/F36773" rel="noopener">service-public.gouv.fr</a>).</p>
+    <p>En zone urbaine d'une commune couverte par un PLU, si celui-ci considère le carport comme une extension de la maison, la déclaration préalable suffit jusqu'à 40 m². Le PLU peut aussi imposer des règles d'aspect et de distance aux limites : renseignez-vous auprès du service urbanisme de votre mairie (source : <a href="https://www.service-public.gouv.fr/particuliers/vosdroits/F36773" rel="noopener">service-public.gouv.fr</a>). Le détail des seuils est dans notre article <a href="/autorisation-terrasse-pergola-carport/">terrasse, pergola, carport : quelle autorisation ?</a></p>
     <p>Nous venons chez vous, à Lyon et dans sa région (${COMMUNES}), pour voir l'emplacement, l'accès, le sol et les hauteurs. Nous vous indiquons la démarche, et le plan 3D de votre carport est offert.</p>
   </div>
   <div class="faq-liste">
@@ -1570,7 +1570,7 @@ ${heroPlein({ fil: "Pergolas & extérieur", h1: ['<span class="pc-nowrap">Store 
     <div class="conseil-encadre">
       <p class="conseil-titre">Notre conseil</p>
       <p><strong>Attention : un store banne n'est pas toujours la solution adaptée.</strong> Selon l'exposition de l'espace à protéger, il peut ne pas suffire et ne pas vous protéger au moment le plus important. C'est parfois le cas en fin de journée sur une terrasse exposée à l'ouest : le soleil, bas sur l'horizon, passe sous la toile.</p>
-      <p>Il faut alors une protection verticale, et non horizontale : un <a href="/pergola-bioclimatique-lyon/#options">store vertical</a>, un <a href="/garde-corps-aluminium-lyon/">brise-vue</a> ou une <a href="/pergolas-lyon/">pergola</a> équipée d'un store vertical. Lors du rendez-vous, nous regardons l'orientation de votre terrasse et les heures où vous l'utilisez.</p>
+      <p>Il faut alors une protection verticale, et non horizontale : un <a href="/pergola-bioclimatique-lyon/#options">store vertical</a>, un <a href="/garde-corps-aluminium-lyon/">brise-vue</a> ou une <a href="/pergolas-lyon/">pergola</a> équipée d'un store vertical. Lors du rendez-vous, nous regardons l'orientation de votre terrasse et les heures où vous l'utilisez. <a href="/store-banne-ou-store-vertical/">Lire notre article : store banne ou protection verticale ?</a></p>
     </div>
   </div>
 </section>
@@ -1905,7 +1905,7 @@ ${heroPlein({ fil: "Pergolas & extérieur", h1: ['<span class="pc-nowrap">Garde-
   <div class="conteneur lyon-faq">
   <div class="lyon-texte">
     <h2>Un garde-corps, c'est d'abord de la sécurité</h2>
-    <p>Hauteur, espacement des éléments, résistance du support : un garde-corps répond à des normes précises, plus exigeantes dans les bâtiments recevant du public. Nous définissons le modèle et les fixations selon votre support lors du rendez-vous.</p>
+    <p>Hauteur, espacement des éléments, résistance du support : un garde-corps répond à des normes précises, plus exigeantes dans les bâtiments recevant du public. Nous définissons le modèle et les fixations selon votre support lors du rendez-vous. Les règles essentielles sont résumées dans notre article <a href="/garde-corps-terrasse-normes/">garde-corps de terrasse : quand est-il obligatoire ?</a></p>
     <p>Pour une terrasse neuve, surélevée, sur <a href="/terrasse-sur-pilotis-lyon/">pilotis</a> ou un <a href="/toit-terrasse-lyon/">toit-terrasse</a>, le plus simple est de prévoir le garde-corps dès la conception. Nous venons chez vous, à Lyon et dans sa région (${COMMUNES}).</p>
   </div>
   <div class="faq-liste">
@@ -2485,9 +2485,10 @@ const articleAutorisation = {
 
     <h2>Terrasse</h2>
     <ul>
-      <li><strong>De plain-pied, non couverte</strong> : en principe, aucune autorisation.</li>
-      <li><strong>Surélevée ou couverte</strong> : elle crée de l'emprise au sol et suit les seuils ci-dessous. C'est souvent le cas d'une <a href="/terrasse-sur-pilotis-lyon/">terrasse sur pilotis</a>.</li>
+      <li><strong>De plain-pied</strong> (non surélevée ou très faiblement surélevée) : dispensée de formalité, sauf en secteur protégé (site patrimonial remarquable, abords d'un monument historique, site classé), où une déclaration préalable est demandée. Une terrasse au niveau du terrain naturel, sans fondations profondes, ne compte pas dans l'emprise au sol.</li>
+      <li><strong>Surélevée ou couverte</strong> : déclaration préalable ou permis de construire selon sa surface et la situation du terrain (zone urbaine du PLU, secteur protégé). C'est souvent le cas d'une <a href="/terrasse-sur-pilotis-lyon/">terrasse sur pilotis</a>.</li>
     </ul>
+    <p>Source : <a href="https://www.service-public.gouv.fr/particuliers/vosdroits/F36774" rel="noopener">service-public.gouv.fr, autorisation pour une terrasse</a>.</p>
 
     <h2>Pergola et carport</h2>
     <div class="tableau-defile"><table class="comparatif">
@@ -2498,7 +2499,7 @@ const articleAutorisation = {
         <tr><th scope="row">Au-delà de 20 m²</th><td>Permis de construire.</td></tr>
       </tbody>
     </table></div>
-    <p>En zone urbaine d'une commune couverte par un PLU, si celui-ci considère la pergola ou le carport comme une extension de la maison, la déclaration préalable suffit jusqu'à 40 m² (source : <a href="https://www.service-public.gouv.fr/particuliers/vosdroits/F36773" rel="noopener">service-public.gouv.fr</a>).</p>
+    <p>Le PLU de votre commune peut considérer votre pergola ou votre carport soit comme une construction nouvelle, soit comme une extension de la maison. En zone urbaine d'une commune couverte par un PLU, s'il s'agit d'une extension, la déclaration préalable suffit jusqu'à 40 m². Renseignez-vous auprès du service urbanisme de votre mairie avant de déposer la demande (source : <a href="https://www.service-public.gouv.fr/particuliers/vosdroits/F36773" rel="noopener">service-public.gouv.fr, pergola et carport</a>).</p>
 
     <h2>Les cas qui changent la donne</h2>
     <ul>
@@ -2512,7 +2513,7 @@ const articleAutorisation = {
     <p class="note-carport">Ces informations sont données à titre indicatif ; seule la mairie peut confirmer les règles applicables à votre terrain.</p>`,
     faqTitre: "Vos questions sur les autorisations",
     faq: [
-      ["Faut-il une autorisation pour une terrasse en bois ?", "De plain-pied et non couverte, en principe non. Surélevée ou couverte, elle peut demander une déclaration préalable ou un permis selon sa surface."],
+      ["Faut-il une autorisation pour une terrasse en bois ?", "De plain-pied, non : elle est dispensée de formalité, sauf en secteur protégé où une déclaration préalable est demandée. Surélevée ou couverte, elle demande une déclaration préalable ou un permis selon sa surface."],
       ["Une pergola ouverte crée-t-elle de l'emprise au sol ?", "Oui : c'est la surface couverte vue du dessus qui compte, même sans murs."],
       ["Quelle démarche pour un carport de 15 m² ?", "Dans le cas général, une déclaration préalable."],
       ["Qu'est-ce que la règle des 40 m² ?", "En zone urbaine d'une commune couverte par un PLU, si celui-ci considère la construction comme une extension de la maison, la déclaration préalable suffit jusqu'à 40 m²."],
@@ -2532,17 +2533,18 @@ const articleGardeCorps = {
     chapo: "Dès qu'une terrasse est surélevée, la question du garde-corps se pose. C'est d'abord une question de sécurité, encadrée par des normes précises.",
     photo: "gc-maison-terrasse-vue", position: "50% 55%",
     corps: `
-    <p class="chapo">En résumé : un garde-corps est nécessaire dès que la hauteur de chute atteint 1 mètre. Il doit mesurer au moins 1 mètre de haut, et son remplissage doit empêcher le passage d'un enfant et limiter l'escalade.</p>
+    <p class="chapo">En résumé : il faut se protéger du risque de chute dès que la hauteur de chute dépasse 1 mètre. Le garde-corps d'une terrasse ou d'un balcon doit mesurer au moins 1 mètre de haut, et son remplissage doit empêcher le passage d'un enfant et limiter l'escalade.</p>
 
     <h2>À partir de quelle hauteur ?</h2>
-    <p>La norme NF P01-012, qui fixe les dimensions des garde-corps, considère qu'un garde-corps est nécessaire lorsque la hauteur de chute est d'au moins 1 mètre, ou lorsque le terrain en contrebas est en forte pente. C'est fréquent pour une <a href="/terrasse-sur-pilotis-lyon/">terrasse sur pilotis</a>, un <a href="/toit-terrasse-lyon/">toit-terrasse</a> ou un balcon.</p>
+    <p>Les services de l'État le rappellent : le maître d'ouvrage doit se prémunir des risques de chute dès que la hauteur de chute est supérieure à 1 mètre. La norme NF P01-012, qui fixe les dimensions des garde-corps, prévoit aussi le cas d'un terrain en forte pente en contrebas. C'est fréquent pour une <a href="/terrasse-sur-pilotis-lyon/">terrasse sur pilotis</a>, un <a href="/toit-terrasse-lyon/">toit-terrasse</a> ou un balcon.</p>
     <p>En dessous de cette hauteur, il n'est pas imposé par la norme, mais il reste utile par prudence, par exemple avec de jeunes enfants.</p>
 
     <h2>Quelle hauteur pour le garde-corps ?</h2>
-    <p>Pour une terrasse ou un balcon, le garde-corps doit mesurer au moins <strong>1 mètre</strong>. Attention : la hauteur se mesure depuis l'endroit où l'on peut poser les pieds. Un muret ou une jardinière au pied du garde-corps peuvent servir de marchepied ; il faut alors en tenir compte.</p>
+    <p>Dans les bâtiments d'habitation, aux étages autres que le rez-de-chaussée, le Code de la construction et de l'habitation impose que les garde-corps des balcons, terrasses, galeries et loggias aient une hauteur d'au moins <strong>1 mètre</strong>. Cette hauteur peut être abaissée à 0,80 m si le garde-corps a plus de 50 cm d'épaisseur (<a href="https://www.legifrance.gouv.fr/jorf/article_jo/JORFARTI000043809536" rel="noopener">article R134-59</a>).</p>
+    <p>Attention : la hauteur se mesure depuis l'endroit où l'on peut poser les pieds. Un muret, une jardinière, ou même un revêtement de sol rajouté après coup réduisent la hauteur de protection : il faut en tenir compte.</p>
 
     <h2>Quel remplissage ?</h2>
-    <p>Le remplissage doit être assez dense pour qu'un enfant ne puisse pas passer au travers : dans la partie basse, les vides ne doivent pas dépasser <strong>11 cm</strong>. Il doit aussi limiter l'escalade, ce qui encadre l'usage de lisses horizontales dans le bas du garde-corps.</p>
+    <p>Le remplissage doit être assez dense pour qu'un enfant ne puisse pas passer au travers : les écarts entre barreaux verticaux ne doivent pas dépasser <strong>11 cm</strong>. Il doit aussi éviter l'« effet échelle » : des barreaux horizontaux mal disposés permettent d'escalader le garde-corps. Ces points font partie des contrôles des règles de construction menés par les services de l'État.</p>
     <p>La norme NF P01-012 a été révisée fin 2024, avec des exigences renforcées contre les chutes d'enfants. Nos garde-corps sont conçus selon les normes NF P01-012 et NF P01-013 et testés sur banc d'essai.</p>
 
     <h2>Maison ou lieu recevant du public</h2>
@@ -2558,10 +2560,10 @@ const articleGardeCorps = {
     <p class="note-carport">Ces informations sont un résumé. Lors du rendez-vous, nous définissons le modèle et les fixations selon votre support et la configuration des lieux.</p>`,
     faqTitre: "Vos questions sur le garde-corps",
     faq: [
-      ["À partir de quelle hauteur faut-il un garde-corps ?", "La norme NF P01-012 le prévoit à partir d'une hauteur de chute de 1 mètre."],
-      ["Quelle hauteur doit faire un garde-corps de terrasse ?", "Au moins 1 mètre, mesuré depuis l'endroit où l'on peut poser les pieds."],
-      ["Quel écart maximum entre les barreaux ?", "Dans la partie basse, les vides ne doivent pas dépasser 11 cm."],
-      ["Les lisses horizontales sont-elles autorisées ?", "Elles sont encadrées, car elles peuvent servir d'échelle dans le bas du garde-corps. Le modèle est choisi pour respecter la norme."],
+      ["À partir de quelle hauteur faut-il un garde-corps ?", "Il faut se protéger du risque de chute dès que la hauteur de chute dépasse 1 mètre."],
+      ["Quelle hauteur doit faire un garde-corps de terrasse ?", "Au moins 1 mètre (0,80 m s'il fait plus de 50 cm d'épaisseur), mesuré depuis l'endroit où l'on peut poser les pieds."],
+      ["Quel écart maximum entre les barreaux ?", "11 cm entre barreaux verticaux, pour qu'un enfant ne puisse pas passer."],
+      ["Les lisses horizontales sont-elles autorisées ?", "Oui, à condition d'éviter l'effet échelle : leur disposition ne doit pas permettre d'escalader le garde-corps. Le modèle est choisi pour respecter la norme."],
       ["Vos garde-corps sont-ils conformes ?", "Oui : ils sont conçus selon les normes NF P01-012 et NF P01-013 et testés sur banc d'essai."],
     ],
     ctaTitre: "Un projet de garde-corps ?",

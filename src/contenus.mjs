@@ -1772,7 +1772,7 @@ ${cta("Un projet de bardage ?")}`,
 // ---------- Garde-corps (refonte 16/11/2026, catalogue garde-corps fournisseur fourni par Antoine) ----------
 const VIGNETTES_GC = {
   "Main courante murale": [["murale-alu", "Aluminium", "Main courante murale en aluminium", 110], ["murale-bois", "Bois", "Main courante murale en bois", 110]],
-  "Barreaux": [["gc-lisses-horizontales", "Lisses horizontales", "Garde-corps à lisses horizontales", 169], ["gc-barreaux-verticaux", "Barreaux verticaux", "Garde-corps à barreaux verticaux", 169], ["gc-barreaux-vide", "Vide sous main courante", "Garde-corps à barreaux avec vide sous la main courante", 169]],
+  "Barreaux": [["gc-lisses-horizontales", "Horizontaux", "Garde-corps à lisses horizontales", 169], ["gc-barreaux-verticaux", "Verticaux", "Garde-corps à barreaux verticaux", 169], ["gc-barreaux-vide", "Vide sous main courante", "Garde-corps à barreaux avec vide sous la main courante", 169]],
   "Verre": [["gc-verre-integral", "Intégral", "Garde-corps en verre intégral", 169], ["gc-verre-vide", "Vide sous main courante", "Garde-corps en verre avec vide sous la main courante", 169], ["gc-verre-lisses", "Avec lisses", "Garde-corps en verre surmonté de lisses", 169]],
   "Tôle découpée": [["gc-tole-feuille", "Motif feuille", "Garde-corps en tôle découpée, motif feuille", 169], ["gc-tole-rond", "Rond perforé", "Garde-corps en tôle perforée ronde", 169], ["gc-tole-lisses", "Avec lisses", "Garde-corps en tôle découpée surmontée de lisses", 169]],
   "Bois": [["gc-bois-vertical", "Vertical", "Garde-corps à lames bois verticales", 169], ["gc-bois-horizontal", "Horizontal", "Garde-corps à lames bois horizontales", 169]],
@@ -1799,15 +1799,10 @@ ${heroPlein({ fil: "Pergolas & extérieur", h1: ['<span class="pc-nowrap">Garde-
 
 <section id="remplissages" class="bloc">
   <div class="conteneur">
-    <h2>Barreaux, verre, tôle ou bois</h2>
-    <p class="chapo">La même structure aluminium, et le remplissage qui convient à votre façade et à votre vue.</p>
-    <div class="grille grille-3 atouts-car">${[
-      ["Barreaux", "Des lisses aluminium horizontales ou verticales, sur toute la hauteur ou avec un vide sous la main courante."],
-      ["Verre", "Du verre feuilleté de sécurité, transparent pour garder la vue, ou opale, fumé gris ou fumé bronze pour l'intimité."],
-      ["Tôle découpée", "Une tôle aluminium perforée ou découpée : une vingtaine de motifs (organiques, végétaux, géométriques), ou le vôtre à partir d'un dessin ou d'une photo."],
-      ["Bois", "Des lames de pin ou de frêne thermo-traités, ou de douglas, horizontales ou verticales, qui prennent une patine naturelle."],
-      ["Sans poteaux", "Nouveauté : une trame continue de barreaux verticaux, sans poteau, pour un linéaire filant et régulier."],
-    ].map(([t, x]) => `<div class="carte"><h3>${t}</h3><p>${x}</p>${vignettesGc(t)}</div>`).join("")}</div>
+    <h2>Nos modèles de garde-corps</h2>
+    <p class="chapo">Barreaux, verre, tôle découpée ou bois, sur la même structure aluminium, fabriquée sur mesure.</p>
+    <div class="modeles-gc">${[["Barreaux", "Barreaux"], ["Verre", "Verre"], ["Tôle découpée", "Tôle découpée"], ["Bois", "Bois"], ["Sans poteaux", "Sans poteaux"]].flatMap(([k, fam]) => VIGNETTES_GC[k].map(([f, l, a, h = 300]) => `<figure><img src="/assets/img/claustra/${f}.webp" alt="${a}" width="300" height="${h}" loading="lazy" decoding="async" data-credit="©Kordo"><figcaption><b>${fam}${k === "Sans poteaux" ? ' <span class="badge-nouveau">Nouveau</span>' : ""}</b>${l}</figcaption></figure>`)).join("")}</div>
+    <p class="note-carport">Verre feuilleté transparent, opale, fumé gris ou fumé bronze ; tôle en 20 motifs (voir plus bas) ; bois en pin ou frêne thermo-traités, ou douglas.</p>
     <div class="option-gc">
       <p><strong>En option, main courante en bois :</strong> à la place de l'aluminium, sur les modèles à poteaux, pour un toucher plus chaleureux.</p>
       <div class="mc-grille">
@@ -1822,7 +1817,7 @@ ${heroPlein({ fil: "Pergolas & extérieur", h1: ['<span class="pc-nowrap">Garde-
   <div class="conteneur">
     <h2>Les motifs de tôle découpée</h2>
     <p class="chapo">Vingt motifs au choix, ou le vôtre : il suffit d'un dessin (fichier DXF ou STEP), de la référence d'une tôle existante ou d'une photo.</p>
-    ${MOTIFS_GC.map(([fam, liste]) => `<h3 class="motifs-titre">${fam}</h3><div class="motifs">${liste.map(([f, n]) => `<figure><img src="/assets/img/claustra/motifs/${f}.webp" alt="Motif de tôle ${n}" width="200" height="200" loading="lazy" decoding="async" data-credit="©Kordo"><figcaption>${n}</figcaption></figure>`).join("")}</div>`).join("")}
+    <div class="motifs-tous">${MOTIFS_GC.map(([fam, liste]) => `<h3 class="motifs-titre">${fam}</h3><div class="motifs">${liste.map(([f, n]) => `<figure><img src="/assets/img/claustra/motifs/${f}.webp" alt="Motif de tôle ${n}" width="200" height="200" loading="lazy" decoding="async" data-credit="©Kordo"><figcaption>${n}</figcaption></figure>`).join("")}</div>`).join("")}</div>
   </div>
 </section>
 

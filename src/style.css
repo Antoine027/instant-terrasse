@@ -2085,4 +2085,13 @@ main #options .puces,main #toitures .puces,main #autorisation .puces{text-align:
 .motifs figure{margin:0;text-align:center}
 .motifs img{width:100%;height:auto;border-radius:10px;display:block}
 .motifs figcaption{font-size:.85rem;font-weight:700;margin-top:6px}
-@media (max-width:700px){.mc-grille{grid-template-columns:1fr}.motifs{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding-left:16px;gap:10px;margin:0 -16px;padding:0 16px 6px;scrollbar-width:none}.motifs::-webkit-scrollbar{display:none}.motifs figure{flex:0 0 30%;scroll-snap-align:start}main .option-gc,main .mc-essences{text-align:left}main .motifs-titre{text-align:center}}
+@media (max-width:700px){.mc-grille{grid-template-columns:1fr}.motifs-tous{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding-left:16px;gap:10px;margin:18px -16px 0;padding:0 16px 6px;scrollbar-width:none}.motifs-tous::-webkit-scrollbar{display:none}.motifs-tous .motifs-titre{display:none}.motifs-tous .motifs{display:contents}.motifs-tous figure{flex:0 0 30%;scroll-snap-align:start}main .option-gc,main .mc-essences{text-align:left}main .motifs-titre{text-align:center}}
+
+/* Garde-corps : modèles en grand (16/11/2026) */
+.modeles-gc{display:flex;flex-wrap:wrap;justify-content:center;gap:18px;margin-top:22px}
+.modeles-gc figure{flex:0 0 calc(25% - 14px);margin:0;background:#fff;border-radius:var(--rayon);padding:16px 14px 14px;text-align:center;box-shadow:0 6px 20px -12px rgba(47,52,55,.35)}
+.modeles-gc img{width:100%;height:auto;display:block}
+.modeles-gc figcaption{margin-top:10px;font-size:.9rem;color:#5b6064}
+.modeles-gc figcaption b{display:block;font-family:Montserrat,sans-serif;font-size:1rem;color:var(--texte,#2F3437)}
+.badge-nouveau{display:inline-block;margin-left:6px;padding:2px 8px;border-radius:20px;background:var(--accent);color:#fff;font-size:.7rem;vertical-align:middle}
+@media (max-width:700px){.modeles-gc{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding-left:16px;gap:12px;margin:18px -16px 0;padding:4px 16px 14px;scrollbar-width:none}.modeles-gc::-webkit-scrollbar{display:none}.modeles-gc figure{flex:0 0 72%;scroll-snap-align:start}}

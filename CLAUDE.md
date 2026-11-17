@@ -1,4 +1,4 @@
-# Site Instant Terrasse (nouvelle version, en test)
+# Site Instant Terrasse (en ligne depuis le 17/11/2026)
 
 Remplaçant du site WordPress/Elementor instantterrasse.com. Générateur Node sans dépendance : `node build.mjs` produit `dist/`. Déployé par Vercel à chaque push sur `main` (dépôt GitHub Antoine027/instant-terrasse). Même méthode que le site Horizon Fenêtre (Antoine027/horizon-fenetre).
 
@@ -9,15 +9,17 @@ Remplaçant du site WordPress/Elementor instantterrasse.com. Générateur Node s
 - Déployer seulement quand Antoine le confirme ou dit « déploie tout de suite » : fusionner `travail` dans `main` et pousser `main` (un seul déploiement), puis vérifier que le déploiement a démarré.
 - Articles automatiques (17/11/2026) : la tâche programmée « Publication conseils Instant Terrasse » (mardi et vendredi) commite directement sur `main`. Avant de travailler sur `travail`, faire `git fetch origin && git merge origin/main` ; pour déployer, `git merge travail` dans `main` (plus forcément en avance rapide).
 
-## Règle n° 1 : ne pas court-circuiter le site actuel
-- Le WordPress reste en ligne sur instantterrasse.com tant qu'Antoine n'a pas décidé la bascule.
-- Ne jamais toucher au domaine, aux DNS ni au WordPress.
-- Le site de test est non indexé : `EN_LIGNE = false` dans build.mjs (meta robots + robots.txt) et en-tête `X-Robots-Tag: noindex` dans vercel.json. Ces trois verrous ne sont retirés que le jour de la bascule.
+## Site en ligne (bascule du 17/11/2026, décidée par Antoine)
+- instantterrasse.com sert le site Vercel depuis le 17/11/2026 (~18h50). DNS chez Hostinger (nameservers dns-parking.com), modifiés par Antoine : A @ 216.198.79.1, CNAME www → 0f366b02be69e0b9.vercel-dns-017.com, AAAA @ supprimé ; TXT google-site-verification ajouté (propriété « domaine » Search Console validée). Messagerie Microsoft 365 intacte (MX, SPF, DMARC, autodiscover, selector1/2) : ne jamais y toucher. CDN Hostinger inactif : le laisser inactif.
+- Vercel : instantterrasse.com = Production, www → 301 vers instantterrasse.com. instant-terrasse.vercel.app reste en noindex (X-Robots-Tag limité à cet hôte dans vercel.json) ; redirection éventuelle plus tard.
+- `EN_LIGNE = true` dans build.mjs (robots.txt Allow + Sitemap, pas de meta noindex). Chaque déploiement sur main est maintenant public et indexable.
+- Le WordPress Hostinger est gardé au moins un mois comme secours (sauvegarde faite par Antoine) : ne pas le supprimer. Ne toucher aux DNS qu'avec Antoine.
+- Reste à faire : sitemap dans la Search Console (propriété domaine) et Bing Webmaster (import), test du formulaire sur le domaine, lien du site dans la fiche Google Business, authentification Brevo de instantterrasse.com, suivi Search Console pendant 2 semaines (erreurs 404, couverture).
 
 ## Formulaire de contact (testé OK le 16/11/2026)
 - api/contact.js envoie par l'API Brevo (compte Brevo commun avec Horizon Fenêtre). Variables Vercel (Production, type Secret) : BREVO_API_KEY (clé « Site Instant Terrasse », accès restreint emails transactionnels, sans date d'expiration mais expire après 90 jours sans utilisation), CONTACT_TO = contact@instantterrasse.com, CONTACT_FROM = contact@horizonfenetre.com (expéditeur Brevo entièrement authentifié). À la bascule : authentifier instantterrasse.com dans Brevo (DNS, avec Antoine) puis passer CONTACT_FROM sur une adresse instantterrasse.com. L'expéditeur contact@escomhabitat.com n'a ni DKIM propre ni DMARC complet.
 
-## Bascule (plus tard)
+## Bascule (préparation, faite le 17/11/2026)
 - Garder les URL existantes qui apportent du trafic (à vérifier dans la Search Console), même si leur contenu change.
 - Toute ancienne URL supprimée ou renommée reçoit une redirection 301 dans vercel.json.
 - Inventaire du WordPress au 21/10/2026 : 21 pages + 6 articles (voir sitemap Rank Math).

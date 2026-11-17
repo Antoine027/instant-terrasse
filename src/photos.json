@@ -4690,5 +4690,23 @@
    533
   ],
   "ratio": 0.3331
+ },
+ {
+  "cle": "ambiance-terrasse-mobil-home",
+  "dossier": "terrasses",
+  "categorie": "ambiance",
+  "alt": "Terrasse de mobil-home en lames, avec salon, table et marches, dans un camping arboré",
+  "credit": "",
+  "largeurs": [
+   400,
+   600,
+   800,
+   1000,
+   1200,
+   1400,
+   1600,
+   1944
+  ],
+  "ratio": 2.403
  }
 ]

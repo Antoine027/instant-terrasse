@@ -1158,7 +1158,7 @@ const terrasseCamping = {
     ici: "/terrasse-camping-hpa/", fil: "Professionnels",
     h1: ['<span class="pc-nowrap">Terrasses de mobil-homes</span>', "pour campings et HPA"], kicker: "Campings, chalets et lodges",
     chapo: "Des terrasses durables et homogènes pour équiper, rénover ou faire monter en gamme votre parc d'hébergements.",
-    photo: "alu-escalier-maison-bois", position: "50% 60%",
+    photo: "ambiance-terrasse-mobil-home", position: "40% 55%",
     revTitre: "Quel revêtement pour une terrasse de mobil-home ?", revIntro: "Pour un parc d'hébergements, le matériau se choisit sur plusieurs années : entretien, durabilité et homogénéité comptent autant que l'aspect.",
     poids: { entretien: 2, durabilite: 2, legerete: 2 },
     rev: {

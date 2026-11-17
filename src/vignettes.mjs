@@ -15,7 +15,7 @@ export const VIGNETTES = {
   "/terrasse-sur-pilotis-lyon/": "pilotis-garde-corps-verre-salon",
   "/terrasse-sur-plots-lyon/": "ambiance-dalles-sur-plots",
   "/terrasse-restaurant-chr-lyon/": "terrasse-kebony-restaurant",
-  "/terrasse-camping-hpa/": "alu-escalier-maison-bois",
+  "/terrasse-camping-hpa/": "ambiance-terrasse-mobil-home",
   "/pergola-bioclimatique-lyon/": "pergola-bioclimatique-autoportee",
   "/pergola-toile-retractable-lyon/": "pergola-toile-retractable-facade",
   "/pergola-toit-fixe-lyon/": "pergola-toit-fixe-piscine",

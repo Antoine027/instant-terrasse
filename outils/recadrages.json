@@ -47,9 +47,9 @@
   "dossier": "terrasses",
   "position": "55% 55%"
  },
- "alu-escalier-maison-bois": {
-  "dossier": "aluminium",
-  "position": "50% 60%"
+ "ambiance-terrasse-mobil-home": {
+  "dossier": "terrasses",
+  "position": "40% 55%"
  },
  "carport-garage-gravier": {
   "dossier": "pergolas",

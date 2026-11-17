@@ -1081,7 +1081,7 @@ const terrassePilotis = {
       ["pente", "Pente et talus rattrapés", "Les poteaux reprennent les différences de niveau, sans terrassement lourd."],
       ["abri", "Un espace abrité dessous", "Voiture, salon de jardin, bois de chauffage : avec des lames aluminium étanches, il reste au sec même sous la pluie."],
       ["garde", "Sécurisée", "Un garde-corps aluminium à lisses, à barreaux, vitré ou décoratif."],
-      ["etanche", "Une structure allégée", "Les lames aluminium sont légères : un atout pour une terrasse suspendue."],
+      ["etanche", "Bois, acier ou aluminium", "La structure porteuse se choisit selon le style de la maison et le projet."],
       ["plan", "Étudiée dans son ensemble", "Poteaux, garde-corps, escalier vers le jardin : tout est dessiné en 3D."],
     ],
     galerieCat: "pilotis",

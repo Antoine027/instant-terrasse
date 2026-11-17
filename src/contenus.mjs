@@ -1023,7 +1023,7 @@ const toitTerrasse = {
     ici: "/toit-terrasse-lyon/",
     h1: ['<span class="pc-nowrap">Toit-terrasse</span>', 'aménagé <span class="lyon-l">à Lyon</span>'], kicker: "Toitures plates aménagées à Lyon et dans sa région",
     chapo: "Une toiture plate devient une pièce à vivre : le revêtement repose sur des plots posés sur l'étanchéité, sans la percer.",
-    photo: "carrelage-toit-terrasse-montagnes", position: "55% 60%",
+    photo: "ambiance-toit-terrasse", position: "50% 55%",
     revTitre: "Quel revêtement pour un toit-terrasse ?", revIntro: "En hauteur, le poids compte, et le soleil tape plus fort qu'au jardin.",
     poids: { legerete: 2, chaleur: 1, durabilite: 1 },
     rev: {
@@ -1042,7 +1042,7 @@ const toitTerrasse = {
       ["garde", "Sécurisé", "Un garde-corps aluminium, vitré ou à lisses, pour profiter de la vue."],
       ["ombre", "Ombre et intimité", "Pergola, store banne ou pare-vue pour vivre le toit à toute heure."],
     ],
-    galerieCat: ["carrelage-toit-terrasse-montagnes", "terrasse-bambou-xtreme-toit", "alu-piscine-toit-terrasse", "carrelage-beige-pergola-toit-fixe", "store-banne-toit-terrasse", "ambiance-toit-terrasse", "gc-maison-terrasse-vue", "gc-collectif-verre-lisses-terrasse"],
+    galerieCat: ["carrelage-toit-terrasse-montagnes", "terrasse-bambou-xtreme-toit", "alu-piscine-toit-terrasse", "carrelage-beige-pergola-toit-fixe", "store-banne-toit-terrasse", "gc-maison-terrasse-vue", "gc-collectif-verre-lisses-terrasse"],
     titreGalerie: "Toits-terrasses en situation",
     lyon: ["Votre toit-terrasse à Lyon et dans sa région", `Appartement, maison ou extension : nous venons chez vous, à Lyon et dans sa région (voir notre <a href="/terrasse-lyon/">zone d'intervention</a>). Nous regardons l'accès au toit, l'état de l'étanchéité et les évacuations, puis nous dessinons l'aménagement en 3D : coin repas, salon, plantations.`, "Une toiture n'est pas toujours prévue pour être accessible : sa capacité à porter une terrasse est vérifiée avant tout projet."],
     lyonCourt: "Nous venons chez vous, à Lyon et dans sa région : accès, étanchéité et évacuations sont vérifiés, puis l'aménagement est dessiné en 3D.",

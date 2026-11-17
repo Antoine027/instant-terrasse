@@ -35,9 +35,9 @@
   "dossier": "terrasses",
   "position": "55% 50%"
  },
- "carrelage-toit-terrasse-montagnes": {
+ "ambiance-toit-terrasse": {
   "dossier": "terrasses",
-  "position": "55% 60%"
+  "position": "50% 55%"
  },
  "pilotis-garde-corps-verre-salon": {
   "dossier": "terrasses",

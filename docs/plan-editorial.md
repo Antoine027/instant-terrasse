@@ -14,7 +14,7 @@ Quand il reste moins de 6 lignes « à faire » datées dans les 3 semaines à v
 |---|---|---|---|---|---|
 | 2026-11-20 | quand-faire-sa-terrasse | Quand faire sa terrasse : le bon calendrier, du rendez-vous à la pose | quand faire sa terrasse | /contact/ + /structure-terrasse-lyon/ + /autorisation-terrasse-pergola-carport/ | à faire |
 | 2026-11-24 | comparer-devis-terrasse | Comparer deux devis de terrasse : les lignes à vérifier | comparer devis terrasse | /contact/ + /structure-terrasse-lyon/ | à faire |
-| 2026-11-27 | terrasse-qui-chauffe-au-soleil | Terrasse brûlante l'été : pourquoi et comment l'éviter | terrasse chauffe soleil | /nos-terrasses/ + /terrasse-aluminium-lyon/ + /terrasse-composite-lyon/ | à faire |
+| 2026-11-27 | renover-terrasse-bois | Rénover une vieille terrasse : changer les lames ou tout refaire ? | rénovation terrasse bois composite | /structure-terrasse-lyon/ + /terrasse-sur-plots-lyon/ + /contact/ | à faire |
 | 2026-12-01 | entretien-pergola-bioclimatique | Entretenir une pergola bioclimatique : lames, chéneaux, hiver | entretien pergola bioclimatique | /pergola-bioclimatique-lyon/ | à faire |
 | 2026-12-04 | terrasse-glissante | Terrasse glissante : causes et solutions selon le revêtement | terrasse glissante | /nos-terrasses/ + /comment-nettoyer-une-terrasse-en-bois/ | à faire |
 | 2026-12-08 | terrasse-en-hiver | Terrasse en hiver : gel, neige, feuilles, les bons réflexes | terrasse hiver neige | /comment-nettoyer-une-terrasse-en-bois/ + /pergola-bioclimatique-lyon/ | à faire |
@@ -24,6 +24,7 @@ Quand il reste moins de 6 lignes « à faire » datées dans les 3 semaines à v
 | 2027-01-05 | store-banne-vent-capteur | Store banne et vent : capteurs, limites et bons réflexes | store banne vent | /store-banne-lyon/ + /store-banne-ou-store-vertical/ | à faire |
 | 2027-01-08 | orientation-terrasse | Orientation de la terrasse : sud, ouest, est, ce que ça change | orientation terrasse | /nos-terrasses/ + /pergolas-lyon/ + /store-banne-ou-store-vertical/ | à faire |
 | 2027-01-12 | nettoyer-terrasse-composite | Nettoyer une terrasse composite : taches, fréquence, erreurs | nettoyer terrasse composite | /terrasse-composite-lyon/ + /terrasse-bois-ou-composite/ | à faire |
+| 2027-04-02 | terrasse-qui-chauffe-au-soleil | Terrasse brûlante l'été : pourquoi et comment l'éviter (sujet de printemps) | terrasse chauffe soleil | /nos-terrasses/ + /terrasse-aluminium-lyon/ + /terrasse-composite-lyon/ | à faire |
 
 ## Mises à jour d'articles existants (sans créer de nouvelle page)
 
@@ -102,3 +103,4 @@ Deux articles par semaine est un maximum. Si le sujet prévu ne répond pas à u
 | Date | Action | Remarque |
 |---|---|---|
 | 2026-11-17 | Mise en place du plan et du format Markdown | Demande d'Antoine : publication automatique le mardi et le vendredi, comme Horizon Fenêtre |
+| 2026-11-17 | Premier export Search Console (12 mois, ancien site WordPress) dans docs/search-console/ | Ajout du sujet « rénover une vieille terrasse » (« rénovation terrasse bois composite » 75 impressions, « rénovation de terrasse » 29) ; « terrasse qui chauffe » déplacé au printemps. Requêtes « bois ou composite » (≈ 575 impressions, position ≈ 80) : couvertes par /terrasse-bois-ou-composite/. Toutes les anciennes adresses de l'export sont redirigées ou conservées. |

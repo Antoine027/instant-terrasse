@@ -897,7 +897,7 @@ ${heroPlein({ fil, h1, kicker, chapo, photo, position, actions: actions ?? `<a c
 <section id="atouts" class="bloc bloc-alt">
   <div class="conteneur">
     <h2>${atoutsTitre}</h2>
-    <div class="grille grille-3 atouts-car">${atouts.map(([i, t, x]) => `<div class="carte atout-carte">${ico(i)}<h3>${t}</h3><p>${x}</p></div>`).join("")}</div>
+    <div class="grille grille-3 atouts-car atouts-centre">${atouts.map(([i, t, x]) => `<div class="carte atout-carte">${ico(i)}<h3>${t}</h3><p>${x}</p></div>`).join("")}</div>
   </div>
 </section>
 ${extra}

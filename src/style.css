@@ -2199,3 +2199,6 @@ main #options .puces,main #toitures .puces,main #autorisation .puces{text-align:
 @media (max-width:700px){main .points-cles li,main .points-cles p{text-align:left}}
 /* Galeries : dernière rangée complétée puis étirée (script remplir, 17/11/2026) */
 .mosaique.rang-plein::after{display:none}
+/* Pages projet : cartes atouts centrées (Antoine, 17/11/2026) */
+.atouts-centre .atout-carte{text-align:center}
+.atouts-centre .atout-carte>:first-child{margin-left:auto;margin-right:auto}

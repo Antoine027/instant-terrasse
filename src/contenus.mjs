@@ -327,7 +327,7 @@ ${heroPlein({ fil: "Terrasses", h1: ['<span class="pc-nowrap">Structure aluminiu
 
 <section id="galerie" class="bloc">
   <div class="conteneur">
-    ${galerie(GALERIE_STRUCTURES.map(([cle]) => cle), { titre: "Nos structures en images", intro: "Choisissez un type de structure pour n'afficher que celui qui vous intéresse.", legende: "Illustrations", types: ["Structure pour bois et composite", "Structure pour carrelage", "Structure pour lames aluminium"], typesDe: (p) => GALERIE_STRUCTURES.find(([c]) => c === p.cle)[1], ordre: ORDRE_STRUCTURES })}
+    ${galerie(GALERIE_STRUCTURES.map(([cle]) => cle), { complement: ["structure-rails-plots-entete", "structure-composite-eclate-t"], titre: "Nos structures en images", intro: "Choisissez un type de structure pour n'afficher que celui qui vous intéresse.", legende: "Illustrations", types: ["Structure pour bois et composite", "Structure pour carrelage", "Structure pour lames aluminium"], typesDe: (p) => GALERIE_STRUCTURES.find(([c]) => c === p.cle)[1], ordre: ORDRE_STRUCTURES })}
   </div>
 </section>
 ${cta("Un projet de terrasse ?")}`,
@@ -2184,6 +2184,7 @@ const terrasseLyon = {
       ["Plus au nord", ["Villefranche-sur-Saône"]],
     ]),
     galerieCat: ["terrasse-kebony-maison", "carrelage-bh-aspect-bois-gris-jardin", "alu-terrasse-salon-parasol", "composite-brun-cour-table", "terrasse-thermopin-jardin-pins", "carrelage-bh-pergola-cour", "terrasse-kebony-facade-brique", "alu-terrasse-fauteuils-rouges", "terrasse-bambou-ndurance-pergola", "carrelage-bh-grand-format-baie", "composite-brun-transats", "terrasse-accoya-naturel-salle-a-manger"],
+    galerieComp: ["terrasse-accoya-naturel-salle-a-manger", "terrasse-thermopin-table", "composite-brun-transats", "carrelage-bh-aspect-bois-clair-transats", "alu-terrasse-banc-courbe", "terrasse-thermofrene-patio-encaisse", "alu-terrasse-falaise", "terrasse-bambou-ndurance-pergola", "carrelage-bh-grand-format-baie", "terrasse-thermopin-estrade"],
     titreGalerie: "Des terrasses pour s'inspirer",
     lyon: ["Une terrasse adaptée à votre maison", "Maison avec jardin, appartement avec balcon, toit-terrasse en ville ou terrain en pente : chaque emplacement a ses contraintes. Nous les regardons sur place avant de vous conseiller un revêtement et une structure.", "Instant Terrasse conçoit votre projet et fournit les matériaux. La pose est confiée à notre installateur partenaire, assuré en garantie décennale, et nous restons votre interlocuteur du premier rendez-vous à la fin du chantier."],
     lyonCourt: "Jardin, balcon, toit-terrasse ou terrain en pente : nous regardons les contraintes sur place avant de conseiller un revêtement et une structure.",
@@ -2230,6 +2231,7 @@ const terrasseRillieux = {
       ["Communes voisines", ["Caluire-et-Cuire", "Sathonay", "Miribel", "Neyron", "Beynost"]],
     ]),
     galerieCat: ["terrasse-thermopin-salon-jardin", "terrasse-thermofrene-marches", "composite-gris-piscine-jardin", "alu-marches-aspect-teck", "carrelage-bh-sureleve-gazon", "terrasse-kebony-jardin", "carrelage-bh-aspect-bois-clair-pergola", "terrasse-thermopin-estrade", "composite-brun-deck-bassin", "terrasse-kebony-surelevee", "carrelage-aspect-bois-garde-corps-feuilles", "terrasse-bambou-xtreme-spa"],
+    galerieComp: ["terrasse-accoya-gris-maison", "terrasse-thermopin-vue", "composite-brun-deck-bassin", "carrelage-bh-aspect-bois-gris-table", "alu-salon-garde-corps", "terrasse-kebony-vue-jardin"],
     titreGalerie: "Des terrasses pour s'inspirer",
     lyon: ["Votre terrasse à Rillieux-la-Pape", "Le rendez-vous a lieu chez vous : nous relevons les niveaux, l'accès au jardin, l'écoulement de l'eau et l'exposition, et vous comparez les échantillons sur place. Vous recevez ensuite le plan 3D et un devis détaillé.", "Instant Terrasse conçoit votre projet et fournit les matériaux. La pose est confiée à notre installateur partenaire, assuré en garantie décennale, et nous restons votre interlocuteur du premier rendez-vous à la fin du chantier."],
     lyonCourt: "Rendez-vous chez vous : niveaux, accès et exposition sont relevés, puis vous recevez le plan 3D et un devis détaillé.",

@@ -67,9 +67,9 @@
   "dossier": "pergolas",
   "position": "65% 50%"
  },
- "store-banne-coffre-bardage": {
+ "store-banne-beige-maison": {
   "dossier": "stores",
-  "position": "45% 40%"
+  "position": "50% 50%"
  },
  "bardage-alu-vertical-brun-escalier": {
   "dossier": "bardage",
@@ -110,10 +110,6 @@
  "terrasse-kebony-piscine-pool-house": {
   "dossier": "bois",
   "position": "50% 60%"
- },
- "store-banne-beige-maison": {
-  "dossier": "stores",
-  "position": "50% 50%"
  },
  "pergola-bioclimatique-autoportee": {
   "dossier": "pergolas",

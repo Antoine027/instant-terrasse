@@ -1583,7 +1583,7 @@ const storeBanne = {
   corps: `
 ${heroPlein({ fil: "Pergolas & extérieur", h1: ['<span class="pc-nowrap">Store banne</span>', 'sur mesure <span class="lyon-l">à Lyon</span>'], kicker: "Six modèles fabriqués en France",
   chapo: "De l'ombre en quelques secondes, et une façade dégagée le reste du temps : la protection solaire la plus simple, sans poteau sur la terrasse.",
-  photo: "store-banne-coffre-bardage", position: "45% 40%",
+  photo: "store-banne-beige-maison", position: "60% 45%",
   actions: `<a class="bouton" href="/contact/">Demander un devis gratuit</a> <a class="bouton bouton-blanc" href="#modeles">Les modèles</a>` })}
 
 <section id="modeles" class="bloc">

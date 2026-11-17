@@ -2173,6 +2173,7 @@ const terrasseLyon = {
     extra: communes("Notre zone d'intervention", "Nous nous déplaçons à Lyon, dans la métropole et bien au-delà. Quelques communes où nous intervenons :", [
       ["Lyon et l'est lyonnais", ["Lyon", "Villeurbanne", "Bron", "Décines", "Meyzieu", "Genas"]],
       ["Nord et nord-est", ["Caluire-et-Cuire", "Rillieux-la-Pape", "Sathonay", "Miribel", "Beynost"]],
+      ["Val de Saône", ["Neuville-sur-Saône", "Genay", "Quincieux", "Trévoux", "Civrieux-d'Azergues"]],
       ["Monts d'Or", ["Saint-Didier-au-Mont-d'Or", "Saint-Cyr-au-Mont-d'Or", "Collonges-au-Mont-d'Or", "Champagne-au-Mont-d'Or", "Poleymieux-au-Mont-d'Or", "Limonest", "Lissieu"]],
       ["Ouest lyonnais", ["Écully", "Dardilly", "Tassin-la-Demi-Lune", "Charbonnières-les-Bains", "Dommartin"]],
       ["Sud-ouest lyonnais", ["Charly"]],

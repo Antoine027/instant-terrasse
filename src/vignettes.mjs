@@ -12,7 +12,7 @@ export const VIGNETTES = {
   "/terrasse-piscine-lyon/": "ambiance-plage-piscine",
   "/terrasse-balcon-lyon/": "ambiance-balcon-lames",
   "/toit-terrasse-lyon/": "ambiance-toit-terrasse",
-  "/terrasse-sur-pilotis-lyon/": "pilotis-bois-escalier-carport",
+  "/terrasse-sur-pilotis-lyon/": "pilotis-garde-corps-verre-salon",
   "/terrasse-sur-plots-lyon/": "ambiance-dalles-sur-plots",
   "/terrasse-restaurant-chr-lyon/": "terrasse-kebony-restaurant",
   "/terrasse-camping-hpa/": "alu-escalier-maison-bois",

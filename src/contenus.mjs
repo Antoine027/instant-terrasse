@@ -2,7 +2,8 @@
 // Règles : pas de chiffre, garantie, certification ou chantier inventé ; pas de nom de fournisseur.
 import { SITE, POSE, TRIO, BADGE_AVIS, blocRappel, ARTICLES } from "./pages.mjs";
 import { galerie, imgPhoto, imgHero, PHOTOS, credit } from "./galerie.mjs";
-import { carteProduit } from "./vignettes.mjs";
+import { carteProduit, VIGNETTES } from "./vignettes.mjs";
+import { ARTICLES_MD, markdown } from "./articles-md.mjs";
 import { RANG } from "./ordre-photos.mjs";
 
 const img = (nom, alt, ratio) =>
@@ -2245,19 +2246,22 @@ const terrasseRillieux = {
 // ---------- Rubrique Conseils (16/11/2026) ----------
 // Articles aux adresses des anciens contenus les plus vus (Search Console) : faits validés uniquement, aucun prix.
 const AUTEUR = { "@type": "Person", name: "Antoine Escolle", url: `${SITE.url}/quisommesnous/` };
-const jsonArticle = (chemin, titre, description, photo) => ({
+const jsonArticle = (chemin, titre, description, photo, date = "2026-11-16", modifie = date) => ({
   "@context": "https://schema.org", "@type": "Article", headline: titre, description,
   author: AUTEUR, publisher: { "@id": `${SITE.url}/#entreprise` },
-  datePublished: "2026-11-16", dateModified: "2026-11-16", mainEntityOfPage: `${SITE.url}${chemin}`,
+  datePublished: date, dateModified: modifie, mainEntityOfPage: `${SITE.url}${chemin}`,
   image: `${SITE.url}/assets/img/${PHOTOS.find((x) => x.cle === photo).dossier}/${photo}-1200.webp`,
 });
-const signature = `<p class="article-auteur">Par <a href="/quisommesnous/">Antoine Escolle</a>, fondateur d'Instant Terrasse · 16 novembre 2026</p>`;
-const pageArticle = ({ h1, kicker, chapo, photo, position, corps, faqTitre, faq, ctaTitre, suite, bouton2 = ['/nos-terrasses/#trouver', 'Le comparateur'] }) => `
+const MOIS = ["janvier", "février", "mars", "avril", "mai", "juin", "juillet", "août", "septembre", "octobre", "novembre", "décembre"];
+const dateFr = (d) => { const [a, m, j] = d.split("-").map(Number); return `${j === 1 ? "1er" : j} ${MOIS[m - 1]} ${a}`; };
+const signatureDe = (date = "2026-11-16") => `<p class="article-auteur">Par <a href="/quisommesnous/">Antoine Escolle</a>, fondateur d'Instant Terrasse · ${dateFr(date)}</p>`;
+const signature = signatureDe();
+const pageArticle = ({ h1, kicker, chapo, photo, position, corps, faqTitre, faq, ctaTitre, suite, bouton2 = ['/nos-terrasses/#trouver', 'Le comparateur'], sig = signature }) => `
 ${heroPlein({ fil: '<a href="/conseils/">Conseils</a>', h1, kicker, chapo, photo, position, actions: `<a class="bouton" href="/contact/">Demander un devis gratuit</a> <a class="bouton bouton-blanc" href="${bouton2[0]}">${bouton2[1]}</a>` })}
 
 <article class="bloc">
   <div class="conteneur conteneur-etroit article">
-    ${signature}
+    ${sig}
     ${corps}
   </div>
 </article>
@@ -2662,7 +2666,24 @@ const conseils = {
 ${cta("Une question sur votre projet ?", "Laissez votre numéro : nous vous rappelons pour en parler.")}`,
 };
 
+// Articles Markdown (content/conseils/), publiés par la tâche du mardi et du vendredi.
+const sourcesArticle = (s) => s.length ? `<p class="article-sources"><strong>Sources :</strong> ${s.map(([l, u]) => `<a href="${u}" target="_blank" rel="noopener">${l}</a>`).join(" ; ")}.</p>` : "";
+const CONTENUS_MD = Object.fromEntries(ARTICLES_MD.map((a) => {
+  if (!PHOTOS.find((x) => x.cle === a.photo)) throw new Error(`Article ${a.slug} : photo inconnue « ${a.photo} »`);
+  VIGNETTES[a.chemin] = a.photo;
+  return [a.chemin, {
+    title: a.title, description: a.description,
+    jsonld: jsonArticle(a.chemin, a.h1.join(" "), a.description, a.photo, a.date, a.modifie || a.date),
+    corps: pageArticle({
+      h1: a.h1, kicker: "Conseils", chapo: a.chapo, photo: a.photo, position: a.position || "50% 50%",
+      corps: markdown(a.md, imgPhoto) + sourcesArticle(a.sources),
+      faqTitre: a.faqtitre, faq: a.faq, ctaTitre: a.cta, suite: a.suite, sig: signatureDe(a.date),
+      ...(a.bouton2 ? { bouton2: a.bouton2 } : {}),
+    }),
+  }];
+}));
 export const CONTENUS = {
+  ...CONTENUS_MD,
   "/conseils/": conseils,
   "/terrasse-bois-ou-composite/": articleBoisComposite,
   "/amenagement-terrasse-lyon/": articleAmenagement,

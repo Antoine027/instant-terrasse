@@ -1,4 +1,5 @@
 import { imgPhoto, imgHero } from "./galerie.mjs";
+import { ARTICLES_MD } from "./articles-md.mjs";
 import { carteProduit, vignette } from "./vignettes.mjs";
 // Plan du site et contenu des pages. Une entrée = une page (chemin avec / final).
 // statut "preparation" : page affichée avec un contenu provisoire, à rédiger.
@@ -82,6 +83,7 @@ export const AUTRES = [
 
 // Articles de la rubrique Conseils (16/11/2026) : hors menu et hors pied de page, listés sur /conseils/.
 export const ARTICLES = [
+  ...ARTICLES_MD.map((a) => [a.chemin, a.carte, a.resume]),
   ["/terrasse-bois-ou-composite/", "Terrasse bois ou composite : lequel choisir ?", "Aspect, chaleur, entretien, taches : la comparaison honnête des deux matériaux."],
   ["/amenagement-terrasse-lyon/", "Aménager sa terrasse : nos conseils", "Usages, ombre, intimité, niveaux : penser la terrasse avant de choisir le matériau."],
   ["/comment-nettoyer-une-terrasse-en-bois/", "Comment nettoyer une terrasse en bois", "Fréquence, matériel, saturateur, patine grise : l'entretien essence par essence."],

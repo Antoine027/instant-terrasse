@@ -863,9 +863,9 @@ const ICO = {
 const ico = (k) => `<span class="atout-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${ICO[k]}</svg></span>`;
 const NOM_MAT = { bois: ["/terrasse-bois-lyon/", "Bois"], composite: ["/terrasse-composite-lyon/", "Composite"], aluminium: ["/terrasse-aluminium-lyon/", "Lames aluminium"], carrelage: ["/terrasse-carrelage-lyon/", "Carrelage"] };
 const PROJETS = [
-  ["/terrasse-piscine-lyon/", "Terrasse de piscine", "alu-piscine-aspect-teck", "Une plage agréable pieds nus et sûre au bord de l'eau."],
+  ["/terrasse-piscine-lyon/", "Terrasse de piscine", "ambiance-plage-piscine", "Une plage agréable pieds nus et sûre au bord de l'eau."],
   ["/terrasse-balcon-lyon/", "Terrasse de balcon", "ambiance-balcon-lames", "Un vrai sol sur votre balcon, sans travaux lourds."],
-  ["/toit-terrasse-lyon/", "Toit-terrasse", "carrelage-toit-terrasse-montagnes", "Une toiture plate devenue pièce à vivre."],
+  ["/toit-terrasse-lyon/", "Toit-terrasse", "ambiance-toit-terrasse", "Une toiture plate devenue pièce à vivre."],
   ["/terrasse-sur-pilotis-lyon/", "Terrasse sur pilotis", "pilotis-garde-corps-verre-salon", "De plain-pied avec la maison, malgré la pente."],
   ["/terrasse-sur-plots-lyon/", "Terrasse sur plots", "ambiance-dalles-sur-plots", "Une terrasse de niveau, sans couler de béton."],
 ];

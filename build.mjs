@@ -24,7 +24,7 @@ const visible = ([c]) => !PREP.has(c);
 
 // Tant que le site est en test, il reste invisible pour les moteurs de recherche.
 // À passer à true seulement le jour de la bascule du domaine instantterrasse.com.
-const EN_LIGNE = false;
+const EN_LIGNE = true;
 
 const DIST = "dist";
 rmSync(DIST, { recursive: true, force: true });

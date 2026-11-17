@@ -961,7 +961,7 @@ const terrassePiscine = {
     lyonCourt: "Nous venons chez vous, à Lyon et dans sa région, avec les échantillons : niveaux, margelle et local technique sont vérifiés, puis votre plage est dessinée en 3D.",
     faqTitre: "Vos questions sur la terrasse de piscine",
     faq: [
-      ["Quel revêtement chauffe le moins au bord de la piscine ?", "Les lames aluminium chauffent 30 % de moins qu'un composite co-extrudé et 20 % de moins qu'un bois exotique. Un bois tendre reste aussi très agréable sous le pied en été. Le carrelage chauffe au soleil : une teinte claire limite le phénomène."],
+      ["Quel revêtement chauffe le moins au bord de la piscine ?", "Les lames aluminium chauffent 30 % de moins qu'un composite co-extrudé et 20 % de moins qu'un bois exotique. Un bois tendre reste aussi très agréable sous le pied en été. En composite, la gamme pleine masse chauffe moins que la gamme co-extrudée. Le carrelage chauffe au soleil : une teinte claire limite le phénomène."],
       ["Quel revêtement est le moins glissant ?", "Nos dalles de grès cérame et nos lames aluminium sont antidérapantes. La gamme composite pleine masse reste antidérapante, même mouillée."],
       ["Peut-on garder l'accès au local technique ?", "Oui. Une trappe peut être intégrée dans la plage pour accéder à la pompe, à la filtration ou au volet roulant."],
       ["Peut-on rénover une ancienne plage de piscine ?", "Oui. Nous vérifions l'état du support existant lors du rendez-vous, puis nous choisissons la structure adaptée : directement sur une dalle saine, ou sur plots pour reprendre les niveaux."],

@@ -880,7 +880,7 @@ const autresProjets = (ici) => `
 // Classement des revêtements par projet : notes du comparateur (QUIZ_NOTES) × poids propres au projet.
 const classer = (poids, mats) => mats.map((m) => [m, Object.entries(poids).reduce((s, [c, w]) => s + w * QUIZ_NOTES[c][["bois", "composite", "aluminium", "carrelage"].indexOf(m)], 0)])
   .sort((a, b) => b[1] - a[1] || ["bois", "composite", "aluminium", "carrelage"].indexOf(a[0]) - ["bois", "composite", "aluminium", "carrelage"].indexOf(b[0])).map(([m]) => m);
-const pageProjet = ({ ici, fil = "Types de projets", extra = "", apres, h1, kicker, chapo, photo, position, actions, revTitre, revIntro, rev, poids, pose, atoutsTitre, atouts, galerieCat, titreGalerie, lyon, lyonCourt, faqTitre, faq, ctaTitre, ctaTexte }) => {
+const pageProjet = ({ ici, fil = "Types de projets", extra = "", apres, h1, kicker, chapo, photo, position, actions, revTitre, revIntro, rev, poids, pose, atoutsTitre, atouts, galerieCat, galerieComp = [], titreGalerie, lyon, lyonCourt, faqTitre, faq, ctaTitre, ctaTexte }) => {
   const ordre = classer(poids, Object.keys(rev));
   return `
 ${heroPlein({ fil, h1, kicker, chapo, photo, position, actions: actions ?? `<a class="bouton" href="/contact/">Demander un devis gratuit</a> <a class="bouton bouton-blanc" href="#revetements">Quel revêtement ?</a>` })}
@@ -904,7 +904,7 @@ ${heroPlein({ fil, h1, kicker, chapo, photo, position, actions: actions ?? `<a c
 ${extra}
 <section id="galerie" class="bloc">
   <div class="conteneur">
-    ${galerie(galerieCat, { titre: titreGalerie, legende: "Illustrations", limite: 12 })}
+    ${galerie(galerieCat, { titre: titreGalerie, legende: "Illustrations", limite: 12, complement: galerieComp })}
   </div>
 </section>
 
@@ -940,7 +940,7 @@ const terrassePiscine = {
     revTitre: "Quel revêtement autour de la piscine ?", revIntro: "Au bord de l'eau, deux critères comptent plus que tout : ne pas glisser et ne pas se brûler les pieds.",
     poids: { adherence: 2, chaleur: 2, entretien: 1 },
     rev: {
-      aluminium: ["alu-piscine-aspect-teck", "Chauffe 30 % de moins qu'un composite co-extrudé et 20 % de moins qu'un bois exotique, antidérapant grâce à un revêtement spécial."],
+      aluminium: ["alu-piscine-aspect-teck", "Les lames chauffent 30 % de moins qu'un composite co-extrudé et restent antidérapantes."],
       carrelage: ["carrelage-bh-aspect-bois-gris-vue", "Des dalles antidérapantes, qui se prolongent jusqu'à la margelle."],
       bois: ["terrasse-kebony-piscine-debordement", "Un bois tendre reste le plus agréable sous le pied en plein été."],
       composite: ["composite-gris-piscine", "La gamme pleine masse chauffe peu et reste antidérapante, même mouillée."],
@@ -999,6 +999,7 @@ const terrasseBalcon = {
       ["plan", "Dessiné en 3D", "Vous voyez le revêtement et la teinte sur votre balcon avant de décider."],
     ],
     galerieCat: ["ambiance-balcon-lames", "terrasse-thermofrene-balcon", "terrasse-accoya-naturel-balcon", "gc-maison-balcon-lisses", "gc-maison-verre-depoli-carrelage", "gc-collectif-verre-depoli-balcons", "structure-lames-alu-balcon-dessous", "carrelage-gris-garde-corps-verre-depoli"],
+    galerieComp: ["gc-collectif-barreaudage-beige", "gc-collectif-barreaudage-creme", "gc-collectif-lisses-bardage-bois", "gc-collectif-barreaudage-bronze"],
     titreGalerie: "Balcons en situation",
     lyon: ["Votre terrasse de balcon à Lyon et dans sa région", `Appartement en ville, résidence récente ou maison : nous venons chez vous, à Lyon et dans sa région (voir notre <a href="/terrasse-lyon/">zone d'intervention</a>), avec les échantillons. Nous mesurons le balcon, vérifions le support, la hauteur du seuil et l'écoulement de l'eau.`, "En copropriété, le règlement peut encadrer l'aspect du sol ou du garde-corps : nous vous aidons à préparer la demande au syndic si besoin."],
     lyonCourt: "Nous venons chez vous, à Lyon et dans sa région, avec les échantillons : mesures, support, seuil et écoulement de l'eau sont vérifiés.",
@@ -1084,6 +1085,7 @@ const terrassePilotis = {
       ["plan", "Étudiée dans son ensemble", "Poteaux, garde-corps, escalier vers le jardin : tout est dessiné en 3D."],
     ],
     galerieCat: "pilotis",
+    galerieComp: ["terrasse-kebony-surelevee", "gc-maison-pilotis-lames", "gc-maison-pilotis-lisses-clair", "pilotis-garde-corps-verre-salon"],
     titreGalerie: "Terrasses sur pilotis en situation",
     lyon: ["Votre terrasse sur pilotis à Lyon et dans sa région", `Maison sur un terrain en pente, rez-de-jardin en contrebas, habitation sur plusieurs niveaux : nous venons chez vous, à Lyon et dans sa région (voir notre <a href="/terrasse-lyon/">zone d'intervention</a>). Nous relevons les hauteurs, l'accès au jardin et l'implantation souhaitée.`, "Une terrasse surélevée est une construction à part entière : selon sa hauteur et sa surface, une déclaration préalable ou un permis peut être nécessaire. Nous regardons la règle de votre commune avec vous."],
     lyonCourt: "Nous venons chez vous, à Lyon et dans sa région : hauteurs, accès au jardin et implantation sont relevés, puis la terrasse est dessinée en 3D.",
@@ -1126,6 +1128,7 @@ const terrassePlots = {
       ["plan", "Dessinée en 3D", "Vous voyez la terrasse et le revêtement en situation avant de décider."],
     ],
     galerieCat: ["ambiance-dalles-sur-plots", "carrelage-structure-alu-rails-plots", "structure-plot-rail-lame", "structure-rails-plots-detail", "carrelage-bh-sureleve-gazon", "carrelage-bh-pergola-cour", "structure-plot-reglable", "carrelage-structure-alu-calepinage"],
+    galerieComp: ["structure-rails-vue-ensemble", "structure-rails-dalle", "structure-rails-plots-entete", "structure-traditionnelle-plot-lambourde"],
     titreGalerie: "Terrasses et plots en situation",
     lyon: ["Votre terrasse sur plots à Lyon et dans sa région", `Nous venons chez vous, à Lyon et dans sa région (voir notre <a href="/terrasse-lyon/">zone d'intervention</a>), pour voir le support existant, les hauteurs, les seuils et l'écoulement de l'eau. Selon le support et le revêtement, nous choisissons entre plots seuls et plots avec rails aluminium.`],
     lyonCourt: "Nous venons chez vous, à Lyon et dans sa région : support, hauteurs et écoulement de l'eau sont vérifiés avant de choisir la pose.",
@@ -1183,6 +1186,7 @@ const terrasseCamping = {
   </div>
 </section>`,
     galerieCat: ["alu-escalier-maison-bois", "alu-terrasse-salon-parasol", "terrasse-kebony-surelevee", "alu-terrasse-couverte", "alu-salon-garde-corps", "alu-piscine-aspect-teck", "alu-spa-jardin", "composite-brun-transats", "terrasse-thermopin-jardin-pins", "terrasse-thermopin-estrade", "carrelage-bh-pergola-cour", "structure-plot-rail-lame"],
+    galerieComp: ["alu-terrasse-vue-mer", "alu-terrasse-banc-courbe", "alu-terrasse-fauteuils-rouges", "alu-pontons-lac", "alu-marches-aspect-teck"],
     titreGalerie: "Terrasses en situation",
     lyon: ["Un projet étudié sur place", "Nous venons sur votre site pour regarder ce qui compte : le type d'hébergements (mobil-homes, chalets, lodges, bungalows), la configuration des emplacements (pente, niveaux, accès), le niveau de gamme, la fréquence d'utilisation, l'entretien et l'identité de votre camping.", "Vous recevez un plan 3D et un devis détaillé. Instant Terrasse est basé dans la région lyonnaise ; pour les projets d'hôtellerie de plein air, nous livrons partout en France."],
     lyonCourt: "Nous étudions votre site sur place, puis vous recevez un plan 3D et un devis détaillé. Basés près de Lyon, nous livrons les campings partout en France.",

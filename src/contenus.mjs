@@ -1085,7 +1085,7 @@ const terrassePilotis = {
       ["plan", "Étudiée dans son ensemble", "Poteaux, garde-corps, escalier vers le jardin : tout est dessiné en 3D."],
     ],
     galerieCat: "pilotis",
-    galerieComp: ["terrasse-kebony-surelevee", "gc-maison-pilotis-lames", "gc-maison-pilotis-lisses-clair", "pilotis-garde-corps-verre-salon"],
+    galerieComp: ["terrasse-kebony-surelevee", "gc-maison-pilotis-lames", "gc-maison-pilotis-lisses-clair"],
     titreGalerie: "Terrasses sur pilotis en situation",
     lyon: ["Votre terrasse sur pilotis à Lyon et dans sa région", `Maison sur un terrain en pente, rez-de-jardin en contrebas, habitation sur plusieurs niveaux : nous venons chez vous, à Lyon et dans sa région (voir notre <a href="/terrasse-lyon/">zone d'intervention</a>). Nous relevons les hauteurs, l'accès au jardin et l'implantation souhaitée.`, "Une terrasse surélevée est une construction à part entière : selon sa hauteur et sa surface, une déclaration préalable ou un permis peut être nécessaire. Nous regardons la règle de votre commune avec vous."],
     lyonCourt: "Nous venons chez vous, à Lyon et dans sa région : hauteurs, accès au jardin et implantation sont relevés, puis la terrasse est dessinée en 3D.",

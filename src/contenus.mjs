@@ -1004,7 +1004,7 @@ const terrasseBalcon = {
     lyonCourt: "Nous venons chez vous, à Lyon et dans sa région, avec les échantillons : mesures, support, seuil et écoulement de l'eau sont vérifiés.",
     faqTitre: "Vos questions sur le balcon",
     faq: [
-      ["Faut-il casser l'ancien carrelage du balcon ?", "Non, en général. Les plots se posent sur le sol existant, s'il est sain : le nouveau revêtement vient par-dessus."],
+      ["Faut-il casser l'ancien carrelage du balcon ?", "Non, en général. Les plots se posent sur le sol existant, s'il est sain : le nouveau revêtement vient par-dessus. Seule exception : des dalles déjà posées sur plots ne servent pas de support, elles sont déposées et remplacées."],
       ["L'étanchéité du balcon est-elle percée ?", "Non. Les plots reposent sur le support, sans fixation qui traverse l'étanchéité."],
       ["Quel revêtement est le plus léger ?", "Les lames aluminium sur structure aluminium forment l'ensemble le plus léger."],
       ["Et si le seuil de la porte-fenêtre est bas ?", "La hauteur disponible est mesurée lors du rendez-vous : elle oriente le choix entre dalles sur plots et lames sur structure."],

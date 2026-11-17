@@ -1869,6 +1869,7 @@ const MOTIFS_GC = [
 ];
 const SCHEMAS_POSE = { "À plat": "pose-a-plat.svg", "En applique": "pose-applique.svg", "Déporté": "pose-deportee.svg", "En tableau": "pose-tableau.svg" };
 const GALERIE_GC = [...PHOTOS.filter((p) => p.categorie === "garde-corps").map((p) => p.cle), "carrelage-gris-garde-corps-verre-depoli", "carrelage-beige-pergola-toit-fixe", "restaurant-terrasse-gabions"];
+const MC_BOIS = `<div class="mc-bloc"><p><strong>Main courante en bois</strong>, au mur ou en option sur les garde-corps à poteaux, à la place de l'aluminium.</p><img class="mc-profils" src="/assets/img/claustra/main-courante-profils.webp" alt="Profils de main courante : aluminium 60 × 23 mm, bois 90 × 45 mm" width="550" height="320" loading="lazy" decoding="async" data-credit="©Kordo"><ul class="mc-essences">${[["pin", "Pin thermo-traité", "Finlande, PEFC"], ["frene", "Frêne thermo-traité", "Autriche, FSC Mixte 70 %"], ["douglas", "Douglas", "France, PEFC"]].map(([f, n, o]) => `<li><img src="/assets/img/claustra/essence-${f}.webp" alt="${n}" width="183" height="41" loading="lazy" decoding="async" data-credit="©Kordo"><b>${n}</b><small>${o}</small></li>`).join("")}</ul></div>`;
 const gardeCorps = {
   title: "Garde-corps aluminium à Lyon | Instant Terrasse",
   description: "Garde-corps aluminium sur mesure à Lyon : barreaux, verre, tôle découpée ou bois, conforme aux normes, fabriqué en France. Terrasses, balcons, escaliers.",
@@ -1915,13 +1916,6 @@ ${heroPlein({ fil: "Pergolas & extérieur", h1: ['<span class="pc-nowrap">Garde-
       ["Déporté", "Écarté de la tranche de la dalle grâce à des pattes de fixation."],
       ["En tableau", "Entre deux murs, pour une fenêtre, une loggia ou un balcon encastré."],
     ].map(([t, x]) => `<div class="carte carte-pose"><img src="/assets/img/claustra/${SCHEMAS_POSE[t]}" width="220" height="160" alt="Schéma de pose ${t.toLowerCase()}" loading="lazy" decoding="async"><h3>${t}</h3><p>${x}</p></div>`).join("")}</div>
-    <div class="option-gc">
-      <p><strong>En option, main courante en bois :</strong> à la place de l'aluminium, sur les modèles à poteaux, pour un toucher plus chaleureux.</p>
-      <div class="mc-grille">
-        <img class="mc-profils" src="/assets/img/claustra/main-courante-profils.webp" alt="Profils de main courante : aluminium 60 × 23 mm, bois 90 × 45 mm" width="550" height="320" loading="lazy" decoding="async" data-credit="©Kordo">
-        <ul class="mc-essences">${[["pin", "Pin thermo-traité", "Finlande, PEFC"], ["frene", "Frêne thermo-traité", "Autriche, FSC Mixte 70 %"], ["douglas", "Douglas", "France, PEFC"]].map(([f, n, o]) => `<li><img src="/assets/img/claustra/essence-${f}.webp" alt="${n}" width="183" height="41" loading="lazy" decoding="async" data-credit="©Kordo"><b>${n}</b><small>${o}</small></li>`).join("")}</ul>
-      </div>
-    </div>
   </div>
 </section>
 
@@ -1940,7 +1934,7 @@ ${heroPlein({ fil: "Pergolas & extérieur", h1: ['<span class="pc-nowrap">Garde-
       ["Garde-corps d'escalier", "Les mêmes remplissages suivent la pente de l'escalier, avec des jonctions de rampant et d'angle."],
       ["Main courante murale", "En aluminium ou en bois, fixée au mur le long d'un escalier."],
       ["Claustras et pare-vues", "Les mêmes modèles, plus hauts, pour se protéger des regards sur une terrasse ou un balcon."],
-    ].map(([t, x]) => `<div class="carte"><h3>${t}</h3><p>${x}</p>${vignettesGc(t)}</div>`).join("")}</div>
+    ].map(([t, x]) => `<div class="carte${t === "Main courante murale" ? " carte-mc" : ""}"><h3>${t}</h3><p>${x}</p>${vignettesGc(t)}${t === "Main courante murale" ? MC_BOIS : ""}</div>`).join("")}</div>
   </div>
 </section>
 

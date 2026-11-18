@@ -15,16 +15,48 @@ Quand il reste moins de 6 lignes « à faire » datées dans les 3 semaines à v
 | 2026-11-20 | quand-faire-sa-terrasse | Quand faire sa terrasse : le bon calendrier, du rendez-vous à la pose | quand faire sa terrasse | /contact/ + /structure-terrasse-lyon/ + /autorisation-terrasse-pergola-carport/ | à faire |
 | 2026-11-24 | comparer-devis-terrasse | Comparer deux devis de terrasse : les lignes à vérifier | comparer devis terrasse | /contact/ + /structure-terrasse-lyon/ | à faire |
 | 2026-11-27 | renover-terrasse-bois | Rénover une vieille terrasse : changer les lames ou tout refaire ? | rénovation terrasse bois composite | /structure-terrasse-lyon/ + /terrasse-sur-plots-lyon/ + /contact/ | à faire |
-| 2026-12-01 | entretien-pergola-bioclimatique | Entretenir une pergola bioclimatique : lames, chéneaux, hiver | entretien pergola bioclimatique | /pergola-bioclimatique-lyon/ | à faire |
+| 2026-12-01 | terrasse-en-hiver | Terrasse en hiver : gel, neige, feuilles, les bons réflexes | terrasse hiver neige | /comment-nettoyer-une-terrasse-en-bois/ + /pergola-bioclimatique-lyon/ | à faire |
 | 2026-12-04 | terrasse-glissante | Terrasse glissante : causes et solutions selon le revêtement | terrasse glissante | /nos-terrasses/ + /comment-nettoyer-une-terrasse-en-bois/ | à faire |
-| 2026-12-08 | terrasse-en-hiver | Terrasse en hiver : gel, neige, feuilles, les bons réflexes | terrasse hiver neige | /comment-nettoyer-une-terrasse-en-bois/ + /pergola-bioclimatique-lyon/ | à faire |
+| 2026-12-08 | garantie-decennale-terrasse | Garantie décennale et terrasse : ce qu'elle couvre vraiment | garantie décennale terrasse | /contact/ + /quisommesnous/ | à faire |
 | 2026-12-11 | bardage-bois-grisaillement | Bardage bois qui grise : normal ou pas, et comment l'éviter | bardage bois grisaillement | /bardage-bois-lyon/ | à faire |
-| 2026-12-15 | terrasse-vis-a-vis-voisins | Terrasse et vis-à-vis : brise-vue, claustras et règles de vue | terrasse vis à vis voisin | /garde-corps-aluminium-lyon/ + /autorisation-terrasse-pergola-carport/ | à faire |
-| 2026-12-18 | garantie-decennale-terrasse | Garantie décennale et terrasse : ce qu'elle couvre vraiment | garantie décennale terrasse | /contact/ + /quisommesnous/ | à faire |
-| 2027-01-05 | store-banne-vent-capteur | Store banne et vent : capteurs, limites et bons réflexes | store banne vent | /store-banne-lyon/ + /store-banne-ou-store-vertical/ | à faire |
-| 2027-01-08 | orientation-terrasse | Orientation de la terrasse : sud, ouest, est, ce que ça change | orientation terrasse | /nos-terrasses/ + /pergolas-lyon/ + /store-banne-ou-store-vertical/ | à faire |
+| 2026-12-15 | carport-2-voitures | Carport pour deux voitures : quelle taille prévoir ? | carport 2 voitures | /carport-lyon/ + /autorisation-terrasse-pergola-carport/ + /contact/ | à faire |
+| 2026-12-18 | orientation-terrasse | Orientation de la terrasse : sud, ouest, est, ce que ça change | orientation terrasse | /nos-terrasses/ + /pergolas-lyon/ + /store-banne-ou-store-vertical/ | à faire |
+| 2027-01-05 | entretien-pergola-bioclimatique | Entretenir une pergola bioclimatique : lames, chéneaux, hiver | entretien pergola bioclimatique | /pergola-bioclimatique-lyon/ | à faire |
+| 2027-01-08 | terrasse-vis-a-vis-voisins | Terrasse et vis-à-vis : brise-vue, claustras et règles de vue | brise vue terrasse | /garde-corps-aluminium-lyon/ + /autorisation-terrasse-pergola-carport/ | à faire |
 | 2027-01-12 | nettoyer-terrasse-composite | Nettoyer une terrasse composite : taches, fréquence, erreurs | nettoyer terrasse composite | /terrasse-composite-lyon/ + /terrasse-bois-ou-composite/ | à faire |
 | 2027-04-02 | terrasse-qui-chauffe-au-soleil | Terrasse brûlante l'été : pourquoi et comment l'éviter (sujet de printemps) | terrasse chauffe soleil | /nos-terrasses/ + /terrasse-aluminium-lyon/ + /terrasse-composite-lyon/ | à faire |
+| 2027-04-06 | store-banne-vent-capteur | Store banne et vent : capteurs, limites et bons réflexes (pic de recherche en juin) | store banne vent | /store-banne-lyon/ + /store-banne-ou-store-vertical/ | à faire |
+
+## Google Trends (relevé mensuel, demande d'Antoine du 18/11/2026)
+
+Trends donne un intérêt **relatif** (0 à 100) et la **saisonnalité**, pas des volumes. Les questions précises (« terrasse glissante », « quand faire une terrasse »…) sont presque toujours à 0 : on s'appuie alors sur la saisonnalité du sujet parent. Claude fait un relevé par mois avec le navigateur intégré et le note ici ; la tâche programmée s'en sert (elle ne consulte pas Trends elle-même).
+
+Règles d'usage :
+- Publier un sujet saisonnier **6 à 12 semaines avant son pic** (le temps d'être indexé).
+- Entre deux formulations proches, prendre celle que Trends montre la plus recherchée (recherche visée, title, H1).
+- Une recherche « en hausse » peut donner un nouveau sujet, après vérification de la carte des recherches et seulement si elle correspond à la gamme (sinon, ne pas l'utiliser).
+- La Search Console du nouveau site reste prioritaire dès qu'elle a des données : elle mesure les vraies impressions.
+
+### Relevé du 2026-11-18 (France, 5 ans, intérêt moyen ; « mois » = moyenne de janvier à décembre)
+
+| Recherche | Intérêt moyen | Saisonnalité (jan → déc) | Pic | Évolution 1re année → 12 derniers mois |
+|---|---|---|---|---|
+| terrasse composite (repère) | 20 à 36 selon le lot | 21 37 59 66 60 44 40 36 23 20 15 12 | avril | −30 % |
+| prix terrasse | 19 | 13 24 29 31 29 25 24 18 11 15 10 4 | avril | −24 % |
+| pergola bioclimatique | 33 (Rhône-Alpes 36) | 20 33 52 67 57 50 49 38 26 19 14 8 (RA) | avril | +20 % (RA +14 %) |
+| carport | 60 (Rhône-Alpes 53) | 44 55 59 56 55 57 61 61 55 56 47 34 (RA) | stable mars → août | +24 % (RA +37 %) |
+| carport 2 voitures | 6 | stable toute l'année | — | +21 % |
+| brise vue terrasse | 8 | 4 8 14 17 15 11 10 7 5 3 1 1 | avril | −26 % |
+| nettoyer terrasse bois | 5 | 1 5 12 15 10 6 5 3 1 1 1 0 | avril | stable |
+| garantie décennale | 7 | stable toute l'année | — | −35 % |
+| garde corps terrasse | 7 | 6 7 8 9 9 8 7 6 6 6 4 4 | avril | −32 % |
+| terrasse hiver | 11 | 23 13 2 0 0 0 0 3 6 21 31 30 | novembre | +12 % (formulation ambiguë, bars inclus) |
+| store banne vent | 1 | 0 0 0 2 2 3 3 1 0 0 0 0 | juin | stable |
+| terrasse glissante, orientation terrasse, quand faire une terrasse, nettoyer terrasse composite, entretien/nettoyage pergola, terrasse bois grise, terrasse vis à vis | ≈ 0 | trop faible | — | — |
+
+Recherches associées (France, 12 mois) : « carport 2 voitures », « carport 3x5 / 5x5 / 6x5 » en hausse → sujet carport-2-voitures ajouté ; « carport solaire » très en hausse mais pack solaire non annoncé pour le carport (CLAUDE.md) → pas de sujet ; « store banne sans perçage » en hausse, hors gamme ; « hauteur garde corps » couverte par /garde-corps-terrasse-normes/ ; « terrasse en composite avis » +130 % (volume faible) à surveiller.
+
+Conséquences sur le plan (18/11/2026) : sujets d'hiver avancés (terrasse en hiver au 1er décembre), carport-2-voitures ajouté le 15 décembre, recherche visée de l'article vis-à-vis changée en « brise vue terrasse » (pic en avril, publication en janvier), store banne et vent déplacé au 6 avril (pic en juin).
 
 ## Mises à jour d'articles existants (sans créer de nouvelle page)
 
@@ -103,4 +135,5 @@ Deux articles par semaine est un maximum. Si le sujet prévu ne répond pas à u
 | Date | Action | Remarque |
 |---|---|---|
 | 2026-11-17 | Mise en place du plan et du format Markdown | Demande d'Antoine : publication automatique le mardi et le vendredi, comme Horizon Fenêtre |
+| 2026-11-18 | Relevé Google Trends (voir la section Google Trends) | Plan réordonné selon la saisonnalité ; ajout de carport-2-voitures |
 | 2026-11-17 | Premier export Search Console (12 mois, ancien site WordPress) dans docs/search-console/ | Ajout du sujet « rénover une vieille terrasse » (« rénovation terrasse bois composite » 75 impressions, « rénovation de terrasse » 29) ; « terrasse qui chauffe » déplacé au printemps. Requêtes « bois ou composite » (≈ 575 impressions, position ≈ 80) : couvertes par /terrasse-bois-ou-composite/. Toutes les anciennes adresses de l'export sont redirigées ou conservées. |

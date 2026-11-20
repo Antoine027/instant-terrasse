@@ -1,6 +1,7 @@
 // Vignettes photo des cartes de liens. Une page sans photo affiche une vignette unie avec une icône,
 // remplacée automatiquement dès qu'une clé de photo est ajoutée ici.
 import { imgPhoto } from "./galerie.mjs";
+import { ARTICLES_MD } from "./articles-md.mjs";
 
 export const VIGNETTES = {
   "/terrasse-bois-lyon/": "terrasse-kebony-piscine-debordement",
@@ -39,6 +40,8 @@ export const VIGNETTES = {
   "#pergolas": "pergola-bioclimatique-salon-piscine",
   "#bardage": "bardage-thermofrene-maison",
 };
+// Articles Markdown : leur photo sert de vignette (enregistrée ici pour être disponible avant la page /conseils/).
+for (const a of ARTICLES_MD) VIGNETTES[a.chemin] ??= a.photo;
 
 const svg = (d) => `<svg aria-hidden="true" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round">${d}</svg>`;
 const ICONES = {

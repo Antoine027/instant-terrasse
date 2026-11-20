@@ -118,5 +118,9 @@
  "gc-maison-terrasse-vue": {
   "dossier": "garde-corps",
   "position": "50% 55%"
+ },
+ "terrasse-thermopin-table": {
+  "dossier": "bois",
+  "position": "50% 50%"
  }
 }

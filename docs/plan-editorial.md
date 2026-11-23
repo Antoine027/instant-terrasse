@@ -110,6 +110,7 @@ Avant d'écrire, vérifier ici que la recherche visée n'appartient pas déjà �
 Antoine dépose (ou envoie à Claude, qui les ajoute) des exports dans `docs/search-console/` : `AAAA-MM-JJ-requetes.csv` et `AAAA-MM-JJ-pages.csv` (Performances → Résultats de recherche → Exporter, 16 derniers mois ou 3 mois).
 
 - **Avant la bascule**, les données viennent de l'ancien site WordPress : s'en servir pour choisir les sujets et les formulations (intertitres, FAQ), pas pour retoucher des pages qui n'existent pas encore en ligne.
+- **Données mélangées** : un export n'est utilisable pour optimiser des pages que si **sa période commence le 17/11/2026 ou après** (filtre de dates personnalisé dans la Search Console). Un export sur 3 ou 16 mois daté après la bascule contient surtout l'ancien site : il sert seulement aux sujets et formulations, comme avant la bascule.
 - **Après la bascule**, à chaque exécution et si l'export a moins de 21 jours, faire **une seule** optimisation, dans cet ordre de priorité :
   1. **Cannibalisation** : deux pages du site apparaissent sur la même requête → différencier les deux (titre, angle, liens de l'une vers l'autre) ou fusionner l'article dans la page la plus forte avec une redirection 301 dans vercel.json.
   2. **Beaucoup d'impressions, peu de clics** : réécrire title et description (sans changer l'adresse).
@@ -136,6 +137,7 @@ Deux articles par semaine est un maximum. Si le sujet prévu ne répond pas à u
 | Date | Action | Remarque |
 |---|---|---|
 | 2026-11-17 | Mise en place du plan et du format Markdown | Demande d'Antoine : publication automatique le mardi et le vendredi, comme Horizon Fenêtre |
+| 2026-11-23 | Export Search Console 3 mois (22/08 → 22/11), dont 5 jours seulement du nouveau site : sujets et formulations uniquement. Impressions ×2,5 depuis la bascule (≈ 60 → 140-160 par jour), positions moyennes en baisse le temps que les nouvelles pages se placent. Prochain export utile : période depuis le 17/11, vers le 14/12 | Aucune optimisation |
 | 2026-11-18 | Relevé Google Trends (voir la section Google Trends) | Plan réordonné selon la saisonnalité ; ajout de carport-2-voitures |
 | 2026-11-17 | Premier export Search Console (12 mois, ancien site WordPress) dans docs/search-console/ | Ajout du sujet « rénover une vieille terrasse » (« rénovation terrasse bois composite » 75 impressions, « rénovation de terrasse » 29) ; « terrasse qui chauffe » déplacé au printemps. Requêtes « bois ou composite » (≈ 575 impressions, position ≈ 80) : couvertes par /terrasse-bois-ou-composite/. Toutes les anciennes adresses de l'export sont redirigées ou conservées. |
 | 2026-11-20 | Article publié : /quand-faire-sa-terrasse/ | Délais DP (1 mois) et PC maison individuelle (2 mois) vérifiés sur service-public F17578 et F1986. Pas d'optimisation Search Console : l'export du 2026-11-17 couvre l'ancien site WordPress (12 mois avant la bascule). 6 lignes « à faire » dans les 3 semaines : aucun sujet ajouté. |

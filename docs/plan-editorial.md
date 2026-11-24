@@ -13,7 +13,7 @@ Quand il reste moins de 6 lignes « à faire » datées dans les 3 semaines à v
 | Date | Slug | Titre de travail | Recherche visée | Liens prioritaires | Statut |
 |---|---|---|---|---|---|
 | 2026-11-20 | quand-faire-sa-terrasse | Quand faire sa terrasse : le bon calendrier, du rendez-vous à la pose | quand faire sa terrasse | /contact/ + /structure-terrasse-lyon/ + /autorisation-terrasse-pergola-carport/ | publié le 2026-11-20 |
-| 2026-11-24 | comparer-devis-terrasse | Comparer deux devis de terrasse : les lignes à vérifier | comparer devis terrasse | /contact/ + /structure-terrasse-lyon/ | à faire |
+| 2026-11-24 | comparer-devis-terrasse | Comparer deux devis de terrasse : les lignes à vérifier | comparer devis terrasse | /contact/ + /structure-terrasse-lyon/ | publié le 2026-11-24 |
 | 2026-11-27 | renover-terrasse-bois | Rénover une vieille terrasse : changer les lames ou tout refaire ? | rénovation terrasse bois composite | /structure-terrasse-lyon/ + /terrasse-sur-plots-lyon/ + /contact/ | à faire |
 | 2026-12-01 | terrasse-en-hiver | Terrasse en hiver : gel, neige, feuilles, les bons réflexes | terrasse hiver neige | /comment-nettoyer-une-terrasse-en-bois/ + /pergola-bioclimatique-lyon/ | à faire |
 | 2026-12-04 | terrasse-glissante | Terrasse glissante : causes et solutions selon le revêtement | terrasse glissante | /nos-terrasses/ + /comment-nettoyer-une-terrasse-en-bois/ | à faire |
@@ -104,6 +104,7 @@ Avant d'écrire, vérifier ici que la recherche visée n'appartient pas déjà �
 | /autorisation-terrasse-pergola-carport/ | autorisation terrasse, pergola, carport |
 | /garde-corps-terrasse-normes/ | garde-corps obligatoire, normes |
 | /quand-faire-sa-terrasse/ | quand faire sa terrasse (calendrier d'un projet) |
+| /comparer-devis-terrasse/ | comparer des devis de terrasse (lignes à vérifier, signature) |
 
 ## Optimisation Search Console
 
@@ -139,3 +140,4 @@ Deux articles par semaine est un maximum. Si le sujet prévu ne répond pas à u
 | 2026-11-18 | Relevé Google Trends (voir la section Google Trends) | Plan réordonné selon la saisonnalité ; ajout de carport-2-voitures |
 | 2026-11-17 | Premier export Search Console (12 mois, ancien site WordPress) dans docs/search-console/ | Ajout du sujet « rénover une vieille terrasse » (« rénovation terrasse bois composite » 75 impressions, « rénovation de terrasse » 29) ; « terrasse qui chauffe » déplacé au printemps. Requêtes « bois ou composite » (≈ 575 impressions, position ≈ 80) : couvertes par /terrasse-bois-ou-composite/. Toutes les anciennes adresses de l'export sont redirigées ou conservées. |
 | 2026-11-20 | Article publié : /quand-faire-sa-terrasse/ | Délais DP (1 mois) et PC maison individuelle (2 mois) vérifiés sur service-public F17578 et F1986. Pas d'optimisation Search Console : l'export du 2026-11-17 couvre l'ancien site WordPress (12 mois avant la bascule). 6 lignes « à faire » dans les 3 semaines : aucun sujet ajouté. |
+| 2026-11-24 | Article publié : /comparer-devis-terrasse/ | Mentions du devis, arrhes/acompte et contrat signé vérifiés sur service-public F2533 ; rétractation 14 jours hors établissement (pas de paiement les 7 premiers jours) sur la fiche DGCCRF ; décennale (terrasse citée, attestation avant chantier) sur F2034, parfait achèvement sur F2958. Pas d'optimisation Search Console : l'export du 2026-11-17 couvre l'ancien site WordPress. 6 lignes « à faire » dans les 3 semaines : aucun sujet ajouté. |

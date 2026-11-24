@@ -256,8 +256,8 @@ const REVETEMENTS_STRUCT = [
 ];
 
 const structures = {
-  title: "Structure de terrasse aluminium | Instant Terrasse",
-  description: "Nos terrasses se posent sur structure aluminium garantie 20 ans : bois, composite, lames alu, carrelage. Structure traditionnelle ou plots possibles.",
+  title: "Structure aluminium de terrasse à Lyon | Instant Terrasse",
+  description: "Structure aluminium pour terrasse à Lyon : conforme DTU 51-4, testée FCBA, fabriquée en France, garantie 20 ans. Pour bois, composite, lames alu ou carrelage.",
   corps: `
 ${heroPlein({ fil: "Terrasses", h1: ['<span class="pc-nowrap">Structure aluminium</span>', "pour toutes nos terrasses"], kicker: "Structures de terrasse à Lyon et dans sa région", photo: "structure-rails-plots-entete", position: "50% 50%",
   chapo: "Bois, composite, lames aluminium ou carrelage : tout se pose sur notre structure aluminium, garantie 20 ans.",

@@ -14,7 +14,7 @@ Quand il reste moins de 6 lignes « à faire » datées dans les 3 semaines à v
 |---|---|---|---|---|---|
 | 2026-11-20 | quand-faire-sa-terrasse | Quand faire sa terrasse : le bon calendrier, du rendez-vous à la pose | quand faire sa terrasse | /contact/ + /structure-terrasse-lyon/ + /autorisation-terrasse-pergola-carport/ | publié le 2026-11-20 |
 | 2026-11-24 | comparer-devis-terrasse | Comparer deux devis de terrasse : les lignes à vérifier | comparer devis terrasse | /contact/ + /structure-terrasse-lyon/ | publié le 2026-11-24 |
-| 2026-11-27 | renover-terrasse-bois | Rénover une vieille terrasse : changer les lames ou tout refaire ? | rénovation terrasse bois composite | /structure-terrasse-lyon/ + /terrasse-sur-plots-lyon/ + /contact/ | à faire |
+| 2026-11-27 | renover-terrasse-bois | Rénover une vieille terrasse : changer les lames ou tout refaire ? | rénovation terrasse bois composite | /structure-terrasse-lyon/ + /terrasse-sur-plots-lyon/ + /contact/ | publié le 2026-11-27 |
 | 2026-12-01 | terrasse-en-hiver | Terrasse en hiver : gel, neige, feuilles, les bons réflexes | terrasse hiver neige | /comment-nettoyer-une-terrasse-en-bois/ + /pergola-bioclimatique-lyon/ | à faire |
 | 2026-12-04 | terrasse-glissante | Terrasse glissante : causes et solutions selon le revêtement | terrasse glissante | /nos-terrasses/ + /comment-nettoyer-une-terrasse-en-bois/ | à faire |
 | 2026-12-08 | garantie-decennale-terrasse | Garantie décennale et terrasse : ce qu'elle couvre vraiment | garantie décennale terrasse | /contact/ + /quisommesnous/ | à faire |
@@ -105,6 +105,7 @@ Avant d'écrire, vérifier ici que la recherche visée n'appartient pas déjà �
 | /garde-corps-terrasse-normes/ | garde-corps obligatoire, normes |
 | /quand-faire-sa-terrasse/ | quand faire sa terrasse (calendrier d'un projet) |
 | /comparer-devis-terrasse/ | comparer des devis de terrasse (lignes à vérifier, signature) |
+| /renover-terrasse-bois/ | rénover une vieille terrasse (changer les lames ou tout refaire) |
 
 ## Optimisation Search Console
 
@@ -144,3 +145,4 @@ Deux articles par semaine est un maximum. Si le sujet prévu ne répond pas à u
 | 2026-11-20 | Article publié : /quand-faire-sa-terrasse/ | Délais DP (1 mois) et PC maison individuelle (2 mois) vérifiés sur service-public F17578 et F1986. Pas d'optimisation Search Console : l'export du 2026-11-17 couvre l'ancien site WordPress (12 mois avant la bascule). 6 lignes « à faire » dans les 3 semaines : aucun sujet ajouté. |
 | 2026-11-24 | Article publié : /comparer-devis-terrasse/ | Mentions du devis, arrhes/acompte et contrat signé vérifiés sur service-public F2533 ; rétractation 14 jours hors établissement (pas de paiement les 7 premiers jours) sur la fiche DGCCRF ; décennale (terrasse citée, attestation avant chantier) sur F2034, parfait achèvement sur F2958. Pas d'optimisation Search Console : l'export du 2026-11-17 couvre l'ancien site WordPress. 6 lignes « à faire » dans les 3 semaines : aucun sujet ajouté. |
 | 2026-11-24 | Export Search Console du 2026-11-24 (3 mois, du 23/08 au 22/11 : ancien site WordPress jusqu'au 17/11, puis 6 jours du nouveau site) ajouté dans docs/search-console/ | Optimisation : title et description de /structure-terrasse-lyon/ (ajout de « Lyon », DTU 51-4, FCBA, fabriquée en France). Avant : « Structure de terrasse aluminium | Instant Terrasse » ; page à 8 impressions, position 4 ; requêtes « structure aluminium terrasse lyon » 69 impressions (position 13,3) et « fournisseur structure aluminium terrasse lyon » 66 (position 10,4), 0 clic, probablement servies par l'ancienne page /terrasse-aluminium-lyon/ (156 impressions, position 8,3, 1 clic) dont le nouveau contenu porte sur les lames. À mesurer au prochain export. Toutes les anciennes adresses de l'export sont redirigées. |
+| 2026-11-27 | Article publié : /renover-terrasse-bois/ | Angle : diagnostic sous les lames (tableau constat → piste), 3 cas (structure saine, structure fatiguée, dalle gardée sous structure sur plots), changement de matériau. Règle d'autorisation (plain-pied dispensé sauf secteur protégé, PLU) vérifiée sur service-public F36774 (vérifiée le 20/11/2025). Pas d'optimisation Search Console : l'export le plus récent (2026-11-24) couvre le 23/08 → 22/11, surtout l'ancien site, et a déjà servi le 24/11. 6 lignes « à faire » dans les 3 semaines : aucun sujet ajouté. |
